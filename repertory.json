@@ -679,6 +679,172 @@
           "grade": 2
         }
       ]
+    },
+    {
+      "section": "Fever",
+      "rubric": "Chilly patient, generally cold, wants warmth",
+      "triggers": [
+        "chilly patient",
+        "always cold",
+        "wants warmth",
+        "very chilly",
+        "sensitive to cold",
+        "chilly"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 3
+        },
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "rubric": "Fever without thirst",
+      "triggers": [
+        "fever no thirst",
+        "fever without thirst",
+        "fever thirstless"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 3
+        },
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "apis",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "rubric": "Fever with thirst",
+      "triggers": [
+        "fever with thirst",
+        "fever and thirst",
+        "thirsty during fever"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 3
+        },
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "rubric": "Chill predominant / chill with fever / restlessness during chill",
+      "triggers": [
+        "fever with chill",
+        "chill with fever",
+        "chills and fever",
+        "restlessness during chill",
+        "shaking chill",
+        "chill preceded by thirst"
+      ],
+      "remedies": [
+        {
+          "id": "eup-per",
+          "grade": 3
+        },
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "gels",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "rubric": "Sudden high fever, violent onset, no chill stage",
+      "triggers": [
+        "sudden high fever",
+        "sudden violent fever",
+        "high fever no chill",
+        "sudden onset fever"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 3
+        },
+        {
+          "id": "acon",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "rubric": "One-sided heat / one part hot one part cold",
+      "triggers": [
+        "one side hot",
+        "one sided heat",
+        "face hot body cold",
+        "one cheek red one pale"
+      ],
+      "remedies": [
+        {
+          "id": "cham",
+          "grade": 2
+        },
+        {
+          "id": "ip",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "rubric": "Profuse sweat with fever, sweat does not relieve",
+      "triggers": [
+        "profuse sweat",
+        "drenching sweat",
+        "sweat without relief",
+        "sweats but no relief"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 3
+        },
+        {
+          "id": "chin",
+          "grade": 2
+        }
+      ]
     }
   ]
 }
