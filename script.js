@@ -130,10 +130,24 @@ const STOPWORDS = new Set(["a","an","the","and","or","but","with","without","who
   // keynote text (including "worse"/"better") still displays correctly in the results either way.
   "worse", "better"]);
 
+// Lightweight stemming: "tonsils" and "tonsillitis" are different words (too far apart for
+// typo-correction), but share a root a doctor would recognize as the same concept. Words of
+// 5+ letters that share their first 5 characters are treated as the same word for matching —
+// this catches plurals and common medical suffixes (-itis, -osis, -al, -ic) without a full
+// stemming library.
+function wordsMatch(a, b) {
+  if (a === b) return true;
+  if (a.length >= 5 && b.length >= 5 && a.slice(0, 5) === b.slice(0, 5)) return true;
+  return false;
+}
+function countHits(kWords, inputWords) {
+  return kWords.reduce((c, kw) => c + (inputWords.some(iw => wordsMatch(kw, iw)) ? 1 : 0), 0);
+}
+
 function scoreRemedies(inputText, diseaseProtocol) {
   const rawWords = inputText.toLowerCase().split(/[^a-z]+/).filter(Boolean);
   const corrected = rawWords.map(fuzzyCorrect);
-  const inputSet = new Set(corrected);
+  const inputWords = [...new Set(corrected)];
 
   const boostIds = diseaseProtocol ? new Set(diseaseProtocol.primaryRemedies) : new Set();
 
@@ -147,20 +161,20 @@ function scoreRemedies(inputText, diseaseProtocol) {
       // into one unmatchable glued token ("tonsillitisquinsy").
       const kWords = k.t.toLowerCase().split(/[^a-z]+/).filter(w => w && !STOPWORDS.has(w));
       if (!kWords.length) return;
-      const hitCount = kWords.reduce((c, w) => c + (inputSet.has(w) ? 1 : 0), 0);
+      const hitCount = countHits(kWords, inputWords);
       const ratio = hitCount / kWords.length;
-      // short keynotes need a stricter match: a 2-word phrase matching on just 1 word
-      // is often coincidental overlap of unrelated concepts (e.g. "loss of memory" vs
-      // "weight loss" both contain "loss" but mean nothing alike) — require a fuller
-      // match the shorter the keynote is.
-      const minRatio = kWords.length <= 2 ? 1.0 : (kWords.length <= 5 ? 0.32 : 0.4);
-      if (ratio >= minRatio) {
+      // No hard cutoff: every partial match contributes proportionally. A hard threshold
+      // meant a single relevant word buried in a longer keynote (e.g. "thyroid" inside
+      // "hard glandular swellings, thyroid, parotid") could silently score zero and vanish
+      // from results entirely, which was worse than showing it at appropriately low
+      // confidence. Ranking and the percent/colour tiers communicate match strength instead.
+      if (ratio > 0) {
         score += k.w * ratio;
         matched.push(k.t);
       }
     });
     // small disease-tag boost so relevant remedies surface even with sparse free text
-    if ((r.diseaseTags || []).some(tag => inputSet.has(tag.split(" ")[0]))) score += 0.5;
+    if ((r.diseaseTags || []).some(tag => inputWords.includes(tag.split(" ")[0]))) score += 0.5;
     if (boostIds.has(r.id)) score += 1.5; // curated protocol boost
 
     if (score > 0) {
@@ -186,17 +200,16 @@ function ensureMaxScores() {
 function scoreBiochemics(inputText) {
   const rawWords = inputText.toLowerCase().split(/[^a-z]+/).filter(Boolean);
   const corrected = rawWords.map(fuzzyCorrect);
-  const inputSet = new Set(corrected);
+  const inputWords = [...new Set(corrected)];
   const results = [];
   DB.biochemics.forEach(b => {
     let score = 0;
     b.keynotes.forEach(k => {
       const kWords = k.t.toLowerCase().split(/[^a-z]+/).filter(w => w && !STOPWORDS.has(w));
       if (!kWords.length) return;
-      const hitCount = kWords.reduce((c, w) => c + (inputSet.has(w) ? 1 : 0), 0);
+      const hitCount = countHits(kWords, inputWords);
       const ratio = hitCount / kWords.length;
-      const minRatio = kWords.length <= 2 ? 1.0 : (kWords.length <= 5 ? 0.32 : 0.4);
-      if (ratio >= minRatio) score += k.w * ratio;
+      if (ratio > 0) score += k.w * ratio;
     });
     if (score > 0) results.push({ biochemic: b, score });
   });
