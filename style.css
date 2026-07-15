@@ -62,8 +62,10 @@ header p { font-family: -apple-system, sans-serif; font-size: 0.78rem; color: #b
 .badge.red { background: var(--red); color: #fff; } .badge.green { background: var(--green); color: #fff; }
 .badge.blue { background: var(--blue); color: #fff; } .badge.yellow { background: var(--yellow); color: #fff; }
 .remedy .why { font-family: -apple-system, sans-serif; font-size: 0.85rem; color: #3a3a34; margin-top: 9px; }
+.remedy .mm-note { font-family: -apple-system, sans-serif; font-size: 0.8rem; color: var(--muted); margin-top: 8px; font-style: italic; line-height: 1.4; }
 .potency-row { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
 .pot { font-family: -apple-system, sans-serif; font-size: 0.76rem; padding: 5px 11px; border-radius: 8px; border: 1px solid var(--line); background: #fff; }
+.pot-primary { border: 1.5px solid var(--red); background: var(--red-bg); font-weight: 600; }
 .pot b { color: var(--brand); }
 
 .dual { background: var(--brand-soft); border: 1px dashed var(--brand); border-radius: var(--radius); padding: 14px 16px; font-family: -apple-system, sans-serif; }
