@@ -123,7 +123,12 @@ function detectDiseaseProtocol(rawText) {
 const STOPWORDS = new Set(["a","an","the","and","or","but","with","without","who","that","which","this",
   "these","those","is","are","was","were","be","been","of","in","on","to","as","from","or","for","at",
   "by","dont","cannot","cant","its","it","especially","very","also","not","no","during","after","before",
-  "least","slightest","any","every","all","most","more","less","much"]);
+  "least","slightest","any","every","all","most","more","less","much",
+  // "worse"/"better" are treated as optional here: a doctor typing "pain with motion" clearly
+  // means the same clinical fact as "worse from motion" even without the polarity word — the
+  // actual content word (motion, eating, touch, etc.) is what should drive the match. The full
+  // keynote text (including "worse"/"better") still displays correctly in the results either way.
+  "worse", "better"]);
 
 function scoreRemedies(inputText, diseaseProtocol) {
   const rawWords = inputText.toLowerCase().split(/[^a-z]+/).filter(Boolean);
@@ -148,7 +153,7 @@ function scoreRemedies(inputText, diseaseProtocol) {
       // is often coincidental overlap of unrelated concepts (e.g. "loss of memory" vs
       // "weight loss" both contain "loss" but mean nothing alike) — require a fuller
       // match the shorter the keynote is.
-      const minRatio = kWords.length <= 2 ? 1.0 : (kWords.length <= 4 ? 0.66 : 0.5);
+      const minRatio = kWords.length <= 2 ? 1.0 : (kWords.length <= 5 ? 0.32 : 0.4);
       if (ratio >= minRatio) {
         score += k.w * ratio;
         matched.push(k.t);
@@ -190,7 +195,7 @@ function scoreBiochemics(inputText) {
       if (!kWords.length) return;
       const hitCount = kWords.reduce((c, w) => c + (inputSet.has(w) ? 1 : 0), 0);
       const ratio = hitCount / kWords.length;
-      const minRatio = kWords.length <= 2 ? 1.0 : (kWords.length <= 4 ? 0.66 : 0.5);
+      const minRatio = kWords.length <= 2 ? 1.0 : (kWords.length <= 5 ? 0.32 : 0.4);
       if (ratio >= minRatio) score += k.w * ratio;
     });
     if (score > 0) results.push({ biochemic: b, score });
