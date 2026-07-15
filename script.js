@@ -215,7 +215,16 @@ function scoreRemedies(inputText, diseaseProtocol) {
       if (!kWords.length) return;
       const hitCount = countHits(kWords, inputWords);
       const ratio = hitCount / kWords.length;
-      if (ratio > 0) candidates.push({ t: k.t, strength: k.w * ratio });
+      // Very short keynotes (2 words) need a FULL match, not just partial — a keynote like
+      // "hay fever" matching on just the word "fever" alone is coincidental overlap with an
+      // unrelated condition (allergic rhinitis, not an actual fever), and with only 2 words
+      // there's no room for a partial match to still carry real specificity. Longer keynotes
+      // (3+) can still contribute on a partial match — the top-N ranking below is what keeps
+      // those appropriately weighted rather than dominating.
+      const isShort = kWords.length <= 2;
+      if ((isShort && ratio >= 1.0) || (!isShort && ratio > 0)) {
+        candidates.push({ t: k.t, strength: k.w * ratio });
+      }
     });
     candidates.sort((a, b) => b.strength - a.strength);
     const top = candidates.slice(0, TOP_N);
@@ -272,7 +281,8 @@ function scoreBiochemics(inputText) {
       if (!kWords.length) return;
       const hitCount = countHits(kWords, inputWords);
       const ratio = hitCount / kWords.length;
-      if (ratio > 0) score += k.w * ratio;
+      const isShortB = kWords.length <= 2;
+      if ((isShortB && ratio >= 1.0) || (!isShortB && ratio > 0)) score += k.w * ratio;
     });
     if (score > 0) results.push({ biochemic: b, score });
   });
