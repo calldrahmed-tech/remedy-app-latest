@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Remedy AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Smart <span class="accent">Remedy</span> AI</h1>
+  <p>Enter symptoms or disease — get a full clinical suggestion in seconds</p>
+</header>
+
+<div class="wrap">
+  <div class="search-card">
+    <textarea id="symptomInput" placeholder="Enter symptoms or disease..."></textarea>
+    <button id="resultBtn">Get Remedy</button>
+    <div class="samples">
+      <div class="lbl">Try a sample:</div>
+      <button class="sample-chip" data-sample="IBS with bloating and alternating constipation and diarrhea, worse after eating">IBS with bloating</button>
+      <button class="sample-chip" data-sample="GERD burning heartburn worse lying down at night after eating">GERD / heartburn</button>
+      <button class="sample-chip" data-sample="H pylori confirmed on breath test, burning stomach pain worse empty stomach">H. pylori</button>
+      <button class="sample-chip" data-sample="chronic constipation hard dry stool ineffectual urging">Chronic constipation</button>
+      <button class="sample-chip" data-sample="malabsorption weight loss despite good appetite fecal elastase low">Malabsorption</button>
+    </div>
+    <div id="statusMsg"></div>
+  </div>
+
+  <div class="legend">
+    <div style="font-weight:700;margin-bottom:6px;color:var(--ink);">Colour key</div>
+    <div class="row"><span class="dot red"></span> Red — most probable remedy</div>
+    <div class="row"><span class="dot green"></span> Green — strong support / helpful</div>
+    <div class="row"><span class="dot blue"></span> Blue — differential to consider</div>
+    <div class="row"><span class="dot yellow"></span> Yellow — caution, needs confirmation</div>
+  </div>
+
+  <div id="results"></div>
+
+  <div class="disclaimer">
+    Smart Remedy AI is an educational and clinical reference aid based on classical keynotes (Kent, Boericke, Clarke, Banerjea)
+    and modern disease mapping. It is not a substitute for full case-taking, repertorisation, or professional medical evaluation —
+    especially for chronic, deep-acting, or nosode prescriptions.
+  </div>
+  <footer>Smart Remedy AI · built for practitioner use</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
