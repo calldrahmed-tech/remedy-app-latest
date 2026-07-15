@@ -152,9 +152,14 @@ function scoreRemedies(inputText, diseaseProtocol) {
   const boostIds = diseaseProtocol ? new Set(diseaseProtocol.primaryRemedies) : new Set();
 
   const results = [];
+  const TOP_N = 6; // only the strongest few matches count toward score & display — this stops
+                    // a remedy with dozens of keynotes that each weakly share a generic word
+                    // (e.g. "right", "side", "pain" scattered across unrelated body systems)
+                    // from out-accumulating a remedy with a few genuinely strong, specific
+                    // matches. It also keeps the displayed "matched" list to real keypoints
+                    // instead of a wall of every marginal overlap.
   DB.remedies.forEach(r => {
-    let score = 0;
-    const matched = [];
+    const candidates = [];
     r.keynotes.forEach(k => {
       // split on ANY non-letter (matches how input text is tokenized) — splitting only
       // on whitespace was merging slash/hyphen-joined words like "tonsillitis/quinsy"
@@ -163,16 +168,18 @@ function scoreRemedies(inputText, diseaseProtocol) {
       if (!kWords.length) return;
       const hitCount = countHits(kWords, inputWords);
       const ratio = hitCount / kWords.length;
-      // No hard cutoff: every partial match contributes proportionally. A hard threshold
-      // meant a single relevant word buried in a longer keynote (e.g. "thyroid" inside
-      // "hard glandular swellings, thyroid, parotid") could silently score zero and vanish
-      // from results entirely, which was worse than showing it at appropriately low
-      // confidence. Ranking and the percent/colour tiers communicate match strength instead.
-      if (ratio > 0) {
-        score += k.w * ratio;
-        matched.push(k.t);
-      }
+      // No hard cutoff: every partial match is a candidate. A hard threshold meant a single
+      // relevant word buried in a longer keynote (e.g. "thyroid" inside "hard glandular
+      // swellings, thyroid, parotid") could silently score zero and vanish entirely — worse
+      // than showing it at appropriately low confidence. The top-N cap below (not a ratio
+      // cutoff) is what keeps weak/generic matches from dominating.
+      if (ratio > 0) candidates.push({ t: k.t, strength: k.w * ratio });
     });
+    candidates.sort((a, b) => b.strength - a.strength);
+    const top = candidates.slice(0, TOP_N);
+    let score = top.reduce((s, c) => s + c.strength, 0);
+    const matched = top.map(c => c.t);
+
     // small disease-tag boost so relevant remedies surface even with sparse free text
     if ((r.diseaseTags || []).some(tag => inputWords.includes(tag.split(" ")[0]))) score += 0.5;
     if (boostIds.has(r.id)) score += 1.5; // curated protocol boost
