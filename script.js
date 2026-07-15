@@ -317,8 +317,43 @@ function fallbackAdvice(topRemedy) {
   return SYSTEM_FALLBACK[sys] || SYSTEM_FALLBACK.default;
 }
 
+/* When no biochemic keynote specifically matches the free text, still surface 1-2 sensible
+   general-support tissue salts by system affinity, so biochemic support is never empty —
+   per "include 1-2 biochemic remedies for every condition". These are clearly labelled as
+   general support rather than symptom-matched. */
+const BIOCHEMIC_SYSTEM_FALLBACK = {
+  gut: ["nat-phos", "kali-mur"],
+  respiratory: ["ferrum-phos", "kali-mur"],
+  nerves: ["kali-phos-bc", "mag-phos"],
+  skin: ["calc-sulph", "silicea-bc"],
+  joints: ["calc-fluor", "mag-phos"],
+  liver: ["nat-sulph-bc", "nat-phos"],
+  default: ["kali-phos-bc", "nat-mur-bc"]
+};
+function fallbackBiochemicFor(topRemedy) {
+  const sys = topRemedy ? (topRemedy.system || [])[0] : null;
+  const ids = BIOCHEMIC_SYSTEM_FALLBACK[sys] || BIOCHEMIC_SYSTEM_FALLBACK.default;
+  return ids.map(id => DB.biochemics.find(b => b.id === id)).filter(Boolean).slice(0, 2);
+}
+
 /* ---------- rendering ---------- */
 function esc(s) { const d = document.createElement("div"); d.textContent = s == null ? "" : s; return d.innerHTML; }
+
+const CHRONICITY_WORDS = ["chronic", "recurrent", "recurring", "for years", "since childhood",
+  "longstanding", "long standing", "repeated", "keeps coming back", "keeps returning",
+  "for months", "since birth", "lifelong"];
+function isChronicContext(text) {
+  const t = text.toLowerCase();
+  return CHRONICITY_WORDS.some(w => t.includes(w));
+}
+
+/* Materia medica note: a short, general descriptive snapshot of the remedy (its own top
+   keynotes by weight) shown for every displayed remedy — independent of which specific
+   words matched this query. This is "for confirmation" context, not the match evidence. */
+function materiaMedicaNote(remedy) {
+  const sorted = [...remedy.keynotes].sort((a, b) => b.w - a.w);
+  return sorted.slice(0, 3).map(k => k.t).join("; ");
+}
 
 function runSearch() {
   const text = inputEl.value.trim();
@@ -327,8 +362,21 @@ function runSearch() {
 
   ensureMaxScores();
   const diseaseProtocol = detectDiseaseProtocol(text);
-  const remedyResults = scoreRemedies(text, diseaseProtocol);
+  let remedyResults = scoreRemedies(text, diseaseProtocol);
   const biochemicResults = scoreBiochemics(text);
+
+  // Nosodes only surface in chronic or clearly-indicated cases — a nosode showing up on a
+  // simple acute query (with no chronicity language and no strong disease-protocol reason)
+  // is more likely to alarm a patient than help, and nosode prescribing genuinely warrants
+  // a deliberate, chronic-case decision rather than falling out of ordinary symptom matching.
+  const chronic = isChronicContext(text);
+  const diseaseProtocolIndicatesNosode = diseaseProtocol && (diseaseProtocol.primaryRemedies || []).some(id => {
+    const rem = DB.remedies.find(r => r.id === id);
+    return rem && rem.nosode;
+  });
+  if (!chronic && !diseaseProtocolIndicatesNosode) {
+    remedyResults = remedyResults.filter(r => !r.remedy.nosode);
+  }
 
   if (!remedyResults.length && !diseaseProtocol) {
     resultsEl.innerHTML = `<div class="msg">No confident match found. Try adding a modality (worse/better from what), the mind state, or the single most peculiar symptom — these score highest.</div>`;
@@ -336,31 +384,32 @@ function runSearch() {
   }
 
   const top = remedyResults[0];
-  const alternatives = remedyResults.slice(1, 3);
+  const secondary = remedyResults.slice(1, 3);       // 2 secondary remedies
+  const supportive = remedyResults.slice(3, 8);      // 3-5 supportive remedies
 
   let html = "";
   let n = 1;
 
-  /* Primary remedy */
-  html += section(n++, "Primary Remedy", top ? remedyCard(top, "red", "Most probable") : `<div class="msg">No strong classical match from symptoms alone — relying on the matched disease protocol below.</div>`);
+  /* Top remedy, with potency suggestion front and centre */
+  html += section(n++, "Top Remedy", top ? remedyCard(top, "red", "Most probable") : `<div class="msg">No strong classical match from symptoms alone — relying on the matched disease protocol below.</div>`);
 
-  /* Alternatives — colour-coded by how strong the match is: green = strong support,
-     blue = worth weighing as a differential */
-  if (alternatives.length) {
-    html += section(n++, "Alternative Remedies", alternatives.map(a => {
-      const color = a.percent >= 60 ? "green" : "blue";
-      const label = a.percent >= 60 ? "Strong support" : "Consider";
-      return remedyCard(a, color, label);
-    }).join(""));
+  /* Secondary remedies — the next-strongest, genuinely competitive picks */
+  if (secondary.length) {
+    html += section(n++, "Secondary Remedies", secondary.map(a => remedyCard(a, "green", "Secondary")).join(""));
+  }
+
+  /* Supportive remedies — broader list worth keeping in view, not ruled out */
+  if (supportive.length) {
+    html += section(n++, "Supportive Remedies", supportive.map(a => remedyCard(a, "blue", "Supportive")).join(""));
   }
 
   /* Dual-remedy regimen (an AM/PM combination approach) */
   let regimen;
   if (diseaseProtocol) {
     regimen = diseaseProtocol.banerji;
-  } else if (top && alternatives.length) {
+  } else if (top && secondary.length) {
     regimen = { morning: `${top.remedy.name} ${top.remedy.potency.acute !== "-" ? top.remedy.potency.acute.split(",")[0] : "30C"}`,
-                evening: `${alternatives[0].remedy.name} ${alternatives[0].remedy.potency.acute !== "-" ? alternatives[0].remedy.potency.acute.split(",")[0] : "30C"}`,
+                evening: `${secondary[0].remedy.name} ${secondary[0].remedy.potency.acute !== "-" ? secondary[0].remedy.potency.acute.split(",")[0] : "30C"}`,
                 note: "Derived pairing based on top two symptom matches — confirm against the full case before continuing beyond a few days." };
   } else {
     regimen = null;
@@ -376,7 +425,9 @@ function runSearch() {
       </div>`);
   }
 
-  /* Biochemic support */
+  /* Biochemic support — always shows 1-2, falling back to a system-affinity default when
+     nothing in the free text specifically matches a tissue salt keynote, per "include 1-2
+     biochemic remedies for every condition". */
   let biochemicHtml = "";
   if (diseaseProtocol && diseaseProtocol.biochemic) {
     biochemicHtml = `<div class="biochemic-item"><b>${esc(diseaseProtocol.biochemic)}</b></div>`;
@@ -384,7 +435,9 @@ function runSearch() {
     biochemicHtml = biochemicResults.slice(0, 2).map(b =>
       `<div class="biochemic-item"><b>${esc(b.biochemic.name)} (${esc(b.biochemic.abbr)})</b> — ${esc(b.biochemic.potency)}</div>`).join("");
   } else {
-    biochemicHtml = `<div class="msg">No specific tissue salt indicated from this input — biochemics work best matched to a clear physical picture.</div>`;
+    const fallbackBiochemics = fallbackBiochemicFor(top ? top.remedy : null);
+    biochemicHtml = fallbackBiochemics.map(b =>
+      `<div class="biochemic-item"><b>${esc(b.name)} (${esc(b.abbr)})</b> — ${esc(b.potency)} <span class="note">(general support — no specific tissue-salt symptom detected)</span></div>`).join("");
   }
   html += section(n++, "Biochemic Support", biochemicHtml);
 
@@ -399,7 +452,8 @@ function runSearch() {
 
   /* caution for constitutional / nosode remedies */
   const cautionNeeded = (top && (top.remedy.category === "constitutional" || top.remedy.nosode)) ||
-                         alternatives.some(a => a.remedy.category === "constitutional" || a.remedy.nosode);
+                         secondary.some(a => a.remedy.category === "constitutional" || a.remedy.nosode) ||
+                         supportive.some(a => a.remedy.category === "constitutional" || a.remedy.nosode);
   if (cautionNeeded) {
     html += `<div class="caution">One or more suggested remedies is a deep-acting constitutional or nosode remedy. Repetition and potency changes are best guided by a full case-taking and professional supervision.</div>`;
   }
@@ -425,8 +479,9 @@ function remedyCard(r, color, label) {
     </div>
     ${rubrics.length ? `<div class="why"><b>Repertory match</b> (${rubrics.length} rubric${rubrics.length > 1 ? "s" : ""}): ${rubrics.map(esc).join("; ")}</div>` : ""}
     ${r.matched.length ? `<div class="why">${rubrics.length ? "Materia medica confirmation" : "Matched"}: ${r.matched.slice(0, 3).map(esc).join("; ")} (${r.percent}% confidence)</div>` : ""}
+    <div class="mm-note"><b>About ${esc(rem.name)}:</b> ${esc(materiaMedicaNote(rem))}</div>
     <div class="potency-row">
-      ${rem.potency.acute !== "-" ? `<span class="pot">Acute: <b>${esc(rem.potency.acute)}</b></span>` : ""}
+      ${isPrimary && rem.potency.acute !== "-" ? `<span class="pot pot-primary">Suggested potency (acute): <b>${esc(rem.potency.acute)}</b></span>` : rem.potency.acute !== "-" ? `<span class="pot">Acute: <b>${esc(rem.potency.acute)}</b></span>` : ""}
       ${rem.potency.chronic !== "-" ? `<span class="pot">Chronic: <b>${esc(rem.potency.chronic)}</b></span>` : ""}
     </div>
   </div>`;
