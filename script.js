@@ -397,6 +397,13 @@ function shortKeynote(r) {
   return materiaMedicaNote(rem).split("; ").slice(0, 2).join("; ");
 }
 
+function nowStamp() {
+  const d = new Date();
+  const date = d.toLocaleDateString(undefined, { day: "2-digit", month: "long", year: "numeric" });
+  const time = d.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" });
+  return { date, time };
+}
+
 function runSearch() {
   const text = inputEl.value.trim();
   if (!DB) { resultsEl.innerHTML = `<div class="msg">Database still loading — try again in a moment.</div>`; return; }
@@ -407,16 +414,13 @@ function runSearch() {
   let remedyResults = scoreRemedies(text, diseaseProtocol);
   const biochemicResults = scoreBiochemics(text);
 
-  // Nosodes only surface in chronic or clearly-indicated cases — a nosode showing up on a
-  // simple acute query (with no chronicity language and no strong disease-protocol reason)
-  // is more likely to alarm a patient than help, and nosode prescribing genuinely warrants
-  // a deliberate, chronic-case decision rather than falling out of ordinary symptom matching.
   const chronic = isChronicContext(text);
   const diseaseProtocolIndicatesNosode = diseaseProtocol && (diseaseProtocol.primaryRemedies || []).some(id => {
     const rem = DB.remedies.find(r => r.id === id);
     return rem && rem.nosode;
   });
-  if (!chronic && !diseaseProtocolIndicatesNosode) {
+  const showNosodeSection = chronic || diseaseProtocolIndicatesNosode;
+  if (!showNosodeSection) {
     remedyResults = remedyResults.filter(r => !r.remedy.nosode);
   }
 
@@ -426,76 +430,148 @@ function runSearch() {
   }
 
   const main = remedyResults[0];
-  const close = remedyResults[1]; // exactly one close/second-best remedy — clean clinical view, not a long list
+  const close = remedyResults[1];
+
+  if (!main) {
+    resultsEl.innerHTML = `<div class="msg">No strong classical match from symptoms alone. Try adding more specific detail.</div>`;
+    return;
+  }
+
+  const stamp = nowStamp();
+  const stampEl = document.getElementById("hbTime");
+  if (stampEl) stampEl.innerHTML = esc(stamp.date).split(" ").slice(0,2).join(" ") + "<br>" + esc(stamp.time);
 
   let html = "";
-  let n = 1;
 
-  /* Main remedy — potency front and centre */
-  html += section(n++, "Main Remedy", main ? remedyCard(main, "red", "Main") : `<div class="msg">No strong classical match from symptoms alone — relying on the matched disease protocol below.</div>`);
+  const diagnosisTitle = diseaseProtocol ? diseaseProtocol.name.replace(/\s*\(.+?\)\s*/, " ").trim().toUpperCase() : "SYMPTOM-BASED ANALYSIS";
+  html += `
+    <div class="diagnosis-banner">
+      <div class="diagnosis-icon">🩺</div>
+      <div class="diagnosis-body">
+        <div class="diagnosis-eyebrow">Diagnosis (Analysis)</div>
+        <div class="diagnosis-title">${esc(diagnosisTitle)}</div>
+        <div class="diagnosis-desc">${esc(text)}</div>
+      </div>
+      <div class="confidence-badge">
+        <div class="lbl">⭐ MATCH CONFIDENCE</div>
+        <div class="val">${main.percent}%</div>
+      </div>
+    </div>`;
 
-  /* Close remedy — the single next-best, genuinely competitive pick */
-  if (close) {
-    html += section(n++, "Close Remedy", remedyCard(close, "green", "Close"));
-  }
+  const remedyCount = close ? "TWO MAIN REMEDIES" : "ONE MAIN REMEDY";
+  html += `<div class="bar-head">💊 REMEDY PLAN (${remedyCount})</div>`;
+  html += `<div class="remedy-table">
+    <div class="remedy-col main">
+      <div class="col-head red">Main Remedy (Morning)</div>
+      <div class="rname">${esc(main.remedy.name)} ${main.remedy.potency.acute !== "-" ? esc(main.remedy.potency.acute.split(" ")[0]) : ""}</div>
+      <div class="take-pill red">Take in Morning</div>
+      <div class="rdesc">${esc(shortKeynote(main))}</div>
+      ${main.remedy.nosode ? '<div class="nosode-tag">NOSODE</div>' : ""}
+    </div>
+    ${close ? `<div class="remedy-col close">
+      <div class="col-head green">Close Remedy (Evening / Bedtime)</div>
+      <div class="rname">${esc(close.remedy.name)} ${close.remedy.potency.acute !== "-" ? esc(close.remedy.potency.acute.split(" ")[0]) : ""}</div>
+      <div class="take-pill green">Take in Evening / Bedtime</div>
+      <div class="rdesc">${esc(shortKeynote(close))}</div>
+      ${close.remedy.nosode ? '<div class="nosode-tag">NOSODE</div>' : ""}
+    </div>` : `<div class="remedy-col close"><div class="col-head green">Close Remedy</div><div class="rdesc">No second competitive match found — main remedy stands alone.</div></div>`}
+    <div class="remedy-col timing">
+      <div class="col-head navy">Timing &amp; Dosage</div>
+      <div class="timing-row red-t">
+        <div class="icon">☀️</div>
+        <div><div class="tname">${esc(main.remedy.name)}</div><div class="tdose">${esc(main.remedy.potency.acute !== "-" ? main.remedy.potency.acute : "As directed")}, morning (empty stomach)</div></div>
+      </div>
+      ${close ? `<div class="timing-row green-t">
+        <div class="icon">🌙</div>
+        <div><div class="tname">${esc(close.remedy.name)}</div><div class="tdose">${esc(close.remedy.potency.acute !== "-" ? close.remedy.potency.acute : "As directed")}, night (before sleep)</div></div>
+      </div>` : ""}
+      <div class="dose-note">ℹ️ Let the pellets dissolve in mouth. Avoid food/drink 15 minutes before &amp; after.</div>
+    </div>
+  </div>`;
 
-  /* Biochemic support — always exactly 2, a clean dual combination */
+  const allKeynotes = [];
+  if (main) allKeynotes.push(shortKeynote(main));
+  if (close) allKeynotes.push(shortKeynote(close));
+  const splitKeynotes = allKeynotes.join("; ").split(/;\s*/).filter(Boolean).slice(0, 4);
+  html += `<div class="keynotes-bar">
+    <div class="kicon">📋</div>
+    <div class="keynotes-grid">${splitKeynotes.map(k => `<div class="kitem">• ${esc(k)}</div>`).join("")}</div>
+  </div>`;
+
   let biochemicPair = [];
   if (biochemicResults.length >= 2) {
-    biochemicPair = biochemicResults.slice(0, 2).map(b => ({ ...b.biochemic, matched: true }));
+    biochemicPair = biochemicResults.slice(0, 2).map(b => Object.assign({}, b.biochemic, { matched: true }));
   } else if (biochemicResults.length === 1) {
-    const fallback = fallbackBiochemicFor(main ? main.remedy : null).filter(b => b.id !== biochemicResults[0].biochemic.id);
-    biochemicPair = [{ ...biochemicResults[0].biochemic, matched: true }, { ...(fallback[0] || fallbackBiochemicFor(null)[0]), matched: false }];
+    const fallback = fallbackBiochemicFor(main.remedy).filter(b => b.id !== biochemicResults[0].biochemic.id);
+    biochemicPair = [Object.assign({}, biochemicResults[0].biochemic, { matched: true }), Object.assign({}, (fallback[0] || fallbackBiochemicFor(null)[0]), { matched: false })];
   } else {
-    biochemicPair = fallbackBiochemicFor(main ? main.remedy : null).slice(0, 2).map(b => ({ ...b, matched: false }));
+    biochemicPair = fallbackBiochemicFor(main.remedy).slice(0, 2).map(b => Object.assign({}, b, { matched: false }));
   }
-  const biochemicHtml = biochemicPair.map(b =>
-    `<div class="biochemic-item"><b>${esc(b.name)} (${esc(b.abbr)})</b> — ${esc(b.potency)}${!b.matched ? ' <span class="note">(general support)</span>' : ""}</div>`).join("");
-  html += section(n++, "Biochemic Support", biochemicHtml);
+  const advice = diseaseProtocol ? { tests: diseaseProtocol.tests, diet: diseaseProtocol.diet } : fallbackAdvice(main.remedy);
 
-  /* Essential tests + Diet, kept short — condition-specific from the disease protocol when
-     matched, otherwise a short system-based default */
-  const advice = diseaseProtocol ? { tests: diseaseProtocol.tests, diet: diseaseProtocol.diet } : fallbackAdvice(main ? main.remedy : null);
-  html += section(n++, "Essential Tests", `<div class="list">${advice.tests.slice(0, 3).map(t => `<div class="item"><span class="dot yellow"></span><div>${esc(t)}</div></div>`).join("")}</div>`);
-  html += section(n++, "Diet Advice", `
-    <div class="diet-grid">
-      <div class="diet-col eat"><h4>Eat</h4><ul>${(advice.diet.eat || []).slice(0, 3).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
-      <div class="diet-col avoid"><h4>Avoid</h4><ul>${(advice.diet.avoid || []).slice(0, 3).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
-    </div>`);
+  let nosodeCardHtml = "";
+  if (showNosodeSection) {
+    // Priority: (1) a nosode explicitly named in the matched disease protocol, (2) the
+    // highest-RANKED nosode actually present in this case's scored results (not just any
+    // nosode that happens to appear somewhere in the full remedy list), (3) Psorinum as the
+    // clinically standard general "chronic miasm" default when nothing more specific fits.
+    const protocolNosodeId = diseaseProtocol && (diseaseProtocol.primaryRemedies || []).find(id => {
+      const rem = DB.remedies.find(r => r.id === id);
+      return rem && rem.nosode;
+    });
+    const topRankedNosodeResult = remedyResults.find(rr => rr.remedy.nosode && rr.percent >= 25);
+    // only trust a nosode that scored a genuinely meaningful match (>=25%) — a nosode
+    // scraping in at a few percent from a coincidental word overlap (e.g. Syphilinum
+    // matching just the word "chronic" in an unrelated keynote) isn't a real clinical
+    // indication, so falls through to the Psorinum default instead.
+    const nosodeRemedy = (protocolNosodeId && DB.remedies.find(r => r.id === protocolNosodeId))
+      || (topRankedNosodeResult && topRankedNosodeResult.remedy)
+      || DB.remedies.find(r => r.id === "psor")
+      || DB.remedies.find(r => r.nosode);
+    // Psorinum is the standard general-purpose "chronic miasm" nosode used when no more
+    // specific nosode is indicated by the matched remedies or disease protocol — falling
+    // back to whichever nosode happened to be first in the array (e.g. Pyrogenium, which
+    // is specific to septic/feverish states) was clinically arbitrary and could suggest an
+    // unrelated nosode for e.g. a constipation case.
+    nosodeCardHtml = `<div class="mini-card teal">
+      <div class="mini-head">🧬 NOSODE (IF CHRONIC)</div>
+      <div class="mini-body-title">${esc(nosodeRemedy.name)} ${esc(nosodeRemedy.potency.chronic !== "-" ? nosodeRemedy.potency.chronic.split(",")[0] : "1M")}</div>
+      <div class="mini-freq-pill" style="background:var(--teal)">Once Weekly</div>
+      <div class="mini-body-sub">Take once a week on empty stomach. For deep-rooted / chronic cases — practitioner supervision advised.</div>
+    </div>`;
+  }
 
-  /* caution for constitutional / nosode remedies */
-  const cautionNeeded = (main && (main.remedy.category === "constitutional" || main.remedy.nosode)) ||
+  html += `<div class="mini-row">
+    <div class="mini-card purple">
+      <div class="mini-head">🧪 BIOCHEMIC SUPPORT</div>
+      <div class="mini-body-title">${biochemicPair.map(b => esc(b.abbr)).join(" + ")}</div>
+      <div class="mini-freq-pill">Twice Daily</div>
+      <div class="mini-body-sub">2 tablets each, twice daily.${biochemicPair.some(b => !b.matched) ? " (general support)" : ""}</div>
+    </div>
+    ${nosodeCardHtml}
+    <div class="mini-card blue">
+      <div class="mini-head">🔬 ESSENTIAL TESTS</div>
+      <ul class="mini-list" style="list-style:none;">${advice.tests.slice(0, 3).map(t => `<li>✓ ${esc(t)}</li>`).join("")}</ul>
+      <div class="mini-note">Do tests if symptoms persist or for better evaluation.</div>
+    </div>
+    <div class="mini-card green">
+      <div class="mini-head">✅ DIET – WHAT TO EAT</div>
+      <ul class="mini-list green">${(advice.diet.eat || []).slice(0, 4).map(x => `<li>${esc(x)}</li>`).join("")}</ul>
+    </div>
+    <div class="mini-card red">
+      <div class="mini-head">❌ DIET – WHAT TO AVOID</div>
+      <ul class="mini-list red">${(advice.diet.avoid || []).slice(0, 4).map(x => `<li>${esc(x)}</li>`).join("")}</ul>
+    </div>
+  </div>`;
+
+  const cautionNeeded = (main.remedy.category === "constitutional" || main.remedy.nosode) ||
                          (close && (close.remedy.category === "constitutional" || close.remedy.nosode));
   if (cautionNeeded) {
-    html += `<div class="caution">A deep-acting constitutional or nosode remedy is suggested here. Repetition and potency changes are best guided by a full case-taking and professional supervision.</div>`;
+    html += `<div class="caution">⚠️ A deep-acting constitutional or nosode remedy is suggested here. Repetition and potency changes are best guided by a full case-taking and professional supervision.</div>`;
   }
 
   resultsEl.innerHTML = html;
 }
-
-function section(num, title, bodyHtml) {
-  return `<div class="section"><div class="section-head"><span class="n">${num}</span>${esc(title)}</div>${bodyHtml}</div>`;
-}
-
-function remedyCard(r, color, label) {
-  const rem = r.remedy;
-  const isMain = color === "red";
-  return `<div class="remedy ${isMain ? "top red" : "support"}">
-    <div class="remedy-row">
-      <div><div class="remedy-name ${isMain ? "" : "sm"}">${esc(rem.name)}</div><div class="latin">${esc(rem.abbr)}</div></div>
-      <div class="badges">
-        <span class="badge ${color}">${esc(label)}</span>
-        ${rem.nosode ? '<span class="badge yellow">Nosode</span>' : ""}
-      </div>
-    </div>
-    <div class="why">${esc(shortKeynote(r))}</div>
-    <div class="potency-row">
-      ${isMain && rem.potency.acute !== "-" ? `<span class="pot pot-primary">Potency: <b>${esc(rem.potency.acute)}</b></span>` : rem.potency.acute !== "-" ? `<span class="pot">Acute: <b>${esc(rem.potency.acute)}</b></span>` : ""}
-      ${rem.potency.chronic !== "-" ? `<span class="pot">Chronic: <b>${esc(rem.potency.chronic)}</b></span>` : ""}
-    </div>
-  </div>`;
-}
-
 
 resultBtn.addEventListener("click", runSearch);
 inputEl.addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) runSearch(); });
