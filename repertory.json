@@ -1,0 +1,684 @@
+{
+  "repertory": [
+    {
+      "section": "Appetite",
+      "rubric": "Ravenous, increased hunger",
+      "triggers": [
+        "ravenous",
+        "increased appetite",
+        "excessive hunger",
+        "very hungry",
+        "always hungry"
+      ],
+      "remedies": [
+        {
+          "id": "iod",
+          "grade": 3
+        },
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 2
+        },
+        {
+          "id": "ferr",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Appetite",
+      "rubric": "Decreased appetite, anorexia",
+      "triggers": [
+        "no appetite",
+        "decreased appetite",
+        "loss of appetite",
+        "anorexia",
+        "does not want to eat",
+        "poor appetite"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "chin",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Appetite",
+      "rubric": "Must eat frequently / hunger soon after eating / faint if meal delayed",
+      "triggers": [
+        "must eat frequently",
+        "hungry soon after eating",
+        "faint if meal delayed",
+        "hungry between meals",
+        "weak if does not eat"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 3
+        },
+        {
+          "id": "nat-c",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Appetite",
+      "rubric": "Aversion to food, nausea at sight or smell of food",
+      "triggers": [
+        "aversion to food",
+        "nausea at smell of food",
+        "sight of food nauseates",
+        "cannot bear smell of food"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 3
+        },
+        {
+          "id": "colch",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Appetite",
+      "rubric": "Capricious appetite, changeable",
+      "triggers": [
+        "capricious appetite",
+        "changeable appetite",
+        "appetite comes and goes"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        },
+        {
+          "id": "chin",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "rubric": "Thirstless, no thirst even with fever",
+      "triggers": [
+        "thirstless",
+        "no thirst",
+        "without thirst",
+        "not thirsty",
+        "absence of thirst"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 3
+        },
+        {
+          "id": "apis",
+          "grade": 3
+        },
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "ign",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "rubric": "Extreme thirst, large quantities at a time",
+      "triggers": [
+        "extreme thirst",
+        "great thirst",
+        "large quantities",
+        "drinks large amounts",
+        "excessive thirst"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 3
+        },
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "rubric": "Thirst for small sips frequently",
+      "triggers": [
+        "small sips",
+        "sips frequently",
+        "thirst small quantities often",
+        "little and often"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 3
+        },
+        {
+          "id": "lyc",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "rubric": "Thirst for cold water/drinks",
+      "triggers": [
+        "thirst for cold water",
+        "thirst for cold drinks",
+        "craves cold water",
+        "wants cold water"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 3
+        },
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "verat",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "rubric": "Thirst for warm drinks",
+      "triggers": [
+        "thirst for warm drinks",
+        "craves warm drinks",
+        "wants warm water"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "rubric": "Emaciation / weight loss despite good appetite",
+      "triggers": [
+        "weight loss despite good appetite",
+        "emaciation despite eating well",
+        "losing weight despite eating",
+        "thin despite good appetite"
+      ],
+      "remedies": [
+        {
+          "id": "iod",
+          "grade": 3
+        },
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "abrot",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "rubric": "Emaciation, general wasting",
+      "triggers": [
+        "emaciation",
+        "wasting",
+        "rapid weight loss",
+        "marasmus",
+        "losing weight",
+        "weight loss"
+      ],
+      "remedies": [
+        {
+          "id": "abrot",
+          "grade": 3
+        },
+        {
+          "id": "iod",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "plb",
+          "grade": 2
+        },
+        {
+          "id": "sars",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "rubric": "Tendency to obesity, overweight",
+      "triggers": [
+        "obesity",
+        "overweight",
+        "weight gain",
+        "tendency to fat",
+        "gaining weight easily"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 3
+        },
+        {
+          "id": "graph",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "rubric": "Constipation, hard dry stool",
+      "triggers": [
+        "hard dry stool",
+        "hard stool",
+        "dry stool",
+        "constipation hard",
+        "hard constipated"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 3
+        },
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "rubric": "Constipation, ineffectual urging",
+      "triggers": [
+        "ineffectual urging",
+        "frequent urging no result",
+        "urge but cannot pass",
+        "unsatisfactory stool"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 3
+        },
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "alum",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "rubric": "Constipation, no urge, inactive rectum",
+      "triggers": [
+        "no urge to pass stool",
+        "no desire for stool",
+        "inactive rectum",
+        "no urging at all"
+      ],
+      "remedies": [
+        {
+          "id": "alum",
+          "grade": 3
+        },
+        {
+          "id": "op",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "rubric": "Diarrhoea, watery/profuse",
+      "triggers": [
+        "watery diarrhea",
+        "watery diarrhoea",
+        "profuse diarrhea",
+        "profuse diarrhoea",
+        "gushing diarrhea"
+      ],
+      "remedies": [
+        {
+          "id": "podo",
+          "grade": 3
+        },
+        {
+          "id": "verat",
+          "grade": 2
+        },
+        {
+          "id": "chin",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "rubric": "Diarrhoea, painless",
+      "triggers": [
+        "painless diarrhea",
+        "painless diarrhoea",
+        "diarrhea no pain"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 2
+        },
+        {
+          "id": "podo",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "rubric": "Stool incomplete feeling / sensation of ball in rectum",
+      "triggers": [
+        "incomplete evacuation",
+        "feels incomplete",
+        "ball in rectum",
+        "sensation of a ball",
+        "never feels finished"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "alum",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "rubric": "Stool, soft but difficult to pass",
+      "triggers": [
+        "soft stool difficult",
+        "soft but hard to pass",
+        "difficult to pass even when soft"
+      ],
+      "remedies": [
+        {
+          "id": "alum",
+          "grade": 3
+        },
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Worse from eating",
+      "triggers": [
+        "worse eating",
+        "worse after eating",
+        "worse from eating",
+        "symptoms after meals"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 3
+        },
+        {
+          "id": "lyc",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Better from eating, relief while eating",
+      "triggers": [
+        "better eating",
+        "better while eating",
+        "relief while eating",
+        "improves with food"
+      ],
+      "remedies": [
+        {
+          "id": "anac",
+          "grade": 3
+        },
+        {
+          "id": "petr",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Worse in morning",
+      "triggers": [
+        "worse morning",
+        "worse in the morning",
+        "worse on waking"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 3
+        },
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Worse in evening or night",
+      "triggers": [
+        "worse evening",
+        "worse at night",
+        "worse night"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Worse from motion",
+      "triggers": [
+        "worse motion",
+        "worse from motion",
+        "worse with motion",
+        "worse moving"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 3
+        },
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "spong",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Better from motion, worse from rest",
+      "triggers": [
+        "better motion",
+        "better from motion",
+        "worse from rest",
+        "better moving around"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 3
+        },
+        {
+          "id": "puls",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Worse from cold, better from heat",
+      "triggers": [
+        "worse cold",
+        "worse from cold",
+        "better warmth",
+        "better heat",
+        "better from heat"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 3
+        },
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "rhus-t",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Worse from heat, better from cold",
+      "triggers": [
+        "worse heat",
+        "worse from heat",
+        "worse warm room",
+        "better cold",
+        "better from cold"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 3
+        },
+        {
+          "id": "apis",
+          "grade": 2
+        }
+      ]
+    }
+  ]
+}
