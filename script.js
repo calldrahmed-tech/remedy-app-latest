@@ -404,6 +404,36 @@ function nowStamp() {
   return { date, time };
 }
 
+const VIAL_SVG = `<svg class="vial" viewBox="0 0 40 70" xmlns="http://www.w3.org/2000/svg">
+  <rect x="8" y="14" width="24" height="50" rx="10" fill="rgba(255,255,255,0.28)" stroke="#fff" stroke-width="1.6"/>
+  <rect x="13" y="4" width="14" height="12" rx="3" fill="#c99659" stroke="#8a6230" stroke-width="1"/>
+  <circle cx="16" cy="40" r="2.4" fill="#fff"/>
+  <circle cx="24" cy="46" r="2.4" fill="#fff"/>
+  <circle cx="18" cy="53" r="2.4" fill="#fff"/>
+  <circle cx="25" cy="35" r="2.4" fill="#fff"/>
+  <circle cx="15" cy="58" r="2.4" fill="#fff"/>
+  <circle cx="22" cy="58" r="2.4" fill="#fff"/>
+</svg>`;
+
+function confidenceGaugeSVG(pct) {
+  const r = 50, circ = Math.PI * r;
+  const offset = circ * (1 - pct / 100);
+  const color = pct >= 70 ? "#2fa84f" : pct >= 40 ? "#e0a824" : "#e0342f";
+  return `<svg viewBox="0 0 120 65" width="120" height="65">
+    <path d="M10,60 A50,50 0 0,1 110,60" fill="none" stroke="#e6e4dd" stroke-width="9" stroke-linecap="round"/>
+    <path d="M10,60 A50,50 0 0,1 110,60" fill="none" stroke="${color}" stroke-width="9" stroke-linecap="round"
+      stroke-dasharray="${circ}" stroke-dashoffset="${offset}"/>
+  </svg>`;
+}
+
+const SYSTEM_CASE_LABEL = {
+  gut: "Digestive Case", respiratory: "Respiratory Case", nerves: "Nervous System Case",
+  skin: "Skin Case", joints: "Joint / Rheumatic Case", liver: "Liver Case",
+  urinary: "Urinary Case", reproductive: "Reproductive Case", bones: "Bone Case",
+  glands: "Glandular Case", immune: "Immune / Fever Case", circulation: "Circulatory Case",
+  ent: "ENT Case", muscles: "Muscular Case", blood: "Blood Case"
+};
+
 function runSearch() {
   const text = inputEl.value.trim();
   if (!DB) { resultsEl.innerHTML = `<div class="msg">Database still loading — try again in a moment.</div>`; return; }
@@ -439,65 +469,65 @@ function runSearch() {
 
   const stamp = nowStamp();
   const stampEl = document.getElementById("hbTime");
-  if (stampEl) stampEl.innerHTML = esc(stamp.date).split(" ").slice(0,2).join(" ") + "<br>" + esc(stamp.time);
+  if (stampEl) stampEl.textContent = stamp.date.split(" ").slice(0,2).join(" ") + ", " + stamp.time;
 
   let html = "";
 
+  /* ---------- Diagnosis card ---------- */
   const diagnosisTitle = diseaseProtocol ? diseaseProtocol.name.replace(/\s*\(.+?\)\s*/, " ").trim().toUpperCase() : "SYMPTOM-BASED ANALYSIS";
-  html += `
-    <div class="diagnosis-banner">
-      <div class="diagnosis-icon">🩺</div>
-      <div class="diagnosis-body">
-        <div class="diagnosis-eyebrow">Diagnosis (Analysis)</div>
-        <div class="diagnosis-title">${esc(diagnosisTitle)}</div>
-        <div class="diagnosis-desc">${esc(text)}</div>
-      </div>
-      <div class="confidence-badge">
-        <div class="lbl">⭐ MATCH CONFIDENCE</div>
-        <div class="val">${main.percent}%</div>
-      </div>
-    </div>`;
-
-  const remedyCount = close ? "TWO MAIN REMEDIES" : "ONE MAIN REMEDY";
-  html += `<div class="bar-head">💊 REMEDY PLAN (${remedyCount})</div>`;
-  html += `<div class="remedy-table">
-    <div class="remedy-col main">
-      <div class="col-head red">Main Remedy (Morning)</div>
-      <div class="rname">${esc(main.remedy.name)} ${main.remedy.potency.acute !== "-" ? esc(main.remedy.potency.acute.split(" ")[0]) : ""}</div>
-      <div class="take-pill red">Take in Morning</div>
-      <div class="rdesc">${esc(shortKeynote(main))}</div>
-      ${main.remedy.nosode ? '<div class="nosode-tag">NOSODE</div>' : ""}
-    </div>
-    ${close ? `<div class="remedy-col close">
-      <div class="col-head green">Close Remedy (Evening / Bedtime)</div>
-      <div class="rname">${esc(close.remedy.name)} ${close.remedy.potency.acute !== "-" ? esc(close.remedy.potency.acute.split(" ")[0]) : ""}</div>
-      <div class="take-pill green">Take in Evening / Bedtime</div>
-      <div class="rdesc">${esc(shortKeynote(close))}</div>
-      ${close.remedy.nosode ? '<div class="nosode-tag">NOSODE</div>' : ""}
-    </div>` : `<div class="remedy-col close"><div class="col-head green">Close Remedy</div><div class="rdesc">No second competitive match found — main remedy stands alone.</div></div>`}
-    <div class="remedy-col timing">
-      <div class="col-head navy">Timing &amp; Dosage</div>
-      <div class="timing-row red-t">
-        <div class="icon">☀️</div>
-        <div><div class="tname">${esc(main.remedy.name)}</div><div class="tdose">${esc(main.remedy.potency.acute !== "-" ? main.remedy.potency.acute : "As directed")}, morning (empty stomach)</div></div>
-      </div>
-      ${close ? `<div class="timing-row green-t">
-        <div class="icon">🌙</div>
-        <div><div class="tname">${esc(close.remedy.name)}</div><div class="tdose">${esc(close.remedy.potency.acute !== "-" ? close.remedy.potency.acute : "As directed")}, night (before sleep)</div></div>
-      </div>` : ""}
-      <div class="dose-note">ℹ️ Let the pellets dissolve in mouth. Avoid food/drink 15 minutes before &amp; after.</div>
-    </div>
-  </div>`;
-
+  const caseTag = SYSTEM_CASE_LABEL[(main.remedy.system || [])[0]] || "General Case";
   const allKeynotes = [];
   if (main) allKeynotes.push(shortKeynote(main));
   if (close) allKeynotes.push(shortKeynote(close));
-  const splitKeynotes = allKeynotes.join("; ").split(/;\s*/).filter(Boolean).slice(0, 4);
-  html += `<div class="keynotes-bar">
-    <div class="kicon">📋</div>
-    <div class="keynotes-grid">${splitKeynotes.map(k => `<div class="kitem">• ${esc(k)}</div>`).join("")}</div>
+  const symptomBullets = allKeynotes.join("; ").split(/;\s*/).filter(Boolean).slice(0, 4);
+  const confPct = main.percent;
+  const confTag = confPct >= 70 ? "HIGHLY MATCHED" : confPct >= 40 ? "MODERATE MATCH" : "PARTIAL MATCH";
+
+  html += `<div class="diagnosis-card">
+    <div class="diag-left">
+      <div class="diag-icon">🩺</div>
+      <div>
+        <div class="diag-eyebrow">Diagnosis</div>
+        <div class="diag-title display">${esc(diagnosisTitle)}</div>
+        <div class="diag-tag">👍 ${esc(caseTag)}</div>
+      </div>
+    </div>
+    <div class="key-symptoms">
+      <div class="ks-head">📋 KEY SYMPTOMS</div>
+      <div class="ks-grid">${symptomBullets.map(k => `<div class="ks-item"><span class="dot">✔</span>${esc(k)}</div>`).join("")}</div>
+    </div>
+    <div class="confidence-gauge">
+      <div class="gauge-label">MATCH CONFIDENCE</div>
+      ${confidenceGaugeSVG(confPct)}
+      <div class="gauge-pct display">${confPct}%</div>
+      <div class="gauge-tag">${confTag}</div>
+    </div>
   </div>`;
 
+  /* ---------- Remedy plan ---------- */
+  const remedyCount = close ? "2 MAIN REMEDIES" : "1 MAIN REMEDY";
+  html += `<div class="plan-bar">
+    <div class="plan-title display">🌿 REMEDY PLAN <span class="count">(${remedyCount})</span></div>
+    <div class="protocol-badge">🛡️ CLINICAL PROTOCOL BASED</div>
+  </div>`;
+
+  html += `<div class="remedy-plan-wrap">
+    <div class="remedy-table-head"><div>Remedy</div><div>Potency</div><div>Timing</div><div>How to Take</div></div>
+    <div class="remedy-row red">
+      <div class="rc-remedy">${VIAL_SVG}<div class="rc-name-wrap"><div class="rank-badge">1 · MAIN REMEDY</div><div class="rc-name display">${esc(main.remedy.name)}</div></div></div>
+      <div class="rc-potency">${esc(main.remedy.potency.acute !== "-" ? main.remedy.potency.acute.split(" ")[0] : "30C")}</div>
+      <div class="rc-timing"><div class="ic">☀️</div><div><div class="tmain">MORNING</div><div class="tsub">Empty Stomach</div></div></div>
+      <div class="rc-dose"><div class="dmain">4 Globules</div><div class="dsub">Once Daily</div></div>
+    </div>
+    ${close ? `<div class="remedy-row green">
+      <div class="rc-remedy">${VIAL_SVG}<div class="rc-name-wrap"><div class="rank-badge">2 · CLOSE REMEDY</div><div class="rc-name display">${esc(close.remedy.name)}</div></div></div>
+      <div class="rc-potency">${esc(close.remedy.potency.acute !== "-" ? close.remedy.potency.acute.split(" ")[0] : "30C")}</div>
+      <div class="rc-timing"><div class="ic">🌙</div><div><div class="tmain">EVENING / NIGHT</div><div class="tsub">Before Sleep</div></div></div>
+      <div class="rc-dose"><div class="dmain">4 Globules</div><div class="dsub">Once Daily</div></div>
+    </div>` : ""}
+  </div>`;
+
+  /* ---------- Bottom mini-cards ---------- */
   let biochemicPair = [];
   if (biochemicResults.length >= 2) {
     biochemicPair = biochemicResults.slice(0, 2).map(b => Object.assign({}, b.biochemic, { matched: true }));
@@ -511,56 +541,48 @@ function runSearch() {
 
   let nosodeCardHtml = "";
   if (showNosodeSection) {
-    // Priority: (1) a nosode explicitly named in the matched disease protocol, (2) the
-    // highest-RANKED nosode actually present in this case's scored results (not just any
-    // nosode that happens to appear somewhere in the full remedy list), (3) Psorinum as the
-    // clinically standard general "chronic miasm" default when nothing more specific fits.
     const protocolNosodeId = diseaseProtocol && (diseaseProtocol.primaryRemedies || []).find(id => {
       const rem = DB.remedies.find(r => r.id === id);
       return rem && rem.nosode;
     });
     const topRankedNosodeResult = remedyResults.find(rr => rr.remedy.nosode && rr.percent >= 25);
-    // only trust a nosode that scored a genuinely meaningful match (>=25%) — a nosode
-    // scraping in at a few percent from a coincidental word overlap (e.g. Syphilinum
-    // matching just the word "chronic" in an unrelated keynote) isn't a real clinical
-    // indication, so falls through to the Psorinum default instead.
     const nosodeRemedy = (protocolNosodeId && DB.remedies.find(r => r.id === protocolNosodeId))
       || (topRankedNosodeResult && topRankedNosodeResult.remedy)
       || DB.remedies.find(r => r.id === "psor")
       || DB.remedies.find(r => r.nosode);
-    // Psorinum is the standard general-purpose "chronic miasm" nosode used when no more
-    // specific nosode is indicated by the matched remedies or disease protocol — falling
-    // back to whichever nosode happened to be first in the array (e.g. Pyrogenium, which
-    // is specific to septic/feverish states) was clinically arbitrary and could suggest an
-    // unrelated nosode for e.g. a constipation case.
-    nosodeCardHtml = `<div class="mini-card teal">
-      <div class="mini-head">🧬 NOSODE (IF CHRONIC)</div>
-      <div class="mini-body-title">${esc(nosodeRemedy.name)} ${esc(nosodeRemedy.potency.chronic !== "-" ? nosodeRemedy.potency.chronic.split(",")[0] : "1M")}</div>
-      <div class="mini-freq-pill" style="background:var(--teal)">Once Weekly</div>
-      <div class="mini-body-sub">Take once a week on empty stomach. For deep-rooted / chronic cases — practitioner supervision advised.</div>
+    nosodeCardHtml = `<div class="mini-card blue">
+      <div class="mini-card-head">🧬 NOSODE (IF CHRONIC)</div>
+      <div class="mini-card-body">
+        <div class="mini-title">${esc(nosodeRemedy.name)} ${esc(nosodeRemedy.potency.chronic !== "-" ? nosodeRemedy.potency.chronic.split(",")[0] : "1M")}</div>
+        <div class="mini-freq-pill">Once Weekly</div>
+      </div>
     </div>`;
   }
 
   html += `<div class="mini-row">
     <div class="mini-card purple">
-      <div class="mini-head">🧪 BIOCHEMIC SUPPORT</div>
-      <div class="mini-body-title">${biochemicPair.map(b => esc(b.abbr)).join(" + ")}</div>
-      <div class="mini-freq-pill">Twice Daily</div>
-      <div class="mini-body-sub">2 tablets each, twice daily.${biochemicPair.some(b => !b.matched) ? " (general support)" : ""}</div>
+      <div class="mini-card-head">🧪 BIOCHEMIC SUPPORT</div>
+      <div class="mini-card-body">
+        <div class="mini-title">${biochemicPair.map(b => esc(b.abbr)).join(" + ")}</div>
+        <div class="mini-freq-pill">Twice Daily</div>
+      </div>
     </div>
     ${nosodeCardHtml}
     <div class="mini-card blue">
-      <div class="mini-head">🔬 ESSENTIAL TESTS</div>
-      <ul class="mini-list" style="list-style:none;">${advice.tests.slice(0, 3).map(t => `<li>✓ ${esc(t)}</li>`).join("")}</ul>
-      <div class="mini-note">Do tests if symptoms persist or for better evaluation.</div>
+      <div class="mini-card-head">🔬 ESSENTIAL TEST</div>
+      <div class="mini-card-body">
+        <div class="mini-title">${esc(advice.tests[0])}</div>
+        <div class="mini-sub">${advice.tests.length > 1 ? "(if needed for confirmation)" : "(if needed)"}</div>
+      </div>
     </div>
-    <div class="mini-card green">
-      <div class="mini-head">✅ DIET – WHAT TO EAT</div>
-      <ul class="mini-list green">${(advice.diet.eat || []).slice(0, 4).map(x => `<li>${esc(x)}</li>`).join("")}</ul>
-    </div>
-    <div class="mini-card red">
-      <div class="mini-head">❌ DIET – WHAT TO AVOID</div>
-      <ul class="mini-list red">${(advice.diet.avoid || []).slice(0, 4).map(x => `<li>${esc(x)}</li>`).join("")}</ul>
+    <div class="mini-card orange">
+      <div class="mini-card-head">🍎 DIET ADVICE</div>
+      <div class="mini-card-body">
+        <div class="diet-cols">
+          <div class="eat"><h5>EAT</h5><ul>${(advice.diet.eat || []).slice(0, 3).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+          <div class="avoid"><h5>AVOID</h5><ul>${(advice.diet.avoid || []).slice(0, 3).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+        </div>
+      </div>
     </div>
   </div>`;
 
