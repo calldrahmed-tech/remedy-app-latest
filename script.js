@@ -382,6 +382,21 @@ function materiaMedicaNote(remedy) {
   return sorted.slice(0, 3).map(k => k.t).join("; ");
 }
 
+/* Short keynote: a single concise 1-2 line clinical summary for a remedy card. Prioritizes
+   the repertory rubric(s) that matched (most clinically meaningful), then materia medica
+   evidence, then falls back to the remedy's own top keynote. Deliberately terse — this is
+   a clean clinical view, not a full evidence dump. */
+function shortKeynote(r) {
+  const rem = r.remedy;
+  if (r.repertoryRubrics && r.repertoryRubrics.length) {
+    return r.repertoryRubrics.slice(0, 2).map(x => x.split(": ").slice(1).join(": ") || x).join("; ");
+  }
+  if (r.matched && r.matched.length) {
+    return r.matched.slice(0, 2).join("; ");
+  }
+  return materiaMedicaNote(rem).split("; ").slice(0, 2).join("; ");
+}
+
 function runSearch() {
   const text = inputEl.value.trim();
   if (!DB) { resultsEl.innerHTML = `<div class="msg">Database still loading — try again in a moment.</div>`; return; }
@@ -410,79 +425,49 @@ function runSearch() {
     return;
   }
 
-  const top = remedyResults[0];
-  const secondary = remedyResults.slice(1, 3);       // 2 secondary remedies
-  const supportive = remedyResults.slice(3, 8);      // 3-5 supportive remedies
+  const main = remedyResults[0];
+  const close = remedyResults[1]; // exactly one close/second-best remedy — clean clinical view, not a long list
 
   let html = "";
   let n = 1;
 
-  /* Top remedy, with potency suggestion front and centre */
-  html += section(n++, "Top Remedy", top ? remedyCard(top, "red", "Most probable") : `<div class="msg">No strong classical match from symptoms alone — relying on the matched disease protocol below.</div>`);
+  /* Main remedy — potency front and centre */
+  html += section(n++, "Main Remedy", main ? remedyCard(main, "red", "Main") : `<div class="msg">No strong classical match from symptoms alone — relying on the matched disease protocol below.</div>`);
 
-  /* Secondary remedies — the next-strongest, genuinely competitive picks */
-  if (secondary.length) {
-    html += section(n++, "Secondary Remedies", secondary.map(a => remedyCard(a, "green", "Secondary")).join(""));
+  /* Close remedy — the single next-best, genuinely competitive pick */
+  if (close) {
+    html += section(n++, "Close Remedy", remedyCard(close, "green", "Close"));
   }
 
-  /* Supportive remedies — broader list worth keeping in view, not ruled out */
-  if (supportive.length) {
-    html += section(n++, "Supportive Remedies", supportive.map(a => remedyCard(a, "blue", "Supportive")).join(""));
-  }
-
-  /* Dual-remedy regimen (an AM/PM combination approach) */
-  let regimen;
-  if (diseaseProtocol) {
-    regimen = diseaseProtocol.banerji;
-  } else if (top && secondary.length) {
-    regimen = { morning: `${top.remedy.name} ${top.remedy.potency.acute !== "-" ? top.remedy.potency.acute.split(",")[0] : "30C"}`,
-                evening: `${secondary[0].remedy.name} ${secondary[0].remedy.potency.acute !== "-" ? secondary[0].remedy.potency.acute.split(",")[0] : "30C"}`,
-                note: "Derived pairing based on top two symptom matches — confirm against the full case before continuing beyond a few days." };
+  /* Biochemic support — always exactly 2, a clean dual combination */
+  let biochemicPair = [];
+  if (biochemicResults.length >= 2) {
+    biochemicPair = biochemicResults.slice(0, 2).map(b => ({ ...b.biochemic, matched: true }));
+  } else if (biochemicResults.length === 1) {
+    const fallback = fallbackBiochemicFor(main ? main.remedy : null).filter(b => b.id !== biochemicResults[0].biochemic.id);
+    biochemicPair = [{ ...biochemicResults[0].biochemic, matched: true }, { ...(fallback[0] || fallbackBiochemicFor(null)[0]), matched: false }];
   } else {
-    regimen = null;
+    biochemicPair = fallbackBiochemicFor(main ? main.remedy : null).slice(0, 2).map(b => ({ ...b, matched: false }));
   }
-  if (regimen) {
-    html += section(n++, "Dual-Remedy Regimen", `
-      <div class="dual">
-        <div class="plan">
-          ${regimen.morning && regimen.morning !== "-" ? `<span>🌅 Morning: ${esc(regimen.morning)}</span>` : ""}
-          ${regimen.evening && regimen.evening !== "-" ? `<span>🌙 Evening: ${esc(regimen.evening)}</span>` : ""}
-        </div>
-        ${regimen.note ? `<div class="note">${esc(regimen.note)}</div>` : ""}
-      </div>`);
-  }
-
-  /* Biochemic support — always shows 1-2, falling back to a system-affinity default when
-     nothing in the free text specifically matches a tissue salt keynote, per "include 1-2
-     biochemic remedies for every condition". */
-  let biochemicHtml = "";
-  if (diseaseProtocol && diseaseProtocol.biochemic) {
-    biochemicHtml = `<div class="biochemic-item"><b>${esc(diseaseProtocol.biochemic)}</b></div>`;
-  } else if (biochemicResults.length) {
-    biochemicHtml = biochemicResults.slice(0, 2).map(b =>
-      `<div class="biochemic-item"><b>${esc(b.biochemic.name)} (${esc(b.biochemic.abbr)})</b> — ${esc(b.biochemic.potency)}</div>`).join("");
-  } else {
-    const fallbackBiochemics = fallbackBiochemicFor(top ? top.remedy : null);
-    biochemicHtml = fallbackBiochemics.map(b =>
-      `<div class="biochemic-item"><b>${esc(b.name)} (${esc(b.abbr)})</b> — ${esc(b.potency)} <span class="note">(general support — no specific tissue-salt symptom detected)</span></div>`).join("");
-  }
+  const biochemicHtml = biochemicPair.map(b =>
+    `<div class="biochemic-item"><b>${esc(b.name)} (${esc(b.abbr)})</b> — ${esc(b.potency)}${!b.matched ? ' <span class="note">(general support)</span>' : ""}</div>`).join("");
   html += section(n++, "Biochemic Support", biochemicHtml);
 
-  /* Tests + Diet — test items shown as yellow dots (caution / needs confirmation) */
-  const advice = diseaseProtocol ? { tests: diseaseProtocol.tests, diet: diseaseProtocol.diet } : fallbackAdvice(top ? top.remedy : null);
-  html += section(n++, "Suggested Tests", `<div class="list">${advice.tests.map(t => `<div class="item"><span class="dot yellow"></span><div>${esc(t)}</div></div>`).join("")}</div>`);
-  html += section(n++, "Diet & Lifestyle Advice", `
+  /* Essential tests + Diet, kept short — condition-specific from the disease protocol when
+     matched, otherwise a short system-based default */
+  const advice = diseaseProtocol ? { tests: diseaseProtocol.tests, diet: diseaseProtocol.diet } : fallbackAdvice(main ? main.remedy : null);
+  html += section(n++, "Essential Tests", `<div class="list">${advice.tests.slice(0, 3).map(t => `<div class="item"><span class="dot yellow"></span><div>${esc(t)}</div></div>`).join("")}</div>`);
+  html += section(n++, "Diet Advice", `
     <div class="diet-grid">
-      <div class="diet-col eat"><h4>Helpful</h4><ul>${(advice.diet.eat || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
-      <div class="diet-col avoid"><h4>Avoid</h4><ul>${(advice.diet.avoid || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+      <div class="diet-col eat"><h4>Eat</h4><ul>${(advice.diet.eat || []).slice(0, 3).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+      <div class="diet-col avoid"><h4>Avoid</h4><ul>${(advice.diet.avoid || []).slice(0, 3).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
     </div>`);
 
   /* caution for constitutional / nosode remedies */
-  const cautionNeeded = (top && (top.remedy.category === "constitutional" || top.remedy.nosode)) ||
-                         secondary.some(a => a.remedy.category === "constitutional" || a.remedy.nosode) ||
-                         supportive.some(a => a.remedy.category === "constitutional" || a.remedy.nosode);
+  const cautionNeeded = (main && (main.remedy.category === "constitutional" || main.remedy.nosode)) ||
+                         (close && (close.remedy.category === "constitutional" || close.remedy.nosode));
   if (cautionNeeded) {
-    html += `<div class="caution">One or more suggested remedies is a deep-acting constitutional or nosode remedy. Repetition and potency changes are best guided by a full case-taking and professional supervision.</div>`;
+    html += `<div class="caution">A deep-acting constitutional or nosode remedy is suggested here. Repetition and potency changes are best guided by a full case-taking and professional supervision.</div>`;
   }
 
   resultsEl.innerHTML = html;
@@ -494,21 +479,18 @@ function section(num, title, bodyHtml) {
 
 function remedyCard(r, color, label) {
   const rem = r.remedy;
-  const isPrimary = color === "red";
-  const rubrics = r.repertoryRubrics || [];
-  return `<div class="remedy ${isPrimary ? "top red" : color === "green" ? "support" : "diff"}">
+  const isMain = color === "red";
+  return `<div class="remedy ${isMain ? "top red" : "support"}">
     <div class="remedy-row">
-      <div><div class="remedy-name ${isPrimary ? "" : "sm"}">${esc(rem.name)}</div><div class="latin">${esc(rem.abbr)}</div></div>
+      <div><div class="remedy-name ${isMain ? "" : "sm"}">${esc(rem.name)}</div><div class="latin">${esc(rem.abbr)}</div></div>
       <div class="badges">
         <span class="badge ${color}">${esc(label)}</span>
         ${rem.nosode ? '<span class="badge yellow">Nosode</span>' : ""}
       </div>
     </div>
-    ${rubrics.length ? `<div class="why"><b>Repertory match</b> (${rubrics.length} rubric${rubrics.length > 1 ? "s" : ""}): ${rubrics.map(esc).join("; ")}</div>` : ""}
-    ${r.matched.length ? `<div class="why">${rubrics.length ? "Materia medica confirmation" : "Matched"}: ${r.matched.slice(0, 3).map(esc).join("; ")} (${r.percent}% confidence)</div>` : ""}
-    <div class="mm-note"><b>About ${esc(rem.name)}:</b> ${esc(materiaMedicaNote(rem))}</div>
+    <div class="why">${esc(shortKeynote(r))}</div>
     <div class="potency-row">
-      ${isPrimary && rem.potency.acute !== "-" ? `<span class="pot pot-primary">Suggested potency (acute): <b>${esc(rem.potency.acute)}</b></span>` : rem.potency.acute !== "-" ? `<span class="pot">Acute: <b>${esc(rem.potency.acute)}</b></span>` : ""}
+      ${isMain && rem.potency.acute !== "-" ? `<span class="pot pot-primary">Potency: <b>${esc(rem.potency.acute)}</b></span>` : rem.potency.acute !== "-" ? `<span class="pot">Acute: <b>${esc(rem.potency.acute)}</b></span>` : ""}
       ${rem.potency.chronic !== "-" ? `<span class="pot">Chronic: <b>${esc(rem.potency.chronic)}</b></span>` : ""}
     </div>
   </div>`;
