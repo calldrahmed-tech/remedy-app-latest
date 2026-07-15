@@ -5,7 +5,8 @@
    Biochemic support, Suggested tests, Diet & lifestyle advice.
    ============================================================ */
 
-let DB = null; // { remedies, biochemics, diseaseProtocols }
+let DB = null;        // { remedies, biochemics, diseaseProtocols }
+let REPERTORY = null; // { repertory: [ {section, rubric, triggers, remedies:[{id,grade}]} ] }
 
 const el = (id) => document.getElementById(id);
 const inputEl = el("symptomInput");
@@ -13,20 +14,31 @@ const resultBtn = el("resultBtn");
 const resultsEl = el("results");
 const statusEl = el("statusMsg");
 
-/* ---------- load data ---------- */
-fetch("remedies.json")
-  .then(r => {
+/* ---------- load data ----------
+   remedies.json (materia medica keynotes) and repertory.json (graded rubric->remedy
+   mappings) are loaded together. The repertory is the PRIMARY driver of remedy ranking —
+   materia medica keynote matching only confirms/supports a repertory-driven pick, per the
+   clinical reasoning that curated rubric-remedy relationships are far more reliable than
+   incidental prose word-overlap. */
+Promise.all([
+  fetch("remedies.json").then(r => {
     if (!r.ok) throw new Error("Could not load remedies.json (status " + r.status + ")");
     return r.json();
+  }),
+  fetch("repertory.json").then(r => {
+    if (!r.ok) throw new Error("Could not load repertory.json (status " + r.status + ")");
+    return r.json();
   })
-  .then(json => {
-    DB = json;
+])
+  .then(([remediesJson, repertoryJson]) => {
+    DB = remediesJson;
+    REPERTORY = repertoryJson.repertory;
     buildWordDict();
     statusEl.textContent = "";
     resultBtn.disabled = false;
   })
   .catch(err => {
-    statusEl.textContent = "Data failed to load: " + err.message + ". Make sure remedies.json is in the same folder as index.html and you're viewing this through a local server or GitHub Pages (not a raw double-clicked file).";
+    statusEl.textContent = "Data failed to load: " + err.message + ". Make sure remedies.json and repertory.json are both in the same folder as index.html, and you're viewing this through a local server or GitHub Pages (not a raw double-clicked file).";
     resultBtn.disabled = true;
   });
 
@@ -144,6 +156,35 @@ function countHits(kWords, inputWords) {
   return kWords.reduce((c, kw) => c + (inputWords.some(iw => wordsMatch(kw, iw)) ? 1 : 0), 0);
 }
 
+/* ---------- repertory scoring (PRIMARY driver of remedy ranking) ----------
+   For each rubric, check whether any of its trigger phrases appear in the input text
+   (substring match on the normalized text — rubric triggers are short curated phrases,
+   not single generic words, so simple substring matching is reliable here without the
+   partial-word-ratio machinery the materia medica matcher needs). For every rubric that
+   fires, every remedy listed under it gets its grade added to a running total. A remedy
+   matching multiple DIFFERENT rubrics (e.g. both "thirstless" AND "worse from heat")
+   accumulates evidence across distinct clinical facts — this is literally how real
+   repertorization combines symptoms, and is far more reliable than prose keyword overlap. */
+function scoreRepertory(inputText) {
+  const t = " " + inputText.toLowerCase().replace(/[^a-z\s]/g, " ").replace(/\s+/g, " ") + " ";
+  const remedyScores = {};      // id -> accumulated grade total
+  const remedyRubrics = {};     // id -> [ "Section: rubric text", ... ] (for display)
+  if (!REPERTORY) return { remedyScores, remedyRubrics, firedRubrics: [] };
+
+  const firedRubrics = [];
+  REPERTORY.forEach(rubric => {
+    const fired = rubric.triggers.some(trigger => t.includes(" " + trigger.toLowerCase() + " ") || t.includes(trigger.toLowerCase()));
+    if (!fired) return;
+    firedRubrics.push(`${rubric.section}: ${rubric.rubric}`);
+    rubric.remedies.forEach(r => {
+      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade;
+      remedyRubrics[r.id] = remedyRubrics[r.id] || [];
+      remedyRubrics[r.id].push(`${rubric.section}: ${rubric.rubric}`);
+    });
+  });
+  return { remedyScores, remedyRubrics, firedRubrics };
+}
+
 function scoreRemedies(inputText, diseaseProtocol) {
   const rawWords = inputText.toLowerCase().split(/[^a-z]+/).filter(Boolean);
   const corrected = rawWords.map(fuzzyCorrect);
@@ -151,13 +192,19 @@ function scoreRemedies(inputText, diseaseProtocol) {
 
   const boostIds = diseaseProtocol ? new Set(diseaseProtocol.primaryRemedies) : new Set();
 
+  // Repertory score is the PRIMARY signal: curated rubric->remedy grades, combined across
+  // every rubric the case matches. Materia medica keynote matching (below) only adds a
+  // smaller CONFIRMATORY amount on top — it can support or nudge a repertory-driven pick,
+  // but can't manufacture a top result out of prose overlap alone the way it used to.
+  const { remedyScores: repScores, remedyRubrics } = scoreRepertory(inputText);
+  const REP_WEIGHT = 1.4;     // multiplier per repertory grade point
+  const MM_WEIGHT = 0.35;     // multiplier applied to the materia medica confirmation score
+
   const results = [];
-  const TOP_N = 6; // only the strongest few matches count toward score & display — this stops
-                    // a remedy with dozens of keynotes that each weakly share a generic word
-                    // (e.g. "right", "side", "pain" scattered across unrelated body systems)
-                    // from out-accumulating a remedy with a few genuinely strong, specific
-                    // matches. It also keeps the displayed "matched" list to real keypoints
-                    // instead of a wall of every marginal overlap.
+  const TOP_N = 6; // only the strongest few materia-medica matches count toward confirmation
+                    // & display — stops a remedy with dozens of keynotes that each weakly
+                    // share a generic word (e.g. "right", "side", "pain" scattered across
+                    // unrelated body systems) from out-accumulating a genuinely strong match.
   DB.remedies.forEach(r => {
     const candidates = [];
     r.keynotes.forEach(k => {
@@ -168,30 +215,36 @@ function scoreRemedies(inputText, diseaseProtocol) {
       if (!kWords.length) return;
       const hitCount = countHits(kWords, inputWords);
       const ratio = hitCount / kWords.length;
-      // No hard cutoff: every partial match is a candidate. A hard threshold meant a single
-      // relevant word buried in a longer keynote (e.g. "thyroid" inside "hard glandular
-      // swellings, thyroid, parotid") could silently score zero and vanish entirely — worse
-      // than showing it at appropriately low confidence. The top-N cap below (not a ratio
-      // cutoff) is what keeps weak/generic matches from dominating.
       if (ratio > 0) candidates.push({ t: k.t, strength: k.w * ratio });
     });
     candidates.sort((a, b) => b.strength - a.strength);
     const top = candidates.slice(0, TOP_N);
-    let score = top.reduce((s, c) => s + c.strength, 0);
+    const mmScore = top.reduce((s, c) => s + c.strength, 0);
     const matched = top.map(c => c.t);
+
+    const repScore = repScores[r.id] || 0;
+    let score = repScore * REP_WEIGHT + mmScore * MM_WEIGHT;
 
     // small disease-tag boost so relevant remedies surface even with sparse free text
     if ((r.diseaseTags || []).some(tag => inputWords.includes(tag.split(" ")[0]))) score += 0.5;
-    if (boostIds.has(r.id)) score += 1.5; // curated protocol boost
+    if (boostIds.has(r.id)) score += 0.4; // curated protocol boost — small nudge only; must not
+                                            // be able to override a genuine multi-rubric
+                                            // repertory match (e.g. a disease-protocol remedy
+                                            // shouldn't beat a constitutional remedy that fits
+                                            // the actual case better just because the disease
+                                            // name was also mentioned in the same sentence)
 
     if (score > 0) {
       // percent is on a fixed absolute scale, not relative to this remedy's own total
       // keynote count — otherwise enriching a remedy with more real keynotes (which is
       // exactly what makes matching better) would perversely make its displayed
-      // confidence go DOWN. ~4 raw-score points (roughly 2 solid symptom matches) reads
-      // as a strong, high-confidence match.
+      // confidence go DOWN. ~4 raw-score points reads as a strong, high-confidence match.
       const percent = Math.round(Math.min(100, (score / 4) * 100));
-      results.push({ remedy: r, rawScore: score, percent, matched });
+      results.push({
+        remedy: r, rawScore: score, percent, matched,
+        repertoryRubrics: remedyRubrics[r.id] || [],
+        fromRepertory: repScore > 0
+      });
     }
   });
   results.sort((a, b) => b.rawScore - a.rawScore);
@@ -358,6 +411,7 @@ function section(num, title, bodyHtml) {
 function remedyCard(r, color, label) {
   const rem = r.remedy;
   const isPrimary = color === "red";
+  const rubrics = r.repertoryRubrics || [];
   return `<div class="remedy ${isPrimary ? "top red" : color === "green" ? "support" : "diff"}">
     <div class="remedy-row">
       <div><div class="remedy-name ${isPrimary ? "" : "sm"}">${esc(rem.name)}</div><div class="latin">${esc(rem.abbr)}</div></div>
@@ -366,7 +420,8 @@ function remedyCard(r, color, label) {
         ${rem.nosode ? '<span class="badge yellow">Nosode</span>' : ""}
       </div>
     </div>
-    ${r.matched.length ? `<div class="why">Matched: ${r.matched.map(esc).join("; ")} (${r.percent}% confidence)</div>` : ""}
+    ${rubrics.length ? `<div class="why"><b>Repertory match</b> (${rubrics.length} rubric${rubrics.length > 1 ? "s" : ""}): ${rubrics.map(esc).join("; ")}</div>` : ""}
+    ${r.matched.length ? `<div class="why">${rubrics.length ? "Materia medica confirmation" : "Matched"}: ${r.matched.slice(0, 3).map(esc).join("; ")} (${r.percent}% confidence)</div>` : ""}
     <div class="potency-row">
       ${rem.potency.acute !== "-" ? `<span class="pot">Acute: <b>${esc(rem.potency.acute)}</b></span>` : ""}
       ${rem.potency.chronic !== "-" ? `<span class="pot">Chronic: <b>${esc(rem.potency.chronic)}</b></span>` : ""}
