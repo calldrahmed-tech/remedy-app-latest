@@ -182,6 +182,23 @@ function scoreRepertory(inputText) {
       remedyRubrics[r.id].push(`${rubric.section}: ${rubric.rubric}`);
     });
   });
+
+  // FALLBACK: a bare, undifferentiated "fever" mention with no qualifying detail (no chill,
+  // thirst, onset speed, etc. — so none of the specific Fever rubrics above fired) still
+  // deserves a clinically sensible answer rather than falling through to coincidental
+  // materia medica word-overlap. Only applies when no specific Fever rubric already fired,
+  // so it never dilutes a more specific fever presentation that's already well-matched.
+  const hasSpecificFeverRubric = firedRubrics.some(f => f.startsWith("Fever:"));
+  if (!hasSpecificFeverRubric && / fever /.test(t)) {
+    const GENERAL_FEVER = [{ id: "acon", grade: 3 }, { id: "bell", grade: 3 }, { id: "gels", grade: 2 }, { id: "bry", grade: 2 }, { id: "ars-alb", grade: 2 }];
+    firedRubrics.push("Fever: General/undifferentiated fever");
+    GENERAL_FEVER.forEach(r => {
+      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade;
+      remedyRubrics[r.id] = remedyRubrics[r.id] || [];
+      remedyRubrics[r.id].push("Fever: General/undifferentiated fever");
+    });
+  }
+
   return { remedyScores, remedyRubrics, firedRubrics };
 }
 
