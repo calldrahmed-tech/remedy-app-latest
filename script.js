@@ -225,8 +225,11 @@ function scoreRemedies(inputText, diseaseProtocol) {
     const repScore = repScores[r.id] || 0;
     let score = repScore * REP_WEIGHT + mmScore * MM_WEIGHT;
 
-    // small disease-tag boost so relevant remedies surface even with sparse free text
-    if ((r.diseaseTags || []).some(tag => inputWords.includes(tag.split(" ")[0]))) score += 0.5;
+    // NOTE: a generic disease-tag boost used to live here (any input word matching the
+    // first word of any diseaseTag added a flat +0.5). Removed — it was too crude: e.g.
+    // Belladonna's "fever" tag matched the word "fever" in ANY query mentioning fever at
+    // all, awarding a boost with zero actual symptom evidence behind it. The repertory
+    // system and materia medica confirmation now carry all the real evidence.
     if (boostIds.has(r.id)) score += 0.4; // curated protocol boost — small nudge only; must not
                                             // be able to override a genuine multi-rubric
                                             // repertory match (e.g. a disease-protocol remedy
