@@ -218,8 +218,17 @@ function scoreRemedies(inputText, diseaseProtocol) {
   // smaller CONFIRMATORY amount on top — it can support or nudge a repertory-driven pick,
   // but can't manufacture a top result out of prose overlap alone the way it used to.
   const { remedyScores: repScores, remedyRubrics } = scoreRepertory(inputText);
-  const REP_WEIGHT = 1.4;     // multiplier per repertory grade point
-  const MM_WEIGHT = 0.35;     // multiplier applied to the materia medica confirmation score
+  const REP_WEIGHT = 1.4;      // multiplier per repertory grade point
+  const MM_WEIGHT_CONFIRM = 0.35; // materia medica weight when repertory already fired for this
+                                   // remedy — here it's genuinely just confirmation on top
+  const MM_WEIGHT_PRIMARY = 1.1;  // materia medica weight when NO repertory rubric fired for
+                                   // this remedy at all. The repertory only covers a handful
+                                   // of categories (appetite, thirst, weight, stool, modality,
+                                   // fever) — for everything else (headaches, burning
+                                   // sensations, discharges, pains, etc.) materia medica IS
+                                   // the only available evidence and must be able to stand on
+                                   // its own with real confidence, not be dampened as if it
+                                   // were merely supporting a repertory match that doesn't exist.
 
   const results = [];
   const TOP_N = 6; // only the strongest few materia-medica matches count toward confirmation
@@ -232,7 +241,10 @@ function scoreRemedies(inputText, diseaseProtocol) {
       // split on ANY non-letter (matches how input text is tokenized) — splitting only
       // on whitespace was merging slash/hyphen-joined words like "tonsillitis/quinsy"
       // into one unmatchable glued token ("tonsillitisquinsy").
-      const kWords = k.t.toLowerCase().split(/[^a-z]+/).filter(w => w && !STOPWORDS.has(w));
+      const kWords = [...new Set(k.t.toLowerCase().split(/[^a-z]+/).filter(w => w && !STOPWORDS.has(w)))];
+      // deduped: a word repeated within one keynote (e.g. "rolling side to side") must not
+      // count twice toward the match ratio — that inflated short, coincidental keynotes to
+      // beat genuinely more specific longer matches purely from word repetition.
       if (!kWords.length) return;
       const hitCount = countHits(kWords, inputWords);
       const ratio = hitCount / kWords.length;
@@ -242,7 +254,7 @@ function scoreRemedies(inputText, diseaseProtocol) {
       // there's no room for a partial match to still carry real specificity. Longer keynotes
       // (3+) can still contribute on a partial match — the top-N ranking below is what keeps
       // those appropriately weighted rather than dominating.
-      const isShort = kWords.length <= 2;
+      const isShort = kWords.length <= 3;
       if ((isShort && ratio >= 1.0) || (!isShort && ratio > 0)) {
         candidates.push({ t: k.t, strength: k.w * ratio });
       }
@@ -253,7 +265,8 @@ function scoreRemedies(inputText, diseaseProtocol) {
     const matched = top.map(c => c.t);
 
     const repScore = repScores[r.id] || 0;
-    let score = repScore * REP_WEIGHT + mmScore * MM_WEIGHT;
+    const mmWeight = repScore > 0 ? MM_WEIGHT_CONFIRM : MM_WEIGHT_PRIMARY;
+    let score = repScore * REP_WEIGHT + mmScore * mmWeight;
 
     // NOTE: a generic disease-tag boost used to live here (any input word matching the
     // first word of any diseaseTag added a flat +0.5). Removed — it was too crude: e.g.
@@ -298,7 +311,10 @@ function scoreBiochemics(inputText) {
   DB.biochemics.forEach(b => {
     let score = 0;
     b.keynotes.forEach(k => {
-      const kWords = k.t.toLowerCase().split(/[^a-z]+/).filter(w => w && !STOPWORDS.has(w));
+      const kWords = [...new Set(k.t.toLowerCase().split(/[^a-z]+/).filter(w => w && !STOPWORDS.has(w)))];
+      // deduped: a word repeated within one keynote (e.g. "rolling side to side") must not
+      // count twice toward the match ratio — that inflated short, coincidental keynotes to
+      // beat genuinely more specific longer matches purely from word repetition.
       if (!kWords.length) return;
       const hitCount = countHits(kWords, inputWords);
       const ratio = hitCount / kWords.length;
