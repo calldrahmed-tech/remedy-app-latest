@@ -257,6 +257,48 @@
       ]
     },
     {
+      "section": "Thirst",
+      "rubric": "Thirst, general/unspecified",
+      "triggers": [
+        "thirst",
+        "thirsty"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "rubric": "Dryness of mouth, mucous membranes, or skin",
+      "triggers": [
+        "dryness",
+        "dry mouth",
+        "dry mucous membranes",
+        "dry skin"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 3
+        },
+        {
+          "id": "nat-mur",
+          "grade": 2
+        }
+      ]
+    },
+    {
       "section": "Weight",
       "rubric": "Emaciation / weight loss despite good appetite",
       "triggers": [
@@ -335,6 +377,31 @@
         },
         {
           "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "rubric": "Wrinkled, old-looking face with emaciation",
+      "triggers": [
+        "wrinkled face",
+        "old-looking face",
+        "looking old",
+        "aged appearance",
+        "wrinkled skin"
+      ],
+      "remedies": [
+        {
+          "id": "abrot",
+          "grade": 3
+        },
+        {
+          "id": "iod",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
           "grade": 1
         }
       ]
@@ -496,6 +563,28 @@
         },
         {
           "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "rubric": "Constipation, general/unspecified",
+      "triggers": [
+        "constipation",
+        "constipated"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "alum",
           "grade": 1
         }
       ]
@@ -706,6 +795,10 @@
         },
         {
           "id": "sil",
+          "grade": 1
+        },
+        {
+          "id": "abrot",
           "grade": 1
         }
       ]
