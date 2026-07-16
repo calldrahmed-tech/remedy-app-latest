@@ -1385,6 +1385,14 @@
         {
           "t": "better dry warm weather",
           "w": 0.6
+        },
+        {
+          "t": "burning sensations, especially soles of feet and palms, at night",
+          "w": 2
+        },
+        {
+          "t": "puts feet out of bed to cool them",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -1397,7 +1405,7 @@
         "acute": "30C for skin flare",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 41.0,
+      "maxScore": 45.0,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)"
     },
     {
@@ -10421,6 +10429,10 @@
         {
           "t": "better warmth",
           "w": 0.6
+        },
+        {
+          "t": "wrinkled, old-looking face despite emaciation",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -10432,7 +10444,7 @@
         "acute": "30C 2-3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 9.2
+      "maxScore": 11.2
     }
   ],
   "biochemics": [
