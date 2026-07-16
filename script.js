@@ -173,7 +173,11 @@ function scoreRepertory(inputText) {
 
   const firedRubrics = [];
   REPERTORY.forEach(rubric => {
-    const fired = rubric.triggers.some(trigger => t.includes(" " + trigger.toLowerCase() + " ") || t.includes(trigger.toLowerCase()));
+    // word-boundary match only — a raw substring fallback here would let a bare trigger
+    // like "thirst" incorrectly match "thirstless" (opposite meaning) since it's a literal
+    // substring of it. The input text t is always padded with leading/trailing spaces, so
+    // the space-bounded check alone is sufficient for every trigger position.
+    const fired = rubric.triggers.some(trigger => t.includes(" " + trigger.toLowerCase() + " "));
     if (!fired) return;
     firedRubrics.push(`${rubric.section}: ${rubric.rubric}`);
     rubric.remedies.forEach(r => {
@@ -464,6 +468,16 @@ function runSearch() {
 
   if (!main) {
     resultsEl.innerHTML = `<div class="msg">No strong classical match from symptoms alone. Try adding more specific detail.</div>`;
+    return;
+  }
+
+  // FAIL-SAFE: below a genuine confidence floor, refuse to guess rather than force out a
+  // Main/Close pair built on coincidental word overlap. A named disease protocol is its own
+  // legitimate signal (the person told us the diagnosis directly), so it's exempted — but
+  // pure free-text symptom matching below this floor is treated as inconclusive.
+  const CONFIDENCE_FLOOR = 25;
+  if (!diseaseProtocol && main.percent < CONFIDENCE_FLOOR) {
+    resultsEl.innerHTML = `<div class="msg"><b>No confident remedy match.</b> The symptoms given don't point clearly enough to a specific remedy — this system won't guess. Try adding a modality (worse/better from what), the mind/emotional state, or the single most peculiar or unusual symptom, since these carry the most diagnostic weight in classical prescribing.</div>`;
     return;
   }
 
