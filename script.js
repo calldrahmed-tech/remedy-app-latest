@@ -156,6 +156,33 @@ function countHits(kWords, inputWords) {
   return kWords.reduce((c, kw) => c + (inputWords.some(iw => wordsMatch(kw, iw)) ? 1 : 0), 0);
 }
 
+// PERMANENT FIX for body-location mismatches (e.g. "right leg pain" matching a keynote about
+// "right eye pain" or "right shoulder pain" purely because they share generic words like
+// "right"/"pain"). Word-overlap matching has no concept of anatomy — "leg" and "eye" are just
+// two unrelated words to it, so a keynote about a totally different body part could still earn
+// partial credit from the shared filler words. This is a structural fix, not another one-off
+// patch: if the query names a specific body part AND a candidate keynote also names a specific
+// body part, they must refer to the SAME part or the match is rejected outright, regardless of
+// how many other words overlap. If either side doesn't mention a body part, no constraint
+// applies (most keynotes are already written in relation to a symptom, not every case needs
+// this check to fire).
+const ANATOMY_WORDS = new Set([
+  "head","scalp","forehead","face","eye","eyes","ear","ears","nose","mouth","teeth","tooth",
+  "gums","tongue","jaw","cheek","cheeks","throat","neck","shoulder","shoulders","arm","arms",
+  "elbow","elbows","wrist","wrists","hand","hands","finger","fingers","chest","breast","back",
+  "spine","abdomen","stomach","belly","hip","hips","groin","thigh","thighs","leg","legs","knee",
+  "knees","calf","calves","shin","ankle","ankles","foot","feet","toe","toes","heart","liver",
+  "kidney","kidneys","bladder","uterus","ovary","ovaries","testicle","testicles","rectum",
+  "anus","skin","heel","joint","joints"
+]);
+function anatomyWordsIn(words) {
+  return words.filter(w => ANATOMY_WORDS.has(w));
+}
+function anatomyConflict(inputAnatomy, keynoteAnatomy) {
+  if (!inputAnatomy.length || !keynoteAnatomy.length) return false; // no constraint if either is silent on location
+  return !keynoteAnatomy.some(k => inputAnatomy.includes(k));
+}
+
 /* ---------- repertory scoring (PRIMARY driver of remedy ranking) ----------
    For each rubric, check whether any of its trigger phrases appear in the input text
    (substring match on the normalized text — rubric triggers are short curated phrases,
@@ -248,6 +275,7 @@ function scoreRemedies(inputText, diseaseProtocol) {
                     // & display — stops a remedy with dozens of keynotes that each weakly
                     // share a generic word (e.g. "right", "side", "pain" scattered across
                     // unrelated body systems) from out-accumulating a genuinely strong match.
+  const inputAnatomy = anatomyWordsIn(inputWords);
   DB.remedies.forEach(r => {
     const candidates = [];
     r.keynotes.forEach(k => {
@@ -259,6 +287,8 @@ function scoreRemedies(inputText, diseaseProtocol) {
       // count twice toward the match ratio — that inflated short, coincidental keynotes to
       // beat genuinely more specific longer matches purely from word repetition.
       if (!kWords.length) return;
+      // Hard reject on body-location mismatch — see anatomyConflict for why this exists.
+      if (anatomyConflict(inputAnatomy, anatomyWordsIn(kWords))) return;
       const hitCount = countHits(kWords, inputWords);
       const ratio = hitCount / kWords.length;
       // Very short keynotes (2 words) need a FULL match, not just partial — a keynote like
