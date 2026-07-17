@@ -10445,6 +10445,46 @@
         "chronic": "200C occasional dose"
       },
       "maxScore": 11.2
+    },
+    {
+      "id": "kali-sulph-rem",
+      "name": "Kali Sulphuricum",
+      "abbr": "Kali-sulph",
+      "category": "chronic",
+      "system": [
+        "skin"
+      ],
+      "keynotes": [
+        {
+          "t": "dandruff with yellow scaly eruptions on scalp",
+          "w": 2
+        },
+        {
+          "t": "third stage of inflammation, yellow discharge",
+          "w": 2
+        },
+        {
+          "t": "skin peeling, scaly, worse warmth",
+          "w": 2
+        },
+        {
+          "t": "worse in evening, worse warm room",
+          "w": 1
+        },
+        {
+          "t": "better cool open air",
+          "w": 0.6
+        }
+      ],
+      "diseaseTags": [
+        "dandruff",
+        "scalp eruptions"
+      ],
+      "potency": {
+        "acute": "30C 2-3x daily",
+        "chronic": "200C occasional dose"
+      },
+      "maxScore": 7.6
     }
   ],
   "biochemics": [
