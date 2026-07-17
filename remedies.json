@@ -5324,11 +5324,19 @@
       ],
       "keynotes": [
         {
-          "t": "pelvic & portal congestion \u2192 haemorrhoids & dysmenorrhoea",
+          "t": "pelvic and portal congestion, haemorrhoids and dysmenorrhoea",
           "w": 2
         },
         {
-          "t": "painful bleeding piles with sensation of sticks/sand in rectum",
+          "t": "painful bleeding piles with sensation of sticks in rectum",
+          "w": 2
+        },
+        {
+          "t": "sensation of sticks or sharp splinters in rectum",
+          "w": 2
+        },
+        {
+          "t": "cardiac symptoms associated with haemorrhoids or piles",
           "w": 2
         },
         {
@@ -5336,15 +5344,19 @@
           "w": 2
         },
         {
-          "t": "alternate constipation & diarrhoea",
-          "w": 2
+          "t": "chronic venous congestion",
+          "w": 1
+        },
+        {
+          "t": "alternate constipation and diarrhoea",
+          "w": 1
         },
         {
           "t": "worse in late pregnancy",
-          "w": 2
+          "w": 0.6
         },
         {
-          "t": "worse mental emotion/excitement",
+          "t": "worse mental emotion or excitement",
           "w": 0.6
         }
       ],
@@ -5353,7 +5365,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 10.6
+      "maxScore": 13.2
     },
     {
       "id": "coloc",
@@ -8158,6 +8170,14 @@
         {
           "t": "better moving about",
           "w": 0.6
+        },
+        {
+          "t": "flatulence and distension after eating, worse from milk",
+          "w": 2
+        },
+        {
+          "t": "weak digestion, especially in the elderly",
+          "w": 2
         }
       ],
       "diseaseTags": [],
@@ -8165,7 +8185,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 22.400000000000002
+      "maxScore": 26.400000000000002
     },
     {
       "id": "nit-ac",
@@ -9363,6 +9383,22 @@
         {
           "t": "foot sweat offensive",
           "w": 2
+        },
+        {
+          "t": "dryness of skin and mucous membranes",
+          "w": 2
+        },
+        {
+          "t": "cracked lips and tongue",
+          "w": 2
+        },
+        {
+          "t": "offensive body odor despite bathing",
+          "w": 2
+        },
+        {
+          "t": "extreme fatigue and weakness",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -9370,7 +9406,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 14
+      "maxScore": 21
     },
     {
       "id": "sars",
@@ -10526,6 +10562,56 @@
         "chronic": "200C occasional dose"
       },
       "maxScore": 7.6
+    },
+    {
+      "id": "hydr",
+      "name": "Hydrastis Canadensis",
+      "abbr": "Hydr",
+      "category": "chronic",
+      "system": [
+        "gut",
+        "ent"
+      ],
+      "keynotes": [
+        {
+          "t": "extreme dryness of mucous membranes",
+          "w": 2
+        },
+        {
+          "t": "thick, ropy, stringy discharges",
+          "w": 2
+        },
+        {
+          "t": "constipation with ineffectual urging",
+          "w": 2
+        },
+        {
+          "t": "general weakness, cachectic appearance",
+          "w": 2
+        },
+        {
+          "t": "catarrh of all mucous membranes, thick yellow discharge",
+          "w": 2
+        },
+        {
+          "t": "worse cold air",
+          "w": 0.6
+        },
+        {
+          "t": "better warmth",
+          "w": 0.6
+        }
+      ],
+      "diseaseTags": [
+        "chronic catarrh",
+        "cachexia",
+        "debility"
+      ],
+      "potency": {
+        "acute": "30C 2-3x daily",
+        "chronic": "200C occasional dose"
+      },
+      "maxScore": 11.2
     }
   ],
   "biochemics": [
