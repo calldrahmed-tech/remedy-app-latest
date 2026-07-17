@@ -1,6 +1,213 @@
 {
   "repertory": [
     {
+      "section": "Mind",
+      "rubric": "Silent grief, dwells on past hurts, cannot cry",
+      "triggers": [
+        "silent grief",
+        "dwelling on past",
+        "cannot cry",
+        "silent sorrow",
+        "brooding over grief"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 3
+        },
+        {
+          "id": "ign",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Weeps easily, wants sympathy and consolation",
+      "triggers": [
+        "weeps easily",
+        "wants sympathy",
+        "desires consolation",
+        "cries easily",
+        "weepy"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 3
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Anxiety with restlessness, fear of death",
+      "triggers": [
+        "fear of death",
+        "anxious restlessness",
+        "great anguish",
+        "anxiety with fear"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 3
+        },
+        {
+          "id": "acon",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Anticipatory anxiety before an event",
+      "triggers": [
+        "anticipatory anxiety",
+        "exam anxiety",
+        "stage fright",
+        "anxious before event",
+        "performance anxiety"
+      ],
+      "remedies": [
+        {
+          "id": "arg-n",
+          "grade": 3
+        },
+        {
+          "id": "gels",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Irritability, easily angered, impatient",
+      "triggers": [
+        "irritable",
+        "easily angered",
+        "impatient",
+        "irritability",
+        "quick to anger"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 3
+        },
+        {
+          "id": "cham",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Suppressed anger or indignation from insult",
+      "triggers": [
+        "suppressed anger",
+        "indignation",
+        "silent anger",
+        "humiliation",
+        "insult"
+      ],
+      "remedies": [
+        {
+          "id": "staph",
+          "grade": 3
+        },
+        {
+          "id": "coloc",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Indifference to loved ones or surroundings",
+      "triggers": [
+        "indifference to loved ones",
+        "indifferent to family",
+        "apathy toward family",
+        "emotional indifference"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 3
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Jealousy, suspicion, talkative",
+      "triggers": [
+        "jealousy",
+        "suspicious",
+        "very talkative",
+        "loquacious",
+        "jumps from subject to subject"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 3
+        },
+        {
+          "id": "hyos",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Lack of confidence, fear of failure",
+      "triggers": [
+        "lack of confidence",
+        "fear of failure",
+        "low self esteem",
+        "self doubt"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 3
+        },
+        {
+          "id": "arg-n",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Forgetfulness, confusion of mind",
+      "triggers": [
+        "forgetful",
+        "forgetfulness",
+        "confusion of mind",
+        "difficult thinking",
+        "poor memory"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "bar-c",
+          "grade": 2
+        }
+      ]
+    },
+    {
       "section": "Appetite",
       "rubric": "Ravenous, increased hunger",
       "triggers": [
