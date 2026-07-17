@@ -16,16 +16,60 @@
           "grade": 3
         },
         {
+          "id": "fl-ac",
+          "grade": 3
+        },
+        {
           "id": "kali-sulph-rem",
           "grade": 2
         },
         {
-          "id": "fl-ac",
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "graph",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        },
+        {
+          "id": "tell",
           "grade": 2
         },
         {
           "id": "lyc",
           "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 2
         }
       ]
     },
@@ -270,7 +314,9 @@
         "indifference to loved ones",
         "indifferent to family",
         "apathy toward family",
-        "emotional indifference"
+        "emotional indifference",
+        "indifference to family",
+        "indifferent to loved ones"
       ],
       "remedies": [
         {
@@ -309,6 +355,7 @@
       "rubric": "Lack of confidence, fear of failure",
       "triggers": [
         "lack of confidence",
+        "lacks confidence",
         "fear of failure",
         "low self esteem",
         "self doubt"
@@ -320,6 +367,10 @@
         },
         {
           "id": "arg-n",
+          "grade": 2
+        },
+        {
+          "id": "sil",
           "grade": 2
         }
       ]
@@ -725,7 +776,8 @@
         "overweight",
         "weight gain",
         "tendency to fat",
-        "gaining weight easily"
+        "gaining weight easily",
+        "gains weight easily"
       ],
       "remedies": [
         {
@@ -1117,7 +1169,9 @@
         "worse from heat",
         "worse warm room",
         "better cold",
-        "better from cold"
+        "better from cold",
+        "feels hot",
+        "prefers open air"
       ],
       "remedies": [
         {
@@ -1126,6 +1180,14 @@
         },
         {
           "id": "apis",
+          "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 2
+        },
+        {
+          "id": "fl-ac",
           "grade": 2
         }
       ]
@@ -1161,6 +1223,10 @@
         {
           "id": "abrot",
           "grade": 1
+        },
+        {
+          "id": "kali-c",
+          "grade": 2
         }
       ]
     },
