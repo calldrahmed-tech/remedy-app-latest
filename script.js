@@ -699,63 +699,62 @@ function runSearch() {
   let html = "";
 
   /* ---------- Diagnosis card ----------
-     Per explicit decision: ALWAYS show "Symptom-Based Analysis" as the fixed heading —
-     never a specific disease name. This removes the inconsistency at the source (previously
-     alternated between a disease name and this label depending on confidence, which read as
-     unprofessional). The case-type tag (e.g. "Digestive Case") still identifies what kind of
-     case it is, without naming a specific condition. The matched disease protocol, if any,
-     still silently drives tests/diet/biochemic content below — only the DISPLAY changed. */
+     ALWAYS shows "Symptom-Based Analysis" as the fixed heading — never a specific disease
+     name, per explicit decision to remove the inconsistency at the source. The case-type tag
+     (e.g. "Digestive Case") still identifies what kind of case it is. The matched disease
+     protocol, if any, still silently drives tests/diet/biochemic content below — only the
+     DISPLAY changed. Layout: title+tag+checklist together on the left, confidence gauge
+     on the right — matches the approved reference design. */
   const confPct = main.percent;
-  const diagnosisTitle = "SYMPTOM-BASED ANALYSIS";
+  const diagnosisTitle = "Symptom-Based Analysis";
   const caseTag = deriveCaseTag(main);
   const allKeynotes = [];
   if (main) allKeynotes.push(shortKeynote(main));
   if (close) allKeynotes.push(shortKeynote(close));
   const symptomBullets = allKeynotes.join("; ").split(/;\s*/).filter(Boolean).slice(0, 4);
-  const confTag = confPct >= 70 ? "HIGHLY MATCHED" : confPct >= 40 ? "MODERATE MATCH" : "PARTIAL MATCH";
 
   html += `<div class="diagnosis-card">
-    <div class="diag-left">
-      <div class="diag-icon">🩺</div>
-      <div>
-        <div class="diag-eyebrow">Diagnosis</div>
-        <div class="diag-title display">${esc(diagnosisTitle)}</div>
-        <div class="diag-tag">👍 ${esc(caseTag)}</div>
-      </div>
+    <div class="diag-body">
+      <div class="diag-title display">${esc(diagnosisTitle)}</div>
+      <div class="diag-tag-line">${esc(caseTag)}</div>
+      <div class="ks-grid">${symptomBullets.map(k => `<div class="ks-item"><span class="check">✓</span>${esc(k)}</div>`).join("")}</div>
     </div>
-    <div class="key-symptoms">
-      <div class="ks-head">📋 Key Symptoms</div>
-      <div class="ks-grid">${symptomBullets.map(k => `<div class="ks-item"><span class="dot">✔</span>${esc(k)}</div>`).join("")}</div>
-    </div>
-
     <div class="confidence-gauge">
-      <div class="gauge-label">Match Confidence</div>
       ${confidenceGaugeSVG(confPct)}
       <div class="gauge-pct display">${confPct}%</div>
-      <div class="gauge-tag">${confTag}</div>
+      <div class="gauge-tag">Confidence match ›</div>
     </div>
   </div>`;
 
-  /* ---------- Remedy plan ---------- */
-  const remedyCount = close ? "2 MAIN REMEDIES" : "1 MAIN REMEDY";
-  html += `<div class="plan-bar">
-    <div class="plan-title display">🌿 REMEDY PLAN <span class="count">(${remedyCount})</span></div>
-    <div class="protocol-badge">🛡️ CLINICAL PROTOCOL BASED</div>
+  /* ---------- Remedy plan: two self-contained side-by-side cards ---------- */
+  html += `<div class="plan-heading-row">
+    <div class="plan-heading">Remedy Plan</div>
   </div>`;
 
-  html += `<div class="remedy-plan-wrap">
-    <div class="remedy-table-head"><div>Remedy</div><div>Potency</div><div>Timing</div><div>How to Take</div></div>
-    <div class="remedy-row red">
-      <div class="rc-remedy">${VIAL_SVG}<div class="rc-name-wrap"><div class="rank-badge">1 · MAIN REMEDY</div><div class="rc-name display">${esc(main.remedy.name)}</div></div></div>
-      <div class="rc-potency">${esc(main.remedy.potency.acute !== "-" ? main.remedy.potency.acute.split(" ")[0] : "30C")}</div>
-      <div class="rc-timing"><div class="ic">☀️</div><div><div class="tmain">MORNING</div><div class="tsub">Empty Stomach</div></div></div>
-      <div class="rc-dose"><div class="dmain">4 Globules</div><div class="dsub">Once Daily</div></div>
+  html += `<div class="remedy-cards-grid">
+    <div class="remedy-card red">
+      <div class="rc-head">
+        <div class="rc-name">${esc(main.remedy.name)}</div>
+        <div class="rc-timing">☀️ Morning Dosage</div>
+        <div class="rc-potency">${esc(main.remedy.potency.acute !== "-" ? main.remedy.potency.acute.split(" ")[0] : "30C")}</div>
+        ${main.remedy.nosode ? '<div class="rc-nosode-tag">NOSODE</div>' : ""}
+      </div>
+      <div class="rc-body">
+        <div class="rc-body-title">Why This Remedy</div>
+        <div class="rc-body-text">${esc(shortKeynote(main))}</div>
+      </div>
     </div>
-    ${close ? `<div class="remedy-row green">
-      <div class="rc-remedy">${VIAL_SVG}<div class="rc-name-wrap"><div class="rank-badge">2 · CLOSE REMEDY</div><div class="rc-name display">${esc(close.remedy.name)}</div></div></div>
-      <div class="rc-potency">${esc(close.remedy.potency.acute !== "-" ? close.remedy.potency.acute.split(" ")[0] : "30C")}</div>
-      <div class="rc-timing"><div class="ic">🌙</div><div><div class="tmain">EVENING / NIGHT</div><div class="tsub">Before Sleep</div></div></div>
-      <div class="rc-dose"><div class="dmain">4 Globules</div><div class="dsub">Once Daily</div></div>
+    ${close ? `<div class="remedy-card green">
+      <div class="rc-head">
+        <div class="rc-name">${esc(close.remedy.name)}</div>
+        <div class="rc-timing">🌙 Evening Dosage</div>
+        <div class="rc-potency">${esc(close.remedy.potency.acute !== "-" ? close.remedy.potency.acute.split(" ")[0] : "30C")}</div>
+        ${close.remedy.nosode ? '<div class="rc-nosode-tag">NOSODE</div>' : ""}
+      </div>
+      <div class="rc-body">
+        <div class="rc-body-title">Why This Remedy</div>
+        <div class="rc-body-text">${esc(shortKeynote(close))}</div>
+      </div>
     </div>` : ""}
   </div>`;
 
