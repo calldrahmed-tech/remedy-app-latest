@@ -20,6 +20,10 @@
         {
           "id": "graph",
           "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 1
         }
       ]
     },
