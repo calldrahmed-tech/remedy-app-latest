@@ -251,17 +251,27 @@ function scoreRepertory(inputText) {
   const inputLoc = parseLocation(inputText);
   const remedyScores = {};      // id -> accumulated weighted grade total
   const remedyRubrics = {};     // id -> [ "Section: rubric text", ... ] (for display)
-  if (!REPERTORY) return { remedyScores, remedyRubrics, firedRubrics: [] };
+  if (!REPERTORY) return { remedyScores, remedyRubrics, firedRubrics: [], mainComplaintRubric: null };
 
   const firedRubrics = [];
+  // MAIN COMPLAINT DETECTION: the fired rubric whose trigger appears EARLIEST in the text is
+  // treated as the case's main complaint (first-mentioned/most emphasized symptom). Per Step 3,
+  // a Mind-section match takes priority as "main complaint" over an equally-early physical one,
+  // since mental symptoms are meant to dominate the case here.
+  let mainComplaintRubric = null;
+  let earliestPos = Infinity;
   REPERTORY.forEach(rubric => {
     // word-boundary match only — a raw substring fallback here would let a bare trigger
     // like "thirst" incorrectly match "thirstless" (opposite meaning) since it's a literal
     // substring of it. The input text t is always padded with leading/trailing spaces, so
     // the space-bounded check alone is sufficient for every trigger position.
-    const fired = matchLocation(rubric, inputLoc) &&
-                  rubric.triggers.some(trigger => t.includes(" " + trigger.toLowerCase() + " "));
-    if (!fired) return;
+    if (!matchLocation(rubric, inputLoc)) return;
+    let bestPos = Infinity;
+    rubric.triggers.forEach(trigger => {
+      const idx = t.indexOf(" " + trigger.toLowerCase() + " ");
+      if (idx >= 0 && idx < bestPos) bestPos = idx;
+    });
+    if (bestPos === Infinity) return; // didn't fire
     firedRubrics.push(`${rubric.section}: ${rubric.rubric}`);
     const sw = SECTION_WEIGHT[rubric.section] || 1.0;
     rubric.remedies.forEach(r => {
@@ -269,6 +279,13 @@ function scoreRepertory(inputText) {
       remedyRubrics[r.id] = remedyRubrics[r.id] || [];
       remedyRubrics[r.id].push(`${rubric.section}: ${rubric.rubric}`);
     });
+    // earliest position wins; a Mind-section rubric at an equal or later position still
+    // overrides a non-Mind one already marked as main complaint (mental symptoms dominate)
+    const mindPriority = rubric.section === "Mind" && mainComplaintRubric && mainComplaintRubric.section !== "Mind";
+    if (bestPos < earliestPos || mindPriority) {
+      earliestPos = bestPos;
+      mainComplaintRubric = rubric;
+    }
   });
 
   // FALLBACK: a bare, undifferentiated "fever" mention with no qualifying detail (no chill,
@@ -288,7 +305,7 @@ function scoreRepertory(inputText) {
     });
   }
 
-  return { remedyScores, remedyRubrics, firedRubrics };
+  return { remedyScores, remedyRubrics, firedRubrics, mainComplaintRubric };
 }
 
 function scoreRemedies(inputText, diseaseProtocol) {
@@ -302,7 +319,14 @@ function scoreRemedies(inputText, diseaseProtocol) {
   // every rubric the case matches. Materia medica keynote matching (below) only adds a
   // smaller CONFIRMATORY amount on top — it can support or nudge a repertory-driven pick,
   // but can't manufacture a top result out of prose overlap alone the way it used to.
-  const { remedyScores: repScores, remedyRubrics } = scoreRepertory(inputText);
+  const { remedyScores: repScores, remedyRubrics, mainComplaintRubric } = scoreRepertory(inputText);
+  // MAIN COMPLAINT BOOST: remedies graded in the detected main-complaint rubric get a large
+  // score boost — strong enough that matching the case's central symptom reliably outranks a
+  // remedy that only matches secondary/general symptoms (thirst, dryness) without touching the
+  // main complaint at all. No separate "demotion" logic is needed — a remedy that lacks this
+  // boost is automatically out-ranked by one that has it, which achieves the same effect.
+  const MAIN_COMPLAINT_BOOST = 3.5;
+  const mainComplaintRemedyIds = new Set((mainComplaintRubric ? mainComplaintRubric.remedies : []).map(r => r.id));
   const REP_WEIGHT = 1.4;      // multiplier per repertory grade point
   const MM_WEIGHT_CONFIRM = 0.35; // materia medica weight when repertory already fired for this
                                    // remedy — here it's genuinely just confirmation on top
@@ -363,6 +387,7 @@ function scoreRemedies(inputText, diseaseProtocol) {
     const repScore = repScores[r.id] || 0;
     const mmWeight = repScore > 0 ? MM_WEIGHT_CONFIRM : MM_WEIGHT_PRIMARY;
     let score = repScore * REP_WEIGHT + mmScore * mmWeight;
+    if (mainComplaintRemedyIds.has(r.id)) score += MAIN_COMPLAINT_BOOST;
 
     // NOTE: a generic disease-tag boost used to live here (any input word matching the
     // first word of any diseaseTag added a flat +0.5). Removed — it was too crude: e.g.
