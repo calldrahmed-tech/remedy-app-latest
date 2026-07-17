@@ -2,11 +2,43 @@
   "repertory": [
     {
       "section": "Common",
+      "rubric": "Hair loss, hair falling",
+      "triggers": [
+        "hair fall",
+        "hair falling",
+        "falling hair",
+        "hair loss",
+        "losing hair"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 3
+        },
+        {
+          "id": "kali-sulph-rem",
+          "grade": 2
+        },
+        {
+          "id": "fl-ac",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
       "rubric": "Dandruff, scalp scaling",
       "triggers": [
         "dandruff",
         "scalp scaling",
-        "flaky scalp"
+        "flaky scalp",
+        "flakes on scalp",
+        "white flakes",
+        "scalp flaking"
       ],
       "remedies": [
         {
@@ -32,6 +64,8 @@
       "rubric": "Bleeding gums",
       "triggers": [
         "bleeding gums",
+        "gums bleeding",
+        "blood from gums",
         "gums bleed"
       ],
       "remedies": [
@@ -55,6 +89,8 @@
       "triggers": [
         "nosebleed",
         "nose bleeding",
+        "bleeding nose",
+        "blood from nose",
         "epistaxis",
         "bleeding nose"
       ],
