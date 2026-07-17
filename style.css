@@ -1,124 +1,106 @@
 :root {
-  --navy: #0a1330; --navy-2: #0f1e45; --gold: #ffc94a; --gold-deep: #e0a824;
+  --navy: #0a1330; --navy-2: #0f1e45; --gold: #f0a94e; --gold-deep: #d68f2f;
   --red-1: #e0342f; --red-2: #8f1414; --red-glow: rgba(224,52,47,0.22);
   --green-1: #2fa84f; --green-2: #0f5c22; --green-glow: rgba(47,168,79,0.22);
   --purple-1: #8b5cf6; --purple-2: #5b21b6;
   --blue-1: #3b82f6; --blue-2: #1e3a8a;
   --orange-1: #fb923c; --orange-2: #c2410c;
-  --ink: #14161f; --muted: #6b6f7d; --line: #e6e4dd; --paper: #f2f1ec; --card: #ffffff;
-  --radius: 14px;
+  --ink: #14161f; --muted: #6b6f7d; --line: #e3e2dc; --paper: #f3f2ee; --card: #ffffff;
+  --radius: 16px;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--paper); color: var(--ink); line-height: 1.5; }
 .display { font-family: "Poppins", "Inter", sans-serif; font-style: normal; font-weight: 800; }
-.sub-subtitle { font-size: 0.62rem; color: #9fb0d6; font-weight: 500; margin-top: 1px; }
-.wrap { max-width: 960px; margin: 0 auto; padding: 0 0 36px; }
+.wrap { max-width: 560px; margin: 0 auto; padding: 0 0 36px; }
 
-/* ---------- HEADER ---------- */
-header.app-header { background: radial-gradient(ellipse at top left, #16204a 0%, var(--navy) 60%); color: #fff; padding: 14px 20px; box-shadow: 0 2px 14px rgba(0,0,0,0.3); }
-.header-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; max-width: 960px; margin: 0 auto; }
-.brand { display: flex; align-items: center; gap: 10px; }
-.brand .logo-circle { width: 42px; height: 42px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; box-shadow: 0 0 12px rgba(255,255,255,0.3); }
-.brand .word { font-size: 1.2rem; font-weight: 900; font-style: italic; line-height: 1.1; }
-.brand .word .accent { color: var(--gold); }
-.brand .tagline { font-size: 0.66rem; color: #9fb0d6; font-weight: 600; }
-.case-pill { background: linear-gradient(135deg, #1d2b5c, #0a1330); border: 1px solid #3a4a8a; border-radius: 999px; padding: 9px 18px; font-size: 0.78rem; font-weight: 800; display: flex; align-items: center; gap: 7px; white-space: nowrap; box-shadow: 0 0 14px rgba(60,90,200,0.35); }
-.header-badges { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
-.hbadge { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; padding: 7px 11px; font-size: 0.66rem; font-weight: 700; display: flex; align-items: center; gap: 6px; color: #dbe2f0; white-space: nowrap; }
-.hbadge .ic { font-size: 0.95rem; }
-
-/* ---------- SEARCH ---------- */
-.search-card { background: var(--card); padding: 16px 20px; border-bottom: 1px solid var(--line); }
-#symptomInput { width: 100%; min-height: 70px; resize: vertical; border: 1.5px solid var(--line); border-radius: 10px; padding: 12px 14px; font-size: 0.95rem; color: var(--ink); outline: none; font-family: inherit; }
-#symptomInput:focus { border-color: var(--navy); box-shadow: 0 0 0 3px rgba(10,19,48,0.1); }
-#resultBtn { width: 100%; margin-top: 10px; background: linear-gradient(135deg, var(--red-1), var(--red-2)); color: #fff; border: none; border-radius: 10px; padding: 13px; font-size: 0.98rem; font-weight: 800; cursor: pointer; letter-spacing: 0.02em; box-shadow: 0 4px 16px var(--red-glow); }
-#resultBtn:hover:not(:disabled) { filter: brightness(1.08); }
+/* ---------- HEADER (simplified: logo, Symptom label, input+button, all in one navy card) ---------- */
+header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26px; border-radius: 0 0 26px 26px; max-width: 560px; margin: 0 auto; }
+.header-row { display: flex; justify-content: center; margin-bottom: 18px; }
+.brand.center { display: flex; align-items: center; gap: 10px; }
+.brand .logo-circle { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.05rem; flex-shrink: 0; }
+.brand .word { font-size: 1.25rem; font-weight: 700; }
+.brand .word .accent { color: var(--gold); font-weight: 800; }
+.symptom-label { display: block; font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; }
+.search-inline { display: flex; gap: 10px; }
+#symptomInput { flex: 1; border: none; border-radius: 10px; padding: 13px 15px; font-size: 0.92rem; color: var(--ink); outline: none; font-family: inherit; background: #fff; }
+#resultBtn { background: var(--red-1); color: #fff; border: none; border-radius: 10px; padding: 13px 22px; font-size: 0.92rem; font-weight: 700; cursor: pointer; white-space: nowrap; }
+#resultBtn:hover:not(:disabled) { background: var(--red-2); }
 #resultBtn:disabled { opacity: 0.5; cursor: not-allowed; }
-.samples { margin-top: 10px; font-size: 0.8rem; }
-.samples .lbl { color: var(--muted); margin-bottom: 5px; }
-.sample-chip { background: #eef1fb; border: 1px solid #cdd6f5; color: #2c3f8f; border-radius: 999px; padding: 5px 11px; margin: 3px 4px 3px 0; cursor: pointer; font-size: 0.75rem; font-weight: 600; }
-#statusMsg { font-size: 0.8rem; color: var(--muted); text-align: center; margin-top: 8px; }
+
+/* ---------- SAMPLES + STATUS ---------- */
+.samples-bar { padding: 14px 20px 4px; font-size: 0.8rem; }
+.samples-bar .lbl { color: var(--muted); margin-bottom: 6px; }
+.sample-chip { background: #eef1fb; border: 1px solid #cdd6f5; color: #2c3f8f; border-radius: 999px; padding: 6px 12px; margin: 3px 4px 3px 0; cursor: pointer; font-size: 0.76rem; font-weight: 600; }
+#statusMsg { font-size: 0.8rem; color: var(--muted); text-align: center; margin-top: 6px; padding: 0 20px; }
 .msg { background: #eef1fb; border: 1px solid #cdd6f5; color: #2c3f8f; border-radius: 10px; padding: 12px 16px; font-size: 0.85rem; margin: 16px 20px; }
 
-/* ---------- DIAGNOSIS CARD ---------- */
-.diagnosis-card { background: var(--card); margin: 16px 20px; border-radius: var(--radius); box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center; padding: 18px 22px; }
-.diag-left { display: flex; align-items: center; gap: 14px; }
-.diag-icon { width: 62px; height: 62px; border-radius: 50%; background: #fde3e1; display: flex; align-items: center; justify-content: center; font-size: 1.9rem; flex-shrink: 0; border: 2px solid #f6b3ae; }
-.diag-eyebrow { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #8a8f9e; }
-.diag-title { font-size: 1.55rem; color: var(--ink); margin-top: 1px; letter-spacing: -0.01em; }
-.diag-tag { display: inline-flex; align-items: center; gap: 5px; background: var(--gold); color: #4a3300; font-size: 0.72rem; font-weight: 800; border-radius: 999px; padding: 4px 12px; margin-top: 8px; }
+/* ---------- DIAGNOSIS CARD (title+tag+checklist on left/top, gauge on right) ---------- */
+.diagnosis-card { background: var(--card); margin: 16px 20px; border-radius: var(--radius); box-shadow: 0 4px 20px rgba(0,0,0,0.08); padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; }
+.diag-body { flex: 1; min-width: 220px; }
+.diag-title { font-size: 1.3rem; color: var(--ink); line-height: 1.2; }
+.diag-tag-line { font-size: 1.05rem; color: var(--muted); font-weight: 600; margin-top: 2px; margin-bottom: 14px; }
+.ks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; }
+.ks-item { font-size: 0.86rem; font-weight: 500; color: #333; display: flex; align-items: center; gap: 8px; }
+.ks-item .check { width: 18px; height: 18px; border-radius: 5px; background: var(--green-1); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 0.68rem; flex-shrink: 0; }
 
-.key-symptoms { border-left: 1px solid var(--line); border-right: 1px solid var(--line); padding: 0 20px; }
-.ks-head { font-size: 0.76rem; font-weight: 800; color: var(--red-1); display: flex; align-items: center; gap: 6px; margin-bottom: 9px; }
-.ks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 18px; }
-.ks-item { font-size: 0.78rem; font-weight: 600; color: #333; display: flex; align-items: center; gap: 6px; }
-.ks-item .dot { color: var(--red-1); flex-shrink: 0; }
+.confidence-gauge { text-align: center; min-width: 130px; flex-shrink: 0; }
+.gauge-pct { font-size: 2rem; font-weight: 900; color: var(--ink); margin-top: -6px; }
+.gauge-tag { font-size: 0.82rem; color: var(--muted); font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 3px; }
 
-.confidence-gauge { text-align: center; min-width: 130px; }
-.gauge-label { font-size: 0.66rem; font-weight: 800; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 4px; }
-.gauge-pct { font-size: 1.9rem; font-weight: 900; font-style: italic; color: var(--green-1); }
-.gauge-tag { display: inline-block; background: linear-gradient(135deg, var(--green-1), var(--green-2)); color: #fff; font-size: 0.62rem; font-weight: 800; border-radius: 999px; padding: 3px 12px; margin-top: 4px; letter-spacing: 0.03em; }
-
-@media (max-width: 720px) {
-  .diagnosis-card { grid-template-columns: 1fr; }
-  .key-symptoms { border: none; padding: 10px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+@media (max-width: 480px) {
+  .diagnosis-card { flex-direction: column; align-items: stretch; }
+  .confidence-gauge { align-self: center; }
 }
 
-/* ---------- REMEDY PLAN BAR ---------- */
-.plan-bar { background: linear-gradient(90deg, var(--navy) 0%, var(--navy-2) 100%); margin: 0 20px; border-radius: 12px 12px 0 0; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-.plan-title { color: #fff; font-size: 1.15rem; display: flex; align-items: center; gap: 9px; }
-.plan-title .count { color: var(--gold); font-size: 0.85rem; font-weight: 700; font-style: normal; }
-.protocol-badge { background: rgba(255,201,74,0.15); border: 1px solid var(--gold); color: var(--gold); font-size: 0.68rem; font-weight: 800; border-radius: 999px; padding: 6px 13px; display: flex; align-items: center; gap: 6px; }
+/* ---------- REMEDY PLAN HEADING ---------- */
+.plan-heading-row { display: flex; align-items: center; justify-content: space-between; margin: 22px 20px 12px; }
+.plan-heading { font-size: 1.15rem; font-weight: 700; color: var(--ink); }
+.plan-sub-link { font-size: 0.8rem; color: var(--muted); font-weight: 600; display: flex; align-items: center; gap: 3px; }
 
-/* ---------- REMEDY TABLE ---------- */
-.remedy-plan-wrap { margin: 0 20px 18px; }
-.remedy-table-head { display: grid; grid-template-columns: 2.1fr 1fr 1.3fr 1.2fr; background: var(--navy-2); color: #cdd6f5; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; padding: 10px 20px; }
-.remedy-row { display: grid; grid-template-columns: 2.1fr 1fr 1.3fr 1.2fr; align-items: center; padding: 16px 20px; gap: 10px; position: relative; }
-.remedy-row.red { background: linear-gradient(120deg, var(--red-1) 0%, var(--red-2) 100%); box-shadow: 0 6px 22px var(--red-glow); }
-.remedy-row.green { background: linear-gradient(120deg, var(--green-1) 0%, var(--green-2) 100%); box-shadow: 0 6px 22px var(--green-glow); border-radius: 0 0 12px 12px; }
-.rc-remedy { display: flex; align-items: center; gap: 12px; }
-.vial { width: 34px; height: 54px; flex-shrink: 0; transform: rotate(-18deg); filter: drop-shadow(0 3px 4px rgba(0,0,0,0.3)); }
-.rc-name-wrap .rank-badge { display: inline-block; background: rgba(255,255,255,0.22); color: #fff; font-size: 0.62rem; font-weight: 800; border-radius: 6px; padding: 2px 7px; margin-bottom: 3px; }
-.rc-name { color: #fff; font-size: 1.5rem; line-height: 1.05; }
-.rc-sub { color: rgba(255,255,255,0.85); font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; }
-.rc-potency { background: #fff; color: var(--ink); font-weight: 900; font-size: 1.05rem; border-radius: 8px; padding: 8px 0; text-align: center; }
-.rc-timing { display: flex; align-items: center; gap: 8px; color: #fff; }
-.rc-timing .ic { font-size: 1.4rem; }
-.rc-timing .tmain { font-weight: 900; font-size: 0.95rem; }
-.rc-timing .tsub { font-size: 0.68rem; color: rgba(255,255,255,0.85); font-weight: 600; }
-.rc-dose { color: #fff; }
-.rc-dose .dmain { font-weight: 900; font-size: 1rem; }
-.rc-dose .dsub { font-size: 0.68rem; color: rgba(255,255,255,0.85); font-weight: 600; }
+/* ---------- REMEDY CARDS (side-by-side, each self-contained) ---------- */
+.remedy-cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 20px 14px; }
+.remedy-card { border-radius: 14px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.remedy-card .rc-head { padding: 18px 16px 14px; color: #fff; }
+.remedy-card.red .rc-head { background: linear-gradient(150deg, var(--red-1) 0%, var(--red-2) 100%); }
+.remedy-card.green .rc-head { background: linear-gradient(150deg, var(--green-1) 0%, var(--green-2) 100%); }
+.remedy-card .rc-name { font-size: 1.15rem; font-weight: 800; line-height: 1.15; margin-bottom: 6px; }
+.remedy-card .rc-timing { font-size: 0.76rem; opacity: 0.92; font-weight: 600; }
+.remedy-card .rc-potency { display: inline-block; background: rgba(255,255,255,0.22); border-radius: 7px; padding: 3px 10px; font-size: 0.8rem; font-weight: 800; margin-top: 8px; }
+.remedy-card .rc-body { background: var(--card); padding: 13px 16px 15px; }
+.remedy-card .rc-body-title { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--muted); margin-bottom: 5px; }
+.remedy-card .rc-body-text { font-size: 0.78rem; color: #444; line-height: 1.4; }
+.remedy-card .rc-nosode-tag { display: inline-block; background: var(--purple-1); color: #fff; font-size: 0.6rem; font-weight: 800; border-radius: 6px; padding: 2px 7px; margin-top: 6px; }
 
-@media (max-width: 680px) {
-  .remedy-table-head { display: none; }
-  .remedy-row { grid-template-columns: 1fr; text-align: left; gap: 8px; }
-}
+@media (max-width: 480px) { .remedy-cards-grid { grid-template-columns: 1fr; } }
 
 /* ---------- BOTTOM MINI CARDS ---------- */
-.mini-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin: 0 20px 16px; }
-.mini-card { border-radius: 12px; overflow: hidden; box-shadow: 0 3px 14px rgba(0,0,0,0.08); background: var(--card); }
-.mini-card-head { padding: 10px 14px; font-size: 0.72rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 7px; letter-spacing: 0.02em; }
-.mini-card.purple .mini-card-head { background: linear-gradient(120deg, var(--purple-1), var(--purple-2)); }
-.mini-card.blue .mini-card-head { background: linear-gradient(120deg, var(--blue-1), var(--blue-2)); }
-.mini-card.orange .mini-card-head { background: linear-gradient(120deg, var(--orange-1), var(--orange-2)); }
-.mini-card-body { padding: 13px 14px; }
-.mini-title { font-size: 1.02rem; font-weight: 900; font-style: italic; color: var(--ink); }
-.mini-freq-pill { display: inline-block; border-radius: 999px; padding: 3px 11px; font-size: 0.64rem; font-weight: 800; color: #fff; margin-top: 7px; }
-.mini-card.purple .mini-freq-pill { background: linear-gradient(120deg, var(--purple-1), var(--purple-2)); }
-.mini-card.blue .mini-freq-pill { background: linear-gradient(120deg, var(--blue-1), var(--blue-2)); }
-.mini-sub { font-size: 0.72rem; color: var(--muted); margin-top: 3px; }
+.mini-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 20px 16px; }
+.mini-card { border-radius: 14px; overflow: hidden; box-shadow: 0 3px 14px rgba(0,0,0,0.08); background: var(--card); border: 1px solid var(--line); border-top: 3px solid transparent; }
+.mini-card.purple { border-top-color: var(--purple-1); }
+.mini-card.blue { border-top-color: var(--blue-1); }
+.mini-card.orange { border-top-color: var(--orange-1); }
+.mini-card-head { padding: 12px 14px; font-size: 0.74rem; font-weight: 800; color: var(--ink); display: flex; align-items: center; gap: 7px; }
+.mini-card-body { padding: 0 14px 14px; }
+.mini-title { font-size: 1rem; font-weight: 800; color: var(--ink); }
+.mini-freq-pill { display: inline-block; border-radius: 999px; padding: 3px 11px; font-size: 0.64rem; font-weight: 800; color: #fff; margin-top: 7px; background: var(--purple-1); }
+.mini-sub { font-size: 0.72rem; color: var(--muted); margin-top: 5px; }
 .diet-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.diet-cols h5 { font-size: 0.7rem; font-weight: 800; margin-bottom: 5px; }
+.diet-cols h5 { font-size: 0.68rem; font-weight: 800; margin-bottom: 5px; }
 .diet-cols .eat h5 { color: var(--green-1); } .diet-cols .avoid h5 { color: var(--red-1); }
 .diet-cols ul { list-style: none; font-size: 0.72rem; }
 .diet-cols li { padding: 1px 0; display: flex; gap: 5px; align-items: flex-start; font-weight: 600; }
 .diet-cols .eat li::before { content: "✓"; color: var(--green-1); font-weight: 900; }
 .diet-cols .avoid li::before { content: "✕"; color: var(--red-1); font-weight: 900; }
+.mini-list { list-style: none; font-size: 0.76rem; }
+.mini-list li { padding: 2px 0; }
+
+@media (max-width: 480px) { .mini-row { grid-template-columns: 1fr; } }
 
 /* ---------- CAUTION ---------- */
 .caution { margin: 0 20px 16px; background: #fff6de; border: 1px solid #f0d98a; border-radius: 10px; padding: 12px 16px; font-size: 0.78rem; color: #6b5410; }
 
 /* ---------- FOOTER ---------- */
-footer.app-footer { background: linear-gradient(90deg, #e8f5ec, #ecf7ee); padding: 13px 20px; text-align: center; font-size: 0.8rem; font-weight: 700; color: #1e6b3a; }
-.disclaimer { font-size: 0.66rem; color: var(--muted); padding: 12px 20px; text-align: center; }
+footer.app-footer { background: linear-gradient(90deg, #e8f5ec, #ecf7ee); padding: 13px 20px; text-align: center; font-size: 0.74rem; font-weight: 700; color: #1e6b3a; }
+footer.app-footer .f-item { display: flex; align-items: center; gap: 7px; color: #275c3f; margin-bottom: 6px; }
+footer.app-footer .f-item b { display: block; color: var(--navy); font-size: 0.76rem; }
+.disclaimer { font-size: 0.68rem; color: var(--muted); padding: 12px 20px; text-align: center; }
