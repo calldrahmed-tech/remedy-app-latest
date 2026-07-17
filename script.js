@@ -246,6 +246,28 @@ function matchLocation(rubric, input) {
   return true;
 }
 
+// IDF-STYLE RARITY WEIGHTING: a remedy graded across MANY different rubrics (a "generalist")
+// gets each individual match discounted, while a remedy graded in only a few rubrics (a
+// "specialist" for that particular symptom) gets full or boosted credit. This directly
+// counters dominance bias — without it, a remedy like Natrum Muriaticum (graded in 13
+// rubrics) can accumulate a winning score just from breadth of coverage across many
+// DIFFERENT symptom categories, even when no single match is the case's actual defining
+// pathology. A remedy is only discounted for breadth it's actually earned; a remedy that's
+// both broad AND genuinely strongly-matched can still win — it just can't win on breadth alone.
+let REMEDY_BREADTH = null;
+function computeRemedyBreadth() {
+  const breadth = {};
+  (REPERTORY || []).forEach(rubric => {
+    rubric.remedies.forEach(r => { breadth[r.id] = (breadth[r.id] || 0) + 1; });
+  });
+  return breadth;
+}
+function idfFactor(remedyId) {
+  if (!REMEDY_BREADTH) REMEDY_BREADTH = computeRemedyBreadth();
+  const breadth = REMEDY_BREADTH[remedyId] || 1;
+  return 1 / (1 + 0.4 * Math.log(breadth)); // gentler slope — breadth=1 -> 1.0, breadth=13 -> ~0.50
+}
+
 function scoreRepertory(inputText) {
   const t = " " + inputText.toLowerCase().replace(/[^a-z\s]/g, " ").replace(/\s+/g, " ") + " ";
   const inputLoc = parseLocation(inputText);
@@ -275,7 +297,7 @@ function scoreRepertory(inputText) {
     firedRubrics.push(`${rubric.section}: ${rubric.rubric}`);
     const sw = SECTION_WEIGHT[rubric.section] || 1.0;
     rubric.remedies.forEach(r => {
-      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw;
+      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw * idfFactor(r.id);
       remedyRubrics[r.id] = remedyRubrics[r.id] || [];
       remedyRubrics[r.id].push(`${rubric.section}: ${rubric.rubric}`);
     });
@@ -299,7 +321,7 @@ function scoreRepertory(inputText) {
     const sw = SECTION_WEIGHT.Fever;
     firedRubrics.push("Fever: General/undifferentiated fever");
     GENERAL_FEVER.forEach(r => {
-      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw;
+      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw * idfFactor(r.id);
       remedyRubrics[r.id] = remedyRubrics[r.id] || [];
       remedyRubrics[r.id].push("Fever: General/undifferentiated fever");
     });
@@ -316,7 +338,7 @@ function scoreRepertory(inputText) {
     const sw = SECTION_WEIGHT.Common || 0.33;
     firedRubrics.push("Common: General/undifferentiated headache");
     GENERAL_HEADACHE.forEach(r => {
-      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw;
+      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw * idfFactor(r.id);
       remedyRubrics[r.id] = remedyRubrics[r.id] || [];
       remedyRubrics[r.id].push("Common: General/undifferentiated headache");
     });
@@ -328,7 +350,7 @@ function scoreRepertory(inputText) {
     const sw = SECTION_WEIGHT.Mind;
     firedRubrics.push("Mind: General/unspecified anxiety");
     GENERAL_ANXIETY.forEach(r => {
-      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw;
+      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw * idfFactor(r.id);
       remedyRubrics[r.id] = remedyRubrics[r.id] || [];
       remedyRubrics[r.id].push("Mind: General/unspecified anxiety");
     });
