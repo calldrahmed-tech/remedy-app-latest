@@ -1,6 +1,75 @@
 {
   "repertory": [
     {
+      "section": "Common",
+      "rubric": "Dandruff, scalp scaling",
+      "triggers": [
+        "dandruff",
+        "scalp scaling",
+        "flaky scalp"
+      ],
+      "remedies": [
+        {
+          "id": "kali-sulph-rem",
+          "grade": 3
+        },
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "graph",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Bleeding gums",
+      "triggers": [
+        "bleeding gums",
+        "gums bleed"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 3
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "kreos",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Nosebleed, epistaxis",
+      "triggers": [
+        "nosebleed",
+        "nose bleeding",
+        "epistaxis",
+        "bleeding nose"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 3
+        },
+        {
+          "id": "acon",
+          "grade": 2
+        },
+        {
+          "id": "arn",
+          "grade": 2
+        }
+      ]
+    },
+    {
       "section": "Extremities",
       "rubric": "Leg pain, weakness, dragging sensation",
       "triggers": [
