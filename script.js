@@ -196,12 +196,35 @@ function anatomyConflict(inputAnatomy, keynoteAnatomy) {
 // prescribing, followed by physical generals & modalities, with particular/local symptoms
 // (a specific body-part complaint) carrying real but comparatively lesser weight. Disease-name
 // matching (the diseaseProtocol boost elsewhere) is intentionally the lowest of all.
+// Symptom-weighting hierarchy — UPDATED per explicit scoring rule: Location & Modalities = 5
+// (very high), General & Mental symptoms = 3 (high), common/particular clinical symptoms = 1
+// (low). This supersedes the earlier "Mental generals = highest" hierarchy — Mind is now
+// tier 2 (tied with General), not tier 1. Ratios below are scaled from that 5:3:1 spec.
 const SECTION_WEIGHT = {
-  Mind: 1.5,        // mental generals — highest importance
-  Modalities: 1.25, // physical generals / modalities — high importance
-  Fever: 1.1,       // general reaction pattern — high-ish importance
-  Appetite: 1.0, Thirst: 1.0, Weight: 1.0, Stool: 1.0 // particular/local symptoms — medium
+  Modalities: 1.67,  // location & modalities — VERY HIGH (tier 1)
+  Mind: 1.0,          // mental symptoms — HIGH (tier 2, same as general)
+  Thirst: 1.0, Appetite: 1.0, // general symptoms — HIGH (tier 2)
+  Weight: 0.33, Stool: 0.33, Fever: 0.33, Extremities: 0.33, Common: 0.33 // common/particular clinical symptoms — LOW (tier 3)
 };
+// LOCATION_SCORE_BONUS: location is scored explicitly (not just used as a pass/fail filter)
+// per the "Location match = +5" rule — applied directly in scoreRemedies below wherever a
+// materia medica keynote's body part matches the query's.
+const LOCATION_SCORE_BONUS = 1.67; // same tier as Modalities, per the 5:5 parity in the rule
+// LOCATION_SCORE_BONUS applies only to specific, diagnostically distinctive body parts —
+// extremities, joints, organs — not broad generic terms like "face" or "skin" that appear
+// across dozens of unrelated keynotes. Testing this rule found exactly that problem: "red
+// face" is common wording in many different remedies' fever/headache keynotes, and applying
+// the location bonus there let obscure coincidental matches (Melilotus, Ferrum Met) outrank
+// Aconitum — the actual textbook remedy — for a sudden-fever case. The broader ANATOMY_WORDS
+// set (used for the exclusion/conflict check) stays broad, since excluding a mismatch is safe;
+// this narrower set is only for the reward bonus, which needs to be conservative.
+const LOCATION_BONUS_WORDS = new Set([
+  "eye","eyes","ear","ears","shoulder","shoulders","arm","arms","elbow","elbows","wrist",
+  "wrists","hand","hands","finger","fingers","hip","hips","groin","thigh","thighs","leg",
+  "legs","knee","knees","calf","calves","ankle","ankles","foot","feet","toe","toes","heart",
+  "liver","kidney","kidneys","bladder","uterus","ovary","ovaries","testicle","testicles",
+  "rectum","joint","joints","spine","back"
+]);
 
 // LOCATION FILTERING for repertory rubrics — optional, opt-in per rubric. Most rubrics
 // (Mind, Appetite, Thirst, Weight, Stool, general Modalities) have no location field and are
@@ -321,7 +344,15 @@ function scoreRemedies(inputText, diseaseProtocol) {
       // those appropriately weighted rather than dominating.
       const isShort = kWords.length <= 3;
       if ((isShort && ratio >= 1.0) || (!isShort && ratio > 0)) {
-        candidates.push({ t: k.t, strength: k.w * ratio });
+        // Location match = +5 (explicit score bonus, not just a pass/fail gate): a keynote
+        // that names the SAME body part as the query gets extra weight on top of its normal
+        // word-overlap strength, so a location-confirmed match outranks an equally-worded
+        // match with no location relevance at all.
+        const keynoteAnatomy = anatomyWordsIn(kWords);
+        const bonusInputAnatomy = inputAnatomy.filter(a => LOCATION_BONUS_WORDS.has(a));
+        const bonusKeynoteAnatomy = keynoteAnatomy.filter(a => LOCATION_BONUS_WORDS.has(a));
+        const locationBonus = (bonusInputAnatomy.length && bonusKeynoteAnatomy.some(a => bonusInputAnatomy.includes(a))) ? LOCATION_SCORE_BONUS : 0;
+        candidates.push({ t: k.t, strength: k.w * ratio + locationBonus });
       }
     });
     candidates.sort((a, b) => b.strength - a.strength);
