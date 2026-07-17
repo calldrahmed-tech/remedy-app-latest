@@ -305,6 +305,35 @@ function scoreRepertory(inputText) {
     });
   }
 
+  // Same fallback pattern for two other extremely common bare complaints that had zero
+  // dedicated repertory coverage — a doctor typing just "headache" or "anxiety" alone with
+  // no other detail was falling straight through to a weak coincidental materia-medica
+  // match (or nothing at all, below the confidence floor), which felt like the app being
+  // broken rather than appropriately cautious.
+  const hasSpecificHeadacheRubric = firedRubrics.some(f => f.includes("headache") || f.includes("Headache"));
+  if (!hasSpecificHeadacheRubric && / headache /.test(t)) {
+    const GENERAL_HEADACHE = [{ id: "bell", grade: 3 }, { id: "bry", grade: 2 }, { id: "nux-v", grade: 2 }, { id: "gels", grade: 2 }];
+    const sw = SECTION_WEIGHT.Common || 0.33;
+    firedRubrics.push("Common: General/undifferentiated headache");
+    GENERAL_HEADACHE.forEach(r => {
+      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw;
+      remedyRubrics[r.id] = remedyRubrics[r.id] || [];
+      remedyRubrics[r.id].push("Common: General/undifferentiated headache");
+    });
+  }
+
+  const hasSpecificAnxietyRubric = firedRubrics.some(f => f.includes("Anxiety") || f.includes("anxiety"));
+  if (!hasSpecificAnxietyRubric && / anxiety /.test(t)) {
+    const GENERAL_ANXIETY = [{ id: "ars-alb", grade: 3 }, { id: "acon", grade: 2 }, { id: "arg-n", grade: 2 }, { id: "gels", grade: 1 }];
+    const sw = SECTION_WEIGHT.Mind;
+    firedRubrics.push("Mind: General/unspecified anxiety");
+    GENERAL_ANXIETY.forEach(r => {
+      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw;
+      remedyRubrics[r.id] = remedyRubrics[r.id] || [];
+      remedyRubrics[r.id].push("Mind: General/unspecified anxiety");
+    });
+  }
+
   return { remedyScores, remedyRubrics, firedRubrics, mainComplaintRubric };
 }
 
