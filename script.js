@@ -203,8 +203,29 @@ const SECTION_WEIGHT = {
   Appetite: 1.0, Thirst: 1.0, Weight: 1.0, Stool: 1.0 // particular/local symptoms — medium
 };
 
+// LOCATION FILTERING for repertory rubrics — optional, opt-in per rubric. Most rubrics
+// (Mind, Appetite, Thirst, Weight, Stool, general Modalities) have no location field and are
+// unaffected. Rubrics that DO specify a location (e.g. an Extremities/leg-pain rubric) will
+// only fire when the input names the same body part — this stops e.g. a generic "right ...
+// pain" query from matching a rubric that's actually about a completely different body part.
+function parseLocation(text) {
+  const t = " " + text.toLowerCase() + " ";
+  let location = null, side = null;
+  for (const w of ANATOMY_WORDS) { if (t.includes(" " + w + " ")) { location = w; break; } }
+  if (t.includes(" right ")) side = "right";
+  else if (t.includes(" left ")) side = "left";
+  return { text, location, side };
+}
+function matchLocation(rubric, input) {
+  if (!rubric.location) return true;
+  if (rubric.location.main !== input.location) return false;
+  if (rubric.location.side && rubric.location.side !== input.side) return false;
+  return true;
+}
+
 function scoreRepertory(inputText) {
   const t = " " + inputText.toLowerCase().replace(/[^a-z\s]/g, " ").replace(/\s+/g, " ") + " ";
+  const inputLoc = parseLocation(inputText);
   const remedyScores = {};      // id -> accumulated weighted grade total
   const remedyRubrics = {};     // id -> [ "Section: rubric text", ... ] (for display)
   if (!REPERTORY) return { remedyScores, remedyRubrics, firedRubrics: [] };
@@ -215,7 +236,8 @@ function scoreRepertory(inputText) {
     // like "thirst" incorrectly match "thirstless" (opposite meaning) since it's a literal
     // substring of it. The input text t is always padded with leading/trailing spaces, so
     // the space-bounded check alone is sufficient for every trigger position.
-    const fired = rubric.triggers.some(trigger => t.includes(" " + trigger.toLowerCase() + " "));
+    const fired = matchLocation(rubric, inputLoc) &&
+                  rubric.triggers.some(trigger => t.includes(" " + trigger.toLowerCase() + " "));
     if (!fired) return;
     firedRubrics.push(`${rubric.section}: ${rubric.rubric}`);
     const sw = SECTION_WEIGHT[rubric.section] || 1.0;
