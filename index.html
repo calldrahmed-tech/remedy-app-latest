@@ -12,37 +12,30 @@
 <body>
 <header class="app-header">
   <div class="header-row">
-    <div class="brand">
+    <div class="brand center">
       <div class="logo-circle">🌿</div>
-      <div>
-        <div class="word">Smart <span class="accent">Remedy</span> AI</div>
-        <div class="tagline">Homeopathy Made Simple</div>
-        <div class="sub-subtitle">AI-assisted homeopathic analysis based on keynotes</div>
-      </div>
+      <div class="word">Smart <span class="accent">Remedy</span> AI</div>
     </div>
-    <div class="case-pill">🎯 CASE ANALYSIS RESULT</div>
-    <div class="header-badges">
-      <div class="hbadge"><span class="ic">🛡️</span>Evidence Based</div>
-      <div class="hbadge"><span class="ic">🏅</span>100% Homeopathic</div>
-      <div class="hbadge"><span class="ic">📅</span><span id="hbTime"></span></div>
+  </div>
+  <div class="header-search">
+    <label class="symptom-label" for="symptomInput">Symptom:</label>
+    <div class="search-inline">
+      <input id="symptomInput" placeholder="e.g., nausea, bloating, fatigue" autocomplete="off">
+      <button id="resultBtn">Get Remedy</button>
     </div>
   </div>
 </header>
 
 <div class="wrap">
-  <div class="search-card">
-    <textarea id="symptomInput" placeholder="Enter symptoms or disease..."></textarea>
-    <button id="resultBtn">Get Remedy</button>
-    <div class="samples">
-      <div class="lbl">Try a sample:</div>
-      <button class="sample-chip" data-sample="chronic constipation hard stool in the beginning incomplete evacuation ineffectual urging bloating sedentary lifestyle">Chronic constipation</button>
-      <button class="sample-chip" data-sample="GERD burning heartburn worse lying down at night after eating">GERD / heartburn</button>
-      <button class="sample-chip" data-sample="fever with chill restlessness">Fever with chill</button>
-      <button class="sample-chip" data-sample="malabsorption weight loss despite good appetite fecal elastase low">Malabsorption</button>
-      <button class="sample-chip" data-sample="back pain worse with motion">Back pain, worse motion</button>
-    </div>
-    <div id="statusMsg"></div>
+  <div class="samples-bar">
+    <div class="lbl">Try a sample:</div>
+    <button class="sample-chip" data-sample="chronic constipation hard stool in the beginning incomplete evacuation ineffectual urging bloating sedentary lifestyle">Chronic constipation</button>
+    <button class="sample-chip" data-sample="GERD burning heartburn worse lying down at night after eating">GERD / heartburn</button>
+    <button class="sample-chip" data-sample="fever with chill restlessness">Fever with chill</button>
+    <button class="sample-chip" data-sample="malabsorption weight loss despite good appetite fecal elastase low">Malabsorption</button>
+    <button class="sample-chip" data-sample="back pain worse with motion">Back pain, worse motion</button>
   </div>
+  <div id="statusMsg"></div>
 
   <div id="results"></div>
 
