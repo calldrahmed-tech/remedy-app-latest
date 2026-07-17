@@ -1,6 +1,35 @@
 {
   "repertory": [
     {
+      "section": "Extremities",
+      "rubric": "Leg pain, weakness, dragging sensation",
+      "triggers": [
+        "leg pain",
+        "weakness",
+        "dragging",
+        "pain",
+        "heaviness"
+      ],
+      "location": {
+        "main": "leg",
+        "side": null
+      },
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 3
+        },
+        {
+          "id": "ruta",
+          "grade": 2
+        },
+        {
+          "id": "plb",
+          "grade": 2
+        }
+      ]
+    },
+    {
       "section": "Mind",
       "rubric": "Silent grief, dwells on past hurts, cannot cry",
       "triggers": [
