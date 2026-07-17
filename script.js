@@ -675,14 +675,20 @@ function runSearch() {
 
   let html = "";
 
-  /* ---------- Diagnosis card ---------- */
-  const diagnosisTitle = diseaseProtocol ? diseaseProtocol.name.replace(/\s*\(.+?\)\s*/, " ").trim().toUpperCase() : "SYMPTOM-BASED ANALYSIS";
+  /* ---------- Diagnosis card ----------
+     Confidence-gated condition display: only shows a named condition when confidence is
+     genuinely high (>80%) AND a disease protocol actually matched; otherwise always falls
+     back to the same "Symptom-Based Analysis" label in the exact same layout position, so
+     the UI never has two different visual structures depending on the case. */
+  const confPct = main.percent;
+  const diagnosisTitle = (diseaseProtocol && confPct > 80)
+    ? diseaseProtocol.name.replace(/\s*\(.+?\)\s*/, " ").trim().toUpperCase()
+    : "SYMPTOM-BASED ANALYSIS";
   const caseTag = SYSTEM_CASE_LABEL[(main.remedy.system || [])[0]] || "General Case";
   const allKeynotes = [];
   if (main) allKeynotes.push(shortKeynote(main));
   if (close) allKeynotes.push(shortKeynote(close));
   const symptomBullets = allKeynotes.join("; ").split(/;\s*/).filter(Boolean).slice(0, 4);
-  const confPct = main.percent;
   const confTag = confPct >= 70 ? "HIGHLY MATCHED" : confPct >= 40 ? "MODERATE MATCH" : "PARTIAL MATCH";
 
   html += `<div class="diagnosis-card">
@@ -695,11 +701,12 @@ function runSearch() {
       </div>
     </div>
     <div class="key-symptoms">
-      <div class="ks-head">📋 KEY SYMPTOMS</div>
+      <div class="ks-head">📋 Key Symptoms</div>
       <div class="ks-grid">${symptomBullets.map(k => `<div class="ks-item"><span class="dot">✔</span>${esc(k)}</div>`).join("")}</div>
     </div>
+
     <div class="confidence-gauge">
-      <div class="gauge-label">MATCH CONFIDENCE</div>
+      <div class="gauge-label">Match Confidence</div>
       ${confidenceGaugeSVG(confPct)}
       <div class="gauge-pct display">${confPct}%</div>
       <div class="gauge-tag">${confTag}</div>
