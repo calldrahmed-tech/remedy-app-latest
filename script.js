@@ -625,6 +625,29 @@ const SYSTEM_CASE_LABEL = {
   glands: "Glandular Case", immune: "Immune / Fever Case", circulation: "Circulatory Case",
   ent: "ENT Case", muscles: "Muscular Case", blood: "Blood Case"
 };
+// Section-based case label is preferred over the remedy's static system list — a remedy like
+// Bryonia lists system:["respiratory","joints","liver","gut"], so picking system[0] blindly
+// tagged a constipation case "Respiratory Case" just because "respiratory" happened to be
+// listed first, regardless of which keynote actually matched for THIS case. The rubric
+// section that actually fired is a far more accurate signal of what kind of case it is.
+const REPERTORY_SECTION_CASE_LABEL = {
+  Mind: "Mental / Emotional Case", Stool: "Digestive Case", Appetite: "Digestive Case",
+  Fever: "Acute / Fever Case", Extremities: "Joint / Rheumatic Case",
+  Weight: "Digestive Case", Thirst: "General Case"
+};
+function deriveCaseTag(mainResult) {
+  const rubrics = mainResult.repertoryRubrics || [];
+  for (const r of rubrics) {
+    const section = r.split(":")[0];
+    if (REPERTORY_SECTION_CASE_LABEL[section]) return REPERTORY_SECTION_CASE_LABEL[section];
+    if (section === "Common") {
+      const lower = r.toLowerCase();
+      if (lower.includes("hair") || lower.includes("dandruff")) return "Hair / Skin Case";
+      if (lower.includes("gum") || lower.includes("nose")) return "ENT Case";
+    }
+  }
+  return SYSTEM_CASE_LABEL[(mainResult.remedy.system || [])[0]] || "General Case";
+}
 
 function runSearch() {
   const text = inputEl.value.trim();
@@ -676,15 +699,15 @@ function runSearch() {
   let html = "";
 
   /* ---------- Diagnosis card ----------
-     Confidence-gated condition display: only shows a named condition when confidence is
-     genuinely high (>80%) AND a disease protocol actually matched; otherwise always falls
-     back to the same "Symptom-Based Analysis" label in the exact same layout position, so
-     the UI never has two different visual structures depending on the case. */
+     Per explicit decision: ALWAYS show "Symptom-Based Analysis" as the fixed heading —
+     never a specific disease name. This removes the inconsistency at the source (previously
+     alternated between a disease name and this label depending on confidence, which read as
+     unprofessional). The case-type tag (e.g. "Digestive Case") still identifies what kind of
+     case it is, without naming a specific condition. The matched disease protocol, if any,
+     still silently drives tests/diet/biochemic content below — only the DISPLAY changed. */
   const confPct = main.percent;
-  const diagnosisTitle = (diseaseProtocol && confPct > 80)
-    ? diseaseProtocol.name.replace(/\s*\(.+?\)\s*/, " ").trim().toUpperCase()
-    : "SYMPTOM-BASED ANALYSIS";
-  const caseTag = SYSTEM_CASE_LABEL[(main.remedy.system || [])[0]] || "General Case";
+  const diagnosisTitle = "SYMPTOM-BASED ANALYSIS";
+  const caseTag = deriveCaseTag(main);
   const allKeynotes = [];
   if (main) allKeynotes.push(shortKeynote(main));
   if (close) allKeynotes.push(shortKeynote(close));
