@@ -165,9 +165,20 @@ function countHits(kWords, inputWords) {
    matching multiple DIFFERENT rubrics (e.g. both "thirstless" AND "worse from heat")
    accumulates evidence across distinct clinical facts — this is literally how real
    repertorization combines symptoms, and is far more reliable than prose keyword overlap. */
+// Symptom-weighting hierarchy: mental generals carry the most diagnostic weight in classical
+// prescribing, followed by physical generals & modalities, with particular/local symptoms
+// (a specific body-part complaint) carrying real but comparatively lesser weight. Disease-name
+// matching (the diseaseProtocol boost elsewhere) is intentionally the lowest of all.
+const SECTION_WEIGHT = {
+  Mind: 1.5,        // mental generals — highest importance
+  Modalities: 1.25, // physical generals / modalities — high importance
+  Fever: 1.1,       // general reaction pattern — high-ish importance
+  Appetite: 1.0, Thirst: 1.0, Weight: 1.0, Stool: 1.0 // particular/local symptoms — medium
+};
+
 function scoreRepertory(inputText) {
   const t = " " + inputText.toLowerCase().replace(/[^a-z\s]/g, " ").replace(/\s+/g, " ") + " ";
-  const remedyScores = {};      // id -> accumulated grade total
+  const remedyScores = {};      // id -> accumulated weighted grade total
   const remedyRubrics = {};     // id -> [ "Section: rubric text", ... ] (for display)
   if (!REPERTORY) return { remedyScores, remedyRubrics, firedRubrics: [] };
 
@@ -180,8 +191,9 @@ function scoreRepertory(inputText) {
     const fired = rubric.triggers.some(trigger => t.includes(" " + trigger.toLowerCase() + " "));
     if (!fired) return;
     firedRubrics.push(`${rubric.section}: ${rubric.rubric}`);
+    const sw = SECTION_WEIGHT[rubric.section] || 1.0;
     rubric.remedies.forEach(r => {
-      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade;
+      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw;
       remedyRubrics[r.id] = remedyRubrics[r.id] || [];
       remedyRubrics[r.id].push(`${rubric.section}: ${rubric.rubric}`);
     });
@@ -195,9 +207,10 @@ function scoreRepertory(inputText) {
   const hasSpecificFeverRubric = firedRubrics.some(f => f.startsWith("Fever:"));
   if (!hasSpecificFeverRubric && / fever /.test(t)) {
     const GENERAL_FEVER = [{ id: "acon", grade: 3 }, { id: "bell", grade: 3 }, { id: "gels", grade: 2 }, { id: "bry", grade: 2 }, { id: "ars-alb", grade: 2 }];
+    const sw = SECTION_WEIGHT.Fever;
     firedRubrics.push("Fever: General/undifferentiated fever");
     GENERAL_FEVER.forEach(r => {
-      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade;
+      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw;
       remedyRubrics[r.id] = remedyRubrics[r.id] || [];
       remedyRubrics[r.id].push("Fever: General/undifferentiated fever");
     });
@@ -493,7 +506,7 @@ function runSearch() {
   // pure free-text symptom matching below this floor is treated as inconclusive.
   const CONFIDENCE_FLOOR = 25;
   if (!diseaseProtocol && main.percent < CONFIDENCE_FLOOR) {
-    resultsEl.innerHTML = `<div class="msg"><b>No confident remedy match.</b> The symptoms given don't point clearly enough to a specific remedy — this system won't guess. Try adding a modality (worse/better from what), the mind/emotional state, or the single most peculiar or unusual symptom, since these carry the most diagnostic weight in classical prescribing.</div>`;
+    resultsEl.innerHTML = `<div class="msg"><b>No confident remedy match — more detail needed.</b> The symptoms given aren't specific enough to select a remedy with confidence, so this system won't guess. Please add: the <b>mental/emotional state</b> (e.g. weepy, irritable, anxious, indifferent), a clear <b>modality</b> (what makes it better or worse — motion, heat, cold, time of day), or the single most <b>peculiar or unusual</b> symptom — these carry the most diagnostic weight in classical prescribing and will let the system give a confident answer.</div>`;
     return;
   }
 
