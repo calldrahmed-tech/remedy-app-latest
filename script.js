@@ -306,7 +306,11 @@ function idfFactor(remedyId) {
 }
 
 function scoreRepertory(inputText) {
-  const t = " " + inputText.toLowerCase().replace(/[^a-z\s]/g, " ").replace(/\s+/g, " ") + " ";
+  // NOTE: preserve digits (a-z AND 0-9) — a version that stripped all non-letter characters
+  // meant a trigger like "4pm" could never match anything, since the input's own "4pm" was
+  // being reduced to " pm" (digit stripped) while the trigger text still had the digit intact.
+  // This silently broke every time-of-day-based trigger (4-8pm, 12am, 3am) until now.
+  const t = " " + inputText.toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ") + " ";
   const inputLoc = parseLocation(inputText);
   const remedyScores = {};      // id -> accumulated weighted grade total
   const remedyRubrics = {};     // id -> [ "Section: rubric text", ... ] (for display)
