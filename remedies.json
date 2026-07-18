@@ -158,6 +158,18 @@
         {
           "t": "better semi-erect",
           "w": 0.6
+        },
+        {
+          "t": "delirium, tries to escape from bed, terrified of being touched, sees horrible or hideous faces",
+          "w": 2
+        },
+        {
+          "t": "throbbing headache as if the head will burst, worse from stooping, coughing, or jarring motion",
+          "w": 2
+        },
+        {
+          "t": "face red and hot, but the feet and extremities are ice cold",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -170,7 +182,7 @@
         "acute": "200C every 2-4h",
         "chronic": "-"
       },
-      "maxScore": 36.2,
+      "maxScore": 41.7,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)"
     },
     {
@@ -774,6 +786,14 @@
         {
           "t": "better though not thirsty",
           "w": 0.6
+        },
+        {
+          "t": "sudden panic or suffocated feeling in closed rooms or elevators, must open a window, palpitations",
+          "w": 2
+        },
+        {
+          "t": "better from walking slowly in the open air",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -786,7 +806,7 @@
         "acute": "30C 2-3x daily",
         "chronic": "200C weekly under guidance"
       },
-      "maxScore": 38.6,
+      "maxScore": 42.1,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)"
     },
     {
@@ -826,6 +846,14 @@
         {
           "t": "one cheek red and hot, the other pale, worse from warmth, better from being carried",
           "w": 2
+        },
+        {
+          "t": "ear pain worse from swallowing and from cold drafts, extremely sensitive to noise and touch",
+          "w": 2
+        },
+        {
+          "t": "weepy, clingy, wants to be carried or held constantly",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -837,7 +865,7 @@
         "acute": "30C every 2-3h",
         "chronic": "-"
       },
-      "maxScore": 13
+      "maxScore": 16.5
     },
     {
       "id": "ign",
@@ -1465,6 +1493,14 @@
         {
           "t": "lazy, philosophical, untidy, does not mind own filthiness",
           "w": 1.5
+        },
+        {
+          "t": "fever recurring sharply at the same time each day, hot and sweaty with throbbing headache",
+          "w": 2
+        },
+        {
+          "t": "craves cold water yet feels chilly and wants to be covered during fever",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -1477,7 +1513,7 @@
         "acute": "30C for skin flare",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 51.0,
+      "maxScore": 54.5,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)"
     },
     {
@@ -2134,6 +2170,14 @@
         {
           "t": "better warm drinks",
           "w": 1
+        },
+        {
+          "t": "dry, hoarse, barking croupy cough waking the child around 1am, restless, thirsty for small sips",
+          "w": 2
+        },
+        {
+          "t": "better from sitting up and from drinking warm water",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -2144,7 +2188,7 @@
         "acute": "30C 3x daily, alternate with Aconite in croup",
         "chronic": "-"
       },
-      "maxScore": 6
+      "maxScore": 9.5
     },
     {
       "id": "ant-t",
@@ -2557,6 +2601,14 @@
         {
           "t": "asthma worse damp",
           "w": 1
+        },
+        {
+          "t": "asthma worse in wet, rainy weather, rattling cough with copious greenish mucus",
+          "w": 2
+        },
+        {
+          "t": "better in a dry warm room, better lying on the right side",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -2568,7 +2620,7 @@
         "acute": "30C 3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 8
+      "maxScore": 11.5
     },
     {
       "id": "robinia",
@@ -10070,6 +10122,14 @@
         {
           "t": "better open air",
           "w": 0.6
+        },
+        {
+          "t": "nausea and vomiting from motion, better from lying down with eyes closed",
+          "w": 2
+        },
+        {
+          "t": "worse from any motion or even the thought of food",
+          "w": 1.5
         }
       ],
       "diseaseTags": [],
@@ -10077,7 +10137,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 11.2
+      "maxScore": 14.7
     },
     {
       "id": "tarax",
