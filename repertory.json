@@ -464,6 +464,28 @@
     },
     {
       "section": "Modalities",
+      "rubric": "Cramping pain, better from pressure and warmth",
+      "triggers": [
+        "better pressure and warmth",
+        "better by pressure and warmth",
+        "relieved by pressure and heat",
+        "cramping better warmth",
+        "menstrual pain better pressure",
+        "cramps relieved by warmth"
+      ],
+      "remedies": [
+        {
+          "id": "mag-p",
+          "grade": 3
+        },
+        {
+          "id": "coloc",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
       "rubric": "Symptoms alternate sides, or one-sided complaints",
       "triggers": [
         "alternating sides",
@@ -667,6 +689,35 @@
         {
           "id": "cina",
           "grade": 2
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Bearing-down sensation in pelvis, as if organs will fall out",
+      "triggers": [
+        "bearing-down sensation",
+        "bearing down sensation",
+        "everything will come out",
+        "feels everything will fall out",
+        "pelvic organs falling out"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 3
+        },
+        {
+          "id": "lil-tig",
+          "grade": 2
+        },
+        {
+          "id": "nat-c",
+          "grade": 1
         }
       ]
     },
