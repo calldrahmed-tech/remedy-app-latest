@@ -499,6 +499,10 @@
         {
           "t": "better strong pressure",
           "w": 0.6
+        },
+        {
+          "t": "headache worse from 4pm to 8pm, angry and irritable, sour belching",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -512,7 +516,7 @@
         "acute": "30C 2-3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 41.0,
+      "maxScore": 43.0,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)"
     },
     {
@@ -818,6 +822,10 @@
         {
           "t": "colic in infants",
           "w": 2
+        },
+        {
+          "t": "one cheek red and hot, the other pale, worse from warmth, better from being carried",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -829,7 +837,7 @@
         "acute": "30C every 2-3h",
         "chronic": "-"
       },
-      "maxScore": 11
+      "maxScore": 13
     },
     {
       "id": "ign",
@@ -941,6 +949,10 @@
         {
           "t": "better sitting upright, better from hard pressure on the head",
           "w": 1.5
+        },
+        {
+          "t": "vertigo worse from looking up, better from pressure on the head",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -952,7 +964,7 @@
         "acute": "30C 3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 16.0
+      "maxScore": 18.0
     },
     {
       "id": "eup-per",
@@ -2454,6 +2466,10 @@
         {
           "t": "better lying down with head low, worse from standing up",
           "w": 1.5
+        },
+        {
+          "t": "vertigo worse from closing the eyes, worse turning in bed",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -2467,7 +2483,7 @@
         "acute": "30C after meals",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 14.0
+      "maxScore": 16.0
     },
     {
       "id": "chel",
