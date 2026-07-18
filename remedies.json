@@ -1616,6 +1616,18 @@
         {
           "t": "weight loss despite normal appetite",
           "w": 2
+        },
+        {
+          "t": "craving for salt and salty foods",
+          "w": 2
+        },
+        {
+          "t": "pale, sickly complexion with dark circles under the eyes",
+          "w": 2
+        },
+        {
+          "t": "worse from mental exertion, worse from consolation",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -1627,7 +1639,7 @@
         "acute": "30C acute grief",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 11
+      "maxScore": 17
     },
     {
       "id": "lyc",
