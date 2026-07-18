@@ -1210,6 +1210,26 @@
     },
     {
       "section": "Mind",
+      "rubric": "Restless anxiety, must get up and walk, worse after midnight",
+      "triggers": [
+        "must get up and walk",
+        "restless anxiety worse midnight",
+        "wakes at midnight with restlessness",
+        "walk around the room"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 3
+        },
+        {
+          "id": "rhus-t",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
       "rubric": "Suppressed anger or indignation from insult",
       "triggers": [
         "suppressed anger",
