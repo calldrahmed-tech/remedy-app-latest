@@ -350,15 +350,29 @@ function scoreRepertory(inputText) {
     // gap of a "worse ..." trigger, or "worse" appears inside the gap of a "better ..." trigger.
     const opposite = words[0] === "worse" ? "better" : (words[0] === "better" ? "worse" : null);
     const MAX_GAP_CHARS = 30; // generous now that the opposite-polarity check does the real work
+    // findWholeWord: text.indexOf(" " + w, ...) alone only checks a LEADING space boundary —
+    // that let "rest" match inside "restless", "restaurant", etc. Must also confirm the
+    // character right after the word is a space (or end of string), or every short trigger
+    // word risks matching as a prefix of some longer, unrelated word.
+    function findWholeWord(w, fromIdx) {
+      let idx = fromIdx;
+      while (true) {
+        idx = text.indexOf(" " + w, idx);
+        if (idx < 0) return -1;
+        const afterCharIdx = idx + 1 + w.length;
+        if (text[afterCharIdx] === " ") return idx;
+        idx += 1; // this occurrence was a prefix of a longer word — keep searching
+      }
+    }
     let searchFrom = 0, firstPos = -1;
     for (const w of words) {
-      const idx = text.indexOf(" " + w, searchFrom);
+      const idx = findWholeWord(w, searchFrom);
       if (idx < 0) return -1;
       if (firstPos >= 0) {
         if (idx - searchFrom > MAX_GAP_CHARS) return -1;
         if (opposite) {
           const gapText = text.slice(searchFrom, idx);
-          if (gapText.includes(" " + opposite)) return -1;
+          if (gapText.includes(" " + opposite + " ")) return -1;
         }
       }
       if (firstPos < 0) firstPos = idx;
