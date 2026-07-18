@@ -392,6 +392,10 @@
         {
           "t": "intense itching with swelling of the skin, better hot water, worse at night",
           "w": 2
+        },
+        {
+          "t": "worse on first beginning to move, better with continued gentle motion",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -403,7 +407,7 @@
         "acute": "30C 3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 13
+      "maxScore": 15
     },
     {
       "id": "nux-v",
@@ -1267,6 +1271,10 @@
         {
           "t": "desires indigestible things such as chalk, pencils, or dirt",
           "w": 1.5
+        },
+        {
+          "t": "craves eggs, sweats profusely on the head during sleep, delayed development in children",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -1278,7 +1286,7 @@
         "acute": "-",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 21.5
+      "maxScore": 23.5
     },
     {
       "id": "phos",
@@ -3349,6 +3357,10 @@
         {
           "t": "leucorrhoea acrid, profuse, runs down to heels",
           "w": 2
+        },
+        {
+          "t": "extreme dryness of mucous membranes, thirstless despite dryness, confusion of mind",
+          "w": 2
         }
       ],
       "diseaseTags": [],
@@ -3356,7 +3368,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 20
+      "maxScore": 22
     },
     {
       "id": "ambr",
@@ -4497,6 +4509,10 @@
         {
           "t": "better holding painful part",
           "w": 0.6
+        },
+        {
+          "t": "fear of downward motion, vertigo on looking down or downward stairs",
+          "w": 2
         }
       ],
       "diseaseTags": [],
@@ -4504,7 +4520,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 13.6
+      "maxScore": 15.6
     },
     {
       "id": "bov",
@@ -8664,6 +8680,10 @@
         {
           "t": "better walking",
           "w": 0.6
+        },
+        {
+          "t": "loud, snoring, stertorous breathing during heavy sleep or coma",
+          "w": 2
         }
       ],
       "diseaseTags": [],
@@ -8671,7 +8691,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 22.400000000000002
+      "maxScore": 24.400000000000002
     },
     {
       "id": "petr",
@@ -8810,6 +8830,14 @@
         {
           "t": "worse loss of fluids",
           "w": 0.6
+        },
+        {
+          "t": "extreme weakness and exhaustion, apathy, desire for sweets or refreshing things",
+          "w": 2
+        },
+        {
+          "t": "worse from any aggravation of the sun's heat",
+          "w": 1.5
         }
       ],
       "diseaseTags": [],
@@ -8817,7 +8845,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 13.2
+      "maxScore": 16.7
     },
     {
       "id": "phys",
