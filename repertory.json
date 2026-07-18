@@ -341,7 +341,7 @@
     },
     {
       "section": "Common",
-      "rubric": "Boils, abscesses, or suppuration, very sensitive to touch",
+      "rubric": "Boils or abscesses, acutely very sensitive to touch",
       "triggers": [
         "boils sensitive to touch",
         "abscess extremely painful",
@@ -354,6 +354,27 @@
         },
         {
           "id": "sil",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Acne with pus, slow to heal, scarring tendency",
+      "triggers": [
+        "acne with pus",
+        "pus formation",
+        "painful pus",
+        "acne painful",
+        "acne scarring"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 3
+        },
+        {
+          "id": "hep",
           "grade": 2
         }
       ]
