@@ -216,10 +216,6 @@
           "grade": 3
         },
         {
-          "id": "bry",
-          "grade": 2
-        },
-        {
           "id": "spong",
           "grade": 2
         }
@@ -801,6 +797,144 @@
         },
         {
           "id": "lach",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Ailments from anger, indignation, or humiliation, better venting feelings",
+      "triggers": [
+        "after a fit of rage",
+        "after indignation",
+        "after anger",
+        "vent her feelings",
+        "vent his feelings",
+        "better venting feelings"
+      ],
+      "remedies": [
+        {
+          "id": "ign",
+          "grade": 3
+        },
+        {
+          "id": "staph",
+          "grade": 2
+        },
+        {
+          "id": "cham",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Sudden asthma or dyspnea, must sit upright, fear of death, worse midnight",
+      "triggers": [
+        "must sit upright to breathe",
+        "shortness of breath midnight",
+        "suffocated",
+        "terrified he will die",
+        "terrified she will die",
+        "worse 12am",
+        "worse midnight",
+        "sudden shortness of breath",
+        "dry cough feels suffocated"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 3
+        },
+        {
+          "id": "acon",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Burns, better from cold applications, worse when cold is removed",
+      "triggers": [
+        "burns better cold",
+        "burned finger",
+        "burn pain better cold",
+        "pain returns when cold removed"
+      ],
+      "remedies": [
+        {
+          "id": "canth",
+          "grade": 3
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Faintness or collapse with cold clammy sweat, worse standing, better lying head low",
+      "triggers": [
+        "faintness on standing",
+        "cold clammy sweat",
+        "collapse state",
+        "better lying head low",
+        "worse standing up"
+      ],
+      "remedies": [
+        {
+          "id": "carb-v",
+          "grade": 3
+        },
+        {
+          "id": "verat",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Dizzy, dull, heavy head with drowsiness, worse damp weather, better pressure",
+      "triggers": [
+        "dull heavy headache",
+        "dizzy and sluggish",
+        "fears falling",
+        "drowsy dull",
+        "after getting wet",
+        "worse wet weather",
+        "better hard pressure on head"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 3
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Delirium or hallucinations with high fever, dilated pupils, does not recognize others",
+      "triggers": [
+        "sees imaginary things",
+        "hallucinations with fever",
+        "dilated pupils",
+        "does not recognize",
+        "delirium with fever",
+        "sees spiders",
+        "high fever staring wildly"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 3
+        },
+        {
+          "id": "stram",
           "grade": 2
         }
       ]
