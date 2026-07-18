@@ -418,6 +418,31 @@
     },
     {
       "section": "Modalities",
+      "rubric": "Headache or complaints from sun exposure or heat of the sun",
+      "triggers": [
+        "worse sun exposure",
+        "after sun exposure",
+        "worse from sun",
+        "sun headache",
+        "sunstroke"
+      ],
+      "remedies": [
+        {
+          "id": "glon",
+          "grade": 3
+        },
+        {
+          "id": "nat-c",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
       "rubric": "Symptoms alternate sides, or one-sided complaints",
       "triggers": [
         "alternating sides",
@@ -1498,6 +1523,10 @@
         {
           "id": "fl-ac",
           "grade": 2
+        },
+        {
+          "id": "glon",
+          "grade": 3
         }
       ]
     },
