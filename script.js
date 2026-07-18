@@ -183,6 +183,32 @@ function anatomyConflict(inputAnatomy, keynoteAnatomy) {
   return !keynoteAnatomy.some(k => inputAnatomy.includes(k));
 }
 
+// MODALITY POLARITY PAIRING: a keynote like "better from heat" must only match when the
+// INPUT actually pairs "better" with "heat" — not when the input separately contains "worse
+// heat" AND "better cold" (a different, even opposite, clinical picture). Plain bag-of-words
+// matching only checks that both words appear SOMEWHERE, with no concept of which polarity
+// word is paired with which quality word, so a case describing "worse heat, better cold"
+// could still score a match on "better heat" — the reverse of what the patient actually said.
+// This requires the polarity word to be followed within a short window by the keynote's
+// quality word(s) in the input, before a modality-type keynote counts as a candidate at all.
+function modalityPolarityMatches(rawKeynoteText, kWords, inputText) {
+  const polarityMatch = rawKeynoteText.trim().match(/^(worse|better)\b/i);
+  if (!polarityMatch) return true; // not a modality-style keynote — no constraint
+  const polarity = polarityMatch[1].toLowerCase();
+  const qualityWords = kWords.filter(w => w !== "worse" && w !== "better");
+  if (!qualityWords.length) return true; // nothing to pair against — fall back to normal matching
+  const t = " " + inputText.toLowerCase() + " ";
+  const WINDOW_CHARS = 60; // rough char budget standing in for "a few words of tolerance"
+  let searchFrom = 0;
+  while (true) {
+    const polIdx = t.indexOf(" " + polarity + " ", searchFrom);
+    if (polIdx < 0) return false; // this polarity word never appears at all
+    const windowText = t.slice(polIdx, polIdx + polarity.length + 1 + WINDOW_CHARS);
+    if (qualityWords.every(w => windowText.includes(" " + w))) return true;
+    searchFrom = polIdx + polarity.length; // try the next occurrence of this polarity word, if any
+  }
+}
+
 /* ---------- repertory scoring (PRIMARY driver of remedy ranking) ----------
    For each rubric, check whether any of its trigger phrases appear in the input text
    (substring match on the normalized text — rubric triggers are short curated phrases,
@@ -300,10 +326,26 @@ function scoreRepertory(inputText) {
     const TRIGGER_GAP_FILLERS = new Set(["from", "of", "in", "on", "the", "a", "an", "to", "with"]);
     const words = trigger.toLowerCase().split(/\s+/).filter(w => w && !TRIGGER_GAP_FILLERS.has(w));
     if (words.length < 2) return -1; // single-word triggers already handled by exact match
+    // A plain word-count or character-distance gap limit can't tell "worse from slightest
+    // motion" (a legitimate qualifier in the gap) apart from "worse heat, better cold" (the
+    // OPPOSITE polarity word sitting in the gap — a different clause entirely, describing the
+    // reverse of what the trigger means). Both have the same gap size. What actually
+    // distinguishes them: the bad case has the trigger's own opposite polarity word inside the
+    // gap. So the rule is explicit, not distance-based — reject if "better" appears inside the
+    // gap of a "worse ..." trigger, or "worse" appears inside the gap of a "better ..." trigger.
+    const opposite = words[0] === "worse" ? "better" : (words[0] === "better" ? "worse" : null);
+    const MAX_GAP_CHARS = 30; // generous now that the opposite-polarity check does the real work
     let searchFrom = 0, firstPos = -1;
     for (const w of words) {
       const idx = text.indexOf(" " + w, searchFrom);
       if (idx < 0) return -1;
+      if (firstPos >= 0) {
+        if (idx - searchFrom > MAX_GAP_CHARS) return -1;
+        if (opposite) {
+          const gapText = text.slice(searchFrom, idx);
+          if (gapText.includes(" " + opposite)) return -1;
+        }
+      }
       if (firstPos < 0) firstPos = idx;
       searchFrom = idx + w.length;
     }
@@ -436,6 +478,8 @@ function scoreRemedies(inputText, diseaseProtocol) {
       if (!kWords.length) return;
       // Hard reject on body-location mismatch — see anatomyConflict for why this exists.
       if (anatomyConflict(inputAnatomy, anatomyWordsIn(kWords))) return;
+      // Hard reject on modality polarity mismatch — see modalityPolarityMatches for why.
+      if (!modalityPolarityMatches(k.t, kWords, inputText)) return;
       const hitCount = countHits(kWords, inputWords);
       const ratio = hitCount / kWords.length;
       // Very short keynotes (2 words) need a FULL match, not just partial — a keynote like
