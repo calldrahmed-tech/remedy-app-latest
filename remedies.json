@@ -1442,6 +1442,22 @@
         {
           "t": "stubborn once decided",
           "w": 1
+        },
+        {
+          "t": "slow to suppurate, pus formation, splinter-like sensation",
+          "w": 2
+        },
+        {
+          "t": "extremely sensitive to touch, pain worse from touch",
+          "w": 2
+        },
+        {
+          "t": "better from warm applications, wants to be warmly wrapped",
+          "w": 1.5
+        },
+        {
+          "t": "acne, boils, or abscesses that heal slowly",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -1453,7 +1469,7 @@
         "acute": "30C for suppuration",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 8
+      "maxScore": 15.5
     },
     {
       "id": "nat-mur",
@@ -3995,6 +4011,22 @@
         {
           "t": "worse washing",
           "w": 0.6
+        },
+        {
+          "t": "timid, shy, bashful, hides behind furniture or mother",
+          "w": 2
+        },
+        {
+          "t": "fear of strangers, avoids people",
+          "w": 2
+        },
+        {
+          "t": "developmental delay, backward in learning",
+          "w": 2
+        },
+        {
+          "t": "childish behaviour even as an adult",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -4002,7 +4034,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 15.799999999999999
+      "maxScore": 22.799999999999997
     },
     {
       "id": "benz-ac",
