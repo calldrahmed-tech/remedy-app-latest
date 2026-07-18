@@ -230,7 +230,18 @@ const SECTION_WEIGHT = {
   Modalities: 1.67,  // location & modalities — VERY HIGH (tier 1)
   Mind: 1.0,          // mental symptoms — HIGH (tier 2, same as general)
   Thirst: 1.0, Appetite: 1.0, // general symptoms — HIGH (tier 2)
-  Weight: 0.33, Stool: 0.33, Fever: 0.33, Extremities: 0.33, Common: 0.33 // common/particular clinical symptoms — LOW (tier 3)
+  // Common and Extremities were originally set to the same LOW tier as bare/generic
+  // fallback rubrics (undifferentiated fever, generic constipation) — but most of what's
+  // actually IN those sections (acne with pus, hair loss, nosebleed, nerve injury, leg pain)
+  // are specific, diagnostic presenting complaints, not vague generalities. Leaving them
+  // low meant a genuinely defining physical complaint (e.g. "acne with pus, worse touch,
+  // better warmth") lost out to a generic Mind match ("irritable") purely because of which
+  // bucket the rubric happened to be filed under, not because the Mind match was actually
+  // more diagnostic for that case.
+  Common: 1.0, Extremities: 1.0,
+  Weight: 0.33, Stool: 0.33, Fever: 0.33 // still low — these sections lean more toward
+                                          // generic/fallback rubrics (bare constipation,
+                                          // undifferentiated fever) rather than SRPs
 };
 // LOCATION_SCORE_BONUS: location is scored explicitly (not just used as a pass/fail filter)
 // per the "Location match = +5" rule — applied directly in scoreRemedies below wherever a
@@ -370,10 +381,17 @@ function scoreRepertory(inputText) {
       remedyRubrics[r.id] = remedyRubrics[r.id] || [];
       remedyRubrics[r.id].push(`${rubric.section}: ${rubric.rubric}`);
     });
-    // earliest position wins; a Mind-section rubric at an equal or later position still
-    // overrides a non-Mind one already marked as main complaint (mental symptoms dominate)
-    const mindPriority = rubric.section === "Mind" && mainComplaintRubric && mainComplaintRubric.section !== "Mind";
-    if (bestPos < earliestPos || mindPriority) {
+    // Main complaint = whichever rubric's trigger appears EARLIEST in the text, full stop.
+    // An earlier version gave Mind-section rubrics an unconditional override regardless of
+    // position (to satisfy "mental symptoms dominate"), but that caused a real, repeated
+    // problem: any case mentioning "irritable" ANYWHERE — even as a minor closing detail —
+    // had its main-complaint boost hijacked toward Nux-v/Chamomilla/Cina, overriding a much
+    // more specific and clearly-primary physical complaint (e.g. "acne with pus, worse touch,
+    // better warmth" mentioned first, with irritability tacked on at the end). Genuine mental
+    // generals still carry real weight via SECTION_WEIGHT.Mind and can still win the main-
+    // complaint slot when they're actually mentioned early/centrally — they just no longer
+    // override a case's real chief complaint purely by category.
+    if (bestPos < earliestPos) {
       earliestPos = bestPos;
       mainComplaintRubric = rubric;
     }
