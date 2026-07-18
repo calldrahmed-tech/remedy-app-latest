@@ -774,6 +774,33 @@
       ]
     },
     {
+      "section": "Mind",
+      "rubric": "Timid, shy, fear of strangers, developmental delay",
+      "triggers": [
+        "timid",
+        "shy",
+        "bashful",
+        "fear of strangers",
+        "developmental delay",
+        "backward in learning",
+        "afraid of strangers"
+      ],
+      "remedies": [
+        {
+          "id": "bar-c",
+          "grade": 3
+        },
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
       "section": "Appetite",
       "rubric": "Ravenous, increased hunger",
       "triggers": [
