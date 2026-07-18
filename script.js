@@ -467,6 +467,17 @@ function scoreRemedies(inputText, diseaseProtocol) {
     let score = repScore * REP_WEIGHT + mmScore * mmWeight;
     if (mainComplaintRemedyIds.has(r.id)) score += MAIN_COMPLAINT_BOOST;
 
+    // NAT-MUR GUARDRAIL: Natrum Muriaticum is graded across more rubrics than any other
+    // remedy in this repertory, which structurally makes it easy to accumulate a winning
+    // score from breadth rather than genuinely fitting the case. Explicit rule: it needs at
+    // least 2 distinct fired rubrics behind it (not just one coincidental match) or its score
+    // is discounted — a real Nat-mur case combines multiple confirming symptoms (grief +
+    // thirst + dryness + etc.), not just one.
+    if (r.id === "nat-mur") {
+      const natMurRubricCount = (remedyRubrics[r.id] || []).length;
+      if (natMurRubricCount < 2) score *= 0.5;
+    }
+
     // NOTE: a generic disease-tag boost used to live here (any input word matching the
     // first word of any diseaseTag added a flat +0.5). Removed — it was too crude: e.g.
     // Belladonna's "fever" tag matched the word "fever" in ANY query mentioning fever at
