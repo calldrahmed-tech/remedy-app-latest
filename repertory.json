@@ -154,6 +154,308 @@
       ]
     },
     {
+      "section": "Common",
+      "rubric": "Restless sleep, grinding teeth, talks or starts during sleep",
+      "triggers": [
+        "restless sleep",
+        "grinds teeth during sleep",
+        "talks in sleep",
+        "starts during sleep",
+        "wakes up screaming"
+      ],
+      "remedies": [
+        {
+          "id": "cina",
+          "grade": 3
+        },
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Insomnia from worry, overwork, or mental strain",
+      "triggers": [
+        "cannot sleep from worry",
+        "insomnia from overwork",
+        "sleeplessness from thoughts",
+        "mind too active to sleep"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "acon",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Dry, spasmodic cough, worse at night",
+      "triggers": [
+        "dry cough worse night",
+        "spasmodic cough",
+        "barking cough",
+        "dry cough at night"
+      ],
+      "remedies": [
+        {
+          "id": "dros",
+          "grade": 3
+        },
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "spong",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Loose, rattling cough with difficulty expectorating",
+      "triggers": [
+        "rattling cough",
+        "loose cough",
+        "cannot expectorate",
+        "chest full of mucus"
+      ],
+      "remedies": [
+        {
+          "id": "ant-t",
+          "grade": 3
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Nausea and vomiting with clean tongue",
+      "triggers": [
+        "constant nausea",
+        "nausea not relieved by vomiting",
+        "clean tongue with nausea"
+      ],
+      "remedies": [
+        {
+          "id": "ip",
+          "grade": 3
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "rubric": "Colic better bending double or with pressure",
+      "triggers": [
+        "colic better bending double",
+        "colic relieved by pressure",
+        "doubling up with pain"
+      ],
+      "remedies": [
+        {
+          "id": "coloc",
+          "grade": 3
+        },
+        {
+          "id": "mag-p",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "rubric": "Burning pains in stomach or abdomen, relieved by heat",
+      "triggers": [
+        "burning pain relieved by heat",
+        "burning stomach better warmth",
+        "burning abdominal pain"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 3
+        },
+        {
+          "id": "canth",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Itching, worse from warmth or scratching",
+      "triggers": [
+        "itching worse warmth",
+        "itching worse scratching",
+        "itching relieved by cold"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 3
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Burning skin eruptions, better from cold applications",
+      "triggers": [
+        "burning eruptions better cold",
+        "skin burns better cold application"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "canth",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Boils, abscesses, or suppuration, very sensitive to touch",
+      "triggers": [
+        "boils sensitive to touch",
+        "abscess extremely painful",
+        "suppuration with sensitivity"
+      ],
+      "remedies": [
+        {
+          "id": "hep",
+          "grade": 3
+        },
+        {
+          "id": "sil",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Menses too early and profuse",
+      "triggers": [
+        "menses too early",
+        "profuse menses",
+        "early and heavy periods"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Menses too late, scanty, or suppressed",
+      "triggers": [
+        "menses too late",
+        "scanty menses",
+        "suppressed menses",
+        "delayed periods"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 3
+        },
+        {
+          "id": "sep",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Worse before a thunderstorm or change of weather",
+      "triggers": [
+        "worse before storm",
+        "worse before thunderstorm",
+        "worse change of weather"
+      ],
+      "remedies": [
+        {
+          "id": "rhod",
+          "grade": 3
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Symptoms alternate sides, or one-sided complaints",
+      "triggers": [
+        "alternating sides",
+        "one sided complaint",
+        "symptoms shift sides"
+      ],
+      "remedies": [
+        {
+          "id": "lac-c",
+          "grade": 3
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Effects of suppressed emotion or humiliation",
+      "triggers": [
+        "suppressed emotion",
+        "effects of humiliation",
+        "silent indignation"
+      ],
+      "remedies": [
+        {
+          "id": "staph",
+          "grade": 3
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        }
+      ]
+    },
+    {
       "section": "Extremities",
       "rubric": "Leg pain, weakness, dragging sensation",
       "triggers": [
@@ -190,7 +492,10 @@
         "dwelling on past",
         "cannot cry",
         "silent sorrow",
-        "brooding over grief"
+        "brooding over grief",
+        "worse from consolation",
+        "consolation worse",
+        "worse consolation"
       ],
       "remedies": [
         {
@@ -211,7 +516,10 @@
         "wants sympathy",
         "desires consolation",
         "cries easily",
-        "weepy"
+        "weepy",
+        "better from consolation",
+        "consolation better",
+        "better consolation"
       ],
       "remedies": [
         {
