@@ -282,6 +282,33 @@ function scoreRepertory(inputText) {
   // since mental symptoms are meant to dominate the case here.
   let mainComplaintRubric = null;
   let earliestPos = Infinity;
+  // TRIGGER_GAP_STOPWORDS: qualifier/intensifier words allowed to appear BETWEEN the words
+  // of a multi-word trigger without breaking the match — e.g. "worse from motion" must still
+  // fire on "worse from slightest motion". Without this, exact-contiguous-phrase matching
+  // silently failed on any input with an inserted qualifier, which meant the single most
+  // important Modality/Thirst rubric for a case could fail to fire at all, letting a
+  // completely unrelated but literally-earlier-firing rubric (like generic "irritable")
+  // wrongly claim the main-complaint boost instead.
+  function triggerFires(trigger, text) {
+    const exactIdx = text.indexOf(" " + trigger.toLowerCase() + " ");
+    if (exactIdx >= 0) return exactIdx;
+    // NOTE: deliberately NOT using the global STOPWORDS set here — that list treats
+    // "worse"/"better" as optional (correct for materia medica matching), but for a
+    // repertory TRIGGER phrase the polarity word is semantically essential ("worse from
+    // motion" vs "better from motion" are different rubrics) and must not be stripped down
+    // to a single generic word like "motion".
+    const TRIGGER_GAP_FILLERS = new Set(["from", "of", "in", "on", "the", "a", "an", "to", "with"]);
+    const words = trigger.toLowerCase().split(/\s+/).filter(w => w && !TRIGGER_GAP_FILLERS.has(w));
+    if (words.length < 2) return -1; // single-word triggers already handled by exact match
+    let searchFrom = 0, firstPos = -1;
+    for (const w of words) {
+      const idx = text.indexOf(" " + w, searchFrom);
+      if (idx < 0) return -1;
+      if (firstPos < 0) firstPos = idx;
+      searchFrom = idx + w.length;
+    }
+    return firstPos;
+  }
   REPERTORY.forEach(rubric => {
     // word-boundary match only — a raw substring fallback here would let a bare trigger
     // like "thirst" incorrectly match "thirstless" (opposite meaning) since it's a literal
@@ -290,7 +317,7 @@ function scoreRepertory(inputText) {
     if (!matchLocation(rubric, inputLoc)) return;
     let bestPos = Infinity;
     rubric.triggers.forEach(trigger => {
-      const idx = t.indexOf(" " + trigger.toLowerCase() + " ");
+      const idx = triggerFires(trigger, t);
       if (idx >= 0 && idx < bestPos) bestPos = idx;
     });
     if (bestPos === Infinity) return; // didn't fire
