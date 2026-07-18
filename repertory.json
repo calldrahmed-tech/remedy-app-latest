@@ -1172,6 +1172,26 @@
       ]
     },
     {
+      "section": "Common",
+      "rubric": "Sharp, stabbing, bursting ear pain, red and hot, worse warmth and lying on affected side",
+      "triggers": [
+        "stabbing pain in the ear",
+        "ear pain bursting",
+        "ear red and hot",
+        "sharp pain in ear"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 3
+        },
+        {
+          "id": "cham",
+          "grade": 1
+        }
+      ]
+    },
+    {
       "section": "Mind",
       "rubric": "Suppressed anger or indignation from insult",
       "triggers": [
@@ -1574,28 +1594,6 @@
         },
         {
           "id": "lyc",
-          "grade": 1
-        }
-      ]
-    },
-    {
-      "section": "Thirst",
-      "rubric": "Thirst, general/unspecified",
-      "triggers": [
-        "thirst",
-        "thirsty"
-      ],
-      "remedies": [
-        {
-          "id": "bry",
-          "grade": 2
-        },
-        {
-          "id": "nat-mur",
-          "grade": 1
-        },
-        {
-          "id": "phos",
           "grade": 1
         }
       ]
