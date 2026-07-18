@@ -11548,6 +11548,493 @@
           "Heavy meals late at night"
         ]
       }
+    },
+    {
+      "id": "scarlet-fever",
+      "name": "Scarlet Fever",
+      "synonyms": [
+        "scarlet fever",
+        "scarlatina"
+      ],
+      "primaryRemedies": [
+        "bell"
+      ],
+      "banerji": {
+        "morning": "Belladonna 200, single dose",
+        "evening": "-",
+        "note": "Classic remedy for the sudden high fever, bright red skin, and throat involvement of scarlet fever."
+      },
+      "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily",
+      "tests": [
+        "Throat swab / rapid strep test",
+        "ASO titre if suspected complications",
+        "Urinalysis (post-infection nephritis screening)"
+      ],
+      "diet": {
+        "eat": [
+          "Warm fluids, soups",
+          "Soft, easily digestible foods"
+        ],
+        "avoid": [
+          "Cold drinks",
+          "Hard or scratchy foods that irritate the throat"
+        ]
+      }
+    },
+    {
+      "id": "whooping-cough",
+      "name": "Whooping Cough (Pertussis)",
+      "synonyms": [
+        "whooping cough",
+        "pertussis"
+      ],
+      "primaryRemedies": [
+        "dros",
+        "dros"
+      ],
+      "banerji": {
+        "morning": "Drosera 30, 3x daily",
+        "evening": "-",
+        "note": "Classic remedy for the paroxysmal, spasmodic coughing fits of pertussis."
+      },
+      "biochemic": "Mag Phos 6X, 4 tablets as needed during coughing fits",
+      "tests": [
+        "PCR or culture for Bordetella pertussis",
+        "Chest X-ray if pneumonia suspected"
+      ],
+      "diet": {
+        "eat": [
+          "Small frequent meals to avoid vomiting after coughing",
+          "Warm honey-lemon water (if age appropriate)"
+        ],
+        "avoid": [
+          "Foods that trigger coughing (dry, crumbly foods)",
+          "Cold air exposure"
+        ]
+      }
+    },
+    {
+      "id": "mumps",
+      "name": "Mumps",
+      "synonyms": [
+        "mumps",
+        "parotitis"
+      ],
+      "primaryRemedies": [
+        "merc-sol",
+        "puls"
+      ],
+      "banerji": {
+        "morning": "Mercurius Solubilis 30, 3x daily",
+        "evening": "-",
+        "note": "For glandular swelling with salivation; Pulsatilla often used if testicular involvement in males."
+      },
+      "biochemic": "Kali Mur 6X, 4 tablets 3x daily",
+      "tests": [
+        "Clinical diagnosis usually sufficient",
+        "Serum amylase if pancreatitis suspected",
+        "Testicular ultrasound if orchitis suspected"
+      ],
+      "diet": {
+        "eat": [
+          "Soft, bland foods",
+          "Plenty of fluids"
+        ],
+        "avoid": [
+          "Sour or acidic foods that stimulate salivation and pain",
+          "Hard-to-chew foods"
+        ]
+      }
+    },
+    {
+      "id": "chickenpox",
+      "name": "Chickenpox (Varicella)",
+      "synonyms": [
+        "chickenpox",
+        "chicken pox",
+        "varicella"
+      ],
+      "primaryRemedies": [
+        "rhus-t",
+        "ant-c"
+      ],
+      "banerji": {
+        "morning": "Rhus Tox 30, 3x daily",
+        "evening": "-",
+        "note": "For the intense itching and vesicular eruptions of chickenpox."
+      },
+      "biochemic": "Kali Mur 6X + Kali Sulph 6X alternating, 4 tablets 3x daily",
+      "tests": [
+        "Clinical diagnosis usually sufficient",
+        "VZV PCR if diagnosis unclear"
+      ],
+      "diet": {
+        "eat": [
+          "Cooling foods",
+          "Plenty of fluids"
+        ],
+        "avoid": [
+          "Spicy or acidic foods",
+          "Scratching-inducing tight clothing"
+        ]
+      }
+    },
+    {
+      "id": "typhoid",
+      "name": "Typhoid Fever",
+      "synonyms": [
+        "typhoid",
+        "typhoid fever",
+        "enteric fever"
+      ],
+      "primaryRemedies": [
+        "bapt",
+        "ars-alb"
+      ],
+      "banerji": {
+        "morning": "Baptisia 30, 3x daily",
+        "evening": "-",
+        "note": "For the stupor, foul discharges, and prostration typical of typhoid."
+      },
+      "biochemic": "Kali Phos 6X, 4 tablets 3x daily",
+      "tests": [
+        "Widal test",
+        "Blood culture",
+        "Complete blood count"
+      ],
+      "diet": {
+        "eat": [
+          "Bland, easily digestible foods",
+          "Plenty of oral fluids/ORS"
+        ],
+        "avoid": [
+          "Raw or unwashed foods",
+          "Spicy or fibrous foods"
+        ]
+      }
+    },
+    {
+      "id": "malaria",
+      "name": "Malaria",
+      "synonyms": [
+        "malaria"
+      ],
+      "primaryRemedies": [
+        "chin",
+        "ars-alb"
+      ],
+      "banerji": {
+        "morning": "China Officinalis 30, 3x daily",
+        "evening": "-",
+        "note": "Classic remedy for periodic fever with chill-heat-sweat stages and debility."
+      },
+      "biochemic": "Nat Mur 6X, 4 tablets 3x daily",
+      "tests": [
+        "Peripheral blood smear for malaria parasite",
+        "Rapid diagnostic test (RDT)"
+      ],
+      "diet": {
+        "eat": [
+          "Light, nutritious foods during recovery",
+          "Plenty of fluids"
+        ],
+        "avoid": [
+          "Heavy, fatty foods during acute fever"
+        ]
+      }
+    },
+    {
+      "id": "pcos",
+      "name": "PCOS (Polycystic Ovary Syndrome)",
+      "synonyms": [
+        "pcos",
+        "polycystic ovary syndrome",
+        "polycystic ovaries"
+      ],
+      "primaryRemedies": [
+        "sep",
+        "puls",
+        "thuj"
+      ],
+      "banerji": {
+        "morning": "Sepia 200, weekly dose",
+        "evening": "-",
+        "note": "For irregular menses with indifference/exhaustion; Pulsatilla for milder, weepy presentations."
+      },
+      "biochemic": "Calc Phos 6X, 4 tablets 3x daily",
+      "tests": [
+        "Pelvic ultrasound",
+        "LH/FSH ratio",
+        "Fasting insulin and glucose",
+        "Testosterone levels"
+      ],
+      "diet": {
+        "eat": [
+          "Low glycemic index foods",
+          "High fiber vegetables",
+          "Lean protein"
+        ],
+        "avoid": [
+          "Refined sugar and processed carbohydrates",
+          "Excess dairy in some cases"
+        ]
+      }
+    },
+    {
+      "id": "hypothyroid",
+      "name": "Hypothyroidism",
+      "synonyms": [
+        "hypothyroidism",
+        "hypothyroid",
+        "underactive thyroid"
+      ],
+      "primaryRemedies": [
+        "calc-c",
+        "iod"
+      ],
+      "banerji": {
+        "morning": "Calcarea Carbonica 200, weekly dose",
+        "evening": "-",
+        "note": "For the chilly, sluggish, weight-gaining constitutional picture associated with hypothyroidism."
+      },
+      "biochemic": "Calc Phos 6X, 4 tablets 3x daily",
+      "tests": [
+        "TSH, free T3, free T4",
+        "Anti-TPO antibodies"
+      ],
+      "diet": {
+        "eat": [
+          "Iodine-rich foods (in moderation)",
+          "Selenium-rich foods (nuts, seeds)"
+        ],
+        "avoid": [
+          "Excessive raw cruciferous vegetables (goitrogens) in significant hypothyroidism",
+          "Excess soy in some cases"
+        ]
+      }
+    },
+    {
+      "id": "sciatica",
+      "name": "Sciatica",
+      "synonyms": [
+        "sciatica",
+        "sciatic nerve pain"
+      ],
+      "primaryRemedies": [
+        "coloc",
+        "rhus-t"
+      ],
+      "banerji": {
+        "morning": "Colocynthis 200, single dose",
+        "evening": "Rhus Tox 200, single dose",
+        "note": "Colocynthis for cramping, better bending double; Rhus Tox for stiffness better from continued motion."
+      },
+      "biochemic": "Mag Phos 6X, 4 tablets 3x daily",
+      "tests": [
+        "MRI lumbosacral spine",
+        "Straight leg raise test (clinical)"
+      ],
+      "diet": {
+        "eat": [
+          "Anti-inflammatory foods (turmeric, ginger)",
+          "Adequate hydration"
+        ],
+        "avoid": [
+          "Prolonged sitting",
+          "Heavy lifting during acute phase"
+        ]
+      }
+    },
+    {
+      "id": "osteoarthritis",
+      "name": "Osteoarthritis",
+      "synonyms": [
+        "osteoarthritis",
+        "oa",
+        "degenerative joint disease"
+      ],
+      "primaryRemedies": [
+        "rhus-t",
+        "bry",
+        "calc-c"
+      ],
+      "banerji": {
+        "morning": "Rhus Tox 200, single dose",
+        "evening": "-",
+        "note": "For stiffness worse on first motion, better with continued movement \u2014 classic osteoarthritis pattern."
+      },
+      "biochemic": "Calc Fluor 6X, 4 tablets 3x daily",
+      "tests": [
+        "X-ray of affected joint",
+        "ESR/CRP to rule out inflammatory arthritis"
+      ],
+      "diet": {
+        "eat": [
+          "Omega-3 rich foods",
+          "Calcium and vitamin D rich foods"
+        ],
+        "avoid": [
+          "Excess sugar and processed foods (pro-inflammatory)",
+          "Excess weight-bearing strain"
+        ]
+      }
+    },
+    {
+      "id": "genital-warts",
+      "name": "Genital Warts / HPV",
+      "synonyms": [
+        "genital warts",
+        "hpv",
+        "condyloma"
+      ],
+      "primaryRemedies": [
+        "thuj",
+        "nit-ac"
+      ],
+      "banerji": {
+        "morning": "Thuja 30, 3x daily",
+        "evening": "Thuja Q, external application",
+        "note": "Widely documented Banerji protocol for genital and other warts; Nitric Acid for warts that bleed easily."
+      },
+      "biochemic": "Nat Sulph 6X, 4 tablets 3x daily",
+      "tests": [
+        "HPV DNA testing",
+        "Pap smear (for cervical involvement)",
+        "Colposcopy if indicated"
+      ],
+      "diet": {
+        "eat": [
+          "Immune-supportive foods (vitamin C rich fruits)"
+        ],
+        "avoid": [
+          "Smoking (impairs clearance)",
+          "Excess alcohol"
+        ]
+      }
+    },
+    {
+      "id": "kidney-stones",
+      "name": "Kidney Stones (Renal Calculi)",
+      "synonyms": [
+        "kidney stones",
+        "renal calculi",
+        "nephrolithiasis"
+      ],
+      "primaryRemedies": [
+        "berb",
+        "lyc"
+      ],
+      "banerji": {
+        "morning": "Berberis Vulgaris Q, 10 drops 3x daily in water",
+        "evening": "-",
+        "note": "Classic remedy for renal colic with pain radiating down the ureter."
+      },
+      "biochemic": "Calc Phos 6X, 4 tablets 3x daily",
+      "tests": [
+        "Ultrasound KUB",
+        "CT scan (non-contrast) if needed",
+        "Urinalysis",
+        "Serum creatinine"
+      ],
+      "diet": {
+        "eat": [
+          "Increased water intake",
+          "Lemon water (citrate helps prevent stones)"
+        ],
+        "avoid": [
+          "High oxalate foods (spinach, nuts) if calcium oxalate stones",
+          "Excess salt and animal protein"
+        ]
+      }
+    },
+    {
+      "id": "warts",
+      "name": "Common Warts",
+      "synonyms": [
+        "warts",
+        "verruca"
+      ],
+      "primaryRemedies": [
+        "thuj",
+        "ant-c"
+      ],
+      "banerji": {
+        "morning": "Thuja 30, 3x daily",
+        "evening": "-",
+        "note": "Antimonium Crudum favored for warts on palms/soles that are hard and horny."
+      },
+      "biochemic": "Nat Sulph 6X, 4 tablets 3x daily",
+      "tests": [
+        "Clinical diagnosis usually sufficient"
+      ],
+      "diet": {
+        "eat": [
+          "Immune-supportive foods"
+        ],
+        "avoid": [
+          "Nothing specific dietary"
+        ]
+      }
+    },
+    {
+      "id": "sinusitis",
+      "name": "Sinusitis",
+      "synonyms": [
+        "sinusitis",
+        "sinus infection"
+      ],
+      "primaryRemedies": [
+        "kali-bi"
+      ],
+      "banerji": {
+        "morning": "Kali Bichromicum 30, 3x daily",
+        "evening": "-",
+        "note": "Classic remedy for thick, stringy, ropy nasal discharge with sinus pressure."
+      },
+      "biochemic": "Kali Mur 6X, 4 tablets 3x daily",
+      "tests": [
+        "CT scan of sinuses if chronic/recurrent",
+        "Nasal endoscopy if indicated"
+      ],
+      "diet": {
+        "eat": [
+          "Warm fluids, steam inhalation with meals"
+        ],
+        "avoid": [
+          "Dairy (can thicken mucus in some people)",
+          "Cold drinks"
+        ]
+      }
+    },
+    {
+      "id": "ganglion-cyst",
+      "name": "Ganglion Cyst",
+      "synonyms": [
+        "ganglion cyst",
+        "wrist cyst"
+      ],
+      "primaryRemedies": [
+        "ruta",
+        "sil"
+      ],
+      "banerji": {
+        "morning": "Ruta 200, weekly dose",
+        "evening": "-",
+        "note": "Classic remedy for ganglion cysts and injuries to tendons/periosteum."
+      },
+      "biochemic": "Calc Fluor 6X, 4 tablets 3x daily",
+      "tests": [
+        "Ultrasound of the swelling",
+        "MRI if diagnosis unclear"
+      ],
+      "diet": {
+        "eat": [
+          "No specific dietary requirement"
+        ],
+        "avoid": [
+          "Repetitive strain on the affected joint"
+        ]
+      }
     }
   ]
 }
