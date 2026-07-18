@@ -283,6 +283,10 @@
         {
           "id": "cham",
           "grade": 2
+        },
+        {
+          "id": "cina",
+          "grade": 2
         }
       ]
     },
