@@ -1380,6 +1380,111 @@
       ]
     },
     {
+      "section": "Common",
+      "rubric": "Craves eggs, sweats on head during sleep, slow development in children",
+      "triggers": [
+        "craves eggs",
+        "sweats on head",
+        "delayed development children",
+        "slow to walk",
+        "slow to teethe"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 3
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Worse on first beginning to move, better with continued motion",
+      "triggers": [
+        "worse first motion",
+        "worse beginning to move",
+        "better continued motion",
+        "worse initial motion"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Fear of downward motion, vertigo on looking down or downward stairs",
+      "triggers": [
+        "fear of downward motion",
+        "vertigo looking down",
+        "worse descent",
+        "dread downward motion"
+      ],
+      "remedies": [
+        {
+          "id": "bor",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Extreme dryness of mucous membranes, thirstless, confusion of mind",
+      "triggers": [
+        "dryness of mucous membranes",
+        "thirstless despite dryness",
+        "confusion of mind dryness",
+        "dry mucous membranes no thirst"
+      ],
+      "remedies": [
+        {
+          "id": "alum",
+          "grade": 3
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Extreme weakness and apathy, desire for sweets, worse from sun",
+      "triggers": [
+        "extreme weakness desire for sweets",
+        "aggravation from sun",
+        "weakness worse sun",
+        "apathy weakness sweets"
+      ],
+      "remedies": [
+        {
+          "id": "ph-ac",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Loud, snoring, stertorous breathing during sleep or coma",
+      "triggers": [
+        "loud snoring",
+        "stertorous breathing",
+        "snoring sleep",
+        "heavy snoring during sleep"
+      ],
+      "remedies": [
+        {
+          "id": "op",
+          "grade": 3
+        }
+      ]
+    },
+    {
       "section": "Appetite",
       "rubric": "Ravenous, increased hunger",
       "triggers": [
