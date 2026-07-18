@@ -653,6 +653,10 @@
         {
           "t": "anxious about appearance and orderliness even when sick",
           "w": 1
+        },
+        {
+          "t": "restless anxiety, must get up and walk around the room, worse after midnight",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -665,7 +669,7 @@
         "acute": "200C every 2-3h",
         "chronic": "1M occasional dose"
       },
-      "maxScore": 41.0,
+      "maxScore": 43.0,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)"
     },
     {
