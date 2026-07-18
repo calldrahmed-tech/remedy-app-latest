@@ -682,6 +682,19 @@ function materiaMedicaNote(remedy) {
    the repertory rubric(s) that matched (most clinically meaningful), then materia medica
    evidence, then falls back to the remedy's own top keynote. Deliberately terse — this is
    a clean clinical view, not a full evidence dump. */
+function differentiatingQuestion(main, close) {
+  if (!close) return null;
+  // Find a symptom genuinely UNIQUE to the close remedy — not just its top overall match,
+  // which is often something both remedies already share (that's exactly why they're
+  // competing in the first place). Asking about a shared symptom doesn't actually
+  // differentiate anything; asking about something only Close has does.
+  const mainSignals = new Set([...(main.repertoryRubrics || []), ...(main.matched || [])]);
+  const closeSignals = [...(close.repertoryRubrics || []), ...(close.matched || [])];
+  const uniqueToClose = closeSignals.find(s => !mainSignals.has(s));
+  const closeSymptom = uniqueToClose ? uniqueToClose.split(": ").slice(1).join(": ") || uniqueToClose : shortKeynote(close);
+  return `To confirm <b>${esc(main.remedy.name)}</b> rather than <b>${esc(close.remedy.name)}</b>, ask: does the patient also have <i>${esc(closeSymptom)}</i>? If yes, ${esc(close.remedy.name)} may be the better fit.`;
+}
+
 function shortKeynote(r) {
   const rem = r.remedy;
   if (r.repertoryRubrics && r.repertoryRubrics.length) {
@@ -861,6 +874,14 @@ function runSearch() {
       </div>
     </div>` : ""}
   </div>`;
+
+  const diffQuestion = differentiatingQuestion(main, close);
+  if (diffQuestion) {
+    html += `<div class="diff-question-box">
+      <div class="diff-question-icon">❓</div>
+      <div class="diff-question-text">${diffQuestion}</div>
+    </div>`;
+  }
 
   /* ---------- Bottom mini-cards ---------- */
   let biochemicPair = [];
