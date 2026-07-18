@@ -509,6 +509,33 @@
       ]
     },
     {
+      "section": "Extremities",
+      "rubric": "Nerve injury with shooting pains, extreme sensitivity",
+      "triggers": [
+        "nerve injury",
+        "shooting pain after injury",
+        "injury to nerves",
+        "crushed fingers",
+        "crushed toes",
+        "shooting pain",
+        "extreme sensitivity"
+      ],
+      "remedies": [
+        {
+          "id": "hyper",
+          "grade": 3
+        },
+        {
+          "id": "led",
+          "grade": 1
+        },
+        {
+          "id": "staph",
+          "grade": 1
+        }
+      ]
+    },
+    {
       "section": "Mind",
       "rubric": "Silent grief, dwells on past hurts, cannot cry",
       "triggers": [
