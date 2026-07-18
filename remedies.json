@@ -1721,7 +1721,7 @@
           "w": 0.6
         },
         {
-          "t": "better from violent exercise",
+          "t": "better from exercise, feels better when active",
           "w": 0.6
         },
         {
@@ -1743,6 +1743,10 @@
         {
           "t": "better sleep",
           "w": 0.6
+        },
+        {
+          "t": "bearing-down sensation as if everything would fall out or escape",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -5410,47 +5414,35 @@
       ],
       "keynotes": [
         {
-          "t": "agonizing abdominal colic",
+          "t": "agonizing abdominal colic, bends double for relief",
           "w": 2
         },
         {
-          "t": "bends double for relief",
+          "t": "cramping pain better from hard pressure and bending double",
           "w": 2
         },
         {
-          "t": "pains better hard pressure & bending double",
+          "t": "extremely irritable, gets angry very easily",
           "w": 2
         },
         {
-          "t": "extremely irritable",
-          "w": 2
+          "t": "complaints or pain brought on by anger, indignation, or chagrin",
+          "w": 1.5
         },
         {
-          "t": "angry when questioned",
-          "w": 2
+          "t": "sciatica, left side, crampy, lightning-like pains",
+          "w": 1
         },
         {
-          "t": "complaints from anger, indignation, chagrin",
-          "w": 2
-        },
-        {
-          "t": "sciatica: left side, crampy, lightning-like",
-          "w": 2
-        },
-        {
-          "t": "worse anger",
+          "t": "worse from anger",
           "w": 0.6
         },
         {
-          "t": "worse cheese",
+          "t": "worse from cheese",
           "w": 0.6
         },
         {
-          "t": "better hard pressure",
-          "w": 0.6
-        },
-        {
-          "t": "better doubling up",
+          "t": "better from hard pressure and doubling up",
           "w": 0.6
         }
       ],
@@ -5459,7 +5451,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 16.4
+      "maxScore": 10.3
     },
     {
       "id": "con",
