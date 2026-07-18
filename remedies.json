@@ -868,6 +868,18 @@
         {
           "t": "spasmodic hiccough",
           "w": 1
+        },
+        {
+          "t": "ailments from anger, indignation, or humiliation, with sighing and vent of feelings",
+          "w": 2
+        },
+        {
+          "t": "headache and gastric upset from grief or emotional upset",
+          "w": 2
+        },
+        {
+          "t": "better from lying on the affected side or on the back, better from gentle motion",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -879,7 +891,7 @@
         "acute": "200C single dose",
         "chronic": "1M under guidance"
       },
-      "maxScore": 12
+      "maxScore": 17.5
     },
     {
       "id": "gels",
@@ -913,6 +925,22 @@
         {
           "t": "flu with aching heaviness",
           "w": 1
+        },
+        {
+          "t": "dull, heavy, occipital headache with dizziness, fears falling, especially to one side",
+          "w": 2
+        },
+        {
+          "t": "sluggish, confused, dull mental state with heavy, pale, puffy face",
+          "w": 2
+        },
+        {
+          "t": "symptoms worse from damp, wet, or stormy weather, worse lying down",
+          "w": 1.5
+        },
+        {
+          "t": "better sitting upright, better from hard pressure on the head",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -924,7 +952,7 @@
         "acute": "30C 3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 9
+      "maxScore": 16.0
     },
     {
       "id": "eup-per",
@@ -2009,6 +2037,14 @@
         {
           "t": "cystitis frequent scanty urine",
           "w": 2
+        },
+        {
+          "t": "burns with intense stinging pain, better from cold applications, pain returns fiercely when cold is removed",
+          "w": 2
+        },
+        {
+          "t": "restless and panicky from severe burning pain",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -2020,7 +2056,7 @@
         "acute": "200C every 2h",
         "chronic": "-"
       },
-      "maxScore": 9
+      "maxScore": 12.5
     },
     {
       "id": "dros",
@@ -2406,6 +2442,18 @@
         {
           "t": "sluggish circulation",
           "w": 1
+        },
+        {
+          "t": "faintness and dizziness on standing, cold clammy sweat especially on forehead",
+          "w": 2
+        },
+        {
+          "t": "collapse state, exhaustion, indifferent, wants to be left alone",
+          "w": 1.5
+        },
+        {
+          "t": "better lying down with head low, worse from standing up",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -2419,7 +2467,7 @@
         "acute": "30C after meals",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 9
+      "maxScore": 14.0
     },
     {
       "id": "chel",
