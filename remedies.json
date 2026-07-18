@@ -344,6 +344,14 @@
         {
           "t": "skin eruptions itching",
           "w": 1
+        },
+        {
+          "t": "red, vesicular, itching rash after contact with poison ivy, plants, or chemicals",
+          "w": 2
+        },
+        {
+          "t": "intense itching with swelling of the skin, better hot water, worse at night",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -355,7 +363,7 @@
         "acute": "30C 3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 9
+      "maxScore": 13
     },
     {
       "id": "nux-v",
@@ -621,6 +629,14 @@
         {
           "t": "better warm drinks",
           "w": 0.6
+        },
+        {
+          "t": "burning itching skin eruptions from allergic reaction to food, especially shellfish",
+          "w": 2
+        },
+        {
+          "t": "anxious about appearance and orderliness even when sick",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -633,7 +649,7 @@
         "acute": "200C every 2-3h",
         "chronic": "1M occasional dose"
       },
-      "maxScore": 38.0,
+      "maxScore": 41.0,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)"
     },
     {
@@ -1393,6 +1409,22 @@
         {
           "t": "puts feet out of bed to cool them",
           "w": 2
+        },
+        {
+          "t": "chronic recurrent boils and abscesses that heal slowly",
+          "w": 2
+        },
+        {
+          "t": "craves sweets and alcohol",
+          "w": 1.5
+        },
+        {
+          "t": "offensive, sour-smelling sweat",
+          "w": 1
+        },
+        {
+          "t": "lazy, philosophical, untidy, does not mind own filthiness",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -1405,7 +1437,7 @@
         "acute": "30C for skin flare",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 45.0,
+      "maxScore": 51.0,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)"
     },
     {
@@ -1747,6 +1779,14 @@
         {
           "t": "bearing-down sensation as if everything would fall out or escape",
           "w": 2
+        },
+        {
+          "t": "jealous, suspicious, sensitive to contradiction",
+          "w": 2
+        },
+        {
+          "t": "hot flushes, pimples or pustules worse before menses",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -1758,7 +1798,7 @@
         "acute": "30C acute irritability",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 38.6,
+      "maxScore": 44.6,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)"
     },
     {
@@ -2644,6 +2684,18 @@
         {
           "t": "indecisive timid",
           "w": 1
+        },
+        {
+          "t": "thick silvery scales on skin, especially elbows and knees, psoriasis-like",
+          "w": 2
+        },
+        {
+          "t": "desires fatty or rich food",
+          "w": 1.5
+        },
+        {
+          "t": "eruptions with sticky honey-like discharge, worse from warmth of bed",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -2655,7 +2707,7 @@
         "acute": "30C for skin flare",
         "chronic": "200C to 1M constitutional case needed"
       },
-      "maxScore": 6
+      "maxScore": 11.0
     },
     {
       "id": "acet-ac",
