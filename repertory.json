@@ -722,6 +722,90 @@
       ]
     },
     {
+      "section": "Common",
+      "rubric": "Thick silvery or scaly skin eruption, psoriasis-like",
+      "triggers": [
+        "silvery scales",
+        "psoriasis",
+        "thick scaly skin",
+        "scales on elbows"
+      ],
+      "remedies": [
+        {
+          "id": "graph",
+          "grade": 3
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Vesicular, itching rash from plant or chemical contact",
+      "triggers": [
+        "vesicular rash",
+        "poison ivy",
+        "contact with plants",
+        "contact with chemicals",
+        "rash after contact"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 3
+        },
+        {
+          "id": "anac",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Chronic recurrent boils or skin eruptions, craves sweets or alcohol",
+      "triggers": [
+        "recurrent boils",
+        "chronic boils",
+        "craving for sweets",
+        "craving alcohol",
+        "craves sweets and alcohol",
+        "craves sweets",
+        "craving sweets"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 3
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Jealous, suspicious, sensitive to contradiction",
+      "triggers": [
+        "jealous",
+        "sensitive to contradiction",
+        "cannot bear contradiction",
+        "suspicious of others"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 2
+        }
+      ]
+    },
+    {
       "section": "Mind",
       "rubric": "Suppressed anger or indignation from insult",
       "triggers": [
@@ -1635,11 +1719,11 @@
       ],
       "remedies": [
         {
-          "id": "puls",
+          "id": "apis",
           "grade": 3
         },
         {
-          "id": "apis",
+          "id": "puls",
           "grade": 2
         },
         {
@@ -1652,7 +1736,7 @@
         },
         {
           "id": "glon",
-          "grade": 3
+          "grade": 1
         }
       ]
     },
