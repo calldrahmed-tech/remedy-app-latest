@@ -940,6 +940,86 @@
       ]
     },
     {
+      "section": "Modalities",
+      "rubric": "Headache worse 4-8pm, irritable and angry, sour belching",
+      "triggers": [
+        "worse 4pm to 8pm",
+        "worse 4 to 8 pm",
+        "headache worse afternoon",
+        "sour belching",
+        "angry headache"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 3
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "One cheek red one pale, better from being carried, irritable child",
+      "triggers": [
+        "one cheek red",
+        "better from being carried",
+        "better carried",
+        "one cheek red one pale"
+      ],
+      "remedies": [
+        {
+          "id": "cham",
+          "grade": 3
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Vertigo worse from looking up, better from pressure",
+      "triggers": [
+        "vertigo worse looking up",
+        "dizziness looking up",
+        "vertigo better pressure",
+        "vertigo relieved by pressure"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 3
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Vertigo worse from closing the eyes or turning in bed",
+      "triggers": [
+        "vertigo worse closing eyes",
+        "dizziness closing eyes",
+        "vertigo turning in bed"
+      ],
+      "remedies": [
+        {
+          "id": "carb-v",
+          "grade": 3
+        },
+        {
+          "id": "ther",
+          "grade": 1
+        }
+      ]
+    },
+    {
       "section": "Mind",
       "rubric": "Suppressed anger or indignation from insult",
       "triggers": [
