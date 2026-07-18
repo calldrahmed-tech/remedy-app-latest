@@ -6311,6 +6311,14 @@
         {
           "t": "worse ascending",
           "w": 0.6
+        },
+        {
+          "t": "better from cold applications to the head",
+          "w": 1.5
+        },
+        {
+          "t": "cannot bear tight clothing around neck",
+          "w": 1.5
         }
       ],
       "diseaseTags": [],
@@ -6318,7 +6326,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 21.0
+      "maxScore": 24.0
     },
     {
       "id": "ham",
