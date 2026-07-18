@@ -1960,6 +1960,30 @@
         {
           "id": "chin",
           "grade": 2
+        },
+        {
+          "id": "crot-t",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "rubric": "Sudden forceful diarrhea immediately after eating or drinking",
+      "triggers": [
+        "diarrhea immediately after eating",
+        "diarrhea after drinking",
+        "gushes out with force",
+        "worse least food or drink"
+      ],
+      "remedies": [
+        {
+          "id": "crot-t",
+          "grade": 3
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
         }
       ]
     },
