@@ -6573,36 +6573,36 @@
       ],
       "keynotes": [
         {
-          "t": "injuries to nerves & spine",
+          "t": "nerve injury with shooting pains and extreme sensitivity",
           "w": 2
         },
         {
-          "t": "crushed fingers/toes",
+          "t": "injuries to nerves and spine, crushed fingers or toes",
           "w": 2
         },
         {
-          "t": "punctured, lacerated wounds",
+          "t": "punctured, lacerated wounds with sharp shooting pain",
           "w": 2
         },
         {
-          "t": "prevents lockjaw",
+          "t": "prevents lockjaw after injury",
+          "w": 1
+        },
+        {
+          "t": "coccyx pain after fall or injury",
+          "w": 1
+        },
+        {
+          "t": "old wounds or injuries reopen or become painful again",
+          "w": 1
+        },
+        {
+          "t": "neuralgia following an injury",
           "w": 2
         },
         {
-          "t": "coccyx pain after fall",
-          "w": 2
-        },
-        {
-          "t": "old wounds reopen",
-          "w": 2
-        },
-        {
-          "t": "neuralgia after injury",
-          "w": 2
-        },
-        {
-          "t": "convulsions after brain concussion",
-          "w": 2
+          "t": "convulsions after brain concussion or head injury",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -6610,7 +6610,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 16
+      "maxScore": 12
     },
     {
       "id": "iod",
