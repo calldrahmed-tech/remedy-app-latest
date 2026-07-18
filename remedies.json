@@ -42,6 +42,34 @@
         {
           "t": "thirst for cold water",
           "w": 1
+        },
+        {
+          "t": "worse in the evening and especially around midnight",
+          "w": 2
+        },
+        {
+          "t": "tingling, numbness, or formication of the affected part",
+          "w": 1.5
+        },
+        {
+          "t": "cannot bear to be looked at or touched during acute complaints",
+          "w": 1.5
+        },
+        {
+          "t": "predicts the exact time of death during acute illness",
+          "w": 1.5
+        },
+        {
+          "t": "worse in a heated or overcrowded room, better open air",
+          "w": 1.5
+        },
+        {
+          "t": "intense restlessness, tosses about in anguish",
+          "w": 1.5
+        },
+        {
+          "t": "ailments coming on suddenly after fright, shock, or exposure to dry cold wind",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -54,7 +82,7 @@
         "acute": "200C every 2-4h in first hours",
         "chronic": "-"
       },
-      "maxScore": 12
+      "maxScore": 23.5
     },
     {
       "id": "bell",
@@ -1203,6 +1231,42 @@
         {
           "t": "fair fat flabby constitution",
           "w": 1
+        },
+        {
+          "t": "fear of heights, fear of falling",
+          "w": 2
+        },
+        {
+          "t": "obstinate, stubborn, especially in children",
+          "w": 1.5
+        },
+        {
+          "t": "profuse, offensive sweat on the feet",
+          "w": 1.5
+        },
+        {
+          "t": "worse from milk, aversion to milk in some cases",
+          "w": 1.5
+        },
+        {
+          "t": "worse from ascending stairs, worse from exertion",
+          "w": 1.5
+        },
+        {
+          "t": "worse from cold in general, damp weather, or cold bathing",
+          "w": 1.5
+        },
+        {
+          "t": "better in dry weather, better lying on painful side",
+          "w": 1
+        },
+        {
+          "t": "fontanelles closing late, teething and walking delayed in children",
+          "w": 1.5
+        },
+        {
+          "t": "desires indigestible things such as chalk, pencils, or dirt",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -1214,7 +1278,7 @@
         "acute": "-",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 8
+      "maxScore": 21.5
     },
     {
       "id": "phos",
