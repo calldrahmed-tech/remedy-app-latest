@@ -238,6 +238,10 @@
         {
           "id": "puls",
           "grade": 1
+        },
+        {
+          "id": "nat-sulph",
+          "grade": 2
         }
       ]
     },
@@ -902,7 +906,7 @@
         "fears falling",
         "drowsy dull",
         "after getting wet",
-        "worse wet weather",
+        "dizziness after getting wet",
         "better hard pressure on head"
       ],
       "remedies": [
@@ -926,7 +930,11 @@
         "does not recognize",
         "delirium with fever",
         "sees spiders",
-        "high fever staring wildly"
+        "high fever staring wildly",
+        "sees horrible faces",
+        "sees hideous faces",
+        "tries to escape from bed",
+        "terrified of being touched"
       ],
       "remedies": [
         {
@@ -1016,6 +1024,150 @@
         {
           "id": "ther",
           "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Throbbing headache as if head will burst, worse stooping or jarring, hot face, cold feet",
+      "triggers": [
+        "head will burst",
+        "worse stooping",
+        "worse jarring motion",
+        "face hot feet cold",
+        "throbbing headache worse coughing"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 3
+        },
+        {
+          "id": "glon",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Motion sickness, nausea vomiting from travel, better lying with eyes closed",
+      "triggers": [
+        "motion sickness",
+        "seasickness",
+        "nausea traveling",
+        "nausea in car",
+        "better lying eyes closed",
+        "vomiting on least motion"
+      ],
+      "remedies": [
+        {
+          "id": "tab",
+          "grade": 3
+        },
+        {
+          "id": "cocc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "rubric": "Fever recurring at the same time daily, craves cold water yet wants to be covered",
+      "triggers": [
+        "fever every day at",
+        "fever recurring daily",
+        "craves cold water but chilly",
+        "wants to be covered during fever"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 3
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Croupy barking cough waking child at night, better sitting up and warm drinks",
+      "triggers": [
+        "croupy cough",
+        "barking cough wakes child",
+        "cough at 1am",
+        "better sitting up warm drinks"
+      ],
+      "remedies": [
+        {
+          "id": "spong",
+          "grade": 3
+        },
+        {
+          "id": "hep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Asthma or cough worse damp weather, rattling with greenish mucus, better dry warmth",
+      "triggers": [
+        "asthma worse damp",
+        "rattling cough greenish mucus",
+        "better dry warm room",
+        "better lying right side"
+      ],
+      "remedies": [
+        {
+          "id": "nat-sulph",
+          "grade": 3
+        },
+        {
+          "id": "ant-t",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Ear pain worse swallowing or cold drafts, weepy and clingy, wants to be carried",
+      "triggers": [
+        "ear pain worse swallowing",
+        "ear pain cold drafts",
+        "weepy and clingy",
+        "wants to be held constantly"
+      ],
+      "remedies": [
+        {
+          "id": "cham",
+          "grade": 3
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Panic or claustrophobia in closed rooms, must open window, better open air",
+      "triggers": [
+        "panic in closed rooms",
+        "claustrophobia",
+        "must open a window",
+        "suffocated feeling closed room",
+        "panic attack elevator"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 3
+        },
+        {
+          "id": "arg-n",
+          "grade": 2
         }
       ]
     },
