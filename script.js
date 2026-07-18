@@ -407,7 +407,12 @@ function scoreRepertory(inputText) {
   // materia medica word-overlap. Only applies when no specific Fever rubric already fired,
   // so it never dilutes a more specific fever presentation that's already well-matched.
   const hasSpecificFeverRubric = firedRubrics.some(f => f.startsWith("Fever:"));
-  if (!hasSpecificFeverRubric && / fever /.test(t)) {
+  // NEGATION CHECK: "no fever" / "afebrile" / "without fever" explicitly DENIES fever, so the
+  // undifferentiated-fever fallback must not fire just because the word "fever" appears
+  // somewhere in the sentence — that was awarding fever-remedy credit to cases that
+  // specifically said the patient does NOT have a fever.
+  const feverNegated = / no fever | without fever | afebrile | not febrile /.test(t);
+  if (!hasSpecificFeverRubric && !feverNegated && / fever /.test(t)) {
     const GENERAL_FEVER = [{ id: "acon", grade: 3 }, { id: "bell", grade: 3 }, { id: "gels", grade: 2 }, { id: "bry", grade: 2 }, { id: "ars-alb", grade: 2 }];
     const sw = SECTION_WEIGHT.Fever;
     firedRubrics.push("Fever: General/undifferentiated fever");
@@ -415,6 +420,24 @@ function scoreRepertory(inputText) {
       remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw * idfFactor(r.id);
       remedyRubrics[r.id] = remedyRubrics[r.id] || [];
       remedyRubrics[r.id].push("Fever: General/undifferentiated fever");
+    });
+  }
+
+  // Same "only fire if nothing more specific already did" pattern for thirst — a bare
+  // "thirsty" mention shouldn't ALSO stack on top of "thirst for cold water" firing
+  // separately; that was double-counting one underlying symptom as if it were two
+  // independent pieces of evidence, letting Bryonia/Phosphorus/Nat-mur win cases (like
+  // ear pain, headache, anything) purely because thirst was mentioned as a minor accompanying
+  // detail, drowning out the actual defining complaint.
+  const hasSpecificThirstRubric = firedRubrics.some(f => f.startsWith("Thirst:"));
+  if (!hasSpecificThirstRubric && / thirst(y)? /.test(t)) {
+    const GENERAL_THIRST = [{ id: "bry", grade: 2 }, { id: "nat-mur", grade: 1 }, { id: "phos", grade: 1 }];
+    const sw = SECTION_WEIGHT.Thirst;
+    firedRubrics.push("Thirst: General/unspecified");
+    GENERAL_THIRST.forEach(r => {
+      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw * idfFactor(r.id);
+      remedyRubrics[r.id] = remedyRubrics[r.id] || [];
+      remedyRubrics[r.id].push("Thirst: General/unspecified");
     });
   }
 
