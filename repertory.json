@@ -1192,6 +1192,23 @@
       ]
     },
     {
+      "section": "Common",
+      "rubric": "Craving for salt or salty foods",
+      "triggers": [
+        "craving for salt",
+        "craves salt",
+        "craving salt",
+        "craves salty food",
+        "craving salty food"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 3
+        }
+      ]
+    },
+    {
       "section": "Mind",
       "rubric": "Suppressed anger or indignation from insult",
       "triggers": [
@@ -1950,6 +1967,10 @@
         },
         {
           "id": "petr",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
           "grade": 1
         }
       ]
