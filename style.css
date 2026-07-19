@@ -36,6 +36,8 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 
 /* ---------- DIAGNOSIS CARD (title+tag+checklist on left/top, gauge on right) ---------- */
 .diagnosis-card { background: var(--card); margin: 16px 20px; border-radius: var(--radius); box-shadow: 0 4px 20px rgba(0,0,0,0.08); padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; }
+.expert-protocol-card { border: 2px solid var(--gold-deep); background: linear-gradient(135deg, #fff9ee, #ffffff); }
+.expert-protocol-divider { text-align: center; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 18px 20px 4px; padding-top: 14px; border-top: 1px dashed var(--line); }
 .diag-body { flex: 1; min-width: 220px; }
 .diag-title { font-size: 1.3rem; color: var(--ink); line-height: 1.2; }
 .diag-tag-line { font-size: 1.05rem; color: var(--muted); font-weight: 600; margin-top: 2px; margin-bottom: 14px; }
