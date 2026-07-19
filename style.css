@@ -60,6 +60,36 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .plan-sub-link { font-size: 0.8rem; color: var(--muted); font-weight: 600; display: flex; align-items: center; gap: 3px; }
 
 /* ---------- REMEDY CARDS (side-by-side, each self-contained) ---------- */
+/* ---------- 1. MAIN DECISION (big, calm, centered) ---------- */
+.main-decision-card { margin: 16px 20px; background: linear-gradient(160deg, #eef6f1, #ffffff); border: 2px solid var(--green-1); border-radius: 20px; padding: 28px 22px; text-align: center; box-shadow: 0 6px 24px rgba(47,168,79,0.12); }
+.md-eyebrow { font-size: 0.8rem; font-weight: 700; color: var(--muted); letter-spacing: 0.02em; }
+.md-remedy-name { font-size: 1.9rem; color: var(--navy); margin: 6px 0 14px; }
+.md-checks { font-size: 0.86rem; color: #2b6b41; font-weight: 600; margin-bottom: 18px; }
+.md-checks div { margin: 3px 0; }
+.md-cta { background: var(--green-1); color: #fff; border: none; border-radius: 10px; padding: 13px 28px; font-size: 0.95rem; font-weight: 700; cursor: pointer; }
+.md-cta:hover { background: var(--green-2); }
+.md-cta.neutral-cta { background: #6b7280; }
+.md-cta.neutral-cta:hover { background: #4b5563; }
+
+/* ---------- 2 & 3 & 5. COLLAPSIBLE SECTIONS (Alternative / Expert Protocol / Analysis) ---------- */
+.collapsible-section { margin: 0 20px 12px; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: var(--card); }
+.collapsible-section.gold { border: 2px solid var(--gold-deep); background: linear-gradient(135deg, #fff9ee, #ffffff); }
+.collapsible-toggle { width: 100%; background: none; border: none; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-family: inherit; font-size: 0.85rem; font-weight: 700; color: var(--ink); text-align: left; gap: 10px; }
+.collapsible-toggle .ct-link { color: #2c3f8f; font-weight: 700; white-space: nowrap; }
+.collapsible-section.gold .collapsible-toggle .ct-link { color: var(--gold-deep); }
+.collapsible-content { padding: 0 16px 16px; }
+.alt-remedy-name { font-size: 1.3rem; color: var(--navy); margin-bottom: 8px; }
+.alt-reasons { list-style: none; font-size: 0.82rem; color: #444; margin: 6px 0 12px; }
+.alt-reasons li { padding: 3px 0; padding-left: 16px; position: relative; }
+.alt-reasons li::before { content: "•"; position: absolute; left: 0; color: var(--muted); }
+.expert-dose-line { font-size: 1rem; font-weight: 700; color: var(--navy); padding: 4px 0; }
+
+/* ---------- 4. SUPPORT (small, not highlighted) ---------- */
+.support-section-small { margin: 0 20px 16px; padding: 12px 16px; background: #f7f7f5; border-radius: 10px; }
+.support-title { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin-bottom: 6px; }
+.support-line { font-size: 0.78rem; color: #555; padding: 2px 0; }
+.support-line b { color: var(--ink); }
+
 .remedy-cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 20px 14px; }
 .diff-question-box { margin: 0 20px 16px; background: #fff8e6; border: 1px solid #f0d98a; border-radius: 12px; padding: 12px 16px; display: flex; gap: 10px; align-items: flex-start; }
 .diff-question-icon { font-size: 1.1rem; flex-shrink: 0; }
