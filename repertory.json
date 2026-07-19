@@ -326,7 +326,9 @@
       "rubric": "Burning skin eruptions, better from cold applications",
       "triggers": [
         "burning eruptions better cold",
-        "skin burns better cold application"
+        "skin burns better cold application",
+        "burning stinging eruptions",
+        "stinging eruptions better cold"
       ],
       "remedies": [
         {
@@ -335,6 +337,10 @@
         },
         {
           "id": "canth",
+          "grade": 3
+        },
+        {
+          "id": "apis",
           "grade": 3
         }
       ]
@@ -1199,7 +1205,10 @@
         "craves salt",
         "craving salt",
         "craves salty food",
-        "craving salty food"
+        "craving salty food",
+        "desires salt",
+        "desire for salt",
+        "desire salt"
       ],
       "remedies": [
         {
