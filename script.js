@@ -803,6 +803,65 @@ function deriveCaseTag(mainResult) {
   return SYSTEM_CASE_LABEL[(mainResult.remedy.system || [])[0]] || "General Case";
 }
 
+function renderExpertProtocol(diseaseProtocol) {
+  if (!diseaseProtocol || !diseaseProtocol.banerji) return "";
+  const bp = diseaseProtocol.banerji;
+  const hasClose = bp.evening && bp.evening !== "-";
+
+  const remedyCard = (label, dosageText, colorClass) => {
+    // dosageText looks like "Nux Vomica 200, single dose" — split off the remedy name
+    // from the potency/frequency instructions for cleaner display.
+    const match = dosageText.match(/^(.+?)\s+(\d+[A-Za-z]*|\bQ\b)(,?\s*.*)$/);
+    const remedyName = match ? match[1].trim() : dosageText;
+    const doseDetail = match ? (match[2] + (match[3] || "")).replace(/^,\s*/, "") : "";
+    return `<div class="remedy-card ${colorClass}">
+      <div class="rc-head">
+        <div class="rc-name">${esc(remedyName)}</div>
+        <div class="rc-timing">${label}</div>
+        <div class="rc-potency">${esc(doseDetail)}</div>
+      </div>
+      <div class="rc-body">
+        <div class="rc-body-title">Protocol Note</div>
+        <div class="rc-body-text">${esc(bp.note || "")}</div>
+      </div>
+    </div>`;
+  };
+
+  let html = `<div class="diagnosis-card expert-protocol-card">
+    <div class="diag-body">
+      <div class="diag-title display">Expert Protocol</div>
+      <div class="diag-tag-line">${esc(diseaseProtocol.name)}</div>
+    </div>
+  </div>`;
+
+  html += `<div class="plan-heading-row"><div class="plan-heading">Expert Protocol Remedies</div></div>`;
+  html += `<div class="remedy-cards-grid">
+    ${remedyCard("☀️ Morning", bp.morning, "red")}
+    ${hasClose ? remedyCard("🌙 Evening", bp.evening, "green") : ""}
+  </div>`;
+
+  if (diseaseProtocol.tests && diseaseProtocol.tests.length) {
+    html += `<div class="mini-row">
+      <div class="mini-card blue">
+        <div class="mini-card-head">🔬 Recommended Tests</div>
+        <div class="mini-card-body"><ul class="mini-list">${diseaseProtocol.tests.map(t => `<li>${esc(t)}</li>`).join("")}</ul></div>
+      </div>
+      ${diseaseProtocol.diet ? `<div class="mini-card orange">
+        <div class="mini-card-head">🍎 Diet Advice</div>
+        <div class="mini-card-body">
+          <div class="diet-cols">
+            <div class="eat"><h5>EAT</h5><ul>${(diseaseProtocol.diet.eat || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+            <div class="avoid"><h5>AVOID</h5><ul>${(diseaseProtocol.diet.avoid || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+          </div>
+        </div>
+      </div>` : ""}
+    </div>`;
+  }
+
+  html += `<div class="expert-protocol-divider">Individual Symptom Analysis Below</div>`;
+  return html;
+}
+
 function runSearch() {
   const text = inputEl.value.trim();
   if (!DB) { resultsEl.innerHTML = `<div class="msg">Database still loading — try again in a moment.</div>`; return; }
@@ -850,7 +909,7 @@ function runSearch() {
   const stampEl = document.getElementById("hbTime");
   if (stampEl) stampEl.textContent = stamp.date.split(" ").slice(0,2).join(" ") + ", " + stamp.time;
 
-  let html = "";
+  let html = renderExpertProtocol(diseaseProtocol);
 
   /* ---------- Diagnosis card ----------
      ALWAYS shows "Symptom-Based Analysis" as the fixed heading — never a specific disease
