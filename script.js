@@ -803,64 +803,14 @@ function deriveCaseTag(mainResult) {
   return SYSTEM_CASE_LABEL[(mainResult.remedy.system || [])[0]] || "General Case";
 }
 
-function renderExpertProtocol(diseaseProtocol) {
-  if (!diseaseProtocol || !diseaseProtocol.banerji) return "";
-  const bp = diseaseProtocol.banerji;
-  const hasClose = bp.evening && bp.evening !== "-";
-
-  const remedyCard = (label, dosageText, colorClass) => {
-    // dosageText looks like "Nux Vomica 200, single dose" — split off the remedy name
-    // from the potency/frequency instructions for cleaner display.
-    const match = dosageText.match(/^(.+?)\s+(\d+[A-Za-z]*|\bQ\b)(,?\s*.*)$/);
-    const remedyName = match ? match[1].trim() : dosageText;
-    const doseDetail = match ? (match[2] + (match[3] || "")).replace(/^,\s*/, "") : "";
-    return `<div class="remedy-card ${colorClass}">
-      <div class="rc-head">
-        <div class="rc-name">${esc(remedyName)}</div>
-        <div class="rc-timing">${label}</div>
-        <div class="rc-potency">${esc(doseDetail)}</div>
-      </div>
-      <div class="rc-body">
-        <div class="rc-body-title">Protocol Note</div>
-        <div class="rc-body-text">${esc(bp.note || "")}</div>
-      </div>
-    </div>`;
-  };
-
-  let html = `<div class="diagnosis-card expert-protocol-card">
-    <div class="diag-body">
-      <div class="diag-title display">Expert Protocol</div>
-      <div class="diag-tag-line">${esc(diseaseProtocol.name)}</div>
-    </div>
-  </div>`;
-
-  html += `<div class="plan-heading-row"><div class="plan-heading">Expert Protocol Remedies</div></div>`;
-  html += `<div class="remedy-cards-grid">
-    ${remedyCard("☀️ Morning", bp.morning, "red")}
-    ${hasClose ? remedyCard("🌙 Evening", bp.evening, "green") : ""}
-  </div>`;
-
-  if (diseaseProtocol.tests && diseaseProtocol.tests.length) {
-    html += `<div class="mini-row">
-      <div class="mini-card blue">
-        <div class="mini-card-head">🔬 Recommended Tests</div>
-        <div class="mini-card-body"><ul class="mini-list">${diseaseProtocol.tests.map(t => `<li>${esc(t)}</li>`).join("")}</ul></div>
-      </div>
-      ${diseaseProtocol.diet ? `<div class="mini-card orange">
-        <div class="mini-card-head">🍎 Diet Advice</div>
-        <div class="mini-card-body">
-          <div class="diet-cols">
-            <div class="eat"><h5>EAT</h5><ul>${(diseaseProtocol.diet.eat || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
-            <div class="avoid"><h5>AVOID</h5><ul>${(diseaseProtocol.diet.avoid || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
-          </div>
-        </div>
-      </div>` : ""}
-    </div>`;
-  }
-
-  html += `<div class="expert-protocol-divider">Individual Symptom Analysis Below</div>`;
-  return html;
-}
+window.toggleSection = function(id) {
+  const el = document.getElementById(id);
+  const arrow = document.getElementById(id + "-arrow");
+  if (!el) return;
+  const isHidden = el.style.display === "none" || !el.style.display;
+  el.style.display = isHidden ? "block" : "none";
+  if (arrow) arrow.textContent = isHidden ? "▼" : "▶";
+};
 
 function runSearch() {
   const text = inputEl.value.trim();
@@ -909,77 +859,58 @@ function runSearch() {
   const stampEl = document.getElementById("hbTime");
   if (stampEl) stampEl.textContent = stamp.date.split(" ").slice(0,2).join(" ") + ", " + stamp.time;
 
-  let html = renderExpertProtocol(diseaseProtocol);
+  let html = "";
 
-  /* ---------- Diagnosis card ----------
-     ALWAYS shows "Symptom-Based Analysis" as the fixed heading — never a specific disease
-     name, per explicit decision to remove the inconsistency at the source. The case-type tag
-     (e.g. "Digestive Case") still identifies what kind of case it is. The matched disease
-     protocol, if any, still silently drives tests/diet/biochemic content below — only the
-     DISPLAY changed. Layout: title+tag+checklist together on the left, confidence gauge
-     on the right — matches the approved reference design. */
-  const confPct = main.percent;
-  const diagnosisTitle = "Symptom-Based Analysis";
-  const caseTag = deriveCaseTag(main);
-  const allKeynotes = [];
-  if (main) allKeynotes.push(shortKeynote(main));
-  if (close) allKeynotes.push(shortKeynote(close));
-  const symptomBullets = allKeynotes.join("; ").split(/;\s*/).filter(Boolean).slice(0, 4);
-
-  html += `<div class="diagnosis-card">
-    <div class="diag-body">
-      <div class="diag-title display">${esc(diagnosisTitle)}</div>
-      <div class="diag-tag-line">${esc(caseTag)}</div>
-      <div class="ks-grid">${symptomBullets.map(k => `<div class="ks-item"><span class="check">✓</span>${esc(k)}</div>`).join("")}</div>
+  /* ---------- 1. MAIN DECISION — always visible, big, centered, no distractions ---------- */
+  html += `<div class="main-decision-card">
+    <div class="md-eyebrow">🎯 Recommended Remedy</div>
+    <div class="md-remedy-name display">${esc(main.remedy.name)}</div>
+    <div class="md-checks">
+      <div>✔ Best match for your symptoms</div>
+      <div>✔ Start with this remedy first</div>
     </div>
-    <div class="confidence-gauge">
-      ${confidenceGaugeSVG(confPct)}
-      <div class="gauge-pct display">${confPct}%</div>
-      <div class="gauge-tag">Confidence match ›</div>
-    </div>
+    <button class="md-cta">Start with this remedy</button>
   </div>`;
 
-  /* ---------- Remedy plan: two self-contained side-by-side cards ---------- */
-  html += `<div class="plan-heading-row">
-    <div class="plan-heading">Remedy Plan</div>
-  </div>`;
-
-  html += `<div class="remedy-cards-grid">
-    <div class="remedy-card red">
-      <div class="rc-head">
-        <div class="rc-name">${esc(main.remedy.name)}</div>
-        <div class="rc-timing">☀️ Morning Dosage</div>
-        <div class="rc-potency">${esc(main.remedy.potency.acute !== "-" ? main.remedy.potency.acute.split(" ")[0] : "30C")}</div>
-        ${main.remedy.nosode ? '<div class="rc-nosode-tag">NOSODE</div>' : ""}
+  /* ---------- 2. ALTERNATIVE — collapsed by default ---------- */
+  if (close) {
+    html += `<div class="collapsible-section neutral">
+      <button class="collapsible-toggle" onclick="toggleSection('alt-section')">
+        <span>🔄 Not satisfied with result?</span>
+        <span class="ct-link"><span id="alt-section-arrow">▶</span> View alternative option</span>
+      </button>
+      <div id="alt-section" class="collapsible-content" style="display:none;">
+        <div class="alt-remedy-name display">${esc(close.remedy.name)}</div>
+        <ul class="alt-reasons">
+          <li>${esc(shortKeynote(close))}</li>
+          <li>Consider this if the main remedy doesn't fit after a few doses</li>
+        </ul>
+        <button class="md-cta neutral-cta">View alternative option</button>
       </div>
-      <div class="rc-body">
-        <div class="rc-body-title">Why This Remedy</div>
-        <div class="rc-body-text">${esc(shortKeynote(main))}</div>
-      </div>
-    </div>
-    ${close ? `<div class="remedy-card green">
-      <div class="rc-head">
-        <div class="rc-name">${esc(close.remedy.name)}</div>
-        <div class="rc-timing">🌙 Evening Dosage</div>
-        <div class="rc-potency">${esc(close.remedy.potency.acute !== "-" ? close.remedy.potency.acute.split(" ")[0] : "30C")}</div>
-        ${close.remedy.nosode ? '<div class="rc-nosode-tag">NOSODE</div>' : ""}
-      </div>
-      <div class="rc-body">
-        <div class="rc-body-title">Why This Remedy</div>
-        <div class="rc-body-text">${esc(shortKeynote(close))}</div>
-      </div>
-    </div>` : ""}
-  </div>`;
-
-  const diffQuestion = differentiatingQuestion(main, close);
-  if (diffQuestion) {
-    html += `<div class="diff-question-box">
-      <div class="diff-question-icon">❓</div>
-      <div class="diff-question-text">${diffQuestion}</div>
     </div>`;
   }
 
-  /* ---------- Bottom mini-cards ---------- */
+  /* ---------- 3. EXPERT PROTOCOL — collapsed, gold, only if a disease was detected ---------- */
+  if (diseaseProtocol && diseaseProtocol.banerji) {
+    const bp = diseaseProtocol.banerji;
+    const hasEveningDose = bp.evening && bp.evening !== "-";
+    html += `<div class="collapsible-section gold">
+      <button class="collapsible-toggle" onclick="toggleSection('expert-section')">
+        <span>⭐ Expert Protocol (For Difficult / Chronic Cases)</span>
+        <span class="ct-link"><span id="expert-section-arrow">▶</span> Use Expert Protocol (Advanced)</span>
+      </button>
+      <div id="expert-section" class="collapsible-content" style="display:none;">
+        <div class="expert-dose-line">${esc(bp.morning)}</div>
+        ${hasEveningDose ? `<div class="expert-dose-line">${esc(bp.evening)}</div>` : ""}
+        <ul class="alt-reasons">
+          <li>Used in complex or unclear cases</li>
+          <li>When results are not satisfactory with the main remedy</li>
+        </ul>
+      </div>
+    </div>`;
+  }
+
+  /* ---------- 4. SUPPORT — kept small, not highlighted ---------- */
   let biochemicPair = [];
   if (biochemicResults.length >= 2) {
     biochemicPair = biochemicResults.slice(0, 2).map(b => Object.assign({}, b.biochemic, { matched: true }));
@@ -991,50 +922,23 @@ function runSearch() {
   }
   const advice = diseaseProtocol ? { tests: diseaseProtocol.tests, diet: diseaseProtocol.diet } : fallbackAdvice(main.remedy);
 
-  let nosodeCardHtml = "";
-  if (showNosodeSection) {
-    const protocolNosodeId = diseaseProtocol && (diseaseProtocol.primaryRemedies || []).find(id => {
-      const rem = DB.remedies.find(r => r.id === id);
-      return rem && rem.nosode;
-    });
-    const topRankedNosodeResult = remedyResults.find(rr => rr.remedy.nosode && rr.percent >= 25);
-    const nosodeRemedy = (protocolNosodeId && DB.remedies.find(r => r.id === protocolNosodeId))
-      || (topRankedNosodeResult && topRankedNosodeResult.remedy)
-      || DB.remedies.find(r => r.id === "psor")
-      || DB.remedies.find(r => r.nosode);
-    nosodeCardHtml = `<div class="mini-card blue">
-      <div class="mini-card-head">🧬 NOSODE (IF CHRONIC)</div>
-      <div class="mini-card-body">
-        <div class="mini-title">${esc(nosodeRemedy.name)} ${esc(nosodeRemedy.potency.chronic !== "-" ? nosodeRemedy.potency.chronic.split(",")[0] : "1M")}</div>
-        <div class="mini-freq-pill">Once Weekly</div>
-      </div>
-    </div>`;
-  }
+  html += `<div class="support-section-small">
+    <div class="support-title">Supportive Care</div>
+    <div class="support-line"><b>Biochemic:</b> ${biochemicPair.map(b => esc(b.abbr)).join(", ")}</div>
+    <div class="support-line"><b>Diet:</b> Avoid ${esc((advice.diet.avoid || [])[0] || "trigger foods")}</div>
+    <div class="support-line"><b>Tests:</b> ${esc(advice.tests[0])}</div>
+  </div>`;
 
-  html += `<div class="mini-row">
-    <div class="mini-card purple">
-      <div class="mini-card-head">🧪 BIOCHEMIC SUPPORT</div>
-      <div class="mini-card-body">
-        <div class="mini-title">${biochemicPair.map(b => esc(b.abbr)).join(" + ")}</div>
-        <div class="mini-freq-pill">Twice Daily</div>
-      </div>
-    </div>
-    ${nosodeCardHtml}
-    <div class="mini-card blue">
-      <div class="mini-card-head">🔬 ESSENTIAL TEST</div>
-      <div class="mini-card-body">
-        <div class="mini-title">${esc(advice.tests[0])}</div>
-        <div class="mini-sub">${advice.tests.length > 1 ? "(if needed for confirmation)" : "(if needed)"}</div>
-      </div>
-    </div>
-    <div class="mini-card orange">
-      <div class="mini-card-head">🍎 DIET ADVICE</div>
-      <div class="mini-card-body">
-        <div class="diet-cols">
-          <div class="eat"><h5>EAT</h5><ul>${(advice.diet.eat || []).slice(0, 3).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
-          <div class="avoid"><h5>AVOID</h5><ul>${(advice.diet.avoid || []).slice(0, 3).map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
-        </div>
-      </div>
+  /* ---------- 5. ANALYSIS — bottom, collapsed, builds trust but stays secondary ---------- */
+  const symptomBullets = [main, close].filter(Boolean).map(r => shortKeynote(r)).join("; ").split(/;\s*/).filter(Boolean).slice(0, 4);
+  html += `<div class="collapsible-section neutral">
+    <button class="collapsible-toggle" onclick="toggleSection('why-section')">
+      <span>📊 Why this remedy?</span>
+      <span class="ct-link"><span id="why-section-arrow">▶</span> View analysis</span>
+    </button>
+    <div id="why-section" class="collapsible-content" style="display:none;">
+      <ul class="alt-reasons">${symptomBullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>
+      <div class="support-line" style="margin-top:8px;">Match confidence: ${confidenceGaugeSVG(main.percent)} <b>${main.percent}%</b></div>
     </div>
   </div>`;
 
