@@ -208,11 +208,7 @@
         "dry cough worse night",
         "spasmodic cough",
         "barking cough",
-        "dry cough at night",
-        "\u062e\u0634\u06a9 \u06a9\u06be\u0627\u0646\u0633\u06cc",
-        "\u0631\u0627\u062a \u06a9\u0648 \u06a9\u06be\u0627\u0646\u0633\u06cc",
-        "\u0938\u0942\u0916\u0940 \u0916\u093e\u0902\u0938\u0940",
-        "\u0930\u093e\u0924 \u092e\u0947\u0902 \u0916\u093e\u0902\u0938\u0940"
+        "dry cough at night"
       ],
       "remedies": [
         {
@@ -312,11 +308,7 @@
       "triggers": [
         "itching worse warmth",
         "itching worse scratching",
-        "itching relieved by cold",
-        "\u062e\u0627\u0631\u0634",
-        "\u06af\u0631\u0645\u06cc \u0633\u06d2 \u062e\u0627\u0631\u0634",
-        "\u0916\u0941\u091c\u0932\u0940",
-        "\u0917\u0930\u094d\u092e\u0940 \u0938\u0947 \u0916\u0941\u091c\u0932\u0940"
+        "itching relieved by cold"
       ],
       "remedies": [
         {
@@ -603,11 +595,7 @@
         "brooding over grief",
         "worse from consolation",
         "consolation worse",
-        "worse consolation",
-        "\u062e\u0627\u0645\u0648\u0634 \u063a\u0645",
-        "\u063a\u0645",
-        "\u091a\u0941\u092a\u091a\u093e\u092a \u0926\u0941\u0916",
-        "\u0917\u092e"
+        "worse consolation"
       ],
       "remedies": [
         {
@@ -693,13 +681,7 @@
         "easily angered",
         "impatient",
         "irritability",
-        "quick to anger",
-        "\u0686\u0691\u0686\u0691\u0627\u067e\u0646",
-        "\u063a\u0635\u06c1",
-        "\u0686\u0691\u0686\u0691\u0627",
-        "\u091a\u093f\u0921\u093c\u091a\u093f\u0921\u093c\u093e\u092a\u0928",
-        "\u0917\u0941\u0938\u094d\u0938\u093e",
-        "\u091a\u093f\u0921\u093c\u091a\u093f\u0921\u093c\u093e"
+        "quick to anger"
       ],
       "remedies": [
         {
@@ -1687,11 +1669,7 @@
         "great thirst",
         "large quantities",
         "drinks large amounts",
-        "excessive thirst",
-        "\u0628\u06c1\u062a \u067e\u06cc\u0627\u0633",
-        "\u0632\u06cc\u0627\u062f\u06c1 \u067e\u06cc\u0627\u0633",
-        "\u092c\u0939\u0941\u0924 \u092a\u094d\u092f\u093e\u0938",
-        "\u091c\u094d\u092f\u093e\u0926\u093e \u092a\u094d\u092f\u093e\u0938"
+        "excessive thirst"
       ],
       "remedies": [
         {
@@ -1978,11 +1956,7 @@
         "profuse diarrhea",
         "profuse diarrhoea",
         "gushing diarrhea",
-        "profuse watery",
-        "\u067e\u062a\u0644\u06d2 \u062f\u0633\u062a",
-        "\u062f\u0633\u062a",
-        "\u092a\u0924\u0932\u0947 \u0926\u0938\u094d\u0924",
-        "\u0926\u0938\u094d\u0924"
+        "profuse watery"
       ],
       "remedies": [
         {
@@ -2098,9 +2072,7 @@
       "rubric": "Constipation, general/unspecified",
       "triggers": [
         "constipation",
-        "constipated",
-        "\u0642\u0628\u0636",
-        "\u0915\u092c\u094d\u091c"
+        "constipated"
       ],
       "remedies": [
         {
@@ -2324,13 +2296,7 @@
         "wants warmth",
         "very chilly",
         "sensitive to cold",
-        "chilly",
-        "\u0633\u0631\u062f\u06cc \u0644\u06af\u0646\u0627",
-        "\u0679\u06be\u0646\u0688 \u0644\u06af\u0646\u0627",
-        "\u0938\u0930\u094d\u0926\u0940 \u0932\u0917\u0928\u093e",
-        "\u0920\u0902\u0921 \u0932\u0917\u0928\u093e",
-        "\u0633\u0631\u062f\u06cc",
-        "\u0938\u0930\u094d\u0926\u0940"
+        "chilly"
       ],
       "remedies": [
         {
