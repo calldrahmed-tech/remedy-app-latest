@@ -2082,6 +2082,10 @@
         {
           "t": "post nasal drip",
           "w": 1
+        },
+        {
+          "t": "cough with thick yellow-green stringy mucus, better sitting up, worse lying down",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -2092,7 +2096,7 @@
         "acute": "30C 3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 8
+      "maxScore": 10
     },
     {
       "id": "hep",
