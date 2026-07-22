@@ -1886,6 +1886,14 @@
         {
           "t": "better warm drinks",
           "w": 0.6
+        },
+        {
+          "t": "sluggish liver with digestive weakness, craves fatty and spicy food",
+          "w": 2
+        },
+        {
+          "t": "chilly, sensitive to cold, yet craves open air and cool surroundings for the head",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -1899,7 +1907,7 @@
         "acute": "30C acute digestive",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 30.200000000000003,
+      "maxScore": 33.2,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)"
     },
     {
