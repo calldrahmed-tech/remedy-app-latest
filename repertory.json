@@ -1122,6 +1122,63 @@
       ]
     },
     {
+      "section": "Mind",
+      "rubric": "Miserly, critical, fault-finding, despairs of recovery",
+      "triggers": [
+        "miserly",
+        "avaricious",
+        "critical and fault-finding",
+        "hard to please",
+        "despairs of recovery"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 3
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Severe aching bone pain as if broken or bruised, breakbone fever",
+      "triggers": [
+        "bone pain as if broken",
+        "breakbone fever",
+        "aching in bones as if beaten",
+        "bones feel bruised"
+      ],
+      "remedies": [
+        {
+          "id": "eup-per",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Thin, watery, acrid nasal discharge that excoriates the lip, worse cold air",
+      "triggers": [
+        "acrid nasal discharge",
+        "watery discharge excoriates",
+        "runny nose worse cold air",
+        "nose burns from discharge"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 3
+        },
+        {
+          "id": "all-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
       "section": "Common",
       "rubric": "Croupy barking cough waking child at night, better sitting up and warm drinks",
       "triggers": [
