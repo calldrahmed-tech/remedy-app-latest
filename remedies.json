@@ -689,6 +689,10 @@
         {
           "t": "restless anxiety, must get up and walk around the room, worse after midnight",
           "w": 2
+        },
+        {
+          "t": "acute gastroenteritis with fever, chills, vomiting, and diarrhea, marked prostration and weakness, often from food poisoning or spoiled food",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -701,7 +705,7 @@
         "acute": "200C every 2-3h",
         "chronic": "1M occasional dose"
       },
-      "maxScore": 43.0,
+      "maxScore": 45.0,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)"
     },
     {
