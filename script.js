@@ -195,6 +195,7 @@ function modalityPolarityMatches(rawKeynoteText, kWords, inputText) {
   const polarityMatch = rawKeynoteText.trim().match(/^(worse|better)\b/i);
   if (!polarityMatch) return true; // not a modality-style keynote — no constraint
   const polarity = polarityMatch[1].toLowerCase();
+  const opposite = polarity === "worse" ? "better" : "worse";
   const qualityWords = kWords.filter(w => w !== "worse" && w !== "better");
   if (!qualityWords.length) return true; // nothing to pair against — fall back to normal matching
   const t = " " + inputText.toLowerCase() + " ";
@@ -204,7 +205,14 @@ function modalityPolarityMatches(rawKeynoteText, kWords, inputText) {
     const polIdx = t.indexOf(" " + polarity + " ", searchFrom);
     if (polIdx < 0) return false; // this polarity word never appears at all
     const windowText = t.slice(polIdx, polIdx + polarity.length + 1 + WINDOW_CHARS);
-    if (qualityWords.every(w => windowText.includes(" " + w))) return true;
+    // Reject if the quality word is only found AFTER the opposite polarity word appears in
+    // this same window — e.g. "worse heat better cold" must not let Ars-alb's "worse from
+    // cold" keynote match just because "cold" happens to show up later in the sentence,
+    // when it actually belongs to the separate "better cold" clause. Same class of bug
+    // already fixed for repertory triggers; this closes the same hole in materia medica.
+    const oppositeIdx = windowText.indexOf(" " + opposite + " ");
+    const safeWindow = oppositeIdx >= 0 ? windowText.slice(0, oppositeIdx) : windowText;
+    if (qualityWords.every(w => safeWindow.includes(" " + w))) return true;
     searchFrom = polIdx + polarity.length; // try the next occurrence of this polarity word, if any
   }
 }
@@ -309,6 +317,36 @@ function idfFactor(remedyId) {
   return 1 / (1 + 0.4 * Math.log(breadth)); // gentler slope — breadth=1 -> 1.0, breadth=13 -> ~0.50
 }
 
+// SYNONYM NORMALIZATION: a huge fraction of the bugs found this session were the same root
+// cause wearing different clothes — "craves salt" matched, "desires salt" didn't, purely
+// because the trigger was written for one specific word form. Rather than manually adding
+// every variant to every rubric as each surfaces (which is what's been happening), rewrite
+// common synonymous PATTERNS to one canonical form before matching ever runs. Every trigger
+// in the repertory only needs to be written in the canonical form once; every known variant
+// then automatically routes to it. Starting with cravings (the reported example) since that
+// pattern is well-scoped and low-risk; this can grow the same incremental way everything
+// else in the repertory has, as more synonym patterns get discovered through real cases.
+function normalizeSynonyms(text) {
+  // Restricted to a curated list of actual craveable items throughout — NOT applied to any
+  // arbitrary word. A first version transformed "wants X" -> "craves X" unconditionally,
+  // which silently broke existing triggers like "wants sympathy", "wants warmth", and
+  // "wants to be held" — none of those are food cravings, but the blanket transformation
+  // couldn't tell the difference and rewrote them into nonsense before matching ever ran.
+  const ITEM = "(salt|sweets?|sugar|chocolate|eggs?|milk|spicy|sour|ice|fat|meat|alcohol|cold water|warm water|warm drinks|cold drinks)";
+  return text
+    // "desire for salt" / "desires salt" -> "craves salt"
+    .replace(new RegExp("\\bdesires? for " + ITEM, "g"), "craves $1")
+    .replace(new RegExp("\\bdesires? " + ITEM, "g"), "craves $1")
+    // "craving for salt" / "craving salt" -> "craves salt"
+    .replace(new RegExp("\\bcraving for " + ITEM, "g"), "craves $1")
+    .replace(new RegExp("\\bcraving " + ITEM, "g"), "craves $1")
+    // "wants salt" -> "craves salt" (restricted to items only, so "wants sympathy"/"wants
+    // warmth"/"wants to be held" are untouched — those aren't food cravings)
+    .replace(new RegExp("\\bwants " + ITEM, "g"), "craves $1")
+    // "salt craving" / "salt desire" -> "craves salt" (reversed word order)
+    .replace(new RegExp("\\b" + ITEM + "\\s+(?:craving|desire)\\b", "g"), "craves $1");
+}
+
 function scoreRepertory(inputText) {
   // NOTE: preserve digits (a-z AND 0-9) — a version that stripped all non-letter characters
   // meant a trigger like "4pm" could never match anything, since the input's own "4pm" was
@@ -321,7 +359,7 @@ function scoreRepertory(inputText) {
   // topics, not by the comma itself. Treating every comma as a hard block broke the much
   // more common case of a plain symptom list ("fever, chills, vomiting, diarrhea") — a
   // list joined by commas describes the SAME patient's symptoms together, not a contrast.
-  const t = " " + inputText.toLowerCase()
+  const t = " " + normalizeSynonyms(inputText.toLowerCase())
     .replace(/\b(but|however|although|yet)\b/g, "$1 clausebreak")
     .replace(/[.;!?]/g, " clausebreak ")
     .replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ") + " ";
@@ -394,8 +432,13 @@ function scoreRepertory(inputText) {
         // one continuous phrase — reject regardless of whether the trigger is a worse/better
         // pair. This is the general-purpose fix; the polarity check below catches the
         // specific worse/better case even within a single clause with no punctuation at all.
-        if (gapText.includes(" clausebreak ")) return -1;
-        if (opposite && gapText.includes(" " + opposite + " ")) return -1;
+        if ((gapText + " ").includes(" clausebreak ")) return -1;
+        // Pad with a trailing space before checking — gapText's slice boundary lands
+        // exactly where the next trigger word begins, which can cut off the trailing space
+        // of the opposite-polarity word sitting right at that edge (e.g. gapText ends in
+        // "...heat better" with nothing after "better"), silently letting the check below
+        // miss it entirely even though the word is clearly present.
+        if (opposite && (gapText + " ").includes(" " + opposite + " ")) return -1;
       }
       if (firstPos < 0) firstPos = idx;
       searchFrom = idx + w.length;
