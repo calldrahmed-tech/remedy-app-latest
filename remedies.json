@@ -693,6 +693,62 @@
         {
           "t": "acute gastroenteritis with fever, chills, vomiting, and diarrhea, marked prostration and weakness, often from food poisoning or spoiled food",
           "w": 2
+        },
+        {
+          "t": "miserly, avaricious, or excessively concerned about money and possessions",
+          "w": 1.5
+        },
+        {
+          "t": "critical, fault-finding, and hard to please, especially about small details",
+          "w": 1.5
+        },
+        {
+          "t": "despairs of recovery even in mild illness, out of proportion to the actual condition",
+          "w": 1.5
+        },
+        {
+          "t": "desires company despite the restlessness, dreads being left alone even briefly",
+          "w": 1
+        },
+        {
+          "t": "periodic headache, worse from cold, better from warm application and pressure",
+          "w": 1.5
+        },
+        {
+          "t": "vertigo with nausea, worse rising from lying down",
+          "w": 1
+        },
+        {
+          "t": "burning, watering eyes, worse from cold air, better from warm application",
+          "w": 1.5
+        },
+        {
+          "t": "thin, watery, acrid nasal discharge that excoriates the upper lip, worse cold air",
+          "w": 1.5
+        },
+        {
+          "t": "cardiac weakness with anxiety and fear, feels as if the heart will stop",
+          "w": 1.5
+        },
+        {
+          "t": "asthma or breathlessness worse from cold, worse lying down, must sit up",
+          "w": 1
+        },
+        {
+          "t": "offensive, acrid, excoriating discharges from any orifice",
+          "w": 1.5
+        },
+        {
+          "t": "dry, rough, scaly skin, worse from cold and scratching",
+          "w": 1
+        },
+        {
+          "t": "rapid emaciation with hectic fever in chronic wasting disease",
+          "w": 1.5
+        },
+        {
+          "t": "worse every alternate day, or at regular periodic intervals",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -705,7 +761,7 @@
         "acute": "200C every 2-3h",
         "chronic": "1M occasional dose"
       },
-      "maxScore": 45.0,
+      "maxScore": 63.5,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)"
     },
     {
@@ -1062,6 +1118,26 @@
         {
           "t": "restlessness during chill",
           "w": 1
+        },
+        {
+          "t": "severe aching in bones and muscles as if beaten, classic 'breakbone fever' picture",
+          "w": 2
+        },
+        {
+          "t": "great thirst before the chill begins, then nausea and vomiting with the fever",
+          "w": 1.5
+        },
+        {
+          "t": "soreness of the eyeballs and back during influenza",
+          "w": 1
+        },
+        {
+          "t": "dengue fever or severe flu with marked bone pain and prostration",
+          "w": 1.5
+        },
+        {
+          "t": "cough with soreness of the chest, must hold the chest while coughing",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -1073,7 +1149,7 @@
         "acute": "200C every 3-4h during acute stage",
         "chronic": "-"
       },
-      "maxScore": 7
+      "maxScore": 14.0
     },
     {
       "id": "pyrog",
@@ -2306,6 +2382,30 @@
         {
           "t": "chest full of mucus in infants elderly",
           "w": 2
+        },
+        {
+          "t": "coarse, loud rattling in the chest with very little actually expectorated",
+          "w": 1.5
+        },
+        {
+          "t": "drowsy, sleepy, and irritable during respiratory illness, especially in children or elderly",
+          "w": 1.5
+        },
+        {
+          "t": "bluish, pale face with cold sweat during difficulty breathing",
+          "w": 1.5
+        },
+        {
+          "t": "nausea with vomiting that brings little relief, coated white tongue",
+          "w": 1
+        },
+        {
+          "t": "worse lying down, better sitting up and being carried upright",
+          "w": 1
+        },
+        {
+          "t": "pneumonia or bronchitis in the very young or very old with failing strength",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -2316,7 +2416,7 @@
         "acute": "30C 3x daily",
         "chronic": "-"
       },
-      "maxScore": 7
+      "maxScore": 15.0
     },
     {
       "id": "podo",
@@ -2342,6 +2442,30 @@
         {
           "t": "colicky pain before stool relieved after",
           "w": 1
+        },
+        {
+          "t": "diarrhea worse very early morning, drives out of bed",
+          "w": 1.5
+        },
+        {
+          "t": "involuntary, painless, gushing stool, especially in teething children",
+          "w": 1.5
+        },
+        {
+          "t": "prolapse of rectum with stool or during pregnancy",
+          "w": 1.5
+        },
+        {
+          "t": "grinding of teeth during sleep, especially in teething children",
+          "w": 1
+        },
+        {
+          "t": "liver region soreness with sluggish, torpid digestion",
+          "w": 1
+        },
+        {
+          "t": "great thirst for cold water during diarrhea",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2352,7 +2476,7 @@
         "acute": "30C every 2-3h",
         "chronic": "-"
       },
-      "maxScore": 7
+      "maxScore": 14.5
     },
     {
       "id": "verat",
@@ -2419,6 +2543,34 @@
         {
           "t": "debility from dehydration diarrhea",
           "w": 2
+        },
+        {
+          "t": "great debility and exhaustion from loss of vital fluids, blood, or discharges",
+          "w": 1.5
+        },
+        {
+          "t": "painless, profuse, exhausting diarrhea, especially after fruit or milk",
+          "w": 1.5
+        },
+        {
+          "t": "abdominal bloating that is not relieved by belching",
+          "w": 1.5
+        },
+        {
+          "t": "anemia and weakness after hemorrhage or prolonged breastfeeding",
+          "w": 1
+        },
+        {
+          "t": "intermittent fever with chill, heat, and sweat stages clearly separated",
+          "w": 1.5
+        },
+        {
+          "t": "sensitive to touch, yet desires firm pressure for relief",
+          "w": 1
+        },
+        {
+          "t": "sleeplessness from over-fatigue, mind too active despite exhaustion",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2430,7 +2582,7 @@
         "acute": "30C 2-3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 7
+      "maxScore": 16.0
     },
     {
       "id": "arn",
@@ -2818,6 +2970,26 @@
         {
           "t": "palpitation with anxiety",
           "w": 1
+        },
+        {
+          "t": "sensation as if pelvic organs would fall out, must cross legs or press upward for relief",
+          "w": 1.5
+        },
+        {
+          "t": "constant hurried feeling, must be busy or occupied despite exhaustion",
+          "w": 1.5
+        },
+        {
+          "t": "irritable and weepy before menses, better from consolation but easily angered",
+          "w": 1
+        },
+        {
+          "t": "cardiac anxiety with palpitation, fears heart disease though none is found",
+          "w": 1.5
+        },
+        {
+          "t": "profound sadness with indifference to life, yet dreads being alone",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2828,7 +3000,7 @@
         "acute": "30C during acute flare",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 6
+      "maxScore": 12.5
     },
     {
       "id": "aloe",
@@ -2854,6 +3026,26 @@
         {
           "t": "flatulent gurgling before stool",
           "w": 1
+        },
+        {
+          "t": "sudden, urgent diarrhea driving the patient out of bed or off the toilet immediately",
+          "w": 1.5
+        },
+        {
+          "t": "loss of confidence in the rectal sphincter, fears passing gas will also pass stool",
+          "w": 1.5
+        },
+        {
+          "t": "worse immediately after eating or drinking, worse standing",
+          "w": 1.5
+        },
+        {
+          "t": "portal congestion with hemorrhoids, feeling of fullness in the rectum",
+          "w": 1
+        },
+        {
+          "t": "better from passing gas, better from cold applications",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2865,7 +3057,7 @@
         "acute": "30C 2-3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 7
+      "maxScore": 13.5
     },
     {
       "id": "graph",
