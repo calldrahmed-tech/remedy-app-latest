@@ -306,12 +306,11 @@ function idfFactor(remedyId) {
 }
 
 function scoreRepertory(inputText) {
-  // NOTE: preserve digits AND Urdu/Hindi script ranges — a version that only kept a-z0-9
-  // would silently strip every Urdu or Hindi character to nothing before matching even
-  // started, since neither script uses Latin letters at all. Ranges: \u0600-\u06FF and
-  // \u0750-\u077F cover Arabic-script Urdu; \uFB50-\uFDFF and \uFE70-\uFEFF cover Arabic
-  // presentation forms sometimes used in Urdu text; \u0900-\u097F covers Devanagari (Hindi).
-  const t = " " + inputText.toLowerCase().replace(/[^a-z0-9\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF\u0900-\u097F\s]/g, " ").replace(/\s+/g, " ") + " ";
+  // NOTE: preserve digits (a-z AND 0-9) — a version that stripped all non-letter characters
+  // meant a trigger like "4pm" could never match anything, since the input's own "4pm" was
+  // being reduced to " pm" (digit stripped) while the trigger text still had the digit intact.
+  // This silently broke every time-of-day-based trigger (4-8pm, 12am, 3am) until now.
+  const t = " " + inputText.toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ") + " ";
   const inputLoc = parseLocation(inputText);
   const remedyScores = {};      // id -> accumulated weighted grade total
   const remedyRubrics = {};     // id -> [ "Section: rubric text", ... ] (for display)
@@ -954,14 +953,6 @@ function runSearch() {
 
 resultBtn.addEventListener("click", runSearch);
 inputEl.addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) runSearch(); });
-
-// Urdu is written right-to-left; auto-switch the input field's direction when Urdu
-// (Arabic-script) characters are detected, so it displays naturally as the person types.
-// Hindi (Devanagari) is left-to-right like English, so it needs no direction change.
-inputEl.addEventListener("input", () => {
-  const isUrdu = /[\u0600-\u06FF\u0750-\u077F]/.test(inputEl.value);
-  inputEl.dir = isUrdu ? "rtl" : "ltr";
-});
 
 document.querySelectorAll(".sample-chip").forEach(chip => {
   chip.addEventListener("click", () => { inputEl.value = chip.dataset.sample; runSearch(); });
