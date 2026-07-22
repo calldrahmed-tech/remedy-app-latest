@@ -344,7 +344,18 @@ function normalizeSynonyms(text) {
     // warmth"/"wants to be held" are untouched — those aren't food cravings)
     .replace(new RegExp("\\bwants " + ITEM, "g"), "craves $1")
     // "salt craving" / "salt desire" -> "craves salt" (reversed word order)
-    .replace(new RegExp("\\b" + ITEM + "\\s+(?:craving|desire)\\b", "g"), "craves $1");
+    .replace(new RegExp("\\b" + ITEM + "\\s+(?:craving|desire)\\b", "g"), "craves $1")
+    // Thirstless cluster: several common phrasings for "no desire to drink" that the
+    // existing "no thirst"/"not thirsty" triggers don't cover on their own.
+    .replace(/\bdoes(?:n't| not) (?:feel|seem) thirsty\b/g, "thirstless")
+    .replace(/\bnever (?:feels?|seems?) thirsty\b/g, "thirstless")
+    .replace(/\bno (?:desire|urge) (?:to drink|for water)\b/g, "thirstless")
+    .replace(/\bdoes(?:n't| not) want (?:water|to drink)\b/g, "thirstless")
+    // Worse-motion cluster: "aggravated by movement" and similar phrasings that don't
+    // literally contain the word "worse" or "motion" together.
+    .replace(/\baggravated by (?:motion|movement|moving)\b/g, "worse motion")
+    .replace(/\b(?:movement|moving|any movement) makes? it worse\b/g, "worse motion")
+    .replace(/\bgets? worse with (?:motion|movement|moving)\b/g, "worse motion");
 }
 
 function scoreRepertory(inputText) {
