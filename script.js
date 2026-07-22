@@ -314,13 +314,17 @@ function scoreRepertory(inputText) {
   // meant a trigger like "4pm" could never match anything, since the input's own "4pm" was
   // being reduced to " pm" (digit stripped) while the trigger text still had the digit intact.
   // This silently broke every time-of-day-based trigger (4-8pm, 12am, 3am) until now.
-  // Clause-ending punctuation (. , ; !) is converted to a distinct "clausebreak" marker
-  // word rather than just another space — this lets gap-tolerant trigger matching (below)
-  // detect and refuse to bridge across two genuinely separate statements. Without this, a
-  // trigger like "no appetite" could span "no thirst, but the appetite is good" — "no"
-  // belongs to an entirely different clause about thirst, not appetite, but a plain gap
-  // check with no punctuation awareness couldn't tell the difference.
-  const t = " " + inputText.toLowerCase().replace(/[.,;!?]/g, " clausebreak ").replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ") + " ";
+  // Clause-ending punctuation (. ; ! ?) AND contrastive conjunctions ("but", "however",
+  // "although", "yet") are converted to a "clausebreak" marker — but a plain COMMA is
+  // deliberately NOT treated as one. The original bug ("no thirst, but the appetite is
+  // good") was really caused by the word "but" signaling a contrast between two different
+  // topics, not by the comma itself. Treating every comma as a hard block broke the much
+  // more common case of a plain symptom list ("fever, chills, vomiting, diarrhea") — a
+  // list joined by commas describes the SAME patient's symptoms together, not a contrast.
+  const t = " " + inputText.toLowerCase()
+    .replace(/\b(but|however|although|yet)\b/g, "$1 clausebreak")
+    .replace(/[.;!?]/g, " clausebreak ")
+    .replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ") + " ";
   const inputLoc = parseLocation(inputText);
   const remedyScores = {};      // id -> accumulated weighted grade total
   const remedyRubrics = {};     // id -> [ "Section: rubric text", ... ] (for display)
@@ -359,7 +363,11 @@ function scoreRepertory(inputText) {
     // gap. So the rule is explicit, not distance-based — reject if "better" appears inside the
     // gap of a "worse ..." trigger, or "worse" appears inside the gap of a "better ..." trigger.
     const opposite = words[0] === "worse" ? "better" : (words[0] === "better" ? "worse" : null);
-    const MAX_GAP_CHARS = 30; // generous now that the opposite-polarity check does the real work
+    const MAX_GAP_CHARS = 55; // widened to accommodate longer comma-separated symptom
+                               // lists ("fever, chills, vomiting, vomiting, diarrhea") —
+                               // safe to widen because the clausebreak and opposite-polarity
+                               // checks below now do the real work of rejecting genuinely
+                               // unrelated bridges, not the character distance alone
     // findWholeWord: text.indexOf(" " + w, ...) alone only checks a LEADING space boundary —
     // that let "rest" match inside "restless", "restaurant", etc. Must also confirm the
     // character right after the word is a space (or end of string), or every short trigger
