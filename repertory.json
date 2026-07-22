@@ -1097,6 +1097,31 @@
       ]
     },
     {
+      "section": "Fever",
+      "rubric": "Acute gastroenteritis: fever, chills, vomiting, diarrhea, and prostration together",
+      "triggers": [
+        "fever chills vomiting diarrhea",
+        "fever and chills and vomiting",
+        "vomiting and diarrhea with weakness",
+        "food poisoning symptoms",
+        "chills vomiting weakness diarrhea"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 3
+        },
+        {
+          "id": "verat",
+          "grade": 2
+        },
+        {
+          "id": "podo",
+          "grade": 1
+        }
+      ]
+    },
+    {
       "section": "Common",
       "rubric": "Croupy barking cough waking child at night, better sitting up and warm drinks",
       "triggers": [
