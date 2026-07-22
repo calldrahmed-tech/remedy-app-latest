@@ -954,6 +954,26 @@ function runSearch() {
 resultBtn.addEventListener("click", runSearch);
 inputEl.addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) runSearch(); });
 
+// Urdu/Hindi support: this app's symptom matching only understands English. Rather than
+// build and maintain a second and third language inside the matching engine itself (tried
+// this, walked it back — too easy for a half-translated rubric to quietly hand back the
+// wrong remedy), detect Urdu (Arabic script) or Hindi (Devanagari script) as the person
+// types, and offer a one-click link out to Google Translate with their text already
+// loaded — they copy the English result back in manually. No API key, no account, no cost,
+// and translation quality is Google's problem to solve, not a hand-built glossary here.
+const translateHint = document.getElementById("translateHint");
+const translateBtn = document.getElementById("translateBtn");
+inputEl.addEventListener("input", () => {
+  const isUrduOrHindi = /[\u0600-\u06FF\u0750-\u077F\u0900-\u097F]/.test(inputEl.value);
+  if (translateHint) translateHint.style.display = isUrduOrHindi ? "block" : "none";
+});
+if (translateBtn) {
+  translateBtn.addEventListener("click", () => {
+    const url = "https://translate.google.com/?sl=auto&tl=en&text=" + encodeURIComponent(inputEl.value) + "&op=translate";
+    window.open(url, "_blank");
+  });
+}
+
 document.querySelectorAll(".sample-chip").forEach(chip => {
   chip.addEventListener("click", () => { inputEl.value = chip.dataset.sample; runSearch(); });
 });
