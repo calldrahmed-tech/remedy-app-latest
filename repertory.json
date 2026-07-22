@@ -1512,6 +1512,27 @@
       ]
     },
     {
+      "section": "Common",
+      "rubric": "Chilly, sluggish, fair/fat/flabby constitution, craves sweets, slow to warm up",
+      "triggers": [
+        "chilly all the time",
+        "sluggish craves sweets",
+        "gaining weight slow to warm",
+        "fair fat flabby",
+        "craves sweets and eggs"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 3
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
       "section": "Modalities",
       "rubric": "Worse on first beginning to move, better with continued motion",
       "triggers": [
@@ -2400,8 +2421,7 @@
         "always cold",
         "wants warmth",
         "very chilly",
-        "sensitive to cold",
-        "chilly"
+        "sensitive to cold"
       ],
       "remedies": [
         {
