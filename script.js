@@ -952,7 +952,15 @@ function runSearch() {
 }
 
 resultBtn.addEventListener("click", runSearch);
-inputEl.addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) runSearch(); });
+inputEl.addEventListener("keydown", (e) => {
+  // Plain Enter submits the search — feels natural for a search box even though this is
+  // now a multi-line textarea. Shift+Enter still inserts a real line break, for anyone
+  // typing a longer, multi-paragraph case description who wants to organize it visually.
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+    runSearch();
+  }
+});
 
 // Urdu/Hindi support: this app's symptom matching only understands English. Rather than
 // build and maintain a second and third language inside the matching engine itself (tried
