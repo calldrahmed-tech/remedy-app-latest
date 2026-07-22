@@ -1104,7 +1104,9 @@
         "fever and chills and vomiting",
         "vomiting and diarrhea with weakness",
         "food poisoning symptoms",
-        "chills vomiting weakness diarrhea"
+        "chills vomiting weakness diarrhea",
+        "chill thirst weakness vomiting",
+        "chills weakness vomiting"
       ],
       "remedies": [
         {
