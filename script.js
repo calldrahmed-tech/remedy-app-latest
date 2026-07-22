@@ -239,9 +239,13 @@ const SECTION_WEIGHT = {
   // bucket the rubric happened to be filed under, not because the Mind match was actually
   // more diagnostic for that case.
   Common: 1.0, Extremities: 1.0,
-  Weight: 0.33, Stool: 0.33, Fever: 0.33 // still low — these sections lean more toward
-                                          // generic/fallback rubrics (bare constipation,
-                                          // undifferentiated fever) rather than SRPs
+  // Weight gets the same treatment as Common did — "emaciation despite good appetite" is a
+  // specific, well-known differentiator (the Iodum/Abrotanum picture), not a vague symptom,
+  // so it shouldn't be discounted below a generic remedy's bare Constipation match.
+  Weight: 1.0,
+  Stool: 0.33, Fever: 0.33 // still low — these sections lean more toward
+                           // generic/fallback rubrics (bare constipation,
+                           // undifferentiated fever) rather than SRPs
 };
 // LOCATION_SCORE_BONUS: location is scored explicitly (not just used as a pass/fail filter)
 // per the "Location match = +5" rule — applied directly in scoreRemedies below wherever a
@@ -310,7 +314,13 @@ function scoreRepertory(inputText) {
   // meant a trigger like "4pm" could never match anything, since the input's own "4pm" was
   // being reduced to " pm" (digit stripped) while the trigger text still had the digit intact.
   // This silently broke every time-of-day-based trigger (4-8pm, 12am, 3am) until now.
-  const t = " " + inputText.toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ") + " ";
+  // Clause-ending punctuation (. , ; !) is converted to a distinct "clausebreak" marker
+  // word rather than just another space — this lets gap-tolerant trigger matching (below)
+  // detect and refuse to bridge across two genuinely separate statements. Without this, a
+  // trigger like "no appetite" could span "no thirst, but the appetite is good" — "no"
+  // belongs to an entirely different clause about thirst, not appetite, but a plain gap
+  // check with no punctuation awareness couldn't tell the difference.
+  const t = " " + inputText.toLowerCase().replace(/[.,;!?]/g, " clausebreak ").replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ") + " ";
   const inputLoc = parseLocation(inputText);
   const remedyScores = {};      // id -> accumulated weighted grade total
   const remedyRubrics = {};     // id -> [ "Section: rubric text", ... ] (for display)
@@ -370,10 +380,14 @@ function scoreRepertory(inputText) {
       if (idx < 0) return -1;
       if (firstPos >= 0) {
         if (idx - searchFrom > MAX_GAP_CHARS) return -1;
-        if (opposite) {
-          const gapText = text.slice(searchFrom, idx);
-          if (gapText.includes(" " + opposite + " ")) return -1;
-        }
+        const gapText = text.slice(searchFrom, idx);
+        // A clause boundary (period, comma, semicolon, "but", "and", "however") between
+        // two trigger words is a strong signal they belong to two separate statements, not
+        // one continuous phrase — reject regardless of whether the trigger is a worse/better
+        // pair. This is the general-purpose fix; the polarity check below catches the
+        // specific worse/better case even within a single clause with no punctuation at all.
+        if (gapText.includes(" clausebreak ")) return -1;
+        if (opposite && gapText.includes(" " + opposite + " ")) return -1;
       }
       if (firstPos < 0) firstPos = idx;
       searchFrom = idx + w.length;
