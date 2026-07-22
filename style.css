@@ -21,6 +21,10 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .brand .word { font-size: 1.25rem; font-weight: 700; }
 .brand .word .accent { color: var(--gold); font-weight: 800; }
 .symptom-label { display: block; font-size: 1.1rem; font-weight: 600; margin-bottom: 10px; }
+.translate-hint { margin-top: 10px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.25); border-radius: 10px; padding: 10px 14px; font-size: 0.82rem; color: #fff; }
+#translateBtn { background: var(--gold); color: var(--navy); border: none; border-radius: 7px; padding: 5px 12px; font-size: 0.8rem; font-weight: 800; cursor: pointer; margin-left: 4px; }
+#translateBtn:hover { background: #ffd76a; }
+.translate-instructions { font-size: 0.72rem; color: #d8ddf0; margin-top: 6px; line-height: 1.4; }
 .search-inline { display: flex; gap: 10px; }
 #symptomInput { flex: 1; border: none; border-radius: 10px; padding: 13px 15px; font-size: 0.92rem; color: var(--ink); outline: none; font-family: inherit; background: #fff; }
 #resultBtn { background: var(--red-1); color: #fff; border: none; border-radius: 10px; padding: 13px 22px; font-size: 0.92rem; font-weight: 700; cursor: pointer; white-space: nowrap; }
