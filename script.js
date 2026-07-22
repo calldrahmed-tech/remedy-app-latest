@@ -672,6 +672,22 @@ function scoreRemedies(inputText, diseaseProtocol) {
     }
   });
   results.sort((a, b) => b.rawScore - a.rawScore);
+
+  // CONFIDENCE DISPLAY REWORK: previously every remedy's percent was computed independently
+  // on a fixed absolute scale (score/4*100, capped at 100) — meaning a strong match and a
+  // moderately-supported competitor could both display 100%, with no visible signal of how
+  // much more confident the top pick actually was. This runs strictly AFTER sorting, so it
+  // only changes what confidence number is shown — never which remedy ranks #1 or their
+  // relative order, since that's already fixed by rawScore at this point.
+  if (results.length > 0) {
+    const topRawScore = results[0].rawScore;
+    results.forEach((r, i) => {
+      if (i === 0) return; // top remedy keeps its own absolute-scale percent as-is
+      const ratioToTop = topRawScore > 0 ? r.rawScore / topRawScore : 1;
+      r.percent = Math.round(Math.min(r.percent, ratioToTop * results[0].percent));
+    });
+  }
+
   return results;
 }
 
