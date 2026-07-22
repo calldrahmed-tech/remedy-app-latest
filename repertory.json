@@ -1159,6 +1159,24 @@
       ]
     },
     {
+      "section": "Modalities",
+      "rubric": "Right-sided complaints, worse 4-8pm, sluggish liver and digestion",
+      "triggers": [
+        "right sided complaints",
+        "sluggish liver",
+        "worse 4 to 8pm",
+        "craves fatty food",
+        "craves spicy food",
+        "bloating worse in the evening"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 3
+        }
+      ]
+    },
+    {
       "section": "Common",
       "rubric": "Thin, watery, acrid nasal discharge that excoriates the lip, worse cold air",
       "triggers": [
