@@ -958,9 +958,22 @@ inputEl.addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey
 // build and maintain a second and third language inside the matching engine itself (tried
 // this, walked it back — too easy for a half-translated rubric to quietly hand back the
 // wrong remedy), detect Urdu (Arabic script) or Hindi (Devanagari script) as the person
-// types, and offer a one-click link out to Google Translate with their text already
-// loaded — they copy the English result back in manually. No API key, no account, no cost,
-// and translation quality is Google's problem to solve, not a hand-built glossary here.
+// types, and translate it right in the box using Google's free, undocumented translation
+// endpoint (the same one their own web page and browser extension call internally).
+// IMPORTANT: this is NOT the official, paid Google Cloud Translation API — it's an
+// unofficial endpoint with no guarantee of staying available. If Google ever blocks or
+// rate-limits it, translation will stop working until this is swapped for the official
+// API (which needs a Google Cloud account and key) or reverted to the new-tab approach.
+async function translateToEnglish(text) {
+  const url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=" + encodeURIComponent(text);
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("Translation request failed (" + res.status + ")");
+  const data = await res.json();
+  // Response shape: [[["translated part","original part",...], ...], null, "detected_lang", ...]
+  // Concatenate every translated segment to get the full sentence.
+  return data[0].map(segment => segment[0]).join("");
+}
+
 const translateHint = document.getElementById("translateHint");
 const translateBtn = document.getElementById("translateBtn");
 inputEl.addEventListener("input", () => {
@@ -968,9 +981,23 @@ inputEl.addEventListener("input", () => {
   if (translateHint) translateHint.style.display = isUrduOrHindi ? "block" : "none";
 });
 if (translateBtn) {
-  translateBtn.addEventListener("click", () => {
-    const url = "https://translate.google.com/?sl=auto&tl=en&text=" + encodeURIComponent(inputEl.value) + "&op=translate";
-    window.open(url, "_blank");
+  translateBtn.addEventListener("click", async () => {
+    const originalText = inputEl.value;
+    translateBtn.disabled = true;
+    translateBtn.textContent = "Translating…";
+    try {
+      const englishText = await translateToEnglish(originalText);
+      inputEl.value = englishText;
+      if (translateHint) translateHint.style.display = "none";
+    } catch (err) {
+      // Fallback: if the free endpoint is ever blocked or fails, don't leave the person
+      // stuck — open the same Google Translate page approach used before as a backup.
+      const fallbackUrl = "https://translate.google.com/?sl=auto&tl=en&text=" + encodeURIComponent(originalText) + "&op=translate";
+      window.open(fallbackUrl, "_blank");
+    } finally {
+      translateBtn.disabled = false;
+      translateBtn.textContent = "Translate to English";
+    }
   });
 }
 
