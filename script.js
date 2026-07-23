@@ -998,8 +998,40 @@ function runSearch() {
           <li>Used in complex or unclear cases</li>
           <li>When results are not satisfactory with the main remedy</li>
         </ul>
+        ${diseaseProtocol.nosode ? `<div class="expert-nosode-line">🧬 Nosode support: <b>${esc(diseaseProtocol.nosode)}</b></div>` : ""}
       </div>
     </div>`;
+  }
+
+  /* ---------- 3.5 NOSODE SUPPORT — collapsed, only for chronic cases ---------- */
+  if (showNosodeSection) {
+    // Prefer the protocol's own specified nosode if it has one; otherwise the
+    // top-ranked nosode from the symptom match itself; otherwise a sensible constitutional
+    // fallback (Psorinum covers the broadest chronic/psoric picture when nothing more
+    // specific stood out from the case).
+    const protocolNosodeId = diseaseProtocol && (diseaseProtocol.primaryRemedies || []).find(id => {
+      const rem = DB.remedies.find(r => r.id === id);
+      return rem && rem.nosode;
+    });
+    const topRankedNosodeResult = remedyResults.find(rr => rr.remedy.nosode && rr.percent >= 25);
+    const nosodeRemedy = (protocolNosodeId && DB.remedies.find(r => r.id === protocolNosodeId))
+      || (topRankedNosodeResult && topRankedNosodeResult.remedy)
+      || DB.remedies.find(r => r.id === "psor");
+    if (nosodeRemedy) {
+      html += `<div class="collapsible-section neutral">
+        <button class="collapsible-toggle" onclick="toggleSection('nosode-section')">
+          <span>🧬 Nosode Support (For Chronic Cases)</span>
+          <span class="ct-link"><span id="nosode-section-arrow">▶</span> View nosode option</span>
+        </button>
+        <div id="nosode-section" class="collapsible-content" style="display:none;">
+          <div class="alt-remedy-name display">${esc(nosodeRemedy.name)} ${esc(nosodeRemedy.potency && nosodeRemedy.potency.chronic !== "-" ? nosodeRemedy.potency.chronic.split(",")[0] : "1M")}</div>
+          <ul class="alt-reasons">
+            <li>Often used once-weekly or once-monthly alongside the main remedy in deep-seated or recurring cases</li>
+            <li>Best selected and dosed under full case-taking, not as a standalone acute remedy</li>
+          </ul>
+        </div>
+      </div>`;
+    }
   }
 
   /* ---------- 4. SUPPORT — kept small, not highlighted ---------- */
