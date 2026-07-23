@@ -3082,6 +3082,14 @@
         {
           "t": "infantile acid reflux",
           "w": 1
+        },
+        {
+          "t": "excessively sour smell to all discharges, vomit, stool, and perspiration",
+          "w": 1.5
+        },
+        {
+          "t": "irritable and restless from the discomfort of acidity, worse at night",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -3093,7 +3101,7 @@
         "acute": "30C after meals 2-3x daily",
         "chronic": "-"
       },
-      "maxScore": 6
+      "maxScore": 8.5
     },
     {
       "id": "iris",
@@ -4497,6 +4505,14 @@
         {
           "t": "sexual desire increased in women",
           "w": 2
+        },
+        {
+          "t": "constant fidgeting or trembling of the hands, cannot keep still",
+          "w": 1.5
+        },
+        {
+          "t": "sensation as if a red-hot coal were applied to the affected part",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -4504,7 +4520,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 12
+      "maxScore": 14.5
     },
     {
       "id": "aur",
@@ -5016,6 +5032,14 @@
         {
           "t": "hoarseness, asthma in sailors on shore",
           "w": 2
+        },
+        {
+          "t": "worse at the seaside despite general benefit from sea air, worse from warm room",
+          "w": 1.5
+        },
+        {
+          "t": "left-sided glandular swellings, tendency to stony hard indurations",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -5023,7 +5047,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 10
+      "maxScore": 12.5
     },
     {
       "id": "cact",
@@ -5551,6 +5575,14 @@
         {
           "t": "craves tobacco & whiskey",
           "w": 2
+        },
+        {
+          "t": "rapid emaciation and exhaustion with intense, overpowering offensive odors from the body",
+          "w": 1.5
+        },
+        {
+          "t": "allergic reactions and hives with intense itching, asthma from odors or hay fever",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -5558,7 +5590,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 12
+      "maxScore": 14.5
     },
     {
       "id": "caul",
@@ -8462,6 +8494,14 @@
         {
           "t": "gonorrhoea with intense burning",
           "w": 2
+        },
+        {
+          "t": "constant urging to stool with almost no relief, straining that produces little result",
+          "w": 1.5
+        },
+        {
+          "t": "restless, anxious, cannot lie still due to violent internal burning and irritation",
+          "w": 1.5
         }
       ],
       "diseaseTags": [],
@@ -8469,7 +8509,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 8
+      "maxScore": 11.0
     },
     {
       "id": "merc-cy",
@@ -8704,6 +8744,14 @@
         {
           "t": "haemoptysis after injury",
           "w": 2
+        },
+        {
+          "t": "bleeding brought on by overexertion, lifting, or straining, blood is bright red and free-flowing",
+          "w": 1.5
+        },
+        {
+          "t": "feels well otherwise despite active bleeding, no pain accompanying the hemorrhage",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -8711,7 +8759,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 8
+      "maxScore": 10.5
     },
     {
       "id": "mur-ac",
@@ -9323,6 +9371,14 @@
         {
           "t": "tetanus or spasms from slight causes",
           "w": 2
+        },
+        {
+          "t": "profound anxiety and nervousness before any event requiring coordination, fear of falling",
+          "w": 1.5
+        },
+        {
+          "t": "double vision, or objects appear to move or advance toward the eyes",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -9330,7 +9386,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 8
+      "maxScore": 10.5
     },
     {
       "id": "phyt",
@@ -10864,6 +10920,14 @@
         {
           "t": "tongue smooth, glossy, red",
           "w": 2
+        },
+        {
+          "t": "great weakness and prostration with kidney involvement, worse from cold and damp",
+          "w": 1.5
+        },
+        {
+          "t": "distended, tense, tympanitic abdomen with tenderness worse from pressure",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -10871,7 +10935,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 8
+      "maxScore": 10.5
     },
     {
       "id": "ther",
