@@ -1073,6 +1073,85 @@
       ]
     },
     {
+      "section": "Mind",
+      "rubric": "Diarrhea or trembling weakness from anticipatory anxiety before an event",
+      "triggers": [
+        "diarrhea from anticipation",
+        "diarrhea from nervousness",
+        "trembling from anxiety before",
+        "anticipation anxiety",
+        "dread about tomorrow",
+        "nervousness about tomorrow"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 3
+        },
+        {
+          "id": "arg-n",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Denies injury or refuses help after trauma, wants to be left alone, bed feels too hard",
+      "triggers": [
+        "says i am fine",
+        "insisting i was totally fine",
+        "refuses help after injury",
+        "bed feels too hard",
+        "mattress feels too hard",
+        "stop fussing over me",
+        "leave me alone after injury"
+      ],
+      "remedies": [
+        {
+          "id": "arn",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Headache from cold draft to head, better from wrapping the head warmly",
+      "triggers": [
+        "headache from cold draft",
+        "cold draft hits the back of my head",
+        "wrapping my head",
+        "warm scarf relieves headache",
+        "better wrapping head warmly"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Every minor wound or cut suppurates, festers, or heals slowly",
+      "triggers": [
+        "cut gets infected",
+        "wound festers",
+        "slow healing pus",
+        "every scrape gets infected",
+        "turns into pus"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 3
+        },
+        {
+          "id": "hep",
+          "grade": 1
+        }
+      ]
+    },
+    {
       "section": "Common",
       "rubric": "Air hunger, wants to be fanned, collapse with icy coldness of extremities",
       "triggers": [
@@ -1917,7 +1996,8 @@
         "no thirst",
         "without thirst",
         "not thirsty",
-        "absence of thirst"
+        "absence of thirst",
+        "zero thirst"
       ],
       "remedies": [
         {
