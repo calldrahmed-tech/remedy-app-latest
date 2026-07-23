@@ -5482,6 +5482,10 @@
         {
           "t": "better warm air",
           "w": 0.6
+        },
+        {
+          "t": "tendons feel too short, contracted joints, worse dry clear weather better damp wet weather",
+          "w": 2
         }
       ],
       "diseaseTags": [],
@@ -5489,7 +5493,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 19.0
+      "maxScore": 21.0
     },
     {
       "id": "cic",
@@ -9275,6 +9279,14 @@
         {
           "t": "menses profuse, clotted",
           "w": 2
+        },
+        {
+          "t": "numbness of parts during pain, sensation of parts being enlarged",
+          "w": 1.5
+        },
+        {
+          "t": "disgust and contempt for loved ones, intense hypersensitivity to touch",
+          "w": 1.5
         }
       ],
       "diseaseTags": [],
@@ -9282,7 +9294,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 12
+      "maxScore": 15.0
     },
     {
       "id": "plb",
