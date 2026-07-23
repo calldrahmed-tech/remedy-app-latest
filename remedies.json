@@ -2114,6 +2114,18 @@
         {
           "t": "cough with thick yellow-green stringy mucus, better sitting up, worse lying down",
           "w": 2
+        },
+        {
+          "t": "sensation as if a plug or foreign body is stuck in a small, well-defined spot",
+          "w": 1.5
+        },
+        {
+          "t": "rheumatic pains that shift suddenly from joint to joint, worse in hot weather",
+          "w": 1
+        },
+        {
+          "t": "gastric ulcer with vomiting immediately after eating, worse from beer",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2124,7 +2136,7 @@
         "acute": "30C 3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 10
+      "maxScore": 13.5
     },
     {
       "id": "hep",
@@ -2159,6 +2171,18 @@
         {
           "t": "sour smelling sweat",
           "w": 1
+        },
+        {
+          "t": "extremely chilly, cannot bear uncovering even a hand or foot, worse least draft",
+          "w": 1.5
+        },
+        {
+          "t": "quick to anger over trifles, violent temper, wants to strike or kill when angry",
+          "w": 1.5
+        },
+        {
+          "t": "sensitive to all impressions, oversensitive to pain, noise, and odors",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2170,7 +2194,7 @@
         "acute": "30C low potency to promote suppuration, 200C to abort",
         "chronic": "-"
       },
-      "maxScore": 10
+      "maxScore": 14.0
     },
     {
       "id": "merc-sol",
@@ -2205,6 +2229,18 @@
         {
           "t": "distrustful hurried",
           "w": 1
+        },
+        {
+          "t": "worse at night, sweats profusely at night yet sweat gives no relief",
+          "w": 1.5
+        },
+        {
+          "t": "eager to please yet hurried, weak memory, mentally slow to respond, trembling",
+          "w": 1.5
+        },
+        {
+          "t": "offensive breath, teeth marks visible on the sides of a swollen tongue",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2216,7 +2252,7 @@
         "acute": "30C 3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 9
+      "maxScore": 13.0
     },
     {
       "id": "apis",
@@ -2301,6 +2337,14 @@
         {
           "t": "restless and panicky from severe burning pain",
           "w": 1.5
+        },
+        {
+          "t": "violent, sudden onset, mind fixed on the pain, screaming or raging from intensity of suffering",
+          "w": 1.5
+        },
+        {
+          "t": "aversion to water and all liquids despite burning thirst, cannot bear the sight of shining objects",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -2312,7 +2356,7 @@
         "acute": "200C every 2h",
         "chronic": "-"
       },
-      "maxScore": 12.5
+      "maxScore": 15.5
     },
     {
       "id": "dros",
@@ -2546,6 +2590,18 @@
         {
           "t": "insatiable thirst for cold water",
           "w": 1
+        },
+        {
+          "t": "great prostration and collapse out of proportion to the illness, cold sweat especially on forehead",
+          "w": 1.5
+        },
+        {
+          "t": "restlessness with weakness, wants to be constantly on the move despite exhaustion",
+          "w": 1.5
+        },
+        {
+          "t": "mania with desire to cut and tear things, or to cut up money",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2556,7 +2612,7 @@
         "acute": "200C for collapse states, urgent medical care also needed",
         "chronic": "-"
       },
-      "maxScore": 8
+      "maxScore": 12.0
     },
     {
       "id": "chin",
@@ -2698,6 +2754,18 @@
         {
           "t": "flatulence bloating with anxiety",
           "w": 1
+        },
+        {
+          "t": "hurried, impulsive, always in a rush, cannot wait, must do things immediately",
+          "w": 1.5
+        },
+        {
+          "t": "irrational fears and impulses, fear of failure, convinced something bad will happen",
+          "w": 1.5
+        },
+        {
+          "t": "loud belching gives relief from digestive distress, craves open air",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2709,7 +2777,7 @@
         "acute": "30C for acute anxiety episode",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 9
+      "maxScore": 13.0
     },
     {
       "id": "staph",
@@ -3136,6 +3204,18 @@
         {
           "t": "eruptions with sticky honey-like discharge, worse from warmth of bed",
           "w": 1.5
+        },
+        {
+          "t": "sad, weepy, timid, and anxious, dreads to go out or make decisions",
+          "w": 1.5
+        },
+        {
+          "t": "menses delayed, scanty, or absent, in obese women with tendency to constipation",
+          "w": 1
+        },
+        {
+          "t": "cracked skin at margins of orifices (corners of mouth, behind ears, nipples)",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -3147,7 +3227,7 @@
         "acute": "30C for skin flare",
         "chronic": "200C to 1M constitutional case needed"
       },
-      "maxScore": 11.0
+      "maxScore": 14.5
     },
     {
       "id": "acet-ac",
@@ -10017,6 +10097,18 @@
         {
           "t": "gradual weight loss",
           "w": 2
+        },
+        {
+          "t": "irritable and depressed about the chronic nature of the illness, feels worse for it",
+          "w": 1.5
+        },
+        {
+          "t": "worse toward the end of urination, better as the stream starts, sharp pain right at the close",
+          "w": 1.5
+        },
+        {
+          "t": "dry, rough, wrinkled skin, worse in autumn and cold weather",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -10024,7 +10116,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 14
+      "maxScore": 18.0
     },
     {
       "id": "sec",
