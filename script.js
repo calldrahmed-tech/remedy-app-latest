@@ -368,11 +368,16 @@ function normalizeSynonyms(text) {
     .replace(/\bnever (?:feels?|seems?) thirsty\b/g, "thirstless")
     .replace(/\bno (?:desire|urge) (?:to drink|for water)\b/g, "thirstless")
     .replace(/\bdoes(?:n't| not) want (?:water|to drink)\b/g, "thirstless")
+    .replace(/\bhave?n'?t wanted (?:a |any )?(?:single )?drop\b/g, "thirstless")
     // Worse-motion cluster: "aggravated by movement" and similar phrasings that don't
     // literally contain the word "worse" or "motion" together.
     .replace(/\baggravated by (?:motion|movement|moving)\b/g, "worse motion")
     .replace(/\b(?:movement|moving|any movement) makes? it worse\b/g, "worse motion")
-    .replace(/\bgets? worse with (?:motion|movement|moving)\b/g, "worse motion");
+    .replace(/\bgets? worse with (?:motion|movement|moving)\b/g, "worse motion")
+    // "hot" (adjective, e.g. "room gets hot") -> "heat" (noun, what every "worse heat"
+    // trigger actually expects). Narrative text overwhelmingly uses "hot", but the
+    // repertory's modality triggers were all written in the noun form.
+    .replace(/\bhot\b/g, "heat");
 }
 
 function scoreRepertory(inputText) {
@@ -411,8 +416,18 @@ function scoreRepertory(inputText) {
   // completely unrelated but literally-earlier-firing rubric (like generic "irritable")
   // wrongly claim the main-complaint boost instead.
   function triggerFires(trigger, text) {
+    // NEGATION CHECK: applies to every trigger, not just the hand-picked "no fever" case
+    // from earlier. A case can say "haven't been drinking small sips" — the words "small
+    // sips" are right there and would otherwise match, but the sentence is explicitly
+    // DENYING that symptom, not reporting it. Reject any match where a negation word
+    // appears in the short window immediately before where the trigger phrase starts.
+    const NEGATION_WINDOW_CHARS = 25;
+    function isNegated(matchStartIdx) {
+      const before = text.slice(Math.max(0, matchStartIdx - NEGATION_WINDOW_CHARS), matchStartIdx + 1);
+      return / (not|no|never|haven|hasn|hadn|without|isn|wasn|aren|weren|doesn|didn|don) /.test(before);
+    }
     const exactIdx = text.indexOf(" " + trigger.toLowerCase() + " ");
-    if (exactIdx >= 0) return exactIdx;
+    if (exactIdx >= 0) return isNegated(exactIdx) ? -1 : exactIdx;
     // NOTE: deliberately NOT using the global STOPWORDS set here — that list treats
     // "worse"/"better" as optional (correct for materia medica matching), but for a
     // repertory TRIGGER phrase the polarity word is semantically essential ("worse from
@@ -448,30 +463,39 @@ function scoreRepertory(inputText) {
         idx += 1; // this occurrence was a prefix of a longer word — keep searching
       }
     }
-    let searchFrom = 0, firstPos = -1;
-    for (const w of words) {
-      const idx = findWholeWord(w, searchFrom);
-      if (idx < 0) return -1;
-      if (firstPos >= 0) {
-        if (idx - searchFrom > MAX_GAP_CHARS) return -1;
-        const gapText = text.slice(searchFrom, idx);
-        // A clause boundary (period, comma, semicolon, "but", "and", "however") between
-        // two trigger words is a strong signal they belong to two separate statements, not
-        // one continuous phrase — reject regardless of whether the trigger is a worse/better
-        // pair. This is the general-purpose fix; the polarity check below catches the
-        // specific worse/better case even within a single clause with no punctuation at all.
-        if ((gapText + " ").includes(" clausebreak ")) return -1;
-        // Pad with a trailing space before checking — gapText's slice boundary lands
-        // exactly where the next trigger word begins, which can cut off the trailing space
-        // of the opposite-polarity word sitting right at that edge (e.g. gapText ends in
-        // "...heat better" with nothing after "better"), silently letting the check below
-        // miss it entirely even though the word is clearly present.
-        if (opposite && (gapText + " ").includes(" " + opposite + " ")) return -1;
+    // Extracted so it can be tried in more than one word order — see below. Takes an
+    // explicit ORDERED list of words and the polarity word to treat as "opposite-sensitive"
+    // (may not be at position 0 once word order is reversed).
+    function tryOrder(orderedWords, polarityWord) {
+      const oppositeWord = polarityWord === "worse" ? "better" : (polarityWord === "better" ? "worse" : null);
+      let searchFrom = 0, firstPos = -1;
+      for (const w of orderedWords) {
+        const idx = findWholeWord(w, searchFrom);
+        if (idx < 0) return -1;
+        if (firstPos >= 0) {
+          if (idx - searchFrom > MAX_GAP_CHARS) return -1;
+          const gapText = text.slice(searchFrom, idx);
+          if ((gapText + " ").includes(" clausebreak ")) return -1;
+          if (oppositeWord && (gapText + " ").includes(" " + oppositeWord + " ")) return -1;
+        }
+        if (firstPos < 0) firstPos = idx;
+        searchFrom = idx + w.length;
       }
-      if (firstPos < 0) firstPos = idx;
-      searchFrom = idx + w.length;
+      return firstPos;
     }
-    return firstPos;
+    const forwardResult = tryOrder(words, opposite ? words[0] : null);
+    if (forwardResult >= 0) return isNegated(forwardResult) ? -1 : forwardResult;
+    // REVERSED-ORDER FALLBACK: clinical shorthand writes "worse heat" (polarity word first),
+    // but real narrative case descriptions very often say the opposite — "whenever a room
+    // gets hot... the aching gets ten times worse" (cause stated BEFORE the aggravation
+    // word). Without this, an entire textbook-perfect case could fire zero repertory rubrics
+    // simply because the person wrote in plain sentences instead of clinical shorthand. Only
+    // applied to exactly two-word worse/better triggers, where "reversed" is unambiguous.
+    if (words.length === 2 && (words[0] === "worse" || words[0] === "better")) {
+      const reversedResult = tryOrder([words[1], words[0]], words[0]);
+      return reversedResult >= 0 && !isNegated(reversedResult) ? reversedResult : -1;
+    }
+    return -1;
   }
   REPERTORY.forEach(rubric => {
     // word-boundary match only — a raw substring fallback here would let a bare trigger
