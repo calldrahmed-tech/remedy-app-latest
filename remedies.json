@@ -1784,6 +1784,10 @@
         {
           "t": "worse from mental exertion, worse from consolation",
           "w": 2
+        },
+        {
+          "t": "headache and complaints worse around 10 or 11am, worse from heat and sun",
+          "w": 2
         }
       ],
       "diseaseTags": [
@@ -1795,7 +1799,7 @@
         "acute": "30C acute grief",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 17
+      "maxScore": 19
     },
     {
       "id": "lyc",
