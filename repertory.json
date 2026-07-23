@@ -1363,6 +1363,102 @@
     },
     {
       "section": "Common",
+      "rubric": "Excessively sour smell to all discharges, vomit, stool, or perspiration",
+      "triggers": [
+        "sour smell to all discharges",
+        "sour smelling vomit stool",
+        "excessively sour odor",
+        "intense sour acidity"
+      ],
+      "remedies": [
+        {
+          "id": "robinia",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Urine smells like violets, burning in kidneys and urinary tract, dark smoky urine",
+      "triggers": [
+        "urine smells like violets",
+        "burning in kidneys bladder",
+        "dark smoky urine",
+        "haematuria dark urine"
+      ],
+      "remedies": [
+        {
+          "id": "tereb",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Worse at the seaside despite general benefit from sea air, hard glandular swellings",
+      "triggers": [
+        "worse at the seaside",
+        "hard glandular swellings",
+        "stony hard indurations",
+        "worse from warm room glands"
+      ],
+      "remedies": [
+        {
+          "id": "brom",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Rapid emaciation with intense, overpowering offensive body odor, septic states",
+      "triggers": [
+        "overpowering offensive odor",
+        "intense offensive body odor",
+        "rapid emaciation septic",
+        "putrid discharges"
+      ],
+      "remedies": [
+        {
+          "id": "carb-ac",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Profound anxiety before events requiring coordination, fear of falling, double vision",
+      "triggers": [
+        "anxiety before coordination",
+        "fear of falling nervousness",
+        "double vision objects move",
+        "trembling before event"
+      ],
+      "remedies": [
+        {
+          "id": "phys",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Bleeding brought on by overexertion or straining, bright red and free-flowing, feels well otherwise",
+      "triggers": [
+        "bleeding from overexertion",
+        "bleeding from lifting or straining",
+        "bright red free flowing blood",
+        "feels well despite bleeding"
+      ],
+      "remedies": [
+        {
+          "id": "mill",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
       "rubric": "Air hunger, wants to be fanned, collapse with icy coldness of extremities",
       "triggers": [
         "air hunger wants fanned",
