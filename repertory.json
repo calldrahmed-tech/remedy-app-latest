@@ -1327,6 +1327,23 @@
       ]
     },
     {
+      "section": "Modalities",
+      "rubric": "Worse around 10-11am, worse from heat and sun",
+      "triggers": [
+        "worse 10 o'clock",
+        "worse 10am",
+        "worse 10 to 11",
+        "worse from heat and sun",
+        "worsening from 10"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 3
+        }
+      ]
+    },
+    {
       "section": "Mind",
       "rubric": "Restless anxiety, must get up and walk, worse after midnight",
       "triggers": [
@@ -2223,6 +2240,10 @@
         },
         {
           "id": "alum",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
           "grade": 1
         }
       ]
