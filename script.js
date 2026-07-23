@@ -191,6 +191,23 @@ function anatomyConflict(inputAnatomy, keynoteAnatomy) {
 // could still score a match on "better heat" — the reverse of what the patient actually said.
 // This requires the polarity word to be followed within a short window by the keynote's
 // quality word(s) in the input, before a modality-type keynote counts as a candidate at all.
+// Same idea as modalityPolarityMatches, but for thirst specifically — a remedy keynote
+// describing genuine thirst ("excessive thirst", "great thirst for cold water") should not
+// count as supporting evidence when the case explicitly states thirstlessness. Kept as its
+// own small, narrowly-scoped function rather than folded into a general "contradiction
+// engine" — a blanket global contradiction system was tried in an earlier session and
+// measurably made accuracy worse by over-penalizing legitimately broad polychrests.
+function thirstPolarityMatches(rawKeynoteText, inputText) {
+  const kText = rawKeynoteText.toLowerCase();
+  if (!/\bthirst/.test(kText)) return true; // not thirst-related — no constraint
+  // If the keynote ITSELF already describes thirstlessness (e.g. "thirstless despite
+  // fever"), there's no contradiction to check — it already matches that polarity.
+  if (/thirstless|no thirst|not thirsty|without thirst/.test(kText)) return true;
+  const t = " " + inputText.toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ") + " ";
+  const inputStatesThirstless = / thirstless | no thirst | not thirsty | without thirst | absence of thirst /.test(t);
+  return !inputStatesThirstless;
+}
+
 function modalityPolarityMatches(rawKeynoteText, kWords, inputText) {
   const polarityMatch = rawKeynoteText.trim().match(/^(worse|better)\b/i);
   if (!polarityMatch) return true; // not a modality-style keynote — no constraint
@@ -615,6 +632,8 @@ function scoreRemedies(inputText, diseaseProtocol) {
       if (anatomyConflict(inputAnatomy, anatomyWordsIn(kWords))) return;
       // Hard reject on modality polarity mismatch — see modalityPolarityMatches for why.
       if (!modalityPolarityMatches(k.t, kWords, inputText)) return;
+      // Hard reject on thirst contradiction — see thirstPolarityMatches for why.
+      if (!thirstPolarityMatches(k.t, inputText)) return;
       const hitCount = countHits(kWords, inputWords);
       const ratio = hitCount / kWords.length;
       // Very short keynotes (2 words) need a FULL match, not just partial — a keynote like
@@ -913,6 +932,10 @@ function runSearch() {
   const diseaseProtocol = detectDiseaseProtocol(text);
   let remedyResults = scoreRemedies(text, diseaseProtocol);
   const biochemicResults = scoreBiochemics(text);
+  // Separate, read-only call purely to surface which recognized patterns fired for the
+  // "what I understood from your case" display below — kept fully isolated from the actual
+  // scoring pipeline above so this can never affect which remedy wins or its score.
+  const { firedRubrics: recognizedPatterns } = scoreRepertory(text);
 
   const chronic = isChronicContext(text);
   const diseaseProtocolIndicatesNosode = diseaseProtocol && (diseaseProtocol.primaryRemedies || []).some(id => {
@@ -952,6 +975,20 @@ function runSearch() {
   if (stampEl) stampEl.textContent = stamp.date.split(" ").slice(0,2).join(" ") + ", " + stamp.time;
 
   let html = "";
+
+  /* ---------- 0. WHAT I UNDERSTOOD — detective-style: show the recognized clues first,
+     before the conclusion. Uses the actual patterns recognized in the TEXT itself (rubric
+     names), not the winning remedy's own textbook picture — so this reflects what the
+     person said, not what the app already believes about the remedy. ---------- */
+  if (recognizedPatterns && recognizedPatterns.length) {
+    const readable = [...new Set(recognizedPatterns)]
+      .map(r => r.includes(": ") ? r.split(": ").slice(1).join(": ") : r)
+      .slice(0, 8);
+    html += `<div class="understood-box">
+      <div class="understood-title">🔍 What I understood from your case</div>
+      <ul class="understood-list">${readable.map(r => `<li>${esc(r)}</li>`).join("")}</ul>
+    </div>`;
+  }
 
   /* ---------- 1. MAIN DECISION — always visible, big, centered, no distractions ---------- */
   html += `<div class="main-decision-card">
