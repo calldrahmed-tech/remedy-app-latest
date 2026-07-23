@@ -1188,6 +1188,70 @@
       ]
     },
     {
+      "section": "Mind",
+      "rubric": "Hurried, impulsive, cannot wait, irrational fears and anticipatory dread",
+      "triggers": [
+        "hurried impulsive",
+        "cannot wait must do",
+        "irrational fears",
+        "convinced something bad will happen"
+      ],
+      "remedies": [
+        {
+          "id": "arg-n",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "rubric": "Extremely chilly, cannot bear uncovering, oversensitive to pain and draft",
+      "triggers": [
+        "cannot bear uncovering",
+        "worse least draft",
+        "extremely sensitive to pain touch",
+        "quick to anger over trifles"
+      ],
+      "remedies": [
+        {
+          "id": "hep",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Sad, weepy, timid, dreads to make decisions, with skin cracking at orifices",
+      "triggers": [
+        "dreads to make decisions",
+        "timid anxious indecisive",
+        "cracked skin at margins",
+        "cracks behind ears"
+      ],
+      "remedies": [
+        {
+          "id": "graph",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Urinary pain worse at the very end of urination, better as stream starts",
+      "triggers": [
+        "worse end of urination",
+        "worse toward end of urination",
+        "pain at close of urination",
+        "better as stream starts"
+      ],
+      "remedies": [
+        {
+          "id": "sars",
+          "grade": 3
+        }
+      ]
+    },
+    {
       "section": "Common",
       "rubric": "Air hunger, wants to be fanned, collapse with icy coldness of extremities",
       "triggers": [
