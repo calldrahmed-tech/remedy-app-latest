@@ -66,6 +66,11 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 /* ---------- REMEDY CARDS (side-by-side, each self-contained) ---------- */
 /* ---------- 1. MAIN DECISION (big, calm, centered) ---------- */
 .main-decision-card { margin: 16px 20px; background: linear-gradient(160deg, #eef6f1, #ffffff); border: 2px solid var(--green-1); border-radius: 20px; padding: 28px 22px; text-align: center; box-shadow: 0 6px 24px rgba(47,168,79,0.12); }
+.understood-box { margin: 16px 20px 0; background: #f3f5fb; border: 1px solid #dfe3f2; border-radius: 14px; padding: 14px 18px; }
+.understood-title { font-size: 0.78rem; font-weight: 800; color: #3a4a8f; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 8px; }
+.understood-list { list-style: none; font-size: 0.85rem; color: #2c3550; margin: 0; padding: 0; }
+.understood-list li { padding: 3px 0 3px 18px; position: relative; }
+.understood-list li::before { content: "✓"; position: absolute; left: 0; color: #3a4a8f; font-weight: 700; }
 .md-eyebrow { font-size: 0.8rem; font-weight: 700; color: var(--muted); letter-spacing: 0.02em; }
 .md-remedy-name { font-size: 1.9rem; color: var(--navy); margin: 6px 0 14px; }
 .md-checks { font-size: 0.86rem; color: #2b6b41; font-weight: 600; margin-bottom: 18px; }
