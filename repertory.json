@@ -510,6 +510,29 @@
       ]
     },
     {
+      "section": "Modalities",
+      "rubric": "Wandering, shifting joint pains that move from joint to joint",
+      "triggers": [
+        "pains wander",
+        "wandering pains",
+        "shifting joint pains",
+        "pain moves from joint to joint",
+        "one joint then another",
+        "joint feels fine but now",
+        "aching instead"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 3
+        },
+        {
+          "id": "kali-bi",
+          "grade": 1
+        }
+      ]
+    },
+    {
       "section": "Mind",
       "rubric": "Effects of suppressed emotion or humiliation",
       "triggers": [
@@ -625,7 +648,10 @@
         "weepy",
         "better from consolation",
         "consolation better",
-        "better consolation"
+        "better consolation",
+        "feel like crying",
+        "comfort me",
+        "someone listen"
       ],
       "remedies": [
         {
@@ -1566,11 +1592,33 @@
         "worse first motion",
         "worse beginning to move",
         "better continued motion",
-        "worse initial motion"
+        "worse initial motion",
+        "initial push is pure agony",
+        "stiffness works itself out",
+        "stiffness slowly works",
+        "locked up",
+        "rusted machine"
       ],
       "remedies": [
         {
           "id": "rhus-t",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Sharp stitching pain worse from any motion, better from firm pressure or holding the part",
+      "triggers": [
+        "knife like pain",
+        "blade sticking",
+        "pressed hard against",
+        "holding my hand firmly",
+        "hand against the painful side"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
           "grade": 3
         }
       ]
@@ -1819,7 +1867,11 @@
         "great thirst",
         "large quantities",
         "drinks large amounts",
-        "excessive thirst"
+        "excessive thirst",
+        "unquenchable thirst",
+        "huge glass",
+        "chugging water",
+        "gulps down water"
       ],
       "remedies": [
         {
@@ -2241,6 +2293,25 @@
         {
           "id": "alum",
           "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "First part of stool hard and difficult, remainder soft",
+      "triggers": [
+        "hard first stool",
+        "first part hard rest soft",
+        "hard then soft stool"
+      ],
+      "remedies": [
+        {
+          "id": "alum",
+          "grade": 3
         },
         {
           "id": "nat-mur",
