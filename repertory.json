@@ -1152,6 +1152,42 @@
       ]
     },
     {
+      "section": "Modalities",
+      "rubric": "Involuntary urination from coughing, sneezing, or laughing; worse dry clear weather, better damp weather",
+      "triggers": [
+        "spurt of urine from coughing",
+        "leaks urine when coughing",
+        "involuntary urination cough",
+        "worse clear sunny weather",
+        "better damp humid weather",
+        "tendons too short"
+      ],
+      "remedies": [
+        {
+          "id": "caust",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Haughty, arrogant, feels superior to others, contempt or disgust for loved ones",
+      "triggers": [
+        "arrogant sense of superiority",
+        "everyone beneath me",
+        "looks down on others",
+        "disgust for loved ones",
+        "contempt for family",
+        "haughty proud"
+      ],
+      "remedies": [
+        {
+          "id": "plat",
+          "grade": 3
+        }
+      ]
+    },
+    {
       "section": "Common",
       "rubric": "Air hunger, wants to be fanned, collapse with icy coldness of extremities",
       "triggers": [
