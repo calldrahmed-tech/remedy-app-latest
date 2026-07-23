@@ -1565,6 +1565,22 @@
       ]
     },
     {
+      "section": "Mind",
+      "rubric": "Constantly desires change of scenery or environment, dissatisfied wherever they are",
+      "triggers": [
+        "desire to travel",
+        "wants constant change",
+        "dissatisfied with everything",
+        "craving change of scenery"
+      ],
+      "remedies": [
+        {
+          "id": "tub",
+          "grade": 3
+        }
+      ]
+    },
+    {
       "section": "Common",
       "rubric": "Chilly, sluggish, fair/fat/flabby constitution, craves sweets, slow to warm up",
       "triggers": [
