@@ -1253,6 +1253,54 @@
     },
     {
       "section": "Common",
+      "rubric": "Coughing fits in rapid succession, hardly time to breathe between them",
+      "triggers": [
+        "coughing fits rapid succession",
+        "hardly time to breathe",
+        "cough one after another",
+        "spasmodic cough attacks"
+      ],
+      "remedies": [
+        {
+          "id": "dros",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Periodic sick headache with visual disturbance before pain begins, intense GI burning mouth to anus",
+      "triggers": [
+        "visual disturbance before headache",
+        "periodic sick headache",
+        "burning mouth to anus",
+        "burning from mouth to anus"
+      ],
+      "remedies": [
+        {
+          "id": "iris",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Wakes suddenly from sleep with suffocation, must sit up to breathe, anxious and fearful",
+      "triggers": [
+        "wakes suddenly with suffocation",
+        "must sit up to breathe",
+        "suffocation on waking",
+        "anxious fearful gasping"
+      ],
+      "remedies": [
+        {
+          "id": "spong",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
       "rubric": "Air hunger, wants to be fanned, collapse with icy coldness of extremities",
       "triggers": [
         "air hunger wants fanned",
