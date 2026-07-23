@@ -1179,6 +1179,14 @@
         {
           "t": "foul odor breath discharge",
           "w": 1
+        },
+        {
+          "t": "talks constantly, feels scattered or as if body parts are separated from each other",
+          "w": 1.5
+        },
+        {
+          "t": "chilly with restlessness, bed feels intolerably hard, must constantly change position",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -1191,7 +1199,7 @@
         "acute": "200C single dose",
         "chronic": "1M only under experienced practitioner supervision"
       },
-      "maxScore": 8
+      "maxScore": 11.0
     },
     {
       "id": "tub",
@@ -1222,6 +1230,22 @@
         {
           "t": "craving open air",
           "w": 1
+        },
+        {
+          "t": "changeable mood, dissatisfied with everything, wants constant change of scenery",
+          "w": 1.5
+        },
+        {
+          "t": "irritable and destructive, especially in children, tears things or breaks toys",
+          "w": 1.5
+        },
+        {
+          "t": "chilly patient, worse from cold and damp, yet craves fresh open air",
+          "w": 1.5
+        },
+        {
+          "t": "great weakness and emaciation despite eating well, worse in the morning",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -1233,7 +1257,7 @@
         "acute": "-",
         "chronic": "1M single dose, only under experienced practitioner supervision"
       },
-      "maxScore": 8
+      "maxScore": 14.0
     },
     {
       "id": "calc-p",
@@ -6081,6 +6105,14 @@
         {
           "t": "collapse from onset of illness",
           "w": 2
+        },
+        {
+          "t": "cannot bear anyone to come near, fears being touched due to extreme sensitivity",
+          "w": 1.5
+        },
+        {
+          "t": "worse from sleep, wakes feeling worse than before sleeping; worse right side",
+          "w": 1.5
         }
       ],
       "diseaseTags": [],
@@ -6088,7 +6120,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 16
+      "maxScore": 19.0
     },
     {
       "id": "crot-t",
@@ -7103,6 +7135,14 @@
         {
           "t": "convulsions after brain concussion or head injury",
           "w": 1
+        },
+        {
+          "t": "fearful, oversensitive, low-spirited after an injury, especially head injury",
+          "w": 1.5
+        },
+        {
+          "t": "worse from cold, damp weather, and touch; better from bending head backward",
+          "w": 1.5
         }
       ],
       "diseaseTags": [],
@@ -7110,7 +7150,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 12
+      "maxScore": 15.0
     },
     {
       "id": "iod",
@@ -10892,6 +10932,14 @@
         {
           "t": "sunstroke",
           "w": 2
+        },
+        {
+          "t": "delirium with congestion, staring wildly, muttering",
+          "w": 1.5
+        },
+        {
+          "t": "worse from motion and stooping, worse lying down; full bounding then slow pulse",
+          "w": 1.5
         }
       ],
       "diseaseTags": [],
@@ -10899,7 +10947,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 10
+      "maxScore": 13.0
     },
     {
       "id": "zinc",
