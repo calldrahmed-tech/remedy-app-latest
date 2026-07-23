@@ -988,7 +988,7 @@ function runSearch() {
     const hasEveningDose = bp.evening && bp.evening !== "-";
     html += `<div class="collapsible-section gold">
       <button class="collapsible-toggle" onclick="toggleSection('expert-section')">
-        <span>⭐ Expert Protocol (For Difficult / Chronic Cases)</span>
+        <span>⭐ Expert Protocol: ${esc(diseaseProtocol.name)}</span>
         <span class="ct-link"><span id="expert-section-arrow">▶</span> Use Expert Protocol (Advanced)</span>
       </button>
       <div id="expert-section" class="collapsible-content" style="display:none;">
