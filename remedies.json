@@ -11540,7 +11540,8 @@
           "Processed low-fiber food",
           "Ignoring the urge to defecate"
         ]
-      }
+      },
+      "nosode": "Psorinum"
     },
     {
       "id": "malabsorption",
@@ -11689,7 +11690,8 @@
           "Spicy fried food",
           "Dairy if it increases mucus"
         ]
-      }
+      },
+      "nosode": "Tuberculinum"
     },
     {
       "id": "eczema",
@@ -11724,7 +11726,8 @@
           "Harsh soaps and synthetic fabrics",
           "Excess sugar"
         ]
-      }
+      },
+      "nosode": "Psorinum"
     },
     {
       "id": "insomnia",
@@ -12718,7 +12721,8 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "nosode": "Tuberculinum"
     },
     {
       "id": "cervical-spondylosis",
@@ -14474,7 +14478,8 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "nosode": "Psorinum"
     },
     {
       "id": "ringworm",
@@ -14503,7 +14508,8 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "nosode": "Tuberculinum"
     },
     {
       "id": "skin-allergy-urticaria",
