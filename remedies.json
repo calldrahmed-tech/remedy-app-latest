@@ -11513,15 +11513,13 @@
         "constipation"
       ],
       "primaryRemedies": [
-        "bry",
-        "graph",
-        "nux-v",
-        "sil"
+        "alum",
+        "hydr"
       ],
       "banerji": {
-        "morning": "Nux Vomica 30, morning",
-        "evening": "Bryonia 30, evening",
-        "note": "Alternate for constipation with ineffectual urging plus hard dry stool."
+        "morning": "Alumina 30, 3x daily",
+        "evening": "Hydrastis 30, 3x daily",
+        "note": "Alumina for no urge with difficult straining; Hydrastis for sluggish digestion with constipation."
       },
       "biochemic": "Nat Mur 6X, 4 tablets 3x daily",
       "tests": [
@@ -11738,14 +11736,13 @@
         "difficulty sleeping"
       ],
       "primaryRemedies": [
-        "arg-n",
-        "gels",
-        "ign"
+        "coff",
+        "nux-v"
       ],
       "banerji": {
-        "morning": "-",
-        "evening": "Kali Phos biochemic 6X at bedtime plus Coffea Cruda 200 if mind is overactive",
-        "note": "Address root cause (anxiety vs overwork) before repeating potentised remedy nightly."
+        "morning": "Coffea Cruda 30, 3x daily",
+        "evening": "Nux Vomica 30, 3x daily",
+        "note": "Coffea Cruda for over-active mind unable to switch off; Nux Vomica for insomnia from overwork or stimulant excess."
       },
       "biochemic": "Kali Phos 6X, 4 tablets at bedtime",
       "tests": [
@@ -11804,7 +11801,6 @@
         "pertussis"
       ],
       "primaryRemedies": [
-        "dros",
         "dros"
       ],
       "banerji": {
@@ -12037,12 +12033,12 @@
       ],
       "primaryRemedies": [
         "coloc",
-        "rhus-t"
+        "mag-p"
       ],
       "banerji": {
-        "morning": "Colocynthis 200, single dose",
-        "evening": "Rhus Tox 200, single dose",
-        "note": "Colocynthis for cramping, better bending double; Rhus Tox for stiffness better from continued motion."
+        "morning": "Colocynthis 30, 3x daily",
+        "evening": "Magnesia Phosphorica 30, 3x daily",
+        "note": "Colocynthis for cramping pain better bending double; Magnesia Phosphorica for cramping, neuralgic pain better warmth and pressure."
       },
       "biochemic": "Mag Phos 6X, 4 tablets 3x daily",
       "tests": [
@@ -14817,6 +14813,97 @@
         "morning": "Cina 30, 3x daily",
         "evening": "Sabadilla 30, 3x daily",
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "rheumatoid-arthritis",
+      "name": "Arthritis (Rheumatoid)",
+      "synonyms": [
+        "rheumatoid arthritis",
+        "ra"
+      ],
+      "primaryRemedies": [
+        "caust",
+        "colch"
+      ],
+      "banerji": {
+        "morning": "Causticum 30, 3x daily",
+        "evening": "Colchicum 30, 3x daily",
+        "note": "Causticum for deformed joints with contracted tendons; Colchicum for intense pain worse on motion and touch, worse cold damp weather."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "cough-productive-loose",
+      "name": "Cough (Productive, Loose)",
+      "synonyms": [
+        "productive cough",
+        "loose cough",
+        "wet cough"
+      ],
+      "primaryRemedies": [
+        "ant-t",
+        "ip"
+      ],
+      "banerji": {
+        "morning": "Antimonium Tartaricum 30, 3x daily",
+        "evening": "Ipecacuanha 30, 3x daily",
+        "note": "Antimonium Tart for loose rattling cough with little expectorated; Ipecac for cough with gagging and vomiting."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "cough-dry-irritating",
+      "name": "Cough (Dry, Irritating)",
+      "synonyms": [
+        "dry cough",
+        "irritating cough"
+      ],
+      "primaryRemedies": [
+        "bry",
+        "dros"
+      ],
+      "banerji": {
+        "morning": "Bryonia Alba 30, 3x daily",
+        "evening": "Drosera Rotundifolia 30, 3x daily",
+        "note": "Bryonia for dry cough worse from any motion, holds chest; Drosera for dry spasmodic cough worse at night."
       },
       "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
       "tests": [
