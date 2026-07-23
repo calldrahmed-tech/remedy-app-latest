@@ -14918,6 +14918,40 @@
           "Known individual trigger foods"
         ]
       }
+    },
+    {
+      "id": "fever-general-viral",
+      "name": "Fever (General/Viral, Acute)",
+      "synonyms": [
+        "fever",
+        "viral fever",
+        "high fever",
+        "acute fever"
+      ],
+      "primaryRemedies": [
+        "ars-alb",
+        "bell"
+      ],
+      "banerji": {
+        "morning": "Arsenicum Album 30, 3x daily",
+        "evening": "Belladonna 30, 3x daily",
+        "note": "Arsenicum Album for fever with restlessness, chilliness, and prostration; Belladonna for sudden high fever with hot red face and throbbing."
+      },
+      "biochemic": "Ferrum Phos 6X, 4 tablets every 2 hours during acute fever",
+      "tests": [
+        "Temperature monitoring",
+        "CBC if fever persists beyond 3 days",
+        "Consult a doctor for high or persistent fever, especially in children"
+      ],
+      "diet": {
+        "eat": [
+          "Warm fluids, soups",
+          "Light, easily digestible food"
+        ],
+        "avoid": [
+          "Heavy, oily, or hard-to-digest food during acute fever"
+        ]
+      }
     }
   ]
 }
