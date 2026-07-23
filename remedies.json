@@ -12247,6 +12247,2584 @@
           "Repetitive strain on the affected joint"
         ]
       }
+    },
+    {
+      "id": "abscess-acute-painful",
+      "name": "Abscess (acute, painful)",
+      "synonyms": [
+        "abscess"
+      ],
+      "primaryRemedies": [
+        "hep",
+        "bell"
+      ],
+      "banerji": {
+        "morning": "Hepar Sulph 30, 3x daily",
+        "evening": "Belladonna 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "acidity-hyperacidity",
+      "name": "Acidity / Hyperacidity",
+      "synonyms": [
+        "acidity / hyperacidity",
+        "acidity",
+        "hyperacidity"
+      ],
+      "primaryRemedies": [
+        "nux-v",
+        "robinia"
+      ],
+      "banerji": {
+        "morning": "Nux Vomica 30, 3x daily",
+        "evening": "Robinia 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "acne",
+      "name": "Acne",
+      "synonyms": [
+        "acne"
+      ],
+      "primaryRemedies": [
+        "kali-br",
+        "hep"
+      ],
+      "banerji": {
+        "morning": "Kali Bromatum 30, 3x daily",
+        "evening": "Hepar Sulph 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "alopecia-hair-loss",
+      "name": "Alopecia (hair loss)",
+      "synonyms": [
+        "alopecia"
+      ],
+      "primaryRemedies": [
+        "fl-ac",
+        "phos"
+      ],
+      "banerji": {
+        "morning": "Fluoric Acid 30, 3x daily",
+        "evening": "Phosphorus 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "amenorrhea-delayedabsent-periods",
+      "name": "Amenorrhea (delayed/absent periods)",
+      "synonyms": [
+        "amenorrhea"
+      ],
+      "primaryRemedies": [
+        "puls",
+        "sep"
+      ],
+      "banerji": {
+        "morning": "Pulsatilla 30, 3x daily",
+        "evening": "Sepia 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "anemia",
+      "name": "Anemia",
+      "synonyms": [
+        "anemia"
+      ],
+      "primaryRemedies": [
+        "chin",
+        "nat-mur"
+      ],
+      "banerji": {
+        "morning": "China 30, 3x daily",
+        "evening": "Natrum Mur 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "angina-pectoris-adjunct",
+      "name": "Angina Pectoris (adjunct)",
+      "synonyms": [
+        "angina pectoris"
+      ],
+      "primaryRemedies": [
+        "cact",
+        "spig"
+      ],
+      "banerji": {
+        "morning": "Cactus Grandiflorus 30, 3x daily",
+        "evening": "Spigelia 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "anxiety-panic",
+      "name": "Anxiety / Panic",
+      "synonyms": [
+        "anxiety / panic",
+        "anxiety",
+        "panic"
+      ],
+      "primaryRemedies": [
+        "arg-n",
+        "gels"
+      ],
+      "banerji": {
+        "morning": "Argentum Nitricum 30, 3x daily",
+        "evening": "Gelsemium 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "appendicitis-acute-adjunct",
+      "name": "Appendicitis (acute, adjunct)",
+      "synonyms": [
+        "appendicitis"
+      ],
+      "primaryRemedies": [
+        "bell",
+        "bry"
+      ],
+      "banerji": {
+        "morning": "Belladonna 30, 3x daily",
+        "evening": "Bryonia 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "asthma-acute-attack",
+      "name": "Asthma (acute attack)",
+      "synonyms": [
+        "asthma"
+      ],
+      "primaryRemedies": [
+        "ars-alb",
+        "ip"
+      ],
+      "banerji": {
+        "morning": "Arsenicum Album 30, 3x daily",
+        "evening": "Ipecac 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "athletes-foot-fungal-skin-infection",
+      "name": "Athlete's Foot / Fungal skin infection",
+      "synonyms": [
+        "athlete's foot / fungal skin infection",
+        "athlete's foot",
+        "fungal skin infection"
+      ],
+      "primaryRemedies": [
+        "graph",
+        "sil"
+      ],
+      "banerji": {
+        "morning": "Graphites 30, 3x daily",
+        "evening": "Silicea 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "back-pain-lumbar-muscular",
+      "name": "Back Pain (lumbar, muscular)",
+      "synonyms": [
+        "back pain"
+      ],
+      "primaryRemedies": [
+        "rhus-t",
+        "kali-c"
+      ],
+      "banerji": {
+        "morning": "Rhus Tox 30, 3x daily",
+        "evening": "Kali Carb 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "bells-palsy-adjunct",
+      "name": "Bell's Palsy (adjunct)",
+      "synonyms": [
+        "bell's palsy"
+      ],
+      "primaryRemedies": [
+        "caust",
+        "gels"
+      ],
+      "banerji": {
+        "morning": "Causticum 30, 3x daily",
+        "evening": "Gelsemium 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "boils-furunculosis",
+      "name": "Boils / Furunculosis",
+      "synonyms": [
+        "boils / furunculosis",
+        "boils",
+        "furunculosis"
+      ],
+      "primaryRemedies": [
+        "hep",
+        "bell"
+      ],
+      "banerji": {
+        "morning": "Hepar Sulph 30, 3x daily",
+        "evening": "Belladonna 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "bronchitis-acute",
+      "name": "Bronchitis (acute)",
+      "synonyms": [
+        "bronchitis"
+      ],
+      "primaryRemedies": [
+        "ant-t",
+        "bry"
+      ],
+      "banerji": {
+        "morning": "Antimonium Tart 30, 3x daily",
+        "evening": "Bryonia 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "bronchitis-chronic",
+      "name": "Bronchitis (chronic)",
+      "synonyms": [
+        "bronchitis"
+      ],
+      "primaryRemedies": [
+        "hep",
+        "kali-bi"
+      ],
+      "banerji": {
+        "morning": "Hepar Sulph 30, 3x daily",
+        "evening": "Kali Bichromicum 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "cervical-spondylosis",
+      "name": "Cervical Spondylosis",
+      "synonyms": [
+        "cervical spondylosis"
+      ],
+      "primaryRemedies": [
+        "kali-c",
+        "rhus-t"
+      ],
+      "banerji": {
+        "morning": "Kali Carb 30, 3x daily",
+        "evening": "Rhus Tox 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "cholecystitis-gallstones-acute-colic",
+      "name": "Cholecystitis / Gallstones (acute colic)",
+      "synonyms": [
+        "cholecystitis / gallstones",
+        "cholecystitis",
+        "gallstones"
+      ],
+      "primaryRemedies": [
+        "chel",
+        "coloc"
+      ],
+      "banerji": {
+        "morning": "Chelidonium 30, 3x daily",
+        "evening": "Colocynth 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "cold-common-coryza",
+      "name": "Cold (common), Coryza",
+      "synonyms": [
+        "cold, coryza"
+      ],
+      "primaryRemedies": [
+        "all-c",
+        "nat-mur"
+      ],
+      "banerji": {
+        "morning": "Allium Cepa 30, 3x daily",
+        "evening": "Natrum Mur 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "colitis",
+      "name": "Colitis",
+      "synonyms": [
+        "colitis"
+      ],
+      "primaryRemedies": [
+        "merc-c",
+        "coloc"
+      ],
+      "banerji": {
+        "morning": "Mercurius Corrosivus 30, 3x daily",
+        "evening": "Colocynth 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "conjunctivitis",
+      "name": "Conjunctivitis",
+      "synonyms": [
+        "conjunctivitis"
+      ],
+      "primaryRemedies": [
+        "euphr",
+        "bell"
+      ],
+      "banerji": {
+        "morning": "Euphrasia 30, 3x daily",
+        "evening": "Belladonna 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "copd-adjunct",
+      "name": "COPD (adjunct)",
+      "synonyms": [
+        "copd"
+      ],
+      "primaryRemedies": [
+        "kali-c",
+        "ant-t"
+      ],
+      "banerji": {
+        "morning": "Kali Carb 30, 3x daily",
+        "evening": "Antimonium Tart 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "cystitis-uti-acute",
+      "name": "Cystitis / UTI (acute)",
+      "synonyms": [
+        "cystitis / uti",
+        "cystitis",
+        "uti"
+      ],
+      "primaryRemedies": [
+        "canth",
+        "staph"
+      ],
+      "banerji": {
+        "morning": "Cantharis 30, 3x daily",
+        "evening": "Staphysagria 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "dandruff",
+      "name": "Dandruff",
+      "synonyms": [
+        "dandruff"
+      ],
+      "primaryRemedies": [
+        "kali-sulph-rem",
+        "nat-mur"
+      ],
+      "banerji": {
+        "morning": "Kali Sulph 30, 3x daily",
+        "evening": "Natrum Mur 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "dengue-fever-adjunct-supportive",
+      "name": "Dengue Fever (adjunct, supportive)",
+      "synonyms": [
+        "dengue fever"
+      ],
+      "primaryRemedies": [
+        "eup-per",
+        "rhus-t"
+      ],
+      "banerji": {
+        "morning": "Eupatorium Perfoliatum 30, 3x daily",
+        "evening": "Rhus Tox 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "depression",
+      "name": "Depression",
+      "synonyms": [
+        "depression"
+      ],
+      "primaryRemedies": [
+        "nat-mur",
+        "aur"
+      ],
+      "banerji": {
+        "morning": "Natrum Mur 30, 3x daily",
+        "evening": "Aurum Metallicum 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "diarrhea-acute",
+      "name": "Diarrhea (acute)",
+      "synonyms": [
+        "diarrhea"
+      ],
+      "primaryRemedies": [
+        "ars-alb",
+        "podo"
+      ],
+      "banerji": {
+        "morning": "Arsenicum Album 30, 3x daily",
+        "evening": "Podophyllum 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "diarrhea-chronic",
+      "name": "Diarrhea (chronic)",
+      "synonyms": [
+        "diarrhea"
+      ],
+      "primaryRemedies": [
+        "nat-sulph",
+        "sulph"
+      ],
+      "banerji": {
+        "morning": "Natrum Sulph 30, 3x daily",
+        "evening": "Sulphur 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "dysentery",
+      "name": "Dysentery",
+      "synonyms": [
+        "dysentery"
+      ],
+      "primaryRemedies": [
+        "merc-c",
+        "coloc"
+      ],
+      "banerji": {
+        "morning": "Mercurius Corrosivus 30, 3x daily",
+        "evening": "Colocynth 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "dysmenorrhea-painful-periods",
+      "name": "Dysmenorrhea (painful periods)",
+      "synonyms": [
+        "dysmenorrhea"
+      ],
+      "primaryRemedies": [
+        "mag-p",
+        "coloc"
+      ],
+      "banerji": {
+        "morning": "Magnesia Phosphorica 30, 3x daily",
+        "evening": "Colocynth 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "ear-infection-otitis-media-acute",
+      "name": "Ear Infection (Otitis Media, acute)",
+      "synonyms": [
+        "ear infection"
+      ],
+      "primaryRemedies": [
+        "bell",
+        "cham"
+      ],
+      "banerji": {
+        "morning": "Belladonna 30, 3x daily",
+        "evening": "Chamomilla 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "epilepsy-adjunct-only",
+      "name": "Epilepsy (adjunct only)",
+      "synonyms": [
+        "epilepsy"
+      ],
+      "primaryRemedies": [
+        "cupr",
+        "bell"
+      ],
+      "banerji": {
+        "morning": "Cuprum Metallicum 30, 3x daily",
+        "evening": "Belladonna 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "fatty-liver",
+      "name": "Fatty Liver",
+      "synonyms": [
+        "fatty liver"
+      ],
+      "primaryRemedies": [
+        "chel",
+        "lyc"
+      ],
+      "banerji": {
+        "morning": "Chelidonium 30, 3x daily",
+        "evening": "Lycopodium 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "fissure-anal",
+      "name": "Fissure (Anal)",
+      "synonyms": [
+        "fissure"
+      ],
+      "primaryRemedies": [
+        "rat",
+        "nit-ac"
+      ],
+      "banerji": {
+        "morning": "Ratanhia 30, 3x daily",
+        "evening": "Nitric Acid 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "fistula-anal-adjunct",
+      "name": "Fistula (anal, adjunct)",
+      "synonyms": [
+        "fistula"
+      ],
+      "primaryRemedies": [
+        "berb",
+        "sil"
+      ],
+      "banerji": {
+        "morning": "Berberis Vulgaris 30, 3x daily",
+        "evening": "Silicea 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "flatulence-gas",
+      "name": "Flatulence / Gas",
+      "synonyms": [
+        "flatulence / gas",
+        "flatulence",
+        "gas"
+      ],
+      "primaryRemedies": [
+        "carb-v",
+        "lyc"
+      ],
+      "banerji": {
+        "morning": "Carbo Veg 30, 3x daily",
+        "evening": "Lycopodium 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "flu-influenza",
+      "name": "Flu / Influenza",
+      "synonyms": [
+        "flu / influenza",
+        "flu",
+        "influenza"
+      ],
+      "primaryRemedies": [
+        "gels",
+        "bry"
+      ],
+      "banerji": {
+        "morning": "Gelsemium 30, 3x daily",
+        "evening": "Bryonia 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "food-poisoning",
+      "name": "Food Poisoning",
+      "synonyms": [
+        "food poisoning"
+      ],
+      "primaryRemedies": [
+        "ars-alb",
+        "carb-v"
+      ],
+      "banerji": {
+        "morning": "Arsenicum Album 30, 3x daily",
+        "evening": "Carbo Veg 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "gallstones",
+      "name": "Gallstones",
+      "synonyms": [
+        "gallstones"
+      ],
+      "primaryRemedies": [
+        "chel",
+        "berb"
+      ],
+      "banerji": {
+        "morning": "Chelidonium 30, 3x daily",
+        "evening": "Berberis Vulgaris 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "gastritis",
+      "name": "Gastritis",
+      "synonyms": [
+        "gastritis"
+      ],
+      "primaryRemedies": [
+        "nux-v",
+        "arg-n"
+      ],
+      "banerji": {
+        "morning": "Nux Vomica 30, 3x daily",
+        "evening": "Argentum Nitricum 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "gastroenteritis-acute",
+      "name": "Gastroenteritis (acute)",
+      "synonyms": [
+        "gastroenteritis"
+      ],
+      "primaryRemedies": [
+        "ars-alb",
+        "verat"
+      ],
+      "banerji": {
+        "morning": "Arsenicum Album 30, 3x daily",
+        "evening": "Veratrum Album 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "gerd-acid-reflux",
+      "name": "GERD / Acid Reflux",
+      "synonyms": [
+        "gerd / acid reflux",
+        "gerd",
+        "acid reflux"
+      ],
+      "primaryRemedies": [
+        "robinia",
+        "nux-v"
+      ],
+      "banerji": {
+        "morning": "Robinia 30, 3x daily",
+        "evening": "Nux Vomica 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "goiter",
+      "name": "Goiter",
+      "synonyms": [
+        "goiter"
+      ],
+      "primaryRemedies": [
+        "spong",
+        "iod"
+      ],
+      "banerji": {
+        "morning": "Spongia 30, 3x daily",
+        "evening": "Iodum 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "gout",
+      "name": "Gout",
+      "synonyms": [
+        "gout"
+      ],
+      "primaryRemedies": [
+        "colch",
+        "benz-ac"
+      ],
+      "banerji": {
+        "morning": "Colchicum 30, 3x daily",
+        "evening": "Benzoic Acid 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "headache-tension-type",
+      "name": "Headache (Tension type)",
+      "synonyms": [
+        "headache"
+      ],
+      "primaryRemedies": [
+        "nux-v",
+        "bry"
+      ],
+      "banerji": {
+        "morning": "Nux Vomica 30, 3x daily",
+        "evening": "Bryonia 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "headache-migraine",
+      "name": "Headache (Migraine)",
+      "synonyms": [
+        "headache"
+      ],
+      "primaryRemedies": [
+        "sang",
+        "iris"
+      ],
+      "banerji": {
+        "morning": "Sanguinaria 30, 3x daily",
+        "evening": "Iris Versicolor 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "heart-palpitations-functional-adjunct",
+      "name": "Heart Palpitations (functional, adjunct)",
+      "synonyms": [
+        "heart palpitations"
+      ],
+      "primaryRemedies": [
+        "spig",
+        "naja"
+      ],
+      "banerji": {
+        "morning": "Spigelia 30, 3x daily",
+        "evening": "Naja 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "hemorrhoids-piles",
+      "name": "Hemorrhoids / Piles",
+      "synonyms": [
+        "hemorrhoids / piles",
+        "hemorrhoids",
+        "piles"
+      ],
+      "primaryRemedies": [
+        "aesc",
+        "ham"
+      ],
+      "banerji": {
+        "morning": "Aesculus Hippocastanum 30, 3x daily",
+        "evening": "Hamamelis 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "hepatitis-viral-adjunct",
+      "name": "Hepatitis (viral, adjunct)",
+      "synonyms": [
+        "hepatitis"
+      ],
+      "primaryRemedies": [
+        "chel",
+        "phos"
+      ],
+      "banerji": {
+        "morning": "Chelidonium 30, 3x daily",
+        "evening": "Phosphorus 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "herpes-oralgenital",
+      "name": "Herpes (oral/genital)",
+      "synonyms": [
+        "herpes"
+      ],
+      "primaryRemedies": [
+        "rhus-t",
+        "nat-mur"
+      ],
+      "banerji": {
+        "morning": "Rhus Tox 30, 3x daily",
+        "evening": "Natrum Mur 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "hyperthyroidism-adjunct",
+      "name": "Hyperthyroidism (adjunct)",
+      "synonyms": [
+        "hyperthyroidism"
+      ],
+      "primaryRemedies": [
+        "iod",
+        "nat-mur"
+      ],
+      "banerji": {
+        "morning": "Iodum 30, 3x daily",
+        "evening": "Natrum Mur 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "impetigo",
+      "name": "Impetigo",
+      "synonyms": [
+        "impetigo"
+      ],
+      "primaryRemedies": [
+        "ant-c",
+        "mez"
+      ],
+      "banerji": {
+        "morning": "Antimonium Crudum 30, 3x daily",
+        "evening": "Mezereum 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "infertility-female-adjunct",
+      "name": "Infertility (Female, adjunct)",
+      "synonyms": [
+        "infertility"
+      ],
+      "primaryRemedies": [
+        "sep",
+        "puls"
+      ],
+      "banerji": {
+        "morning": "Sepia 30, 3x daily",
+        "evening": "Pulsatilla 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "infertility-male-adjunct",
+      "name": "Infertility (Male, adjunct)",
+      "synonyms": [
+        "infertility"
+      ],
+      "primaryRemedies": [
+        "agn",
+        "sel"
+      ],
+      "banerji": {
+        "morning": "Agnus Castus 30, 3x daily",
+        "evening": "Selenium 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "jaundice",
+      "name": "Jaundice",
+      "synonyms": [
+        "jaundice"
+      ],
+      "primaryRemedies": [
+        "chel",
+        "phos"
+      ],
+      "banerji": {
+        "morning": "Chelidonium 30, 3x daily",
+        "evening": "Phosphorus 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "laryngitis",
+      "name": "Laryngitis",
+      "synonyms": [
+        "laryngitis"
+      ],
+      "primaryRemedies": [
+        "caust",
+        "phos"
+      ],
+      "banerji": {
+        "morning": "Causticum 30, 3x daily",
+        "evening": "Phosphorus 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "leucorrhea-vaginal-discharge",
+      "name": "Leucorrhea (vaginal discharge)",
+      "synonyms": [
+        "leucorrhea"
+      ],
+      "primaryRemedies": [
+        "sep",
+        "puls"
+      ],
+      "banerji": {
+        "morning": "Sepia 30, 3x daily",
+        "evening": "Pulsatilla 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "liver-cirrhosis-adjunct-only",
+      "name": "Liver Cirrhosis (adjunct only)",
+      "synonyms": [
+        "liver cirrhosis"
+      ],
+      "primaryRemedies": [
+        "chel",
+        "phos"
+      ],
+      "banerji": {
+        "morning": "Chelidonium 30, 3x daily",
+        "evening": "Phosphorus 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "lymph-node-swelling",
+      "name": "Lymph Node Swelling",
+      "synonyms": [
+        "lymph node swelling"
+      ],
+      "primaryRemedies": [
+        "sil",
+        "bar-c"
+      ],
+      "banerji": {
+        "morning": "Silicea 30, 3x daily",
+        "evening": "Baryta Carb 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "measles",
+      "name": "Measles",
+      "synonyms": [
+        "measles"
+      ],
+      "primaryRemedies": [
+        "puls",
+        "euphr"
+      ],
+      "banerji": {
+        "morning": "Pulsatilla 30, 3x daily",
+        "evening": "Euphrasia 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "memory-weakness-poor-concentration",
+      "name": "Memory Weakness / Poor Concentration",
+      "synonyms": [
+        "memory weakness / poor concentration",
+        "memory weakness",
+        "poor concentration"
+      ],
+      "primaryRemedies": [
+        "anac",
+        "bar-c"
+      ],
+      "banerji": {
+        "morning": "Anacardium 30, 3x daily",
+        "evening": "Baryta Carb 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "menieres-disease",
+      "name": "Meniere's Disease",
+      "synonyms": [
+        "meniere's disease"
+      ],
+      "primaryRemedies": [
+        "con",
+        "cocc"
+      ],
+      "banerji": {
+        "morning": "Conium 30, 3x daily",
+        "evening": "Cocculus 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "menopause-symptoms",
+      "name": "Menopause Symptoms",
+      "synonyms": [
+        "menopause symptoms"
+      ],
+      "primaryRemedies": [
+        "sep",
+        "lach"
+      ],
+      "banerji": {
+        "morning": "Sepia 30, 3x daily",
+        "evening": "Lachesis 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "mouth-ulcers",
+      "name": "Mouth Ulcers",
+      "synonyms": [
+        "mouth ulcers"
+      ],
+      "primaryRemedies": [
+        "bor",
+        "merc-sol"
+      ],
+      "banerji": {
+        "morning": "Borax 30, 3x daily",
+        "evening": "Mercurius Solubilis 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "nausea-vomiting-acute",
+      "name": "Nausea / Vomiting (acute)",
+      "synonyms": [
+        "nausea / vomiting",
+        "nausea",
+        "vomiting"
+      ],
+      "primaryRemedies": [
+        "ip",
+        "ars-alb"
+      ],
+      "banerji": {
+        "morning": "Ipecac 30, 3x daily",
+        "evening": "Arsenicum Album 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "nephrotic-syndrome-adjunct-only",
+      "name": "Nephrotic Syndrome (adjunct only)",
+      "synonyms": [
+        "nephrotic syndrome"
+      ],
+      "primaryRemedies": [
+        "apis",
+        "ars-alb"
+      ],
+      "banerji": {
+        "morning": "Apis Mellifica 30, 3x daily",
+        "evening": "Arsenicum Album 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "obesity",
+      "name": "Obesity",
+      "synonyms": [
+        "obesity"
+      ],
+      "primaryRemedies": [
+        "calc-c",
+        "graph"
+      ],
+      "banerji": {
+        "morning": "Calcarea Carb 30, 3x daily",
+        "evening": "Graphites 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "osteoporosis-adjunct",
+      "name": "Osteoporosis (adjunct)",
+      "synonyms": [
+        "osteoporosis"
+      ],
+      "primaryRemedies": [
+        "calc-p",
+        "symph"
+      ],
+      "banerji": {
+        "morning": "Calcarea Phos 30, 3x daily",
+        "evening": "Symphytum 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "ovarian-cyst",
+      "name": "Ovarian Cyst",
+      "synonyms": [
+        "ovarian cyst"
+      ],
+      "primaryRemedies": [
+        "apis",
+        "lach"
+      ],
+      "banerji": {
+        "morning": "Apis Mellifica 30, 3x daily",
+        "evening": "Lachesis 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "pancreatitis-adjunct-only",
+      "name": "Pancreatitis (adjunct only)",
+      "synonyms": [
+        "pancreatitis"
+      ],
+      "primaryRemedies": [
+        "iris",
+        "phos"
+      ],
+      "banerji": {
+        "morning": "Iris Versicolor 30, 3x daily",
+        "evening": "Phosphorus 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "paralysis-post-stroke-adjunct-only",
+      "name": "Paralysis (Post-stroke, adjunct only)",
+      "synonyms": [
+        "paralysis"
+      ],
+      "primaryRemedies": [
+        "caust",
+        "gels"
+      ],
+      "banerji": {
+        "morning": "Causticum 30, 3x daily",
+        "evening": "Gelsemium 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "peptic-ulcer",
+      "name": "Peptic Ulcer",
+      "synonyms": [
+        "peptic ulcer"
+      ],
+      "primaryRemedies": [
+        "arg-n",
+        "kali-bi"
+      ],
+      "banerji": {
+        "morning": "Argentum Nitricum 30, 3x daily",
+        "evening": "Kali Bichromicum 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "pharyngitis",
+      "name": "Pharyngitis",
+      "synonyms": [
+        "pharyngitis"
+      ],
+      "primaryRemedies": [
+        "bell",
+        "merc-sol"
+      ],
+      "banerji": {
+        "morning": "Belladonna 30, 3x daily",
+        "evening": "Mercurius Solubilis 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "pneumonia-adjunct-only",
+      "name": "Pneumonia (adjunct only)",
+      "synonyms": [
+        "pneumonia"
+      ],
+      "primaryRemedies": [
+        "bry",
+        "phos"
+      ],
+      "banerji": {
+        "morning": "Bryonia 30, 3x daily",
+        "evening": "Phosphorus 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "prostate-enlargement-bph",
+      "name": "Prostate Enlargement (BPH)",
+      "synonyms": [
+        "prostate enlargement"
+      ],
+      "primaryRemedies": [
+        "con",
+        "thuj"
+      ],
+      "banerji": {
+        "morning": "Conium 30, 3x daily",
+        "evening": "Thuja 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "psoriasis",
+      "name": "Psoriasis",
+      "synonyms": [
+        "psoriasis"
+      ],
+      "primaryRemedies": [
+        "ars-alb",
+        "graph"
+      ],
+      "banerji": {
+        "morning": "Arsenicum Album 30, 3x daily",
+        "evening": "Graphites 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "ringworm",
+      "name": "Ringworm",
+      "synonyms": [
+        "ringworm"
+      ],
+      "primaryRemedies": [
+        "sep",
+        "tell"
+      ],
+      "banerji": {
+        "morning": "Sepia 30, 3x daily",
+        "evening": "Tellurium 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "skin-allergy-urticaria",
+      "name": "Skin Allergy / Urticaria",
+      "synonyms": [
+        "skin allergy / urticaria",
+        "skin allergy",
+        "urticaria"
+      ],
+      "primaryRemedies": [
+        "apis",
+        "nat-mur"
+      ],
+      "banerji": {
+        "morning": "Apis Mellifica 30, 3x daily",
+        "evening": "Natrum Mur 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "sleep-apnea-adjunct-only",
+      "name": "Sleep Apnea (adjunct only)",
+      "synonyms": [
+        "sleep apnea"
+      ],
+      "primaryRemedies": [
+        "lach",
+        "op"
+      ],
+      "banerji": {
+        "morning": "Lachesis 30, 3x daily",
+        "evening": "Opium 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "sore-throat",
+      "name": "Sore Throat",
+      "synonyms": [
+        "sore throat"
+      ],
+      "primaryRemedies": [
+        "bell",
+        "merc-sol"
+      ],
+      "banerji": {
+        "morning": "Belladonna 30, 3x daily",
+        "evening": "Mercurius Solubilis 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "spondylitis-lumbar",
+      "name": "Spondylitis (Lumbar)",
+      "synonyms": [
+        "spondylitis"
+      ],
+      "primaryRemedies": [
+        "rhus-t",
+        "kali-c"
+      ],
+      "banerji": {
+        "morning": "Rhus Tox 30, 3x daily",
+        "evening": "Kali Carb 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "stammering",
+      "name": "Stammering",
+      "synonyms": [
+        "stammering"
+      ],
+      "primaryRemedies": [
+        "stram",
+        "caust"
+      ],
+      "banerji": {
+        "morning": "Stramonium 30, 3x daily",
+        "evening": "Causticum 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "stye",
+      "name": "Stye",
+      "synonyms": [
+        "stye"
+      ],
+      "primaryRemedies": [
+        "staph",
+        "puls"
+      ],
+      "banerji": {
+        "morning": "Staphysagria 30, 3x daily",
+        "evening": "Pulsatilla 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "toothache",
+      "name": "Toothache",
+      "synonyms": [
+        "toothache"
+      ],
+      "primaryRemedies": [
+        "cham",
+        "coff"
+      ],
+      "banerji": {
+        "morning": "Chamomilla 30, 3x daily",
+        "evening": "Coffea Cruda 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "varicose-veins",
+      "name": "Varicose Veins",
+      "synonyms": [
+        "varicose veins"
+      ],
+      "primaryRemedies": [
+        "ham",
+        "puls"
+      ],
+      "banerji": {
+        "morning": "Hamamelis 30, 3x daily",
+        "evening": "Pulsatilla 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "vertigo",
+      "name": "Vertigo",
+      "synonyms": [
+        "vertigo"
+      ],
+      "primaryRemedies": [
+        "con",
+        "cocc"
+      ],
+      "banerji": {
+        "morning": "Conium 30, 3x daily",
+        "evening": "Cocculus 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "vitiligo",
+      "name": "Vitiligo",
+      "synonyms": [
+        "vitiligo"
+      ],
+      "primaryRemedies": [
+        "ars-alb",
+        "sil"
+      ],
+      "banerji": {
+        "morning": "Arsenicum Album 30, 3x daily",
+        "evening": "Silicea 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
+    },
+    {
+      "id": "worms-intestinal",
+      "name": "Worms (Intestinal)",
+      "synonyms": [
+        "worms"
+      ],
+      "primaryRemedies": [
+        "cina",
+        "sabad"
+      ],
+      "banerji": {
+        "morning": "Cina 30, 3x daily",
+        "evening": "Sabadilla 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
+      },
+      "biochemic": "Select constitutional biochemic salts based on presenting symptoms",
+      "tests": [
+        "Clinical evaluation",
+        "Relevant investigations as indicated by presentation"
+      ],
+      "diet": {
+        "eat": [
+          "Balanced, easily digestible diet"
+        ],
+        "avoid": [
+          "Known individual trigger foods"
+        ]
+      }
     }
   ]
 }
