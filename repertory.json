@@ -1300,6 +1300,68 @@
       ]
     },
     {
+      "section": "Mind",
+      "rubric": "Sore, bruised, beaten feeling all over, dreads being touched or approached after injury",
+      "triggers": [
+        "sore bruised feeling as if beaten",
+        "fears being approached or touched",
+        "dreads anyone coming near"
+      ],
+      "remedies": [
+        {
+          "id": "arn",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Confused sense of time, forgets what was just said, performance anxiety with stammering",
+      "triggers": [
+        "confused sense of time",
+        "time passes slowly",
+        "forgets what was just said",
+        "performance anxiety stammering"
+      ],
+      "remedies": [
+        {
+          "id": "cann-s",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Cannot bear to be alone, dreads solitude intensely, must have company nearby",
+      "triggers": [
+        "cannot bear to be alone",
+        "dreads solitude intensely",
+        "must have company even in the next room"
+      ],
+      "remedies": [
+        {
+          "id": "bism",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Chronic catarrh with thin yellow or greenish discharge, wandering pains worse in warm room",
+      "triggers": [
+        "thin yellow greenish discharge",
+        "chronic catarrh yellow discharge",
+        "wandering pains shift rapidly",
+        "worse warm room better cool air"
+      ],
+      "remedies": [
+        {
+          "id": "kali-sulph-rem",
+          "grade": 3
+        }
+      ]
+    },
+    {
       "section": "Common",
       "rubric": "Air hunger, wants to be fanned, collapse with icy coldness of extremities",
       "triggers": [
