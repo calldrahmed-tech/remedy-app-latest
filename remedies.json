@@ -2748,6 +2748,18 @@
         {
           "t": "fear of being touched approached",
           "w": 1
+        },
+        {
+          "t": "sore, lame, bruised feeling all over as if beaten, worse from least touch or motion",
+          "w": 1.5
+        },
+        {
+          "t": "fears being approached or touched, dreads anyone coming near the injured part",
+          "w": 1.5
+        },
+        {
+          "t": "one part of body feels hot while another part feels cold after injury or exertion",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2759,7 +2771,7 @@
         "acute": "200C repeated after trauma, or 30C several times daily",
         "chronic": "-"
       },
-      "maxScore": 8
+      "maxScore": 12.0
     },
     {
       "id": "arg-n",
@@ -4843,6 +4855,14 @@
         {
           "t": "cholera-like with great prostration",
           "w": 2
+        },
+        {
+          "t": "cannot bear to be alone, must have company even in the next room, dreads solitude intensely",
+          "w": 1.5
+        },
+        {
+          "t": "large quantities of water vomited immediately after drinking, as soon as it reaches the stomach",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -4850,7 +4870,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 12
+      "maxScore": 14.5
     },
     {
       "id": "bor",
@@ -5370,6 +5390,14 @@
         {
           "t": "obstinate constipation with urine retention",
           "w": 2
+        },
+        {
+          "t": "confused sense of time, feels time passes very slowly, forgets what was just said",
+          "w": 1.5
+        },
+        {
+          "t": "great performance anxiety, stage fright with stammering and confusion of ideas",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -5377,7 +5405,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 10
+      "maxScore": 12.5
     },
     {
       "id": "caps",
@@ -6219,6 +6247,14 @@
         {
           "t": "better closing lids tightly",
           "w": 2
+        },
+        {
+          "t": "extreme, rapid changes of mood, laughing and crying alternately for no reason",
+          "w": 1.5
+        },
+        {
+          "t": "profuse, dark, stringy blood that hangs in long threads from the part",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -6226,7 +6262,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 12
+      "maxScore": 14.5
     },
     {
       "id": "crot-h",
@@ -9919,6 +9955,14 @@
         {
           "t": "toothache, headache from worms",
           "w": 2
+        },
+        {
+          "t": "violent, spasmodic sneezing fits with copious watery nasal discharge and itching in the nose",
+          "w": 1.5
+        },
+        {
+          "t": "vivid imagination, believes they are pregnant or possessed, or that they have worms",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -9926,7 +9970,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 10
+      "maxScore": 12.5
     },
     {
       "id": "sabin",
@@ -10573,6 +10617,14 @@
         {
           "t": "blows to eyeball",
           "w": 2
+        },
+        {
+          "t": "injuries to bones, cartilage, or periosteum, especially after a blow to the shin or eye",
+          "w": 1.5
+        },
+        {
+          "t": "old injuries to bone that never healed properly, or ununited fractures",
+          "w": 1.5
         }
       ],
       "diseaseTags": [],
@@ -10580,7 +10632,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 8
+      "maxScore": 11.0
     },
     {
       "id": "syph",
@@ -11270,6 +11322,14 @@
         {
           "t": "better cool open air",
           "w": 0.6
+        },
+        {
+          "t": "chronic catarrh with thin, yellow, or greenish discharge that is not thick or stringy",
+          "w": 1.5
+        },
+        {
+          "t": "wandering pains that shift rapidly from one part to another, worse in a warm room",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -11280,7 +11340,7 @@
         "acute": "30C 2-3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 7.6
+      "maxScore": 10.1
     },
     {
       "id": "tell",
@@ -11310,6 +11370,14 @@
         {
           "t": "worse touch, worse at night",
           "w": 0.6
+        },
+        {
+          "t": "very sensitive to touch, especially spine, cannot bear anyone to touch the back",
+          "w": 1.5
+        },
+        {
+          "t": "stitching pains that radiate from a fixed point, worse from laughing or coughing",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -11321,7 +11389,7 @@
         "acute": "30C 2-3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 7.6
+      "maxScore": 10.1
     },
     {
       "id": "hydr",
