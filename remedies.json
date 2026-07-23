@@ -1292,6 +1292,14 @@
         {
           "t": "tired achy limbs growing pains",
           "w": 1
+        },
+        {
+          "t": "bones slow to knit after fracture, weak ankles, growing pains worse in growth spurts",
+          "w": 1.5
+        },
+        {
+          "t": "restless, wants to travel or go somewhere, dissatisfied wherever they are",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -1303,7 +1311,7 @@
         "acute": "-",
         "chronic": "200C weekly to 1M single dose, constitutional case needed"
       },
-      "maxScore": 9
+      "maxScore": 12.0
     },
     {
       "id": "calc-c",
@@ -2287,6 +2295,18 @@
         {
           "t": "allergic reaction hives",
           "w": 2
+        },
+        {
+          "t": "absence of thirst even with high fever, sudden shrill screaming in children with meningitis",
+          "w": 1.5
+        },
+        {
+          "t": "awkward, drops things, clumsy; jealous of a sibling or new baby",
+          "w": 1.5
+        },
+        {
+          "t": "ovarian pain, right side, stinging, soreness worse from heat and touch",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2298,7 +2318,7 @@
         "acute": "200C every 2-3h",
         "chronic": "-"
       },
-      "maxScore": 10
+      "maxScore": 14.0
     },
     {
       "id": "canth",
@@ -2386,6 +2406,18 @@
         {
           "t": "hoarseness",
           "w": 1
+        },
+        {
+          "t": "coughing fits come in rapid succession, hardly time to breathe between them",
+          "w": 1.5
+        },
+        {
+          "t": "suspicious, restless, distrustful, feels persecuted or spied upon",
+          "w": 1.5
+        },
+        {
+          "t": "worse from talking, laughing, singing, or lying down after midnight",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2396,7 +2428,7 @@
         "acute": "30C 3x daily",
         "chronic": "-"
       },
-      "maxScore": 9
+      "maxScore": 13.0
     },
     {
       "id": "spong",
@@ -2430,6 +2462,14 @@
         {
           "t": "better from sitting up and from drinking warm water",
           "w": 1.5
+        },
+        {
+          "t": "wakes suddenly from sleep with suffocation, must sit up to breathe, anxious and fearful",
+          "w": 1.5
+        },
+        {
+          "t": "heart complaints with palpitation, worse from exertion or lying with head low",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2440,7 +2480,7 @@
         "acute": "30C 3x daily, alternate with Aconite in croup",
         "chronic": "-"
       },
-      "maxScore": 9.5
+      "maxScore": 12.0
     },
     {
       "id": "ant-t",
@@ -2808,6 +2848,18 @@
         {
           "t": "honeymoon cystitis",
           "w": 1
+        },
+        {
+          "t": "suppresses anger and swallows insults, then develops physical complaints afterward",
+          "w": 1.5
+        },
+        {
+          "t": "sensitive to the slightest reproach or criticism, indignant at humiliation",
+          "w": 1.5
+        },
+        {
+          "t": "toothache in decayed teeth, worse touching them with the tongue",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2819,7 +2871,7 @@
         "acute": "30C for acute anger episode",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 7
+      "maxScore": 11.0
     },
     {
       "id": "carb-v",
@@ -2910,6 +2962,18 @@
         {
           "t": "stool clay colored",
           "w": 1
+        },
+        {
+          "t": "constant desire to press or lean against something hard against the right shoulder blade for relief",
+          "w": 1.5
+        },
+        {
+          "t": "dull, heavy, sluggish mental state associated with sluggish liver function",
+          "w": 1.5
+        },
+        {
+          "t": "sensation of a band or lump pressing under the right ribs",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2922,7 +2986,7 @@
         "acute": "30C 3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 7
+      "maxScore": 11.0
     },
     {
       "id": "nat-sulph",
@@ -2961,6 +3025,14 @@
         {
           "t": "better in a dry warm room, better lying on the right side",
           "w": 1.5
+        },
+        {
+          "t": "sadness with suicidal thoughts from music, prefers to be left alone with grief",
+          "w": 1.5
+        },
+        {
+          "t": "head injuries with lasting mental or physical effects, old concussion history",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -2972,7 +3044,7 @@
         "acute": "30C 3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 11.5
+      "maxScore": 14.0
     },
     {
       "id": "robinia",
@@ -3040,6 +3112,14 @@
         {
           "t": "greasy diarrhea",
           "w": 1
+        },
+        {
+          "t": "periodic sick headaches with visual disturbance before the pain begins, worse from rest",
+          "w": 1.5
+        },
+        {
+          "t": "intense burning in the whole gastrointestinal tract from mouth to anus, worse at night",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -3051,7 +3131,7 @@
         "acute": "30C 2-3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 8
+      "maxScore": 11.0
     },
     {
       "id": "lil-tig",
