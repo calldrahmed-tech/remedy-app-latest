@@ -1014,7 +1014,12 @@
         "one cheek red",
         "better from being carried",
         "better carried",
-        "one cheek red one pale"
+        "one cheek red one pale",
+        "left cheek red right cheek pale",
+        "left cheek bright red right cheek pale",
+        "one cheek flushed other pale",
+        "shoves it away then screams for it",
+        "wants something then refuses it"
       ],
       "remedies": [
         {
@@ -1024,6 +1029,64 @@
         {
           "id": "puls",
           "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Lump in throat sensation, worse from liquids or soft food, better from swallowing something solid",
+      "triggers": [
+        "lump in throat worse liquids",
+        "globus worse swallowing liquid",
+        "better swallowing something hard",
+        "swallowing solid food helps",
+        "worse soft food better hard food",
+        "lump feels worse",
+        "swallow something hard",
+        "crust of bread"
+      ],
+      "remedies": [
+        {
+          "id": "ign",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Cannot bear tight clothing around neck or waist, left-sided complaints, worse after sleep",
+      "triggers": [
+        "cannot bear tight clothing",
+        "intolerance of tight clothing around neck",
+        "worse anything touching throat",
+        "left sided worse after sleep",
+        "wakes worse after sleep",
+        "anything touching my throat",
+        "feel like i am choking",
+        "couldn't wear my collared shirt"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Air hunger, wants to be fanned, collapse with icy coldness of extremities",
+      "triggers": [
+        "air hunger wants fanned",
+        "wants to be fanned",
+        "icy cold hands and feet",
+        "collapse with coldness",
+        "clammy pale weak faint",
+        "cannot stand warm stuffy room despite coldness"
+      ],
+      "remedies": [
+        {
+          "id": "carb-v",
+          "grade": 3
         }
       ]
     },
