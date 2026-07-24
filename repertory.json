@@ -1459,6 +1459,134 @@
     },
     {
       "section": "Common",
+      "rubric": "Burning heat of hands and soles despite general chilliness, right-sided periodic headache",
+      "triggers": [
+        "burning heat of hands and soles",
+        "right sided headache over right eye",
+        "sick headache begins morning lasts evening",
+        "flushes of heat despite chilliness"
+      ],
+      "remedies": [
+        {
+          "id": "sang",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Extreme exhaustion, sleepy all day yet cannot sleep at night, weakness after exertion",
+      "triggers": [
+        "sleepy all day cannot sleep at night",
+        "extreme mental physical exhaustion",
+        "weakness after seminal emissions",
+        "great effort to concentrate"
+      ],
+      "remedies": [
+        {
+          "id": "sel",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Embarrassed and awkward in company, cannot perform tasks while watched, worse from mental exertion",
+      "triggers": [
+        "cannot perform tasks while watched",
+        "embarrassed awkward in company",
+        "loses memory for words",
+        "worse mental exertion loss of words"
+      ],
+      "remedies": [
+        {
+          "id": "ambr",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Extremely talkative, jealous, religious fanaticism, jumps rapidly from subject to subject",
+      "triggers": [
+        "religiously fanatical",
+        "jumps from subject to subject",
+        "sensation heart stops and catches up",
+        "extremely talkative jealous"
+      ],
+      "remedies": [
+        {
+          "id": "naja",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Sensation of broken glass or splinters in the rectum during and after stool",
+      "triggers": [
+        "broken glass in rectum",
+        "splinters in the rectum",
+        "burning after stool like splinters",
+        "fears next bowel movement"
+      ],
+      "remedies": [
+        {
+          "id": "rat",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Contradictory, changeable moods, exaggerates sensations and pains beyond their real intensity",
+      "triggers": [
+        "contradictory changeable moods",
+        "exaggerates sensations",
+        "imagines pains worse than they are",
+        "hysterical exaggeration"
+      ],
+      "remedies": [
+        {
+          "id": "val",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Bearing-down pains from sacrum shooting to pubic bone, profuse gushing bleeding with clots",
+      "triggers": [
+        "pains from sacrum to pubic bone",
+        "bearing down sacrum pubes",
+        "gushing bleeding with clots",
+        "aversion to music trembling"
+      ],
+      "remedies": [
+        {
+          "id": "sabin",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Every change to cold damp weather brings new symptoms, worse from chill after being overheated",
+      "triggers": [
+        "worse cold damp weather change",
+        "worse chill after overheated",
+        "new symptoms with weather change",
+        "warts worse damp weather"
+      ],
+      "remedies": [
+        {
+          "id": "dulc",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
       "rubric": "Air hunger, wants to be fanned, collapse with icy coldness of extremities",
       "triggers": [
         "air hunger wants fanned",
