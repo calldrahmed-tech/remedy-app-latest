@@ -1038,21 +1038,6 @@ function runSearch() {
     <button class="md-cta">Start with this remedy</button>
   </div>`;
 
-  /* ---------- 1.5 AI SECOND OPINION — copy-and-paste into whatever free AI tool the doctor
-     already uses (ChatGPT, Claude, Gemini, etc.) — no signup, no API key, no cost ---------- */
-  html += `<div class="ai-opinion-section">
-    <button class="ai-opinion-toggle">
-      <span>🤖 AI Second Opinion (Optional)</span>
-      <span>▶ View</span>
-    </button>
-    <div id="ai-opinion-body" class="ai-opinion-body" style="display:none;">
-      <div class="ai-opinion-disclaimer">⚠️ Any AI answer is a second opinion only, not sourced from classical rubrics — always verify independently before acting on it.</div>
-      <p class="ai-opinion-instructions">Copies a ready-made question below. Paste it into ChatGPT, Claude, Gemini, or any AI chat you already use, in a new tab, and read the answer there.</p>
-      <button id="ai-opinion-copy-btn" class="md-cta" style="margin-bottom:10px;">📋 Copy for AI</button>
-      <div id="ai-opinion-content" class="ai-opinion-content"></div>
-    </div>
-  </div>`;
-
   /* ---------- 2. ALTERNATIVE — collapsed by default ---------- */
   if (close) {
     html += `<div class="collapsible-section neutral">
@@ -1224,37 +1209,4 @@ if (translateBtn) {
 
 document.querySelectorAll(".sample-chip").forEach(chip => {
   chip.addEventListener("click", () => { inputEl.value = chip.dataset.sample; runSearch(); });
-});
-
-/* ================= AI SECOND OPINION (copy-and-paste, no API key needed) =================
-   Design decision: rather than requiring an API key (a real barrier for non-technical users
-   without a developer account), this copies a ready-made prompt to the clipboard so the
-   doctor can paste it into whatever free AI chat tool they already use. Zero signup, zero
-   cost, zero technical setup — the trade-off is a manual paste step instead of an inline
-   answer, which is the right trade for this audience. */
-
-document.addEventListener("click", async (e) => {
-  const toggleBtn = e.target.closest(".ai-opinion-toggle");
-  if (toggleBtn) {
-    const body = document.getElementById("ai-opinion-body");
-    if (body) body.style.display = body.style.display === "none" ? "block" : "none";
-    return;
-  }
-  const copyBtn = e.target.closest("#ai-opinion-copy-btn");
-  if (copyBtn) {
-    const contentEl = document.getElementById("ai-opinion-content");
-    const caseText = inputEl.value.trim();
-    const prompt = "Acting as a classical homeopathic reference (not a substitute for professional evaluation), " +
-      "suggest the single most likely remedy (Main) and one alternative (Close) for this case, briefly explaining " +
-      "the mental state, generals, modalities, and any peculiar symptoms that led to your choice:\n\n" + caseText;
-    try {
-      await navigator.clipboard.writeText(prompt);
-      contentEl.innerHTML = '<div class="ai-opinion-copied">✔ Copied! Now paste it into ChatGPT, Claude, Gemini, or any AI chat tool you already use, in a new tab.</div>';
-    } catch (err) {
-      // Clipboard API can fail (older browser, permissions) — show the text directly so it
-      // can still be selected and copied manually rather than leaving the person stuck.
-      contentEl.innerHTML = '<div class="ai-opinion-error">Could not copy automatically — select and copy this text manually:</div>' +
-        '<textarea readonly class="ai-opinion-manual-copy" onclick="this.select()">' + esc(prompt) + '</textarea>';
-    }
-  }
 });
