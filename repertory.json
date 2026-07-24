@@ -1756,6 +1756,71 @@
     },
     {
       "section": "Common",
+      "rubric": "Presses hands against chest to support it during cough, dry cough worse entering warm room from cold",
+      "triggers": [
+        "presses hands against chest",
+        "presses hands against sternum",
+        "hold ribcage together",
+        "cough worse entering warm room"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Violent cramping pains bending double, brought on by anger, better hot drinks worse cold drinks",
+      "triggers": [
+        "bend me double",
+        "fold myself in half",
+        "press fists into stomach",
+        "cramps worse cold drinks",
+        "hot tea gives relief"
+      ],
+      "remedies": [
+        {
+          "id": "coloc",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Nose blocked at night lying down, runs with thick yellow-green mucus during day, worse warm stuffy room",
+      "triggers": [
+        "nose stopped up at night",
+        "runs during the day thick yellow",
+        "worse warm stuffy room congestion",
+        "irritable and defensive unusual for them"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Right-sided headache that follows the course of the sun, better firm pressure and dark room",
+      "triggers": [
+        "headache follows the sun",
+        "peaked around noon eased sunset",
+        "pain follows the sun sunrise",
+        "veins in temples bulging pulsing"
+      ],
+      "remedies": [
+        {
+          "id": "sang",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
       "rubric": "Air hunger, wants to be fanned, collapse with icy coldness of extremities",
       "triggers": [
         "air hunger wants fanned",
