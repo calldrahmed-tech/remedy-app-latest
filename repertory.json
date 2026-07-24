@@ -1352,6 +1352,85 @@
       ]
     },
     {
+      "section": "Common",
+      "rubric": "Excoriating, acrid discharges that burn and irritate the skin, worse from warmth, teething with greenish stool",
+      "triggers": [
+        "excoriating skin around anus",
+        "acrid discharge burns skin",
+        "greenish diarrhea teething",
+        "toothache worse warm food"
+      ],
+      "remedies": [
+        {
+          "id": "kreos",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Deep despair with sense of worthlessness or disgrace, business failure, worse at night, suicidal thoughts",
+      "triggers": [
+        "feels worthless and disgraced",
+        "despair over business failure",
+        "internal anguish worse at night",
+        "driven to despair"
+      ],
+      "remedies": [
+        {
+          "id": "aur",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Vertigo or weakness worse from turning in bed or turning the head, ascending paralysis beginning in the feet",
+      "triggers": [
+        "vertigo worse turning in bed",
+        "worse turning the head",
+        "paralysis begins in the feet",
+        "ascending weakness legs"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Stitching chest pains worse lying on the painful side, bag-like swelling of the upper eyelids, very chilly",
+      "triggers": [
+        "stitching pains worse lying on painful side",
+        "bag like swelling upper eyelids",
+        "worse lying on the affected side"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Child slow to walk with large head, weak ankles, fontanelles slow to close, chilly wants head covered",
+      "triggers": [
+        "slow to walk large head",
+        "fontanelles slow to close",
+        "weak ankles child",
+        "wants head wrapped warmly"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 3
+        }
+      ]
+    },
+    {
       "section": "Modalities",
       "rubric": "Puncture wound cold and numb, but cannot bear warmth applied, better from cold application",
       "triggers": [
@@ -1915,6 +1994,53 @@
       "remedies": [
         {
           "id": "trill",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Great weakness out of proportion to the complaint, craves alcohol or stimulants, worse cold better warmth",
+      "triggers": [
+        "weakness out of proportion",
+        "great hurry weakness trembles",
+        "craves alcohol stimulants",
+        "worse cold better warmth trembling"
+      ],
+      "remedies": [
+        {
+          "id": "sul-ac",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Profuse bright red passive hemorrhage worse from least motion or jarring, heavier at menopause",
+      "triggers": [
+        "profuse bright red passive hemorrhage",
+        "worse least motion jarring",
+        "bleeding heavier at change of life",
+        "flooding at menopause"
+      ],
+      "remedies": [
+        {
+          "id": "trill",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Fluid accumulation around the lungs, must sit upright to breathe, watery burning diarrhea worse at night",
+      "triggers": [
+        "fluid around lungs must sit upright",
+        "watery diarrhea burning worse night",
+        "difficulty breathing lying down fluid"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sul",
           "grade": 3
         }
       ]
