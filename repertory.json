@@ -1431,6 +1431,122 @@
       ]
     },
     {
+      "section": "Common",
+      "rubric": "Acrid, corrosive discharge smelling like decaying fish, rapid tooth decay, worse at night and from cold washing",
+      "triggers": [
+        "corrosive discharge decaying fish",
+        "rapid tooth decay crumbling black",
+        "teeth decay as soon as erupt",
+        "worse night cold washing"
+      ],
+      "remedies": [
+        {
+          "id": "kreos",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Wakes gasping with heart pounding, cannot bear anything touching the throat, worse left side, worse warm drinks",
+      "triggers": [
+        "wakes gasping heart pounding",
+        "cannot bear anything touching neck",
+        "throat worse warm drinks better cold",
+        "suffocating tightness in throat"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Child wants something then rejects it or demands to be carried then fights being held, ravenous appetite, grinds teeth in sleep",
+      "triggers": [
+        "demands held then kicks screams",
+        "grinds teeth loudly in sleep",
+        "ravenous appetite after full meal",
+        "sleeps on stomach knees under",
+        "picking at nose"
+      ],
+      "remedies": [
+        {
+          "id": "cina",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Violent burning bladder pain with constant urging, only drops pass, worse cold application, better warmth",
+      "triggers": [
+        "scalding fire like burning urethra",
+        "raw liquid fire passing through",
+        "violent spasms in the bladder",
+        "only drops of urine pass",
+        "cold washcloth spikes the burning"
+      ],
+      "remedies": [
+        {
+          "id": "canth",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Sleeplessness from joyful excitement or good news, oversensitive to noise and light, mind full of racing ideas",
+      "triggers": [
+        "sleeplessness from good news",
+        "overjoyed and excited nervous system",
+        "noise sounds louder than usual",
+        "light stings the eyes",
+        "cannot switch off from excitement"
+      ],
+      "remedies": [
+        {
+          "id": "coff",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Periodic headache with visual disturbance, followed by vomiting of sour ropy bile that burns the whole digestive tract",
+      "triggers": [
+        "vomiting ropy greasy sour mucus",
+        "burns tongue and lips vomiting",
+        "burning liquid down the esophagus",
+        "digestive tract feels on fire"
+      ],
+      "remedies": [
+        {
+          "id": "iris",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Nose blocked at night forcing mouth breathing, wakes gasping, nosebleeds from washing in cold water, worse 3-4am",
+      "triggers": [
+        "nose blocked at night mouth breathing",
+        "wakes up gasping for air",
+        "nosebleed washing face cold water",
+        "worse around three or four am",
+        "sternal soreness from cough"
+      ],
+      "remedies": [
+        {
+          "id": "am-c",
+          "grade": 3
+        }
+      ]
+    },
+    {
       "section": "Modalities",
       "rubric": "Puncture wound cold and numb, but cannot bear warmth applied, better from cold application",
       "triggers": [
@@ -2558,7 +2674,11 @@
         "suspicious",
         "very talkative",
         "loquacious",
-        "jumps from subject to subject"
+        "jumps from subject to subject",
+        "suspicion",
+        "intense suspicion",
+        "jumping to the next thought",
+        "mind racing fast"
       ],
       "remedies": [
         {
