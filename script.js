@@ -466,6 +466,17 @@ function scoreRepertory(inputText) {
     // Extracted so it can be tried in more than one word order — see below. Takes an
     // explicit ORDERED list of words and the polarity word to treat as "opposite-sensitive"
     // (may not be at position 0 once word order is reversed).
+    // Quality-word opposites: catches cases where the polarity word itself (worse/better)
+    // wasn't swapped, but the QUALITY word's conceptual opposite sits in the gap instead —
+    // e.g. "gets worse the moment I walk into a warm room from the cold outside air": here
+    // "worse" and "cold" are both present in the right order, but "warm room" (the ACTUAL
+    // cause) sits directly between them. Without this, "worse...cold" would wrongly fire a
+    // worse-from-cold trigger when the real aggravating factor was heat, not cold at all.
+    const QUALITY_OPPOSITES = {
+      cold: ["warm", "heat", "hot"], heat: ["cold", "cool"], hot: ["cold", "cool"], warm: ["cold", "cool"],
+      motion: ["rest", "still", "quiet"], rest: ["motion", "moving", "movement"],
+      light: ["dark", "darkness"], dark: ["light", "bright"]
+    };
     function tryOrder(orderedWords, polarityWord) {
       const oppositeWord = polarityWord === "worse" ? "better" : (polarityWord === "better" ? "worse" : null);
       let searchFrom = 0, firstPos = -1;
@@ -477,6 +488,8 @@ function scoreRepertory(inputText) {
           const gapText = text.slice(searchFrom, idx);
           if ((gapText + " ").includes(" clausebreak ")) return -1;
           if (oppositeWord && (gapText + " ").includes(" " + oppositeWord + " ")) return -1;
+          const qualityOpposites = QUALITY_OPPOSITES[w] || [];
+          if (qualityOpposites.some(qw => (gapText + " ").includes(" " + qw + " "))) return -1;
         }
         if (firstPos < 0) firstPos = idx;
         searchFrom = idx + w.length;
