@@ -1038,6 +1038,19 @@ function runSearch() {
     <button class="md-cta">Start with this remedy</button>
   </div>`;
 
+  /* ---------- 1.5 AI SECOND OPINION — opt-in, clearly separate from the primary result ---------- */
+  html += `<div class="ai-opinion-section">
+    <button class="ai-opinion-toggle">
+      <span>🤖 AI Second Opinion (Optional)</span>
+      <span>▶ View</span>
+    </button>
+    <div id="ai-opinion-body" class="ai-opinion-body" style="display:none;">
+      <div class="ai-opinion-disclaimer">⚠️ AI-generated, not sourced from classical rubrics — always verify independently before acting on it.</div>
+      <button id="ai-opinion-run-btn" class="md-cta" style="margin-bottom:12px;">Get AI Second Opinion</button>
+      <div id="ai-opinion-content" class="ai-opinion-content"></div>
+    </div>
+  </div>`;
+
   /* ---------- 2. ALTERNATIVE — collapsed by default ---------- */
   if (close) {
     html += `<div class="collapsible-section neutral">
@@ -1209,4 +1222,120 @@ if (translateBtn) {
 
 document.querySelectorAll(".sample-chip").forEach(chip => {
   chip.addEventListener("click", () => { inputEl.value = chip.dataset.sample; runSearch(); });
+});
+
+/* ================= AI SECOND OPINION (opt-in, bring-your-own API key) =================
+   Design decision: the key lives ONLY in this browser's localStorage, is sent ONLY to
+   Anthropic's API directly from the browser, and every AI-generated result is visually
+   distinct from and clearly labeled as separate from the primary rubric-matched result.
+   This is a secondary, opt-in cross-check — never a replacement for the primary answer. */
+
+const API_KEY_STORAGE = "smartRemedyAI_anthropicKey";
+
+function getStoredApiKey() {
+  try { return localStorage.getItem(API_KEY_STORAGE) || ""; } catch (e) { return ""; }
+}
+function setStoredApiKey(key) {
+  try { localStorage.setItem(API_KEY_STORAGE, key); } catch (e) { /* storage unavailable — key just won't persist */ }
+}
+function removeStoredApiKey() {
+  try { localStorage.removeItem(API_KEY_STORAGE); } catch (e) {}
+}
+
+const settingsBtn = document.getElementById("settingsBtn");
+const settingsModal = document.getElementById("settingsModal");
+const settingsCloseBtn = document.getElementById("settingsCloseBtn");
+const apiKeyInput = document.getElementById("apiKeyInput");
+const apiKeySaveBtn = document.getElementById("apiKeySaveBtn");
+const apiKeyRemoveBtn = document.getElementById("apiKeyRemoveBtn");
+const apiKeyStatus = document.getElementById("apiKeyStatus");
+
+function refreshApiKeyStatus() {
+  const key = getStoredApiKey();
+  if (apiKeyStatus) {
+    apiKeyStatus.textContent = key ? "✔ A key is currently saved in this browser." : "No key saved yet.";
+    apiKeyStatus.style.color = key ? "#2e8b3d" : "#777";
+  }
+}
+
+if (settingsBtn && settingsModal) {
+  settingsBtn.addEventListener("click", () => {
+    apiKeyInput.value = getStoredApiKey();
+    refreshApiKeyStatus();
+    settingsModal.style.display = "flex";
+  });
+  settingsCloseBtn.addEventListener("click", () => { settingsModal.style.display = "none"; });
+  settingsModal.addEventListener("click", (e) => { if (e.target === settingsModal) settingsModal.style.display = "none"; });
+  apiKeySaveBtn.addEventListener("click", () => {
+    const val = apiKeyInput.value.trim();
+    if (!val) { apiKeyStatus.textContent = "Please paste a key first."; apiKeyStatus.style.color = "#b0413e"; return; }
+    setStoredApiKey(val);
+    refreshApiKeyStatus();
+  });
+  apiKeyRemoveBtn.addEventListener("click", () => {
+    removeStoredApiKey();
+    apiKeyInput.value = "";
+    refreshApiKeyStatus();
+  });
+}
+
+async function getAISecondOpinion(caseText) {
+  const key = getStoredApiKey();
+  if (!key) throw new Error("NO_KEY");
+  const prompt = "You are assisting a homeopathic practitioner as a SECOND OPINION only, alongside a classical-repertory-based primary result. " +
+    "Read the following patient case and suggest the single most likely classical homeopathic remedy (Main) and one alternative (Close), " +
+    "reasoning briefly through the mental state, generals, modalities, and any peculiar/keynote symptoms. Keep your answer under 150 words. " +
+    "Case:\n\n" + caseText;
+  const response = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": key,
+      "anthropic-version": "2023-06-01",
+      "anthropic-dangerous-direct-browser-access": "true"
+    },
+    body: JSON.stringify({
+      model: "claude-sonnet-4-6",
+      max_tokens: 400,
+      messages: [{ role: "user", content: prompt }]
+    })
+  });
+  if (!response.ok) {
+    const errBody = await response.json().catch(() => ({}));
+    if (response.status === 401) throw new Error("INVALID_KEY");
+    throw new Error(errBody?.error?.message || ("HTTP " + response.status));
+  }
+  const data = await response.json();
+  const textBlock = (data.content || []).find(b => b.type === "text");
+  return textBlock ? textBlock.text : "(No response text returned.)";
+}
+
+// Delegated click handler so this works for AI sections re-rendered on every search.
+document.addEventListener("click", async (e) => {
+  const toggleBtn = e.target.closest(".ai-opinion-toggle");
+  if (toggleBtn) {
+    const body = document.getElementById("ai-opinion-body");
+    if (body) body.style.display = body.style.display === "none" ? "block" : "none";
+    return;
+  }
+  const runBtn = e.target.closest("#ai-opinion-run-btn");
+  if (runBtn) {
+    const contentEl = document.getElementById("ai-opinion-content");
+    const caseText = inputEl.value.trim();
+    if (!getStoredApiKey()) {
+      contentEl.innerHTML = '<div class="ai-opinion-error">No API key saved yet. Click the ⚙️ settings icon at the top to add your own Anthropic API key first.</div>';
+      return;
+    }
+    contentEl.innerHTML = '<div class="ai-opinion-loading">Asking AI for a second opinion…</div>';
+    try {
+      const answer = await getAISecondOpinion(caseText);
+      contentEl.textContent = answer;
+    } catch (err) {
+      if (err.message === "INVALID_KEY") {
+        contentEl.innerHTML = '<div class="ai-opinion-error">Your API key was rejected. Check it in settings (⚙️) — it may be invalid or expired.</div>';
+      } else {
+        contentEl.innerHTML = '<div class="ai-opinion-error">Request failed: ' + esc(err.message) + '</div>';
+      }
+    }
+  }
 });
