@@ -1310,6 +1310,58 @@
       ]
     },
     {
+      "section": "Modalities",
+      "rubric": "Violent twisting colic worse from bending double or pressure, better standing erect and bending backward",
+      "triggers": [
+        "colic better standing erect",
+        "better bending backwards",
+        "better bending backward",
+        "worse doubling over pressing",
+        "twisting colic worse bending double",
+        "bending myself backward",
+        "standing straight up"
+      ],
+      "remedies": [
+        {
+          "id": "dios",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Puncture wound cold and numb, but cannot bear warmth applied, better from cold application",
+      "triggers": [
+        "puncture wound cold numb",
+        "cannot bear warmth applied to wound",
+        "warmth makes the deep pain explode",
+        "cold application dulls the pain"
+      ],
+      "remedies": [
+        {
+          "id": "led",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Burning pains with icy coldness of the part, cannot bear covering, worse from any heat or warmth applied",
+      "triggers": [
+        "burning pains icy coldness",
+        "cannot tolerate being covered",
+        "kicks off every blanket",
+        "warmth makes burning unbearable",
+        "demands windows opened cold air"
+      ],
+      "remedies": [
+        {
+          "id": "sec",
+          "grade": 3
+        }
+      ]
+    },
+    {
       "section": "Fever",
       "rubric": "Extremely chilly, cannot bear uncovering, oversensitive to pain and draft",
       "triggers": [
