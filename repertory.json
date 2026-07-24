@@ -1520,7 +1520,10 @@
         "vomiting ropy greasy sour mucus",
         "burns tongue and lips vomiting",
         "burning liquid down the esophagus",
-        "digestive tract feels on fire"
+        "digestive tract feels on fire",
+        "vomits bile that burns",
+        "burns going up and down",
+        "burning bile vomiting"
       ],
       "remedies": [
         {
@@ -2976,40 +2979,6 @@
         },
         {
           "id": "ferr",
-          "grade": 1
-        }
-      ]
-    },
-    {
-      "section": "Appetite",
-      "rubric": "Decreased appetite, anorexia",
-      "triggers": [
-        "no appetite",
-        "decreased appetite",
-        "loss of appetite",
-        "anorexia",
-        "does not want to eat",
-        "poor appetite"
-      ],
-      "remedies": [
-        {
-          "id": "ars-alb",
-          "grade": 2
-        },
-        {
-          "id": "puls",
-          "grade": 2
-        },
-        {
-          "id": "ign",
-          "grade": 1
-        },
-        {
-          "id": "nux-v",
-          "grade": 1
-        },
-        {
-          "id": "chin",
           "grade": 1
         }
       ]
