@@ -9760,6 +9760,34 @@
         {
           "t": "weight loss with anaemia",
           "w": 2
+        },
+        {
+          "t": "abdomen feels drawn back toward the spine as if pulled by a rope or string",
+          "w": 2
+        },
+        {
+          "t": "abdominal wall sunken, retracted, hard, drawn inward like a boat or cave",
+          "w": 2
+        },
+        {
+          "t": "severe constipation with hard, small, dark balls of stool like sheep dung",
+          "w": 1.5
+        },
+        {
+          "t": "weakness, numbness, or paralysis of the wrists and hands, difficulty grasping objects",
+          "w": 2
+        },
+        {
+          "t": "great mental and physical slowness, weakness of memory, apathy",
+          "w": 1
+        },
+        {
+          "t": "blue line on the gums, chronic lead-type poisoning history",
+          "w": 1
+        },
+        {
+          "t": "sallow, earthy, or pale complexion with premature aging appearance",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -9767,7 +9795,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 15.799999999999999
+      "maxScore": 26.299999999999997
     },
     {
       "id": "psor",
