@@ -496,7 +496,10 @@
       "triggers": [
         "alternating sides",
         "one sided complaint",
-        "symptoms shift sides"
+        "symptoms shift sides",
+        "alternates sides",
+        "pain alternates sides",
+        "shifting back and forth sides"
       ],
       "remedies": [
         {
@@ -807,11 +810,8 @@
       "triggers": [
         "recurrent boils",
         "chronic boils",
-        "craving for sweets",
         "craving alcohol",
-        "craves sweets and alcohol",
-        "craves sweets",
-        "craving sweets"
+        "boils craves sweets"
       ],
       "remedies": [
         {
@@ -1194,11 +1194,117 @@
         "hurried impulsive",
         "cannot wait must do",
         "irrational fears",
-        "convinced something bad will happen"
+        "convinced something bad will happen",
+        "rush through everything",
+        "hurried all the time"
       ],
       "remedies": [
         {
           "id": "arg-n",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Dry cough like a saw through wood, worse cold drinks better warm drinks, cannot lie with head low",
+      "triggers": [
+        "saw cutting through wood",
+        "worse cold drinks better warm",
+        "cannot lie with head low",
+        "oppression like weight on chest",
+        "saw cutting through a dry pine board",
+        "cough sounds like a saw"
+      ],
+      "remedies": [
+        {
+          "id": "spong",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Headache from occiput settling over the left eye, better hot application directly over the eye",
+      "triggers": [
+        "headache occiput settles left eye",
+        "headache builds through the day",
+        "hot application over the eye",
+        "eye waters hot stinging discharge",
+        "base of my skull settles over left eye",
+        "pain starts at base of skull settles left eye"
+      ],
+      "remedies": [
+        {
+          "id": "spig",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Loud forceful belching gives no relief, craves sweets that aggravate the bloating",
+      "triggers": [
+        "loud belching gives no relief",
+        "belching gives absolutely no relief",
+        "craving for sweets that aggravate",
+        "craves sweets makes bloating worse",
+        "gives me absolutely no relief",
+        "no relief from the pressure"
+      ],
+      "remedies": [
+        {
+          "id": "arg-n",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Sharp splinter or needle sensation in tonsil radiating to ear, extremely sensitive to cold air or draft",
+      "triggers": [
+        "splinter or needle stuck in tonsil",
+        "stabs up into my ear",
+        "sensitive to cold air draft",
+        "tiny breeze makes the pain spike",
+        "wrap head and neck in scarf"
+      ],
+      "remedies": [
+        {
+          "id": "hep",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Infant vomits curdled milk in large lumps, falls into deep exhausted sleep after vomiting, wants milk again",
+      "triggers": [
+        "vomits milk in curdled lumps",
+        "vomits curdled milk cottage cheese",
+        "deep exhausted sleep after vomiting",
+        "wants to drink milk again"
+      ],
+      "remedies": [
+        {
+          "id": "aeth",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Abdomen drawn back toward the spine, sunken retracted abdominal wall, constipation with sheep-dung stool and weak wrists",
+      "triggers": [
+        "abdomen drawn back toward the spine",
+        "sunken drawn inward like a cave",
+        "navel pulled by a rope",
+        "weakness numbness in wrists and hands",
+        "better firm pressure against stomach"
+      ],
+      "remedies": [
+        {
+          "id": "plb",
           "grade": 3
         }
       ]
