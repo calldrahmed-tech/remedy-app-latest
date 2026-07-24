@@ -1586,6 +1586,175 @@
       ]
     },
     {
+      "section": "Mind",
+      "rubric": "Anxiety about health with palpitation from the slightest emotional upset",
+      "triggers": [
+        "palpitation from slightest emotion",
+        "anxiety about health palpitation",
+        "chilly and restless together"
+      ],
+      "remedies": [
+        {
+          "id": "calc-ars",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Throbbing headache with red face relieved suddenly by nosebleed",
+      "triggers": [
+        "headache relieved by nosebleed",
+        "throbbing headache red face nosebleed",
+        "congestive headache worse warmth"
+      ],
+      "remedies": [
+        {
+          "id": "melil",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Extremely low self-esteem, feels dirty or unworthy despite being clean",
+      "triggers": [
+        "feels dirty despite clean",
+        "low self esteem unworthy",
+        "breast pain worse before menses tender clothing"
+      ],
+      "remedies": [
+        {
+          "id": "lac-c",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Great prostration with involuntary stool while urinating, extreme sensitivity to bedding",
+      "triggers": [
+        "involuntary stool while urinating",
+        "soft bedding feels too hard",
+        "great prostration extreme sensitivity"
+      ],
+      "remedies": [
+        {
+          "id": "mur-ac",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Great anxiety about the future, distorted sense of time and distance",
+      "triggers": [
+        "anxiety about the future",
+        "great undertaking ahead",
+        "time and distance distorted",
+        "minutes feel like ages"
+      ],
+      "remedies": [
+        {
+          "id": "cann-i",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Aversion to milk which now disagrees intensely, despite formerly enjoying it",
+      "triggers": [
+        "aversion to milk",
+        "milk now disagrees",
+        "milk formerly loved now intolerant"
+      ],
+      "remedies": [
+        {
+          "id": "lac-d",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Fear of water, mirrors, or shiny reflecting objects, worse from the sight or sound of water",
+      "triggers": [
+        "fear of water mirrors",
+        "worse sight of water",
+        "worse shiny reflection",
+        "convulses at sight of water"
+      ],
+      "remedies": [
+        {
+          "id": "lyss",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Pulling, dragging sensation in the pelvis when standing, extreme fatigue relieved by sitting",
+      "triggers": [
+        "dragging sensation in pelvis standing",
+        "pulling sensation pelvis",
+        "fatigue relieved by sitting crossing limbs"
+      ],
+      "remedies": [
+        {
+          "id": "murx",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Wants many things but rejects each one as soon as offered, worse from uncovering",
+      "triggers": [
+        "wants many things but rejects them",
+        "rejects as soon as offered",
+        "worse from uncovering slightly"
+      ],
+      "remedies": [
+        {
+          "id": "rheum",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Sensation of pelvis falling apart or hips separating, must bind tightly for relief",
+      "triggers": [
+        "pelvis falling apart",
+        "hips separating",
+        "must bind tightly",
+        "feels hips breaking"
+      ],
+      "remedies": [
+        {
+          "id": "trill",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Cannot bear warmth of bed, throws off covers, itching or burning worse from heat of bed",
+      "triggers": [
+        "worse heat of bed",
+        "cannot bear warmth of bed",
+        "throws off covers",
+        "itching worse in bed at night"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 3
+        }
+      ]
+    },
+    {
       "section": "Common",
       "rubric": "Air hunger, wants to be fanned, collapse with icy coldness of extremities",
       "triggers": [
@@ -2189,7 +2358,10 @@
         "stiffness works itself out",
         "stiffness slowly works",
         "locked up",
-        "rusted machine"
+        "rusted machine",
+        "worse first starting to move",
+        "ease up as she keeps moving",
+        "ease up as he keeps moving"
       ],
       "remedies": [
         {
