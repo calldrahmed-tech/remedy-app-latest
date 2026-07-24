@@ -16,6 +16,7 @@
       <div class="logo-circle">🌿</div>
       <div class="word">Smart <span class="accent">Remedy</span> AI</div>
     </div>
+    <button id="settingsBtn" class="settings-btn" title="AI Second Opinion Settings">⚙️</button>
   </div>
   <div class="header-search">
     <label class="symptom-label" for="symptomInput">Symptom:</label>
@@ -31,6 +32,27 @@
 </header>
 
 <div class="wrap">
+  <div id="settingsModal" class="settings-modal" style="display:none;">
+    <div class="settings-modal-inner">
+      <div class="settings-modal-header">
+        <span>⚙️ AI Second Opinion Settings</span>
+        <button id="settingsCloseBtn" class="settings-close">✕</button>
+      </div>
+      <p class="settings-desc">
+        The AI Second Opinion feature uses <b>your own</b> Anthropic API key — it is stored only in your own browser
+        (never sent anywhere except directly to Anthropic to answer your query), and any usage is billed to your own account.
+        Get a key at <a href="https://console.anthropic.com" target="_blank" rel="noopener">console.anthropic.com</a>.
+      </p>
+      <label class="settings-label" for="apiKeyInput">Anthropic API Key</label>
+      <input type="password" id="apiKeyInput" class="settings-input" placeholder="sk-ant-..." autocomplete="off">
+      <div class="settings-actions">
+        <button id="apiKeySaveBtn" class="settings-save">Save Key</button>
+        <button id="apiKeyRemoveBtn" class="settings-remove">Remove Key</button>
+      </div>
+      <div id="apiKeyStatus" class="settings-status"></div>
+    </div>
+  </div>
+
   <div class="samples-bar">
     <div class="lbl">Try a sample:</div>
     <button class="sample-chip" data-sample="chronic constipation hard stool in the beginning incomplete evacuation ineffectual urging bloating sedentary lifestyle">Chronic constipation</button>
