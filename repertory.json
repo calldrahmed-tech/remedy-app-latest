@@ -1329,6 +1329,29 @@
       ]
     },
     {
+      "section": "Mind",
+      "rubric": "Terror after a fright, fear of the dark and being alone, violent with hallucinations, better light and company",
+      "triggers": [
+        "terror after fright",
+        "fear of dark and being alone",
+        "violent hallucinations",
+        "sees frightful images",
+        "wants light and company",
+        "worse in the dark alone",
+        "after a fright",
+        "terrified of the dark",
+        "becomes violent",
+        "seeing hallucinations",
+        "frightening hallucinations"
+      ],
+      "remedies": [
+        {
+          "id": "stram",
+          "grade": 3
+        }
+      ]
+    },
+    {
       "section": "Modalities",
       "rubric": "Puncture wound cold and numb, but cannot bear warmth applied, better from cold application",
       "triggers": [
