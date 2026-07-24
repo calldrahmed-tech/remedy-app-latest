@@ -3659,6 +3659,14 @@
         {
           "t": "deficiency or suppression of breast milk with sadness",
           "w": 2
+        },
+        {
+          "t": "indifferent to life and to loved ones, feels prematurely old, dejected without anxiety",
+          "w": 1.5
+        },
+        {
+          "t": "worse from any sexual excess, complete lack of vital reaction afterward",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -3666,7 +3674,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 14
+      "maxScore": 16.5
     },
     {
       "id": "all-c",
@@ -3828,6 +3836,14 @@
         {
           "t": "worse from music, warm room, presence of people",
           "w": 2
+        },
+        {
+          "t": "embarrassed and awkward in company, blushes easily, cannot perform tasks while watched",
+          "w": 1.5
+        },
+        {
+          "t": "worse from any mental exertion, sudden loss of memory for common words during conversation",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -3835,7 +3851,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 14
+      "maxScore": 16.5
     },
     {
       "id": "am-c",
@@ -4640,6 +4656,14 @@
         {
           "t": "bruised soreness wherever lying",
           "w": 2
+        },
+        {
+          "t": "feels as if body parts are separated or scattered, hard to hold thoughts together",
+          "w": 1.5
+        },
+        {
+          "t": "rapid onset of stupor and prostration in acute infection, mind slow to respond",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -4647,7 +4671,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 16
+      "maxScore": 18.5
     },
     {
       "id": "bar-c",
@@ -4766,6 +4790,14 @@
         {
           "t": "worse wine",
           "w": 0.6
+        },
+        {
+          "t": "urine with an intensely strong, offensive odor that permeates the whole room",
+          "w": 1.5
+        },
+        {
+          "t": "joints crack loudly on motion, worse from wine, rheumatism alternating with urinary symptoms",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -4773,7 +4805,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 13.2
+      "maxScore": 15.7
     },
     {
       "id": "berb",
@@ -5629,6 +5661,14 @@
         {
           "t": "protracted lochia",
           "w": 2
+        },
+        {
+          "t": "nervous, excitable, talkative during labor or menstrual complaints, restless hands",
+          "w": 1.5
+        },
+        {
+          "t": "small joint pains that shift rapidly and unpredictably, especially fingers and toes",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -5636,7 +5676,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 14
+      "maxScore": 16.5
     },
     {
       "id": "caust",
@@ -6745,6 +6785,14 @@
         {
           "t": "better motion",
           "w": 0.6
+        },
+        {
+          "t": "every change to cold damp weather brings on new symptoms, worse from getting chilled after being overheated",
+          "w": 1.5
+        },
+        {
+          "t": "warts and skin eruptions that appear or worsen in damp weather, better from moving about",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -6752,7 +6800,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 11.799999999999999
+      "maxScore": 14.299999999999999
     },
     {
       "id": "equis",
@@ -7130,6 +7178,14 @@
         {
           "t": "checks haemorrhage",
           "w": 2
+        },
+        {
+          "t": "veins feel sore and full, sensitive to touch, worse standing, better elevation of the part",
+          "w": 1.5
+        },
+        {
+          "t": "mentally listless and prostrated, feels weak out of proportion to visible illness",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -7137,7 +7193,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 14
+      "maxScore": 16.5
     },
     {
       "id": "hell",
@@ -8891,6 +8947,14 @@
         {
           "t": "dry, irritating cough in rheumatic carditis",
           "w": 2
+        },
+        {
+          "t": "extremely talkative, jealous, and religiously fanatical, jumps from subject to subject",
+          "w": 1.5
+        },
+        {
+          "t": "sensation as if cardiac action pauses then rushes to catch up, cardiac anxiety",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -8898,7 +8962,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 14
+      "maxScore": 16.5
     },
     {
       "id": "nat-c",
@@ -9762,6 +9826,14 @@
         {
           "t": "fissures of nipples in nursing women",
           "w": 2
+        },
+        {
+          "t": "sensation of broken glass or splinters in the rectum during and long after stool",
+          "w": 1.5
+        },
+        {
+          "t": "anxious, irritable from the intensity of rectal pain, fears next bowel movement",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -9769,7 +9841,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 12
+      "maxScore": 14.5
     },
     {
       "id": "rheum",
@@ -9913,6 +9985,14 @@
         {
           "t": "better warmth",
           "w": 0.6
+        },
+        {
+          "t": "cough triggered the instant cold air touches the throat or bare skin, must cover mouth",
+          "w": 1.5
+        },
+        {
+          "t": "itching intolerable on undressing at night or from any cold exposure to the skin",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -9920,7 +10000,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 10.4
+      "maxScore": 12.9
     },
     {
       "id": "ruta",
@@ -10066,6 +10146,14 @@
         {
           "t": "better cool open air",
           "w": 0.6
+        },
+        {
+          "t": "profuse, gushing bleeding with clots, pains from sacrum shooting to the pubic bone",
+          "w": 1.5
+        },
+        {
+          "t": "aversion to music, which causes trembling or unpleasant nervous sensations",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -10073,7 +10161,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 11.2
+      "maxScore": 13.7
     },
     {
       "id": "samb",
@@ -10170,6 +10258,14 @@
         {
           "t": "better dark room",
           "w": 0.6
+        },
+        {
+          "t": "burning heat of hands and soles despite general chilliness, flushes of heat",
+          "w": 1.5
+        },
+        {
+          "t": "worse from motion of the eyes or head, better from pressure and sleep",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -10177,7 +10273,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 13.2
+      "maxScore": 15.7
     },
     {
       "id": "san",
@@ -10399,6 +10495,14 @@
         {
           "t": "worse sun",
           "w": 0.6
+        },
+        {
+          "t": "extreme mental and physical exhaustion, sleepy all day yet cannot sleep at night",
+          "w": 1.5
+        },
+        {
+          "t": "forgetful, absent-minded, has to make great effort to concentrate on work",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -10406,7 +10510,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 11.2
+      "maxScore": 13.7
     },
     {
       "id": "spig",
@@ -11163,6 +11267,14 @@
         {
           "t": "changing occupation",
           "w": 2
+        },
+        {
+          "t": "contradictory, changeable symptoms and moods, better from motion despite general weakness",
+          "w": 1.5
+        },
+        {
+          "t": "exaggerates sensations, imagines pains worse than they are, hysteria-like exaggeration",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -11170,7 +11282,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 12
+      "maxScore": 14.5
     },
     {
       "id": "variol",
@@ -11240,6 +11352,14 @@
         {
           "t": "worse from motion and stooping, worse lying down; full bounding then slow pulse",
           "w": 1.5
+        },
+        {
+          "t": "eyes fixed and staring, congestion of blood to head with slow, full pulse",
+          "w": 1.5
+        },
+        {
+          "t": "extreme prostration with cold sweat during high fever, vomiting from the least motion",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -11247,7 +11367,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 13.0
+      "maxScore": 15.5
     },
     {
       "id": "zinc",
@@ -11492,6 +11612,14 @@
         {
           "t": "better warmth",
           "w": 0.6
+        },
+        {
+          "t": "sinking, gone feeling in the stomach not relieved by eating, cachexia from chronic disease",
+          "w": 1.5
+        },
+        {
+          "t": "despondent about their condition, worries constantly about their declining health",
+          "w": 1
         }
       ],
       "diseaseTags": [
@@ -11503,7 +11631,7 @@
         "acute": "30C 2-3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 11.2
+      "maxScore": 13.7
     }
   ],
   "biochemics": [
