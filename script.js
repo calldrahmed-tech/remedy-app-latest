@@ -1210,3 +1210,111 @@ if (translateBtn) {
 document.querySelectorAll(".sample-chip").forEach(chip => {
   chip.addEventListener("click", () => { inputEl.value = chip.dataset.sample; runSearch(); });
 });
+
+/* ================= DOCTOR LOGIN & AI USAGE LIMIT =================
+   The core rubric search above NEVER depends on any of this — if Firebase fails
+   to load, is misconfigured, or a doctor isn't logged in, the app still works
+   exactly as it always has. This layer only gates the OPTIONAL AI-assist feature. */
+
+const authModal = document.getElementById("authModal");
+const authModalTitle = document.getElementById("authModalTitle");
+const authCloseBtn = document.getElementById("authCloseBtn");
+const authNameField = document.getElementById("authNameField");
+const authName = document.getElementById("authName");
+const authEmail = document.getElementById("authEmail");
+const authPassword = document.getElementById("authPassword");
+const authSubmitBtn = document.getElementById("authSubmitBtn");
+const authToggleBtn = document.getElementById("authToggleBtn");
+const authStatus = document.getElementById("authStatus");
+const accountBar = document.getElementById("accountBar");
+const accountBarText = document.getElementById("accountBarText");
+const accountBarBtn = document.getElementById("accountBarBtn");
+
+let authMode = "login"; // or "signup"
+
+function openAuthModal(mode) {
+  authMode = mode;
+  authModalTitle.textContent = mode === "login" ? "🔐 Doctor Login" : "🔐 Create Account";
+  authSubmitBtn.textContent = mode === "login" ? "Log In" : "Sign Up";
+  authToggleBtn.textContent = mode === "login" ? "Need an account? Sign Up" : "Already have an account? Log In";
+  authNameField.style.display = mode === "signup" ? "block" : "none";
+  authStatus.textContent = "";
+  if (authModal) authModal.style.display = "flex";
+}
+
+if (authCloseBtn) authCloseBtn.addEventListener("click", () => { authModal.style.display = "none"; });
+if (authModal) authModal.addEventListener("click", (e) => { if (e.target === authModal) authModal.style.display = "none"; });
+if (authToggleBtn) authToggleBtn.addEventListener("click", () => openAuthModal(authMode === "login" ? "signup" : "login"));
+
+if (authSubmitBtn) authSubmitBtn.addEventListener("click", async () => {
+  const email = authEmail.value.trim();
+  const password = authPassword.value;
+  const name = authName.value.trim();
+  if (!email || !password || (authMode === "signup" && !name)) {
+    authStatus.textContent = "Please fill in all fields.";
+    authStatus.style.color = "#b0413e";
+    return;
+  }
+  authSubmitBtn.disabled = true;
+  authStatus.textContent = "Working…";
+  authStatus.style.color = "#777";
+  try {
+    if (!window.RemedyAuth) throw new Error("Login system is still loading — try again in a moment.");
+    if (authMode === "signup") await window.RemedyAuth.signUp(name, email, password);
+    else await window.RemedyAuth.logIn(email, password);
+    authModal.style.display = "none";
+  } catch (err) {
+    authStatus.textContent = humanizeAuthError(err.message || String(err));
+    authStatus.style.color = "#b0413e";
+  } finally {
+    authSubmitBtn.disabled = false;
+  }
+});
+
+function humanizeAuthError(msg) {
+  if (msg.includes("email-already-in-use")) return "That email already has an account — try logging in instead.";
+  if (msg.includes("invalid-credential") || msg.includes("wrong-password") || msg.includes("user-not-found")) return "Incorrect email or password.";
+  if (msg.includes("weak-password")) return "Password should be at least 6 characters.";
+  if (msg.includes("invalid-email")) return "Please enter a valid email address.";
+  return msg;
+}
+
+async function refreshAccountBar() {
+  const user = window.RemedyAuth && window.RemedyAuth.getCurrentUser();
+  const loginTriggerBtn = document.getElementById("loginTriggerBtn");
+  if (!user) {
+    accountBar.style.display = "none";
+    if (loginTriggerBtn) loginTriggerBtn.style.display = "inline-block";
+    return;
+  }
+  if (loginTriggerBtn) loginTriggerBtn.style.display = "none";
+  const usage = await window.RemedyAuth.getUsage();
+  accountBar.style.display = "flex";
+  accountBarText.textContent = `👤 ${user.displayName || user.email} — ${usage.remaining}/${usage.limit} AI searches left this month`;
+  accountBarBtn.textContent = "Log Out";
+}
+
+const loginTriggerBtn = document.getElementById("loginTriggerBtn");
+if (loginTriggerBtn) loginTriggerBtn.addEventListener("click", () => openAuthModal("login"));
+
+if (accountBarBtn) accountBarBtn.addEventListener("click", async () => {
+  await window.RemedyAuth.logOut();
+  refreshAccountBar();
+});
+
+if (window.RemedyAuth) {
+  window.RemedyAuth.onAuthChange(() => refreshAccountBar());
+} else {
+  // firebase-init.js loads as a module and may not have attached RemedyAuth yet —
+  // poll briefly rather than silently doing nothing.
+  let tries = 0;
+  const waitForAuth = setInterval(() => {
+    tries++;
+    if (window.RemedyAuth) {
+      window.RemedyAuth.onAuthChange(() => refreshAccountBar());
+      clearInterval(waitForAuth);
+    } else if (tries > 20) {
+      clearInterval(waitForAuth); // give up quietly — core search still works fine without it
+    }
+  }, 250);
+}
