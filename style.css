@@ -15,7 +15,11 @@ body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robo
 
 /* ---------- HEADER (simplified: logo, Symptom label, input+button, all in one navy card) ---------- */
 header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26px; border-radius: 0 0 26px 26px; max-width: 560px; margin: 0 auto; }
-.header-row { display: flex; justify-content: center; align-items: center; margin-bottom: 18px; }
+.header-row { display: flex; justify-content: center; align-items: center; position: relative; margin-bottom: 18px; }
+.login-trigger-btn { position: absolute; right: 20px; top: 0; background: var(--green-1); color: #fff; border: none; padding: 8px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; cursor: pointer; }
+.login-trigger-btn:hover { opacity: 0.9; }
+.account-bar { margin: 0 20px 14px; background: #eef6f1; border: 1.5px solid #cfe8d8; border-radius: 12px; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; font-weight: 600; color: #2c5c3a; }
+.account-bar-btn { background: none; border: 1px solid #2c5c3a; color: #2c5c3a; padding: 5px 12px; border-radius: 8px; font-size: 0.78rem; font-weight: 700; cursor: pointer; }
 .brand.center { display: flex; align-items: center; gap: 10px; }
 .brand .logo-circle { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.05rem; flex-shrink: 0; }
 .brand .word { font-size: 1.25rem; font-weight: 700; }
