@@ -8,6 +8,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<!-- Firebase SDK: powers doctor login and the 20-search-per-month AI limit.
+     The core rubric search below never depends on these loading successfully. -->
+<script type="module" src="firebase-init.js"></script>
 </head>
 <body>
 <header class="app-header">
@@ -16,6 +19,7 @@
       <div class="logo-circle">🌿</div>
       <div class="word">Smart <span class="accent">Remedy</span> AI</div>
     </div>
+    <button id="loginTriggerBtn" class="login-trigger-btn">🔐 Doctor Login</button>
   </div>
   <div class="header-search">
     <label class="symptom-label" for="symptomInput">Symptom:</label>
@@ -31,6 +35,37 @@
 </header>
 
 <div class="wrap">
+  <div id="authModal" class="settings-modal" style="display:none;">
+    <div class="settings-modal-inner">
+      <div class="settings-modal-header">
+        <span id="authModalTitle">🔐 Doctor Login</span>
+        <button id="authCloseBtn" class="settings-close">✕</button>
+      </div>
+      <p class="settings-desc">
+        Free to create an account. Login unlocks 20 AI-assisted searches per month —
+        the core remedy search always stays free and unlimited either way.
+      </p>
+      <div id="authNameField" style="display:none;">
+        <label class="settings-label" for="authName">Your Name</label>
+        <input type="text" id="authName" class="settings-input" placeholder="Dr. Full Name" autocomplete="name">
+      </div>
+      <label class="settings-label" for="authEmail">Email</label>
+      <input type="email" id="authEmail" class="settings-input" placeholder="you@example.com" autocomplete="email">
+      <label class="settings-label" for="authPassword">Password</label>
+      <input type="password" id="authPassword" class="settings-input" placeholder="At least 6 characters" autocomplete="current-password">
+      <div class="settings-actions">
+        <button id="authSubmitBtn" class="settings-save">Log In</button>
+        <button id="authToggleBtn" class="settings-remove">Need an account? Sign Up</button>
+      </div>
+      <div id="authStatus" class="settings-status"></div>
+    </div>
+  </div>
+
+  <div id="accountBar" class="account-bar" style="display:none;">
+    <span id="accountBarText"></span>
+    <button id="accountBarBtn" class="account-bar-btn"></button>
+  </div>
+
   <div class="samples-bar">
     <div class="lbl">Try a sample:</div>
     <button class="sample-chip" data-sample="chronic constipation hard stool in the beginning incomplete evacuation ineffectual urging bloating sedentary lifestyle">Chronic constipation</button>
