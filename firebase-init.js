@@ -1,5 +1,5 @@
 // ============================================================
-// FIREBASE SETUP — paste your config below (see SETUP_INSTRUCTIONS.md, Step 4)
+// FIREBASE SETUP — your actual project config is already filled in below
 // ============================================================
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import {
@@ -10,14 +10,13 @@ import {
   getFirestore, doc, getDoc, setDoc, increment, serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
-// PASTE YOUR firebaseConfig OBJECT FROM STEP 4 HERE, REPLACING THE PLACEHOLDER BELOW:
 const firebaseConfig = {
-  apiKey: "PASTE_YOUR_API_KEY_HERE",
-  authDomain: "PASTE_YOUR_AUTH_DOMAIN_HERE",
-  projectId: "PASTE_YOUR_PROJECT_ID_HERE",
-  storageBucket: "PASTE_YOUR_STORAGE_BUCKET_HERE",
-  messagingSenderId: "PASTE_YOUR_SENDER_ID_HERE",
-  appId: "PASTE_YOUR_APP_ID_HERE"
+  apiKey: "AIzaSyA7nmJYyfognAAZS2j67GMgyB48ier4vaE",
+  authDomain: "expertia-d35e0.firebaseapp.com",
+  projectId: "expertia-d35e0",
+  storageBucket: "expertia-d35e0.firebasestorage.app",
+  messagingSenderId: "821351840734",
+  appId: "1:821351840734:web:d9479a0cda7973879c3b4f"
 };
 
 const MONTHLY_AI_LIMIT = 20;
