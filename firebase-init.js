@@ -7,8 +7,11 @@ import {
   signOut, onAuthStateChanged, updateProfile
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import {
-  getFirestore, doc, getDoc, setDoc, increment, serverTimestamp
+  getFirestore, doc, getDoc, setDoc, serverTimestamp
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import {
+  getFunctions, httpsCallable
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-functions.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA7nmJYyfognAAZS2j67GMgyB48ier4vaE",
@@ -24,6 +27,8 @@ const MONTHLY_AI_LIMIT = 20;
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+const functions = getFunctions(app);
+const aiNormalizeCallable = httpsCallable(functions, "aiNormalize");
 
 let currentUser = null;
 
@@ -64,14 +69,12 @@ window.RemedyAuth = {
     return { used, limit: MONTHLY_AI_LIMIT, remaining: Math.max(0, MONTHLY_AI_LIMIT - used) };
   },
 
-  // Atomically increments this month's count. Returns the new usage, or null if
-  // not logged in. Call this ONLY right before actually making an AI request,
-  // never speculatively, so the count always reflects real usage.
-  async recordAiUse() {
-    if (!currentUser) return null;
-    const usageRef = doc(db, "usage", currentUser.uid + "_" + currentMonthKey());
-    await setDoc(usageRef, { count: increment(1), lastUsed: serverTimestamp() }, { merge: true });
-    return this.getUsage();
+  // Calls the secure backend function, which verifies login, enforces the monthly
+  // limit, calls the AI model, and increments usage — all server-side. This
+  // replaces any client-side counting, which could otherwise be bypassed.
+  async requestAiNormalization(caseText) {
+    const result = await aiNormalizeCallable({ caseText });
+    return result.data; // { normalizedText, remaining }
   },
 
   onAuthChange(callback) {
