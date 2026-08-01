@@ -154,3 +154,11 @@ footer.app-footer { background: linear-gradient(90deg, #e8f5ec, #ecf7ee); paddin
 footer.app-footer .f-item { display: flex; align-items: center; gap: 7px; color: #275c3f; margin-bottom: 6px; }
 footer.app-footer .f-item b { display: block; color: var(--navy); font-size: 0.76rem; }
 .disclaimer { font-size: 0.68rem; color: var(--muted); padding: 12px 20px; text-align: center; }
+
+/* ---------- AI ASSIST BUTTON (ai-assist.js) ---------- */
+.ai-assist-btn { display: block; width: calc(100% - 40px); margin: 10px 20px 0; background: linear-gradient(135deg, #7c5fd9, #5a3d99); color: #fff; border: none; padding: 12px; border-radius: 12px; font-weight: 700; font-size: 0.88rem; cursor: pointer; }
+.ai-assist-btn:hover { opacity: 0.92; }
+.ai-assist-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.ai-assist-status { margin: 8px 20px 0; font-size: 0.8rem; font-weight: 600; color: #666; }
+.ai-assist-success { color: #2e8b3d; }
+.ai-assist-error { color: #b0413e; }
