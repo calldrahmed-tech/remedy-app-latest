@@ -62,7 +62,8 @@
         } else if (code === "functions/unauthenticated") {
           statusEl.textContent = "Please log in first to use AI-assisted wording.";
         } else {
-          statusEl.textContent = "AI assist unavailable right now — try the search as-is.";
+          // TEMPORARY DEBUG: show the real error text (err.message) directly on screen
+          statusEl.textContent = "AI assist error (debug): " + (err.message || String(err));
         }
         statusEl.className = "ai-assist-status ai-assist-error";
       } finally {
