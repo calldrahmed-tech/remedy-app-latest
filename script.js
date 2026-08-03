@@ -89,6 +89,10 @@ function buildWordDict() {
 // became "wind sips", destroying the real match. This is ordinary sentence vocabulary that
 // fuzzyCorrect must never treat as a medical-term typo, checked before any correction attempt.
 const COMMON_ENGLISH_WORDS = new Set([
+  // number words — "eight" (as in "eight months ago") was being corrected to "light" purely
+  // because it's a real, correctly-spelled word that never happens to appear in any keynote
+  "one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve",
+  "once","twice","first","second","third","fourth","fifth","sixth","dozen","hundred","thousand",
   // pronouns / determiners
   "this","that","these","those","them","they","their","theirs","there","then","than","when",
   "what","which","while","where","were","been","being","have","having","having","some","such",
@@ -197,6 +201,10 @@ const STOPWORDS = new Set(["a","an","the","and","or","but","with","without","who
   "these","those","is","are","was","were","be","been","of","in","on","to","as","from","or","for","at",
   "by","dont","cannot","cant","its","it","especially","very","also","not","no","during","after","before",
   "least","slightest","any","every","all","most","more","less","much",
+  // "like" was matching as if it were real symptom content (e.g. "isn't like me at all")
+  // purely because it's also a fragment of unrelated keynote text like "lightning-like" —
+  // it's a filler/comparison word almost everywhere in casual speech, never real evidence.
+  "like", "seem", "seems", "kind", "sort",
   // "worse"/"better" are treated as optional here: a doctor typing "pain with motion" clearly
   // means the same clinical fact as "worse from motion" even without the polarity word — the
   // actual content word (motion, eating, touch, etc.) is what should drive the match. The full
@@ -236,6 +244,13 @@ const ANATOMY_WORDS = new Set([
   "kidney","kidneys","bladder","uterus","ovary","ovaries","testicle","testicles","rectum",
   "anus","skin","heel","joint","joints"
 ]);
+// WEAK_MODIFIER_WORDS: same idea as ANATOMY_WORDS not counting as sufficient evidence alone,
+// extended to words that are almost always a MODIFIER of some other word rather than real
+// content on their own — "right"/"left" nearly always describe a body side ("right eye"), so a
+// bare "right" matching casual speech ("if I don't eat right...") was letting Apis's unrelated
+// "ovarian pain, right side" keynote win a case about an itchy scalp. Same failure class as
+// anatomy-only matches, just for laterality words instead of body-part words.
+const WEAK_MODIFIER_WORDS = new Set(["right", "left"]);
 
 // MANDATORY CONDITION RULE: for a curated set of serious/diagnostic terms, a coincidental
 // match on some unrelated word (even a real symptom word, not just anatomy) is dangerously
@@ -853,7 +868,7 @@ function scoreRemedies(inputText, diseaseProtocol) {
       // correctly carries Nux Vomica) — anatomy words are just the body part being discussed,
       // not distinguishing evidence on their own the way a symptom/quality word is.
       const matchedWords = kWords.filter(kw => inputWords.some(iw => wordsMatch(kw, iw)));
-      const hasNonAnatomyHit = matchedWords.some(w => !ANATOMY_WORDS.has(w));
+      const hasNonAnatomyHit = matchedWords.some(w => !ANATOMY_WORDS.has(w) && !WEAK_MODIFIER_WORDS.has(w));
       // MANDATORY CONDITION RULE — see SIGNIFICANT_CONDITION_WORDS: when the case names a
       // serious diagnostic term, this keynote must contain that same term to count at all,
       // no matter how strong its overlap is otherwise. Only constrains anything when
@@ -901,12 +916,14 @@ function scoreRemedies(inputText, diseaseProtocol) {
     // NAT-MUR GUARDRAIL: Natrum Muriaticum is graded across more rubrics than any other
     // remedy in this repertory, which structurally makes it easy to accumulate a winning
     // score from breadth rather than genuinely fitting the case. Explicit rule: it needs at
-    // least 2 distinct fired rubrics behind it (not just one coincidental match) or its score
-    // is discounted — a real Nat-mur case combines multiple confirming symptoms (grief +
-    // thirst + dryness + etc.), not just one.
+    // least 2 distinct fired rubrics behind it, UNLESS that one rubric is itself a strong,
+    // specific (non-generic-section) match — e.g. "Silent grief, dwells on past hurts" firing
+    // alone for an actual grief case IS the real diagnostic signal, not accumulated breadth,
+    // and halving it was wrongly letting a weaker competitor (Ignatia, ungraded by this same
+    // guardrail) outrank a textbook-correct single strong match.
     if (r.id === "nat-mur") {
       const natMurRubricCount = (remedyRubrics[r.id] || []).length;
-      if (natMurRubricCount < 2) score *= 0.5;
+      if (natMurRubricCount < 2 && specificRepScore < 1.0) score *= 0.5;
     }
 
     // NOTE: a generic disease-tag boost used to live here (any input word matching the
