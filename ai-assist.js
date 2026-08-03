@@ -1,12 +1,23 @@
-// ai-assist.js — adds the "Analyse Case with AI" button, wired to the secure
-// backend function. This is a SEPARATE file from script.js on purpose: it
-// never modifies or depends on the internals of the existing search engine,
-// so it can't break anything that already works. It reads the classical
-// engine's top pick straight from the rendered #results DOM (via the
-// .md-remedy-name element script.js already produces) rather than reaching
-// into script.js's internals.
+// ai-assist.js — adds (1) a confidence-based nudge toward AI review, and (2)
+// the "Analyse Case with AI" button that calls the secure backend function.
+// This is a SEPARATE file from script.js on purpose: it never modifies or
+// depends on the internals of the existing search engine, so it can't break
+// anything that already works. It reads the classical engine's result straight
+// from the rendered #results DOM (the .md-remedy-name text and the
+// data-confidence attribute script.js already produces) rather than reaching
+// into script.js's internals. The AI is NEVER called automatically — the
+// nudge is UI-only, so AI usage (and cost) only ever happens when the doctor
+// clicks the AI button themselves.
 
 (function () {
+  // Confidence bands, applied to the same `main.percent` script.js already
+  // computes and displays. Below 25% script.js refuses to show a remedy at
+  // all (its own CONFIDENCE_FLOOR), so LOW here only ever fires in practice
+  // for the 25–39% range that still produces a result.
+  const HIGH_THRESHOLD = 70;   // >70%  -> say nothing, classical result stands on its own
+  const MEDIUM_THRESHOLD = 40; // 40-70% -> subtle suggestion
+                                // <40%  -> clear alert
+
   function waitForReady(check, thenRun, triesLeft) {
     if (check()) { thenRun(); return; }
     if (triesLeft <= 0) return; // give up quietly — core app still works fine
@@ -43,9 +54,46 @@
     statusEl.className = "ai-assist-status";
     aiBtn.insertAdjacentElement("afterend", statusEl);
 
+    let loggedIn = false;
     // Show/hide the button based on login state, reusing RemedyAuth's own hook.
     window.RemedyAuth.onAuthChange((user) => {
+      loggedIn = !!user;
       aiBtn.style.display = user ? "inline-block" : "none";
+    });
+
+    // ---------- Confidence nudge: runs on every "Get Remedy" click, doesn't
+    // call the AI, just tells the doctor whether it's worth checking it. ----------
+    resultBtn.addEventListener("click", () => {
+      // script.js's own click handler (attached first, since script.js loads
+      // before this file) has already run and rendered the result by the time
+      // this listener fires.
+      const card = resultsEl.querySelector(".main-decision-card");
+      const hintId = "aiConfidenceHint";
+      const existing = document.getElementById(hintId);
+      if (existing) existing.remove();
+      if (!card) return; // no result rendered (e.g. "no confident match") — nothing to hint about
+
+      const confidence = Number(card.dataset.confidence);
+      if (!Number.isFinite(confidence) || confidence > HIGH_THRESHOLD) return; // high confidence — say nothing
+
+      const hint = document.createElement("div");
+      hint.id = hintId;
+      if (confidence >= MEDIUM_THRESHOLD) {
+        hint.className = "ai-confidence-hint ai-confidence-medium";
+        hint.textContent = "You may check AI opinion.";
+      } else {
+        hint.className = "ai-confidence-hint ai-confidence-low";
+        hint.textContent = "⚠ Low confidence — AI review recommended.";
+      }
+      // Only offer a direct click-through when the doctor is actually logged in
+      // (the AI button itself is hidden otherwise) — clicking the hint just
+      // triggers the same manual AI button click, no extra API call logic here.
+      if (loggedIn) {
+        hint.classList.add("ai-confidence-clickable");
+        hint.title = "Click to run the AI second opinion";
+        hint.addEventListener("click", () => aiBtn.click());
+      }
+      card.insertAdjacentElement("afterend", hint);
     });
 
     aiBtn.addEventListener("click", async () => {
@@ -92,16 +140,17 @@
         box.className = "ai-assist-result";
         resultsEl.insertAdjacentElement("afterend", box);
       }
+      // Exact wording per spec: "AI agrees" OR "AI suggests alternative: ___"
       const agreementLine = classicalRemedy
         ? (aiResult.agreement
-            ? `<div class="ai-agree">✔ Agrees with the classical match (${esc(classicalRemedy)})</div>`
-            : `<div class="ai-disagree">⚠ Differs from the classical match (${esc(classicalRemedy)}) — worth weighing both</div>`)
+            ? `<div class="ai-agree">✔ AI agrees</div>`
+            : `<div class="ai-disagree">⚠ AI suggests alternative: ${esc(aiResult.aiRemedy)}</div>`)
         : "";
       const symptomsLine = (aiResult.keySymptoms && aiResult.keySymptoms.length)
         ? `<div class="ai-key-symptoms">Key symptoms: ${aiResult.keySymptoms.map(esc).join(", ")}</div>`
         : "";
       box.innerHTML = `
-        <div class="ai-result-title">🧠 AI's Independent Assessment</div>
+        <div class="ai-result-title">🧠 AI Second Opinion</div>
         <div class="ai-result-remedy">${esc(aiResult.aiRemedy)}</div>
         ${agreementLine}
         ${symptomsLine}
