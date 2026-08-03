@@ -163,12 +163,10 @@ footer.app-footer .f-item b { display: block; color: var(--navy); font-size: 0.7
 .ai-assist-success { color: #2e8b3d; }
 .ai-assist-error { color: #b0413e; }
 
-/* ---------- AI HYBRID NOTE (ai-assist.js) ---------- */
-.ai-note { margin: 12px 20px 0; padding: 14px 16px; border-radius: 12px; font-size: 0.85rem; }
-.ai-note-agree { background: #eef8f0; border: 1.5px solid #bfe3c8; }
-.ai-note-disagree { background: #fff7e8; border: 1.5px solid #f0d9a0; }
-.ai-note-title { font-weight: 800; margin-bottom: 6px; font-size: 0.9rem; }
-.ai-note-agree .ai-note-title { color: #1e6b3a; }
-.ai-note-disagree .ai-note-title { color: #8a5a00; }
-.ai-note-body { color: #444; line-height: 1.5; margin-bottom: 4px; }
-.ai-note-classical { font-style: italic; color: #666; font-size: 0.8rem; }
+.ai-assist-result { background: var(--card); margin: 16px 20px; border-radius: var(--radius); border: 2px solid var(--purple-1); box-shadow: 0 4px 20px rgba(139,92,246,0.15); padding: 18px 20px; }
+.ai-result-title { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase; color: var(--purple-2); margin-bottom: 6px; }
+.ai-result-remedy { font-family: "Poppins", "Inter", sans-serif; font-weight: 800; font-size: 1.5rem; color: var(--navy); margin-bottom: 8px; }
+.ai-agree { color: var(--green-1); font-weight: 700; font-size: 0.85rem; margin-bottom: 6px; }
+.ai-disagree { color: var(--red-1); font-weight: 700; font-size: 0.85rem; margin-bottom: 6px; }
+.ai-key-symptoms { font-size: 0.82rem; color: var(--muted); margin-bottom: 8px; }
+.ai-reasoning { font-size: 0.88rem; color: var(--ink); line-height: 1.55; }
