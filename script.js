@@ -680,7 +680,16 @@ function scoreRemedies(inputText, diseaseProtocol) {
       // (3+) can still contribute on a partial match — the top-N ranking below is what keeps
       // those appropriately weighted rather than dominating.
       const isShort = kWords.length <= 3;
-      if ((isShort && ratio >= 1.0) || (!isShort && ratio > 0)) {
+      // A LONG keynote matching on ONLY a body-part word isn't real evidence (e.g. "paralysis
+      // of tongue" matching Taraxacum purely because "tongue" appears in its unrelated
+      // "mapped/geographic tongue coating" keynote — the actual complaint, "paralysis", was
+      // never matched at all). A single matched NON-anatomy word is still allowed through, since
+      // that's normally a genuine characteristic symptom/quality term (e.g. "irritable" alone
+      // correctly carries Nux Vomica) — anatomy words are just the body part being discussed,
+      // not distinguishing evidence on their own the way a symptom/quality word is.
+      const matchedWords = kWords.filter(kw => inputWords.some(iw => wordsMatch(kw, iw)));
+      const hasNonAnatomyHit = matchedWords.some(w => !ANATOMY_WORDS.has(w));
+      if ((isShort && ratio >= 1.0) || (!isShort && ratio > 0 && hasNonAnatomyHit)) {
         // Location match = +5 (explicit score bonus, not just a pass/fail gate): a keynote
         // that names the SAME body part as the query gets extra weight on top of its normal
         // word-overlap strength, so a location-confirmed match outranks an equally-worded
