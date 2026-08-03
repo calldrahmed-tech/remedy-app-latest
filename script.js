@@ -183,11 +183,28 @@ const ANATOMY_WORDS = new Set([
 // allowed to count as a match if it ALSO contains that same condition word — this is a hard
 // gate, not a weighting nudge, and only ever activates when one of these specific terms is
 // present, so it can't affect the vast majority of ordinary symptom searches.
+// NOTE: this only catches terms that tokenize into one specific, unambiguous word. A few
+// common doctor phrasings ("heart attack", "kidney failure", "liver failure") don't have a
+// safe single-word stand-in — "heart"/"kidney"/"liver" are plain anatomy words and "attack"/
+// "failure" are too generic on their own (e.g. "panic attack", "failure to thrive" are
+// unrelated) — so those need phrase-level detection this list can't do. Flag if that's needed.
+// Deliberately excludes common CHRONIC conditions (diabetes, asthma, eczema, psoriasis,
+// bronchitis, schizophrenia...) even though they're "serious" in the everyday sense — those
+// are treated in homeopathy via broad symptom-totality matching (and repertory rubrics, which
+// this rule doesn't touch at all), so forcing every keynote to literally contain the disease
+// name would block legitimate matches and cause MORE "no confident match" results for very
+// common searches. This list is only for conditions specific/acute enough that a genuinely
+// relevant keynote realistically would name them outright.
 const SIGNIFICANT_CONDITION_WORDS = new Set([
   "paralysis","paralyzed","paralysed","paralytic","cancer","carcinoma","tumor","tumour",
-  "malignant","fracture","fractured","hemorrhage","haemorrhage","gangrene","sepsis","septic",
-  "stroke","seizure","seizures","convulsion","convulsions","coma","comatose","tuberculosis",
-  "meningitis","appendicitis","aneurysm"
+  "malignant","leukemia","leukaemia","lymphoma","sarcoma","melanoma","fracture","fractured",
+  "hemorrhage","haemorrhage","gangrene","sepsis","septic","stroke","seizure","seizures",
+  "convulsion","convulsions","epilepsy","epileptic","coma","comatose","tuberculosis",
+  "meningitis","appendicitis","aneurysm","dementia","alzheimers","parkinsons","pneumonia",
+  "hepatitis","typhoid","diphtheria","tetanus","rabies","cholera","cirrhosis","jaundice",
+  "pancreatitis","peritonitis","embolism","thrombosis","lupus","malaria","encephalitis",
+  "poliomyelitis","polio","osteoporosis","infarction","myocardial","sclerosis","nephropathy",
+  "glaucoma","cataract","leprosy","hiv","aids"
 ]);
 function anatomyWordsIn(words) {
   return words.filter(w => ANATOMY_WORDS.has(w));
