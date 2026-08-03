@@ -175,6 +175,20 @@ const ANATOMY_WORDS = new Set([
   "kidney","kidneys","bladder","uterus","ovary","ovaries","testicle","testicles","rectum",
   "anus","skin","heel","joint","joints"
 ]);
+
+// MANDATORY CONDITION RULE: for a curated set of serious/diagnostic terms, a coincidental
+// match on some unrelated word (even a real symptom word, not just anatomy) is dangerously
+// misleading — e.g. "paralysis of tongue" should never surface a remedy whose only connection
+// is an unrelated tongue-coating keynote. When the input names one of these, a keynote is only
+// allowed to count as a match if it ALSO contains that same condition word — this is a hard
+// gate, not a weighting nudge, and only ever activates when one of these specific terms is
+// present, so it can't affect the vast majority of ordinary symptom searches.
+const SIGNIFICANT_CONDITION_WORDS = new Set([
+  "paralysis","paralyzed","paralysed","paralytic","cancer","carcinoma","tumor","tumour",
+  "malignant","fracture","fractured","hemorrhage","haemorrhage","gangrene","sepsis","septic",
+  "stroke","seizure","seizures","convulsion","convulsions","coma","comatose","tuberculosis",
+  "meningitis","appendicitis","aneurysm"
+]);
 function anatomyWordsIn(words) {
   return words.filter(w => ANATOMY_WORDS.has(w));
 }
@@ -654,6 +668,10 @@ function scoreRemedies(inputText, diseaseProtocol) {
                     // share a generic word (e.g. "right", "side", "pain" scattered across
                     // unrelated body systems) from out-accumulating a genuinely strong match.
   const inputAnatomy = anatomyWordsIn(inputWords);
+  // See SIGNIFICANT_CONDITION_WORDS above — non-empty only when the case names a serious
+  // diagnostic term, in which case every materia medica candidate below must also contain it.
+  const inputConditionWords = inputWords.filter(w =>
+    [...SIGNIFICANT_CONDITION_WORDS].some(cw => wordsMatch(w, cw)));
   DB.remedies.forEach(r => {
     const candidates = [];
     r.keynotes.forEach(k => {
@@ -689,7 +707,13 @@ function scoreRemedies(inputText, diseaseProtocol) {
       // not distinguishing evidence on their own the way a symptom/quality word is.
       const matchedWords = kWords.filter(kw => inputWords.some(iw => wordsMatch(kw, iw)));
       const hasNonAnatomyHit = matchedWords.some(w => !ANATOMY_WORDS.has(w));
-      if ((isShort && ratio >= 1.0) || (!isShort && ratio > 0 && hasNonAnatomyHit)) {
+      // MANDATORY CONDITION RULE — see SIGNIFICANT_CONDITION_WORDS: when the case names a
+      // serious diagnostic term, this keynote must contain that same term to count at all,
+      // no matter how strong its overlap is otherwise. Only constrains anything when
+      // inputConditionWords is non-empty, so ordinary searches are untouched.
+      const hasRequiredConditionMatch = !inputConditionWords.length ||
+        matchedWords.some(mw => inputConditionWords.some(cw => wordsMatch(mw, cw)));
+      if (((isShort && ratio >= 1.0) || (!isShort && ratio > 0 && hasNonAnatomyHit)) && hasRequiredConditionMatch) {
         // Location match = +5 (explicit score bonus, not just a pass/fail gate): a keynote
         // that names the SAME body part as the query gets extra weight on top of its normal
         // word-overlap strength, so a location-confirmed match outranks an equally-worded
