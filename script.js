@@ -1028,7 +1028,7 @@ function runSearch() {
   }
 
   /* ---------- 1. MAIN DECISION — always visible, big, centered, no distractions ---------- */
-  html += `<div class="main-decision-card">
+  html += `<div class="main-decision-card" data-confidence="${main.percent}">
     <div class="md-eyebrow">🎯 Recommended Remedy</div>
     <div class="md-remedy-name display">${esc(main.remedy.name)}</div>
     <div class="md-checks">
