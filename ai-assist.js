@@ -81,7 +81,7 @@
         } else if (code === "functions/unauthenticated") {
           statusEl.textContent = "Please log in first to use AI analysis.";
         } else {
-          statusEl.textContent = "AI analysis unavailable right now — the classical result above still applies.";
+          statusEl.textContent = "AI error (debug): " + (err.message || String(err));
         }
         statusEl.className = "ai-assist-status ai-assist-error";
       } finally {
