@@ -79,10 +79,71 @@ function buildWordDict() {
   });
 }
 
+// COMMON ENGLISH WORDS: WORD_DICT above is built ONLY from words that happen to appear in the
+// remedies' own keynote text — it is NOT a real English dictionary. That meant an ordinary,
+// correctly-spelled word that simply never happens to appear in a keynote ("could", "since",
+// "spotting", "asking", "tiny", "pacing"...) was being treated as a typo and forcibly rewritten
+// to the nearest word that DOES appear in the materia medica text, regardless of relevance —
+// e.g. "I could barely speak" silently became "I cold barely sweat", manufacturing a fake
+// Arsenicum match out of nothing, while "tiny sips" (an actual Arsenicum keynote phrase)
+// became "wind sips", destroying the real match. This is ordinary sentence vocabulary that
+// fuzzyCorrect must never treat as a medical-term typo, checked before any correction attempt.
+const COMMON_ENGLISH_WORDS = new Set([
+  // pronouns / determiners
+  "this","that","these","those","them","they","their","theirs","there","then","than","when",
+  "what","which","while","where","were","been","being","have","having","having","some","such",
+  "each","every","both","most","other","others","another","same","only","very","just","also",
+  "still","even","back","here","itself","himself","herself","myself","yourself","themselves",
+  "ourselves","who","whom","whose","whoever",
+  // prepositions / conjunctions
+  "about","above","after","again","against","between","during","before","through","under",
+  "over","until","since","because","although","though","unless","whereas","without","within",
+  "along","among","around","behind","below","beside","beyond","despite","toward","towards",
+  "upon","onto","into","across",
+  // common verbs, all tenses/forms
+  "could","would","should","might","must","shall","will","started","start","starting",
+  "begin","began","begun","beginning","speak","speaks","spoke","spoken","speaking","tell",
+  "tells","told","telling","asking","asked","asks","talk","talks","talked","talking","think",
+  "thinks","thought","thinking","know","knows","knew","known","knowing","feel","feels","felt",
+  "feeling","seem","seems","seemed","seeming","notice","notices","noticed","noticing","happen",
+  "happens","happened","happening","become","becomes","became","becoming","comes","coming",
+  "came","goes","going","gone","went","gets","getting","got","gotten","makes","making","made",
+  "takes","taking","took","taken","gives","giving","gave","given","finds","finding","found",
+  "wants","wanting","wanted","needs","needed","needing","tries","trying","tried","helps",
+  "helping","helped","shows","showing","showed","shown","seems","looks","looking","looked",
+  "worries","worried","worrying","confuses","confused","confusing","stormed","storming",
+  "snapping","snapped","snaps","pacing","paces","paced","googling","googled","drinking",
+  "drinks","drank","drunk","walking","walks","walked","bending","bends","bend","bent",
+  "pressing","presses","pressed","stopping","stops","stopped","staying","stays","stayed",
+  "leaving","leaves","left","keeping","keeps","kept","letting","lets","let","calling","calls",
+  "called","turning","turns","turned","moving","moves","moved","sitting","sits","sat",
+  "standing","stands","stood","lying","lies","lay","lain","losing","loses","lost","meeting",
+  "meets","met","running","runs","ran","bringing","brings","brought","writing","writes",
+  "wrote","written","reading","reads","opening","opens","opened","closing","closes","closed",
+  // common adjectives / adverbs
+  "good","bad","big","small","large","little","long","short","high","low","old","new","young",
+  "great","strange","strong","quick","quite","really","actually","honestly","basically",
+  "generally","usually","normally","typically","occasionally","constantly","definitely",
+  "probably","possibly","certainly","exactly","mainly","simply","clearly","obviously","surely",
+  "especially","particularly","mostly","oddly","barely","hardly","rarely","suddenly",
+  "gradually","completely","totally","entirely","slightly","somewhat","fairly","pretty",
+  "extremely","incredibly","absolutely","almost","nearly","quite","enough","too","so","much",
+  "many","more","most","less","least","few","several","couple","tiny","huge","massive",
+  // time / frequency
+  "today","yesterday","tomorrow","morning","afternoon","evening","tonight","week","weeks",
+  "month","months","year","years","always","never","sometimes","often","again","ago","daily",
+  "weekly","monthly","yearly","recently","lately","currently","immediately","eventually",
+  "finally","meanwhile","afterward","afterwards","beforehand",
+  // family / people / everyday nouns
+  "husband","wife","mother","father","sister","brother","daughter","son","child","children",
+  "family","friend","friends","doctor","people","person","things","thing","stuff","way","ways",
+  "time","times","part","parts","side","sides","bit","bits","lot","lots","kind","sort"
+]);
+
 function fuzzyCorrect(word) {
   word = word.toLowerCase().replace(/[^a-z]/g, "");
   if (word.length < 4) return word;
-  if (WORD_DICT.has(word)) return word;
+  if (WORD_DICT.has(word) || COMMON_ENGLISH_WORDS.has(word)) return word;
   let best = word, bestDist = 3;
   for (const dw of WORD_DICT) {
     if (Math.abs(dw.length - word.length) > 2) continue;
@@ -209,9 +270,26 @@ const SIGNIFICANT_CONDITION_WORDS = new Set([
 function anatomyWordsIn(words) {
   return words.filter(w => ANATOMY_WORDS.has(w));
 }
+// ANATOMY_GROUPS: sub-parts that are really the same broader region for conflict-checking
+// purposes — without this, a keynote about "cheek" was flagged as conflicting with a case
+// that said "face" (rejecting an otherwise near-perfect 6/9-word Chamomilla match for a
+// one-sided facial flush, exactly the kind of case that keynote exists to catch), purely
+// because "cheek" and "face" are different literal words for overlapping anatomy.
+const ANATOMY_GROUPS = [
+  new Set(["face", "cheek", "cheeks", "forehead", "jaw"]),
+  new Set(["eye", "eyes"]),
+  new Set(["ear", "ears"]),
+  new Set(["hand", "hands", "wrist", "wrists", "finger", "fingers"]),
+  new Set(["foot", "feet", "toe", "toes", "ankle", "ankles"]),
+  new Set(["leg", "legs", "thigh", "thighs", "calf", "calves", "shin", "knee", "knees"]),
+];
+function anatomyGroupMatch(a, b) {
+  if (a === b) return true;
+  return ANATOMY_GROUPS.some(g => g.has(a) && g.has(b));
+}
 function anatomyConflict(inputAnatomy, keynoteAnatomy) {
   if (!inputAnatomy.length || !keynoteAnatomy.length) return false; // no constraint if either is silent on location
-  return !keynoteAnatomy.some(k => inputAnatomy.includes(k));
+  return !keynoteAnatomy.some(k => inputAnatomy.some(i => anatomyGroupMatch(i, k)));
 }
 
 // MODALITY POLARITY PAIRING: a keynote like "better from heat" must only match when the
@@ -303,6 +381,38 @@ const SECTION_WEIGHT = {
                            // generic/fallback rubrics (bare constipation,
                            // undifferentiated fever) rather than SRPs
 };
+// GENERIC (location/complaint-agnostic) SECTIONS: Thirst, Appetite, Fever and Weight describe
+// a constitutional REACTION PATTERN (thirstless, ravenous at 11am, etc.) that says nothing
+// about WHAT the presenting complaint actually is — almost every remedy is graded on some of
+// these, and the repertory data has essentially no location tagging on them (only 1 of 174
+// rubrics carries a location field at all). That let a remedy like Apis win completely
+// unrelated cases (an itchy scalp, an ear infection) purely off "thirstless" — a real symptom
+// of the case, but one with zero connection to what the case is actually ABOUT. Mind/Common/
+// Stool/Extremities rubrics name the actual presenting symptom (grief, hair loss, vertigo, leg
+// pain...) and are NOT generic — a grief case winning on Mind alone (Nat-mur) is correct.
+const GENERIC_SECTIONS = new Set(["Thirst", "Appetite", "Fever", "Weight"]);
+// Modalities is handled separately, NOT as a whole-section rule — unlike Thirst/Appetite, a
+// modality is very often the presenting complaint's own defining behavior (Bryonia's "worse
+// motion, better pressure" for a back spasm basically IS the complaint, not incidental
+// generalist noise), so treating the whole section as generic broke real, correct matches.
+// Only the subset below — pure thermal/weather/time-of-day reaction patterns with no pain
+// character or body-specific content of their own — are the ones that caused the Apis-wins-
+// everything failure, so only these count as generic; mechanical/pain modalities do not.
+const GENERIC_MODALITY_RUBRICS = new Set([
+  "Worse before a thunderstorm or change of weather",
+  "Every change to cold damp weather brings new symptoms, worse from chill after being overheated",
+  "Cannot bear warmth of bed, throws off covers, itching or burning worse from heat of bed",
+  "Worse around 10-11am, worse from heat and sun",
+  "Worse from cold, better from heat",
+  "Worse from heat, better from cold",
+  "Worse in morning",
+  "Worse in evening or night"
+]);
+// How hard a remedy's generic-only evidence gets discounted when it has NO corroborating
+// complaint-specific evidence at all (no Mind/Common/Stool/Extremities rubric, no real materia
+// medica keynote hit) — mirrors the existing MM_WEIGHT_CONFIRM-style "this is confirmation,
+// not proof" pattern already used elsewhere in this file.
+const GENERIC_ALONE_DISCOUNT = 0.2;
 // LOCATION_SCORE_BONUS: location is scored explicitly (not just used as a pass/fail filter)
 // per the "Location match = +5" rule — applied directly in scoreRemedies below wherever a
 // materia medica keynote's body part matches the query's.
@@ -429,8 +539,11 @@ function scoreRepertory(inputText) {
     .replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ") + " ";
   const inputLoc = parseLocation(inputText);
   const remedyScores = {};      // id -> accumulated weighted grade total
+  const remedyGenericScores = {}; // id -> portion of remedyScores that came ONLY from
+                                   // GENERIC_SECTIONS (see above) — used to discount a remedy
+                                   // that has no complaint-specific evidence behind it at all
   const remedyRubrics = {};     // id -> [ "Section: rubric text", ... ] (for display)
-  if (!REPERTORY) return { remedyScores, remedyRubrics, firedRubrics: [], mainComplaintRubric: null };
+  if (!REPERTORY) return { remedyScores, remedyGenericScores, remedyRubrics, firedRubrics: [], mainComplaintRubric: null };
 
   const firedRubrics = [];
   // MAIN COMPLAINT DETECTION: the fired rubric whose trigger appears EARLIEST in the text is
@@ -555,8 +668,14 @@ function scoreRepertory(inputText) {
     if (bestPos === Infinity) return; // didn't fire
     firedRubrics.push(`${rubric.section}: ${rubric.rubric}`);
     const sw = SECTION_WEIGHT[rubric.section] || 1.0;
+    const isGeneric = !rubric.location && (
+      GENERIC_SECTIONS.has(rubric.section) ||
+      (rubric.section === "Modalities" && GENERIC_MODALITY_RUBRICS.has(rubric.rubric))
+    );
     rubric.remedies.forEach(r => {
-      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw * idfFactor(r.id);
+      const add = r.grade * sw * idfFactor(r.id);
+      remedyScores[r.id] = (remedyScores[r.id] || 0) + add;
+      if (isGeneric) remedyGenericScores[r.id] = (remedyGenericScores[r.id] || 0) + add;
       remedyRubrics[r.id] = remedyRubrics[r.id] || [];
       remedyRubrics[r.id].push(`${rubric.section}: ${rubric.rubric}`);
     });
@@ -592,7 +711,9 @@ function scoreRepertory(inputText) {
     const sw = SECTION_WEIGHT.Fever;
     firedRubrics.push("Fever: General/undifferentiated fever");
     GENERAL_FEVER.forEach(r => {
-      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw * idfFactor(r.id);
+      const add = r.grade * sw * idfFactor(r.id);
+      remedyScores[r.id] = (remedyScores[r.id] || 0) + add;
+      remedyGenericScores[r.id] = (remedyGenericScores[r.id] || 0) + add;
       remedyRubrics[r.id] = remedyRubrics[r.id] || [];
       remedyRubrics[r.id].push("Fever: General/undifferentiated fever");
     });
@@ -610,7 +731,9 @@ function scoreRepertory(inputText) {
     const sw = SECTION_WEIGHT.Thirst;
     firedRubrics.push("Thirst: General/unspecified");
     GENERAL_THIRST.forEach(r => {
-      remedyScores[r.id] = (remedyScores[r.id] || 0) + r.grade * sw * idfFactor(r.id);
+      const add = r.grade * sw * idfFactor(r.id);
+      remedyScores[r.id] = (remedyScores[r.id] || 0) + add;
+      remedyGenericScores[r.id] = (remedyGenericScores[r.id] || 0) + add;
       remedyRubrics[r.id] = remedyRubrics[r.id] || [];
       remedyRubrics[r.id].push("Thirst: General/unspecified");
     });
@@ -645,7 +768,7 @@ function scoreRepertory(inputText) {
     });
   }
 
-  return { remedyScores, remedyRubrics, firedRubrics, mainComplaintRubric };
+  return { remedyScores, remedyGenericScores, remedyRubrics, firedRubrics, mainComplaintRubric };
 }
 
 function scoreRemedies(inputText, diseaseProtocol) {
@@ -659,7 +782,14 @@ function scoreRemedies(inputText, diseaseProtocol) {
   // every rubric the case matches. Materia medica keynote matching (below) only adds a
   // smaller CONFIRMATORY amount on top — it can support or nudge a repertory-driven pick,
   // but can't manufacture a top result out of prose overlap alone the way it used to.
-  const { remedyScores: repScores, remedyRubrics, mainComplaintRubric } = scoreRepertory(inputText);
+  const { remedyScores: repScores, remedyGenericScores: repGenericScores, remedyRubrics, mainComplaintRubric } = scoreRepertory(inputText);
+  // Whether the case's main-complaint rubric is itself one of the location-agnostic GENERIC
+  // sections — if so, MAIN_COMPLAINT_BOOST below must not hand out its full flat bonus to a
+  // remedy purely for matching that generic rubric (see GENERIC_ALONE_DISCOUNT above).
+  const mainComplaintIsGeneric = !!mainComplaintRubric && !mainComplaintRubric.location && (
+    GENERIC_SECTIONS.has(mainComplaintRubric.section) ||
+    (mainComplaintRubric.section === "Modalities" && GENERIC_MODALITY_RUBRICS.has(mainComplaintRubric.rubric))
+  );
   // MAIN COMPLAINT BOOST: remedies graded in the detected main-complaint rubric get a large
   // score boost — strong enough that matching the case's central symptom reliably outranks a
   // remedy that only matches secondary/general symptoms (thirst, dryness) without touching the
@@ -749,8 +879,24 @@ function scoreRemedies(inputText, diseaseProtocol) {
 
     const repScore = repScores[r.id] || 0;
     const mmWeight = repScore > 0 ? MM_WEIGHT_CONFIRM : MM_WEIGHT_PRIMARY;
-    let score = repScore * REP_WEIGHT + mmScore * mmWeight;
-    if (mainComplaintRemedyIds.has(r.id)) score += MAIN_COMPLAINT_BOOST;
+    // GENERIC-ALONE DISCOUNT: a remedy whose ONLY evidence is location-agnostic (worse
+    // heat/thirstless/etc., see GENERIC_SECTIONS) with nothing tying it to what the case is
+    // actually about — no Mind/Common/Stool/Extremities rubric, no real materia medica keynote
+    // hit — gets that generic portion heavily discounted rather than letting it carry the case.
+    const genericRepScore = repGenericScores[r.id] || 0;
+    const specificRepScore = repScore - genericRepScore;
+    // MIN_REAL_MM_EVIDENCE: a materia medica match built from a single common/ambiguous word
+    // (e.g. "right" meaning "eat right", not "right side") can slip past the anatomy-hit gate
+    // with a tiny strength value — that's not real corroboration, just noise, and must not be
+    // enough on its own to validate an otherwise-generic-only remedy. Real matches consistently
+    // score well above this from today's testing; coincidental single-weak-word ones don't.
+    const MIN_REAL_MM_EVIDENCE = 0.5;
+    const hasSpecificEvidence = specificRepScore > 0.01 || mmScore >= MIN_REAL_MM_EVIDENCE;
+    const effectiveRepScore = hasSpecificEvidence
+      ? repScore
+      : specificRepScore + genericRepScore * GENERIC_ALONE_DISCOUNT;
+    let score = effectiveRepScore * REP_WEIGHT + mmScore * mmWeight;
+    if (mainComplaintRemedyIds.has(r.id) && (!mainComplaintIsGeneric || hasSpecificEvidence)) score += MAIN_COMPLAINT_BOOST;
 
     // NAT-MUR GUARDRAIL: Natrum Muriaticum is graded across more rubrics than any other
     // remedy in this repertory, which structurally makes it easy to accumulate a winning
