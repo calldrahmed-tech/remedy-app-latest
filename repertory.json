@@ -1329,227 +1329,6 @@
       ]
     },
     {
-      "section": "Mind",
-      "rubric": "Terror after a fright, fear of the dark and being alone, violent with hallucinations, better light and company",
-      "triggers": [
-        "terror after fright",
-        "fear of dark and being alone",
-        "violent hallucinations",
-        "sees frightful images",
-        "wants light and company",
-        "worse in the dark alone",
-        "after a fright",
-        "terrified of the dark",
-        "becomes violent",
-        "seeing hallucinations",
-        "frightening hallucinations"
-      ],
-      "remedies": [
-        {
-          "id": "stram",
-          "grade": 3
-        }
-      ]
-    },
-    {
-      "section": "Common",
-      "rubric": "Excoriating, acrid discharges that burn and irritate the skin, worse from warmth, teething with greenish stool",
-      "triggers": [
-        "excoriating skin around anus",
-        "acrid discharge burns skin",
-        "greenish diarrhea teething",
-        "toothache worse warm food"
-      ],
-      "remedies": [
-        {
-          "id": "kreos",
-          "grade": 3
-        }
-      ]
-    },
-    {
-      "section": "Mind",
-      "rubric": "Deep despair with sense of worthlessness or disgrace, business failure, worse at night, suicidal thoughts",
-      "triggers": [
-        "feels worthless and disgraced",
-        "despair over business failure",
-        "internal anguish worse at night",
-        "driven to despair"
-      ],
-      "remedies": [
-        {
-          "id": "aur",
-          "grade": 3
-        }
-      ]
-    },
-    {
-      "section": "Modalities",
-      "rubric": "Vertigo or weakness worse from turning in bed or turning the head, ascending paralysis beginning in the feet",
-      "triggers": [
-        "vertigo worse turning in bed",
-        "worse turning the head",
-        "paralysis begins in the feet",
-        "ascending weakness legs"
-      ],
-      "remedies": [
-        {
-          "id": "con",
-          "grade": 3
-        }
-      ]
-    },
-    {
-      "section": "Modalities",
-      "rubric": "Stitching chest pains worse lying on the painful side, bag-like swelling of the upper eyelids, very chilly",
-      "triggers": [
-        "stitching pains worse lying on painful side",
-        "bag like swelling upper eyelids",
-        "worse lying on the affected side"
-      ],
-      "remedies": [
-        {
-          "id": "kali-c",
-          "grade": 3
-        }
-      ]
-    },
-    {
-      "section": "Common",
-      "rubric": "Child slow to walk with large head, weak ankles, fontanelles slow to close, chilly wants head covered",
-      "triggers": [
-        "slow to walk large head",
-        "fontanelles slow to close",
-        "weak ankles child",
-        "wants head wrapped warmly"
-      ],
-      "remedies": [
-        {
-          "id": "sil",
-          "grade": 3
-        }
-      ]
-    },
-    {
-      "section": "Common",
-      "rubric": "Acrid, corrosive discharge smelling like decaying fish, rapid tooth decay, worse at night and from cold washing",
-      "triggers": [
-        "corrosive discharge decaying fish",
-        "rapid tooth decay crumbling black",
-        "teeth decay as soon as erupt",
-        "worse night cold washing"
-      ],
-      "remedies": [
-        {
-          "id": "kreos",
-          "grade": 3
-        }
-      ]
-    },
-    {
-      "section": "Mind",
-      "rubric": "Wakes gasping with heart pounding, cannot bear anything touching the throat, worse left side, worse warm drinks",
-      "triggers": [
-        "wakes gasping heart pounding",
-        "cannot bear anything touching neck",
-        "throat worse warm drinks better cold",
-        "suffocating tightness in throat"
-      ],
-      "remedies": [
-        {
-          "id": "lach",
-          "grade": 3
-        }
-      ]
-    },
-    {
-      "section": "Mind",
-      "rubric": "Child wants something then rejects it or demands to be carried then fights being held, ravenous appetite, grinds teeth in sleep",
-      "triggers": [
-        "demands held then kicks screams",
-        "grinds teeth loudly in sleep",
-        "ravenous appetite after full meal",
-        "sleeps on stomach knees under",
-        "picking at nose"
-      ],
-      "remedies": [
-        {
-          "id": "cina",
-          "grade": 3
-        }
-      ]
-    },
-    {
-      "section": "Common",
-      "rubric": "Violent burning bladder pain with constant urging, only drops pass, worse cold application, better warmth",
-      "triggers": [
-        "scalding fire like burning urethra",
-        "raw liquid fire passing through",
-        "violent spasms in the bladder",
-        "only drops of urine pass",
-        "cold washcloth spikes the burning"
-      ],
-      "remedies": [
-        {
-          "id": "canth",
-          "grade": 3
-        }
-      ]
-    },
-    {
-      "section": "Mind",
-      "rubric": "Sleeplessness from joyful excitement or good news, oversensitive to noise and light, mind full of racing ideas",
-      "triggers": [
-        "sleeplessness from good news",
-        "overjoyed and excited nervous system",
-        "noise sounds louder than usual",
-        "light stings the eyes",
-        "cannot switch off from excitement"
-      ],
-      "remedies": [
-        {
-          "id": "coff",
-          "grade": 3
-        }
-      ]
-    },
-    {
-      "section": "Common",
-      "rubric": "Periodic headache with visual disturbance, followed by vomiting of sour ropy bile that burns the whole digestive tract",
-      "triggers": [
-        "vomiting ropy greasy sour mucus",
-        "burns tongue and lips vomiting",
-        "burning liquid down the esophagus",
-        "digestive tract feels on fire",
-        "vomits bile that burns",
-        "burns going up and down",
-        "burning bile vomiting"
-      ],
-      "remedies": [
-        {
-          "id": "iris",
-          "grade": 3
-        }
-      ]
-    },
-    {
-      "section": "Common",
-      "rubric": "Nose blocked at night forcing mouth breathing, wakes gasping, nosebleeds from washing in cold water, worse 3-4am",
-      "triggers": [
-        "nose blocked at night mouth breathing",
-        "wakes up gasping for air",
-        "nosebleed washing face cold water",
-        "worse around three or four am",
-        "sternal soreness from cough"
-      ],
-      "remedies": [
-        {
-          "id": "am-c",
-          "grade": 3
-        }
-      ]
-    },
-    {
       "section": "Modalities",
       "rubric": "Puncture wound cold and numb, but cannot bear warmth applied, better from cold application",
       "triggers": [
@@ -2118,53 +1897,6 @@
       ]
     },
     {
-      "section": "Common",
-      "rubric": "Great weakness out of proportion to the complaint, craves alcohol or stimulants, worse cold better warmth",
-      "triggers": [
-        "weakness out of proportion",
-        "great hurry weakness trembles",
-        "craves alcohol stimulants",
-        "worse cold better warmth trembling"
-      ],
-      "remedies": [
-        {
-          "id": "sul-ac",
-          "grade": 3
-        }
-      ]
-    },
-    {
-      "section": "Common",
-      "rubric": "Profuse bright red passive hemorrhage worse from least motion or jarring, heavier at menopause",
-      "triggers": [
-        "profuse bright red passive hemorrhage",
-        "worse least motion jarring",
-        "bleeding heavier at change of life",
-        "flooding at menopause"
-      ],
-      "remedies": [
-        {
-          "id": "trill",
-          "grade": 3
-        }
-      ]
-    },
-    {
-      "section": "Common",
-      "rubric": "Fluid accumulation around the lungs, must sit upright to breathe, watery burning diarrhea worse at night",
-      "triggers": [
-        "fluid around lungs must sit upright",
-        "watery diarrhea burning worse night",
-        "difficulty breathing lying down fluid"
-      ],
-      "remedies": [
-        {
-          "id": "merc-sul",
-          "grade": 3
-        }
-      ]
-    },
-    {
       "section": "Modalities",
       "rubric": "Cannot bear warmth of bed, throws off covers, itching or burning worse from heat of bed",
       "triggers": [
@@ -2420,9 +2152,7 @@
         "bone pain as if broken",
         "breakbone fever",
         "aching in bones as if beaten",
-        "bones feel bruised",
-        "sensation of fractured bones",
-        "severe bone pain"
+        "bones feel bruised"
       ],
       "remedies": [
         {
@@ -2679,11 +2409,7 @@
         "suspicious",
         "very talkative",
         "loquacious",
-        "jumps from subject to subject",
-        "suspicion",
-        "intense suspicion",
-        "jumping to the next thought",
-        "mind racing fast"
+        "jumps from subject to subject"
       ],
       "remedies": [
         {
@@ -2854,8 +2580,6 @@
         "initial push is pure agony",
         "stiffness works itself out",
         "stiffness slowly works",
-        "locked up",
-        "rusted machine",
         "worse first starting to move",
         "ease up as she keeps moving",
         "ease up as he keeps moving"
@@ -2981,6 +2705,40 @@
         },
         {
           "id": "ferr",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Appetite",
+      "rubric": "Decreased appetite, anorexia",
+      "triggers": [
+        "no appetite",
+        "decreased appetite",
+        "loss of appetite",
+        "anorexia",
+        "does not want to eat",
+        "poor appetite"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "chin",
           "grade": 1
         }
       ]
