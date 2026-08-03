@@ -70,8 +70,10 @@ window.RemedyAuth = {
   },
 
   // Calls the secure backend function, which verifies login, enforces the monthly
-  // limit, calls the AI model as an independent reasoner, compares it against the
-  // classical rubric result, and increments usage — all server-side.
+  // limit, calls the AI model, and increments usage — all server-side. This
+  // replaces any client-side counting, which could otherwise be bypassed.
+  // classicalRemedy is passed along so the backend can tell us whether the AI's
+  // independent read of the case agrees with the rubric engine's pick.
   async requestAiAnalysis(caseText, classicalRemedy) {
     const result = await aiNormalizeCallable({ caseText, classicalRemedy });
     return result.data; // { aiRemedy, keySymptoms, reasoning, classicalRemedy, agreement, remaining }
