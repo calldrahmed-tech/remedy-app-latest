@@ -560,6 +560,8 @@ function normalizeSynonyms(text) {
     .replace(/\bno (?:desire|urge) (?:to drink|for water)\b/g, "thirstless")
     .replace(/\bdoes(?:n't| not) want (?:water|to drink)\b/g, "thirstless")
     .replace(/\bhave?n'?t wanted (?:a |any )?(?:single )?drop\b/g, "thirstless")
+    .replace(/\bbarely (?:any|wanted) thirst\b/g, "thirstless")
+    .replace(/\bhave?n'?t wanted to drink (?:much|a lot)\b/g, "thirstless")
     // Worse-motion cluster: "aggravated by movement" and similar phrasings that don't
     // literally contain the word "worse" or "motion" together.
     .replace(/\baggravated by (?:motion|movement|moving)\b/g, "worse motion")
@@ -569,6 +571,12 @@ function normalizeSynonyms(text) {
     // clinical fact as "better motion" but don't literally contain the word "better".
     .replace(/\bimproves? with\b/g, "better")
     .replace(/\beases? with\b/g, "better")
+    // "X rather than making it worse" is a NEGATION of worse (the thing described actually
+    // helps) — left as-is, the literal word "worse" sitting right next to whatever caused it
+    // (e.g. "hot water... rather than making it worse") was being read by the modality
+    // matcher as a genuine "worse from heat" aggravation, the opposite of what the sentence
+    // actually says. Strip the whole negated clause so only the true polarity remains.
+    .replace(/\brather than (?:making it |getting )?worse\b/g, "")
     // "hot" (adjective, e.g. "room gets hot") -> "heat" (noun, what every "worse heat"
     // trigger actually expects). Narrative text overwhelmingly uses "hot", but the
     // repertory's modality triggers were all written in the noun form.
