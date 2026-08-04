@@ -565,6 +565,10 @@ function normalizeSynonyms(text) {
     .replace(/\baggravated by (?:motion|movement|moving)\b/g, "worse motion")
     .replace(/\b(?:movement|moving|any movement) makes? it (?:[a-z]+ ){0,2}worse\b/g, "worse motion")
     .replace(/\bgets? worse with (?:motion|movement|moving)\b/g, "worse motion")
+    // Better-motion cluster: "improves with motion"/"eases with movement" mean the same
+    // clinical fact as "better motion" but don't literally contain the word "better".
+    .replace(/\bimproves? with\b/g, "better")
+    .replace(/\beases? with\b/g, "better")
     // "hot" (adjective, e.g. "room gets hot") -> "heat" (noun, what every "worse heat"
     // trigger actually expects). Narrative text overwhelmingly uses "hot", but the
     // repertory's modality triggers were all written in the noun form.
