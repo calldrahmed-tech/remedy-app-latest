@@ -633,8 +633,6 @@
         "does not show feelings",
         "hides feelings",
         "tear up out of nowhere",
-        "lost my husband",
-        "lost my wife",
         "stopped functioning",
         "isn t like me at all",
         "can t seem to function"
@@ -715,6 +713,26 @@
         {
           "id": "gels",
           "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Heavy muscular weakness like lead, drooping eyelids, thick slow speech, during fever/flu",
+      "triggers": [
+        "arms and legs feel like lead",
+        "heavy and weak",
+        "eyelid seems to be drooping",
+        "drooping eyelid",
+        "speech felt thick and slow",
+        "tongue is heavier than usual",
+        "want to lie still",
+        "even talking feels like an effort"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 3
         }
       ]
     },
@@ -801,7 +819,11 @@
         "poison ivy",
         "contact with plants",
         "contact with chemicals",
-        "rash after contact"
+        "rash after contact",
+        "itchy rash",
+        "small blisters",
+        "hot water calms the itching",
+        "hot water actually calms"
       ],
       "remedies": [
         {
@@ -976,6 +998,9 @@
         "sees imaginary things",
         "hallucinations with fever",
         "dilated pupils",
+        "pupils look unusually large",
+        "pupils look large",
+        "pupils are large",
         "does not recognize",
         "delirium with fever",
         "sees spiders",
@@ -983,7 +1008,10 @@
         "sees horrible faces",
         "sees hideous faces",
         "tries to escape from bed",
-        "terrified of being touched"
+        "terrified of being touched",
+        "mumbling nonsense",
+        "mumbling about a dog that wasn't there",
+        "talking about something that wasn't there"
       ],
       "remedies": [
         {
@@ -993,6 +1021,24 @@
         {
           "id": "stram",
           "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Extreme sensitivity to light and noise, with sudden fever and flushed face",
+      "triggers": [
+        "light hurts her eyes",
+        "hurts her eyes",
+        "flinches at the smallest sound",
+        "made her jump",
+        "sensitive to light and noise",
+        "worse light and noise"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 3
         }
       ]
     },
@@ -1154,7 +1200,10 @@
         "wound festers",
         "slow healing pus",
         "every scrape gets infected",
-        "turns into pus"
+        "turns into pus",
+        "take unusually long to close up",
+        "boils and abscesses that take forever to heal",
+        "take forever to heal"
       ],
       "remedies": [
         {
@@ -1176,7 +1225,14 @@
         "involuntary urination cough",
         "worse clear sunny weather",
         "better damp humid weather",
-        "tendons too short"
+        "tendons too short",
+        "leaking urine whenever i cough",
+        "leaking urine",
+        "leak urine",
+        "better on wet days than on dry cold ones",
+        "damp rainy weather doesn't bother me",
+        "warts that keep appearing",
+        "tend to tear up"
       ],
       "remedies": [
         {
@@ -1230,7 +1286,14 @@
         "cannot lie with head low",
         "oppression like weight on chest",
         "saw cutting through a dry pine board",
-        "cough sounds like a saw"
+        "cough sounds like a saw",
+        "sawing through a plank of wood",
+        "sounds like sawing wood",
+        "worse before midnight",
+        "wants to sit bolt upright",
+        "worse from ice cream",
+        "worse after ice cream",
+        "better warm milk"
       ],
       "remedies": [
         {
@@ -2817,7 +2880,11 @@
         "stiffness slowly works",
         "worse first starting to move",
         "ease up as she keeps moving",
-        "ease up as he keeps moving"
+        "ease up as he keeps moving",
+        "roll out of bed and shuffle",
+        "moving around it eases up",
+        "eases up considerably",
+        "sit still again for too long"
       ],
       "remedies": [
         {
@@ -2834,7 +2901,11 @@
         "blade sticking",
         "pressed hard against",
         "holding my hand firmly",
-        "hand against the painful side"
+        "hand against the painful side",
+        "stabbing pain",
+        "worse deep breath",
+        "worse when i take a deep breath",
+        "lying on the painful side"
       ],
       "remedies": [
         {
@@ -2903,6 +2974,90 @@
         "stertorous breathing",
         "snoring sleep",
         "heavy snoring during sleep"
+      ],
+      "remedies": [
+        {
+          "id": "op",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Indifference and apathy following bereavement (widower's remedy), vertigo on turning head or rising, weakness on exertion, hard painless glandular lump, suppressed sexual desire",
+      "triggers": [
+        "felt indifferent to most things",
+        "don't interest me the way they did",
+        "dizzy spells",
+        "turn my head quickly",
+        "lie down and then sit back up",
+        "climbing the stairs",
+        "surprisingly tiring",
+        "hard, painless lump",
+        "unusually complete lack of interest",
+        "no interest in that side of married life"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Indecisive with financial anxiety, cracked skin fissures, poor tooth enamel, hard painless nodules, joints crack loudly",
+      "triggers": [
+        "constantly anxious about money",
+        "check our bank balance almost daily",
+        "skin on my palms",
+        "deep painful fissures",
+        "enamel issues",
+        "more cavities",
+        "hard, painless little knots",
+        "knuckles crack loudly",
+        "go back and forth for ages before making even small decisions"
+      ],
+      "remedies": [
+        {
+          "id": "calc-f",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "rubric": "Rapid weight loss despite increased appetite, heat intolerance, fullness in neck, tremor, racing heart, must keep busy",
+      "triggers": [
+        "lost quite a bit of weight",
+        "hungry constantly",
+        "weight keeps dropping",
+        "fine tremor",
+        "run hot all the time",
+        "fullness in my neck",
+        "heart feels like it's racing",
+        "have to keep busy",
+        "sitting still makes me more anxious"
+      ],
+      "remedies": [
+        {
+          "id": "iod",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Painless complaints, stuporous drowsiness after fright/shock/injury, rouses briefly when spoken to sharply, strangely cheerful and unconcerned",
+      "triggers": [
+        "barely reacted",
+        "insists she's completely fine",
+        "unusually drowsy",
+        "drifting off mid-sentence",
+        "rouses immediately",
+        "speak to her sharply",
+        "strangely cheerful and unconcerned",
+        "detached from the seriousness"
       ],
       "remedies": [
         {
@@ -3099,7 +3254,10 @@
         "unquenchable thirst",
         "huge glass",
         "chugging water",
-        "gulps down water"
+        "gulps down water",
+        "one large glass",
+        "large glass of cold water",
+        "unusually thirsty"
       ],
       "remedies": [
         {
@@ -3369,7 +3527,9 @@
         "no urge to pass stool",
         "no desire for stool",
         "inactive rectum",
-        "no urging at all"
+        "no urging at all",
+        "doesn't feel any urge",
+        "no urge or discomfort"
       ],
       "remedies": [
         {
@@ -3935,7 +4095,10 @@
         "sudden high fever",
         "sudden violent fever",
         "high fever no chill",
-        "sudden onset fever"
+        "sudden onset fever",
+        "burning to the touch",
+        "burning up to touch",
+        "feels like she's burning up"
       ],
       "remedies": [
         {
@@ -4032,7 +4195,10 @@
         "offensive sweaty feet",
         "slow healing wounds",
         "wounds heal slowly",
-        "slow to heal"
+        "slow to heal",
+        "feet sweat terribly",
+        "take unusually long to close up",
+        "reach for a sweater"
       ],
       "remedies": [
         {
