@@ -2481,6 +2481,42 @@
     },
     {
       "section": "Common",
+      "rubric": "Retracted/drawn-in abdomen with severe colic, mental dullness, weakness of limbs",
+      "triggers": [
+        "abdomen drawn inward",
+        "colic with retraction",
+        "retraction of abdomen",
+        "retracted abdomen",
+        "abdominal pain with retraction",
+        "mental dullness",
+        "weakness of limbs"
+      ],
+      "remedies": [
+        {
+          "id": "plb",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Joint stiffness with tendon contractures, worse cold dry weather, better warmth; progressive weakness; sympathetic, emotional",
+      "triggers": [
+        "joint stiffness with contractures",
+        "tendons feel too short",
+        "sympathetic emotional patient",
+        "sympathetic, emotional patient",
+        "weakness with trembling"
+      ],
+      "remedies": [
+        {
+          "id": "caust",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
       "rubric": "Sharp, stabbing, bursting ear pain, red and hot, worse warmth and lying on affected side",
       "triggers": [
         "stabbing pain in the ear",
@@ -3493,6 +3529,10 @@
         {
           "id": "lyc",
           "grade": 2
+        },
+        {
+          "id": "plb",
+          "grade": 2
         }
       ]
     },
@@ -3949,7 +3989,25 @@
       ]
     },
     {
-      "section": "Stool",
+      "section": "Common",
+      "rubric": "Stony hard glandular swellings, no suppuration, indurated tissue",
+      "triggers": [
+        "stony hard glandular swellings",
+        "stony hard glands",
+        "no suppuration",
+        "tissue feels indurated",
+        "indurated tissue",
+        "hard indurated glands"
+      ],
+      "remedies": [
+        {
+          "id": "calc-f",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
       "rubric": "Chronic glandular swelling, hard nodules, slow to suppurate",
       "triggers": [
         "glandular swelling",
