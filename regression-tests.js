@@ -190,6 +190,84 @@ const PASSING_CASES = [
     text: "Severe abdominal pain with retraction of abdomen. Constipation. Pain not relieved by pressure. Progressive weakness.",
     expectTopId: "plb",
     notes: "Second Plumbum case confirming the retracted-abdomen rubric generalizes beyond the exact wording of the first."
+  },
+  {
+    name: "Belladonna — sudden fever, scarlet burning face, dilated pupils, hallucination, light/noise sensitivity (no literal 'fever' or 'dilated pupils' wording)",
+    text: "This came on so fast, doctor, barely three hours ago she was playing outside, no warning at all. Now her face is scarlet, burning to the touch, but when I held her hand it was actually cool. She keeps saying the ceiling light hurts her eyes even though we've dimmed it, and she flinches at the smallest sound, even a spoon clinking against a cup made her jump. Her pupils look unusually large to me. She was mumbling some nonsense a few minutes ago about a dog that wasn't there, but she's not trying to get up or wander, just tossing her head side to side on the pillow. No fever spikes yet on the thermometer surprisingly, but she feels like she's burning up to touch. She hasn't asked for water once since this started, which is odd because she usually asks constantly.",
+    expectTopId: "bell",
+    notes: "Fixed by broadening the dilated-pupils/hallucination rubric and adding a dedicated light/noise sensitivity rubric — case deliberately avoids clinical words like 'fever' and 'dilated pupils'."
+  },
+  {
+    name: "Iodum — rapid weight loss despite good appetite, heat intolerance, neck fullness, tremor, tachycardia, must keep busy",
+    text: "I've lost quite a bit of weight in the last four months, doctor, despite eating more than I ever have, I'm hungry constantly and yet the weight keeps dropping. My hands have this fine tremor I've noticed while holding my tea cup. I run hot all the time now, my husband complains I've turned the bedroom into an icebox with the fan on all night, whereas I used to be the one who felt cold. There's a fullness in my neck that wasn't there before, and my heart feels like it's racing even when I'm just sitting reading the newspaper. I feel like I have to keep busy, sitting still makes me more anxious somehow, I have to be doing something with my hands.",
+    expectTopId: "iod",
+    notes: "Fixed by adding a dedicated hyperthyroid-picture rubric — previously had zero repertory backing and lost to Arsenicum on MM word-overlap noise."
+  },
+  {
+    name: "Silicea — chronic offensive boils/abscesses, offensive foot sweat, performance-anxiety memory blanks, curved nails, new chilliness, slow-healing cuts",
+    text: "I've had this low-grade problem for years, doctor, keep getting these little boils and abscesses that take forever to heal, and when they finally do drain there's always this awful smell to it. My feet sweat terribly, especially between the toes, and my wife makes me leave my shoes outside the bedroom because of the smell. I used to be quite confident presenting at work, but the last couple of years I've started dreading it terribly, I feel like I'll forget everything the second I stand up, even though I know the material cold. My nails have gotten strange too, they curve inward more than they used to. I feel the cold now in a way I never did before, even mild air conditioning makes me reach for a sweater. Splinters and small cuts on my hands seem to take unusually long to close up as well.",
+    expectTopId: "sil",
+    notes: "Fixed by broadening the sweaty-feet and slow-healing-wound rubrics to natural narrative phrasing (case previously lost to Sulphur on MM word-overlap noise)."
+  },
+  {
+    name: "Spongia — dry sawing-wood cough worse before midnight, worse lying down, worse ice cream, better warm milk",
+    text: "My son's cough started two nights ago, doctor, and it has this dry, harsh sound to it, honestly it sounds like someone sawing through a plank of wood, that's the best way I can describe it. It's much worse right before midnight, wakes him up in a panic. Lying down flat seems to bring it on worse, he wants to sit bolt upright the moment it starts. He had some ice cream at a birthday party yesterday afternoon, and I noticed the cough got noticeably worse that evening. Warm milk before bed seems to settle it slightly, at least temporarily. He doesn't seem to have much of a fever, and he's not clingy or scared exactly, just uncomfortable and struggling to catch his breath during the worst spells.",
+    expectTopId: "spong",
+    notes: "Fixed by broadening the 'saw through wood' cough rubric's trigger phrasing to natural narrative wording — previously lost to Arsenicum entirely."
+  },
+  {
+    name: "Calcarea Fluorica — financial anxiety/indecision, cracked skin fissures, poor tooth enamel, hard painless nodules, joints crack loudly",
+    text: "I'm constantly anxious about money, doctor, even though objectively we're doing fine financially, I check our bank balance almost daily, it's become a bit of a compulsion if I'm honest. The skin on my palms and the soles of my feet keeps cracking, deep painful fissures, especially in winter, no cream seems to fix it for long. My teeth have never been great, enamel issues since I was young, more cavities than my siblings despite similar habits. I've noticed some hard, painless little knots under the skin on my forearm that have been there for months, not changing much. My joints, especially my knuckles, crack loudly and often, sometimes almost embarrassingly loud in quiet meetings. I go back and forth for ages before making even small decisions, it drives my husband up the wall.",
+    expectTopId: "calc-f",
+    notes: "Fixed by adding tooth-enamel/joint-cracking/indecision keynotes and a dedicated rubric — the case's picture is broader than the original Calc Fluor case that first got this remedy added."
+  },
+  {
+    name: "Conium — indifference/apathy after bereavement (widower's remedy), vertigo on turning head, weakness on exertion, hard painless lump, suppressed desire",
+    text: "I lost my wife two years ago, doctor, and honestly since then I've just felt indifferent to most things, even things I used to enjoy don't interest me the way they did. I get these dizzy spells, particularly when I turn my head quickly or when I lie down and then sit back up, the room seems to spin for a few seconds. Climbing the stairs to my flat has become surprisingly tiring, more than it should be for someone my age. I found a hard, painless lump in my chest area a few months back that the doctors are keeping an eye on, it hasn't grown much but it hasn't gone away either. I haven't really had any interest in that side of married life since she passed, which I suppose is natural, but it's been an unusually complete lack of interest, if that makes sense.",
+    expectTopId: "con",
+    notes: "Fixed by adding a dedicated Conium rubric AND removing the overly generic bare 'lost my wife'/'lost my husband' triggers from Nat-mur's grief rubric — those fired instantly in sentence one and grabbed the main-complaint boost before Conium's indifference-specific signal was ever read, regardless of which remedy actually fit the case."
+  },
+  {
+    name: "Sulphur — 15-year skin condition worse hot bath, loves debate, untidy, 11am hunger, PLUS burning soles at night (must unify under one remedy)",
+    text: "I've had this skin condition on and off for fifteen years, doctor, and it always gets worse after a hot bath, which seems backward, you'd think heat would soothe it. My wife jokes I could out-argue a lawyer, I genuinely enjoy a heated debate about politics or religion, doesn't matter which side I'm arguing, I just like the intellectual sport of it. I've never been tidy, my office looks like a bomb went off in it and honestly it doesn't bother me one bit. Around eleven each morning without fail I get this urgent hunger, if lunch is delayed even by twenty minutes I get irritable and shaky. Lately though, on top of all that, I've also developed this burning sensation in the soles of my feet at night, so bad I sometimes stick my feet out from under the blanket, which my wife isn't thrilled about since it's winter. Standing for any length of time, say in a queue, makes my legs ache more than sitting or walking does.",
+    expectTopId: "sulph",
+    notes: "Already passing off the existing Sulphur rubrics — confirms the 'burning soles pushed out from under covers' detail doesn't get treated as an unrelated complaint."
+  },
+  {
+    name: "Plumbum — severe constipation with colic and retracted sunken abdomen, memory loss finishing others' thoughts, wrist-drop weakness, mental sluggishness",
+    text: "I've been severely constipated for months now, doctor, and it's not just infrequent, when I do go there's this terrible colicky pain that wraps around my belly, and my abdomen feels almost pulled inward, sunken, not bloated like you'd expect with constipation. My memory has gotten noticeably worse too, I forget words mid-sentence, my colleagues have started finishing my thoughts for me at meetings, which is humiliating. There's a odd weakness in my wrist, I dropped my coffee cup twice last week because my grip just gave out without warning. I've become strangely slow and introspective, everyone says I used to be sharp and quick, now I take ages to respond even to simple questions, like my thoughts are moving through mud.",
+    expectTopId: "plb",
+    notes: "Already passing off the existing Plumbum retracted-abdomen rubric — confirms the wrist-drop weakness and mental sluggishness are recognized as the same remedy's picture, not separate complaints."
+  },
+  {
+    name: "Rhus Tox — joint stiffness worse on rising better with continued motion, worse damp cold, PLUS itchy vesicular rash better hot water (must unify under one remedy)",
+    text: "My joints have been a real problem this past year, doctor, especially my knees and lower back. Mornings are brutal, I practically have to roll out of bed and shuffle for the first several minutes, but the strange part is once I've been moving around for half an hour, it eases up considerably, sometimes almost disappears until I sit still again for too long. Damp cold weather is my enemy, I can predict rain better than the weather app on my phone at this point. A hot shower helps enormously, more than any pill I've tried. On top of the joints, I've also had this maddeningly itchy rash on my forearms the last few weeks, small blisters, and oddly enough hot water actually calms the itching down rather than making it worse, which confused my dermatologist. I toss and turn constantly at night, can never find a position that stays comfortable for long.",
+    expectTopId: "rhus-t",
+    notes: "Fixed two bugs: broadened the worse-first-motion rubric to natural first-person phrasing, and fixed a negation bug where 'hot water... rather than making it worse' was misread as a genuine 'worse from heat' aggravation."
+  },
+  {
+    name: "Causticum — hoarseness worse evening, involuntary urination on cough/sneeze, paradoxically better in wet weather worse dry cold, warts, easily tearful",
+    text: "I've had this hoarseness for weeks now, doctor, comes and goes but never fully clears, worse in the evenings especially, by dinnertime I can barely get a full sentence out without my voice cracking. Here's the embarrassing part — I've started leaking urine whenever I cough hard or sneeze unexpectedly, it's happened in public a couple of times now and I'm mortified. Strangely, damp rainy weather doesn't bother me at all, if anything I feel better on wet days than on dry cold ones, which is the opposite of what most people tell me. I've also got these small warts that keep appearing on my hands, nothing seems to get rid of them for long. My eyes water easily and I tend to tear up at things that wouldn't normally move me, sad stories on the news, that sort of thing, more than I used to.",
+    expectTopId: "caust",
+    notes: "Fixed by broadening the involuntary-urination-from-coughing rubric to natural phrasing ('leaking urine' vs 'leaks urine' — a prefix-length word-match gap) plus the paradoxical wet/dry weather modality."
+  },
+  {
+    name: "Gelsemium — flu with heavy limb weakness like lead, drooping eyelid, thick slow speech, thirstless, anticipatory tremor as a red herring",
+    text: "I've had this flu for four days now, doctor, and the main thing is just how heavy and weak I feel, my arms and legs feel like lead, I don't even want to try lifting them. My wife pointed out that my right eyelid seems to be drooping slightly, I hadn't noticed myself. My speech has felt a bit thick and slow to my own ears, like my tongue is heavier than usual. Strange thing is, despite the fever, I haven't wanted to drink much at all, barely any thirst. I also had a big work presentation scheduled for yesterday that I had to cancel, and now thinking about rescheduling it makes my hands shake a little, though I'm generally not an anxious presenter. I just want to lie still, doctor, even talking to you right now feels like an effort.",
+    expectTopId: "gels",
+    notes: "Fixed by adding a dedicated heavy-weakness/ptosis/thick-speech rubric, plus a thirstless-normalization gap ('barely any thirst' / 'haven't wanted to drink much' weren't recognized as thirstless, so the generic 'fever with thirst' rubric was wrongly firing)."
+  },
+  {
+    name: "Opium — painless constipation without urge after a fall, stuporous fluctuating drowsiness that rouses with sharp speech, strangely cheerful/detached",
+    text: "Her family brought her in after a bad fall down the stairs yesterday, doctor. What's strange is she barely reacted, she insists she's completely fine and doesn't need to see anyone, even though there's an obvious bruise on her hip and she was quite unsteady walking in. She seems unusually drowsy, drifting off mid-sentence a couple of times while I was taking her history, but if you speak to her sharply she rouses immediately and seems alert again briefly. Her family says she hasn't had a bowel movement in five days but she says she doesn't feel any urge or discomfort about it at all, which doesn't match how long it's been. She seems strangely cheerful and unconcerned throughout, given the circumstances, almost detached from the seriousness of the fall.",
+    expectTopId: "op",
+    notes: "Fixed by adding a dedicated rubric for the stuporous-drowsiness/cheerful-detachment-after-fright picture — previously had zero repertory backing and lost to Arsenicum/Anacardium/Arnica."
+  },
+  {
+    name: "Bryonia — gradual-onset stitching chest pain worse deep breath/cough, better firm pressure and lying on painful side, large infrequent thirst, irritable when disturbed",
+    text: "This chest pain started three days ago, doctor, gradually, not suddenly, and it's gotten steadily worse each day rather than coming in one big hit. It's a sharp, stabbing pain that's much worse when I take a deep breath or cough, so much so that I've started holding my side and pressing on it firmly whenever a cough is coming, it genuinely helps to press hard. Lying on the painful side, oddly, is more comfortable than lying on the other side or on my back. I'm unusually thirsty, but I don't want to keep sipping, I want one large glass of cold water and then I don't think about it again for hours. My lips have gone quite dry and cracked. I feel irritable when people keep fussing over me, I'd honestly rather just be left completely still and alone until this passes.",
+    expectTopId: "bry",
+    notes: "Fixed by broadening the sharp-stitching-pain and large-quantity-thirst rubrics to natural phrasing — previously lost to Arsenicum at 98%."
   }
 ];
 
