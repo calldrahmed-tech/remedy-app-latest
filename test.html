@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart Remedy AI — Regression Tests</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", Arial, sans-serif; max-width: 900px; margin: 30px auto; padding: 0 16px; color: #14161f; }
+  h1 { font-size: 1.3rem; }
+  #summary { font-weight: 800; font-size: 1.1rem; padding: 14px 18px; border-radius: 10px; margin: 16px 0; }
+  #summary.pass { background: #e6f7ec; color: #0f5c22; }
+  #summary.fail { background: #fdeceb; color: #8f1414; }
+  table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 0.88rem; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e3e2dc; vertical-align: top; }
+  th { background: #f3f2ee; }
+  tr.fail td { background: #fdeceb; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 6px; font-weight: 700; font-size: 0.78rem; }
+  .badge.pass { background: #2fa84f; color: #fff; }
+  .badge.fail { background: #e0342f; color: #fff; }
+  .badge.known { background: #f0a94e; color: #14161f; }
+  .notes { color: #6b6f7d; font-size: 0.82rem; }
+</style>
+</head>
+<body>
+<h1>Smart Remedy AI — Regression Test Suite</h1>
+<p class="notes">Loads the real engine (script.js + repertory.json + remedies.json) and runs every case confirmed correct so far. Not part of the live app — this page is never linked from index.html.</p>
+<div id="summary">Loading…</div>
+<h2>Must-pass cases</h2>
+<table id="passing-table"></table>
+<h2>Known issues (tracked, not required to pass yet)</h2>
+<table id="known-table"></table>
+
+<!-- script.js touches these elements at the top level (e.g. resultBtn.disabled = true) even
+     though this page never uses them — without them present, script.js throws before it
+     finishes its own top-level setup, which left DISEASE_NAME_ENTRIES permanently uninitialized. -->
+<div style="display:none;">
+  <textarea id="symptomInput"></textarea>
+  <button id="resultBtn"></button>
+  <div id="results"></div>
+  <div id="statusMsg"></div>
+</div>
+
+<script src="script.js"></script>
+<script src="regression-tests.js"></script>
+<script>
+  function esc(s) { const d = document.createElement("div"); d.textContent = s == null ? "" : String(s); return d.innerHTML; }
+  function renderTable(el, results, showBadgeKnown) {
+    let html = "<tr><th>Status</th><th>Case</th><th>Detail</th></tr>";
+    results.forEach(r => {
+      const badgeClass = r.pass ? "pass" : (showBadgeKnown ? "known" : "fail");
+      const badgeText = r.pass ? "PASS" : (showBadgeKnown ? "KNOWN ISSUE" : "FAIL");
+      html += `<tr class="${r.pass ? "" : "fail"}">
+        <td><span class="badge ${badgeClass}">${badgeText}</span></td>
+        <td><b>${esc(r.name)}</b></td>
+        <td>${esc(r.detail)}</td>
+      </tr>`;
+    });
+    el.innerHTML = html;
+  }
+  function tryRun(attemptsLeft) {
+    try {
+      if (typeof DB !== "undefined" && DB && DB.remedies && typeof runRegressionTests === "function") {
+        const out = runRegressionTests();
+        if (out.error) { document.getElementById("summary").textContent = out.error; return; }
+        const summaryEl = document.getElementById("summary");
+        summaryEl.textContent = out.summary;
+        summaryEl.className = out.failures.length === 0 ? "pass" : "fail";
+        renderTable(document.getElementById("passing-table"), out.passingResults, false);
+        renderTable(document.getElementById("known-table"), out.knownIssueResults, true);
+      } else if (attemptsLeft > 0) {
+        setTimeout(() => tryRun(attemptsLeft - 1), 300);
+      } else {
+        document.getElementById("summary").textContent = "Timed out waiting for the database to load.";
+      }
+    } catch (e) {
+      document.getElementById("summary").textContent = "ERROR: " + e.message + " | stack: " + (e.stack || "").slice(0, 400);
+      document.getElementById("summary").className = "fail";
+    }
+  }
+  tryRun(30);
+</script>
+</body>
+</html>
