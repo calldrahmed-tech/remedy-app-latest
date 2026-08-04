@@ -44,6 +44,22 @@
           "w": 1.5
         },
         {
+          "t": "defective enamel of teeth, cavities develop easily despite good dental care",
+          "w": 1.5
+        },
+        {
+          "t": "cracking of joints, loud and frequent",
+          "w": 1.5
+        },
+        {
+          "t": "irresolute, vacillating, goes back and forth for a long time before deciding",
+          "w": 1.5
+        },
+        {
+          "t": "anxious about financial matters, though usually well provided for",
+          "w": 1.5
+        },
+        {
           "t": "worse cold",
           "w": 0.6
         },
@@ -6397,6 +6413,18 @@
         {
           "t": "glandular indurations (stony hard), especially breasts/testicles",
           "w": 2
+        },
+        {
+          "t": "takes no interest in anything, indifferent since bereavement, widower's remedy",
+          "w": 2
+        },
+        {
+          "t": "muscular weakness, especially of the lower extremities, tiring easily on exertion",
+          "w": 2
+        },
+        {
+          "t": "ill effects of repressed or suppressed sexual desire",
+          "w": 1.5
         },
         {
           "t": "cough worse lying down, at night",
