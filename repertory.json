@@ -1166,7 +1166,9 @@
         "bed feels too hard",
         "mattress feels too hard",
         "stop fussing over me",
-        "leave me alone after injury"
+        "leave me alone after injury",
+        "said i m fine",
+        "tried to walk it off"
       ],
       "remedies": [
         {
@@ -1549,7 +1551,9 @@
       "triggers": [
         "sore bruised feeling as if beaten",
         "fears being approached or touched",
-        "dreads anyone coming near"
+        "dreads anyone coming near",
+        "doesn't want me pressing on it",
+        "pulls away the moment i try to touch it"
       ],
       "remedies": [
         {
@@ -2297,7 +2301,10 @@
         "bone pain as if broken",
         "breakbone fever",
         "aching in bones as if beaten",
-        "bones feel bruised"
+        "bones feel bruised",
+        "shin bones themselves were cracked",
+        "deep aching right in the bone",
+        "worst bone pain i've ever felt"
       ],
       "remedies": [
         {
@@ -2341,6 +2348,204 @@
         {
           "id": "all-c",
           "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Exhaustion from repeated childbearing, everything feels heavy/an effort, dragging bearing-down sensation worse standing",
+      "triggers": [
+        "four kids in six years",
+        "completely used up",
+        "exhausted even after a full night's sleep",
+        "everything feels heavy, an effort",
+        "dragging, bearing-down sensation",
+        "after standing at work all day"
+      ],
+      "remedies": [
+        {
+          "id": "alet",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Twitching/jerky involuntary movements of fingers and eyelids, formication or frostbite-like sensation despite warm room, clumsiness",
+      "triggers": [
+        "won't stop twitching",
+        "jerky movements i can't control",
+        "insects crawling under my skin",
+        "like i've been frostbitten",
+        "unusually clumsy",
+        "dropped things all week"
+      ],
+      "remedies": [
+        {
+          "id": "agar",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Recent grief with alternating laughing/weeping, pulls away from being hugged, lump in throat worse empty swallowing better eating solid food",
+      "triggers": [
+        "laughing with friends one moment then crying",
+        "don't want anyone hugging me",
+        "pull away",
+        "lump-in-throat feeling",
+        "worse swallowing my own saliva",
+        "better once i eat something solid"
+      ],
+      "remedies": [
+        {
+          "id": "ign",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Extreme sensitivity to grating/penetrating sounds (silk, paper) sets teeth on edge, sensation of brain loose/sloshing in skull",
+      "triggers": [
+        "tissue paper being crumpled",
+        "silk rubbing together",
+        "sets my teeth on edge",
+        "brain is loose inside my skull",
+        "sloshing"
+      ],
+      "remedies": [
+        {
+          "id": "asar",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Professional voice user whose voice gives out after use, joint pain worse any movement better complete rest, loses train of thought writing",
+      "triggers": [
+        "voice just gives out",
+        "goes hoarse and weak",
+        "give lectures for a living",
+        "worse with any movement, better resting completely still",
+        "lose track of what i meant to say"
+      ],
+      "remedies": [
+        {
+          "id": "arg-met",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Anticipatory diarrhea before important events despite over-preparation, vertigo/fear at heights, better open air",
+      "triggers": [
+        "important meeting coming up",
+        "diarrhea the morning of",
+        "over-prepare for everything and still panic",
+        "rooftop terrace",
+        "intense vertigo",
+        "edge of my building",
+        "vertigo at heights",
+        "fear of heights",
+        "loose motions right before we leave",
+        "hands shake a little when he's nervous",
+        "upset if his schedule changes"
+      ],
+      "remedies": [
+        {
+          "id": "arg-n",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Hives with intolerable itching, puffy edematous swelling, worse warmth of bed, better cold, anxious and restless",
+      "triggers": [
+        "itch so much its unbearable",
+        "itch so much it's unbearable",
+        "warm under the blanket",
+        "lips have swollen up",
+        "anxious and restless"
+      ],
+      "remedies": [
+        {
+          "id": "apis",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Sudden hives/urticaria, burning and stinging rather than itching, often from shellfish, better cold applications",
+      "triggers": [
+        "hives came up suddenly",
+        "burning and stinging",
+        "prawns",
+        "shellfish",
+        "cold compresses help",
+        "lips puffed up"
+      ],
+      "remedies": [
+        {
+          "id": "urt-u",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Emaciation especially of the legs while the face stays round and full; irritable, complains constantly",
+      "triggers": [
+        "legs have gone quite thin",
+        "bones through the skin",
+        "face still looks round and full",
+        "complains constantly, about everything",
+        "generally miserable and cross"
+      ],
+      "remedies": [
+        {
+          "id": "abrot",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Migraine with visual aura (zigzag lines/blur) before pain begins, right-sided, vomiting of greasy/bilious fluid eases the headache",
+      "triggers": [
+        "zigzag lines in my vision",
+        "visual disturbance before",
+        "vomit this greasy",
+        "greasy-tasting fluid",
+        "eases the headache"
+      ],
+      "remedies": [
+        {
+          "id": "iris",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Hot burning acrid tears that scald the cheeks, bland non-burning nasal discharge, worse light and wind",
+      "triggers": [
+        "hot, burning tears",
+        "scald my cheeks",
+        "burning tears that seem to scald",
+        "bright light and wind",
+        "nose runs too but that discharge doesn't burn",
+        "eyes that are raw"
+      ],
+      "remedies": [
+        {
+          "id": "euphr",
+          "grade": 3
         }
       ]
     },
@@ -3052,12 +3257,17 @@
       "triggers": [
         "barely reacted",
         "insists she's completely fine",
+        "insists he doesn't need to see anyone",
+        "oddly calm about it",
         "unusually drowsy",
         "drifting off mid-sentence",
+        "drifted off twice",
         "rouses immediately",
         "speak to her sharply",
+        "wakes right up if i raise my voice",
         "strangely cheerful and unconcerned",
-        "detached from the seriousness"
+        "detached from the seriousness",
+        "hasn't complained of any pain at all"
       ],
       "remedies": [
         {
