@@ -655,7 +655,7 @@
           "w": 0.6
         },
         {
-          "t": "worse or food. seashore. right side. better from heat",
+          "t": "worse from food, seashore, right side",
           "w": 0.6
         },
         {
@@ -1186,6 +1186,14 @@
         },
         {
           "t": "chilly with restlessness, bed feels intolerably hard, must constantly change position",
+          "w": 1.5
+        },
+        {
+          "t": "delusion of great wealth, full of anxiety and insane notions",
+          "w": 2
+        },
+        {
+          "t": "constipation with complete inertia; stools large, black, carrion-like",
           "w": 1.5
         }
       ],
@@ -6889,8 +6897,12 @@
           "w": 2
         },
         {
-          "t": "old women with paralytic bladder",
+          "t": "old women with paralytic bladder, also with involuntary stools",
           "w": 2
+        },
+        {
+          "t": "worse from movement, pressure, touch, and sitting; worse right side",
+          "w": 1.5
         }
       ],
       "diseaseTags": [],
@@ -8701,6 +8713,18 @@
         {
           "t": "diarrhoea in children: green, undigested",
           "w": 2
+        },
+        {
+          "t": "constant flow of dark, putrid, offensive saliva",
+          "w": 2
+        },
+        {
+          "t": "membrana tympani retracted, thickened and immovable",
+          "w": 2
+        },
+        {
+          "t": "dysentery-like stool: scanty bloody mucus with bile, constant desire without tenesmus",
+          "w": 2
         }
       ],
       "diseaseTags": [],
@@ -8795,6 +8819,14 @@
         {
           "t": "watery diarrhoea with burning",
           "w": 2
+        },
+        {
+          "t": "stool bursts out in a hot stream of yellow matter",
+          "w": 2
+        },
+        {
+          "t": "diarrhoea early in the morning",
+          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -8896,6 +8928,10 @@
         {
           "t": "feels well otherwise despite active bleeding, no pain accompanying the hemorrhage",
           "w": 1
+        },
+        {
+          "t": "sensation as if he had forgotten something",
+          "w": 1.5
         }
       ],
       "diseaseTags": [],
@@ -11273,6 +11309,14 @@
         {
           "t": "dysmenorrhoea with colic",
           "w": 2
+        },
+        {
+          "t": "renal colic with brick-dust sediment, urine runs away in little jets",
+          "w": 2.5
+        },
+        {
+          "t": "chronic cystitis with dysuria and spasmodic retention, accumulation of gravel",
+          "w": 2
         }
       ],
       "diseaseTags": [],
@@ -11463,6 +11507,10 @@
         },
         {
           "t": "malignant, confluent variola",
+          "w": 2
+        },
+        {
+          "t": "morbid fear of smallpox",
           "w": 2
         }
       ],
