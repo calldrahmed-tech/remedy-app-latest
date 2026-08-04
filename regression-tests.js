@@ -88,6 +88,66 @@ const PASSING_CASES = [
     text: "back pain worse with motion",
     expectTopId: "bry",
     notes: "Confirms Modalities section isn't treated as wholesale-generic (only the curated thermal/time subset is)."
+  },
+  {
+    name: "Chamomilla — teething, one-sided facial flush, green stools, worse at night",
+    text: "My little one is 18 months, doctor, cutting his back teeth right now and its been a rough week. One side of his face is flushed red and hot, the other side stays pale, I've noticed that clearly. He's impossible to please, screams the second I set him down, wants to be carried constantly, and even then he's just whimpering, nothing seems to properly satisfy him. His stools have turned green, watery, and quite frequent. He seems worse at night, barely sleeps.",
+    expectTopId: "cham",
+    notes: "Fixed by adding dedicated repertory rubrics for the one-cheek-red/other-pale teething picture and for green watery stool — previously had zero repertory backing and lost to Acetic Acid on coincidental materia medica overlap."
+  },
+  {
+    name: "Psorinum — extreme chilliness, offensive body odor, despair of recovery (bare symptom list, no narrative)",
+    text: "Extremely chilly patient, cannot tolerate even slight cold. Sleeps with multiple blankets in summer. Offensive body odor. Feels hopeless, thinks recovery is impossible. Weak digestion. Anxiety about health but more despair than restlessness.",
+    expectTopId: "psor",
+    notes: "Fixed via a new 'offensive body odor' rubric plus loosening the nosode filter to allow a nosode through when it's the clear top scorer, not just when the text literally says 'chronic'."
+  },
+  {
+    name: "Lycopodium — bloating, constipation, craves sweets, chilly, fear of failure",
+    text: "Digestive complaints with bloating. Constipation. Craves sweets. Easily fatigued. Irritable at home. Chilly. Fear of failure.",
+    expectTopId: "lyc",
+    notes: "Fixed by adding lyc to the 'Constipation, general/unspecified' rubric."
+  },
+  {
+    name: "Psorinum — post-typhoid exhaustion narrative, despair of ever recovering",
+    text: "Doctor, I don't know how to explain this properly, but ever since I recovered from that bad case of typhoid two years ago, I've never really felt like myself again. I get exhausted so easily, and I feel cold all the time, even under two blankets in summer I still want more covering. My skin has these eruptions that come and go, and honestly they smell quite bad, but strangely it doesn't bother me much, my wife is the one who complains about it, not me. I eat a proper meal and an hour later I'm ravenous again, like I never ate at all. What worries me most is I've lost hope that I'll ever fully recover, I keep telling my wife I don't think I'll ever be well again, even though the doctors say my reports are fine now.",
+    expectTopId: "psor",
+    notes: "Fixed via CHRONICITY_DURATION_PATTERN ('two years ago') and a POST_ILLNESS_PATTERN check that stops 'recovered from typhoid X ago' from triggering the acute Typhoid disease-protocol boost toward Arsenicum."
+  },
+  {
+    name: "Nux Vomica — business owner, coffee/wine, 3am waking with work worry, drowsy after lunch",
+    text: "I run my own firm, doctor, and the last few months have been brutal on my body. I've been drinking more coffee than I should, a few glasses of wine most evenings just to unwind, and my stomach's paying for it, this constant heartburn that won't quit. My wife says I've become someone she doesn't recognize, snapping at the kids over the smallest things, at her, at everyone at the office too. I wake up like clockwork around 3 in the morning, mind immediately racing about work, and then I can't fall back asleep no matter what I try. After lunch though I get so drowsy I could put my head down on my desk. I'm chilly most of the time, and my bowels have been irregular, mostly stuck.",
+    expectTopId: "nux-v",
+    notes: "Fixed by adding three genuinely-documented Boericke keynotes/rubrics: 3am waking with business worry, drowsy after meals, desire for coffee/wine/stimulants."
+  },
+  {
+    name: "Helleborus — sudden stupor fever in a child, staring, boring head into pillow, limp when lifted",
+    text: "My daughter is six, doctor, and this fever came on so fast yesterday, she went from playing normally to completely different within hours. She's just staring blankly now, doesn't really respond when I call her name, takes a while before she even seems to hear me. She keeps twisting her head into the pillow, back and forth, back and forth, like she's trying to bore a hole into it. When I try to pick her up she doesn't cry or resist, she's just limp and dull, not herself at all. Her hand keeps reaching down toward her private parts too, which is strange, she's never done that before. It's frightening how unresponsive she's become so quickly.",
+    expectTopId: "hell",
+    notes: "Fixed by adding a repertory rubric for the sudden-stupor/boring-head-into-pillow picture — previously had zero repertory backing and lost to Hepar Sulph via a spurious 'quickly'~'quick to anger' word-prefix collision."
+  },
+  {
+    name: "Pulsatilla — recurrent ear infection, clingy, thirstless with fever, better open air worse warm room",
+    text: "My little girl keeps getting these ear infections, doctor, this is the third one this year alone. Right now there's this thick yellowish discharge coming from her ear, doesn't smell too bad thankfully. She's been so clingy the last two days, doesn't want anyone but me holding her, starts crying the second I set her down even for a minute. What's odd is she barely wants to drink anything even with the fever, usually she's asking for water all day. She feels better in the evening when we take her out for some air, but the moment we're back in a warm closed room she gets fussy again. Her mood just swings so fast too, giggling one minute, in tears the next.",
+    expectTopId: "puls",
+    notes: "Fixed by broadening the thirstless-with-fever trigger phrasing and adding a dedicated 'better open air, worse warm closed room' rubric — previously lost to Chamomilla on a shared clingy/carried rubric skewed 3:1 in Chamomilla's favor."
+  },
+  {
+    name: "Carbo Vegetabilis — collapse after food poisoning, wants to be fanned, cold extremities but wants window open",
+    text: "I had a bad bout of food poisoning last week, doctor, and even though the vomiting and diarrhea have stopped, I still feel absolutely wrung out, like my body just gave up. I feel so bloated, all this gas sitting in my stomach that won't move, and honestly the only thing that gives me any relief is if my son sits next to me with a hand fan going, I know it sounds silly but moving air across my face and chest actually helps. My hands and feet stay cold no matter what, but I still want the window open, I can't stand a stuffy room right now. I feel weak, sluggish, like my whole system has slowed right down.",
+    expectTopId: "carb-v",
+    notes: "Fixed by adding dedicated 'wants to be fanned/air hunger' and 'collapse after acute illness' rubrics — 'fan'/'fanned' is too short a word for the fuzzy word-matcher's prefix rule to ever catch on its own."
+  },
+  {
+    name: "Sulphur — itchy skin worse heat, philosophical/untidy, urgent hunger if meal delayed (narrative phrasing)",
+    text: "I've had this itchy skin thing for years, doctor, comes and goes, never fully leaves. It's so much worse after a hot shower, or if I get too warm under the blankets at night, but stepping out into cool air actually calms it right down. I'll be honest with you, I love a good debate, my wife says I could argue philosophy or politics for hours with anyone who'll listen, I just find ideas fascinating. My study at home is an absolute mess, papers everywhere, and it doesn't bother me one bit, though it drives her up the wall. Around eleven every morning, without fail, I get this urgent hunger, if I don't eat something right then I turn shaky and short-tempered. My ears and lips tend to look redder than everyone else's too.",
+    expectTopId: "sulph",
+    notes: "Fixed a false-negation bug: the idiom 'without fail' was being read as negating 'urgent hunger' right after it, silently blocking Sulphur's own hunger rubric from firing."
+  },
+  {
+    name: "Cina — furious if touched, calmed only by vigorous rocking, nose-picking till it bleeds",
+    text: "My son's been so difficult lately, doctor, and it's strange because it's not like his usual naughtiness. He gets furious if anyone even looks at him directly, let alone touches him, he'll actually hit out if you try. He grinds his teeth so loudly at night I can hear it from the next room, and he keeps picking at his nose constantly, almost till it bleeds sometimes. He's hungry again barely an hour after a full meal, eats like he's starving even though he just ate plenty. Oddly, the only thing that seems to calm him down at all is if I rock him firmly, not gently, quite a vigorous rocking, gentle rocking doesn't work at all, it has to be firm.",
+    expectTopId: "cina",
+    notes: "Fixed by adding a dedicated repertory rubric for the furious-if-touched/vigorous-rocking/nose-picking picture — previously had zero repertory backing."
   }
 ];
 
@@ -115,12 +175,6 @@ const KNOWN_ISSUES = [
     text: "I get these hives, doctor, they come up suddenly, big red welts, and they itch so much its unbearable, especially at night in bed when I'm warm under the blanket. Cool air or a cold compress actually calms it down quite a bit. It seems to happen more after I eat shellfish, though not every single time. My lips have swollen up once too, gave me a scare. Otherwise I feel quite anxious and restless when it flares up badly.",
     expectTopId: "apis",
     notes: "Vocabulary gap: warm/heat, cool/cold, swollen/swelling, hives/'allergic reaction' are treated as different words."
-  },
-  {
-    name: "Chamomilla — teething, one-sided facial flush, green stools, worse at night",
-    text: "My little one is 18 months, doctor, cutting his back teeth right now and its been a rough week. One side of his face is flushed red and hot, the other side stays pale, I've noticed that clearly. He's impossible to please, screams the second I set him down, wants to be carried constantly, and even then he's just whimpering, nothing seems to properly satisfy him. His stools have turned green, watery, and quite frequent. He seems worse at night, barely sleeps.",
-    expectTopId: "cham",
-    notes: "Improved (cheek/face anatomy fix unblocked its best keynote, 32%->55%) but still not #1 — Acetic Acid/Arsenicum win via weak-match accumulation."
   },
   {
     name: "Natrum Muriaticum — grief, avoids being hugged, doesn't discuss feelings (different phrasing than the passing grief case)",
