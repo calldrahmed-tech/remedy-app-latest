@@ -254,13 +254,18 @@ const ANATOMY_WORDS = new Set([
   "kidney","kidneys","bladder","uterus","ovary","ovaries","testicle","testicles","rectum",
   "anus","skin","heel","joint","joints"
 ]);
-// WEAK_MODIFIER_WORDS: same idea as ANATOMY_WORDS not counting as sufficient evidence alone,
-// extended to words that are almost always a MODIFIER of some other word rather than real
-// content on their own — "right"/"left" nearly always describe a body side ("right eye"), so a
-// bare "right" matching casual speech ("if I don't eat right...") was letting Apis's unrelated
-// "ovarian pain, right side" keynote win a case about an itchy scalp. Same failure class as
-// anatomy-only matches, just for laterality words instead of body-part words.
-const WEAK_MODIFIER_WORDS = new Set(["right", "left"]);
+// WEAK_MODIFIER_WORDS: same idea as ANATOMY_WORDS not counting as sufficient evidence alone —
+// words that just name the TOPIC/body-side rather than any real distinguishing content.
+// "right"/"left" nearly always describe a body side ("right eye"), so a bare "right" matching
+// casual speech ("if I don't eat right...") was letting Apis's unrelated "ovarian pain, right
+// side" keynote win a case about an itchy scalp. "stool"/"constipation" are the same failure
+// for GI topic words — "The patient is constipated. Stool comes a little and then goes back"
+// was matching Alumina/Bryonia keynotes ("stools large, dry, hard") purely on the bare word
+// "stool"/"constipation", with NONE of the actually distinguishing content (hard, dry, sheep
+// dung, no urge) present in the input — same class of bug as Taraxacum/tongue, different topic.
+const WEAK_MODIFIER_WORDS = new Set([
+  "right", "left", "stool", "stools", "constipation", "constipated", "diarrhea", "diarrhoea"
+]);
 
 // MANDATORY CONDITION RULE: for a curated set of serious/diagnostic terms, a coincidental
 // match on some unrelated word (even a real symptom word, not just anatomy) is dangerously
