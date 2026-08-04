@@ -270,7 +270,11 @@
       "triggers": [
         "colic better bending double",
         "colic relieved by pressure",
-        "doubling up with pain"
+        "doubling up with pain",
+        "patient bends double",
+        "bends double",
+        "better by pressure",
+        "better from pressure"
       ],
       "remedies": [
         {
@@ -1069,12 +1073,18 @@
         "wakes worse after sleep",
         "anything touching my throat",
         "feel like i am choking",
-        "couldn't wear my collared shirt"
+        "couldn't wear my collared shirt",
+        "worse tight clothing",
+        "worse from tight clothing"
       ],
       "remedies": [
         {
           "id": "lach",
           "grade": 3
+        },
+        {
+          "id": "lyc",
+          "grade": 2
         }
       ]
     },
@@ -1256,11 +1266,18 @@
         "craving for sweets that aggravate",
         "craves sweets makes bloating worse",
         "gives me absolutely no relief",
-        "no relief from the pressure"
+        "no relief from the pressure",
+        "craves sweets but they aggravate",
+        "craves sweets which aggravate",
+        "sweets aggravate bloating"
       ],
       "remedies": [
         {
           "id": "arg-n",
+          "grade": 3
+        },
+        {
+          "id": "lyc",
           "grade": 3
         }
       ]
