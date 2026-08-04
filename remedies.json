@@ -1,6 +1,124 @@
 {
   "remedies": [
     {
+      "id": "alet",
+      "name": "Aletris Farinosa",
+      "abbr": "Alet",
+      "category": "constitutional",
+      "system": [
+        "female",
+        "gut"
+      ],
+      "keynotes": [
+        {
+          "t": "exhaustion and anaemia from repeated childbearing, debilitated states of the female economy",
+          "w": 2.5
+        },
+        {
+          "t": "tired, worn-out feeling, exhausted even after a full night's sleep",
+          "w": 2
+        },
+        {
+          "t": "sensation of great weakness and heaviness of the whole body, everything feels like an effort or a burden",
+          "w": 2
+        },
+        {
+          "t": "bearing-down, dragging sensation low in the abdomen, as if the internal organs would fall out, worse from standing",
+          "w": 2
+        },
+        {
+          "t": "uterine prolapse or atony, threatened miscarriage from uterine weakness",
+          "w": 1.5
+        },
+        {
+          "t": "menses too soon, too profuse, prolonged",
+          "w": 1
+        },
+        {
+          "t": "feeble digestion",
+          "w": 1
+        },
+        {
+          "t": "worse standing",
+          "w": 0.6
+        },
+        {
+          "t": "better rest",
+          "w": 0.6
+        }
+      ],
+      "diseaseTags": [
+        "anemia",
+        "postpartum exhaustion",
+        "uterine prolapse"
+      ],
+      "potency": {
+        "acute": "-",
+        "chronic": "6X to 30C, constitutional case needed"
+      }
+    },
+    {
+      "id": "urt-u",
+      "name": "Urtica Urens",
+      "abbr": "Urt-u",
+      "category": "acute",
+      "system": [
+        "skin"
+      ],
+      "keynotes": [
+        {
+          "t": "urticaria (hives, nettle-rash) with violent itching, burning, and stinging rather than plain itch",
+          "w": 2.5
+        },
+        {
+          "t": "eruptions like nettle-rash, raised red welts and blotches",
+          "w": 2
+        },
+        {
+          "t": "urticaria brought on by eating shellfish",
+          "w": 2
+        },
+        {
+          "t": "burns and scalds, first degree, relieves the burning pain",
+          "w": 1.5
+        },
+        {
+          "t": "agalactia, want of milk during lactation, or breasts too full and painful",
+          "w": 1.5
+        },
+        {
+          "t": "rheumatic gout with stinging pains",
+          "w": 1
+        },
+        {
+          "t": "worse touch",
+          "w": 0.6
+        },
+        {
+          "t": "worse cold bathing",
+          "w": 0.6
+        },
+        {
+          "t": "better cold applications to the skin eruption",
+          "w": 0.6
+        },
+        {
+          "t": "better rubbing",
+          "w": 0.6
+        }
+      ],
+      "diseaseTags": [
+        "hives",
+        "urticaria",
+        "allergic reaction",
+        "burns"
+      ],
+      "potency": {
+        "acute": "30C every 2-3h, or apply the mother tincture/lotion externally",
+        "chronic": "-"
+      }
+    },
+    {
       "id": "calc-f",
       "name": "Calcarea Fluorica",
       "abbr": "Calc-f",
@@ -1090,6 +1208,18 @@
         {
           "t": "lump in throat sensation globus",
           "w": 2
+        },
+        {
+          "t": "lump in throat worse from empty swallowing (saliva), better while actually eating",
+          "w": 2
+        },
+        {
+          "t": "alternates between laughing and weeping, mood swings rapidly after grief",
+          "w": 2
+        },
+        {
+          "t": "does not want to be touched or embraced despite the grief, pulls away from consolation",
+          "w": 1.5
         },
         {
           "t": "worse consolation",
@@ -3717,6 +3847,14 @@
           "w": 2
         },
         {
+          "t": "formication, sensation as if insects were creeping over or under the skin",
+          "w": 2
+        },
+        {
+          "t": "unusual clumsiness, drops things, stumbles",
+          "w": 1.5
+        },
+        {
           "t": "chilblains that burn & itch intolerably",
           "w": 2
         },
@@ -4471,6 +4609,14 @@
           "w": 2
         },
         {
+          "t": "rheumatic affections of joints, worse from any movement, better complete rest",
+          "w": 2
+        },
+        {
+          "t": "writer's cramp, loses train of thought while writing",
+          "w": 1.5
+        },
+        {
           "t": "cough from laughing",
           "w": 2
         },
@@ -4580,6 +4726,14 @@
       "keynotes": [
         {
           "t": "oversensitive nerves: silk, paper, scratching unbearable",
+          "w": 2
+        },
+        {
+          "t": "sensation as if the brain were loose, sloshing or knocking against the skull on walking or stepping",
+          "w": 2
+        },
+        {
+          "t": "extreme sensitivity to penetrating or grating sounds, sets the teeth on edge",
           "w": 2
         },
         {
