@@ -268,16 +268,100 @@ const PASSING_CASES = [
     text: "This chest pain started three days ago, doctor, gradually, not suddenly, and it's gotten steadily worse each day rather than coming in one big hit. It's a sharp, stabbing pain that's much worse when I take a deep breath or cough, so much so that I've started holding my side and pressing on it firmly whenever a cough is coming, it genuinely helps to press hard. Lying on the painful side, oddly, is more comfortable than lying on the other side or on my back. I'm unusually thirsty, but I don't want to keep sipping, I want one large glass of cold water and then I don't think about it again for hours. My lips have gone quite dry and cracked. I feel irritable when people keep fussing over me, I'd honestly rather just be left completely still and alone until this passes.",
     expectTopId: "bry",
     notes: "Fixed by broadening the sharp-stitching-pain and large-quantity-thirst rubrics to natural phrasing — previously lost to Arsenicum at 98%."
+  },
+  {
+    name: "Euphrasia — hot burning acrid tears scald cheeks, bland non-burning nasal discharge, worse light and wind (reverse of Allium Cepa)",
+    text: "My eyes have been streaming for two days, doctor, this hot, burning tears that seem to scald my cheeks. Bright light and wind outside make it so much worse, I've been squinting even indoors. My nose runs too but that discharge doesn't burn at all, it's the eyes that are raw.",
+    expectTopId: "euphr",
+    notes: "Fixed by adding a dedicated rubric — previously had zero repertory backing and lost to Allium Cepa purely on coincidental MM word overlap despite the case describing the exact reverse of Allium Cepa's picture."
+  },
+  {
+    name: "Eupatorium Perfoliatum — fever with deep bone pain ('bones cracked'), chill starting between shoulder blades, bilious vomiting, great thirst",
+    text: "This fever came with the worst bone pain I've ever felt, doctor, like my shin bones themselves were cracked, deep aching right in the bone. The chill started right between my shoulder blades and spread out from there. I've thrown up bile twice, greenish, bitter. I'm terribly thirsty through all of this.",
+    expectTopId: "eup-per",
+    notes: "Fixed by broadening the breakbone-fever rubric to natural phrasing — previously lost to Chelidonium via a coincidental 'shoulder blade' location-bonus match unrelated to the actual fever picture."
+  },
+  {
+    name: "Arnica — denial after a fall ('I'm fine'), visible bruising, refuses to be touched/pressed on the injury",
+    text: "He fell off his bike this morning, doctor, and when I asked if he was hurt he just said 'I'm fine' and tried to walk it off, even though I can see the bruising already coming up on his hip. He doesn't want me pressing on it to check, pulls away the moment I try to touch it.",
+    expectTopId: "arn",
+    notes: "Fixed by broadening the denial-after-trauma and dreads-being-touched rubrics to natural phrasing (contraction forms like \"I'm fine\" weren't matching \"I am fine\") — previously lost to Nux Vomica via a bare 'does not want to be touched' word coincidence."
+  },
+  {
+    name: "Iris Versicolor — migraine with zigzag visual aura before pain, right-sided, vomiting of greasy fluid eases the headache",
+    text: "This migraine always starts the same way, doctor, I see zigzag lines in my vision first, then about twenty minutes later the pain hits, mostly on the right side. Once it's bad enough I vomit this greasy-tasting fluid, and that actually eases the headache a bit afterward.",
+    expectTopId: "iris",
+    notes: "Fixed by adding a dedicated rubric — previously had zero repertory backing and lost to Belladonna via the generic undifferentiated-headache fallback."
+  },
+  {
+    name: "Iodum — steady weight loss despite good appetite, neck fullness, heat intolerance, must keep hands busy (short keynote-dense phrasing)",
+    text: "I've lost weight steadily for months, doctor, despite eating more than usual, always hungry. There's a fullness in my neck now too. I run hot constantly, my husband complains about the fan being on all night, and I can't sit still, have to keep my hands busy with something.",
+    expectTopId: "iod",
+    notes: "Confirms the Iodum hyperthyroid rubric added earlier generalizes to a second, more terse phrasing of the same picture."
+  },
+  {
+    name: "Abrotanum — child's legs wasted thin while face stays round and full, irritable and complains constantly",
+    text: "My son's legs have gone quite thin, doctor, you can see the bones through the skin almost, but his face still looks round and full, which looks odd together. He complains constantly, about everything, and seems generally miserable and cross these days.",
+    expectTopId: "abrot",
+    notes: "Fixed by adding a dedicated rubric — the remedy's own curated keynote ('emaciation of legs while face remains fat') already existed but didn't have enough word overlap with the case to win the MM match on its own."
+  },
+  {
+    name: "Urtica Urens — sudden hives after shellfish, burning/stinging rather than itching, better cold applications, lip swelling",
+    text: "These hives came up suddenly after I ate prawns last night, doctor, big red welts, burning and stinging rather than the usual itch. Cold compresses help more than anything warm. My lips puffed up a little too, which scared me.",
+    expectTopId: "urt-u",
+    notes: "Urtica Urens was entirely missing from the remedy database — added the remedy plus a dedicated rubric distinguishing it from Apis (burning/stinging, not itching)."
+  },
+  {
+    name: "Apis Mellifica — hives with intolerable itching, puffy swelling, worse warmth of bed, better cold, anxious/restless (distinguishes from Urtica Urens above)",
+    text: "I get these hives, doctor, they come up suddenly, big red welts, and they itch so much its unbearable, especially at night in bed when I'm warm under the blanket. Cool air or a cold compress actually calms it down quite a bit. It seems to happen more after I eat shellfish, though not every single time. My lips have swollen up once too, gave me a scare. Otherwise I feel quite anxious and restless when it flares up badly.",
+    expectTopId: "apis",
+    notes: "Fixed alongside the Urtica Urens addition above (same trigger vocabulary — shellfish, cold compress, lip swelling — needed a differentiating rubric on itching-vs-burning so the two remedies split correctly instead of the more generic one winning both cases). This was a long-standing known issue, now resolved."
+  },
+  {
+    name: "Argentum Nitricum — anticipatory diarrhea before important events despite over-preparation, vertigo/fear at heights, better open air",
+    text: "Every time I have an important meeting coming up, doctor, I get diarrhea the morning of, without fail. I'm a perfectionist, over-prepare for everything and still panic. Standing at the edge of my building's rooftop terrace last week gave me such intense vertigo I had to step back immediately. I do feel better once I'm outside in open air.",
+    expectTopId: "arg-n",
+    notes: "Fixed by adding a dedicated rubric — previously lost to Pulsatilla purely via the generic 'better open air' modality rubric with zero connection to the actual case (anticipatory anxiety diarrhea + fear of heights)."
+  },
+  {
+    name: "Argentum Metallicum — professional voice user whose voice gives out after use, joint pain worse any movement better complete rest, loses train of thought writing",
+    text: "I give lectures for a living, doctor, and my voice just gives out on me now after even a short talk, goes hoarse and weak. My finger joints ache badly, worse with any movement, better resting completely still. Sometimes mid-sentence while writing I lose track of what I meant to say entirely.",
+    expectTopId: "arg-met",
+    notes: "Fixed by adding joint/writer's-cramp keynotes and a dedicated rubric — previously wasn't even in the top matches despite having the exact right hoarseness keynote already curated."
+  },
+  {
+    name: "Asarum — extreme sensitivity to grating sounds (tissue paper, silk) sets teeth on edge, sensation of brain loose/sloshing in skull",
+    text: "The sound of tissue paper being crumpled, doctor, or silk rubbing together, it goes right through me, sets my teeth on edge unbearably. I also get this strange sensation like my brain is loose inside my skull, sloshing a little with every step I take.",
+    expectTopId: "asar",
+    notes: "Fixed by adding a dedicated rubric and the brain-sloshing keynote — previously lost to Arsenicum via a coincidental match on the word 'tissue' (from 'tissue paper') hitting Arsenicum's unrelated intro text 'acting on every organ and tissue'."
+  },
+  {
+    name: "Ignatia — recent breakup grief with alternating laughing/weeping, pulls away from being hugged, lump in throat worse empty swallowing better eating solid food",
+    text: "It's been three weeks since he left me, doctor, and I'll be laughing with friends one moment then crying uncontrollably the next. I don't want anyone hugging me though, I actually pull away. There's this lump-in-throat feeling, worse swallowing my own saliva but oddly better once I eat something solid.",
+    expectTopId: "ign",
+    notes: "Fixed by adding a dedicated rubric for this alternating-mood presentation of Ignatia (distinct from the already-passing 'silent grief' presentation) — previously lost to Baryta Carbonica via a reversed-polarity match ('cannot swallow solids' vs the case's 'better eating solid food')."
+  },
+  {
+    name: "Agaricus Muscarius — twitching/jerky movements of fingers and eyelids, formication or frostbite-like sensation despite warm room, clumsiness",
+    text: "My hands won't stop twitching, doctor, little jerky movements I can't control, especially in my fingers and eyelids. There's also this odd sensation like insects crawling under my skin, or like I've been frostbitten even though the room is warm. I've been unusually clumsy too, dropped things all week.",
+    expectTopId: "agar",
+    notes: "Fixed by adding the formication keynote and a dedicated rubric — previously lost to Sepia via a coincidental 'feels cold even in warm room' match unrelated to the actual twitching/formication picture."
+  },
+  {
+    name: "Aletris Farinosa — exhaustion from repeated childbearing, everything feels heavy/an effort, dragging bearing-down sensation worse standing",
+    text: "I've had four kids in six years, doctor, and I just feel completely used up, exhausted even after a full night's sleep. Everything feels heavy, an effort. There's a dragging, bearing-down sensation low in my belly, especially after standing at work all day.",
+    expectTopId: "alet",
+    notes: "Aletris Farinosa was entirely missing from the remedy database — added the remedy plus a dedicated rubric."
+  },
+  {
+    name: "Opium — painless stupor after a fall (second phrasing, male patient), oddly calm/denial, drowsy but wakes when spoken to loudly",
+    text: "He tumbled down the stairs an hour ago, doctor, and he's oddly calm about it, keeps insisting he doesn't need to see anyone. He seems drowsy, drifted off twice while I was talking to him, but wakes right up if I raise my voice. Hasn't complained of any pain at all despite the visible bruising.",
+    expectTopId: "op",
+    notes: "Fixed a gendered-trigger gap: the Opium rubric added for the previous batch's case only had 'she'/'her' phrased triggers ('insists she's completely fine', 'speak to her sharply'), so this male-patient rephrasing of the identical clinical picture didn't match anything. Broadened to gender-neutral/second phrasing triggers."
   }
 ];
 
 const KNOWN_ISSUES = [
-  {
-    name: "Argentum Nitricum — anticipatory school anxiety with 'loose motions'",
-    text: "My son is 7, doctor, and he's been so anxious about school ever since he had to give a class presentation last month. Now every school morning he complains of loose motions, right before we leave the house, like clockwork. He's normally quite meticulous, likes his books arranged just so, gets upset if his schedule changes suddenly. He also mentioned his hands shake a little when he's nervous. He does say he feels a bit better once we're outside walking to school, in the open air.",
-    expectTopId: "arg-n",
-    notes: "Data has the exact right keynotes but 'loose motions'≠'diarrhea' and 'anxious'≠'anxiety' — vocabulary/synonym gap, not yet fixed."
-  },
   {
     name: "Rhus Tox — chronic joint pain, morning stiffness better with continued motion",
     text: "I'm 62, doctor, and for the last year my knees and hips ache, worse than anything first thing in the morning, I can barely get out of bed without help. But once I've been up and about for half an hour or so it does ease up quite a bit. Cold, rainy weather is the worst for me, I can predict rain before the weather report can. A hot water bottle on the joints helps a lot. I also toss and turn at night, can't get comfortable in one position for long.",
@@ -289,12 +373,6 @@ const KNOWN_ISSUES = [
     text: "My daughter is 4, doctor, and her tonsils have been swelling up again and again, third time this year. Right now her throat's quite red and swollen, more on the right side, and her breath actually smells bad, quite offensive. She's drooling more than usual too, more saliva than normal for her age. She doesn't seem to want much water despite the fever. She's sweaty most of the time, and the sweat has an odor too, doesn't dry off her easily.",
     expectTopId: "merc-sol",
     notes: "Not yet diagnosed in depth."
-  },
-  {
-    name: "Apis Mellifica — hives, worse warm bed, better cold compress, lip swelling",
-    text: "I get these hives, doctor, they come up suddenly, big red welts, and they itch so much its unbearable, especially at night in bed when I'm warm under the blanket. Cool air or a cold compress actually calms it down quite a bit. It seems to happen more after I eat shellfish, though not every single time. My lips have swollen up once too, gave me a scare. Otherwise I feel quite anxious and restless when it flares up badly.",
-    expectTopId: "apis",
-    notes: "Vocabulary gap: warm/heat, cool/cold, swollen/swelling, hives/'allergic reaction' are treated as different words."
   },
   {
     name: "Natrum Muriaticum — grief, avoids being hugged, doesn't discuss feelings (different phrasing than the passing grief case)",
