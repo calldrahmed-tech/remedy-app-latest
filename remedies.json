@@ -481,6 +481,18 @@
           "w": 2
         },
         {
+          "t": "cannot sleep after 3 a.m. until towards morning, mind active with business worries",
+          "w": 2
+        },
+        {
+          "t": "drowsy after meals, especially after lunch, and in early evening",
+          "w": 2
+        },
+        {
+          "t": "this indoor life and mental strain seeks stimulants, coffee, wine, possibly in excess",
+          "w": 2
+        },
+        {
           "t": "weight and pain in stomach",
           "w": 2
         },
@@ -9890,6 +9902,10 @@
         },
         {
           "t": "skin filthy, offensive, suppurating",
+          "w": 2
+        },
+        {
+          "t": "offensive body odor, foul-smelling perspiration, filthy smelling secretions and discharges even after bathing",
           "w": 2
         },
         {
