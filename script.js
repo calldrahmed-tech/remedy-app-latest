@@ -118,6 +118,7 @@ const COMMON_ENGLISH_WORDS = new Set([
   "worries","worried","worrying","confuses","confused","confusing","stormed","storming",
   "snapping","snapped","snaps","pacing","paces","paced","googling","googled","drinking",
   "drinks","drank","drunk","walking","walks","walked","bending","bends","bend","bent",
+  "rolls","rolled","rolling","reacts","reacted","reacting","reaction",
   "pressing","presses","pressed","stopping","stops","stopped","staying","stays","stayed",
   "leaving","leaves","left","keeping","keeps","kept","letting","lets","let","calling","calls",
   "called","turning","turns","turned","moving","moves","moved","sitting","sits","sat",
@@ -421,6 +422,7 @@ const SECTION_WEIGHT = {
 // a general way to boost a remedy.
 const RUBRIC_WEIGHT_OVERRIDE = {
   "Stool recedes after partial expulsion (bashful/shy stool)": SECTION_WEIGHT.Modalities,
+  "Colic better bending double or with pressure": SECTION_WEIGHT.Modalities,
 };
 // GENERIC (location/complaint-agnostic) SECTIONS: Thirst, Appetite, Fever and Weight describe
 // a constitutional REACTION PATTERN (thirstless, ravenous at 11am, etc.) that says nothing
