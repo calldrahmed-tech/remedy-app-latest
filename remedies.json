@@ -560,7 +560,7 @@
         "acute": "30C 2-3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 43.0,
+      "maxScore": 43,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)"
     },
     {
@@ -1088,7 +1088,7 @@
         "acute": "30C 3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 18.0
+      "maxScore": 18
     },
     {
       "id": "eup-per",
@@ -1149,7 +1149,7 @@
         "acute": "200C every 3-4h during acute stage",
         "chronic": "-"
       },
-      "maxScore": 14.0
+      "maxScore": 14
     },
     {
       "id": "pyrog",
@@ -1187,14 +1187,6 @@
         {
           "t": "chilly with restlessness, bed feels intolerably hard, must constantly change position",
           "w": 1.5
-        },
-        {
-          "t": "septic or feverish states where pulse rate and temperature are disproportionate to each other",
-          "w": 1.5
-        },
-        {
-          "t": "fever recurs after antibiotics were used, or infection was suppressed rather than fully resolved",
-          "w": 1
         }
       ],
       "diseaseTags": [
@@ -1207,7 +1199,7 @@
         "acute": "200C single dose",
         "chronic": "1M only under experienced practitioner supervision"
       },
-      "maxScore": 13.5
+      "maxScore": 11
     },
     {
       "id": "tub",
@@ -1265,7 +1257,7 @@
         "acute": "-",
         "chronic": "1M single dose, only under experienced practitioner supervision"
       },
-      "maxScore": 14.0
+      "maxScore": 14
     },
     {
       "id": "calc-p",
@@ -1319,7 +1311,7 @@
         "acute": "-",
         "chronic": "200C weekly to 1M single dose, constitutional case needed"
       },
-      "maxScore": 12.0
+      "maxScore": 12
     },
     {
       "id": "calc-c",
@@ -1774,6 +1766,10 @@
         {
           "t": "acne, boils, or abscesses that heal slowly",
           "w": 2
+        },
+        {
+          "t": "stool recedes after being partially expelled, bashful or shy stool",
+          "w": 2.5
         }
       ],
       "diseaseTags": [
@@ -2222,7 +2218,7 @@
         "acute": "30C low potency to promote suppuration, 200C to abort",
         "chronic": "-"
       },
-      "maxScore": 14.0
+      "maxScore": 14
     },
     {
       "id": "merc-sol",
@@ -2280,7 +2276,7 @@
         "acute": "30C 3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 13.0
+      "maxScore": 13
     },
     {
       "id": "apis",
@@ -2338,7 +2334,7 @@
         "acute": "200C every 2-3h",
         "chronic": "-"
       },
-      "maxScore": 14.0
+      "maxScore": 14
     },
     {
       "id": "canth",
@@ -2448,7 +2444,7 @@
         "acute": "30C 3x daily",
         "chronic": "-"
       },
-      "maxScore": 13.0
+      "maxScore": 13
     },
     {
       "id": "spong",
@@ -2500,7 +2496,7 @@
         "acute": "30C 3x daily, alternate with Aconite in croup",
         "chronic": "-"
       },
-      "maxScore": 12.0
+      "maxScore": 12
     },
     {
       "id": "ant-t",
@@ -2560,7 +2556,7 @@
         "acute": "30C 3x daily",
         "chronic": "-"
       },
-      "maxScore": 15.0
+      "maxScore": 15
     },
     {
       "id": "podo",
@@ -2672,7 +2668,7 @@
         "acute": "200C for collapse states, urgent medical care also needed",
         "chronic": "-"
       },
-      "maxScore": 12.0
+      "maxScore": 12
     },
     {
       "id": "chin",
@@ -2738,7 +2734,7 @@
         "acute": "30C 2-3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 16.0
+      "maxScore": 16
     },
     {
       "id": "arn",
@@ -2791,7 +2787,7 @@
         "acute": "200C repeated after trauma, or 30C several times daily",
         "chronic": "-"
       },
-      "maxScore": 12.0
+      "maxScore": 12
     },
     {
       "id": "arg-n",
@@ -2849,7 +2845,7 @@
         "acute": "30C for acute anxiety episode",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 13.0
+      "maxScore": 13
     },
     {
       "id": "staph",
@@ -2903,7 +2899,7 @@
         "acute": "30C for acute anger episode",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 11.0
+      "maxScore": 11
     },
     {
       "id": "carb-v",
@@ -2963,7 +2959,7 @@
         "acute": "30C after meals",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 16.0
+      "maxScore": 16
     },
     {
       "id": "chel",
@@ -3018,7 +3014,7 @@
         "acute": "30C 3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 11.0
+      "maxScore": 11
     },
     {
       "id": "nat-sulph",
@@ -3076,7 +3072,7 @@
         "acute": "30C 3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 14.0
+      "maxScore": 14
     },
     {
       "id": "robinia",
@@ -3171,7 +3167,7 @@
         "acute": "30C 2-3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 11.0
+      "maxScore": 11
     },
     {
       "id": "lil-tig",
@@ -4027,7 +4023,7 @@
           "w": 2
         },
         {
-          "t": "flushes \u2192 sweating \u2192 icy cold below + prostration",
+          "t": "flushes → sweating → icy cold below + prostration",
           "w": 2
         },
         {
@@ -4390,7 +4386,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 17.0
+      "maxScore": 17
     },
     {
       "id": "arum-t",
@@ -5339,14 +5335,6 @@
         {
           "t": "after labor",
           "w": 2
-        },
-        {
-          "t": "used on open wounds, cuts, or post-surgical sites to prevent infection and promote clean healing",
-          "w": 1.5
-        },
-        {
-          "t": "pain out of proportion to the visible injury, especially with lacerated or jagged wounds",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -5354,7 +5342,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 16.5
+      "maxScore": 14
     },
     {
       "id": "camph",
@@ -5558,14 +5546,6 @@
         {
           "t": "mastoid pain extremely sensitive",
           "w": 2
-        },
-        {
-          "t": "homesickness with red cheeks and inability to sleep, worse when away from home",
-          "w": 1.5
-        },
-        {
-          "t": "burning, smarting pains as if from pepper, with a sensation of constriction in the throat or chest",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -5573,7 +5553,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 18.5
+      "maxScore": 16
     },
     {
       "id": "carb-an",
@@ -5813,7 +5793,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 21.0
+      "maxScore": 21
     },
     {
       "id": "cic",
@@ -5965,14 +5945,6 @@
         {
           "t": "prevents tooth decay",
           "w": 2
-        },
-        {
-          "t": "cravings for stimulants like coffee, alcohol, or tobacco to keep going despite deep exhaustion",
-          "w": 1.5
-        },
-        {
-          "t": "breathlessness on exertion at high altitude or from any physical excess",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -5980,7 +5952,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 18.5
+      "maxScore": 16
     },
     {
       "id": "cocc",
@@ -6055,7 +6027,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 21.0
+      "maxScore": 21
     },
     {
       "id": "coff",
@@ -6184,7 +6156,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 19.0
+      "maxScore": 19
     },
     {
       "id": "collin",
@@ -6468,7 +6440,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 19.0
+      "maxScore": 19
     },
     {
       "id": "crot-t",
@@ -6531,7 +6503,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 15.0
+      "maxScore": 15
     },
     {
       "id": "cupr",
@@ -6653,7 +6625,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 15.0
+      "maxScore": 15
     },
     {
       "id": "dig",
@@ -6767,7 +6739,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 13.0
+      "maxScore": 13
     },
     {
       "id": "diph",
@@ -6851,7 +6823,7 @@
           "w": 2
         },
         {
-          "t": "suppressed eruptions/sweat \u2192 anasarca or other ills",
+          "t": "suppressed eruptions/sweat → anasarca or other ills",
           "w": 2
         },
         {
@@ -6919,14 +6891,6 @@
         {
           "t": "old women with paralytic bladder",
           "w": 2
-        },
-        {
-          "t": "constant, intolerable urging to urinate with dull bladder pain that is not relieved by urinating",
-          "w": 1.5
-        },
-        {
-          "t": "bedwetting in children, day and night, with no other apparent cause",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -6934,7 +6898,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 14.5
+      "maxScore": 12
     },
     {
       "id": "euphr",
@@ -7080,7 +7044,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 27.0
+      "maxScore": 27
     },
     {
       "id": "fl-ac",
@@ -7230,7 +7194,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 24.0
+      "maxScore": 24
     },
     {
       "id": "ham",
@@ -7329,14 +7293,6 @@
         {
           "t": "greedily drinks cold water but remains unconscious",
           "w": 2
-        },
-        {
-          "t": "child or patient answers questions slowly after a long pause, as if the thought takes time to arrive",
-          "w": 1.5
-        },
-        {
-          "t": "rolls the head from side to side or bores it into the pillow, indifferent to surroundings",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -7344,7 +7300,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 18.5
+      "maxScore": 16
     },
     {
       "id": "helon",
@@ -7538,7 +7494,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 15.0
+      "maxScore": 15
     },
     {
       "id": "iod",
@@ -7786,7 +7742,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 19.0
+      "maxScore": 19
     },
     {
       "id": "kalm",
@@ -7992,7 +7948,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 23.0
+      "maxScore": 23
     },
     {
       "id": "lac-c",
@@ -8343,7 +8299,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 19.0
+      "maxScore": 19
     },
     {
       "id": "mag-m",
@@ -8697,7 +8653,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 11.0
+      "maxScore": 11
     },
     {
       "id": "merc-cy",
@@ -8719,14 +8675,6 @@
         {
           "t": "intense redness of fauces",
           "w": 2
-        },
-        {
-          "t": "severe, rapidly spreading throat membrane with intense prostration out of proportion to visible signs",
-          "w": 1.5
-        },
-        {
-          "t": "throat is intensely red and raw, worse swallowing, with marked collapse and weakness",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -8734,7 +8682,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 8.5
+      "maxScore": 6
     },
     {
       "id": "merc-d",
@@ -8753,14 +8701,6 @@
         {
           "t": "diarrhoea in children: green, undigested",
           "w": 2
-        },
-        {
-          "t": "child has recurrent middle ear infections with hearing loss from thickened catarrh",
-          "w": 1.5
-        },
-        {
-          "t": "green, undigested, slimy stool in a teething or weaning infant",
-          "w": 1.5
         }
       ],
       "diseaseTags": [],
@@ -8768,7 +8708,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 7.0
+      "maxScore": 4
     },
     {
       "id": "merc-i-f",
@@ -8795,14 +8735,6 @@
         {
           "t": "hard hunterian chancre",
           "w": 2
-        },
-        {
-          "t": "throat symptoms and swelling markedly worse or confined to the right side",
-          "w": 1.5
-        },
-        {
-          "t": "tongue coated thickly at the back or base while the tip stays relatively clean",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -8810,7 +8742,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 10.5
+      "maxScore": 8
     },
     {
       "id": "merc-i-r",
@@ -8833,14 +8765,6 @@
         {
           "t": "tubercular pharyngitis",
           "w": 2
-        },
-        {
-          "t": "throat symptoms and swelling markedly worse or confined to the left side",
-          "w": 1.5
-        },
-        {
-          "t": "greenish, thick, tenacious mucus that is difficult to clear from the throat or nose",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -8848,7 +8772,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 8.5
+      "maxScore": 6
     },
     {
       "id": "merc-sul",
@@ -8871,14 +8795,6 @@
         {
           "t": "watery diarrhoea with burning",
           "w": 2
-        },
-        {
-          "t": "fluid accumulation around the lungs causing difficulty breathing, must sit upright to breathe",
-          "w": 1.5
-        },
-        {
-          "t": "watery diarrhea with a burning sensation, worse at night, with great prostration",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -8886,7 +8802,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 8.5
+      "maxScore": 6
     },
     {
       "id": "mez",
@@ -9085,14 +9001,6 @@
         {
           "t": "very sensitive to touch in the female organs, offended easily, jealous",
           "w": 1
-        },
-        {
-          "t": "sensation as if the uterus or pelvic organs would fall out, worse standing, better sitting with legs crossed",
-          "w": 1.5
-        },
-        {
-          "t": "intense sexual excitement alongside profuse, clotted menstrual flow",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -9100,7 +9008,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 15.6
+      "maxScore": 13.1
     },
     {
       "id": "naja",
@@ -9372,7 +9280,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 15.0
+      "maxScore": 15
     },
     {
       "id": "op",
@@ -9540,14 +9448,6 @@
         {
           "t": "child dances with pain before urinating",
           "w": 2
-        },
-        {
-          "t": "urging to urinate so sudden and intense the person must stop whatever they are doing immediately",
-          "w": 1.5
-        },
-        {
-          "t": "itching deep in the urethra that no scratching can reach, worse for men",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -9555,7 +9455,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 8.5
+      "maxScore": 6
     },
     {
       "id": "ph-ac",
@@ -9757,14 +9657,6 @@
         {
           "t": "better cold air/water",
           "w": 0.6
-        },
-        {
-          "t": "brain fag from overwork, worse from the slightest mental exertion, heaviness and weakness of the legs",
-          "w": 1.5
-        },
-        {
-          "t": "burning sensation along the length of the spine, better from cold air or cold water",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -9772,7 +9664,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 14.299999999999999
+      "maxScore": 11.799999999999999
     },
     {
       "id": "plat",
@@ -9822,7 +9714,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 15.0
+      "maxScore": 15
     },
     {
       "id": "plb",
@@ -9975,7 +9867,7 @@
         "acute": "-",
         "chronic": "1M single dose, only under experienced practitioner supervision"
       },
-      "maxScore": 17.0
+      "maxScore": 17
     },
     {
       "id": "ran-b",
@@ -10124,14 +10016,6 @@
         {
           "t": "worse from uncovering even slightly, must be kept very warm, offensive sour odor from whole body",
           "w": 1
-        },
-        {
-          "t": "sour smell to the entire body noticeable even before any digestive symptoms appear",
-          "w": 1.5
-        },
-        {
-          "t": "restless, irritable child during difficult teething with sour, frothy, colicky diarrhea",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -10139,7 +10023,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 17.0
+      "maxScore": 14.5
     },
     {
       "id": "rhod",
@@ -10648,7 +10532,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 18.0
+      "maxScore": 18
     },
     {
       "id": "sec",
@@ -10957,7 +10841,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 19.0
+      "maxScore": 19
     },
     {
       "id": "sul-ac",
@@ -11000,14 +10884,6 @@
         {
           "t": "better warmth",
           "w": 0.6
-        },
-        {
-          "t": "great hurry and weakness, must do everything quickly yet trembles from weakness while doing it",
-          "w": 1.5
-        },
-        {
-          "t": "craves alcohol or stimulants, worse from cold, better from warmth and rest",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -11015,7 +10891,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 15.7
+      "maxScore": 13.2
     },
     {
       "id": "symph",
@@ -11056,7 +10932,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 11.0
+      "maxScore": 11
     },
     {
       "id": "syph",
@@ -11102,14 +10978,6 @@
         {
           "t": "compulsive washing of hands, obsessive tendencies, weakness of memory and willpower",
           "w": 1
-        },
-        {
-          "t": "symptoms are consistently worse at night, from sundown to sunrise, better as day breaks",
-          "w": 1.5
-        },
-        {
-          "t": "family history of hereditary alcoholism or chronic disease pattern in the background",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -11118,7 +10986,7 @@
         "acute": "-",
         "chronic": "1M single dose, only under experienced practitioner supervision"
       },
-      "maxScore": 15.6
+      "maxScore": 13.1
     },
     {
       "id": "tab",
@@ -11213,14 +11081,6 @@
         {
           "t": "irritable, easily angered, sluggish liver with bitter taste and coated tongue that changes daily in appearance",
           "w": 1.5
-        },
-        {
-          "t": "tongue changes its coating pattern from day to day, described as mapped or geographic",
-          "w": 1.5
-        },
-        {
-          "t": "jaundice with an enlarged, sluggish liver and a bitter taste in the mouth",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -11228,7 +11088,7 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 13.2
+      "maxScore": 10.7
     },
     {
       "id": "tarent",
@@ -11290,7 +11150,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 15.0
+      "maxScore": 15
     },
     {
       "id": "tereb",
@@ -11384,7 +11244,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 11.0
+      "maxScore": 11
     },
     {
       "id": "thlaspi",
@@ -11413,14 +11273,6 @@
         {
           "t": "dysmenorrhoea with colic",
           "w": 2
-        },
-        {
-          "t": "uterine hemorrhage with clots and cramping, protracted bleeding between periods",
-          "w": 1.5
-        },
-        {
-          "t": "used for recurrent miscarriage tendency with a history of profuse bleeding",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -11428,7 +11280,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 10.5
+      "maxScore": 8
     },
     {
       "id": "thuj",
@@ -11532,14 +11384,6 @@
         {
           "t": "profuse flooding with faintness, worse from any least motion, feels the least jarring will bring on bleeding",
           "w": 1
-        },
-        {
-          "t": "profuse, bright red passive hemorrhage with faintness, worse from the least motion or jarring",
-          "w": 1.5
-        },
-        {
-          "t": "bleeding heavier at the change of life (menopause), with a sensation of bearing down",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -11547,7 +11391,7 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 17.0
+      "maxScore": 14.5
     },
     {
       "id": "val",
@@ -11620,14 +11464,6 @@
         {
           "t": "malignant, confluent variola",
           "w": 2
-        },
-        {
-          "t": "used to prevent or modify the course of smallpox and related eruptive fevers",
-          "w": 1.5
-        },
-        {
-          "t": "protects against or moderates severe pustular skin eruptions in epidemic settings",
-          "w": 1
         }
       ],
       "diseaseTags": [],
@@ -11636,7 +11472,7 @@
         "acute": "-",
         "chronic": "1M single dose, only under experienced practitioner supervision"
       },
-      "maxScore": 8.5
+      "maxScore": 6
     },
     {
       "id": "verat-v",
@@ -12896,7 +12732,7 @@
       "banerji": {
         "morning": "Rhus Tox 200, single dose",
         "evening": "-",
-        "note": "For stiffness worse on first motion, better with continued movement \u2014 classic osteoarthritis pattern."
+        "note": "For stiffness worse on first motion, better with continued movement — classic osteoarthritis pattern."
       },
       "biochemic": "Calc Fluor 6X, 4 tablets 3x daily",
       "tests": [
