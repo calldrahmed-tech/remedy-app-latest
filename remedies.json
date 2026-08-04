@@ -7305,6 +7305,10 @@
         {
           "t": "greedily drinks cold water but remains unconscious",
           "w": 2
+        },
+        {
+          "t": "characteristic aggravation from 4 to 8 pm",
+          "w": 1.5
         }
       ],
       "diseaseTags": [],
@@ -9178,6 +9182,10 @@
         {
           "t": "weak digestion, especially in the elderly",
           "w": 2
+        },
+        {
+          "t": "very weak ankles, easily turned or sprained",
+          "w": 1.5
         }
       ],
       "diseaseTags": [],
