@@ -1,6 +1,84 @@
 {
   "remedies": [
     {
+      "id": "calc-f",
+      "name": "Calcarea Fluorica",
+      "abbr": "Calc-f",
+      "category": "constitutional",
+      "system": [
+        "bones",
+        "glands",
+        "skin"
+      ],
+      "keynotes": [
+        {
+          "t": "enters into the composition of bones, teeth, and epidermis; gives elasticity to tissues",
+          "w": 1.5
+        },
+        {
+          "t": "stony hard, indurated glandular swellings that do not tend to suppurate",
+          "w": 2.5
+        },
+        {
+          "t": "enlarged, hard, painless glands",
+          "w": 2
+        },
+        {
+          "t": "indurated tissue; elastic or stony-hard tumors",
+          "w": 2
+        },
+        {
+          "t": "affections of bone and periosteum, abnormal bony deposits, exostoses",
+          "w": 1.5
+        },
+        {
+          "t": "great relaxation and debility of joints and ligaments, weak ankles that give way easily",
+          "w": 1.5
+        },
+        {
+          "t": "cracked, rough skin, especially palms, with deep painful fissures",
+          "w": 1.5
+        },
+        {
+          "t": "varicose veins, dilated blood vessels",
+          "w": 1.5
+        },
+        {
+          "t": "worse cold",
+          "w": 0.6
+        },
+        {
+          "t": "worse damp",
+          "w": 0.6
+        },
+        {
+          "t": "worse change of weather",
+          "w": 0.6
+        },
+        {
+          "t": "better heat",
+          "w": 0.6
+        },
+        {
+          "t": "better warmth",
+          "w": 0.6
+        },
+        {
+          "t": "better rubbing",
+          "w": 0.6
+        }
+      ],
+      "diseaseTags": [
+        "glandular swelling",
+        "bone spur",
+        "varicose veins"
+      ],
+      "potency": {
+        "acute": "-",
+        "chronic": "6X or 30C, constitutional case needed"
+      }
+    },
+    {
       "id": "acon",
       "name": "Aconitum Napellus",
       "abbr": "Acon",
