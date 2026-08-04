@@ -3520,7 +3520,12 @@
         "always cold",
         "wants warmth",
         "very chilly",
-        "sensitive to cold"
+        "sensitive to cold",
+        "cold all the time",
+        "wraps in blankets",
+        "wraps himself in blankets",
+        "wraps herself in blankets",
+        "cold hands and feet"
       ],
       "remedies": [
         {
@@ -3546,6 +3551,10 @@
         {
           "id": "kali-c",
           "grade": 2
+        },
+        {
+          "id": "psor",
+          "grade": 3
         }
       ]
     },
