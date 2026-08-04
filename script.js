@@ -218,8 +218,18 @@ const STOPWORDS = new Set(["a","an","the","and","or","but","with","without","who
 // stemming library.
 function wordsMatch(a, b) {
   if (a === b) return true;
-  if (a.length >= 5 && b.length >= 5 && a.slice(0, 5) === b.slice(0, 5)) return true;
-  return false;
+  if (a.length < 5 || b.length < 5) return false;
+  // A flat "first 5 letters match" let unrelated words with a shared prefix collide —
+  // "constipated" and "constitution" both start "const", but share only 5 of 11-12 letters
+  // (worse than half), which let Bryonia coincidentally match "the patient is CONSTIPATED"
+  // against an unrelated "robust CONSTITUTION" keynote. Requiring the shared prefix to cover
+  // most of the shorter word (not just a fixed 5 chars) still catches genuine suffix variants
+  // (stool/stools, irritable/irritability, tonsils/tonsillitis all clear ~80%+) while rejecting
+  // coincidental prefix overlaps between otherwise-different words.
+  let common = 0;
+  const shorter = Math.min(a.length, b.length);
+  while (common < shorter && a[common] === b[common]) common++;
+  return common >= 5 && common / shorter >= 0.7;
 }
 function countHits(kWords, inputWords) {
   return kWords.reduce((c, kw) => c + (inputWords.some(iw => wordsMatch(kw, iw)) ? 1 : 0), 0);
@@ -396,6 +406,17 @@ const SECTION_WEIGHT = {
                            // generic/fallback rubrics (bare constipation,
                            // undifferentiated fever) rather than SRPs
 };
+// RUBRIC_WEIGHT_OVERRIDE: a small number of individual rubrics are genuinely peculiar,
+// pathognomonic symptoms (Hering's "keynote" symptoms) that happen to live in a section
+// SECTION_WEIGHT otherwise treats as low-value fallback content — e.g. "stool recedes after
+// partial expulsion" sits in Stool (weighted 0.33, since most Stool rubrics really are generic
+// fallbacks like bare "constipated"), but this specific symptom is one of the single most
+// distinctive, textbook-defining signs for Silicea, on par with a Modalities-tier match. Only
+// add a rubric here when it's this kind of rare, highly characteristic single symptom — not as
+// a general way to boost a remedy.
+const RUBRIC_WEIGHT_OVERRIDE = {
+  "Stool recedes after partial expulsion (bashful/shy stool)": SECTION_WEIGHT.Modalities,
+};
 // GENERIC (location/complaint-agnostic) SECTIONS: Thirst, Appetite, Fever and Weight describe
 // a constitutional REACTION PATTERN (thirstless, ravenous at 11am, etc.) that says nothing
 // about WHAT the presenting complaint actually is — almost every remedy is graded on some of
@@ -413,6 +434,11 @@ const GENERIC_SECTIONS = new Set(["Thirst", "Appetite", "Fever", "Weight"]);
 // Only the subset below — pure thermal/weather/time-of-day reaction patterns with no pain
 // character or body-specific content of their own — are the ones that caused the Apis-wins-
 // everything failure, so only these count as generic; mechanical/pain modalities do not.
+// Also covers named "general/unspecified" fallback rubrics outside Thirst/Appetite/Fever/
+// Weight — e.g. "Constipation, general/unspecified" (Stool section) let Bryonia's bare
+// "I'm constipated" mention out-boost Silicea's far more specific, later-mentioned "stool
+// recedes after partial expulsion" purely because the generic one happened to appear first in
+// the text and MAIN_COMPLAINT_BOOST rewards earliest position, not diagnostic specificity.
 const GENERIC_MODALITY_RUBRICS = new Set([
   "Worse before a thunderstorm or change of weather",
   "Every change to cold damp weather brings new symptoms, worse from chill after being overheated",
@@ -421,7 +447,8 @@ const GENERIC_MODALITY_RUBRICS = new Set([
   "Worse from cold, better from heat",
   "Worse from heat, better from cold",
   "Worse in morning",
-  "Worse in evening or night"
+  "Worse in evening or night",
+  "Constipation, general/unspecified"
 ]);
 // How hard a remedy's generic-only evidence gets discounted when it has NO corroborating
 // complaint-specific evidence at all (no Mind/Common/Stool/Extremities rubric, no real materia
@@ -682,10 +709,9 @@ function scoreRepertory(inputText) {
     });
     if (bestPos === Infinity) return; // didn't fire
     firedRubrics.push(`${rubric.section}: ${rubric.rubric}`);
-    const sw = SECTION_WEIGHT[rubric.section] || 1.0;
+    const sw = RUBRIC_WEIGHT_OVERRIDE[rubric.rubric] ?? (SECTION_WEIGHT[rubric.section] || 1.0);
     const isGeneric = !rubric.location && (
-      GENERIC_SECTIONS.has(rubric.section) ||
-      (rubric.section === "Modalities" && GENERIC_MODALITY_RUBRICS.has(rubric.rubric))
+      GENERIC_SECTIONS.has(rubric.section) || GENERIC_MODALITY_RUBRICS.has(rubric.rubric)
     );
     rubric.remedies.forEach(r => {
       const add = r.grade * sw * idfFactor(r.id);
@@ -802,8 +828,7 @@ function scoreRemedies(inputText, diseaseProtocol) {
   // sections — if so, MAIN_COMPLAINT_BOOST below must not hand out its full flat bonus to a
   // remedy purely for matching that generic rubric (see GENERIC_ALONE_DISCOUNT above).
   const mainComplaintIsGeneric = !!mainComplaintRubric && !mainComplaintRubric.location && (
-    GENERIC_SECTIONS.has(mainComplaintRubric.section) ||
-    (mainComplaintRubric.section === "Modalities" && GENERIC_MODALITY_RUBRICS.has(mainComplaintRubric.rubric))
+    GENERIC_SECTIONS.has(mainComplaintRubric.section) || GENERIC_MODALITY_RUBRICS.has(mainComplaintRubric.rubric)
   );
   // MAIN COMPLAINT BOOST: remedies graded in the detected main-complaint rubric get a large
   // score boost — strong enough that matching the case's central symptom reliably outranks a
