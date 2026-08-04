@@ -169,6 +169,7 @@ function wordBoundaryMatch(text, phrase) {
 }
 function detectDiseaseProtocol(rawText) {
   const t = rawText.toLowerCase().trim();
+  if (POST_ILLNESS_PATTERN.test(t)) return null;
   // Tier 1: specific disease names / acronyms (e.g. "ibs", "gerd", "chronic constipation").
   // These take priority so a named diagnosis is never overridden by a generic symptom word
   // that happens to also appear in the same sentence.
@@ -617,7 +618,11 @@ function scoreRepertory(inputText) {
     const NEGATION_WINDOW_CHARS = 25;
     function isNegated(matchStartIdx) {
       const before = text.slice(Math.max(0, matchStartIdx - NEGATION_WINDOW_CHARS), matchStartIdx + 1);
-      return / (not|no|never|haven|hasn|hadn|without|isn|wasn|aren|weren|doesn|didn|don) /.test(before);
+      // "without fail" is an idiom meaning "always/reliably", not a negation of whatever
+      // follows it ("without fail I get this urgent hunger" means the hunger DOES happen) —
+      // strip it out before checking so its "without" doesn't falsely negate the real symptom.
+      const beforeSansIdiom = before.replace(/ without fail /g, " ");
+      return / (not|no|never|haven|hasn|hadn|without|isn|wasn|aren|weren|doesn|didn|don) /.test(beforeSansIdiom);
     }
     const exactIdx = text.indexOf(" " + trigger.toLowerCase() + " ");
     if (exactIdx >= 0) return isNegated(exactIdx) ? -1 : exactIdx;
@@ -1095,10 +1100,20 @@ function esc(s) { const d = document.createElement("div"); d.textContent = s == 
 const CHRONICITY_WORDS = ["chronic", "recurrent", "recurring", "for years", "since childhood",
   "longstanding", "long standing", "repeated", "keeps coming back", "keeps returning",
   "for months", "since birth", "lifelong"];
+// Matches natural duration phrasing like "two years ago", "a year ago", "several months ago" —
+// this is just as strong a chronicity signal as the literal word list above, but doctors
+// typing a narrative case describe duration this way far more often than saying "chronic".
+const CHRONICITY_DURATION_PATTERN = /\b(a|an|one|two|three|four|five|six|seven|eight|nine|ten|\d+)\s+(years?|months?)\s+ago\b/i;
 function isChronicContext(text) {
   const t = text.toLowerCase();
-  return CHRONICITY_WORDS.some(w => t.includes(w));
+  return CHRONICITY_WORDS.some(w => t.includes(w)) || CHRONICITY_DURATION_PATTERN.test(t);
 }
+
+// A named disease/diagnosis mentioned as something the patient RECOVERED FROM in the past
+// should not trigger that disease's acute-protocol remedy boost — "ever since I recovered
+// from typhoid two years ago" is describing chronic sequelae, not active typhoid, and the
+// acute protocol's remedies (e.g. Arsenicum for active typhoid) are the wrong signal here.
+const POST_ILLNESS_PATTERN = /\b(recovered from|recovering from|after (that|a|an|my) (bad )?(bout|case|episode) of|used to have|had .{0,20}\byears? ago|since (i|my) (had|recovered))\b/i;
 
 /* Materia medica note: a short, general descriptive snapshot of the remedy (its own top
    keynotes by weight) shown for every displayed remedy — independent of which specific
@@ -1224,7 +1239,13 @@ function runSearch() {
     const rem = DB.remedies.find(r => r.id === id);
     return rem && rem.nosode;
   });
-  const showNosodeSection = chronic || diseaseProtocolIndicatesNosode;
+  // A nosode is also allowed through when it's genuinely the clear top-scoring match on its
+  // own clinical picture (e.g. Psorinum's despair-of-recovery + offensive-discharge picture) —
+  // duration language like "chronic"/"for years" is a helpful signal but its absence shouldn't
+  // discard a nosode that the symptom content itself clearly points to.
+  const topIsClearNosodeWin = remedyResults[0] && remedyResults[0].remedy.nosode && remedyResults[0].percent >= 70 &&
+    (!remedyResults[1] || remedyResults[0].percent - remedyResults[1].percent >= 15);
+  const showNosodeSection = chronic || diseaseProtocolIndicatesNosode || topIsClearNosodeWin;
   if (!showNosodeSection) {
     remedyResults = remedyResults.filter(r => !r.remedy.nosode);
   }
