@@ -9903,6 +9903,10 @@
         {
           "t": "better heat",
           "w": 0.6
+        },
+        {
+          "t": "wants to be kept very warm, wants warm clothing even in summer, extreme sensitiveness to cold",
+          "w": 2
         }
       ],
       "diseaseTags": [],
