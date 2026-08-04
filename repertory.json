@@ -3684,6 +3684,28 @@
           "grade": 2
         }
       ]
+    },
+    {
+      "section": "Stool",
+      "rubric": "Stool recedes after partial expulsion (bashful/shy stool)",
+      "triggers": [
+        "stool recedes",
+        "stool goes back",
+        "recedes after being partially expelled",
+        "bashful stool",
+        "shy stool",
+        "stool slips back",
+        "comes a little and then goes back",
+        "partially expelled then recedes",
+        "stool retracts",
+        "stool goes back in"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 3
+        }
+      ]
     }
   ]
 }
