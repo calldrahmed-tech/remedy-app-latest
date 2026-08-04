@@ -148,6 +148,48 @@ const PASSING_CASES = [
     text: "My son's been so difficult lately, doctor, and it's strange because it's not like his usual naughtiness. He gets furious if anyone even looks at him directly, let alone touches him, he'll actually hit out if you try. He grinds his teeth so loudly at night I can hear it from the next room, and he keeps picking at his nose constantly, almost till it bleeds sometimes. He's hungry again barely an hour after a full meal, eats like he's starving even though he just ate plenty. Oddly, the only thing that seems to calm him down at all is if I rock him firmly, not gently, quite a vigorous rocking, gentle rocking doesn't work at all, it has to be firm.",
     expectTopId: "cina",
     notes: "Fixed by adding a dedicated repertory rubric for the furious-if-touched/vigorous-rocking/nose-picking picture — previously had zero repertory backing."
+  },
+  {
+    name: "Silicea — chronic glandular swelling, hard nodules, slow suppuration, chilly, receding stool",
+    text: "Chronic glandular swelling. Hard nodules. Slow suppuration. Chilly patient. Constipation with receding stool.",
+    expectTopId: "sil",
+    notes: "Fixed by adding a dedicated glandular-swelling rubric and a 'receding stool' trigger phrase (the existing bashful-stool rubric only had 'stool recedes', not the reversed word order)."
+  },
+  {
+    name: "Calcarea Fluorica — stony hard glandular swellings, no suppuration, indurated tissue",
+    text: "Stony hard glandular swellings. No suppuration. Worse cold. Tissue feels indurated.",
+    expectTopId: "calc-f",
+    notes: "Calcarea Fluorica was entirely missing from the remedy database — added the remedy plus a dedicated repertory rubric distinguishing it from Silicea (no suppuration vs Silicea's slow suppuration)."
+  },
+  {
+    name: "Plumbum — severe constipation, abdomen drawn inward, colic with retraction, mental dullness",
+    text: "Severe constipation. Abdomen drawn inward. Colic with retraction. Mental dullness. Weakness of limbs.",
+    expectTopId: "plb",
+    notes: "Fixed by adding a dedicated retracted-abdomen/colic rubric and adding Plumbum to the general Constipation rubric so it's eligible for the same main-complaint boost as Alumina/Nux-v."
+  },
+  {
+    name: "Causticum — joint stiffness with contractures, worse cold dry weather, sympathetic emotional patient",
+    text: "Joint stiffness with contractures. Worse cold dry weather. Better warmth. Weakness with trembling. Sympathetic, emotional patient.",
+    expectTopId: "caust",
+    notes: "Fixed by adding a dedicated repertory rubric — previously wasn't even in the top 3, losing to Arsenicum Album via the generic 'worse cold, better heat' modality rubric."
+  },
+  {
+    name: "Silicea — chronic weakness, chilly, sweaty feet, slow-healing wounds, receding stool",
+    text: "Chronic weakness. Chilly patient. Sweaty feet. Slow healing wounds. Constipation with receding stool.",
+    expectTopId: "sil",
+    notes: "Fixed by adding a dedicated sweaty-feet/slow-healing-wounds rubric."
+  },
+  {
+    name: "Rhus Tox — stiffness better from motion (using 'improves with' instead of 'better'), worse cold damp",
+    text: "Stiffness improves with motion. Worse cold damp weather. But also progressive weakness and contracture tendency.",
+    expectTopId: "rhus-t",
+    notes: "Fixed a normalizeSynonyms gap: 'improves with motion' wasn't recognized as meaning 'better motion' since it doesn't contain the literal word 'better'. Deliberately a hybrid/trap case (also mentions Causticum-like contracture wording) to confirm Rhus Tox's own specific motion rubric still wins on its stronger, more specific modality match."
+  },
+  {
+    name: "Plumbum — severe abdominal pain with retraction, constipation, pain not relieved by pressure",
+    text: "Severe abdominal pain with retraction of abdomen. Constipation. Pain not relieved by pressure. Progressive weakness.",
+    expectTopId: "plb",
+    notes: "Second Plumbum case confirming the retracted-abdomen rubric generalizes beyond the exact wording of the first."
   }
 ];
 
