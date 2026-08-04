@@ -1954,6 +1954,14 @@
         {
           "t": "chilly, sensitive to cold, yet craves open air and cool surroundings for the head",
           "w": 1
+        },
+        {
+          "t": "desires sweets, which aggravate the digestive complaints",
+          "w": 1.5
+        },
+        {
+          "t": "cannot bear anything tight around the waist or abdomen",
+          "w": 1.5
         }
       ],
       "diseaseTags": [
@@ -7308,6 +7316,14 @@
         },
         {
           "t": "characteristic aggravation from 4 to 8 pm",
+          "w": 1.5
+        },
+        {
+          "t": "rolls head day and night",
+          "w": 2
+        },
+        {
+          "t": "dull, slow to answer or respond",
           "w": 1.5
         }
       ],
