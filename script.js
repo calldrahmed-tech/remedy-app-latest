@@ -7,6 +7,10 @@
 
 let DB = null;        // { remedies, biochemics, diseaseProtocols }
 let REPERTORY = null; // { repertory: [ {section, rubric, triggers, remedies:[{id,grade}]} ] }
+let CHIEF_SYMPTOM_TAGS = null; // [ {id, label, section, rubric} ] — Protocol Mode's tag picker,
+                                // one entry per repertory rubric; `rubric`+`section` is the join
+                                // key back into REPERTORY for scoring, so tag labels can be
+                                // polished independently of the underlying rubric's match text.
 
 const el = (id) => document.getElementById(id);
 const inputEl = el("symptomInput");
@@ -33,9 +37,13 @@ Promise.all([
   .then(([remediesJson, repertoryJson]) => {
     DB = remediesJson;
     REPERTORY = repertoryJson.repertory;
+    CHIEF_SYMPTOM_TAGS = repertoryJson.chiefSymptomTags || [];
     buildWordDict();
     statusEl.textContent = "";
     resultBtn.disabled = false;
+    // Protocol Mode (protocol-mode.js) waits for this rather than polling — keeps the two
+    // files decoupled from each other's internal DOM/init details.
+    document.dispatchEvent(new CustomEvent("smartRemedyDataReady"));
   })
   .catch(err => {
     statusEl.textContent = "Data failed to load: " + err.message + ". Make sure remedies.json and repertory.json are both in the same folder as index.html, and you're viewing this through a local server or GitHub Pages (not a raw double-clicked file).";
@@ -191,6 +199,175 @@ function detectDiseaseProtocol(rawText) {
     }
   });
   return best;
+}
+
+/* ---------- Protocol Mode: Tier B fallback protocol generation ----------
+   Every remedy already carries a `category` (acute/chronic/constitutional) and a
+   `potency: {acute, chronic}` free-text field — this is real curated data, not invented
+   here. Tier B never invents a specific potency or dose for a remedy; it only supplies
+   GENERIC, category-level scheduling/duration/review/tip conventions (standard homeopathic
+   prescribing practice, not remedy-specific claims) so that a remedy with no hand-authored
+   diseaseProtocol entry can still produce a usable protocol card in Protocol Mode. Curated
+   diseaseProtocols entries (Tier A) always take priority over this when one matches. */
+const PROTOCOL_SCHEDULE_TEMPLATES = {
+  acute: {
+    potencySlot: "acute",
+    scheduleFallback: "Repeat every 2-3 hours until improvement is noted, then reduce to 3 times daily",
+    duration: "2-3 days, or until symptoms resolve",
+    review: "Reassess if no improvement within 24-48 hours",
+    expectedResponse: "Acute remedies typically show a response within hours to a day if well-indicated",
+    tip: "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+  },
+  chronic: {
+    potencySlot: "chronic",
+    scheduleFallback: "Single dose, then wait and observe",
+    duration: "Observe for 2-4 weeks before repeating",
+    review: "Review in 2-4 weeks, or sooner if new symptoms appear",
+    expectedResponse: "Deeper-acting remedies often show gradual improvement over days to weeks",
+    tip: "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+  },
+  constitutional: {
+    potencySlot: "chronic",
+    scheduleFallback: "Single dose, best selected and dosed under full case-taking",
+    duration: "Observe for 3-4 weeks before considering a repeat",
+    review: "Review in 3-4 weeks",
+    expectedResponse: "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+    tip: "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+  }
+};
+
+/* Builds a generic (Tier B) protocol object for a remedy that has no curated diseaseProtocols
+   entry backing it. Shape intentionally mirrors the migrated diseaseProtocols[].protocols[]
+   entries (see remedies.json) so both tiers can be rendered by the same UI code. */
+function buildTierBProtocol(remedy) {
+  const tpl = PROTOCOL_SCHEDULE_TEMPLATES[remedy.category] || PROTOCOL_SCHEDULE_TEMPLATES.chronic;
+  const potencyText = (remedy.potency && remedy.potency[tpl.potencySlot] && remedy.potency[tpl.potencySlot] !== "-")
+    ? remedy.potency[tpl.potencySlot]
+    : (remedy.potency && (remedy.potency.acute !== "-" ? remedy.potency.acute : remedy.potency.chronic)) || "30C";
+  return {
+    tier: "generic",
+    label: "General guidance (no specific clinical protocol on file for this presentation)",
+    doses: [{
+      remedy: remedy.id,
+      remedyNameRaw: remedy.name,
+      potency: potencyText,
+      timing: "as needed",
+      schedule: tpl.scheduleFallback
+    }],
+    biochemicSupport: null,
+    note: null,
+    duration: tpl.duration,
+    review: tpl.review,
+    expectedResponse: tpl.expectedResponse,
+    tip: tpl.tip
+  };
+}
+
+/* ---------- Protocol Mode: intensity-weighted chief-symptom scoring ----------
+   Deliberately separate from the Classical engine's scoreRemedies() below — there is no
+   free text here, so there is no parsing/matching ambiguity to resolve. Each selection is
+   already an exact rubric the doctor picked; this function only has to do the arithmetic. */
+const INTENSITY_WEIGHT = { "+": 0.5, "++": 1.0, "+++": 1.75, "++++": 2.75 };
+
+/* selections: [{ tag: {id, label, section, rubric}, intensity: "+"|"++"|"+++"|"++++" }, ...]
+   Returns remedies ranked by weighted rubric-grade sum, percent-normalized against the
+   theoretical max (every selection matched at grade 3), with a hard gate: if any symptom
+   was marked "++++", a remedy must be graded in at least one of those chief rubrics to
+   be considered at all — a remedy that only covers secondary symptoms should never be able
+   to outrank one that actually addresses what the doctor flagged as most important. */
+function scoreProtocolMatch(selections) {
+  if (!REPERTORY || !selections || !selections.length) return [];
+
+  const remedyScores = {};      // id -> weighted score
+  const remedyMatches = {};     // id -> [{ rubric, section, intensity, grade }]
+  let maxPossible = 0;
+  const mustCoverRubrics = [];  // rubrics tied to a "++++" selection
+
+  selections.forEach(sel => {
+    const weight = INTENSITY_WEIGHT[sel.intensity] || INTENSITY_WEIGHT["++"];
+    const rubric = REPERTORY.find(r => r.section === sel.tag.section && r.rubric === sel.tag.rubric);
+    if (!rubric) return;
+    const sw = SECTION_WEIGHT[rubric.section] || 1.0;
+    maxPossible += 3 * weight * sw; // 3 = highest curated grade, the "perfect match" ceiling
+    if (sel.intensity === "++++") mustCoverRubrics.push(rubric);
+    rubric.remedies.forEach(r => {
+      const add = r.grade * weight * sw;
+      remedyScores[r.id] = (remedyScores[r.id] || 0) + add;
+      remedyMatches[r.id] = remedyMatches[r.id] || [];
+      remedyMatches[r.id].push({ rubric: rubric.rubric, section: rubric.section, intensity: sel.intensity, grade: r.grade });
+    });
+  });
+
+  let ids = Object.keys(remedyScores);
+  if (mustCoverRubrics.length) {
+    ids = ids.filter(id => mustCoverRubrics.some(rb => rb.remedies.some(r => r.id === id)));
+  }
+
+  return ids
+    .map(id => {
+      const remedy = DB.remedies.find(r => r.id === id);
+      if (!remedy) return null;
+      const percent = maxPossible > 0 ? Math.round(Math.min(100, (remedyScores[id] / maxPossible) * 100)) : 0;
+      return { remedy, rawScore: remedyScores[id], percent, matched: remedyMatches[id] };
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.rawScore - a.rawScore);
+}
+
+/* Diseases where this remedy is the FIRST-listed primary remedy — a reasonably strong signal
+   it's a clinically central choice for that named condition. Used only to offer optional
+   extra context (clearly labelled with the disease it's actually for); Protocol Mode's tag
+   input has no disease name, so this is never assumed to match the doctor's actual case.
+   Broad polychrests (Arsenicum, Nux Vomica, Pulsatilla, ...) are first-choice for many
+   UNRELATED named conditions — surfacing all of them would let a fever case get handed a
+   Banerji combination sourced from an asthma protocol. Only surface this when the remedy is
+   the first choice for a SMALL number of conditions (a real distinguishing signal), never
+   when it's broadly primary for many — better to show nothing than something wrong. */
+const RELATED_DISEASE_PROTOCOL_MAX = 2;
+function findRelatedDiseaseProtocols(remedyId) {
+  const matches = DB.diseaseProtocols.filter(p => (p.primaryRemedies || [])[0] === remedyId);
+  return matches.length <= RELATED_DISEASE_PROTOCOL_MAX ? matches : [];
+}
+
+function buildProtocolCard(rankedEntry, tier) {
+  const remedy = rankedEntry.remedy;
+  const related = findRelatedDiseaseProtocols(remedy.id);
+  return {
+    tier, // "primary" | "alternative"
+    remedy,
+    percent: rankedEntry.percent,
+    matchedRubrics: rankedEntry.matched,
+    protocol: buildTierBProtocol(remedy),
+    relatedDiseaseProtocols: related.map(p => ({ name: p.name, protocols: p.protocols }))
+  };
+}
+
+/* Main entry point for Protocol Mode. selections: same shape as scoreProtocolMatch's input.
+   Returns 2-4 cards: Primary, Alternative, and — only when genuinely on file, never
+   fabricated — a Banerji-style dual-remedy combination sourced from a curated disease
+   protocol, explicitly labelled with which named condition it came from. */
+function generateProtocolCards(selections) {
+  const ranked = scoreProtocolMatch(selections);
+  if (!ranked.length) return [];
+
+  const cards = [buildProtocolCard(ranked[0], "primary")];
+  if (ranked[1]) cards.push(buildProtocolCard(ranked[1], "alternative"));
+
+  const relatedForTop = findRelatedDiseaseProtocols(ranked[0].remedy.id);
+  const combo = relatedForTop.find(p => p.protocols[0] && p.protocols[0].doses.length >= 2);
+  if (combo) {
+    cards.push({ tier: "combination", diseaseContext: combo.name, protocol: combo.protocols[0] });
+  }
+  return cards.slice(0, 4);
+}
+
+/* Nosode support for Protocol Mode — mirrors the Classical engine's nosode selection
+   (see showNosodeSection in runSearch) but without a chronic-context text gate, since there
+   is no free text here: shown whenever a nosode remedy ranks credibly (>=25%) among the
+   scored candidates. */
+function protocolNosodeSuggestion(ranked) {
+  const topRankedNosode = ranked.find(rr => rr.remedy.nosode && rr.percent >= 25);
+  return topRankedNosode ? topRankedNosode.remedy : null;
 }
 
 /* ---------- symptom-based scoring engine ----------
