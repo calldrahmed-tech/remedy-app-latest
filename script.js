@@ -1527,26 +1527,14 @@ function runSearch() {
     </div>`;
   }
 
-  /* ---------- 3. EXPERT PROTOCOL — collapsed, gold, only if a disease was detected ---------- */
-  if (diseaseProtocol && diseaseProtocol.banerji) {
-    const bp = diseaseProtocol.banerji;
-    const hasEveningDose = bp.evening && bp.evening !== "-";
-    html += `<div class="collapsible-section gold">
-      <button class="collapsible-toggle" onclick="toggleSection('expert-section')">
-        <span>⭐ Banerji Combination: ${esc(diseaseProtocol.name)}</span>
-        <span class="ct-link"><span id="expert-section-arrow">▶</span> Use Combination (Advanced)</span>
-      </button>
-      <div id="expert-section" class="collapsible-content" style="display:none;">
-        <div class="expert-dose-line">${esc(bp.morning)}</div>
-        ${hasEveningDose ? `<div class="expert-dose-line">${esc(bp.evening)}</div>` : ""}
-        <ul class="alt-reasons">
-          <li>Used in complex or unclear cases</li>
-          <li>When results are not satisfactory with the main remedy</li>
-        </ul>
-        ${diseaseProtocol.nosode ? `<div class="expert-nosode-line">🧬 Nosode support: <b>${esc(diseaseProtocol.nosode)}</b></div>` : ""}
-      </div>
-    </div>`;
-  }
+  // A curated Banerji-style dual-remedy combination card used to render here whenever
+  // detectDiseaseProtocol() matched a named condition. That's now Expert Protocol mode's job
+  // (its disease-name shortcuts surface the exact same curated combination, more prominently)
+  // — showing it here too duplicated the same content across both modes and blurred the split
+  // between "Full Repertory: pure rubric/materia-medica analysis" and "Expert Protocol: curated
+  // named-condition protocols." diseaseProtocol itself is still detected and still feeds the
+  // nosode suggestion below and the remedy-scoring boost elsewhere — only this card's rendering
+  // was removed.
 
   /* ---------- 3.5 NOSODE SUPPORT — collapsed, only for chronic cases ---------- */
   if (showNosodeSection) {
