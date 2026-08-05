@@ -14047,13 +14047,17 @@
       ],
       "miasm": {
         "primary": "Psora",
-        "secondary": "Sycosis",
-        "explanation": "Recurring tonsillar inflammation and swelling reflects a psoric-sycotic mix."
+        "secondary": "Tubercular",
+        "explanation": "Recurring tonsillar hypertrophy with infection susceptibility, especially in children, is classic tubercular-miasm territory rather than sycotic — a distinction emphasized by Burnett and other tubercular-miasm writers."
       },
       "diseaseNosodes": [
         {
+          "id": "bacil",
+          "reason": "Suggested as the classical Burnett indication for recurrent, enlarged tonsils reflecting a tubercular constitutional tendency, especially in children."
+        },
+        {
           "id": "strep-noso",
-          "reason": "Suggested for chronic, recurrent tonsillitis, which is frequently streptococcal in origin."
+          "reason": "Suggested when there is a documented history of streptococcal tonsillitis specifically."
         }
       ]
     },
@@ -15566,10 +15570,15 @@
       ],
       "miasm": {
         "primary": "Psora",
-        "secondary": "Sycosis",
-        "explanation": "Chronic catarrh with thick discharge reflects a psoric-sycotic mix."
+        "secondary": "Tubercular",
+        "explanation": "Chronic, recurring sinus catarrh reflects the same tubercular-miasm respiratory susceptibility pattern seen in chronic bronchitis and recurrent tonsillitis."
       },
-      "diseaseNosodes": []
+      "diseaseNosodes": [
+        {
+          "id": "bacil",
+          "reason": "Suggested for chronic, recurring sinus infections reflecting an underlying tubercular constitutional tendency."
+        }
+      ]
     },
     {
       "id": "ganglion-cyst",
