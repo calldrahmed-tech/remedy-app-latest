@@ -65,6 +65,48 @@ function updateGetProtocolBtnState() {
   getProtocolBtn.disabled = !protocolDataReady || selectedSymptoms.length === 0;
 }
 
+/* ---------- related-symptom suggestions ----------
+   Curated, hand-picked clinical associations — NOT auto-derived from text similarity and
+   NOT new repertory rubrics (adding remedies to REPERTORY risks the kind of invisible
+   Classical-mode scoring shift discovered with the "Fever, general/unspecified" rubric,
+   since idfFactor() discounts a remedy globally based on how many rubrics list it, whether
+   or not those rubrics ever fire). This map only points to symptom TAGS THAT ALREADY EXIST,
+   so it changes zero scoring behavior anywhere — it just saves a doctor from having to think
+   of and re-search for the obvious companion symptoms one at a time. Deliberately small and
+   meant to grow the same incremental way the repertory itself has: only add a link here when
+   the clinical association is well-established, not just plausible. */
+const RELATED_SYMPTOM_MAP = {
+  // Boils/abscesses are acute local infections — fever (usually with its own chill/thirst
+  // pattern) is one of the most common systemic symptoms riding along with them.
+  "sym_boils_or_abscesses_acutely_very_sensitive_to_touch": [
+    "sym_sudden_high_fever_violent_onset_no_chill_stage",
+    "sym_chill_predominant_chill_with_fever_restlessness_du",
+    "sym_fever_with_thirst"
+  ]
+};
+
+function renderRelatedSuggestions() {
+  const relatedTagsEl = pEl("protocolRelatedSuggestions");
+  const selectedIds = new Set(selectedSymptoms.map(s => s.tag.id));
+  const relatedIds = [];
+  selectedSymptoms.forEach(s => {
+    (RELATED_SYMPTOM_MAP[s.tag.id] || []).forEach(id => {
+      if (!selectedIds.has(id) && !relatedIds.includes(id)) relatedIds.push(id);
+    });
+  });
+  if (!relatedIds.length) { relatedTagsEl.style.display = "none"; relatedTagsEl.innerHTML = ""; return; }
+  const tags = relatedIds.map(id => CHIEF_SYMPTOM_TAGS.find(t => t.id === id)).filter(Boolean);
+  relatedTagsEl.innerHTML = `<span class="related-suggestions-label">Often seen together — tap to add:</span>` +
+    tags.map(t => `<button type="button" class="related-suggestion-item" data-id="${esc(t.id)}">+ ${esc(t.label)}</button>`).join("");
+  relatedTagsEl.querySelectorAll(".related-suggestion-item").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const tag = CHIEF_SYMPTOM_TAGS.find(t => t.id === btn.dataset.id);
+      if (tag) addSymptom(tag);
+    });
+  });
+  relatedTagsEl.style.display = "block";
+}
+
 /* ---------- tag search / chip management ---------- */
 function renderChips() {
   protocolChipsEl.innerHTML = selectedSymptoms.map((sel, i) => `
@@ -89,6 +131,7 @@ function renderChips() {
       updateGetProtocolBtnState();
     });
   });
+  renderRelatedSuggestions();
 }
 
 function addSymptom(tag) {

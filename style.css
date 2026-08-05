@@ -55,6 +55,10 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .protocol-suggestion-item:last-child { border-bottom: none; }
 .protocol-suggestion-item:hover { background: var(--paper); }
 .protocol-suggestion-empty { padding: 12px 14px; font-size: 0.8rem; color: var(--muted); }
+.protocol-related-suggestions { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-bottom: 10px; }
+.related-suggestions-label { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; margin-right: 2px; }
+.related-suggestion-item { background: rgba(255,255,255,0.08); border: 1px dashed rgba(255,255,255,0.35); border-radius: 999px; padding: 5px 12px; font-size: 0.76rem; color: #fff; font-family: inherit; cursor: pointer; }
+.related-suggestion-item:hover { background: rgba(255,255,255,0.18); }
 #getProtocolBtn { width: 100%; margin-top: 10px; background: var(--red-1); color: #fff; border: none; border-radius: 10px; padding: 13px 22px; font-size: 0.92rem; font-weight: 700; cursor: pointer; }
 #getProtocolBtn:hover:not(:disabled) { background: var(--red-2); }
 #getProtocolBtn:disabled { opacity: 0.5; cursor: not-allowed; }
