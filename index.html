@@ -21,7 +21,25 @@
     </div>
     <button id="loginTriggerBtn" class="login-trigger-btn">🔐 Doctor Login</button>
   </div>
-  <div class="header-search">
+
+  <div class="mode-switcher" role="tablist">
+    <button class="mode-tab active" data-mode="protocol" role="tab" aria-selected="true">⚡ Protocol</button>
+    <button class="mode-tab" data-mode="classical" role="tab" aria-selected="false">📚 Classical</button>
+  </div>
+
+  <!-- PROTOCOL MODE input (default view) -->
+  <div id="protocolModeInput" class="header-search">
+    <label class="symptom-label">Chief Symptoms <span class="symptom-sublabel">(mark importance with +)</span></label>
+    <div id="protocolChips" class="protocol-chips"></div>
+    <div class="protocol-search-row">
+      <input type="text" id="protocolTagSearch" placeholder="Type a symptom… e.g. thirst, chilly, fever" autocomplete="off">
+    </div>
+    <div id="protocolSuggestions" class="protocol-suggestions" style="display:none;"></div>
+    <button id="getProtocolBtn" disabled>Get Protocol</button>
+  </div>
+
+  <!-- CLASSICAL MODE input (hidden by default) -->
+  <div id="classicalModeInput" class="header-search" style="display:none;">
     <label class="symptom-label" for="symptomInput">Symptom:</label>
     <div class="search-inline">
       <textarea id="symptomInput" placeholder="e.g., nausea, bloating, fatigue" rows="4"></textarea>
@@ -66,7 +84,12 @@
     <button id="accountBarBtn" class="account-bar-btn"></button>
   </div>
 
-  <div class="samples-bar">
+  <div id="protocolSamplesBar" class="samples-bar">
+    <div class="lbl">Try a sample:</div>
+    <button class="sample-chip" id="protocolSampleFever">Fever with chill (Ars-alb example)</button>
+  </div>
+
+  <div id="classicalSamplesBar" class="samples-bar" style="display:none;">
     <div class="lbl">Try a sample:</div>
     <button class="sample-chip" data-sample="chronic constipation hard stool in the beginning incomplete evacuation ineffectual urging bloating sedentary lifestyle">Chronic constipation</button>
     <button class="sample-chip" data-sample="GERD burning heartburn worse lying down at night after eating">GERD / heartburn</button>
@@ -76,7 +99,8 @@
   </div>
   <div id="statusMsg"></div>
 
-  <div id="results"></div>
+  <div id="protocolResults"></div>
+  <div id="results" style="display:none;"></div>
 
   <div class="disclaimer">
     Smart Remedy AI is an educational and clinical reference aid based on classical keynotes (Kent, Boericke, Clarke, Banerjea)
@@ -92,6 +116,7 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="protocol-mode.js"></script>
 <script src="ai-assist.js"></script>
 </body>
 </html>
