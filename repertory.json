@@ -4439,6 +4439,1653 @@
           "grade": 3
         }
       ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from grief, sorrow, or bereavement",
+      "triggers": [
+        "ailments from grief",
+        "since her grief",
+        "since his grief",
+        "complaints began after grief",
+        "never been well since the grief"
+      ],
+      "remedies": [
+        {
+          "id": "ign",
+          "grade": 3
+        },
+        {
+          "id": "nat-mur",
+          "grade": 3
+        },
+        {
+          "id": "ph-ac",
+          "grade": 2
+        },
+        {
+          "id": "aur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from fright or sudden shock",
+      "triggers": [
+        "ailments from fright",
+        "ever since the shock",
+        "since that fright",
+        "never been well since the scare",
+        "complaints began after a fright"
+      ],
+      "remedies": [
+        {
+          "id": "acon",
+          "grade": 3
+        },
+        {
+          "id": "op",
+          "grade": 3
+        },
+        {
+          "id": "gels",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from anger, indignation, or being contradicted",
+      "triggers": [
+        "ailments from anger",
+        "since that argument",
+        "ever since he got angry",
+        "complaints started after an argument",
+        "since the fight"
+      ],
+      "remedies": [
+        {
+          "id": "staph",
+          "grade": 3
+        },
+        {
+          "id": "coloc",
+          "grade": 3
+        },
+        {
+          "id": "cham",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from disappointed love or a broken relationship",
+      "triggers": [
+        "since the breakup",
+        "ever since he left me",
+        "disappointed love",
+        "after the relationship ended"
+      ],
+      "remedies": [
+        {
+          "id": "ign",
+          "grade": 3
+        },
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "ph-ac",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from humiliation, mortification, or being scolded",
+      "triggers": [
+        "ever since being humiliated",
+        "since she was scolded",
+        "after being insulted",
+        "since the embarrassment"
+      ],
+      "remedies": [
+        {
+          "id": "staph",
+          "grade": 3
+        },
+        {
+          "id": "ign",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from jealousy",
+      "triggers": [
+        "since she became jealous",
+        "ailments from jealousy",
+        "ever since he found out about the affair"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 3
+        },
+        {
+          "id": "hyos",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from overexertion or physical strain",
+      "triggers": [
+        "since overexerting himself",
+        "after heavy lifting",
+        "ailments from overexertion",
+        "since the marathon"
+      ],
+      "remedies": [
+        {
+          "id": "arn",
+          "grade": 3
+        },
+        {
+          "id": "rhus-t",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from prolonged mental exertion or overwork",
+      "triggers": [
+        "since studying too hard",
+        "after months of overwork",
+        "mental exhaustion from overwork",
+        "since the exam period"
+      ],
+      "remedies": [
+        {
+          "id": "pic-ac",
+          "grade": 3
+        },
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "ph-ac",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from exposure to cold dry wind",
+      "triggers": [
+        "after being out in the cold wind",
+        "exposure to cold dry wind",
+        "since that cold windy day"
+      ],
+      "remedies": [
+        {
+          "id": "acon",
+          "grade": 3
+        },
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from getting chilled after being overheated, or exposure to cold damp",
+      "triggers": [
+        "after getting chilled",
+        "since getting wet in the rain",
+        "since getting caught in the rain",
+        "exposure to cold damp"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 3
+        },
+        {
+          "id": "dulc",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from suppressed skin eruption",
+      "triggers": [
+        "since the rash was suppressed",
+        "after the eczema disappeared suddenly",
+        "since the skin cleared up with cream and new symptoms began"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 3
+        },
+        {
+          "id": "psor",
+          "grade": 2
+        },
+        {
+          "id": "apis",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from vaccination",
+      "triggers": [
+        "ever since the vaccine",
+        "since his vaccination",
+        "after getting vaccinated",
+        "complaints began after the shot"
+      ],
+      "remedies": [
+        {
+          "id": "thuj",
+          "grade": 3
+        },
+        {
+          "id": "sil",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from sunstroke or overheating",
+      "triggers": [
+        "since the sunstroke",
+        "after being out in the sun too long",
+        "heat exhaustion",
+        "since the heatstroke"
+      ],
+      "remedies": [
+        {
+          "id": "glon",
+          "grade": 3
+        },
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "nat-c",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from being reprimanded or punished, especially in children",
+      "triggers": [
+        "since he was punished",
+        "ever since being scolded by the teacher",
+        "after being disciplined"
+      ],
+      "remedies": [
+        {
+          "id": "staph",
+          "grade": 3
+        },
+        {
+          "id": "cina",
+          "grade": 2
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from homesickness",
+      "triggers": [
+        "homesick",
+        "since moving away from home",
+        "ailments from homesickness"
+      ],
+      "remedies": [
+        {
+          "id": "caps",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from financial loss or business failure",
+      "triggers": [
+        "since losing the business",
+        "after the financial loss",
+        "since going bankrupt",
+        "ever since the business failed"
+      ],
+      "remedies": [
+        {
+          "id": "aur",
+          "grade": 3
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from anticipation or fear of a specific upcoming event",
+      "triggers": [
+        "ever since the surgery was scheduled",
+        "anticipating the exam",
+        "since finding out about the diagnosis"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "arg-n",
+          "grade": 2
+        },
+        {
+          "id": "acon",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments dating from a fall or physical injury, even an old one",
+      "triggers": [
+        "never been the same since the fall",
+        "old injury that never healed right",
+        "since the accident years ago"
+      ],
+      "remedies": [
+        {
+          "id": "arn",
+          "grade": 3
+        },
+        {
+          "id": "hyper",
+          "grade": 2
+        },
+        {
+          "id": "nat-sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from prolonged, unresolved grief, unable to move on",
+      "triggers": [
+        "still not over the loss",
+        "cannot get over the grief",
+        "can t get over the grief",
+        "still can t get over",
+        "stuck in grief"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 3
+        },
+        {
+          "id": "ign",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from caring for others, worn out from responsibility",
+      "triggers": [
+        "exhausted from caring for",
+        "since taking care of her sick mother",
+        "worn out from responsibility"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Fear of death, convinced they are about to die",
+      "triggers": [
+        "convinced she is going to die",
+        "fear of dying",
+        "certain death is near",
+        "predicts the time of death"
+      ],
+      "remedies": [
+        {
+          "id": "acon",
+          "grade": 3
+        },
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "arg-n",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Fear of the dark",
+      "triggers": [
+        "afraid of the dark",
+        "fear of the dark",
+        "scared when the lights go off"
+      ],
+      "remedies": [
+        {
+          "id": "stram",
+          "grade": 3
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Fear of being alone, dreads solitude",
+      "triggers": [
+        "afraid to be alone",
+        "cannot be left alone",
+        "fear of being left alone",
+        "panics when alone"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 3
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Fear of crowds or public places",
+      "triggers": [
+        "afraid of crowds",
+        "panics in crowded places",
+        "fear of crowds"
+      ],
+      "remedies": [
+        {
+          "id": "arg-n",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Fear of dogs or animals",
+      "triggers": [
+        "afraid of dogs",
+        "fear of dogs",
+        "terrified of animals"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "stram",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Excessive worry about health, imagines the worst diseases",
+      "triggers": [
+        "convinced something is seriously wrong",
+        "googles symptoms constantly",
+        "imagines the worst disease",
+        "health anxiety"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Aversion to company, desires to be alone",
+      "triggers": [
+        "wants to be left alone",
+        "avoids company",
+        "prefers being alone",
+        "withdraws from everyone"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 3
+        },
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "gels",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Desires company, worse when alone, better with someone present",
+      "triggers": [
+        "wants someone with her at all times",
+        "better when not alone",
+        "feels worse when left by herself"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Weeps easily while describing symptoms to the doctor",
+      "triggers": [
+        "cries while telling me",
+        "weeps describing her symptoms",
+        "tears up just talking about it"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 3
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Cannot cry even when deeply sad, tears will not come",
+      "triggers": [
+        "cannot cry even though she wants to",
+        "tears won't come",
+        "wants to cry but can't"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 3
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Talkative, loquacious, jumps rapidly from topic to topic",
+      "triggers": [
+        "talks non-stop",
+        "jumps from one topic to another",
+        "cannot stop talking"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 3
+        },
+        {
+          "id": "stram",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Silent, taciturn, indisposed to talk about feelings",
+      "triggers": [
+        "doesn't like to talk about feelings",
+        "keeps to himself",
+        "silent about what's bothering him"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Suspicious, distrustful of others' motives",
+      "triggers": [
+        "suspicious of everyone",
+        "doesn't trust anyone anymore",
+        "thinks people are plotting against her"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 3
+        },
+        {
+          "id": "hyos",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Obstinate, headstrong, especially in children",
+      "triggers": [
+        "extremely stubborn",
+        "won't listen no matter what",
+        "headstrong child",
+        "refuses to budge"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "tub",
+          "grade": 2
+        },
+        {
+          "id": "cham",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Indifferent to those they love, apathetic toward family",
+      "triggers": [
+        "doesn't seem to care about his family anymore",
+        "indifferent to loved ones",
+        "lost interest in people he loves"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 3
+        },
+        {
+          "id": "ph-ac",
+          "grade": 2
+        },
+        {
+          "id": "con",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Fastidious, extremely particular about neatness and order",
+      "triggers": [
+        "everything must be in its exact place",
+        "extremely particular about order",
+        "obsessed with neatness"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Worse from being contradicted, cannot bear opposition",
+      "triggers": [
+        "cannot stand being contradicted",
+        "gets furious if disagreed with",
+        "worse when contradicted"
+      ],
+      "remedies": [
+        {
+          "id": "staph",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Religious melancholy, preoccupied with sin or guilt",
+      "triggers": [
+        "obsessed with having sinned",
+        "religious guilt",
+        "convinced he has committed an unforgivable sin"
+      ],
+      "remedies": [
+        {
+          "id": "verat",
+          "grade": 2
+        },
+        {
+          "id": "aur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Dwells on past unpleasant events, cannot let go",
+      "triggers": [
+        "keeps bringing up old hurts",
+        "cannot stop thinking about what happened years ago",
+        "dwells on the past"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Cowardly, lacks courage to face challenges",
+      "triggers": [
+        "lacks the courage to",
+        "too scared to try",
+        "cowardly about facing"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "gels",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Sensitive to reprimand or criticism, broods over it for a long time",
+      "triggers": [
+        "takes criticism very hard",
+        "broods for days after being criticized",
+        "cannot handle being told off"
+      ],
+      "remedies": [
+        {
+          "id": "staph",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Desires to be magnetized or gently touched, soothed by it",
+      "triggers": [
+        "feels better being held gently",
+        "calms down with gentle touch",
+        "wants to be stroked"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Craves ice or ice-cold drinks and food",
+      "triggers": [
+        "craves ice",
+        "wants to chew ice",
+        "craves ice cold water",
+        "loves ice"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "verat",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Aversion to fat, rich, or greasy food",
+      "triggers": [
+        "cannot stand fatty food",
+        "aversion to greasy food",
+        "fat food makes her sick"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 3
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Craves eggs",
+      "triggers": [
+        "craves eggs",
+        "loves eating eggs",
+        "eats eggs constantly"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Milk disagrees, worse after drinking milk",
+      "triggers": [
+        "milk disagrees with him",
+        "worse after drinking milk",
+        "milk upsets his stomach"
+      ],
+      "remedies": [
+        {
+          "id": "mag-c",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Sensation as if a nail were driven into the part, localized pain",
+      "triggers": [
+        "like a nail driven into",
+        "feels like a nail is stuck in",
+        "nail-like pain"
+      ],
+      "remedies": [
+        {
+          "id": "coff",
+          "grade": 2
+        },
+        {
+          "id": "thuj",
+          "grade": 2
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Sensation of a hair on the tongue or in the throat",
+      "triggers": [
+        "feels like a hair on my tongue",
+        "sensation of a hair in the throat",
+        "like a hair stuck"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Craving for spicy or highly seasoned food",
+      "triggers": [
+        "craves spicy food",
+        "loves very spicy food",
+        "wants hot spicy dishes"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Better lying on the painful side",
+      "triggers": [
+        "better lying on the painful side",
+        "feels better on the affected side"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "rubric": "Worse lying on the painful side, better on the unaffected side",
+      "triggers": [
+        "worse lying on the affected side",
+        "cannot lie on the painful side"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Sudden loss of voice or inability to speak from emotion",
+      "triggers": [
+        "suddenly lost her voice",
+        "voice disappeared after the shock",
+        "aphonia from fright"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "caust",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from exposure to drafts of air",
+      "triggers": [
+        "ever since sitting in a draft",
+        "from a draft of air",
+        "exposure to a draft",
+        "sitting near an open window in a draft"
+      ],
+      "remedies": [
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "caust",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from loss of vital fluids — blood loss, prolonged breastfeeding, or excessive discharge",
+      "triggers": [
+        "since losing so much blood",
+        "ever since prolonged breastfeeding",
+        "weak since the heavy bleeding",
+        "never recovered after nursing for so long"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 3
+        },
+        {
+          "id": "ph-ac",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from suppressed menses",
+      "triggers": [
+        "since her periods stopped suddenly",
+        "ever since her menses were suppressed",
+        "complaints began when her periods stopped abruptly"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "cycl",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from a fall or injury accompanied by fright",
+      "triggers": [
+        "fell and was terrified",
+        "since the frightening fall",
+        "injury with fright",
+        "fell and got such a scare"
+      ],
+      "remedies": [
+        {
+          "id": "arn",
+          "grade": 2
+        },
+        {
+          "id": "op",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from prolonged anticipatory anxiety, worn down by long waiting",
+      "triggers": [
+        "worn down by weeks of waiting",
+        "exhausted from anticipating the result",
+        "anxious for so long waiting to hear back"
+      ],
+      "remedies": [
+        {
+          "id": "arg-n",
+          "grade": 2
+        },
+        {
+          "id": "gels",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments after surgery, slow to recover from anesthesia or an operation",
+      "triggers": [
+        "never felt right since the surgery",
+        "slow to recover from anesthesia",
+        "since the operation she hasn't been the same"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "arn",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments from taking cold after a haircut",
+      "triggers": [
+        "ever since getting a haircut",
+        "after having his hair cut short",
+        "since the haircut he caught a cold"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Delusion of being watched, persecuted, or spied upon",
+      "triggers": [
+        "feels like she is being watched",
+        "thinks people are spying on him",
+        "convinced someone is following her",
+        "believes he is being persecuted"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 2
+        },
+        {
+          "id": "hyos",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Fears becoming poor despite being financially secure",
+      "triggers": [
+        "worries about becoming poor even though they have money",
+        "obsessed with the fear of poverty",
+        "convinced they will end up broke"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Excessive sympathy for others, cannot bear to see or hear of suffering",
+      "triggers": [
+        "cannot bear to see anyone suffer",
+        "gets deeply upset hearing sad news about strangers",
+        "overwhelmed by others' pain"
+      ],
+      "remedies": [
+        {
+          "id": "caust",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Absent-minded, forgets what she was about to say or do mid-sentence",
+      "triggers": [
+        "loses her train of thought mid-sentence",
+        "forgets what she was about to say",
+        "absent-minded, walks into a room and forgets why"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Fear of going insane or losing their mind",
+      "triggers": [
+        "afraid he is losing his mind",
+        "fear of going insane",
+        "terrified she is going crazy"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 2
+        },
+        {
+          "id": "verat",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "rubric": "Hurried in speech and actions, always in a rush",
+      "triggers": [
+        "always in a rush",
+        "hurried speech",
+        "does everything in a hurry",
+        "talks and moves quickly, always rushing"
+      ],
+      "remedies": [
+        {
+          "id": "arg-n",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Sensation as if the chest were bound tightly by an iron band or hoop",
+      "triggers": [
+        "like an iron band around my chest",
+        "chest feels bound tightly",
+        "hoop tightly encircling the chest",
+        "band squeezing the chest"
+      ],
+      "remedies": [
+        {
+          "id": "cact",
+          "grade": 3
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Styes recurring, especially on the same eyelid",
+      "triggers": [
+        "keeps getting styes on the same eyelid",
+        "recurring stye",
+        "stye keeps coming back"
+      ],
+      "remedies": [
+        {
+          "id": "staph",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Roaring or ringing in the ears with deafness",
+      "triggers": [
+        "roaring in the ears",
+        "ringing in the ears with deafness",
+        "ears ring and hearing is dulled"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Frequent, easy nosebleeds",
+      "triggers": [
+        "nosebleeds very easily",
+        "frequent nosebleeds",
+        "nose bleeds at the slightest thing"
+      ],
+      "remedies": [
+        {
+          "id": "ferr",
+          "grade": 2
+        },
+        {
+          "id": "ham",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Vomiting of food immediately after eating or drinking",
+      "triggers": [
+        "vomits right after eating",
+        "throws up immediately after drinking",
+        "food comes right back up after eating"
+      ],
+      "remedies": [
+        {
+          "id": "ferr",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Sensation as if a stone or heavy weight lay in the stomach after eating",
+      "triggers": [
+        "feels like a stone in my stomach",
+        "heavy weight in the stomach after eating",
+        "stomach feels like a rock after eating"
+      ],
+      "remedies": [
+        {
+          "id": "kali-bi",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "rubric": "Diarrhea that drives the patient out of bed early in the morning",
+      "triggers": [
+        "diarrhea that drives him out of bed in the morning",
+        "has to rush out of bed early morning with diarrhea",
+        "wakes him up early with the urge to go"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Frequent urging to urinate with scanty, painful output",
+      "triggers": [
+        "constant urge to urinate but barely anything comes out",
+        "frequent urging with scanty painful urine",
+        "burning with frequent scanty urination"
+      ],
+      "remedies": [
+        {
+          "id": "canth",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Urine strong-smelling, ammonia-like odor",
+      "triggers": [
+        "urine smells strongly of ammonia",
+        "urine has a very strong offensive smell",
+        "ammonia smell to the urine"
+      ],
+      "remedies": [
+        {
+          "id": "benz-ac",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Menses too late and scanty",
+      "triggers": [
+        "periods are late and light",
+        "menses delayed and scanty",
+        "periods come late with very little flow"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Menses with dark, clotted blood",
+      "triggers": [
+        "periods with dark clots",
+        "menses dark and clotted",
+        "blood is dark with clots during periods"
+      ],
+      "remedies": [
+        {
+          "id": "sabin",
+          "grade": 2
+        },
+        {
+          "id": "chin",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "rubric": "Weakness of the ankles, they give way easily when walking",
+      "triggers": [
+        "ankles give way when walking",
+        "weak ankles that buckle",
+        "ankles feel like they'll give out"
+      ],
+      "remedies": [
+        {
+          "id": "nat-c",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "rubric": "Pain in the heels, worse on first stepping down in the morning",
+      "triggers": [
+        "heel pain worse first thing in the morning",
+        "pain in the heel on first stepping",
+        "heels hurt most with the first steps"
+      ],
+      "remedies": [
+        {
+          "id": "led",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Large, jagged warts that bleed easily",
+      "triggers": [
+        "big jagged wart that bleeds",
+        "large warts that bleed easily",
+        "wart with an irregular jagged surface"
+      ],
+      "remedies": [
+        {
+          "id": "thuj",
+          "grade": 3
+        },
+        {
+          "id": "caust",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Cracked skin at the corners of the mouth",
+      "triggers": [
+        "cracks at the corners of the mouth",
+        "corners of the mouth are cracked and sore",
+        "fissures at the corners of the lips"
+      ],
+      "remedies": [
+        {
+          "id": "graph",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Sleep",
+      "rubric": "Sleeplessness from an overactive mind, cannot stop thinking at night",
+      "triggers": [
+        "mind won't stop racing at night",
+        "cannot fall asleep because thoughts keep going",
+        "overactive mind keeps her awake"
+      ],
+      "remedies": [
+        {
+          "id": "coff",
+          "grade": 3
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "rubric": "Fever recurring at the same hour each day",
+      "triggers": [
+        "fever comes back at the same time every day",
+        "fever returns at exactly the same hour",
+        "fever is periodic, same time daily"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Common",
+      "rubric": "Craves fresh air constantly, must have windows open even in cold weather",
+      "triggers": [
+        "always wants the window open",
+        "craves fresh air even in winter",
+        "must have fresh air, opens windows even when cold"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "apis",
+          "grade": 1
+        }
+      ]
     }
   ],
   "chiefSymptomTags": [
@@ -5689,6 +7336,504 @@
       "label": "Stool recedes after partial expulsion (bashful/shy…",
       "section": "Stool",
       "rubric": "Stool recedes after partial expulsion (bashful/shy stool)"
+    },
+    {
+      "id": "sym_ailments_from_grief_sorrow_or_bereavement",
+      "label": "Ailments from grief, sorrow, or bereavement",
+      "section": "Causation",
+      "rubric": "Ailments from grief, sorrow, or bereavement"
+    },
+    {
+      "id": "sym_ailments_from_fright_or_sudden_shock",
+      "label": "Ailments from fright or sudden shock",
+      "section": "Causation",
+      "rubric": "Ailments from fright or sudden shock"
+    },
+    {
+      "id": "sym_ailments_from_anger_indignation_or_being_contradic",
+      "label": "Ailments from anger, indignation, or being…",
+      "section": "Causation",
+      "rubric": "Ailments from anger, indignation, or being contradicted"
+    },
+    {
+      "id": "sym_ailments_from_disappointed_love_or_a_broken_relati",
+      "label": "Ailments from disappointed love or a broken…",
+      "section": "Causation",
+      "rubric": "Ailments from disappointed love or a broken relationship"
+    },
+    {
+      "id": "sym_ailments_from_humiliation_mortification_or_being_s",
+      "label": "Ailments from humiliation, mortification, or being…",
+      "section": "Causation",
+      "rubric": "Ailments from humiliation, mortification, or being scolded"
+    },
+    {
+      "id": "sym_ailments_from_jealousy",
+      "label": "Ailments from jealousy",
+      "section": "Causation",
+      "rubric": "Ailments from jealousy"
+    },
+    {
+      "id": "sym_ailments_from_overexertion_or_physical_strain",
+      "label": "Ailments from overexertion or physical strain",
+      "section": "Causation",
+      "rubric": "Ailments from overexertion or physical strain"
+    },
+    {
+      "id": "sym_ailments_from_prolonged_mental_exertion_or_overwor",
+      "label": "Ailments from prolonged mental exertion or overwork",
+      "section": "Causation",
+      "rubric": "Ailments from prolonged mental exertion or overwork"
+    },
+    {
+      "id": "sym_ailments_from_exposure_to_cold_dry_wind",
+      "label": "Ailments from exposure to cold dry wind",
+      "section": "Causation",
+      "rubric": "Ailments from exposure to cold dry wind"
+    },
+    {
+      "id": "sym_ailments_from_getting_chilled_after_being_overheat",
+      "label": "Ailments from getting chilled after being…",
+      "section": "Causation",
+      "rubric": "Ailments from getting chilled after being overheated, or exposure to cold damp"
+    },
+    {
+      "id": "sym_ailments_from_suppressed_skin_eruption",
+      "label": "Ailments from suppressed skin eruption",
+      "section": "Causation",
+      "rubric": "Ailments from suppressed skin eruption"
+    },
+    {
+      "id": "sym_ailments_from_vaccination",
+      "label": "Ailments from vaccination",
+      "section": "Causation",
+      "rubric": "Ailments from vaccination"
+    },
+    {
+      "id": "sym_ailments_from_sunstroke_or_overheating",
+      "label": "Ailments from sunstroke or overheating",
+      "section": "Causation",
+      "rubric": "Ailments from sunstroke or overheating"
+    },
+    {
+      "id": "sym_ailments_from_being_reprimanded_or_punished_especi",
+      "label": "Ailments from being reprimanded or punished…",
+      "section": "Causation",
+      "rubric": "Ailments from being reprimanded or punished, especially in children"
+    },
+    {
+      "id": "sym_ailments_from_homesickness",
+      "label": "Ailments from homesickness",
+      "section": "Causation",
+      "rubric": "Ailments from homesickness"
+    },
+    {
+      "id": "sym_ailments_from_financial_loss_or_business_failure",
+      "label": "Ailments from financial loss or business failure",
+      "section": "Causation",
+      "rubric": "Ailments from financial loss or business failure"
+    },
+    {
+      "id": "sym_ailments_from_anticipation_or_fear_of_a_specific_u",
+      "label": "Ailments from anticipation or fear of a specific…",
+      "section": "Causation",
+      "rubric": "Ailments from anticipation or fear of a specific upcoming event"
+    },
+    {
+      "id": "sym_ailments_dating_from_a_fall_or_physical_injury_eve",
+      "label": "Ailments dating from a fall or physical injury…",
+      "section": "Causation",
+      "rubric": "Ailments dating from a fall or physical injury, even an old one"
+    },
+    {
+      "id": "sym_ailments_from_prolonged_unresolved_grief_unable_to",
+      "label": "Ailments from prolonged, unresolved grief, unable…",
+      "section": "Causation",
+      "rubric": "Ailments from prolonged, unresolved grief, unable to move on"
+    },
+    {
+      "id": "sym_ailments_from_caring_for_others_worn_out_from_resp",
+      "label": "Ailments from caring for others, worn out from…",
+      "section": "Causation",
+      "rubric": "Ailments from caring for others, worn out from responsibility"
+    },
+    {
+      "id": "sym_fear_of_death_convinced_they_are_about_to_die",
+      "label": "Fear of death, convinced they are about to die",
+      "section": "Mind",
+      "rubric": "Fear of death, convinced they are about to die"
+    },
+    {
+      "id": "sym_fear_of_the_dark",
+      "label": "Fear of the dark",
+      "section": "Mind",
+      "rubric": "Fear of the dark"
+    },
+    {
+      "id": "sym_fear_of_being_alone_dreads_solitude",
+      "label": "Fear of being alone, dreads solitude",
+      "section": "Mind",
+      "rubric": "Fear of being alone, dreads solitude"
+    },
+    {
+      "id": "sym_fear_of_crowds_or_public_places",
+      "label": "Fear of crowds or public places",
+      "section": "Mind",
+      "rubric": "Fear of crowds or public places"
+    },
+    {
+      "id": "sym_fear_of_dogs_or_animals",
+      "label": "Fear of dogs or animals",
+      "section": "Mind",
+      "rubric": "Fear of dogs or animals"
+    },
+    {
+      "id": "sym_excessive_worry_about_health_imagines_the_worst_di",
+      "label": "Excessive worry about health, imagines the worst…",
+      "section": "Mind",
+      "rubric": "Excessive worry about health, imagines the worst diseases"
+    },
+    {
+      "id": "sym_aversion_to_company_desires_to_be_alone",
+      "label": "Aversion to company, desires to be alone",
+      "section": "Mind",
+      "rubric": "Aversion to company, desires to be alone"
+    },
+    {
+      "id": "sym_desires_company_worse_when_alone_better_with_someo",
+      "label": "Desires company, worse when alone, better with…",
+      "section": "Mind",
+      "rubric": "Desires company, worse when alone, better with someone present"
+    },
+    {
+      "id": "sym_weeps_easily_while_describing_symptoms_to_the_doct",
+      "label": "Weeps easily while describing symptoms to the doctor",
+      "section": "Mind",
+      "rubric": "Weeps easily while describing symptoms to the doctor"
+    },
+    {
+      "id": "sym_cannot_cry_even_when_deeply_sad_tears_will_not_com",
+      "label": "Cannot cry even when deeply sad, tears will not come",
+      "section": "Mind",
+      "rubric": "Cannot cry even when deeply sad, tears will not come"
+    },
+    {
+      "id": "sym_talkative_loquacious_jumps_rapidly_from_topic_to_t",
+      "label": "Talkative, loquacious, jumps rapidly from topic to…",
+      "section": "Mind",
+      "rubric": "Talkative, loquacious, jumps rapidly from topic to topic"
+    },
+    {
+      "id": "sym_silent_taciturn_indisposed_to_talk_about_feelings",
+      "label": "Silent, taciturn, indisposed to talk about feelings",
+      "section": "Mind",
+      "rubric": "Silent, taciturn, indisposed to talk about feelings"
+    },
+    {
+      "id": "sym_suspicious_distrustful_of_others_motives",
+      "label": "Suspicious, distrustful of others' motives",
+      "section": "Mind",
+      "rubric": "Suspicious, distrustful of others' motives"
+    },
+    {
+      "id": "sym_obstinate_headstrong_especially_in_children",
+      "label": "Obstinate, headstrong, especially in children",
+      "section": "Mind",
+      "rubric": "Obstinate, headstrong, especially in children"
+    },
+    {
+      "id": "sym_indifferent_to_those_they_love_apathetic_toward_fa",
+      "label": "Indifferent to those they love, apathetic toward…",
+      "section": "Mind",
+      "rubric": "Indifferent to those they love, apathetic toward family"
+    },
+    {
+      "id": "sym_fastidious_extremely_particular_about_neatness_and",
+      "label": "Fastidious, extremely particular about neatness and…",
+      "section": "Mind",
+      "rubric": "Fastidious, extremely particular about neatness and order"
+    },
+    {
+      "id": "sym_worse_from_being_contradicted_cannot_bear_oppositi",
+      "label": "Worse from being contradicted, cannot bear…",
+      "section": "Mind",
+      "rubric": "Worse from being contradicted, cannot bear opposition"
+    },
+    {
+      "id": "sym_religious_melancholy_preoccupied_with_sin_or_guilt",
+      "label": "Religious melancholy, preoccupied with sin or guilt",
+      "section": "Mind",
+      "rubric": "Religious melancholy, preoccupied with sin or guilt"
+    },
+    {
+      "id": "sym_dwells_on_past_unpleasant_events_cannot_let_go",
+      "label": "Dwells on past unpleasant events, cannot let go",
+      "section": "Mind",
+      "rubric": "Dwells on past unpleasant events, cannot let go"
+    },
+    {
+      "id": "sym_cowardly_lacks_courage_to_face_challenges",
+      "label": "Cowardly, lacks courage to face challenges",
+      "section": "Mind",
+      "rubric": "Cowardly, lacks courage to face challenges"
+    },
+    {
+      "id": "sym_sensitive_to_reprimand_or_criticism_broods_over_it",
+      "label": "Sensitive to reprimand or criticism, broods over it…",
+      "section": "Mind",
+      "rubric": "Sensitive to reprimand or criticism, broods over it for a long time"
+    },
+    {
+      "id": "sym_desires_to_be_magnetized_or_gently_touched_soothed",
+      "label": "Desires to be magnetized or gently touched, soothed…",
+      "section": "Mind",
+      "rubric": "Desires to be magnetized or gently touched, soothed by it"
+    },
+    {
+      "id": "sym_craves_ice_or_ice_cold_drinks_and_food",
+      "label": "Craves ice or ice-cold drinks and food",
+      "section": "Common",
+      "rubric": "Craves ice or ice-cold drinks and food"
+    },
+    {
+      "id": "sym_aversion_to_fat_rich_or_greasy_food",
+      "label": "Aversion to fat, rich, or greasy food",
+      "section": "Common",
+      "rubric": "Aversion to fat, rich, or greasy food"
+    },
+    {
+      "id": "sym_craves_eggs",
+      "label": "Craves eggs",
+      "section": "Common",
+      "rubric": "Craves eggs"
+    },
+    {
+      "id": "sym_milk_disagrees_worse_after_drinking_milk",
+      "label": "Milk disagrees, worse after drinking milk",
+      "section": "Common",
+      "rubric": "Milk disagrees, worse after drinking milk"
+    },
+    {
+      "id": "sym_sensation_as_if_a_nail_were_driven_into_the_part_l",
+      "label": "Sensation as if a nail were driven into the part…",
+      "section": "Common",
+      "rubric": "Sensation as if a nail were driven into the part, localized pain"
+    },
+    {
+      "id": "sym_sensation_of_a_hair_on_the_tongue_or_in_the_throat",
+      "label": "Sensation of a hair on the tongue or in the throat",
+      "section": "Common",
+      "rubric": "Sensation of a hair on the tongue or in the throat"
+    },
+    {
+      "id": "sym_craving_for_spicy_or_highly_seasoned_food",
+      "label": "Craving for spicy or highly seasoned food",
+      "section": "Common",
+      "rubric": "Craving for spicy or highly seasoned food"
+    },
+    {
+      "id": "sym_better_lying_on_the_painful_side",
+      "label": "Better lying on the painful side",
+      "section": "Modalities",
+      "rubric": "Better lying on the painful side"
+    },
+    {
+      "id": "sym_worse_lying_on_the_painful_side_better_on_the_unaf",
+      "label": "Worse lying on the painful side, better on the…",
+      "section": "Modalities",
+      "rubric": "Worse lying on the painful side, better on the unaffected side"
+    },
+    {
+      "id": "sym_sudden_loss_of_voice_or_inability_to_speak_from_em",
+      "label": "Sudden loss of voice or inability to speak from…",
+      "section": "Common",
+      "rubric": "Sudden loss of voice or inability to speak from emotion"
+    },
+    {
+      "id": "sym_ailments_from_exposure_to_drafts_of_air",
+      "label": "Ailments from exposure to drafts of air",
+      "section": "Causation",
+      "rubric": "Ailments from exposure to drafts of air"
+    },
+    {
+      "id": "sym_ailments_from_loss_of_vital_fluids_blood_loss_prol",
+      "label": "Ailments from loss of vital fluids — blood loss…",
+      "section": "Causation",
+      "rubric": "Ailments from loss of vital fluids — blood loss, prolonged breastfeeding, or excessive discharge"
+    },
+    {
+      "id": "sym_ailments_from_suppressed_menses",
+      "label": "Ailments from suppressed menses",
+      "section": "Causation",
+      "rubric": "Ailments from suppressed menses"
+    },
+    {
+      "id": "sym_ailments_from_a_fall_or_injury_accompanied_by_frig",
+      "label": "Ailments from a fall or injury accompanied by fright",
+      "section": "Causation",
+      "rubric": "Ailments from a fall or injury accompanied by fright"
+    },
+    {
+      "id": "sym_ailments_from_prolonged_anticipatory_anxiety_worn_",
+      "label": "Ailments from prolonged anticipatory anxiety, worn…",
+      "section": "Causation",
+      "rubric": "Ailments from prolonged anticipatory anxiety, worn down by long waiting"
+    },
+    {
+      "id": "sym_ailments_after_surgery_slow_to_recover_from_anesth",
+      "label": "Ailments after surgery, slow to recover from…",
+      "section": "Causation",
+      "rubric": "Ailments after surgery, slow to recover from anesthesia or an operation"
+    },
+    {
+      "id": "sym_ailments_from_taking_cold_after_a_haircut",
+      "label": "Ailments from taking cold after a haircut",
+      "section": "Causation",
+      "rubric": "Ailments from taking cold after a haircut"
+    },
+    {
+      "id": "sym_delusion_of_being_watched_persecuted_or_spied_upon",
+      "label": "Delusion of being watched, persecuted, or spied upon",
+      "section": "Mind",
+      "rubric": "Delusion of being watched, persecuted, or spied upon"
+    },
+    {
+      "id": "sym_fears_becoming_poor_despite_being_financially_secu",
+      "label": "Fears becoming poor despite being financially secure",
+      "section": "Mind",
+      "rubric": "Fears becoming poor despite being financially secure"
+    },
+    {
+      "id": "sym_excessive_sympathy_for_others_cannot_bear_to_see_o",
+      "label": "Excessive sympathy for others, cannot bear to see…",
+      "section": "Mind",
+      "rubric": "Excessive sympathy for others, cannot bear to see or hear of suffering"
+    },
+    {
+      "id": "sym_absent_minded_forgets_what_she_was_about_to_say_or",
+      "label": "Absent-minded, forgets what she was about to say or…",
+      "section": "Mind",
+      "rubric": "Absent-minded, forgets what she was about to say or do mid-sentence"
+    },
+    {
+      "id": "sym_fear_of_going_insane_or_losing_their_mind",
+      "label": "Fear of going insane or losing their mind",
+      "section": "Mind",
+      "rubric": "Fear of going insane or losing their mind"
+    },
+    {
+      "id": "sym_hurried_in_speech_and_actions_always_in_a_rush",
+      "label": "Hurried in speech and actions, always in a rush",
+      "section": "Mind",
+      "rubric": "Hurried in speech and actions, always in a rush"
+    },
+    {
+      "id": "sym_sensation_as_if_the_chest_were_bound_tightly_by_an",
+      "label": "Sensation as if the chest were bound tightly by an…",
+      "section": "Common",
+      "rubric": "Sensation as if the chest were bound tightly by an iron band or hoop"
+    },
+    {
+      "id": "sym_styes_recurring_especially_on_the_same_eyelid",
+      "label": "Styes recurring, especially on the same eyelid",
+      "section": "Common",
+      "rubric": "Styes recurring, especially on the same eyelid"
+    },
+    {
+      "id": "sym_roaring_or_ringing_in_the_ears_with_deafness",
+      "label": "Roaring or ringing in the ears with deafness",
+      "section": "Common",
+      "rubric": "Roaring or ringing in the ears with deafness"
+    },
+    {
+      "id": "sym_frequent_easy_nosebleeds",
+      "label": "Frequent, easy nosebleeds",
+      "section": "Common",
+      "rubric": "Frequent, easy nosebleeds"
+    },
+    {
+      "id": "sym_vomiting_of_food_immediately_after_eating_or_drink",
+      "label": "Vomiting of food immediately after eating or…",
+      "section": "Common",
+      "rubric": "Vomiting of food immediately after eating or drinking"
+    },
+    {
+      "id": "sym_sensation_as_if_a_stone_or_heavy_weight_lay_in_the",
+      "label": "Sensation as if a stone or heavy weight lay in the…",
+      "section": "Common",
+      "rubric": "Sensation as if a stone or heavy weight lay in the stomach after eating"
+    },
+    {
+      "id": "sym_diarrhea_that_drives_the_patient_out_of_bed_early_",
+      "label": "Diarrhea that drives the patient out of bed early…",
+      "section": "Stool",
+      "rubric": "Diarrhea that drives the patient out of bed early in the morning"
+    },
+    {
+      "id": "sym_frequent_urging_to_urinate_with_scanty_painful_out",
+      "label": "Frequent urging to urinate with scanty, painful…",
+      "section": "Common",
+      "rubric": "Frequent urging to urinate with scanty, painful output"
+    },
+    {
+      "id": "sym_urine_strong_smelling_ammonia_like_odor",
+      "label": "Urine strong-smelling, ammonia-like odor",
+      "section": "Common",
+      "rubric": "Urine strong-smelling, ammonia-like odor"
+    },
+    {
+      "id": "sym_menses_too_late_and_scanty",
+      "label": "Menses too late and scanty",
+      "section": "Common",
+      "rubric": "Menses too late and scanty"
+    },
+    {
+      "id": "sym_menses_with_dark_clotted_blood",
+      "label": "Menses with dark, clotted blood",
+      "section": "Common",
+      "rubric": "Menses with dark, clotted blood"
+    },
+    {
+      "id": "sym_weakness_of_the_ankles_they_give_way_easily_when_w",
+      "label": "Weakness of the ankles, they give way easily when…",
+      "section": "Extremities",
+      "rubric": "Weakness of the ankles, they give way easily when walking"
+    },
+    {
+      "id": "sym_pain_in_the_heels_worse_on_first_stepping_down_in_",
+      "label": "Pain in the heels, worse on first stepping down in…",
+      "section": "Extremities",
+      "rubric": "Pain in the heels, worse on first stepping down in the morning"
+    },
+    {
+      "id": "sym_large_jagged_warts_that_bleed_easily",
+      "label": "Large, jagged warts that bleed easily",
+      "section": "Common",
+      "rubric": "Large, jagged warts that bleed easily"
+    },
+    {
+      "id": "sym_cracked_skin_at_the_corners_of_the_mouth",
+      "label": "Cracked skin at the corners of the mouth",
+      "section": "Common",
+      "rubric": "Cracked skin at the corners of the mouth"
+    },
+    {
+      "id": "sym_sleeplessness_from_an_overactive_mind_cannot_stop_",
+      "label": "Sleeplessness from an overactive mind, cannot stop…",
+      "section": "Sleep",
+      "rubric": "Sleeplessness from an overactive mind, cannot stop thinking at night"
+    },
+    {
+      "id": "sym_fever_recurring_at_the_same_hour_each_day",
+      "label": "Fever recurring at the same hour each day",
+      "section": "Fever",
+      "rubric": "Fever recurring at the same hour each day"
+    },
+    {
+      "id": "sym_craves_fresh_air_constantly_must_have_windows_open",
+      "label": "Craves fresh air constantly, must have windows open…",
+      "section": "Common",
+      "rubric": "Craves fresh air constantly, must have windows open even in cold weather"
     }
   ]
 }
