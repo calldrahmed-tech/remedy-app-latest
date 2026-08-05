@@ -218,11 +218,32 @@ function protocolFieldRow(label, value) {
   return `<div class="rc-field"><span class="rc-field-label">${esc(label)}:</span> ${esc(value)}</div>`;
 }
 
+// STOP words filtered out of a disease name before checking overlap — generic qualifiers
+// like "General" or "Adjunct" would otherwise "match" almost any case and defeat the point.
+const DISEASE_NAME_STOPWORDS = new Set(["general", "unspecified", "adjunct", "acute", "chronic", "with", "from", "type", "disorder", "syndrome"]);
+function diseaseRelatesToSelection(diseaseName) {
+  // A disease name like "Alopecia (hair loss)" carries its real informative words inside
+  // the parenthetical — strip the parens (not the words in them) before splitting, so both
+  // "Alopecia" and "hair"/"loss" get checked against what the doctor actually selected.
+  const selText = selectedSymptoms.map(s => s.tag.label + " " + s.tag.rubric).join(" ").toLowerCase();
+  const words = diseaseName.toLowerCase().replace(/[()]/g, " ").split(/[\s,/-]+/).filter(w => w.length > 3 && !DISEASE_NAME_STOPWORDS.has(w));
+  return words.some(w => selText.includes(w));
+}
+
 function relatedProtocolNote(card) {
   if (!card.relatedDiseaseProtocols || !card.relatedDiseaseProtocols.length) return "";
-  return card.relatedDiseaseProtocols.map(rp => `
+  return card.relatedDiseaseProtocols.map(rp => {
+    // If the disease name actually shares real wording with what's currently selected (e.g.
+    // the case IS "hair loss" and the disease is "Alopecia (hair loss)"), saying "not related
+    // to this case" would be flatly wrong, not just unhelpful — so the summary text branches
+    // on real overlap instead of always assuming the two are unconnected.
+    const related = diseaseRelatesToSelection(rp.name);
+    const summary = related
+      ? `📋 ${esc(card.remedy.name)} also has a curated protocol on file for <b>${esc(rp.name)}</b> — may be worth reviewing`
+      : `📋 FYI — ${esc(card.remedy.name)} is also separately used for <b>${esc(rp.name)}</b> (not related to this case, shown for reference only)`;
+    return `
     <details class="rc-related">
-      <summary>📋 FYI — ${esc(card.remedy.name)} is also separately used for <b>${esc(rp.name)}</b> (not related to this case, shown for reference only)</summary>
+      <summary>${summary}</summary>
       <div class="rc-related-body">
         ${rp.protocols.map(proto => `
           ${proto.doses.map(doseLine).join("")}
@@ -230,7 +251,8 @@ function relatedProtocolNote(card) {
         `).join("<hr class=\"rc-related-divider\">")}
       </div>
     </details>
-  `).join("");
+  `;
+  }).join("");
 }
 
 function renderProtocolCard(card, colorClass, headerLabel) {
@@ -319,7 +341,13 @@ function runProtocolSearch() {
   cards.forEach(card => {
     if (card.tier === "primary") html += renderProtocolCard(card, "green", "Protocol 1 · Primary");
     else if (card.tier === "alternative") html += renderProtocolCard(card, "blue", "Protocol 2 · Alternative");
-    else if (card.tier === "combination") html += renderCombinationCard(card);
+    // Only surface the full Banerji-style combination card — a complete separate dosing
+    // protocol, shown with equal visual weight to the actual matches — when the disease it
+    // was authored for genuinely overlaps with what the doctor selected. An unrelated
+    // disease's full protocol (e.g. "Depression" surfacing on a hair-loss case just because
+    // the same remedy happens to treat both) is real noise, not a helpful cross-reference —
+    // that lighter-weight case belongs in the collapsed per-remedy FYI note, not a top-level card.
+    else if (card.tier === "combination" && diseaseRelatesToSelection(card.diseaseContext)) html += renderCombinationCard(card);
   });
 
   html += renderNosodeSection(ranked);
