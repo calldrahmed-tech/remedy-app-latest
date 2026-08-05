@@ -37,8 +37,28 @@ document.querySelectorAll(".mode-tab").forEach(btn => {
 });
 
 /* ---------- data readiness ---------- */
+let TAG_SEARCH_TEXT = {}; // tag.id -> lowercase "label rubric trigger1 trigger2 ..." haystack
 document.addEventListener("smartRemedyDataReady", () => {
   protocolDataReady = true;
+  // Build each tag's search haystack from its own trigger phrases too, not just its
+  // (often differently-worded) label/rubric text — e.g. the rubric displays as
+  // "Wrinkled, old-looking face with emaciation" but a doctor searching "looking old"
+  // (reversed word order from "old-looking") would never match a plain substring check
+  // against that label. The underlying rubric's triggers array already has the phrase
+  // "looking old" verbatim; the tag search just wasn't looking at it.
+  // Also index the rubric's SECTION name (Fever, Skin, Mind, Stool, ...) — a doctor typing
+  // a broad category word like "fever" expects every fever-related rubric to surface, not
+  // just the ones that happen to spell out the literal word "fever" in their own text (e.g.
+  // "Chilly patient, generally cold, wants warmth" is filed under Fever but never says the
+  // word "fever" anywhere in its label, rubric, or triggers).
+  const rubricLookup = {};
+  (REPERTORY || []).forEach(r => { rubricLookup[r.section + "||" + r.rubric] = r; });
+  TAG_SEARCH_TEXT = {};
+  CHIEF_SYMPTOM_TAGS.forEach(t => {
+    const r = rubricLookup[t.section + "||" + t.rubric];
+    const triggerText = r && r.triggers ? r.triggers.join(" ") : "";
+    TAG_SEARCH_TEXT[t.id] = (t.label + " " + t.rubric + " " + t.section + " " + triggerText).toLowerCase();
+  });
   updateGetProtocolBtnState();
 });
 function updateGetProtocolBtnState() {
@@ -85,16 +105,24 @@ function renderSuggestions(query) {
   if (!protocolDataReady || !query.trim()) { protocolSuggestionsEl.style.display = "none"; return; }
   const q = query.trim().toLowerCase();
   const selectedIds = new Set(selectedSymptoms.map(s => s.tag.id));
-  // Match against the full rubric text, not just the (truncated-to-52-char) display
-  // label — a word like "stammering" can sit past the label's cutoff point (e.g. the
-  // rubric "Confused sense of time... performance anxiety with stammering" displays as
-  // "Confused sense of time, forgets what was just said…"), so label-only search silently
-  // missed real matches and made it look like the symptom wasn't in the repertory at all.
-  const matches = CHIEF_SYMPTOM_TAGS
-    .filter(t => !selectedIds.has(t.id) && (t.label.toLowerCase().includes(q) || t.rubric.toLowerCase().includes(q)))
-    .slice(0, 8);
+  // Match every word of the query (in any order) against each tag's full haystack —
+  // label + rubric + all of that rubric's own trigger phrases. Plain single-substring
+  // matching on just the label missed real matches two different ways: (1) a keyword like
+  // "stammering" can sit past the label's 52-char truncation point, and (2) word order in
+  // the query often does not match the label's word order (a doctor searching "looking old"
+  // won't match a label written as "old-looking face" even though they mean the same thing).
+  const qWords = q.split(/\s+/).filter(Boolean);
+  const allHits = CHIEF_SYMPTOM_TAGS.filter(t => {
+    const hay = TAG_SEARCH_TEXT[t.id] || t.label.toLowerCase();
+    return qWords.every(w => hay.includes(w));
+  });
+  const matches = allHits.filter(t => !selectedIds.has(t.id)).slice(0, 8);
   if (!matches.length) {
-    protocolSuggestionsEl.innerHTML = `<div class="protocol-suggestion-empty">No matching symptom — try a different word</div>`;
+    // Distinguish "you already added the only match" (not an error) from "this symptom
+    // is not in the repertory yet" (a real coverage gap) — showing the same generic
+    // message for both made an already-selected symptom look like a broken search.
+    const msg = allHits.length ? "Already added" : "No matching symptom — try a different word";
+    protocolSuggestionsEl.innerHTML = `<div class="protocol-suggestion-empty">${msg}</div>`;
     protocolSuggestionsEl.style.display = "block";
     return;
   }
@@ -151,7 +179,7 @@ function relatedProtocolNote(card) {
   if (!card.relatedDiseaseProtocols || !card.relatedDiseaseProtocols.length) return "";
   return card.relatedDiseaseProtocols.map(rp => `
     <details class="rc-related">
-      <summary>📋 Also has a curated protocol on file for: <b>${esc(rp.name)}</b></summary>
+      <summary>📋 FYI — ${esc(card.remedy.name)} is also separately used for <b>${esc(rp.name)}</b> (not related to this case, shown for reference only)</summary>
       <div class="rc-related-body">
         ${rp.protocols.map(proto => `
           ${proto.doses.map(doseLine).join("")}
