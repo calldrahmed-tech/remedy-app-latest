@@ -1280,24 +1280,6 @@ function fallbackAdvice(topRemedy) {
   return SYSTEM_FALLBACK[sys] || SYSTEM_FALLBACK.default;
 }
 
-/* When no biochemic keynote specifically matches the free text, still surface 1-2 sensible
-   general-support tissue salts by system affinity, so biochemic support is never empty —
-   per "include 1-2 biochemic remedies for every condition". These are clearly labelled as
-   general support rather than symptom-matched. */
-const BIOCHEMIC_SYSTEM_FALLBACK = {
-  gut: ["nat-phos", "kali-mur"],
-  respiratory: ["ferrum-phos", "kali-mur"],
-  nerves: ["kali-phos-bc", "mag-phos"],
-  skin: ["calc-sulph", "silicea-bc"],
-  joints: ["calc-fluor", "mag-phos"],
-  liver: ["nat-sulph-bc", "nat-phos"],
-  default: ["kali-phos-bc", "nat-mur-bc"]
-};
-function fallbackBiochemicFor(topRemedy) {
-  const sys = topRemedy ? (topRemedy.system || [])[0] : null;
-  const ids = BIOCHEMIC_SYSTEM_FALLBACK[sys] || BIOCHEMIC_SYSTEM_FALLBACK.default;
-  return ids.map(id => DB.biochemics.find(b => b.id === id)).filter(Boolean).slice(0, 2);
-}
 
 /* ---------- rendering ---------- */
 function esc(s) { const d = document.createElement("div"); d.textContent = s == null ? "" : s; return d.innerHTML; }
@@ -1568,20 +1550,29 @@ function runSearch() {
   }
 
   /* ---------- 4. SUPPORT — kept small, not highlighted ---------- */
+  // Biochemic support is shown only when there's a genuine signal: the curated, disease-
+  // specific salt(s) if a named condition was detected (highest confidence, carries a one-
+  // sentence classical justification), otherwise the real keyword-matched result from the
+  // case text itself (scoreBiochemics). The organ-system fallback guess (fallbackBiochemicFor)
+  // is no longer used to pad this out to a fixed count — an unmatched case simply omits the
+  // Biochemic line rather than showing an unjustified generic pick.
   let biochemicPair = [];
-  if (biochemicResults.length >= 2) {
-    biochemicPair = biochemicResults.slice(0, 2).map(b => Object.assign({}, b.biochemic, { matched: true }));
-  } else if (biochemicResults.length === 1) {
-    const fallback = fallbackBiochemicFor(main.remedy).filter(b => b.id !== biochemicResults[0].biochemic.id);
-    biochemicPair = [Object.assign({}, biochemicResults[0].biochemic, { matched: true }), Object.assign({}, (fallback[0] || fallbackBiochemicFor(null)[0]), { matched: false })];
-  } else {
-    biochemicPair = fallbackBiochemicFor(main.remedy).slice(0, 2).map(b => Object.assign({}, b, { matched: false }));
+  if (diseaseProtocol && diseaseProtocol.biochemicSalts && diseaseProtocol.biochemicSalts.length) {
+    biochemicPair = diseaseProtocol.biochemicSalts.map(s => {
+      const b = DB.biochemics.find(bc => bc.id === s.id);
+      return Object.assign({}, b, { justification: s.justification });
+    });
+  } else if (biochemicResults.length) {
+    biochemicPair = biochemicResults.slice(0, 2).map(b => Object.assign({}, b.biochemic, { justification: null }));
   }
   const advice = diseaseProtocol ? { tests: diseaseProtocol.tests, diet: diseaseProtocol.diet } : fallbackAdvice(main.remedy);
 
+  const biochemicLine = biochemicPair.length
+    ? `<div class="support-line"><b>Biochemic:</b> ${biochemicPair.map(b => esc(b.abbr) + (b.justification ? ` — ${esc(b.justification)}` : "")).join("; ")}</div>`
+    : "";
   html += `<div class="support-section-small">
     <div class="support-title">Supportive Care</div>
-    <div class="support-line"><b>Biochemic:</b> ${biochemicPair.map(b => esc(b.abbr)).join(", ")}</div>
+    ${biochemicLine}
     <div class="support-line"><b>Diet:</b> Avoid ${esc((advice.diet.avoid || [])[0] || "trigger foods")}</div>
     <div class="support-line"><b>Tests:</b> ${esc(advice.tests[0])}</div>
   </div>`;

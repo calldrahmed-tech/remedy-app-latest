@@ -375,6 +375,20 @@ function protocolFieldRow(label, value) {
   return `<div class="rc-field"><span class="rc-field-label">${esc(label)}:</span> ${esc(value)}</div>`;
 }
 
+// biochemicSupport is 0-2 curated {id, name, dose, justification} entries — never padded to a
+// fixed count, and rendered with its one-sentence justification so it reads as a deliberate
+// clinical choice rather than a generic filler line. An empty/missing array (no tissue salt
+// with a strong classical indication for this condition) renders nothing at all.
+function renderBiochemicBlock(biochemicSupport) {
+  if (!biochemicSupport || !biochemicSupport.length) return "";
+  return biochemicSupport.map(b => `
+    <div class="rc-biochemic">
+      <div class="rc-dose-line">+ Biochemic: <b>${esc(b.name)}</b> ${esc(b.dose)}</div>
+      <div class="rc-biochemic-why">${esc(b.justification)}</div>
+    </div>
+  `).join("");
+}
+
 // STOP words filtered out of a disease name before checking overlap — generic qualifiers
 // like "General" or "Adjunct" would otherwise "match" almost any case and defeat the point.
 const DISEASE_NAME_STOPWORDS = new Set(["general", "unspecified", "adjunct", "acute", "chronic", "with", "from", "type", "disorder", "syndrome"]);
@@ -420,7 +434,7 @@ function renderProtocolCard(card, colorClass, headerLabel) {
       </div>
       <div class="rc-body">
         ${p.doses.map(doseLine).join("")}
-        ${p.biochemicSupport ? `<div class="rc-dose-line">+ Biochemic support: ${esc(p.biochemicSupport.text)}</div>` : ""}
+        ${renderBiochemicBlock(p.biochemicSupport)}
         ${protocolFieldRow("Duration", p.duration)}
         ${protocolFieldRow("Review", p.review)}
         ${protocolFieldRow("Expected response", p.expectedResponse)}
@@ -441,7 +455,7 @@ function renderCombinationCard(card) {
       </div>
       <div class="rc-body">
         ${p.doses.map(doseLine).join("")}
-        ${p.biochemicSupport ? `<div class="rc-dose-line">+ Biochemic support: ${esc(p.biochemicSupport.text)}</div>` : ""}
+        ${renderBiochemicBlock(p.biochemicSupport)}
         ${p.note ? `<div class="rc-field">${esc(p.note)}</div>` : ""}
         <div class="rc-field rc-related-disclosure">Sourced from the curated protocol on file for ${esc(card.diseaseContext)} — confirm it fits before using, this combination was authored for that named condition, not derived from the symptoms entered above.</div>
       </div>
@@ -457,7 +471,7 @@ function renderDiseaseShortcutCard(disease, p, headerLabel) {
       </div>
       <div class="rc-body">
         ${p.doses.map(doseLine).join("")}
-        ${p.biochemicSupport ? `<div class="rc-dose-line">+ Biochemic support: ${esc(p.biochemicSupport.text)}</div>` : ""}
+        ${renderBiochemicBlock(p.biochemicSupport)}
         ${protocolFieldRow("Duration", p.duration)}
         ${protocolFieldRow("Review", p.review)}
         ${protocolFieldRow("Expected response", p.expectedResponse)}
@@ -497,7 +511,7 @@ function renderMmFallbackCard(card) {
       </div>
       <div class="rc-body">
         ${p.doses.map(doseLine).join("")}
-        ${p.biochemicSupport ? `<div class="rc-dose-line">+ Biochemic support: ${esc(p.biochemicSupport.text)}</div>` : ""}
+        ${renderBiochemicBlock(p.biochemicSupport)}
         ${protocolFieldRow("Duration", p.duration)}
         ${protocolFieldRow("Review", p.review)}
         <div class="rc-field rc-related-disclosure">Rubric matching was thin for the symptoms selected, so this reads them against remedy keynote text more broadly instead — treat it as a secondary lead worth considering, not a confirmed pick the way the rubric-based results above are.</div>
@@ -524,12 +538,19 @@ function renderNosodeSection(ranked) {
   </div>`;
 }
 
-function renderSupportiveCare(topRemedy) {
-  const biochemicPair = fallbackBiochemicFor(topRemedy).slice(0, 2);
+// biochemicSalts: the curated {id, name, dose, justification} array from the selected disease
+// (when one was picked), or null. There is no generic organ-system fallback guess anymore — a
+// pure granular-symptom result (no named condition selected) has no genuinely disease-specific
+// biochemic signal available in Protocol Mode's architecture, so per spec that line is omitted
+// entirely here rather than padded with an unjustified system-category pick.
+function renderSupportiveCare(topRemedy, biochemicSalts) {
   const advice = fallbackAdvice(topRemedy);
+  const biochemicLine = biochemicSalts && biochemicSalts.length
+    ? `<div class="support-line"><b>Biochemic:</b> ${biochemicSalts.map(b => esc(b.name) + " (" + esc(b.dose) + ")").join(", ")}</div>`
+    : "";
   return `<div class="support-section-small">
     <div class="support-title">Supportive Care</div>
-    <div class="support-line"><b>Biochemic:</b> ${biochemicPair.map(b => esc(b.abbr)).join(", ")}</div>
+    ${biochemicLine}
     <div class="support-line"><b>Diet:</b> Avoid ${esc((advice.diet.avoid || [])[0] || "trigger foods")}</div>
     <div class="support-line"><b>Tests:</b> ${esc((advice.tests || [])[0] || "Clinical evaluation")}</div>
   </div>`;
@@ -544,6 +565,8 @@ function runProtocolSearch() {
   let supportiveRemedy = null; // whichever path runs first supplies the remedy used for the
                                 // Supportive Care section below, so it always reflects something
                                 // actually shown on screen rather than an arbitrary default
+  let supportiveBiochemicSalts = null; // only ever populated from a selected disease's own
+                                        // curated biochemicSalts — never a generic guess
 
   // Disease shortcuts render their own authored protocols[] directly — no symptom scoring
   // involved, since the doctor explicitly named the condition rather than describing symptoms.
@@ -560,6 +583,12 @@ function runProtocolSearch() {
     if (!disease || !disease.protocols || !disease.protocols.length) return;
     if (!supportiveRemedy && disease.primaryRemedies && disease.primaryRemedies.length) {
       supportiveRemedy = DB.remedies.find(r => r.id === disease.primaryRemedies[0]) || null;
+      if (disease.biochemicSalts && disease.biochemicSalts.length) {
+        supportiveBiochemicSalts = disease.biochemicSalts.map(s => {
+          const b = DB.biochemics.find(bc => bc.id === s.id);
+          return { name: b ? b.abbr : s.id, dose: s.dose, justification: s.justification };
+        });
+      }
     }
     disease.protocols.forEach(p => {
       const label = p.tier === "primary" ? "Primary" : p.tier === "secondary" ? "Secondary" : (p.label || "Curated");
@@ -607,7 +636,7 @@ function runProtocolSearch() {
     return;
   }
 
-  if (supportiveRemedy) html += renderSupportiveCare(supportiveRemedy);
+  if (supportiveRemedy) html += renderSupportiveCare(supportiveRemedy, supportiveBiochemicSalts);
   html += `<div class="caution">⚠ Expert Protocol gives a fast, symptom-merit-based suggestion from chief complaints only — it is not a substitute for full case-taking. Switch to Full Repertory mode for a complete repertorized analysis.</div>`;
 
   protocolResultsEl.innerHTML = html;

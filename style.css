@@ -83,6 +83,8 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .rc-related-body { margin-top: 8px; padding-left: 4px; }
 .rc-related-disclosure { font-style: italic; color: var(--muted); margin-top: 8px; }
 .rc-related-divider { border: none; border-top: 1px dashed var(--line); margin: 8px 0; }
+.rc-biochemic { margin-top: 4px; }
+.rc-biochemic-why { font-size: 0.74rem; color: var(--muted); padding: 0 0 4px 4px; line-height: 1.35; }
 
 /* ---------- SAMPLES + STATUS ---------- */
 .samples-bar { padding: 14px 20px 4px; font-size: 0.8rem; }
