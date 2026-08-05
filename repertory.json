@@ -4440,5 +4440,1255 @@
         }
       ]
     }
+  ],
+  "chiefSymptomTags": [
+    {
+      "id": "sym_hair_loss_hair_falling",
+      "label": "Hair loss, hair falling",
+      "section": "Common",
+      "rubric": "Hair loss, hair falling"
+    },
+    {
+      "id": "sym_dandruff_scalp_scaling",
+      "label": "Dandruff, scalp scaling",
+      "section": "Common",
+      "rubric": "Dandruff, scalp scaling"
+    },
+    {
+      "id": "sym_bleeding_gums",
+      "label": "Bleeding gums",
+      "section": "Common",
+      "rubric": "Bleeding gums"
+    },
+    {
+      "id": "sym_nosebleed_epistaxis",
+      "label": "Nosebleed, epistaxis",
+      "section": "Common",
+      "rubric": "Nosebleed, epistaxis"
+    },
+    {
+      "id": "sym_restless_sleep_grinding_teeth_talks_or_starts_duri",
+      "label": "Restless sleep, grinding teeth, talks or starts…",
+      "section": "Common",
+      "rubric": "Restless sleep, grinding teeth, talks or starts during sleep"
+    },
+    {
+      "id": "sym_insomnia_from_worry_overwork_or_mental_strain",
+      "label": "Insomnia from worry, overwork, or mental strain",
+      "section": "Common",
+      "rubric": "Insomnia from worry, overwork, or mental strain"
+    },
+    {
+      "id": "sym_dry_spasmodic_cough_worse_at_night",
+      "label": "Dry, spasmodic cough, worse at night",
+      "section": "Common",
+      "rubric": "Dry, spasmodic cough, worse at night"
+    },
+    {
+      "id": "sym_loose_rattling_cough_with_difficulty_expectorating",
+      "label": "Loose, rattling cough with difficulty expectorating",
+      "section": "Common",
+      "rubric": "Loose, rattling cough with difficulty expectorating"
+    },
+    {
+      "id": "sym_nausea_and_vomiting_with_clean_tongue",
+      "label": "Nausea and vomiting with clean tongue",
+      "section": "Common",
+      "rubric": "Nausea and vomiting with clean tongue"
+    },
+    {
+      "id": "sym_colic_better_bending_double_or_with_pressure",
+      "label": "Colic better bending double or with pressure",
+      "section": "Stool",
+      "rubric": "Colic better bending double or with pressure"
+    },
+    {
+      "id": "sym_burning_pains_in_stomach_or_abdomen_relieved_by_he",
+      "label": "Burning pains in stomach or abdomen, relieved by…",
+      "section": "Stool",
+      "rubric": "Burning pains in stomach or abdomen, relieved by heat"
+    },
+    {
+      "id": "sym_itching_worse_from_warmth_or_scratching",
+      "label": "Itching, worse from warmth or scratching",
+      "section": "Common",
+      "rubric": "Itching, worse from warmth or scratching"
+    },
+    {
+      "id": "sym_burning_skin_eruptions_better_from_cold_applicatio",
+      "label": "Burning skin eruptions, better from cold…",
+      "section": "Common",
+      "rubric": "Burning skin eruptions, better from cold applications"
+    },
+    {
+      "id": "sym_boils_or_abscesses_acutely_very_sensitive_to_touch",
+      "label": "Boils or abscesses, acutely very sensitive to touch",
+      "section": "Common",
+      "rubric": "Boils or abscesses, acutely very sensitive to touch"
+    },
+    {
+      "id": "sym_acne_with_pus_slow_to_heal_scarring_tendency",
+      "label": "Acne with pus, slow to heal, scarring tendency",
+      "section": "Common",
+      "rubric": "Acne with pus, slow to heal, scarring tendency"
+    },
+    {
+      "id": "sym_menses_too_early_and_profuse",
+      "label": "Menses too early and profuse",
+      "section": "Common",
+      "rubric": "Menses too early and profuse"
+    },
+    {
+      "id": "sym_menses_too_late_scanty_or_suppressed",
+      "label": "Menses too late, scanty, or suppressed",
+      "section": "Common",
+      "rubric": "Menses too late, scanty, or suppressed"
+    },
+    {
+      "id": "sym_worse_before_a_thunderstorm_or_change_of_weather",
+      "label": "Worse before a thunderstorm or change of weather",
+      "section": "Modalities",
+      "rubric": "Worse before a thunderstorm or change of weather"
+    },
+    {
+      "id": "sym_headache_or_complaints_from_sun_exposure_or_heat_o",
+      "label": "Headache or complaints from sun exposure or heat of…",
+      "section": "Modalities",
+      "rubric": "Headache or complaints from sun exposure or heat of the sun"
+    },
+    {
+      "id": "sym_cramping_pain_better_from_pressure_and_warmth",
+      "label": "Cramping pain, better from pressure and warmth",
+      "section": "Modalities",
+      "rubric": "Cramping pain, better from pressure and warmth"
+    },
+    {
+      "id": "sym_symptoms_alternate_sides_or_one_sided_complaints",
+      "label": "Symptoms alternate sides, or one-sided complaints",
+      "section": "Modalities",
+      "rubric": "Symptoms alternate sides, or one-sided complaints"
+    },
+    {
+      "id": "sym_wandering_shifting_joint_pains_that_move_from_join",
+      "label": "Wandering, shifting joint pains that move from…",
+      "section": "Modalities",
+      "rubric": "Wandering, shifting joint pains that move from joint to joint"
+    },
+    {
+      "id": "sym_effects_of_suppressed_emotion_or_humiliation",
+      "label": "Effects of suppressed emotion or humiliation",
+      "section": "Mind",
+      "rubric": "Effects of suppressed emotion or humiliation"
+    },
+    {
+      "id": "sym_leg_pain_weakness_dragging_sensation",
+      "label": "Leg pain, weakness, dragging sensation",
+      "section": "Extremities",
+      "rubric": "Leg pain, weakness, dragging sensation"
+    },
+    {
+      "id": "sym_nerve_injury_with_shooting_pains_extreme_sensitivi",
+      "label": "Nerve injury with shooting pains, extreme…",
+      "section": "Extremities",
+      "rubric": "Nerve injury with shooting pains, extreme sensitivity"
+    },
+    {
+      "id": "sym_silent_grief_dwells_on_past_hurts_cannot_cry",
+      "label": "Silent grief, dwells on past hurts, cannot cry",
+      "section": "Mind",
+      "rubric": "Silent grief, dwells on past hurts, cannot cry"
+    },
+    {
+      "id": "sym_weeps_easily_wants_sympathy_and_consolation",
+      "label": "Weeps easily, wants sympathy and consolation",
+      "section": "Mind",
+      "rubric": "Weeps easily, wants sympathy and consolation"
+    },
+    {
+      "id": "sym_anxiety_with_restlessness_fear_of_death",
+      "label": "Anxiety with restlessness, fear of death",
+      "section": "Mind",
+      "rubric": "Anxiety with restlessness, fear of death"
+    },
+    {
+      "id": "sym_anticipatory_anxiety_before_an_event",
+      "label": "Anticipatory anxiety before an event",
+      "section": "Mind",
+      "rubric": "Anticipatory anxiety before an event"
+    },
+    {
+      "id": "sym_heavy_muscular_weakness_like_lead_drooping_eyelids",
+      "label": "Heavy muscular weakness like lead, drooping…",
+      "section": "Common",
+      "rubric": "Heavy muscular weakness like lead, drooping eyelids, thick slow speech, during fever/flu"
+    },
+    {
+      "id": "sym_irritability_easily_angered_impatient",
+      "label": "Irritability, easily angered, impatient",
+      "section": "Mind",
+      "rubric": "Irritability, easily angered, impatient"
+    },
+    {
+      "id": "sym_bearing_down_sensation_in_pelvis_as_if_organs_will",
+      "label": "Bearing-down sensation in pelvis, as if organs will…",
+      "section": "Common",
+      "rubric": "Bearing-down sensation in pelvis, as if organs will fall out"
+    },
+    {
+      "id": "sym_thick_silvery_or_scaly_skin_eruption_psoriasis_lik",
+      "label": "Thick silvery or scaly skin eruption, psoriasis-like",
+      "section": "Common",
+      "rubric": "Thick silvery or scaly skin eruption, psoriasis-like"
+    },
+    {
+      "id": "sym_vesicular_itching_rash_from_plant_or_chemical_cont",
+      "label": "Vesicular, itching rash from plant or chemical…",
+      "section": "Common",
+      "rubric": "Vesicular, itching rash from plant or chemical contact"
+    },
+    {
+      "id": "sym_chronic_recurrent_boils_or_skin_eruptions_craves_s",
+      "label": "Chronic recurrent boils or skin eruptions, craves…",
+      "section": "Common",
+      "rubric": "Chronic recurrent boils or skin eruptions, craves sweets or alcohol"
+    },
+    {
+      "id": "sym_jealous_suspicious_sensitive_to_contradiction",
+      "label": "Jealous, suspicious, sensitive to contradiction",
+      "section": "Mind",
+      "rubric": "Jealous, suspicious, sensitive to contradiction"
+    },
+    {
+      "id": "sym_ailments_from_anger_indignation_or_humiliation_bet",
+      "label": "Ailments from anger, indignation, or humiliation…",
+      "section": "Mind",
+      "rubric": "Ailments from anger, indignation, or humiliation, better venting feelings"
+    },
+    {
+      "id": "sym_sudden_asthma_or_dyspnea_must_sit_upright_fear_of_",
+      "label": "Sudden asthma or dyspnea, must sit upright, fear of…",
+      "section": "Common",
+      "rubric": "Sudden asthma or dyspnea, must sit upright, fear of death, worse midnight"
+    },
+    {
+      "id": "sym_burns_better_from_cold_applications_worse_when_col",
+      "label": "Burns, better from cold applications, worse when…",
+      "section": "Common",
+      "rubric": "Burns, better from cold applications, worse when cold is removed"
+    },
+    {
+      "id": "sym_faintness_or_collapse_with_cold_clammy_sweat_worse",
+      "label": "Faintness or collapse with cold clammy sweat, worse…",
+      "section": "Common",
+      "rubric": "Faintness or collapse with cold clammy sweat, worse standing, better lying head low"
+    },
+    {
+      "id": "sym_dizzy_dull_heavy_head_with_drowsiness_worse_damp_w",
+      "label": "Dizzy, dull, heavy head with drowsiness, worse damp…",
+      "section": "Common",
+      "rubric": "Dizzy, dull, heavy head with drowsiness, worse damp weather, better pressure"
+    },
+    {
+      "id": "sym_delirium_or_hallucinations_with_high_fever_dilated",
+      "label": "Delirium or hallucinations with high fever, dilated…",
+      "section": "Common",
+      "rubric": "Delirium or hallucinations with high fever, dilated pupils, does not recognize others"
+    },
+    {
+      "id": "sym_extreme_sensitivity_to_light_and_noise_with_sudden",
+      "label": "Extreme sensitivity to light and noise, with sudden…",
+      "section": "Common",
+      "rubric": "Extreme sensitivity to light and noise, with sudden fever and flushed face"
+    },
+    {
+      "id": "sym_headache_worse_4_8pm_irritable_and_angry_sour_belc",
+      "label": "Headache worse 4-8pm, irritable and angry, sour…",
+      "section": "Modalities",
+      "rubric": "Headache worse 4-8pm, irritable and angry, sour belching"
+    },
+    {
+      "id": "sym_one_cheek_red_one_pale_better_from_being_carried_i",
+      "label": "One cheek red one pale, better from being carried…",
+      "section": "Common",
+      "rubric": "One cheek red one pale, better from being carried, irritable child"
+    },
+    {
+      "id": "sym_lump_in_throat_sensation_worse_from_liquids_or_sof",
+      "label": "Lump in throat sensation, worse from liquids or…",
+      "section": "Common",
+      "rubric": "Lump in throat sensation, worse from liquids or soft food, better from swallowing something solid"
+    },
+    {
+      "id": "sym_cannot_bear_tight_clothing_around_neck_or_waist_le",
+      "label": "Cannot bear tight clothing around neck or waist…",
+      "section": "Modalities",
+      "rubric": "Cannot bear tight clothing around neck or waist, left-sided complaints, worse after sleep"
+    },
+    {
+      "id": "sym_diarrhea_or_trembling_weakness_from_anticipatory_a",
+      "label": "Diarrhea or trembling weakness from anticipatory…",
+      "section": "Mind",
+      "rubric": "Diarrhea or trembling weakness from anticipatory anxiety before an event"
+    },
+    {
+      "id": "sym_denies_injury_or_refuses_help_after_trauma_wants_t",
+      "label": "Denies injury or refuses help after trauma, wants…",
+      "section": "Mind",
+      "rubric": "Denies injury or refuses help after trauma, wants to be left alone, bed feels too hard"
+    },
+    {
+      "id": "sym_headache_from_cold_draft_to_head_better_from_wrapp",
+      "label": "Headache from cold draft to head, better from…",
+      "section": "Common",
+      "rubric": "Headache from cold draft to head, better from wrapping the head warmly"
+    },
+    {
+      "id": "sym_every_minor_wound_or_cut_suppurates_festers_or_hea",
+      "label": "Every minor wound or cut suppurates, festers, or…",
+      "section": "Common",
+      "rubric": "Every minor wound or cut suppurates, festers, or heals slowly"
+    },
+    {
+      "id": "sym_involuntary_urination_from_coughing_sneezing_or_la",
+      "label": "Involuntary urination from coughing, sneezing, or…",
+      "section": "Modalities",
+      "rubric": "Involuntary urination from coughing, sneezing, or laughing; worse dry clear weather, better damp weather"
+    },
+    {
+      "id": "sym_haughty_arrogant_feels_superior_to_others_contempt",
+      "label": "Haughty, arrogant, feels superior to others…",
+      "section": "Mind",
+      "rubric": "Haughty, arrogant, feels superior to others, contempt or disgust for loved ones"
+    },
+    {
+      "id": "sym_hurried_impulsive_cannot_wait_irrational_fears_and",
+      "label": "Hurried, impulsive, cannot wait, irrational fears…",
+      "section": "Mind",
+      "rubric": "Hurried, impulsive, cannot wait, irrational fears and anticipatory dread"
+    },
+    {
+      "id": "sym_dry_cough_like_a_saw_through_wood_worse_cold_drink",
+      "label": "Dry cough like a saw through wood, worse cold…",
+      "section": "Common",
+      "rubric": "Dry cough like a saw through wood, worse cold drinks better warm drinks, cannot lie with head low"
+    },
+    {
+      "id": "sym_headache_from_occiput_settling_over_the_left_eye_b",
+      "label": "Headache from occiput settling over the left eye…",
+      "section": "Common",
+      "rubric": "Headache from occiput settling over the left eye, better hot application directly over the eye"
+    },
+    {
+      "id": "sym_loud_forceful_belching_gives_no_relief_craves_swee",
+      "label": "Loud forceful belching gives no relief, craves…",
+      "section": "Common",
+      "rubric": "Loud forceful belching gives no relief, craves sweets that aggravate the bloating"
+    },
+    {
+      "id": "sym_sharp_splinter_or_needle_sensation_in_tonsil_radia",
+      "label": "Sharp splinter or needle sensation in tonsil…",
+      "section": "Common",
+      "rubric": "Sharp splinter or needle sensation in tonsil radiating to ear, extremely sensitive to cold air or draft"
+    },
+    {
+      "id": "sym_infant_vomits_curdled_milk_in_large_lumps_falls_in",
+      "label": "Infant vomits curdled milk in large lumps, falls…",
+      "section": "Common",
+      "rubric": "Infant vomits curdled milk in large lumps, falls into deep exhausted sleep after vomiting, wants milk again"
+    },
+    {
+      "id": "sym_abdomen_drawn_back_toward_the_spine_sunken_retract",
+      "label": "Abdomen drawn back toward the spine, sunken…",
+      "section": "Common",
+      "rubric": "Abdomen drawn back toward the spine, sunken retracted abdominal wall, constipation with sheep-dung stool and weak wrists"
+    },
+    {
+      "id": "sym_violent_twisting_colic_worse_from_bending_double_o",
+      "label": "Violent twisting colic worse from bending double or…",
+      "section": "Modalities",
+      "rubric": "Violent twisting colic worse from bending double or pressure, better standing erect and bending backward"
+    },
+    {
+      "id": "sym_puncture_wound_cold_and_numb_but_cannot_bear_warmt",
+      "label": "Puncture wound cold and numb, but cannot bear…",
+      "section": "Modalities",
+      "rubric": "Puncture wound cold and numb, but cannot bear warmth applied, better from cold application"
+    },
+    {
+      "id": "sym_burning_pains_with_icy_coldness_of_the_part_cannot",
+      "label": "Burning pains with icy coldness of the part, cannot…",
+      "section": "Modalities",
+      "rubric": "Burning pains with icy coldness of the part, cannot bear covering, worse from any heat or warmth applied"
+    },
+    {
+      "id": "sym_extremely_chilly_cannot_bear_uncovering_oversensit",
+      "label": "Extremely chilly, cannot bear uncovering…",
+      "section": "Fever",
+      "rubric": "Extremely chilly, cannot bear uncovering, oversensitive to pain and draft"
+    },
+    {
+      "id": "sym_sad_weepy_timid_dreads_to_make_decisions_with_skin",
+      "label": "Sad, weepy, timid, dreads to make decisions, with…",
+      "section": "Mind",
+      "rubric": "Sad, weepy, timid, dreads to make decisions, with skin cracking at orifices"
+    },
+    {
+      "id": "sym_urinary_pain_worse_at_the_very_end_of_urination_be",
+      "label": "Urinary pain worse at the very end of urination…",
+      "section": "Common",
+      "rubric": "Urinary pain worse at the very end of urination, better as stream starts"
+    },
+    {
+      "id": "sym_coughing_fits_in_rapid_succession_hardly_time_to_b",
+      "label": "Coughing fits in rapid succession, hardly time to…",
+      "section": "Common",
+      "rubric": "Coughing fits in rapid succession, hardly time to breathe between them"
+    },
+    {
+      "id": "sym_periodic_sick_headache_with_visual_disturbance_bef",
+      "label": "Periodic sick headache with visual disturbance…",
+      "section": "Common",
+      "rubric": "Periodic sick headache with visual disturbance before pain begins, intense GI burning mouth to anus"
+    },
+    {
+      "id": "sym_wakes_suddenly_from_sleep_with_suffocation_must_si",
+      "label": "Wakes suddenly from sleep with suffocation, must…",
+      "section": "Common",
+      "rubric": "Wakes suddenly from sleep with suffocation, must sit up to breathe, anxious and fearful"
+    },
+    {
+      "id": "sym_sore_bruised_beaten_feeling_all_over_dreads_being_",
+      "label": "Sore, bruised, beaten feeling all over, dreads…",
+      "section": "Mind",
+      "rubric": "Sore, bruised, beaten feeling all over, dreads being touched or approached after injury"
+    },
+    {
+      "id": "sym_confused_sense_of_time_forgets_what_was_just_said_",
+      "label": "Confused sense of time, forgets what was just said…",
+      "section": "Mind",
+      "rubric": "Confused sense of time, forgets what was just said, performance anxiety with stammering"
+    },
+    {
+      "id": "sym_cannot_bear_to_be_alone_dreads_solitude_intensely_",
+      "label": "Cannot bear to be alone, dreads solitude intensely…",
+      "section": "Mind",
+      "rubric": "Cannot bear to be alone, dreads solitude intensely, must have company nearby"
+    },
+    {
+      "id": "sym_chronic_catarrh_with_thin_yellow_or_greenish_disch",
+      "label": "Chronic catarrh with thin yellow or greenish…",
+      "section": "Common",
+      "rubric": "Chronic catarrh with thin yellow or greenish discharge, wandering pains worse in warm room"
+    },
+    {
+      "id": "sym_excessively_sour_smell_to_all_discharges_vomit_sto",
+      "label": "Excessively sour smell to all discharges, vomit…",
+      "section": "Common",
+      "rubric": "Excessively sour smell to all discharges, vomit, stool, or perspiration"
+    },
+    {
+      "id": "sym_urine_smells_like_violets_burning_in_kidneys_and_u",
+      "label": "Urine smells like violets, burning in kidneys and…",
+      "section": "Common",
+      "rubric": "Urine smells like violets, burning in kidneys and urinary tract, dark smoky urine"
+    },
+    {
+      "id": "sym_worse_at_the_seaside_despite_general_benefit_from_",
+      "label": "Worse at the seaside despite general benefit from…",
+      "section": "Common",
+      "rubric": "Worse at the seaside despite general benefit from sea air, hard glandular swellings"
+    },
+    {
+      "id": "sym_rapid_emaciation_with_intense_overpowering_offensi",
+      "label": "Rapid emaciation with intense, overpowering…",
+      "section": "Common",
+      "rubric": "Rapid emaciation with intense, overpowering offensive body odor, septic states"
+    },
+    {
+      "id": "sym_profound_anxiety_before_events_requiring_coordinat",
+      "label": "Profound anxiety before events requiring…",
+      "section": "Mind",
+      "rubric": "Profound anxiety before events requiring coordination, fear of falling, double vision"
+    },
+    {
+      "id": "sym_bleeding_brought_on_by_overexertion_or_straining_b",
+      "label": "Bleeding brought on by overexertion or straining…",
+      "section": "Common",
+      "rubric": "Bleeding brought on by overexertion or straining, bright red and free-flowing, feels well otherwise"
+    },
+    {
+      "id": "sym_burning_heat_of_hands_and_soles_despite_general_ch",
+      "label": "Burning heat of hands and soles despite general…",
+      "section": "Common",
+      "rubric": "Burning heat of hands and soles despite general chilliness, right-sided periodic headache"
+    },
+    {
+      "id": "sym_extreme_exhaustion_sleepy_all_day_yet_cannot_sleep",
+      "label": "Extreme exhaustion, sleepy all day yet cannot sleep…",
+      "section": "Common",
+      "rubric": "Extreme exhaustion, sleepy all day yet cannot sleep at night, weakness after exertion"
+    },
+    {
+      "id": "sym_embarrassed_and_awkward_in_company_cannot_perform_",
+      "label": "Embarrassed and awkward in company, cannot perform…",
+      "section": "Mind",
+      "rubric": "Embarrassed and awkward in company, cannot perform tasks while watched, worse from mental exertion"
+    },
+    {
+      "id": "sym_extremely_talkative_jealous_religious_fanaticism_j",
+      "label": "Extremely talkative, jealous, religious fanaticism…",
+      "section": "Mind",
+      "rubric": "Extremely talkative, jealous, religious fanaticism, jumps rapidly from subject to subject"
+    },
+    {
+      "id": "sym_sensation_of_broken_glass_or_splinters_in_the_rect",
+      "label": "Sensation of broken glass or splinters in the…",
+      "section": "Common",
+      "rubric": "Sensation of broken glass or splinters in the rectum during and after stool"
+    },
+    {
+      "id": "sym_contradictory_changeable_moods_exaggerates_sensati",
+      "label": "Contradictory, changeable moods, exaggerates…",
+      "section": "Mind",
+      "rubric": "Contradictory, changeable moods, exaggerates sensations and pains beyond their real intensity"
+    },
+    {
+      "id": "sym_bearing_down_pains_from_sacrum_shooting_to_pubic_b",
+      "label": "Bearing-down pains from sacrum shooting to pubic…",
+      "section": "Common",
+      "rubric": "Bearing-down pains from sacrum shooting to pubic bone, profuse gushing bleeding with clots"
+    },
+    {
+      "id": "sym_every_change_to_cold_damp_weather_brings_new_sympt",
+      "label": "Every change to cold damp weather brings new…",
+      "section": "Modalities",
+      "rubric": "Every change to cold damp weather brings new symptoms, worse from chill after being overheated"
+    },
+    {
+      "id": "sym_anxiety_about_health_with_palpitation_from_the_sli",
+      "label": "Anxiety about health with palpitation from the…",
+      "section": "Mind",
+      "rubric": "Anxiety about health with palpitation from the slightest emotional upset"
+    },
+    {
+      "id": "sym_throbbing_headache_with_red_face_relieved_suddenly",
+      "label": "Throbbing headache with red face relieved suddenly…",
+      "section": "Common",
+      "rubric": "Throbbing headache with red face relieved suddenly by nosebleed"
+    },
+    {
+      "id": "sym_extremely_low_self_esteem_feels_dirty_or_unworthy_",
+      "label": "Extremely low self-esteem, feels dirty or unworthy…",
+      "section": "Mind",
+      "rubric": "Extremely low self-esteem, feels dirty or unworthy despite being clean"
+    },
+    {
+      "id": "sym_great_prostration_with_involuntary_stool_while_uri",
+      "label": "Great prostration with involuntary stool while…",
+      "section": "Common",
+      "rubric": "Great prostration with involuntary stool while urinating, extreme sensitivity to bedding"
+    },
+    {
+      "id": "sym_great_anxiety_about_the_future_distorted_sense_of_",
+      "label": "Great anxiety about the future, distorted sense of…",
+      "section": "Mind",
+      "rubric": "Great anxiety about the future, distorted sense of time and distance"
+    },
+    {
+      "id": "sym_aversion_to_milk_which_now_disagrees_intensely_des",
+      "label": "Aversion to milk which now disagrees intensely…",
+      "section": "Common",
+      "rubric": "Aversion to milk which now disagrees intensely, despite formerly enjoying it"
+    },
+    {
+      "id": "sym_fear_of_water_mirrors_or_shiny_reflecting_objects_",
+      "label": "Fear of water, mirrors, or shiny reflecting…",
+      "section": "Mind",
+      "rubric": "Fear of water, mirrors, or shiny reflecting objects, worse from the sight or sound of water"
+    },
+    {
+      "id": "sym_pulling_dragging_sensation_in_the_pelvis_when_stan",
+      "label": "Pulling, dragging sensation in the pelvis when…",
+      "section": "Common",
+      "rubric": "Pulling, dragging sensation in the pelvis when standing, extreme fatigue relieved by sitting"
+    },
+    {
+      "id": "sym_wants_many_things_but_rejects_each_one_as_soon_as_",
+      "label": "Wants many things but rejects each one as soon as…",
+      "section": "Mind",
+      "rubric": "Wants many things but rejects each one as soon as offered, worse from uncovering"
+    },
+    {
+      "id": "sym_sensation_of_pelvis_falling_apart_or_hips_separati",
+      "label": "Sensation of pelvis falling apart or hips…",
+      "section": "Common",
+      "rubric": "Sensation of pelvis falling apart or hips separating, must bind tightly for relief"
+    },
+    {
+      "id": "sym_cannot_bear_warmth_of_bed_throws_off_covers_itchin",
+      "label": "Cannot bear warmth of bed, throws off covers…",
+      "section": "Modalities",
+      "rubric": "Cannot bear warmth of bed, throws off covers, itching or burning worse from heat of bed"
+    },
+    {
+      "id": "sym_presses_hands_against_chest_to_support_it_during_c",
+      "label": "Presses hands against chest to support it during…",
+      "section": "Common",
+      "rubric": "Presses hands against chest to support it during cough, dry cough worse entering warm room from cold"
+    },
+    {
+      "id": "sym_violent_cramping_pains_bending_double_brought_on_b",
+      "label": "Violent cramping pains bending double, brought on…",
+      "section": "Common",
+      "rubric": "Violent cramping pains bending double, brought on by anger, better hot drinks worse cold drinks"
+    },
+    {
+      "id": "sym_nose_blocked_at_night_lying_down_runs_with_thick_y",
+      "label": "Nose blocked at night lying down, runs with thick…",
+      "section": "Common",
+      "rubric": "Nose blocked at night lying down, runs with thick yellow-green mucus during day, worse warm stuffy room"
+    },
+    {
+      "id": "sym_right_sided_headache_that_follows_the_course_of_th",
+      "label": "Right-sided headache that follows the course of the…",
+      "section": "Common",
+      "rubric": "Right-sided headache that follows the course of the sun, better firm pressure and dark room"
+    },
+    {
+      "id": "sym_air_hunger_wants_to_be_fanned_collapse_with_icy_co",
+      "label": "Air hunger, wants to be fanned, collapse with icy…",
+      "section": "Common",
+      "rubric": "Air hunger, wants to be fanned, collapse with icy coldness of extremities"
+    },
+    {
+      "id": "sym_vertigo_worse_from_looking_up_better_from_pressure",
+      "label": "Vertigo worse from looking up, better from pressure",
+      "section": "Common",
+      "rubric": "Vertigo worse from looking up, better from pressure"
+    },
+    {
+      "id": "sym_vertigo_worse_from_closing_the_eyes_or_turning_in_",
+      "label": "Vertigo worse from closing the eyes or turning in…",
+      "section": "Common",
+      "rubric": "Vertigo worse from closing the eyes or turning in bed"
+    },
+    {
+      "id": "sym_throbbing_headache_as_if_head_will_burst_worse_sto",
+      "label": "Throbbing headache as if head will burst, worse…",
+      "section": "Common",
+      "rubric": "Throbbing headache as if head will burst, worse stooping or jarring, hot face, cold feet"
+    },
+    {
+      "id": "sym_motion_sickness_nausea_vomiting_from_travel_better",
+      "label": "Motion sickness, nausea vomiting from travel…",
+      "section": "Common",
+      "rubric": "Motion sickness, nausea vomiting from travel, better lying with eyes closed"
+    },
+    {
+      "id": "sym_fever_recurring_at_the_same_time_daily_craves_cold",
+      "label": "Fever recurring at the same time daily, craves cold…",
+      "section": "Fever",
+      "rubric": "Fever recurring at the same time daily, craves cold water yet wants to be covered"
+    },
+    {
+      "id": "sym_acute_gastroenteritis_fever_chills_vomiting_diarrh",
+      "label": "Acute gastroenteritis: fever, chills, vomiting…",
+      "section": "Fever",
+      "rubric": "Acute gastroenteritis: fever, chills, vomiting, diarrhea, and prostration together"
+    },
+    {
+      "id": "sym_miserly_critical_fault_finding_despairs_of_recover",
+      "label": "Miserly, critical, fault-finding, despairs of…",
+      "section": "Mind",
+      "rubric": "Miserly, critical, fault-finding, despairs of recovery"
+    },
+    {
+      "id": "sym_offensive_body_odor_foul_smelling_perspiration_or_",
+      "label": "Offensive body odor, foul-smelling perspiration or…",
+      "section": "Common",
+      "rubric": "Offensive body odor, foul-smelling perspiration or secretions despite cleanliness"
+    },
+    {
+      "id": "sym_sudden_stupor_with_fever_staring_or_unresponsive_b",
+      "label": "Sudden stupor with fever, staring or unresponsive…",
+      "section": "Mind",
+      "rubric": "Sudden stupor with fever, staring or unresponsive, boring/rolling head into pillow"
+    },
+    {
+      "id": "sym_severe_aching_bone_pain_as_if_broken_or_bruised_br",
+      "label": "Severe aching bone pain as if broken or bruised…",
+      "section": "Common",
+      "rubric": "Severe aching bone pain as if broken or bruised, breakbone fever"
+    },
+    {
+      "id": "sym_right_sided_complaints_worse_4_8pm_sluggish_liver_",
+      "label": "Right-sided complaints, worse 4-8pm, sluggish liver…",
+      "section": "Modalities",
+      "rubric": "Right-sided complaints, worse 4-8pm, sluggish liver and digestion"
+    },
+    {
+      "id": "sym_thin_watery_acrid_nasal_discharge_that_excoriates_",
+      "label": "Thin, watery, acrid nasal discharge that excoriates…",
+      "section": "Common",
+      "rubric": "Thin, watery, acrid nasal discharge that excoriates the lip, worse cold air"
+    },
+    {
+      "id": "sym_exhaustion_from_repeated_childbearing_everything_f",
+      "label": "Exhaustion from repeated childbearing, everything…",
+      "section": "Common",
+      "rubric": "Exhaustion from repeated childbearing, everything feels heavy/an effort, dragging bearing-down sensation worse standing"
+    },
+    {
+      "id": "sym_twitching_jerky_involuntary_movements_of_fingers_a",
+      "label": "Twitching/jerky involuntary movements of fingers…",
+      "section": "Common",
+      "rubric": "Twitching/jerky involuntary movements of fingers and eyelids, formication or frostbite-like sensation despite warm room, clumsiness"
+    },
+    {
+      "id": "sym_recent_grief_with_alternating_laughing_weeping_pul",
+      "label": "Recent grief with alternating laughing/weeping…",
+      "section": "Common",
+      "rubric": "Recent grief with alternating laughing/weeping, pulls away from being hugged, lump in throat worse empty swallowing better eating solid food"
+    },
+    {
+      "id": "sym_extreme_sensitivity_to_grating_penetrating_sounds_",
+      "label": "Extreme sensitivity to grating/penetrating sounds…",
+      "section": "Common",
+      "rubric": "Extreme sensitivity to grating/penetrating sounds (silk, paper) sets teeth on edge, sensation of brain loose/sloshing in skull"
+    },
+    {
+      "id": "sym_professional_voice_user_whose_voice_gives_out_afte",
+      "label": "Professional voice user whose voice gives out after…",
+      "section": "Common",
+      "rubric": "Professional voice user whose voice gives out after use, joint pain worse any movement better complete rest, loses train of thought writing"
+    },
+    {
+      "id": "sym_anticipatory_diarrhea_before_important_events_desp",
+      "label": "Anticipatory diarrhea before important events…",
+      "section": "Common",
+      "rubric": "Anticipatory diarrhea before important events despite over-preparation, vertigo/fear at heights, better open air"
+    },
+    {
+      "id": "sym_hives_with_intolerable_itching_puffy_edematous_swe",
+      "label": "Hives with intolerable itching, puffy edematous…",
+      "section": "Common",
+      "rubric": "Hives with intolerable itching, puffy edematous swelling, worse warmth of bed, better cold, anxious and restless"
+    },
+    {
+      "id": "sym_sudden_hives_urticaria_burning_and_stinging_rather",
+      "label": "Sudden hives/urticaria, burning and stinging rather…",
+      "section": "Common",
+      "rubric": "Sudden hives/urticaria, burning and stinging rather than itching, often from shellfish, better cold applications"
+    },
+    {
+      "id": "sym_emaciation_especially_of_the_legs_while_the_face_s",
+      "label": "Emaciation especially of the legs while the face…",
+      "section": "Common",
+      "rubric": "Emaciation especially of the legs while the face stays round and full; irritable, complains constantly"
+    },
+    {
+      "id": "sym_migraine_with_visual_aura_zigzag_lines_blur_before",
+      "label": "Migraine with visual aura (zigzag lines/blur)…",
+      "section": "Common",
+      "rubric": "Migraine with visual aura (zigzag lines/blur) before pain begins, right-sided, vomiting of greasy/bilious fluid eases the headache"
+    },
+    {
+      "id": "sym_hot_burning_acrid_tears_that_scald_the_cheeks_blan",
+      "label": "Hot burning acrid tears that scald the cheeks…",
+      "section": "Common",
+      "rubric": "Hot burning acrid tears that scald the cheeks, bland non-burning nasal discharge, worse light and wind"
+    },
+    {
+      "id": "sym_croupy_barking_cough_waking_child_at_night_better_",
+      "label": "Croupy barking cough waking child at night, better…",
+      "section": "Common",
+      "rubric": "Croupy barking cough waking child at night, better sitting up and warm drinks"
+    },
+    {
+      "id": "sym_asthma_or_cough_worse_damp_weather_rattling_with_g",
+      "label": "Asthma or cough worse damp weather, rattling with…",
+      "section": "Common",
+      "rubric": "Asthma or cough worse damp weather, rattling with greenish mucus, better dry warmth"
+    },
+    {
+      "id": "sym_ear_pain_worse_swallowing_or_cold_drafts_weepy_and",
+      "label": "Ear pain worse swallowing or cold drafts, weepy and…",
+      "section": "Common",
+      "rubric": "Ear pain worse swallowing or cold drafts, weepy and clingy, wants to be carried"
+    },
+    {
+      "id": "sym_panic_or_claustrophobia_in_closed_rooms_must_open_",
+      "label": "Panic or claustrophobia in closed rooms, must open…",
+      "section": "Common",
+      "rubric": "Panic or claustrophobia in closed rooms, must open window, better open air"
+    },
+    {
+      "id": "sym_better_in_open_air_worse_in_a_warm_closed_room",
+      "label": "Better in open air, worse in a warm closed room",
+      "section": "Common",
+      "rubric": "Better in open air, worse in a warm closed room"
+    },
+    {
+      "id": "sym_wants_to_be_fanned_air_hunger_desires_open_windows",
+      "label": "Wants to be fanned, air hunger, desires open…",
+      "section": "Common",
+      "rubric": "Wants to be fanned, air hunger, desires open windows and moving air on face"
+    },
+    {
+      "id": "sym_collapse_and_exhaustion_after_acute_illness_food_p",
+      "label": "Collapse and exhaustion after acute illness (food…",
+      "section": "Common",
+      "rubric": "Collapse and exhaustion after acute illness (food poisoning, diarrhea), cold extremities but craves air"
+    },
+    {
+      "id": "sym_teething_one_cheek_red_and_hot_other_pale_impossib",
+      "label": "Teething, one cheek red and hot, other pale…",
+      "section": "Common",
+      "rubric": "Teething, one cheek red and hot, other pale, impossible to satisfy, wants to be carried"
+    },
+    {
+      "id": "sym_green_watery_frequent_stool_especially_during_teet",
+      "label": "Green, watery, frequent stool, especially during…",
+      "section": "Stool",
+      "rubric": "Green, watery, frequent stool, especially during teething"
+    },
+    {
+      "id": "sym_furious_if_touched_calmed_only_by_vigorous_rocking",
+      "label": "Furious if touched, calmed only by vigorous…",
+      "section": "Mind",
+      "rubric": "Furious if touched, calmed only by vigorous rocking, nose-picking till it bleeds, grinds teeth at night"
+    },
+    {
+      "id": "sym_retracted_drawn_in_abdomen_with_severe_colic_menta",
+      "label": "Retracted/drawn-in abdomen with severe colic…",
+      "section": "Common",
+      "rubric": "Retracted/drawn-in abdomen with severe colic, mental dullness, weakness of limbs"
+    },
+    {
+      "id": "sym_joint_stiffness_with_tendon_contractures_worse_col",
+      "label": "Joint stiffness with tendon contractures, worse…",
+      "section": "Common",
+      "rubric": "Joint stiffness with tendon contractures, worse cold dry weather, better warmth; progressive weakness; sympathetic, emotional"
+    },
+    {
+      "id": "sym_sharp_stabbing_bursting_ear_pain_red_and_hot_worse",
+      "label": "Sharp, stabbing, bursting ear pain, red and hot…",
+      "section": "Common",
+      "rubric": "Sharp, stabbing, bursting ear pain, red and hot, worse warmth and lying on affected side"
+    },
+    {
+      "id": "sym_craving_for_salt_or_salty_foods",
+      "label": "Craving for salt or salty foods",
+      "section": "Common",
+      "rubric": "Craving for salt or salty foods"
+    },
+    {
+      "id": "sym_worse_around_10_11am_worse_from_heat_and_sun",
+      "label": "Worse around 10-11am, worse from heat and sun",
+      "section": "Modalities",
+      "rubric": "Worse around 10-11am, worse from heat and sun"
+    },
+    {
+      "id": "sym_restless_anxiety_must_get_up_and_walk_worse_after_",
+      "label": "Restless anxiety, must get up and walk, worse after…",
+      "section": "Mind",
+      "rubric": "Restless anxiety, must get up and walk, worse after midnight"
+    },
+    {
+      "id": "sym_suppressed_anger_or_indignation_from_insult",
+      "label": "Suppressed anger or indignation from insult",
+      "section": "Mind",
+      "rubric": "Suppressed anger or indignation from insult"
+    },
+    {
+      "id": "sym_indifference_to_loved_ones_or_surroundings",
+      "label": "Indifference to loved ones or surroundings",
+      "section": "Mind",
+      "rubric": "Indifference to loved ones or surroundings"
+    },
+    {
+      "id": "sym_jealousy_suspicion_talkative",
+      "label": "Jealousy, suspicion, talkative",
+      "section": "Mind",
+      "rubric": "Jealousy, suspicion, talkative"
+    },
+    {
+      "id": "sym_lack_of_confidence_fear_of_failure",
+      "label": "Lack of confidence, fear of failure",
+      "section": "Mind",
+      "rubric": "Lack of confidence, fear of failure"
+    },
+    {
+      "id": "sym_memory_weakness_forgetfulness_confusion_of_mind",
+      "label": "Memory weakness, forgetfulness, confusion of mind",
+      "section": "Mind",
+      "rubric": "Memory weakness, forgetfulness, confusion of mind"
+    },
+    {
+      "id": "sym_timid_shy_fear_of_strangers_developmental_delay",
+      "label": "Timid, shy, fear of strangers, developmental delay",
+      "section": "Mind",
+      "rubric": "Timid, shy, fear of strangers, developmental delay"
+    },
+    {
+      "id": "sym_craves_eggs_sweats_on_head_during_sleep_slow_devel",
+      "label": "Craves eggs, sweats on head during sleep, slow…",
+      "section": "Common",
+      "rubric": "Craves eggs, sweats on head during sleep, slow development in children"
+    },
+    {
+      "id": "sym_constantly_desires_change_of_scenery_or_environmen",
+      "label": "Constantly desires change of scenery or…",
+      "section": "Mind",
+      "rubric": "Constantly desires change of scenery or environment, dissatisfied wherever they are"
+    },
+    {
+      "id": "sym_chilly_sluggish_fair_fat_flabby_constitution_crave",
+      "label": "Chilly, sluggish, fair/fat/flabby constitution…",
+      "section": "Common",
+      "rubric": "Chilly, sluggish, fair/fat/flabby constitution, craves sweets, slow to warm up"
+    },
+    {
+      "id": "sym_worse_on_first_beginning_to_move_better_with_conti",
+      "label": "Worse on first beginning to move, better with…",
+      "section": "Modalities",
+      "rubric": "Worse on first beginning to move, better with continued motion"
+    },
+    {
+      "id": "sym_sharp_stitching_pain_worse_from_any_motion_better_",
+      "label": "Sharp stitching pain worse from any motion, better…",
+      "section": "Modalities",
+      "rubric": "Sharp stitching pain worse from any motion, better from firm pressure or holding the part"
+    },
+    {
+      "id": "sym_fear_of_downward_motion_vertigo_on_looking_down_or",
+      "label": "Fear of downward motion, vertigo on looking down or…",
+      "section": "Common",
+      "rubric": "Fear of downward motion, vertigo on looking down or downward stairs"
+    },
+    {
+      "id": "sym_extreme_dryness_of_mucous_membranes_thirstless_con",
+      "label": "Extreme dryness of mucous membranes, thirstless…",
+      "section": "Common",
+      "rubric": "Extreme dryness of mucous membranes, thirstless, confusion of mind"
+    },
+    {
+      "id": "sym_extreme_weakness_and_apathy_desire_for_sweets_wors",
+      "label": "Extreme weakness and apathy, desire for sweets…",
+      "section": "Common",
+      "rubric": "Extreme weakness and apathy, desire for sweets, worse from sun"
+    },
+    {
+      "id": "sym_loud_snoring_stertorous_breathing_during_sleep_or_",
+      "label": "Loud, snoring, stertorous breathing during sleep or…",
+      "section": "Common",
+      "rubric": "Loud, snoring, stertorous breathing during sleep or coma"
+    },
+    {
+      "id": "sym_indifference_and_apathy_following_bereavement_wido",
+      "label": "Indifference and apathy following bereavement…",
+      "section": "Mind",
+      "rubric": "Indifference and apathy following bereavement (widower's remedy), vertigo on turning head or rising, weakness on exertion, hard painless glandular lump, suppressed sexual desire"
+    },
+    {
+      "id": "sym_indecisive_with_financial_anxiety_cracked_skin_fis",
+      "label": "Indecisive with financial anxiety, cracked skin…",
+      "section": "Common",
+      "rubric": "Indecisive with financial anxiety, cracked skin fissures, poor tooth enamel, hard painless nodules, joints crack loudly"
+    },
+    {
+      "id": "sym_rapid_weight_loss_despite_increased_appetite_heat_",
+      "label": "Rapid weight loss despite increased appetite, heat…",
+      "section": "Weight",
+      "rubric": "Rapid weight loss despite increased appetite, heat intolerance, fullness in neck, tremor, racing heart, must keep busy"
+    },
+    {
+      "id": "sym_painless_complaints_stuporous_drowsiness_after_fri",
+      "label": "Painless complaints, stuporous drowsiness after…",
+      "section": "Mind",
+      "rubric": "Painless complaints, stuporous drowsiness after fright/shock/injury, rouses briefly when spoken to sharply, strangely cheerful and unconcerned"
+    },
+    {
+      "id": "sym_ravenous_increased_hunger",
+      "label": "Ravenous, increased hunger",
+      "section": "Appetite",
+      "rubric": "Ravenous, increased hunger"
+    },
+    {
+      "id": "sym_decreased_appetite_anorexia",
+      "label": "Decreased appetite, anorexia",
+      "section": "Appetite",
+      "rubric": "Decreased appetite, anorexia"
+    },
+    {
+      "id": "sym_must_eat_frequently_hunger_soon_after_eating_faint",
+      "label": "Must eat frequently / hunger soon after eating /…",
+      "section": "Appetite",
+      "rubric": "Must eat frequently / hunger soon after eating / faint if meal delayed"
+    },
+    {
+      "id": "sym_aversion_to_food_nausea_at_sight_or_smell_of_food",
+      "label": "Aversion to food, nausea at sight or smell of food",
+      "section": "Appetite",
+      "rubric": "Aversion to food, nausea at sight or smell of food"
+    },
+    {
+      "id": "sym_capricious_appetite_changeable",
+      "label": "Capricious appetite, changeable",
+      "section": "Appetite",
+      "rubric": "Capricious appetite, changeable"
+    },
+    {
+      "id": "sym_thirstless_no_thirst_even_with_fever",
+      "label": "Thirstless, no thirst even with fever",
+      "section": "Thirst",
+      "rubric": "Thirstless, no thirst even with fever"
+    },
+    {
+      "id": "sym_extreme_thirst_large_quantities_at_a_time",
+      "label": "Extreme thirst, large quantities at a time",
+      "section": "Thirst",
+      "rubric": "Extreme thirst, large quantities at a time"
+    },
+    {
+      "id": "sym_thirst_for_small_sips_frequently",
+      "label": "Thirst for small sips frequently",
+      "section": "Thirst",
+      "rubric": "Thirst for small sips frequently"
+    },
+    {
+      "id": "sym_thirst_for_cold_water_drinks",
+      "label": "Thirst for cold water/drinks",
+      "section": "Thirst",
+      "rubric": "Thirst for cold water/drinks"
+    },
+    {
+      "id": "sym_thirst_for_warm_drinks",
+      "label": "Thirst for warm drinks",
+      "section": "Thirst",
+      "rubric": "Thirst for warm drinks"
+    },
+    {
+      "id": "sym_dryness_of_mouth_mucous_membranes_or_skin",
+      "label": "Dryness of mouth, mucous membranes, or skin",
+      "section": "Weight",
+      "rubric": "Dryness of mouth, mucous membranes, or skin"
+    },
+    {
+      "id": "sym_emaciation_weight_loss_despite_good_appetite",
+      "label": "Emaciation / weight loss despite good appetite",
+      "section": "Weight",
+      "rubric": "Emaciation / weight loss despite good appetite"
+    },
+    {
+      "id": "sym_emaciation_general_wasting",
+      "label": "Emaciation, general wasting",
+      "section": "Weight",
+      "rubric": "Emaciation, general wasting"
+    },
+    {
+      "id": "sym_tendency_to_obesity_overweight",
+      "label": "Tendency to obesity, overweight",
+      "section": "Weight",
+      "rubric": "Tendency to obesity, overweight"
+    },
+    {
+      "id": "sym_wrinkled_old_looking_face_with_emaciation",
+      "label": "Wrinkled, old-looking face with emaciation",
+      "section": "Weight",
+      "rubric": "Wrinkled, old-looking face with emaciation"
+    },
+    {
+      "id": "sym_constipation_hard_dry_stool",
+      "label": "Constipation, hard dry stool",
+      "section": "Stool",
+      "rubric": "Constipation, hard dry stool"
+    },
+    {
+      "id": "sym_constipation_ineffectual_urging",
+      "label": "Constipation, ineffectual urging",
+      "section": "Stool",
+      "rubric": "Constipation, ineffectual urging"
+    },
+    {
+      "id": "sym_constipation_no_urge_inactive_rectum",
+      "label": "Constipation, no urge, inactive rectum",
+      "section": "Stool",
+      "rubric": "Constipation, no urge, inactive rectum"
+    },
+    {
+      "id": "sym_diarrhoea_watery_profuse",
+      "label": "Diarrhoea, watery/profuse",
+      "section": "Stool",
+      "rubric": "Diarrhoea, watery/profuse"
+    },
+    {
+      "id": "sym_sudden_forceful_diarrhea_immediately_after_eating_",
+      "label": "Sudden forceful diarrhea immediately after eating…",
+      "section": "Stool",
+      "rubric": "Sudden forceful diarrhea immediately after eating or drinking"
+    },
+    {
+      "id": "sym_diarrhoea_painless",
+      "label": "Diarrhoea, painless",
+      "section": "Stool",
+      "rubric": "Diarrhoea, painless"
+    },
+    {
+      "id": "sym_stool_incomplete_feeling_sensation_of_ball_in_rect",
+      "label": "Stool incomplete feeling / sensation of ball in…",
+      "section": "Stool",
+      "rubric": "Stool incomplete feeling / sensation of ball in rectum"
+    },
+    {
+      "id": "sym_stool_soft_but_difficult_to_pass",
+      "label": "Stool, soft but difficult to pass",
+      "section": "Stool",
+      "rubric": "Stool, soft but difficult to pass"
+    },
+    {
+      "id": "sym_constipation_general_unspecified",
+      "label": "Constipation, general/unspecified",
+      "section": "Stool",
+      "rubric": "Constipation, general/unspecified"
+    },
+    {
+      "id": "sym_waking_about_3_a_m_mind_active_with_business_worri",
+      "label": "Waking about 3 a.m., mind active with business…",
+      "section": "Sleep",
+      "rubric": "Waking about 3 a.m., mind active with business worries, cannot fall asleep again"
+    },
+    {
+      "id": "sym_drowsy_sleepy_after_eating_especially_after_lunch",
+      "label": "Drowsy, sleepy after eating, especially after lunch",
+      "section": "Stomach",
+      "rubric": "Drowsy, sleepy after eating, especially after lunch"
+    },
+    {
+      "id": "sym_desire_for_coffee_wine_or_stimulants_often_to_exce",
+      "label": "Desire for coffee, wine, or stimulants, often to…",
+      "section": "Common",
+      "rubric": "Desire for coffee, wine, or stimulants, often to excess"
+    },
+    {
+      "id": "sym_first_part_of_stool_hard_and_difficult_remainder_s",
+      "label": "First part of stool hard and difficult, remainder…",
+      "section": "Common",
+      "rubric": "First part of stool hard and difficult, remainder soft"
+    },
+    {
+      "id": "sym_worse_from_eating",
+      "label": "Worse from eating",
+      "section": "Modalities",
+      "rubric": "Worse from eating"
+    },
+    {
+      "id": "sym_better_from_eating_relief_while_eating",
+      "label": "Better from eating, relief while eating",
+      "section": "Modalities",
+      "rubric": "Better from eating, relief while eating"
+    },
+    {
+      "id": "sym_worse_in_morning",
+      "label": "Worse in morning",
+      "section": "Modalities",
+      "rubric": "Worse in morning"
+    },
+    {
+      "id": "sym_worse_in_evening_or_night",
+      "label": "Worse in evening or night",
+      "section": "Modalities",
+      "rubric": "Worse in evening or night"
+    },
+    {
+      "id": "sym_worse_from_motion",
+      "label": "Worse from motion",
+      "section": "Modalities",
+      "rubric": "Worse from motion"
+    },
+    {
+      "id": "sym_better_from_motion_worse_from_rest",
+      "label": "Better from motion, worse from rest",
+      "section": "Modalities",
+      "rubric": "Better from motion, worse from rest"
+    },
+    {
+      "id": "sym_worse_from_cold_better_from_heat",
+      "label": "Worse from cold, better from heat",
+      "section": "Modalities",
+      "rubric": "Worse from cold, better from heat"
+    },
+    {
+      "id": "sym_worse_from_heat_better_from_cold",
+      "label": "Worse from heat, better from cold",
+      "section": "Modalities",
+      "rubric": "Worse from heat, better from cold"
+    },
+    {
+      "id": "sym_chilly_patient_generally_cold_wants_warmth",
+      "label": "Chilly patient, generally cold, wants warmth",
+      "section": "Fever",
+      "rubric": "Chilly patient, generally cold, wants warmth"
+    },
+    {
+      "id": "sym_fever_without_thirst",
+      "label": "Fever without thirst",
+      "section": "Fever",
+      "rubric": "Fever without thirst"
+    },
+    {
+      "id": "sym_fever_with_thirst",
+      "label": "Fever with thirst",
+      "section": "Fever",
+      "rubric": "Fever with thirst"
+    },
+    {
+      "id": "sym_chill_predominant_chill_with_fever_restlessness_du",
+      "label": "Chill predominant / chill with fever / restlessness…",
+      "section": "Fever",
+      "rubric": "Chill predominant / chill with fever / restlessness during chill"
+    },
+    {
+      "id": "sym_sudden_high_fever_violent_onset_no_chill_stage",
+      "label": "Sudden high fever, violent onset, no chill stage",
+      "section": "Fever",
+      "rubric": "Sudden high fever, violent onset, no chill stage"
+    },
+    {
+      "id": "sym_one_sided_heat_one_part_hot_one_part_cold",
+      "label": "One-sided heat / one part hot one part cold",
+      "section": "Fever",
+      "rubric": "One-sided heat / one part hot one part cold"
+    },
+    {
+      "id": "sym_profuse_sweat_with_fever_sweat_does_not_relieve",
+      "label": "Profuse sweat with fever, sweat does not relieve",
+      "section": "Fever",
+      "rubric": "Profuse sweat with fever, sweat does not relieve"
+    },
+    {
+      "id": "sym_stony_hard_glandular_swellings_no_suppuration_indu",
+      "label": "Stony hard glandular swellings, no suppuration…",
+      "section": "Common",
+      "rubric": "Stony hard glandular swellings, no suppuration, indurated tissue"
+    },
+    {
+      "id": "sym_chronic_glandular_swelling_hard_nodules_slow_to_su",
+      "label": "Chronic glandular swelling, hard nodules, slow to…",
+      "section": "Common",
+      "rubric": "Chronic glandular swelling, hard nodules, slow to suppurate"
+    },
+    {
+      "id": "sym_chronic_weakness_chilly_offensive_sweaty_feet_slow",
+      "label": "Chronic weakness, chilly, offensive sweaty feet…",
+      "section": "Common",
+      "rubric": "Chronic weakness, chilly, offensive sweaty feet, slow-healing wounds"
+    },
+    {
+      "id": "sym_stool_recedes_after_partial_expulsion_bashful_shy_",
+      "label": "Stool recedes after partial expulsion (bashful/shy…",
+      "section": "Stool",
+      "rubric": "Stool recedes after partial expulsion (bashful/shy stool)"
+    }
   ]
 }
