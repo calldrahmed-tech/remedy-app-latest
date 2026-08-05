@@ -543,16 +543,23 @@ function renderNosodeSection(ranked) {
 // pure granular-symptom result (no named condition selected) has no genuinely disease-specific
 // biochemic signal available in Protocol Mode's architecture, so per spec that line is omitted
 // entirely here rather than padded with an unjustified system-category pick.
-function renderSupportiveCare(topRemedy, biochemicSalts) {
+// tests: the curated {name, reason} array from the selected disease's own clinically-indicated
+// investigations, or null. Same principle as biochemicSalts above — a pure granular-symptom
+// result has no disease-specific "what to investigate" signal, so the Suggested Tests line is
+// omitted entirely rather than defaulting to a routine "Clinical evaluation" placeholder.
+function renderSupportiveCare(topRemedy, biochemicSalts, tests) {
   const advice = fallbackAdvice(topRemedy);
   const biochemicLine = biochemicSalts && biochemicSalts.length
     ? `<div class="support-line"><b>Biochemic:</b> ${biochemicSalts.map(b => esc(b.name) + " (" + esc(b.dose) + ")").join(", ")}</div>`
+    : "";
+  const testsLine = tests && tests.length
+    ? `<div class="support-line"><b>Suggested Tests:</b> ${tests.map(t => `${esc(t.name)} — ${esc(t.reason)}`).join("; ")}</div>`
     : "";
   return `<div class="support-section-small">
     <div class="support-title">Supportive Care</div>
     ${biochemicLine}
     <div class="support-line"><b>Diet:</b> Avoid ${esc((advice.diet.avoid || [])[0] || "trigger foods")}</div>
-    <div class="support-line"><b>Tests:</b> ${esc((advice.tests || [])[0] || "Clinical evaluation")}</div>
+    ${testsLine}
   </div>`;
 }
 
@@ -567,6 +574,8 @@ function runProtocolSearch() {
                                 // actually shown on screen rather than an arbitrary default
   let supportiveBiochemicSalts = null; // only ever populated from a selected disease's own
                                         // curated biochemicSalts — never a generic guess
+  let supportiveTests = null; // only ever populated from a selected disease's own curated
+                               // tests — never a generic "Clinical evaluation" placeholder
 
   // Disease shortcuts render their own authored protocols[] directly — no symptom scoring
   // involved, since the doctor explicitly named the condition rather than describing symptoms.
@@ -589,6 +598,7 @@ function runProtocolSearch() {
           return { name: b ? b.abbr : s.id, dose: s.dose, justification: s.justification };
         });
       }
+      if (disease.tests && disease.tests.length) supportiveTests = disease.tests;
     }
     disease.protocols.forEach(p => {
       const label = p.tier === "primary" ? "Primary" : p.tier === "secondary" ? "Secondary" : (p.label || "Curated");
@@ -636,7 +646,7 @@ function runProtocolSearch() {
     return;
   }
 
-  if (supportiveRemedy) html += renderSupportiveCare(supportiveRemedy, supportiveBiochemicSalts);
+  if (supportiveRemedy) html += renderSupportiveCare(supportiveRemedy, supportiveBiochemicSalts, supportiveTests);
   html += `<div class="caution">⚠ Expert Protocol gives a fast, symptom-merit-based suggestion from chief complaints only — it is not a substitute for full case-taking. Switch to Full Repertory mode for a complete repertorized analysis.</div>`;
 
   protocolResultsEl.innerHTML = html;

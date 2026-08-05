@@ -12419,10 +12419,14 @@
       },
       "biochemic": "Mag Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Stool routine and microscopy",
-        "Complete blood count",
-        "Thyroid profile (TSH)",
-        "Celiac screen if bloating persists"
+        {
+          "name": "CBC",
+          "reason": "To exclude anemia or infection as an organic cause before diagnosing IBS, which is a diagnosis of exclusion."
+        },
+        {
+          "name": "TSH",
+          "reason": "To exclude thyroid dysfunction, which can mimic IBS symptoms."
+        }
       ],
       "diet": {
         "eat": [
@@ -12527,9 +12531,10 @@
       },
       "biochemic": "Nat Phos 6X, 4 tablets after meals",
       "tests": [
-        "Upper GI endoscopy if persistent (>4 weeks)",
-        "H. pylori breath/stool antigen test",
-        "Abdominal ultrasound"
+        {
+          "name": "Upper GI endoscopy",
+          "reason": "Only if symptoms are persistent beyond 4 weeks, fail standard treatment, or alarm features are present."
+        }
       ],
       "diet": {
         "eat": [
@@ -12634,9 +12639,14 @@
       },
       "biochemic": "Nat Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "H. pylori stool antigen or urea breath test",
-        "Upper GI endoscopy with biopsy if alarm symptoms",
-        "CBC"
+        {
+          "name": "H. pylori stool antigen or urea breath test",
+          "reason": "The standard non-invasive test to confirm active infection."
+        },
+        {
+          "name": "Upper GI endoscopy with biopsy",
+          "reason": "Only if alarm symptoms are present, to exclude ulcer or malignancy."
+        }
       ],
       "diet": {
         "eat": [
@@ -12739,9 +12749,18 @@
       },
       "biochemic": "Nat Mur 6X, 4 tablets 3x daily",
       "tests": [
-        "Thyroid profile",
-        "Abdominal examination / X-ray if long standing",
-        "Colonoscopy if red-flag symptoms (blood, weight loss, age >50)"
+        {
+          "name": "Colonoscopy",
+          "reason": "Only if constipation is persistent with alarm features — weight loss, rectal bleeding, iron deficiency anemia, family history of colorectal cancer, new onset after age 50, or failure of treatment."
+        },
+        {
+          "name": "TSH",
+          "reason": "Only if hypothyroidism is suspected as an underlying cause."
+        },
+        {
+          "name": "Serum calcium",
+          "reason": "Only if hypercalcemia is suspected as an underlying cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -12820,10 +12839,18 @@
       },
       "biochemic": "Calc Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Fecal elastase-1",
-        "Serum vitamin B12, D, iron studies",
-        "Celiac panel (tTG-IgA)",
-        "Stool fat / fecal fat test"
+        {
+          "name": "Fecal elastase-1",
+          "reason": "To assess for pancreatic exocrine insufficiency as a cause of malabsorption."
+        },
+        {
+          "name": "Serum vitamin B12, D, and iron studies",
+          "reason": "To identify specific nutrient deficiencies from malabsorption."
+        },
+        {
+          "name": "Celiac panel (tTG-IgA)",
+          "reason": "To exclude celiac disease as the underlying cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -12926,9 +12953,10 @@
       },
       "biochemic": "Mag Phos 6X, 4 tablets during acute pain, warm water",
       "tests": [
-        "Blood pressure check",
-        "MRI brain if red-flag features (sudden severe, neuro deficit)",
-        "Eye examination"
+        {
+          "name": "MRI brain",
+          "reason": "Only if there are red-flag features — sudden severe onset, new neurological deficit, or change in headache pattern — to exclude a structural cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -13024,9 +13052,14 @@
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Urine routine and microscopy",
-        "Urine culture and sensitivity",
-        "Renal function test if recurrent"
+        {
+          "name": "Urine routine and microscopy",
+          "reason": "To confirm infection."
+        },
+        {
+          "name": "Urine culture and sensitivity",
+          "reason": "To identify the organism and guide antibiotic choice."
+        }
       ],
       "diet": {
         "eat": [
@@ -13121,9 +13154,14 @@
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily; Kali Mur 6X, 4 tablets 3x daily",
       "tests": [
-        "Throat swab culture if recurrent",
-        "ASO titer if rheumatic concern",
-        "CBC"
+        {
+          "name": "Throat swab culture",
+          "reason": "Only if recurrent or not responding to standard treatment."
+        },
+        {
+          "name": "ASO titer",
+          "reason": "Only if rheumatic fever is a clinical concern."
+        }
       ],
       "diet": {
         "eat": [
@@ -13244,8 +13282,10 @@
       },
       "biochemic": "Kali Sulph 6X, 4 tablets 3x daily",
       "tests": [
-        "Allergy panel (IgE) if suspected trigger",
-        "Skin scraping if fungal suspected"
+        {
+          "name": "Allergy panel (IgE)",
+          "reason": "Only if a specific trigger is suspected."
+        }
       ],
       "diet": {
         "eat": [
@@ -13347,8 +13387,14 @@
       },
       "biochemic": "Kali Phos 6X, 4 tablets at bedtime",
       "tests": [
-        "Thyroid profile",
-        "Sleep study if suspected sleep apnea"
+        {
+          "name": "Thyroid profile",
+          "reason": "Only if other symptoms suggest thyroid dysfunction as a contributing cause."
+        },
+        {
+          "name": "Sleep study",
+          "reason": "Only if sleep apnea is suspected."
+        }
       ],
       "diet": {
         "eat": [
@@ -13421,9 +13467,14 @@
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets every 2 hours during acute fever",
       "tests": [
-        "Throat swab / rapid strep test",
-        "ASO titre if suspected complications",
-        "Urinalysis (post-infection nephritis screening)"
+        {
+          "name": "Throat swab / rapid strep test",
+          "reason": "To confirm streptococcal infection."
+        },
+        {
+          "name": "Urinalysis",
+          "reason": "Post-infection screening for nephritis."
+        }
       ],
       "diet": {
         "eat": [
@@ -13488,8 +13539,14 @@
       },
       "biochemic": "Mag Phos 6X, 4 tablets as needed during coughing fits",
       "tests": [
-        "PCR or culture for Bordetella pertussis",
-        "Chest X-ray if pneumonia suspected"
+        {
+          "name": "PCR or culture for Bordetella pertussis",
+          "reason": "To confirm the diagnosis."
+        },
+        {
+          "name": "Chest X-ray",
+          "reason": "Only if pneumonia is suspected as a complication."
+        }
       ],
       "diet": {
         "eat": [
@@ -13555,9 +13612,14 @@
       },
       "biochemic": "Kali Mur 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical diagnosis usually sufficient",
-        "Serum amylase if pancreatitis suspected",
-        "Testicular ultrasound if orchitis suspected"
+        {
+          "name": "Serum amylase",
+          "reason": "Only if pancreatitis is suspected as a complication."
+        },
+        {
+          "name": "Testicular ultrasound",
+          "reason": "Only if orchitis is suspected as a complication."
+        }
       ],
       "diet": {
         "eat": [
@@ -13650,8 +13712,10 @@
       },
       "biochemic": "Kali Mur 6X, 4 tablets 3x daily; Kali Sulph 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical diagnosis usually sufficient",
-        "VZV PCR if diagnosis unclear"
+        {
+          "name": "VZV PCR",
+          "reason": "Only if the clinical diagnosis is uncertain."
+        }
       ],
       "diet": {
         "eat": [
@@ -13761,9 +13825,14 @@
       },
       "biochemic": "Kali Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Widal test",
-        "Blood culture",
-        "Complete blood count"
+        {
+          "name": "Blood culture",
+          "reason": "The most reliable test to confirm typhoid, especially in the first week."
+        },
+        {
+          "name": "Widal test",
+          "reason": "Supportive serological evidence, interpreted alongside clinical picture."
+        }
       ],
       "diet": {
         "eat": [
@@ -13854,8 +13923,14 @@
       },
       "biochemic": "Nat Mur 6X, 4 tablets 3x daily",
       "tests": [
-        "Peripheral blood smear for malaria parasite",
-        "Rapid diagnostic test (RDT)"
+        {
+          "name": "Peripheral blood smear for malaria parasite",
+          "reason": "The standard test to confirm the diagnosis and identify the species."
+        },
+        {
+          "name": "Rapid diagnostic test (RDT)",
+          "reason": "Quick confirmation when microscopy is not immediately available."
+        }
       ],
       "diet": {
         "eat": [
@@ -13948,10 +14023,14 @@
       },
       "biochemic": null,
       "tests": [
-        "Pelvic ultrasound",
-        "LH/FSH ratio",
-        "Fasting insulin and glucose",
-        "Testosterone levels"
+        {
+          "name": "Pelvic ultrasound",
+          "reason": "To assess for the characteristic ovarian appearance."
+        },
+        {
+          "name": "LH/FSH ratio, fasting insulin/glucose, and testosterone",
+          "reason": "Standard hormonal workup to confirm the diagnosis."
+        }
       ],
       "diet": {
         "eat": [
@@ -14025,8 +14104,14 @@
       },
       "biochemic": null,
       "tests": [
-        "TSH, free T3, free T4",
-        "Anti-TPO antibodies"
+        {
+          "name": "TSH",
+          "reason": "The primary test to confirm and monitor hypothyroidism."
+        },
+        {
+          "name": "Free T4",
+          "reason": "To assess the degree of thyroid hormone deficiency."
+        }
       ],
       "diet": {
         "eat": [
@@ -14098,8 +14183,10 @@
       },
       "biochemic": "Mag Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "MRI lumbosacral spine",
-        "Straight leg raise test (clinical)"
+        {
+          "name": "MRI lumbosacral spine",
+          "reason": "Only if there are red-flag features — progressive weakness, bladder/bowel involvement, or failure to improve — or pain is persistent."
+        }
       ],
       "diet": {
         "eat": [
@@ -14174,8 +14261,14 @@
       },
       "biochemic": "Calc Fluor 6X, 4 tablets 3x daily; Calc Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "X-ray of affected joint",
-        "ESR/CRP to rule out inflammatory arthritis"
+        {
+          "name": "X-ray of affected joint",
+          "reason": "To confirm degenerative changes and assess severity."
+        },
+        {
+          "name": "ESR/CRP",
+          "reason": "Only if inflammatory arthritis needs to be excluded."
+        }
       ],
       "diet": {
         "eat": [
@@ -14285,9 +14378,14 @@
       },
       "biochemic": null,
       "tests": [
-        "HPV DNA testing",
-        "Pap smear (for cervical involvement)",
-        "Colposcopy if indicated"
+        {
+          "name": "HPV DNA testing",
+          "reason": "To confirm the strain, especially where cervical involvement is a concern."
+        },
+        {
+          "name": "Pap smear",
+          "reason": "For cervical involvement in women, per routine screening guidelines."
+        }
       ],
       "diet": {
         "eat": [
@@ -14366,10 +14464,14 @@
       },
       "biochemic": null,
       "tests": [
-        "Ultrasound KUB",
-        "CT scan (non-contrast) if needed",
-        "Urinalysis",
-        "Serum creatinine"
+        {
+          "name": "Ultrasound KUB",
+          "reason": "To confirm and locate the stone."
+        },
+        {
+          "name": "Urinalysis",
+          "reason": "To check for blood or infection."
+        }
       ],
       "diet": {
         "eat": [
@@ -14440,9 +14542,7 @@
         "note": "Antimonium Crudum favored for warts on palms/soles that are hard and horny."
       },
       "biochemic": null,
-      "tests": [
-        "Clinical diagnosis usually sufficient"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Immune-supportive foods"
@@ -14510,8 +14610,10 @@
       },
       "biochemic": "Kali Mur 6X, 4 tablets 3x daily",
       "tests": [
-        "CT scan of sinuses if chronic/recurrent",
-        "Nasal endoscopy if indicated"
+        {
+          "name": "CT scan of sinuses",
+          "reason": "Only if symptoms are chronic, recurrent, or fail standard treatment."
+        }
       ],
       "diet": {
         "eat": [
@@ -14576,8 +14678,10 @@
       },
       "biochemic": "Calc Fluor 6X, 4 tablets 3x daily",
       "tests": [
-        "Ultrasound of the swelling",
-        "MRI if diagnosis unclear"
+        {
+          "name": "Ultrasound of the swelling",
+          "reason": "Only if the diagnosis is not clinically obvious, to confirm it is cystic."
+        }
       ],
       "diet": {
         "eat": [
@@ -14665,10 +14769,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Silicea 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -14738,10 +14839,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Nat Phos 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -14809,10 +14907,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Calc Sulph 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -14881,8 +14976,10 @@
       },
       "biochemic": "Silicea 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "TSH and ferritin",
+          "reason": "Only if hair loss is diffuse or progressive, to exclude thyroid dysfunction or iron deficiency as an underlying cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -14952,8 +15049,14 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Beta-hCG",
+          "reason": "To exclude pregnancy first."
+        },
+        {
+          "name": "LH/FSH, prolactin, and TSH",
+          "reason": "To identify the underlying hormonal cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -15010,8 +15113,18 @@
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "CBC",
+          "reason": "To confirm anemia and assess red cell indices."
+        },
+        {
+          "name": "Ferritin and iron studies",
+          "reason": "To confirm iron deficiency as the cause."
+        },
+        {
+          "name": "Evaluation for source of blood loss",
+          "reason": "When appropriate, to identify the underlying cause of iron deficiency."
+        }
       ],
       "diet": {
         "eat": [
@@ -15081,8 +15194,14 @@
       },
       "biochemic": "Mag Phos 6X, 4 tablets during episode, warm water",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "ECG",
+          "reason": "To assess for ischemic changes — urgent medical evaluation is required alongside this."
+        },
+        {
+          "name": "Lipid profile",
+          "reason": "To assess cardiovascular risk."
+        }
       ],
       "diet": {
         "eat": [
@@ -15154,8 +15273,10 @@
       },
       "biochemic": "Kali Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Thyroid profile",
+          "reason": "Only if physical symptoms — palpitations, weight change — suggest a possible thyroid cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -15225,8 +15346,14 @@
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "CBC",
+          "reason": "To assess for an elevated white cell count."
+        },
+        {
+          "name": "Abdominal ultrasound or CT",
+          "reason": "To confirm the diagnosis before urgent surgical referral."
+        }
       ],
       "diet": {
         "eat": [
@@ -15296,8 +15423,10 @@
       },
       "biochemic": "Mag Phos 6X, 4 tablets dissolved in warm water during attack",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Spirometry",
+          "reason": "For diagnosis confirmation and follow-up once the acute attack has settled."
+        }
       ],
       "diet": {
         "eat": [
@@ -15368,10 +15497,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": null,
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -15426,10 +15552,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Mag Phos 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -15498,8 +15621,10 @@
       },
       "biochemic": "Kali Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "MRI brain",
+          "reason": "Only if weakness is progressive, bilateral, or accompanied by other neurological signs, to exclude a central cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -15571,8 +15696,10 @@
       },
       "biochemic": "Silicea 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Fasting blood glucose",
+          "reason": "Only if boils are recurrent, to exclude underlying diabetes."
+        }
       ],
       "diet": {
         "eat": [
@@ -15642,8 +15769,10 @@
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily; Kali Mur 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Chest X-ray",
+          "reason": "Only if symptoms persist beyond 2-3 weeks or there are signs of pneumonia."
+        }
       ],
       "diet": {
         "eat": [
@@ -15724,8 +15853,10 @@
       },
       "biochemic": "Kali Sulph 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Spirometry",
+          "reason": "To assess airflow obstruction, since chronic bronchitis overlaps with COPD."
+        }
       ],
       "diet": {
         "eat": [
@@ -15796,8 +15927,10 @@
       },
       "biochemic": "Calc Fluor 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "X-ray of the spine",
+          "reason": "Only if pain is persistent or not improving, to assess degenerative changes."
+        }
       ],
       "diet": {
         "eat": [
@@ -15869,8 +16002,14 @@
       },
       "biochemic": "Nat Sulph 6X, 4 tablets 3x daily; Mag Phos 6X, 4 tablets during acute colic pain, warm water",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Abdominal ultrasound",
+          "reason": "To confirm gallstones and assess for acute cholecystitis."
+        },
+        {
+          "name": "CBC",
+          "reason": "To assess for an inflammatory response during an acute attack."
+        }
       ],
       "diet": {
         "eat": [
@@ -15950,10 +16089,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily; Nat Mur 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -16033,8 +16169,14 @@
       },
       "biochemic": "Mag Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "CBC and CRP",
+          "reason": "To assess severity and inflammation if colitis is persistent or severe."
+        },
+        {
+          "name": "Stool culture",
+          "reason": "To exclude an infectious cause of colitis."
+        }
       ],
       "diet": {
         "eat": [
@@ -16103,10 +16245,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -16175,8 +16314,14 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Spirometry",
+          "reason": "To confirm and stage airflow obstruction."
+        },
+        {
+          "name": "Pulse oximetry",
+          "reason": "Only if clinically indicated, to assess oxygenation."
+        }
       ],
       "diet": {
         "eat": [
@@ -16235,8 +16380,14 @@
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Urine routine and microscopy",
+          "reason": "To confirm infection."
+        },
+        {
+          "name": "Urine culture and sensitivity",
+          "reason": "Only if recurrent or not responding to standard treatment."
+        }
       ],
       "diet": {
         "eat": [
@@ -16305,10 +16456,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Kali Sulph 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -16377,8 +16525,14 @@
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets every 2 hours during fever",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "CBC with platelet count",
+          "reason": "To monitor for dengue hemorrhagic complications."
+        },
+        {
+          "name": "NS1 antigen or dengue serology",
+          "reason": "To confirm the diagnosis."
+        }
       ],
       "diet": {
         "eat": [
@@ -16447,10 +16601,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Kali Phos 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -16518,10 +16669,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Nat Sulph 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -16590,8 +16738,14 @@
       },
       "biochemic": "Nat Sulph 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Stool routine and culture",
+          "reason": "To identify an infectious or parasitic cause of persistent diarrhea."
+        },
+        {
+          "name": "CBC",
+          "reason": "To assess for anemia or systemic illness from chronic diarrhea."
+        }
       ],
       "diet": {
         "eat": [
@@ -16687,8 +16841,10 @@
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Stool microscopy and culture",
+          "reason": "To identify the causative organism given blood or mucus in the stool."
+        }
       ],
       "diet": {
         "eat": [
@@ -16758,8 +16914,10 @@
       },
       "biochemic": "Mag Phos 6X, 4 tablets during acute pain, warm water",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Pelvic ultrasound",
+          "reason": "Only if pain is severe, progressively worsening, or not responding to standard treatment, to exclude endometriosis or fibroids."
+        }
       ],
       "diet": {
         "eat": [
@@ -16828,10 +16986,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily; Kali Mur 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -16911,8 +17066,14 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "EEG",
+          "reason": "To support the diagnosis and classify seizure type."
+        },
+        {
+          "name": "MRI brain",
+          "reason": "To exclude a structural cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -16969,8 +17130,14 @@
       },
       "biochemic": "Nat Sulph 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Liver function tests",
+          "reason": "To assess the degree of liver involvement."
+        },
+        {
+          "name": "Abdominal ultrasound",
+          "reason": "To confirm fatty infiltration and rule out other liver pathology."
+        }
       ],
       "diet": {
         "eat": [
@@ -17039,10 +17206,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Calc Fluor 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -17111,8 +17275,10 @@
       },
       "biochemic": "Silicea 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "MRI fistulogram",
+          "reason": "To map the fistula tract before surgical planning."
+        }
       ],
       "diet": {
         "eat": [
@@ -17183,10 +17349,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Nat Phos 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -17256,10 +17419,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets every 2 hours during fever",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -17327,10 +17487,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -17399,8 +17556,10 @@
       },
       "biochemic": "Nat Sulph 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Abdominal ultrasound",
+          "reason": "The standard test to confirm gallstones and assess for complications."
+        }
       ],
       "diet": {
         "eat": [
@@ -17469,10 +17628,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Nat Phos 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -17540,10 +17696,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets every 2 hours during acute stage",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -17614,8 +17767,10 @@
       },
       "biochemic": "Nat Phos 6X, 4 tablets after meals",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Upper GI endoscopy",
+          "reason": "Only if symptoms are persistent beyond 4 weeks, fail standard treatment, or alarm features are present."
+        }
       ],
       "diet": {
         "eat": [
@@ -17685,8 +17840,14 @@
       },
       "biochemic": "Calc Fluor 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "TSH",
+          "reason": "To assess underlying thyroid function."
+        },
+        {
+          "name": "Thyroid ultrasound",
+          "reason": "To characterize the goiter and detect nodules."
+        }
       ],
       "diet": {
         "eat": [
@@ -17756,8 +17917,14 @@
       },
       "biochemic": "Nat Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Serum uric acid",
+          "reason": "To confirm and monitor hyperuricemia."
+        },
+        {
+          "name": "Joint fluid analysis",
+          "reason": "Only if the diagnosis is uncertain, to confirm urate crystals."
+        }
       ],
       "diet": {
         "eat": [
@@ -17826,10 +17993,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Mag Phos 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -17898,8 +18062,10 @@
       },
       "biochemic": "Mag Phos 6X, 4 tablets during acute pain, warm water",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "MRI brain",
+          "reason": "Only if there are red-flag features — sudden severe onset, new neurological deficit, or change in headache pattern — to exclude a structural cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -17969,8 +18135,14 @@
       },
       "biochemic": "Kali Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "ECG",
+          "reason": "To exclude an underlying arrhythmia."
+        },
+        {
+          "name": "Thyroid profile",
+          "reason": "To exclude hyperthyroidism as a cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -18042,8 +18214,10 @@
       },
       "biochemic": "Calc Fluor 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Colonoscopy",
+          "reason": "Only if rectal bleeding is present, to exclude a more serious colorectal cause, especially in patients over 50."
+        }
       ],
       "diet": {
         "eat": [
@@ -18113,8 +18287,14 @@
       },
       "biochemic": "Nat Sulph 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Liver function tests",
+          "reason": "To monitor severity and recovery."
+        },
+        {
+          "name": "Viral hepatitis serology",
+          "reason": "To confirm the specific viral cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -18184,8 +18364,10 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Viral PCR or serology",
+          "reason": "Only if the diagnosis is clinically uncertain."
+        }
       ],
       "diet": {
         "eat": [
@@ -18242,8 +18424,18 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "TSH",
+          "reason": "The primary test to confirm and monitor hyperthyroidism."
+        },
+        {
+          "name": "Free T4",
+          "reason": "To assess the degree of thyroid overactivity."
+        },
+        {
+          "name": "Free T3",
+          "reason": "To confirm the diagnosis, especially in T3 toxicosis."
+        }
       ],
       "diet": {
         "eat": [
@@ -18299,10 +18491,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Calc Sulph 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -18371,8 +18560,10 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Pelvic ultrasound and hormonal panel (LH/FSH/AMH)",
+          "reason": "Standard baseline infertility workup."
+        }
       ],
       "diet": {
         "eat": [
@@ -18429,8 +18620,10 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Semen analysis",
+          "reason": "The essential first-line test for male infertility."
+        }
       ],
       "diet": {
         "eat": [
@@ -18487,8 +18680,14 @@
       },
       "biochemic": "Nat Sulph 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Liver function tests",
+          "reason": "To determine the pattern of jaundice and guide further workup."
+        },
+        {
+          "name": "Abdominal ultrasound",
+          "reason": "To assess for biliary obstruction."
+        }
       ],
       "diet": {
         "eat": [
@@ -18557,10 +18756,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -18629,8 +18825,10 @@
       },
       "biochemic": "Kali Mur 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Vaginal swab and microscopy",
+          "reason": "Only if discharge is persistent, malodorous, or symptomatic, to identify an infective cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -18700,8 +18898,14 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Liver function tests and INR",
+          "reason": "To assess liver synthetic function and disease severity."
+        },
+        {
+          "name": "Abdominal ultrasound",
+          "reason": "To monitor for complications such as ascites or hepatocellular carcinoma."
+        }
       ],
       "diet": {
         "eat": [
@@ -18758,8 +18962,14 @@
       },
       "biochemic": "Silicea 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "CBC",
+          "reason": "To assess for infection or a hematologic cause."
+        },
+        {
+          "name": "Ultrasound of the node",
+          "reason": "Only if swelling is persistent beyond 4 weeks, progressively enlarging, or non-tender, to exclude a more serious cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -18828,10 +19038,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -18902,8 +19109,10 @@
       },
       "biochemic": "Kali Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Thyroid profile and vitamin B12",
+          "reason": "To exclude common reversible causes of memory difficulty."
+        }
       ],
       "diet": {
         "eat": [
@@ -18973,8 +19182,14 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Audiometry",
+          "reason": "To assess the hearing loss pattern characteristic of Meniere's disease."
+        },
+        {
+          "name": "MRI brain/internal auditory canal",
+          "reason": "To exclude other causes of vertigo such as acoustic neuroma."
+        }
       ],
       "diet": {
         "eat": [
@@ -19031,8 +19246,10 @@
       },
       "biochemic": "Kali Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "FSH and estradiol",
+          "reason": "Only if menopause is suspected at an unusually young age."
+        }
       ],
       "diet": {
         "eat": [
@@ -19102,8 +19319,10 @@
       },
       "biochemic": "Kali Mur 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "CBC and vitamin B12/iron/folate",
+          "reason": "Only if ulcers are recurrent or severe, to exclude a nutritional or systemic cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -19175,8 +19394,10 @@
       },
       "biochemic": "Nat Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Electrolytes and renal function",
+          "reason": "Only if vomiting is persistent or severe, to assess for dehydration."
+        }
       ],
       "diet": {
         "eat": [
@@ -19246,8 +19467,14 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Urine protein/creatinine ratio",
+          "reason": "To quantify proteinuria."
+        },
+        {
+          "name": "Serum albumin and lipid profile",
+          "reason": "To assess disease severity."
+        }
       ],
       "diet": {
         "eat": [
@@ -19304,8 +19531,14 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Fasting blood glucose and lipid profile",
+          "reason": "To screen for metabolic complications."
+        },
+        {
+          "name": "TSH",
+          "reason": "To exclude hypothyroidism as a contributing cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -19362,8 +19595,10 @@
       },
       "biochemic": "Calc Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "DEXA scan",
+          "reason": "To assess bone mineral density and confirm the diagnosis."
+        }
       ],
       "diet": {
         "eat": [
@@ -19433,8 +19668,10 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Pelvic ultrasound",
+          "reason": "To characterize the cyst and guide management."
+        }
       ],
       "diet": {
         "eat": [
@@ -19491,8 +19728,14 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Serum amylase/lipase",
+          "reason": "To confirm the diagnosis of acute pancreatitis."
+        },
+        {
+          "name": "Abdominal ultrasound or CT",
+          "reason": "To assess severity and complications."
+        }
       ],
       "diet": {
         "eat": [
@@ -19549,8 +19792,10 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Neurological imaging review",
+          "reason": "To guide ongoing rehabilitation, as directed by the treating physician — imaging is typically already completed acutely."
+        }
       ],
       "diet": {
         "eat": [
@@ -19607,8 +19852,14 @@
       },
       "biochemic": "Nat Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Upper GI endoscopy",
+          "reason": "To confirm the ulcer and exclude malignancy, especially if symptoms persist despite treatment."
+        },
+        {
+          "name": "H. pylori testing",
+          "reason": "To guide eradication therapy."
+        }
       ],
       "diet": {
         "eat": [
@@ -19677,10 +19928,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -19749,8 +19997,14 @@
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Chest X-ray",
+          "reason": "To confirm the diagnosis and assess extent of involvement."
+        },
+        {
+          "name": "CBC and CRP",
+          "reason": "To assess severity and inflammatory response."
+        }
       ],
       "diet": {
         "eat": [
@@ -19820,8 +20074,14 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "PSA",
+          "reason": "Age-appropriate screening to help exclude prostate cancer."
+        },
+        {
+          "name": "Urinalysis",
+          "reason": "To exclude urinary infection as a contributing cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -19877,10 +20137,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Kali Sulph 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -19949,10 +20206,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": null,
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -20011,8 +20265,10 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Allergy panel",
+          "reason": "Only if urticaria is chronic (over 6 weeks) or a specific trigger is suspected."
+        }
       ],
       "diet": {
         "eat": [
@@ -20069,8 +20325,10 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Polysomnography (sleep study)",
+          "reason": "To confirm the diagnosis and assess severity."
+        }
       ],
       "diet": {
         "eat": [
@@ -20126,10 +20384,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -20198,8 +20453,10 @@
       },
       "biochemic": "Calc Fluor 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "X-ray of the spine",
+          "reason": "Only if pain is persistent or not improving, to assess degenerative changes."
+        }
       ],
       "diet": {
         "eat": [
@@ -20268,10 +20525,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Kali Phos 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -20339,10 +20593,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Silicea 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -20410,10 +20661,7 @@
         "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
       },
       "biochemic": "Mag Phos 6X, 4 tablets dissolved in warm water",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -20482,8 +20730,10 @@
       },
       "biochemic": "Calc Fluor 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Venous Doppler ultrasound",
+          "reason": "Only if there is suspicion of deep vein involvement or complications such as ulceration."
+        }
       ],
       "diet": {
         "eat": [
@@ -20553,8 +20803,10 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "MRI brain",
+          "reason": "Only if red-flag neurological features are present — sudden onset, focal weakness, double vision — suggesting a central cause."
+        }
       ],
       "diet": {
         "eat": [
@@ -20611,8 +20863,10 @@
       },
       "biochemic": null,
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "TSH and thyroid antibodies",
+          "reason": "Vitiligo is associated with autoimmune thyroid disease."
+        }
       ],
       "diet": {
         "eat": [
@@ -20669,8 +20923,10 @@
       },
       "biochemic": "Nat Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "Stool routine and microscopy",
+          "reason": "To confirm the specific parasite and guide treatment."
+        }
       ],
       "diet": {
         "eat": [
@@ -20741,8 +20997,18 @@
       },
       "biochemic": "Nat Phos 6X, 4 tablets 3x daily; Ferrum Phos 6X, 4 tablets 3x daily",
       "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
+        {
+          "name": "ESR and CRP",
+          "reason": "To assess disease activity and inflammation."
+        },
+        {
+          "name": "CBC",
+          "reason": "Baseline assessment and monitoring during treatment."
+        },
+        {
+          "name": "Liver and kidney function tests",
+          "reason": "Essential monitoring during disease-modifying treatment."
+        }
       ],
       "diet": {
         "eat": [
@@ -20824,10 +21090,7 @@
         "note": "Antimonium Tart for loose rattling cough with little expectorated; Ipecac for cough with gagging and vomiting."
       },
       "biochemic": "Kali Mur 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -20896,10 +21159,7 @@
         "note": "Bryonia for dry cough worse from any motion, holds chest; Drosera for dry spasmodic cough worse at night."
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets 3x daily",
-      "tests": [
-        "Clinical evaluation",
-        "Relevant investigations as indicated by presentation"
-      ],
+      "tests": [],
       "diet": {
         "eat": [
           "Balanced, easily digestible diet"
@@ -20971,9 +21231,10 @@
       },
       "biochemic": "Ferrum Phos 6X, 4 tablets every 2 hours during acute fever",
       "tests": [
-        "Temperature monitoring",
-        "CBC if fever persists beyond 3 days",
-        "Consult a doctor for high or persistent fever, especially in children"
+        {
+          "name": "CBC",
+          "reason": "Only if fever persists beyond 3 days or is accompanied by other red-flag features."
+        }
       ],
       "diet": {
         "eat": [

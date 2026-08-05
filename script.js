@@ -1244,33 +1244,31 @@ function scoreBiochemics(inputText) {
 }
 
 /* ---------- fallback Dual-Remedy Regimen / tests / diet when no curated disease protocol matched ---------- */
+// NOTE: this table no longer carries a `tests` field per system category — that was the same
+// kind of forced, non-specific guess as the old biochemic organ-system fallback (routinely
+// suggesting "CBC and basic metabolic panel" etc. for literally any unmatched case). Suggested
+// Tests now comes ONLY from a detected diseaseProtocol's own curated, clinically-indicated
+// list (see diseaseProtocols[].tests) — an unmatched free-text case simply has no Tests line.
 const SYSTEM_FALLBACK = {
   gut: {
-    tests: ["Stool routine and microscopy", "Abdominal ultrasound if pain persists", "CBC and inflammatory markers if chronic"],
     diet: { eat: ["Small frequent easily-digestible meals", "Warm fluids, soluble fiber"], avoid: ["Spicy fried food", "Carbonated drinks", "Irregular meal timing"] }
   },
   respiratory: {
-    tests: ["Chest examination / X-ray if persistent", "Peak flow / spirometry if recurrent wheeze", "CBC"],
     diet: { eat: ["Warm fluids, steam inhalation", "Vitamin C rich fruits"], avoid: ["Cold drinks", "Dust and smoke exposure"] }
   },
   nerves: {
-    tests: ["Thyroid profile (TSH)", "Vitamin B12 and D levels", "Blood pressure check"],
     diet: { eat: ["Regular sleep schedule", "Magnesium-rich foods"], avoid: ["Excess caffeine", "Screen time before bed"] }
   },
   skin: {
-    tests: ["Allergy panel (IgE) if suspected trigger", "Skin scraping if fungal suspected"],
     diet: { eat: ["Omega-3 rich foods", "Adequate hydration"], avoid: ["Known food allergens", "Harsh soaps"] }
   },
   joints: {
-    tests: ["ESR / CRP if inflammatory picture", "Uric acid if gout suspected", "X-ray of affected joint"],
     diet: { eat: ["Anti-inflammatory foods - turmeric, ginger", "Adequate hydration"], avoid: ["Excess purine-rich food (red meat, organ meat)", "Prolonged inactivity"] }
   },
   liver: {
-    tests: ["Liver function test (LFT)", "Abdominal ultrasound"],
     diet: { eat: ["Light, low-fat meals", "Bitter greens"], avoid: ["Alcohol", "Fried and fatty food"] }
   },
   default: {
-    tests: ["General physical examination", "CBC and basic metabolic panel if symptoms persist beyond a week"],
     diet: { eat: ["Balanced light diet", "Adequate hydration and rest"], avoid: ["Irregular meals", "Self-medication beyond a few days without review"] }
   }
 };
@@ -1565,16 +1563,25 @@ function runSearch() {
   } else if (biochemicResults.length) {
     biochemicPair = biochemicResults.slice(0, 2).map(b => Object.assign({}, b.biochemic, { justification: null }));
   }
-  const advice = diseaseProtocol ? { tests: diseaseProtocol.tests, diet: diseaseProtocol.diet } : fallbackAdvice(main.remedy);
+  const advice = diseaseProtocol ? { diet: diseaseProtocol.diet } : fallbackAdvice(main.remedy);
 
   const biochemicLine = biochemicPair.length
     ? `<div class="support-line"><b>Biochemic:</b> ${biochemicPair.map(b => esc(b.abbr) + (b.justification ? ` — ${esc(b.justification)}` : "")).join("; ")}</div>`
+    : "";
+  // Suggested Tests is shown ONLY when the detected disease protocol carries genuinely
+  // indicated investigations (red flags, chronic-disease monitoring, diagnostic uncertainty —
+  // see diseaseProtocols[].tests). There is no generic organ-system fallback here: an
+  // uncomplicated case (no disease detected, or a disease with no clinically-indicated tests)
+  // simply has no Tests line at all, rather than a routine "Clinical evaluation" placeholder.
+  const tests = (diseaseProtocol && diseaseProtocol.tests) || [];
+  const testsLine = tests.length
+    ? `<div class="support-line"><b>Suggested Tests:</b> ${tests.map(t => `${esc(t.name)} — ${esc(t.reason)}`).join("; ")}</div>`
     : "";
   html += `<div class="support-section-small">
     <div class="support-title">Supportive Care</div>
     ${biochemicLine}
     <div class="support-line"><b>Diet:</b> Avoid ${esc((advice.diet.avoid || [])[0] || "trigger foods")}</div>
-    <div class="support-line"><b>Tests:</b> ${esc(advice.tests[0])}</div>
+    ${testsLine}
   </div>`;
 
   /* ---------- 5. ANALYSIS — bottom, collapsed, builds trust but stays secondary ---------- */
