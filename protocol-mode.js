@@ -436,7 +436,7 @@ function renderCombinationCard(card) {
   return `
     <div class="remedy-card gold">
       <div class="rc-head">
-        <div class="rc-eyebrow">Expert Protocol 3 · Banerji-style combination</div>
+        <div class="rc-eyebrow">Expert Protocol 3 · Combination Regimen</div>
         <div class="rc-name">${esc(card.diseaseContext)}</div>
       </div>
       <div class="rc-body">
