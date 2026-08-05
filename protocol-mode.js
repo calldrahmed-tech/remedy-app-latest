@@ -430,7 +430,7 @@ function renderProtocolCard(card, colorClass, headerLabel) {
       <div class="rc-head">
         <div class="rc-eyebrow">${esc(headerLabel)}</div>
         <div class="rc-name">${esc(card.remedy.name)}</div>
-        ${typeof card.percent === "number" ? `<div class="rc-potency">${card.percent}% match</div>` : ""}
+        ${typeof card.percent === "number" ? `<div class="rc-potency">${confidenceStarsHTML(card.percent)}</div>` : ""}
       </div>
       <div class="rc-body">
         ${p.doses.map(doseLine).join("")}
@@ -507,7 +507,7 @@ function renderMmFallbackCard(card) {
       <div class="rc-head">
         <div class="rc-eyebrow">Broader match · materia medica read</div>
         <div class="rc-name">${esc(card.remedy.name)}</div>
-        ${typeof card.percent === "number" ? `<div class="rc-potency">${card.percent}% match</div>` : ""}
+        ${typeof card.percent === "number" ? `<div class="rc-potency">${confidenceStarsHTML(card.percent)}</div>` : ""}
       </div>
       <div class="rc-body">
         ${p.doses.map(doseLine).join("")}
@@ -569,6 +569,12 @@ function runProtocolSearch() {
   if (!selectedSymptoms.length && !selectedDiseaseShortcuts.length) { protocolResultsEl.innerHTML = `<div class="msg">Add at least one chief symptom or a curated condition to get a protocol.</div>`; return; }
 
   let html = "";
+  // Check both the selected chief-symptom tags (label + rubric text) and any selected disease
+  // names for red-flag language — this is the closest thing to "case text" that Expert
+  // Protocol mode has, since there's no free-text case description here.
+  const caseText = selectedSymptoms.map(s => s.tag.label + ". " + s.tag.rubric).join(". ")
+    + ". " + selectedDiseaseShortcuts.map(d => d.label).join(". ");
+  html += renderRedFlagBanner(detectRedFlags(caseText));
   let supportiveRemedy = null; // whichever path runs first supplies the remedy used for the
                                 // Supportive Care section below, so it always reflects something
                                 // actually shown on screen rather than an arbitrary default
@@ -614,7 +620,7 @@ function runProtocolSearch() {
     if (cards.length) {
       if (selectedDiseaseShortcuts.length) html += `<div class="protocol-section-divider">Based on the individual symptoms you also selected:</div>`;
       cards.forEach(card => {
-        if (card.tier === "primary") html += renderProtocolCard(card, "green", "Expert Protocol 1 · Primary");
+        if (card.tier === "primary") { html += renderProtocolCard(card, "green", "Expert Protocol 1 · Primary"); html += renderClinicalPearl(card.remedy); }
         else if (card.tier === "alternative") html += renderProtocolCard(card, "blue", "Expert Protocol 2 · Alternative");
         // Only surface the full Banerji-style combination card — a complete separate dosing
         // protocol, shown with equal visual weight to the actual matches — when the disease it
@@ -624,6 +630,8 @@ function runProtocolSearch() {
         // that lighter-weight case belongs in the collapsed per-remedy FYI note, not a top-level card.
         else if (card.tier === "combination" && diseaseRelatesToSelection(card.diseaseContext)) html += renderCombinationCard(card);
       });
+      const caseTextForMissing = selectedSymptoms.map(s => s.tag.label + ". " + s.tag.rubric).join(". ");
+      html += renderMissingKeynotes(ranked[0].remedy, caseTextForMissing, "expert");
       html += renderNosodeSection(ranked);
       if (!supportiveRemedy) supportiveRemedy = ranked[0].remedy;
     }
@@ -646,6 +654,7 @@ function runProtocolSearch() {
     return;
   }
 
+  html += potencyGuideSection("expert");
   if (supportiveRemedy) html += renderSupportiveCare(supportiveRemedy, supportiveBiochemicSalts, supportiveTests);
   html += `<div class="caution">⚠ Expert Protocol gives a fast, symptom-merit-based suggestion from chief complaints only — it is not a substitute for full case-taking. Switch to Full Repertory mode for a complete repertorized analysis.</div>`;
 

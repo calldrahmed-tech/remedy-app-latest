@@ -1365,6 +1365,21 @@ function confidenceGaugeSVG(pct) {
   </svg>`;
 }
 
+// Doctors don't want to weigh a raw percentage themselves — a star rating with a plain-
+// English label reads faster and matches how a colleague would actually describe confidence
+// ("strong match" vs "91%"). Reused by both Classical mode and Expert Protocol mode.
+function confidenceRating(pct) {
+  if (pct >= 85) return { stars: 5, label: "Excellent Match" };
+  if (pct >= 65) return { stars: 4, label: "Strong Match" };
+  if (pct >= 45) return { stars: 3, label: "Good Match" };
+  if (pct >= 25) return { stars: 2, label: "Moderate Match" };
+  return { stars: 1, label: "Low Match" };
+}
+function confidenceStarsHTML(pct) {
+  const r = confidenceRating(pct);
+  return `<span class="confidence-stars">${"★".repeat(r.stars)}${"☆".repeat(5 - r.stars)}</span> <span class="confidence-label">${r.label}</span>`;
+}
+
 const SYSTEM_CASE_LABEL = {
   gut: "Digestive Case", respiratory: "Respiratory Case", nerves: "Nervous System Case",
   skin: "Skin Case", joints: "Joint / Rheumatic Case", liver: "Liver Case",
@@ -1394,6 +1409,120 @@ function deriveCaseTag(mainResult) {
     }
   }
   return SYSTEM_CASE_LABEL[(mainResult.remedy.system || [])[0]] || "General Case";
+}
+
+// Static, remedy-agnostic educational content — same block regardless of which remedy or case
+// is shown, so it never needs case-specific data. idSuffix keeps the toggle IDs distinct
+// between Classical (#results) and Expert Protocol (#protocolResults), which both exist in the
+// DOM at once (only one is ever visible), to avoid duplicate-ID collisions.
+function potencyGuideSection(idSuffix) {
+  const id = "potency-guide-" + idSuffix;
+  return `<div class="collapsible-section neutral">
+    <button class="collapsible-toggle" onclick="toggleSection('${id}')">
+      <span>💊 Suggested Potency Guide</span>
+      <span class="ct-link"><span id="${id}-arrow">▶</span> View guide</span>
+    </button>
+    <div id="${id}" class="collapsible-content" style="display:none;">
+      <div class="rc-field"><b>Acute Conditions</b><br>Usually 30C</div>
+      <div class="rc-field"><b>Chronic Conditions</b><br>Usually 200C</div>
+      <div class="rc-field" style="margin-top:6px;"><b>Dr. Ahmed's Clinical Preference:</b> Dr. Ahmed often begins treatment with a single dose of a high potency (CM or 10M) when clinically appropriate, followed by lower potencies such as 30C for continued management. However, potency selection always depends on the individual case and should be determined by the treating physician.</div>
+      <div class="rc-field rc-related-disclosure" style="margin-top:6px;"><b>Disclaimer:</b> Potency selection depends on the patient's constitution, susceptibility, disease stage, previous treatment, and the physician's clinical judgment. These are general educational guidelines and not fixed prescribing rules.</div>
+    </div>
+  </div>`;
+}
+
+// RED FLAG SAFETY NET — plain-language warning-sign patterns. If free text (Classical mode) or
+// the doctor's selected chief-symptom tags (Expert Protocol mode) match any of these, a
+// prominent banner is shown BEFORE any remedy recommendation, urging prompt medical evaluation.
+// This is a safety feature, not a diagnostic one: each category is checked as an "any word from
+// this set appears somewhere in the text" match rather than a rigid exact phrase, deliberately
+// erring toward catching more real red-flag language (a patient rarely describes symptoms in
+// tidy clinical phrasing) rather than requiring an exact match and risking a missed warning.
+const RED_FLAG_PATTERNS = [
+  { label: "Blood in stool", any: [["blood", "stool"], ["bloody", "stool"]] },
+  { label: "Black, tarry stool (melena)", any: [["black", "stool"], ["tarry", "stool"], ["melena"]] },
+  { label: "Persistent vomiting", any: [["persistent", "vomiting"], ["vomiting", "days"], ["cannot", "keep", "down"], ["vomiting", "continuously"], ["vomiting", "nonstop"]] },
+  { label: "Severe abdominal pain", any: [["severe", "abdominal", "pain"], ["excruciating", "abdominal"], ["unbearable", "stomach", "pain"], ["severe", "stomach", "pain"]] },
+  { label: "Unexplained weight loss", any: [["unexplained", "weight", "loss"], ["losing", "weight", "without", "trying"], ["weight", "loss", "no", "reason"], ["rapid", "weight", "loss"]] },
+  { label: "High fever lasting several days", any: [["fever", "several", "days"], ["fever", "3", "days"], ["fever", "three", "days"], ["persistent", "high", "fever"], ["fever", "week"], ["fever", "many", "days"]] },
+  { label: "Persistent rectal bleeding", any: [["rectal", "bleeding"], ["bleeding", "rectum"], ["bleeding", "anus"]] },
+  { label: "Severe dehydration", any: [["severe", "dehydration"], ["very", "dehydrated"], ["signs", "dehydration"]] },
+  { label: "Difficulty breathing", any: [["difficulty", "breathing"], ["shortness", "breath"], ["cannot", "breathe"], ["breathless", "rest"], ["struggling", "breathe"], ["trouble", "breathing"]] },
+  { label: "Chest pain", any: [["chest", "pain"], ["tightness", "chest"], ["pain", "chest"]] },
+  { label: "Loss of consciousness", any: [["loss", "consciousness"], ["lost", "consciousness"], ["fainted"], ["passed", "out"], ["unconscious"], ["blacked", "out"]] },
+  { label: "Progressive neurological weakness", any: [["progressive", "weakness"], ["worsening", "weakness"], ["spreading", "weakness"], ["progressive", "paralysis"], ["weakness", "getting", "worse"]] },
+  { label: "Severe headache with neurological symptoms", any: [["worst", "headache"], ["severe", "headache", "weakness"], ["severe", "headache", "vision"], ["sudden", "severe", "headache"], ["thunderclap", "headache"], ["headache", "confusion"]] },
+  { label: "Persistent blood in urine", any: [["blood", "urine"], ["bloody", "urine"], ["hematuria"]] },
+  { label: "Recurrent fainting", any: [["recurrent", "fainting"], ["fainting", "repeatedly"], ["fainted", "multiple"], ["keeps", "fainting"], ["fainting", "episodes"]] },
+  { label: "New lump suspicious for malignancy", any: [["new", "lump"], ["growing", "lump"], ["suspicious", "lump"], ["lump", "growing"], ["hard", "lump"]] }
+];
+function detectRedFlags(text) {
+  if (!text) return [];
+  const t = " " + text.toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ") + " ";
+  const hits = [];
+  RED_FLAG_PATTERNS.forEach(rf => {
+    if (rf.any.some(words => words.every(w => t.includes(" " + w + " ")))) hits.push(rf.label);
+  });
+  return hits;
+}
+function renderRedFlagBanner(hits) {
+  if (!hits.length) return "";
+  return `<div class="red-flag-banner">
+    <div class="red-flag-title">🚨 Red Flag – Medical Evaluation Recommended</div>
+    <div class="red-flag-detected">Detected: ${hits.map(h => esc(h)).join(", ")}</div>
+    <div class="red-flag-text">Some of the selected symptoms may indicate a potentially serious medical condition. Prompt evaluation by a qualified physician or emergency medical service is recommended. Homeopathic treatment should not delay appropriate medical assessment.</div>
+  </div>`;
+}
+
+// MISSING KEY SYMPTOMS — for the top-matched remedy, surface a few of its own highest-weight
+// classic keynotes that were NOT substantially present in the case text/selected symptoms.
+// This isn't a scoring signal (never affects which remedy wins) — it's a case-taking prompt: a
+// doctor can glance at what else this remedy classically covers and ask the patient about it,
+// which is exactly how a repertory is meant to be used to VERIFY a match, not just produce one.
+function getMissingKeynotes(remedy, caseText) {
+  if (!remedy || !remedy.keynotes || !remedy.keynotes.length || !caseText) return [];
+  const rawWords = caseText.toLowerCase().split(/[^a-z]+/).filter(Boolean);
+  const inputWords = [...new Set(rawWords.map(fuzzyCorrect))];
+  return remedy.keynotes
+    .map(k => {
+      const kWords = [...new Set(k.t.toLowerCase().split(/[^a-z]+/).filter(w => w && !STOPWORDS.has(w)))];
+      if (!kWords.length) return null;
+      const ratio = countHits(kWords, inputWords) / kWords.length;
+      return { text: k.t, w: k.w, ratio };
+    })
+    .filter(Boolean)
+    .filter(k => k.ratio < 0.34) // largely unconfirmed by the case so far — a little incidental
+                                  // word overlap is still fine to surface as "worth checking"
+    .sort((a, b) => b.w - a.w)
+    .slice(0, 3)
+    .map(k => k.text);
+}
+function renderMissingKeynotes(remedy, caseText, idSuffix) {
+  const missing = getMissingKeynotes(remedy, caseText);
+  if (!missing.length) return "";
+  const id = "missing-keynotes-" + idSuffix;
+  return `<div class="collapsible-section neutral">
+    <button class="collapsible-toggle" onclick="toggleSection('${id}')">
+      <span>🔎 Other classic symptoms of ${esc(remedy.name)} to check for</span>
+      <span class="ct-link"><span id="${id}-arrow">▶</span> View</span>
+    </button>
+    <div id="${id}" class="collapsible-content" style="display:none;">
+      <ul class="alt-reasons">${missing.map(t => `<li>${esc(t)}</li>`).join("")}</ul>
+    </div>
+  </div>`;
+}
+
+// CLINICAL PEARL — one classical clinical-picture paragraph for the top-matched remedy, when
+// one is on file (see remedies.json remedy.clinicalPearl — currently authored for the ~45 most
+// commonly-matched remedies, not all 193; grows the same incremental way the repertory did).
+// Shown directly, not collapsed — unlike "why this remedy" or "missing symptoms," this is core
+// clinical content a doctor wants to see immediately, not something to dig for.
+function renderClinicalPearl(remedy) {
+  if (!remedy || !remedy.clinicalPearl) return "";
+  return `<div class="clinical-pearl">
+    <div class="clinical-pearl-title">💎 Clinical Pearl — ${esc(remedy.name)}</div>
+    <div class="clinical-pearl-text">${esc(remedy.clinicalPearl)}</div>
+  </div>`;
 }
 
 window.toggleSection = function(id) {
@@ -1463,6 +1592,7 @@ function runSearch() {
   if (stampEl) stampEl.textContent = stamp.date.split(" ").slice(0,2).join(" ") + ", " + stamp.time;
 
   let html = "";
+  html += renderRedFlagBanner(detectRedFlags(text));
 
   /* ---------- 0. WHAT I UNDERSTOOD — detective-style: show the recognized clues first,
      before the conclusion. Uses the actual patterns recognized in the TEXT itself (rubric
@@ -1488,6 +1618,7 @@ function runSearch() {
     </div>
     <button class="md-cta">Start with this remedy</button>
   </div>`;
+  html += renderClinicalPearl(main.remedy);
 
   /* ---------- 2. ALTERNATIVE — collapsed by default ---------- */
   if (close) {
@@ -1506,6 +1637,7 @@ function runSearch() {
       </div>
     </div>`;
   }
+  html += renderMissingKeynotes(main.remedy, text, "classical");
 
   // A curated Banerji-style dual-remedy combination card used to render here whenever
   // detectDiseaseProtocol() matched a named condition. That's now Expert Protocol mode's job
@@ -1546,6 +1678,7 @@ function runSearch() {
       </div>`;
     }
   }
+  html += potencyGuideSection("classical");
 
   /* ---------- 4. SUPPORT — kept small, not highlighted ---------- */
   // Biochemic support is shown only when there's a genuine signal: the curated, disease-
@@ -1593,7 +1726,7 @@ function runSearch() {
     </button>
     <div id="why-section" class="collapsible-content" style="display:none;">
       <ul class="alt-reasons">${symptomBullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>
-      <div class="support-line" style="margin-top:8px;">Match confidence: ${confidenceGaugeSVG(main.percent)} <b>${main.percent}%</b></div>
+      <div class="support-line" style="margin-top:8px;">Match confidence: ${confidenceGaugeSVG(main.percent)} ${confidenceStarsHTML(main.percent)}</div>
     </div>
   </div>`;
 
