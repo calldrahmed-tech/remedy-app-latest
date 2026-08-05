@@ -40,6 +40,7 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .mode-tab { flex: 1; background: none; border: none; padding: 9px 10px; border-radius: 9px; color: rgba(255,255,255,0.75); font-family: inherit; font-size: 0.84rem; font-weight: 700; cursor: pointer; }
 .mode-tab.active { background: #fff; color: var(--navy); }
 .symptom-sublabel { font-size: 0.72rem; font-weight: 500; color: rgba(255,255,255,0.65); }
+.protocol-input-hint { font-size: 0.78rem; color: rgba(255,255,255,0.65); margin: -4px 0 12px; line-height: 1.4; }
 
 /* ---------- PROTOCOL MODE: chip input ---------- */
 .protocol-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 10px; }
