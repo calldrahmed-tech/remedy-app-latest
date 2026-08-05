@@ -11,6 +11,11 @@ let CHIEF_SYMPTOM_TAGS = null; // [ {id, label, section, rubric} ] — Protocol 
                                 // one entry per repertory rubric; `rubric`+`section` is the join
                                 // key back into REPERTORY for scoring, so tag labels can be
                                 // polished independently of the underlying rubric's match text.
+let DISEASE_SHORTCUT_TAGS = null; // [ {id, label, diseaseId, searchText} ] — one per curated
+                                   // diseaseProtocols[] entry, lets a doctor jump straight to a
+                                   // named condition's own curated protocol (e.g. typing
+                                   // "abscess") instead of having to reconstruct it symptom by
+                                   // symptom in Protocol Mode's chief-symptom picker.
 
 const el = (id) => document.getElementById(id);
 const inputEl = el("symptomInput");
@@ -38,6 +43,12 @@ Promise.all([
     DB = remediesJson;
     REPERTORY = repertoryJson.repertory;
     CHIEF_SYMPTOM_TAGS = repertoryJson.chiefSymptomTags || [];
+    DISEASE_SHORTCUT_TAGS = (DB.diseaseProtocols || []).map(p => ({
+      id: "disease_" + p.id,
+      label: p.name,
+      diseaseId: p.id,
+      searchText: (p.name + " " + (p.synonyms || []).join(" ") + " " + (p.genericSynonyms || []).join(" ")).toLowerCase()
+    }));
     buildWordDict();
     statusEl.textContent = "";
     resultBtn.disabled = false;

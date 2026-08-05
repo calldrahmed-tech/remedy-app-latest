@@ -59,6 +59,12 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .related-suggestions-label { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; margin-right: 2px; }
 .related-suggestion-item { background: rgba(255,255,255,0.08); border: 1px dashed rgba(255,255,255,0.35); border-radius: 999px; padding: 5px 12px; font-size: 0.76rem; color: #fff; font-family: inherit; cursor: pointer; }
 .related-suggestion-item:hover { background: rgba(255,255,255,0.18); }
+.disease-shortcut-chip { background: rgba(255,196,74,0.18); border-color: var(--gold); }
+.disease-chip-remove { background: rgba(255,255,255,0.2); color: #fff; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 0.68rem; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
+.disease-chip-remove:hover { background: rgba(255,255,255,0.35); }
+.disease-suggestion-item { background: rgba(255,196,74,0.08); font-weight: 700; }
+.suggestion-tag-hint { float: right; font-size: 0.68rem; font-weight: 600; color: var(--muted); }
+.protocol-section-divider { font-size: 0.78rem; font-weight: 700; color: rgba(255,255,255,0.7); margin: 14px 0 8px; }
 #getProtocolBtn { width: 100%; margin-top: 10px; background: var(--red-1); color: #fff; border: none; border-radius: 10px; padding: 13px 22px; font-size: 0.92rem; font-weight: 700; cursor: pointer; }
 #getProtocolBtn:hover:not(:disabled) { background: var(--red-2); }
 #getProtocolBtn:disabled { opacity: 0.5; cursor: not-allowed; }

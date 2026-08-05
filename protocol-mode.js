@@ -7,6 +7,12 @@
 
 const INTENSITY_CYCLE = ["+", "++", "+++", "++++"];
 let selectedSymptoms = []; // [{ tag: {id,label,section,rubric}, intensity }]
+let selectedDiseaseShortcuts = []; // [{id, label, diseaseId}] — direct picks of a named
+                                    // curated condition (e.g. "Abscess (acute, painful)"),
+                                    // kept separate from selectedSymptoms since they have no
+                                    // intensity and are scored completely differently: their
+                                    // own authored protocols[] are shown directly rather than
+                                    // going through scoreProtocolMatch's tag-grade arithmetic.
 let protocolDataReady = false;
 
 const pEl = (id) => document.getElementById(id);
@@ -62,7 +68,7 @@ document.addEventListener("smartRemedyDataReady", () => {
   updateGetProtocolBtnState();
 });
 function updateGetProtocolBtnState() {
-  getProtocolBtn.disabled = !protocolDataReady || selectedSymptoms.length === 0;
+  getProtocolBtn.disabled = !protocolDataReady || (selectedSymptoms.length === 0 && selectedDiseaseShortcuts.length === 0);
 }
 
 /* ---------- related-symptom suggestions ----------
@@ -109,13 +115,23 @@ function renderRelatedSuggestions() {
 
 /* ---------- tag search / chip management ---------- */
 function renderChips() {
-  protocolChipsEl.innerHTML = selectedSymptoms.map((sel, i) => `
+  const symptomChips = selectedSymptoms.map((sel, i) => `
     <span class="protocol-chip">
       <span class="chip-label">${esc(sel.tag.label)}</span>
       <button type="button" class="chip-intensity" data-idx="${i}" title="Tap to change importance">${esc(sel.intensity)}</button>
       <button type="button" class="chip-remove" data-idx="${i}" title="Remove">✕</button>
     </span>
   `).join("");
+  // Disease-shortcut chips look distinct (gold border, 🏷 icon, no intensity control — a
+  // named condition isn't "how strong," it's just selected or not) so a doctor can tell at a
+  // glance which chips are individual symptoms versus a direct jump to a curated condition.
+  const diseaseChips = selectedDiseaseShortcuts.map((d, i) => `
+    <span class="protocol-chip disease-shortcut-chip">
+      <span class="chip-label">🏷️ ${esc(d.label)}</span>
+      <button type="button" class="disease-chip-remove" data-idx="${i}" title="Remove">✕</button>
+    </span>
+  `).join("");
+  protocolChipsEl.innerHTML = diseaseChips + symptomChips;
   protocolChipsEl.querySelectorAll(".chip-intensity").forEach(btn => {
     btn.addEventListener("click", () => {
       const i = Number(btn.dataset.idx);
@@ -127,6 +143,13 @@ function renderChips() {
   protocolChipsEl.querySelectorAll(".chip-remove").forEach(btn => {
     btn.addEventListener("click", () => {
       selectedSymptoms.splice(Number(btn.dataset.idx), 1);
+      renderChips();
+      updateGetProtocolBtnState();
+    });
+  });
+  protocolChipsEl.querySelectorAll(".disease-chip-remove").forEach(btn => {
+    btn.addEventListener("click", () => {
+      selectedDiseaseShortcuts.splice(Number(btn.dataset.idx), 1);
       renderChips();
       updateGetProtocolBtnState();
     });
@@ -144,10 +167,21 @@ function addSymptom(tag) {
   protocolSearchEl.focus();
 }
 
+function addDiseaseShortcut(tag) {
+  if (selectedDiseaseShortcuts.some(d => d.id === tag.id)) return;
+  selectedDiseaseShortcuts.push(tag);
+  renderChips();
+  updateGetProtocolBtnState();
+  protocolSearchEl.value = "";
+  protocolSuggestionsEl.style.display = "none";
+  protocolSearchEl.focus();
+}
+
 function renderSuggestions(query) {
   if (!protocolDataReady || !query.trim()) { protocolSuggestionsEl.style.display = "none"; return; }
   const q = query.trim().toLowerCase();
   const selectedIds = new Set(selectedSymptoms.map(s => s.tag.id));
+  const selectedDiseaseIds = new Set(selectedDiseaseShortcuts.map(d => d.id));
   // Match every word of the query (in any order) against each tag's full haystack —
   // label + rubric + all of that rubric's own trigger phrases. Plain single-substring
   // matching on just the label missed real matches two different ways: (1) a keyword like
@@ -159,18 +193,31 @@ function renderSuggestions(query) {
     const hay = TAG_SEARCH_TEXT[t.id] || t.label.toLowerCase();
     return qWords.every(w => hay.includes(w));
   });
+  // Disease shortcuts (the 117 curated named conditions) are searched separately and shown
+  // ABOVE the granular symptom matches — a doctor typing "abscess" almost certainly wants the
+  // one-tap curated Abscess protocol, not to be buried under individual symptom rubrics.
+  const diseaseHits = (DISEASE_SHORTCUT_TAGS || []).filter(d => qWords.every(w => d.searchText.includes(w)));
   const matches = allHits.filter(t => !selectedIds.has(t.id)).slice(0, 8);
-  if (!matches.length) {
+  const diseaseMatches = diseaseHits.filter(d => !selectedDiseaseIds.has(d.id)).slice(0, 5);
+  if (!matches.length && !diseaseMatches.length) {
     // Distinguish "you already added the only match" (not an error) from "this symptom
     // is not in the repertory yet" (a real coverage gap) — showing the same generic
     // message for both made an already-selected symptom look like a broken search.
-    const msg = allHits.length ? "Already added" : "No matching symptom — try a different word";
+    const msg = (allHits.length || diseaseHits.length) ? "Already added" : "No matching symptom — try a different word";
     protocolSuggestionsEl.innerHTML = `<div class="protocol-suggestion-empty">${msg}</div>`;
     protocolSuggestionsEl.style.display = "block";
     return;
   }
-  protocolSuggestionsEl.innerHTML = matches.map(t => `<button type="button" class="protocol-suggestion-item" data-id="${esc(t.id)}">${esc(t.label)}</button>`).join("");
-  protocolSuggestionsEl.querySelectorAll(".protocol-suggestion-item").forEach(btn => {
+  protocolSuggestionsEl.innerHTML =
+    diseaseMatches.map(d => `<button type="button" class="protocol-suggestion-item disease-suggestion-item" data-disease-id="${esc(d.id)}">🏷️ ${esc(d.label)} <span class="suggestion-tag-hint">curated protocol</span></button>`).join("") +
+    matches.map(t => `<button type="button" class="protocol-suggestion-item" data-id="${esc(t.id)}">${esc(t.label)}</button>`).join("");
+  protocolSuggestionsEl.querySelectorAll(".disease-suggestion-item").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const tag = DISEASE_SHORTCUT_TAGS.find(d => d.id === btn.dataset.diseaseId);
+      if (tag) addDiseaseShortcut(tag);
+    });
+  });
+  protocolSuggestionsEl.querySelectorAll(".protocol-suggestion-item:not(.disease-suggestion-item)").forEach(btn => {
     btn.addEventListener("click", () => {
       const tag = CHIEF_SYMPTOM_TAGS.find(t => t.id === btn.dataset.id);
       if (tag) addSymptom(tag);
@@ -294,6 +341,25 @@ function renderCombinationCard(card) {
     </div>`;
 }
 
+function renderDiseaseShortcutCard(disease, p, headerLabel) {
+  return `
+    <div class="remedy-card gold">
+      <div class="rc-head">
+        <div class="rc-eyebrow">${esc(headerLabel)} · Curated protocol</div>
+        <div class="rc-name">${esc(disease.name)}</div>
+      </div>
+      <div class="rc-body">
+        ${p.doses.map(doseLine).join("")}
+        ${p.biochemicSupport ? `<div class="rc-dose-line">+ Biochemic support: ${esc(p.biochemicSupport.text)}</div>` : ""}
+        ${protocolFieldRow("Duration", p.duration)}
+        ${protocolFieldRow("Review", p.review)}
+        ${protocolFieldRow("Expected response", p.expectedResponse)}
+        ${protocolFieldRow("Tip", p.tip)}
+        ${p.note ? `<div class="rc-field">${esc(p.note)}</div>` : ""}
+      </div>
+    </div>`;
+}
+
 /* ---------- Nosode / Supportive Care (reuses the same helpers Classical mode uses) ---------- */
 function renderNosodeSection(ranked) {
   const nosodeRemedy = protocolNosodeSuggestion(ranked) || DB.remedies.find(r => r.id === "psor");
@@ -327,31 +393,56 @@ function renderSupportiveCare(topRemedy) {
 /* ---------- main entry point ---------- */
 function runProtocolSearch() {
   if (!protocolDataReady) { protocolResultsEl.innerHTML = `<div class="msg">Database still loading — try again in a moment.</div>`; return; }
-  if (!selectedSymptoms.length) { protocolResultsEl.innerHTML = `<div class="msg">Add at least one chief symptom to get a protocol.</div>`; return; }
+  if (!selectedSymptoms.length && !selectedDiseaseShortcuts.length) { protocolResultsEl.innerHTML = `<div class="msg">Add at least one chief symptom or a curated condition to get a protocol.</div>`; return; }
 
-  const ranked = scoreProtocolMatch(selectedSymptoms);
-  const cards = generateProtocolCards(selectedSymptoms);
+  let html = "";
+  let supportiveRemedy = null; // whichever path runs first supplies the remedy used for the
+                                // Supportive Care section below, so it always reflects something
+                                // actually shown on screen rather than an arbitrary default
 
-  if (!cards.length) {
+  // Disease shortcuts render their own authored protocols[] directly — no symptom scoring
+  // involved, since the doctor explicitly named the condition rather than describing symptoms.
+  selectedDiseaseShortcuts.forEach(d => {
+    const disease = (DB.diseaseProtocols || []).find(p => p.id === d.diseaseId);
+    if (!disease || !disease.protocols || !disease.protocols.length) return;
+    if (!supportiveRemedy && disease.primaryRemedies && disease.primaryRemedies.length) {
+      supportiveRemedy = DB.remedies.find(r => r.id === disease.primaryRemedies[0]) || null;
+    }
+    disease.protocols.forEach(p => {
+      const label = p.tier === "primary" ? "Primary" : p.tier === "secondary" ? "Secondary" : (p.label || "Curated");
+      html += renderDiseaseShortcutCard(disease, p, label);
+    });
+  });
+
+  // Granular chief-symptom scoring runs independently and appends below, clearly separated,
+  // if the doctor also picked individual symptoms alongside (or instead of) a disease shortcut.
+  if (selectedSymptoms.length) {
+    const ranked = scoreProtocolMatch(selectedSymptoms);
+    const cards = generateProtocolCards(selectedSymptoms);
+    if (cards.length) {
+      if (selectedDiseaseShortcuts.length) html += `<div class="protocol-section-divider">Based on the individual symptoms you also selected:</div>`;
+      cards.forEach(card => {
+        if (card.tier === "primary") html += renderProtocolCard(card, "green", "Protocol 1 · Primary");
+        else if (card.tier === "alternative") html += renderProtocolCard(card, "blue", "Protocol 2 · Alternative");
+        // Only surface the full Banerji-style combination card — a complete separate dosing
+        // protocol, shown with equal visual weight to the actual matches — when the disease it
+        // was authored for genuinely overlaps with what the doctor selected. An unrelated
+        // disease's full protocol (e.g. "Depression" surfacing on a hair-loss case just because
+        // the same remedy happens to treat both) is real noise, not a helpful cross-reference —
+        // that lighter-weight case belongs in the collapsed per-remedy FYI note, not a top-level card.
+        else if (card.tier === "combination" && diseaseRelatesToSelection(card.diseaseContext)) html += renderCombinationCard(card);
+      });
+      html += renderNosodeSection(ranked);
+      if (!supportiveRemedy) supportiveRemedy = ranked[0].remedy;
+    }
+  }
+
+  if (!html) {
     protocolResultsEl.innerHTML = `<div class="msg">No confident protocol match for this combination — try adding a more specific chief symptom, or switch to Classical mode for full-text case-taking.</div>`;
     return;
   }
 
-  let html = "";
-  cards.forEach(card => {
-    if (card.tier === "primary") html += renderProtocolCard(card, "green", "Protocol 1 · Primary");
-    else if (card.tier === "alternative") html += renderProtocolCard(card, "blue", "Protocol 2 · Alternative");
-    // Only surface the full Banerji-style combination card — a complete separate dosing
-    // protocol, shown with equal visual weight to the actual matches — when the disease it
-    // was authored for genuinely overlaps with what the doctor selected. An unrelated
-    // disease's full protocol (e.g. "Depression" surfacing on a hair-loss case just because
-    // the same remedy happens to treat both) is real noise, not a helpful cross-reference —
-    // that lighter-weight case belongs in the collapsed per-remedy FYI note, not a top-level card.
-    else if (card.tier === "combination" && diseaseRelatesToSelection(card.diseaseContext)) html += renderCombinationCard(card);
-  });
-
-  html += renderNosodeSection(ranked);
-  html += renderSupportiveCare(ranked[0].remedy);
+  if (supportiveRemedy) html += renderSupportiveCare(supportiveRemedy);
   html += `<div class="caution">⚠ Protocol Mode gives a fast, symptom-merit-based suggestion from chief complaints only — it is not a substitute for full case-taking. Switch to Classical mode for a complete repertorized analysis.</div>`;
 
   protocolResultsEl.innerHTML = html;

@@ -64,19 +64,21 @@
         Free to create an account. Login unlocks 20 AI-assisted searches per month —
         the core remedy search always stays free and unlimited either way.
       </p>
-      <div id="authNameField" style="display:none;">
-        <label class="settings-label" for="authName">Your Name</label>
-        <input type="text" id="authName" class="settings-input" placeholder="Dr. Full Name" autocomplete="name">
-      </div>
-      <label class="settings-label" for="authEmail">Email</label>
-      <input type="email" id="authEmail" class="settings-input" placeholder="you@example.com" autocomplete="email">
-      <label class="settings-label" for="authPassword">Password</label>
-      <input type="password" id="authPassword" class="settings-input" placeholder="At least 6 characters" autocomplete="current-password">
-      <div class="settings-actions">
-        <button id="authSubmitBtn" class="settings-save">Log In</button>
-        <button id="authToggleBtn" class="settings-remove">Need an account? Sign Up</button>
-      </div>
-      <div id="authStatus" class="settings-status"></div>
+      <form id="authForm" autocomplete="on">
+        <div id="authNameField" style="display:none;">
+          <label class="settings-label" for="authName">Your Name</label>
+          <input type="text" id="authName" class="settings-input" placeholder="Dr. Full Name" autocomplete="name">
+        </div>
+        <label class="settings-label" for="authEmail">Email</label>
+        <input type="email" id="authEmail" class="settings-input" placeholder="you@example.com" autocomplete="email">
+        <label class="settings-label" for="authPassword">Password</label>
+        <input type="password" id="authPassword" class="settings-input" placeholder="At least 6 characters" autocomplete="current-password">
+        <div class="settings-actions">
+          <button type="button" id="authSubmitBtn" class="settings-save">Log In</button>
+          <button type="button" id="authToggleBtn" class="settings-remove">Need an account? Sign Up</button>
+        </div>
+        <div id="authStatus" class="settings-status"></div>
+      </form>
     </div>
   </div>
 
