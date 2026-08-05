@@ -6504,6 +6504,23 @@
           "grade": 3
         }
       ]
+    },
+    {
+      "section": "Causation",
+      "rubric": "Ailments or complaints aggravated by sedentary habits, coffee, or spicy/stimulating food",
+      "triggers": [
+        "sedentary lifestyle aggravates",
+        "worse from coffee or spicy food",
+        "coffee and spicy food aggravate",
+        "sits at a desk all day and symptoms are worse",
+        "aggravated by a sedentary lifestyle"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 3
+        }
+      ]
     }
   ],
   "chiefSymptomTags": [
@@ -8396,6 +8413,12 @@
       "label": "Bearing-down sensation in the pelvis as if…",
       "section": "Female",
       "rubric": "Bearing-down sensation in the pelvis as if everything would fall out"
+    },
+    {
+      "id": "sym_ailments_or_complaints_aggravated_by_sedentary_hab",
+      "label": "Ailments or complaints aggravated by sedentary…",
+      "section": "Causation",
+      "rubric": "Ailments or complaints aggravated by sedentary habits, coffee, or spicy/stimulating food"
     }
   ]
 }
