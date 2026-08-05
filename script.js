@@ -571,6 +571,11 @@ function modalityPolarityMatches(rawKeynoteText, kWords, inputText) {
 // tier 2 (tied with General), not tier 1. Ratios below are scaled from that 5:3:1 spec.
 const SECTION_WEIGHT = {
   Modalities: 1.67,  // location & modalities — VERY HIGH (tier 1)
+  // Causation ("ailments from grief/fright/anger/...") is new — a doctor reaches for this
+  // rubric before almost anything else when a case names its own trigger; it's given the
+  // highest weight of any section since it's rarely coincidental the way a bare physical
+  // symptom can be.
+  Causation: 2.0,
   Mind: 1.0,          // mental symptoms — HIGH (tier 2, same as general)
   Thirst: 1.0, Appetite: 1.0, // general symptoms — HIGH (tier 2)
   // Common and Extremities were originally set to the same LOW tier as bare/generic
