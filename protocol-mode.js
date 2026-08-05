@@ -519,24 +519,9 @@ function renderMmFallbackCard(card) {
     </div>`;
 }
 
-/* ---------- Nosode / Supportive Care (reuses the same helpers Classical mode uses) ---------- */
-function renderNosodeSection(ranked) {
-  const nosodeRemedy = protocolNosodeSuggestion(ranked) || DB.remedies.find(r => r.id === "psor");
-  if (!nosodeRemedy) return "";
-  return `<div class="collapsible-section neutral">
-    <button class="collapsible-toggle" onclick="toggleSection('protocol-nosode-section')">
-      <span>🧬 Nosode Support (For Chronic Cases)</span>
-      <span class="ct-link"><span id="protocol-nosode-section-arrow">▶</span> View nosode option</span>
-    </button>
-    <div id="protocol-nosode-section" class="collapsible-content" style="display:none;">
-      <div class="alt-remedy-name display">${esc(nosodeRemedy.name)} ${esc(nosodeRemedy.potency && nosodeRemedy.potency.chronic !== "-" ? nosodeRemedy.potency.chronic.split(",")[0] : "1M")}</div>
-      <ul class="alt-reasons">
-        <li>Often used once-weekly or once-monthly alongside the main remedy in deep-seated or recurring cases</li>
-        <li>Best selected and dosed under full case-taking, not as a standalone acute remedy</li>
-      </ul>
-    </div>
-  </div>`;
-}
+/* ---------- Supportive Care (Nosode support now comes entirely from the shared Miasmatic/
+   Disease-Specific Nosode system in script.js — renderMiasmaticAnalysis/renderMiasmaticNosodes/
+   renderDiseaseSpecificNosodes, reused here as-is) ---------- */
 
 // biochemicSalts: the curated {id, name, dose, justification} array from the selected disease
 // (when one was picked), or null. There is no generic organ-system fallback guess anymore — a
@@ -610,6 +595,11 @@ function runProtocolSearch() {
       const label = p.tier === "primary" ? "Primary" : p.tier === "secondary" ? "Secondary" : (p.label || "Curated");
       html += renderDiseaseShortcutCard(disease, p, label);
     });
+    if (disease.miasm) {
+      html += renderMiasmaticAnalysis(disease.miasm);
+      html += renderMiasmaticNosodes(disease.miasm);
+      html += renderDiseaseSpecificNosodes(disease.diseaseNosodes);
+    }
   });
 
   // Granular chief-symptom scoring runs independently and appends below, clearly separated,
@@ -632,7 +622,9 @@ function runProtocolSearch() {
       });
       const caseTextForMissing = selectedSymptoms.map(s => s.tag.label + ". " + s.tag.rubric).join(". ");
       html += renderMissingKeynotes(ranked[0].remedy, caseTextForMissing, "expert");
-      html += renderNosodeSection(ranked);
+      // Miasmatic/Disease-Specific Nosodes are shown only when a named condition was detected
+      // (see the disease-shortcut loop above) — pure granular-symptom scoring has no genuine
+      // disease-derived miasm signal to draw on, so nothing is shown here rather than guessed.
       if (!supportiveRemedy) supportiveRemedy = ranked[0].remedy;
     }
     // Rubric-grade matching came back empty or thin (top pick under 40%) — rather than leave

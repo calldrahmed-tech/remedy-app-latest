@@ -202,6 +202,12 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 /* ---------- CAUTION ---------- */
 .caution { margin: 0 20px 16px; background: #fff6de; border: 1px solid #f0d98a; border-radius: 10px; padding: 12px 16px; font-size: 0.78rem; color: #6b5410; }
 
+/* ---------- MIASMATIC ANALYSIS / NOSODES ---------- */
+.miasm-section { margin: 0 20px 12px; background: #eef7f2; border: 1px solid #bfe3cd; border-radius: 10px; padding: 12px 16px; }
+.miasm-title { font-size: 0.82rem; font-weight: 800; color: #1e6b3a; margin-bottom: 6px; }
+.miasm-row { font-size: 0.84rem; color: var(--ink); padding: 2px 0; }
+.miasm-explanation { font-size: 0.78rem; color: var(--muted); line-height: 1.45; margin-top: 4px; }
+
 /* ---------- CLINICAL PEARL ---------- */
 .clinical-pearl { margin: 0 20px 16px; background: #f4f0ff; border: 1px solid #d9cdf5; border-radius: 10px; padding: 13px 16px; }
 .clinical-pearl-title { font-size: 0.82rem; font-weight: 800; color: #5b3aa0; margin-bottom: 5px; }

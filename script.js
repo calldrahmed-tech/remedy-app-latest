@@ -317,7 +317,10 @@ function scoreProtocolMatch(selections) {
   return ids
     .map(id => {
       const remedy = DB.remedies.find(r => r.id === id);
-      if (!remedy) return null;
+      // Nosodes never compete to become the Primary/Alternative recommended remedy — same rule
+      // as Classical mode. They only ever appear via the dedicated Miasmatic/Disease-Specific
+      // Nosode sections, supporting rather than replacing the indicated constitutional remedy.
+      if (!remedy || remedy.nosode) return null;
       const percent = maxPossible > 0 ? Math.round(Math.min(100, (remedyScores[id] / maxPossible) * 100)) : 0;
       return { remedy, rawScore: remedyScores[id], percent, matched: remedyMatches[id] };
     })
@@ -370,15 +373,6 @@ function generateProtocolCards(selections) {
     cards.push({ tier: "combination", diseaseContext: combo.name, protocol: combo.protocols[0] });
   }
   return cards.slice(0, 4);
-}
-
-/* Nosode support for Protocol Mode — mirrors the Classical engine's nosode selection
-   (see showNosodeSection in runSearch) but without a chronic-context text gate, since there
-   is no free text here: shown whenever a nosode remedy ranks credibly (>=25%) among the
-   scored candidates. */
-function protocolNosodeSuggestion(ranked) {
-  const topRankedNosode = ranked.find(rr => rr.remedy.nosode && rr.percent >= 25);
-  return topRankedNosode ? topRankedNosode.remedy : null;
 }
 
 /* ---------- symptom-based scoring engine ----------
@@ -1525,6 +1519,60 @@ function renderClinicalPearl(remedy) {
   </div>`;
 }
 
+// MIASMATIC / DISEASE-SPECIFIC NOSODE SYSTEM — replaces the old single "pick one nosode"
+// mechanism entirely. Two independent tracks, per the redesign: (1) Miasmatic Analysis +
+// Miasmatic Nosode, driven by the detected disease's own classical miasm tagging (see
+// diseaseProtocols[].miasm in remedies.json); (2) Disease-Specific Nosodes, driven by that
+// same disease's diseaseNosodes[] — genuinely sparse, most diseases have none. Nosodes never
+// compete to become the MAIN recommended remedy anymore (see the unconditional nosode filter
+// in runSearch below) — they only ever appear in these dedicated support sections.
+const MIASM_NOSODE_MAP = { "Psora": "psor", "Sycosis": "med", "Tubercular": "tub", "Syphilis": "syph", "Cancerinic": "carcin" };
+const MIASM_DEPTH = { "Psora": 1, "Sycosis": 2, "Tubercular": 3, "Syphilis": 4, "Cancerinic": 5 };
+
+function renderMiasmaticAnalysis(miasm) {
+  if (!miasm) return "";
+  return `<div class="miasm-section">
+    <div class="miasm-title">🧬 Miasmatic Analysis</div>
+    <div class="miasm-row"><b>Primary Miasm:</b> ${esc(miasm.primary)}</div>
+    ${miasm.secondary ? `<div class="miasm-row"><b>Secondary Miasm:</b> ${esc(miasm.secondary)}</div>` : ""}
+    <div class="miasm-explanation">${esc(miasm.explanation)}</div>
+  </div>`;
+}
+
+// Only recommend the constitutional miasmatic nosode when there's genuine depth behind it — a
+// disease-derived miasm that is NOT a plain Psora default, or one with a secondary miasm
+// present (a mixed picture is itself a sign of deeper chronic pathology). A bare Psora
+// assignment with no secondary does not warrant reaching for Psorinum on its own; per spec,
+// nosodes must never become routine.
+function renderMiasmaticNosodes(miasm) {
+  if (!miasm) return "";
+  const warrants = miasm.primary !== "Psora" || !!miasm.secondary;
+  if (!warrants) return "";
+  const target = (miasm.secondary && MIASM_DEPTH[miasm.secondary] > MIASM_DEPTH[miasm.primary]) ? miasm.secondary : miasm.primary;
+  const remedyId = MIASM_NOSODE_MAP[target];
+  const remedy = remedyId && DB.remedies.find(r => r.id === remedyId);
+  if (!remedy) return "";
+  return `<div class="miasm-section">
+    <div class="miasm-title">🧬 Miasmatic Nosode</div>
+    <div class="miasm-row"><b>${esc(remedy.name)}</b> ${esc((remedy.potency.chronic || "1M").split(",")[0])}</div>
+    <div class="miasm-explanation">Constitutional nosode matching the ${esc(target)} miasm identified above — best given as a single dose under experienced supervision, supporting rather than replacing the indicated remedy.</div>
+  </div>`;
+}
+
+function renderDiseaseSpecificNosodes(diseaseNosodes) {
+  if (!diseaseNosodes || !diseaseNosodes.length) return "";
+  const items = diseaseNosodes.map(n => {
+    const remedy = DB.remedies.find(r => r.id === n.id);
+    if (!remedy) return "";
+    return `<div class="miasm-row"><b>${esc(remedy.name)}</b> ${esc((remedy.potency.chronic || "1M").split(",")[0])}</div><div class="miasm-explanation">${esc(n.reason)}</div>`;
+  }).filter(Boolean).join("");
+  if (!items) return "";
+  return `<div class="miasm-section">
+    <div class="miasm-title">🧬 Disease-Specific Nosodes</div>
+    ${items}
+  </div>`;
+}
+
 window.toggleSection = function(id) {
   const el = document.getElementById(id);
   const arrow = document.getElementById(id + "-arrow");
@@ -1548,21 +1596,11 @@ function runSearch() {
   // scoring pipeline above so this can never affect which remedy wins or its score.
   const { firedRubrics: recognizedPatterns } = scoreRepertory(text);
 
+  // Nosodes never compete to become the MAIN/alternative recommended remedy — per the redesign,
+  // they only ever appear as support in the dedicated Miasmatic/Disease-Specific Nosode
+  // sections below, never replacing the indicated constitutional remedy.
+  remedyResults = remedyResults.filter(r => !r.remedy.nosode);
   const chronic = isChronicContext(text);
-  const diseaseProtocolIndicatesNosode = diseaseProtocol && (diseaseProtocol.primaryRemedies || []).some(id => {
-    const rem = DB.remedies.find(r => r.id === id);
-    return rem && rem.nosode;
-  });
-  // A nosode is also allowed through when it's genuinely the clear top-scoring match on its
-  // own clinical picture (e.g. Psorinum's despair-of-recovery + offensive-discharge picture) —
-  // duration language like "chronic"/"for years" is a helpful signal but its absence shouldn't
-  // discard a nosode that the symptom content itself clearly points to.
-  const topIsClearNosodeWin = remedyResults[0] && remedyResults[0].remedy.nosode && remedyResults[0].percent >= 70 &&
-    (!remedyResults[1] || remedyResults[0].percent - remedyResults[1].percent >= 15);
-  const showNosodeSection = chronic || diseaseProtocolIndicatesNosode || topIsClearNosodeWin;
-  if (!showNosodeSection) {
-    remedyResults = remedyResults.filter(r => !r.remedy.nosode);
-  }
 
   if (!remedyResults.length && !diseaseProtocol) {
     resultsEl.innerHTML = `<div class="msg">No confident match found. Try adding a modality (worse/better from what), the mind state, or the single most peculiar symptom — these score highest.</div>`;
@@ -1648,35 +1686,15 @@ function runSearch() {
   // nosode suggestion below and the remedy-scoring boost elsewhere — only this card's rendering
   // was removed.
 
-  /* ---------- 3.5 NOSODE SUPPORT — collapsed, only for chronic cases ---------- */
-  if (showNosodeSection) {
-    // Prefer the protocol's own specified nosode if it has one; otherwise the
-    // top-ranked nosode from the symptom match itself; otherwise a sensible constitutional
-    // fallback (Psorinum covers the broadest chronic/psoric picture when nothing more
-    // specific stood out from the case).
-    const protocolNosodeId = diseaseProtocol && (diseaseProtocol.primaryRemedies || []).find(id => {
-      const rem = DB.remedies.find(r => r.id === id);
-      return rem && rem.nosode;
-    });
-    const topRankedNosodeResult = remedyResults.find(rr => rr.remedy.nosode && rr.percent >= 25);
-    const nosodeRemedy = (protocolNosodeId && DB.remedies.find(r => r.id === protocolNosodeId))
-      || (topRankedNosodeResult && topRankedNosodeResult.remedy)
-      || DB.remedies.find(r => r.id === "psor");
-    if (nosodeRemedy) {
-      html += `<div class="collapsible-section neutral">
-        <button class="collapsible-toggle" onclick="toggleSection('nosode-section')">
-          <span>🧬 Nosode Support (For Chronic Cases)</span>
-          <span class="ct-link"><span id="nosode-section-arrow">▶</span> View nosode option</span>
-        </button>
-        <div id="nosode-section" class="collapsible-content" style="display:none;">
-          <div class="alt-remedy-name display">${esc(nosodeRemedy.name)} ${esc(nosodeRemedy.potency && nosodeRemedy.potency.chronic !== "-" ? nosodeRemedy.potency.chronic.split(",")[0] : "1M")}</div>
-          <ul class="alt-reasons">
-            <li>Often used once-weekly or once-monthly alongside the main remedy in deep-seated or recurring cases</li>
-            <li>Best selected and dosed under full case-taking, not as a standalone acute remedy</li>
-          </ul>
-        </div>
-      </div>`;
-    }
+  /* ---------- 3.5 MIASMATIC / DISEASE-SPECIFIC NOSODES ---------- */
+  // Miasmatic Analysis is shown whenever a detected disease carries classical miasm tagging
+  // (see diseaseProtocols[].miasm) — informational, always safe to show. The Miasmatic Nosode
+  // and Disease-Specific Nosode sections below it are separately gated (see the functions
+  // themselves) so neither ever becomes a routine, forced recommendation.
+  if (diseaseProtocol && diseaseProtocol.miasm) {
+    html += renderMiasmaticAnalysis(diseaseProtocol.miasm);
+    html += renderMiasmaticNosodes(diseaseProtocol.miasm);
+    html += renderDiseaseSpecificNosodes(diseaseProtocol.diseaseNosodes);
   }
   html += potencyGuideSection("classical");
 

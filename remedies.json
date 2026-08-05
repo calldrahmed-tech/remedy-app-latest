@@ -12197,6 +12197,698 @@
         "chronic": "200C occasional dose"
       },
       "maxScore": 13.7
+    },
+    {
+      "id": "carcin",
+      "name": "Carcinosinum",
+      "abbr": "Carcin",
+      "category": "chronic",
+      "system": [
+        "general",
+        "nerves"
+      ],
+      "keynotes": [
+        {
+          "t": "strong family history of cancer",
+          "w": 2
+        },
+        {
+          "t": "perfectionist, sensitive, over conscientious about trifles",
+          "w": 2
+        },
+        {
+          "t": "birthmarks, moles, or cafe au lait spots",
+          "w": 1.5
+        },
+        {
+          "t": "intense love of animals or nature",
+          "w": 1
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "bacil",
+      "name": "Bacillinum",
+      "abbr": "Bacil",
+      "category": "chronic",
+      "system": [
+        "respiratory",
+        "immune"
+      ],
+      "keynotes": [
+        {
+          "t": "recurrent respiratory infections since childhood",
+          "w": 2
+        },
+        {
+          "t": "family history of tuberculosis",
+          "w": 2
+        },
+        {
+          "t": "chronic swollen glands with recurrent colds",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "hpylori-noso",
+      "name": "Helicobacter pylori Nosode",
+      "abbr": "H. pylori Noso",
+      "category": "chronic",
+      "system": [
+        "gut"
+      ],
+      "keynotes": [
+        {
+          "t": "chronic gastritis with confirmed H pylori infection",
+          "w": 2
+        },
+        {
+          "t": "recurrent peptic ulcer not responding to standard treatment",
+          "w": 2
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "strep-noso",
+      "name": "Streptococcinum",
+      "abbr": "Strep Noso",
+      "category": "chronic",
+      "system": [
+        "immune",
+        "ent"
+      ],
+      "keynotes": [
+        {
+          "t": "recurrent streptococcal tonsillitis",
+          "w": 2
+        },
+        {
+          "t": "history of rheumatic fever from streptococcal infection",
+          "w": 2
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "staph-noso",
+      "name": "Staphylococcinum",
+      "abbr": "Staph Noso",
+      "category": "chronic",
+      "system": [
+        "immune",
+        "skin"
+      ],
+      "keynotes": [
+        {
+          "t": "recurrent staphylococcal skin infections or boils",
+          "w": 2
+        },
+        {
+          "t": "chronic furunculosis not responding to treatment",
+          "w": 2
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "influenzinum",
+      "name": "Influenzinum",
+      "abbr": "Influenzinum",
+      "category": "chronic",
+      "system": [
+        "respiratory",
+        "immune"
+      ],
+      "keynotes": [
+        {
+          "t": "recurrent seasonal influenza",
+          "w": 2
+        },
+        {
+          "t": "severe influenza with prostration",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "typhoidinum",
+      "name": "Typhoidinum",
+      "abbr": "Typhoidinum",
+      "category": "chronic",
+      "system": [
+        "immune",
+        "gut"
+      ],
+      "keynotes": [
+        {
+          "t": "history of typhoid fever with lingering debility",
+          "w": 2
+        },
+        {
+          "t": "susceptibility to typhoid in endemic areas",
+          "w": 1
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "pertussinum",
+      "name": "Pertussinum",
+      "abbr": "Pertussinum",
+      "category": "chronic",
+      "system": [
+        "respiratory"
+      ],
+      "keynotes": [
+        {
+          "t": "lingering spasmodic cough after whooping cough",
+          "w": 2
+        },
+        {
+          "t": "history of pertussis infection",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "morbillinum",
+      "name": "Morbillinum",
+      "abbr": "Morbillinum",
+      "category": "chronic",
+      "system": [
+        "immune",
+        "skin"
+      ],
+      "keynotes": [
+        {
+          "t": "history of measles with lingering symptoms",
+          "w": 2
+        },
+        {
+          "t": "measles complications",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "scarlatinum",
+      "name": "Scarlatinum",
+      "abbr": "Scarlatinum",
+      "category": "chronic",
+      "system": [
+        "immune",
+        "urinary"
+      ],
+      "keynotes": [
+        {
+          "t": "history of scarlet fever",
+          "w": 2
+        },
+        {
+          "t": "post scarlet fever kidney involvement",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "vaccininum",
+      "name": "Vaccininum",
+      "abbr": "Vaccininum",
+      "category": "chronic",
+      "system": [
+        "immune",
+        "skin"
+      ],
+      "keynotes": [
+        {
+          "t": "chronic complaints dating from vaccination",
+          "w": 2
+        },
+        {
+          "t": "skin eruptions following vaccination",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "pneumococcinum",
+      "name": "Pneumococcinum",
+      "abbr": "Pneumococcinum",
+      "category": "chronic",
+      "system": [
+        "respiratory"
+      ],
+      "keynotes": [
+        {
+          "t": "recurrent lobar pneumonia",
+          "w": 2
+        },
+        {
+          "t": "susceptibility to pneumococcal respiratory infection",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "gonorrhinum",
+      "name": "Gonorrhinum",
+      "abbr": "Gonorrhinum",
+      "category": "chronic",
+      "system": [
+        "reproductive",
+        "urinary"
+      ],
+      "keynotes": [
+        {
+          "t": "history of gonorrhea with residual complaints",
+          "w": 2
+        },
+        {
+          "t": "suppressed gonorrheal discharge",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "thyroidinum",
+      "name": "Thyroidinum",
+      "abbr": "Thyroidinum",
+      "category": "chronic",
+      "system": [
+        "glands"
+      ],
+      "keynotes": [
+        {
+          "t": "confirmed hypothyroidism with sluggish metabolism",
+          "w": 2
+        },
+        {
+          "t": "supports thyroid gland function",
+          "w": 1
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "adrenalinum",
+      "name": "Adrenalinum",
+      "abbr": "Adrenalinum",
+      "category": "chronic",
+      "system": [
+        "glands",
+        "nerves"
+      ],
+      "keynotes": [
+        {
+          "t": "chronic fatigue with adrenal exhaustion",
+          "w": 2
+        },
+        {
+          "t": "low blood pressure with marked weakness",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "insulinum",
+      "name": "Insulinum",
+      "abbr": "Insulinum",
+      "category": "chronic",
+      "system": [
+        "glands"
+      ],
+      "keynotes": [
+        {
+          "t": "diabetes mellitus with pancreatic involvement",
+          "w": 2
+        },
+        {
+          "t": "supports blood sugar regulation",
+          "w": 1
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "parathyroidinum",
+      "name": "Parathyroidinum",
+      "abbr": "Parathyroidinum",
+      "category": "chronic",
+      "system": [
+        "glands",
+        "bones"
+      ],
+      "keynotes": [
+        {
+          "t": "disorders of calcium metabolism",
+          "w": 2
+        },
+        {
+          "t": "parathyroid dysfunction",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "cortisonum",
+      "name": "Cortisonum",
+      "abbr": "Cortisonum",
+      "category": "chronic",
+      "system": [
+        "glands"
+      ],
+      "keynotes": [
+        {
+          "t": "complaints related to steroid withdrawal or adrenal cortex dysfunction",
+          "w": 2
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "candida-noso",
+      "name": "Candida Albicans Nosode",
+      "abbr": "Candida Noso",
+      "category": "chronic",
+      "system": [
+        "gut",
+        "reproductive"
+      ],
+      "keynotes": [
+        {
+          "t": "recurrent vaginal or oral candidiasis",
+          "w": 2
+        },
+        {
+          "t": "chronic fungal overgrowth with sugar cravings",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "morgan-pure",
+      "name": "Morgan Pure",
+      "abbr": "Morgan Pure",
+      "category": "chronic",
+      "system": [
+        "gut",
+        "liver"
+      ],
+      "keynotes": [
+        {
+          "t": "bowel nosode for bilious liver type constitution with constipation",
+          "w": 2
+        },
+        {
+          "t": "sluggish liver with headaches",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "morgan-gaertner",
+      "name": "Morgan Gaertner",
+      "abbr": "Morgan Gaertner",
+      "category": "chronic",
+      "system": [
+        "gut",
+        "immune"
+      ],
+      "keynotes": [
+        {
+          "t": "bowel nosode for allergic hypersensitive constitution",
+          "w": 2
+        },
+        {
+          "t": "food intolerances with digestive upset",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "dysentery-co",
+      "name": "Dysentery Co.",
+      "abbr": "Dysentery Co",
+      "category": "chronic",
+      "system": [
+        "gut"
+      ],
+      "keynotes": [
+        {
+          "t": "bowel nosode for dysentery type diarrhea",
+          "w": 2
+        },
+        {
+          "t": "colitis with restlessness and anxiety",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "proteus-noso",
+      "name": "Proteus",
+      "abbr": "Proteus",
+      "category": "chronic",
+      "system": [
+        "gut",
+        "nerves"
+      ],
+      "keynotes": [
+        {
+          "t": "bowel nosode for changeable indecisive constitution",
+          "w": 2
+        },
+        {
+          "t": "wandering pains and variable symptoms",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "gaertner-noso",
+      "name": "Gaertner",
+      "abbr": "Gaertner",
+      "category": "chronic",
+      "system": [
+        "gut"
+      ],
+      "keynotes": [
+        {
+          "t": "bowel nosode for thin malnourished constitution despite good appetite",
+          "w": 2
+        },
+        {
+          "t": "chronic digestive weakness in children",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "sycotic-co",
+      "name": "Sycotic Co.",
+      "abbr": "Sycotic Co",
+      "category": "chronic",
+      "system": [
+        "gut",
+        "respiratory"
+      ],
+      "keynotes": [
+        {
+          "t": "bowel nosode for sycotic constitution with chronic catarrh",
+          "w": 2
+        },
+        {
+          "t": "joint complaints with nasal discharge",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "bacillus-7",
+      "name": "Bacillus No. 7",
+      "abbr": "Bacillus No 7",
+      "category": "chronic",
+      "system": [
+        "gut"
+      ],
+      "keynotes": [
+        {
+          "t": "bowel nosode for colitis with much flatulence and discomfort",
+          "w": 2
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
+    },
+    {
+      "id": "mutabile-noso",
+      "name": "Mutabile",
+      "abbr": "Mutabile",
+      "category": "chronic",
+      "system": [
+        "gut"
+      ],
+      "keynotes": [
+        {
+          "t": "bowel nosode for a mixed changeable symptom picture",
+          "w": 2
+        }
+      ],
+      "diseaseTags": [],
+      "nosode": true,
+      "potency": {
+        "acute": "-",
+        "chronic": "1M single dose, only under experienced practitioner supervision"
+      }
     }
   ],
   "biochemics": [
@@ -12552,7 +13244,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Mag Phos relieves the spasmodic, cramping abdominal pain typical of IBS, especially when eased by warmth or pressure."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "IBS is a functional bowel disorder with no structural or destructive change — classic psoric territory."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "gerd",
@@ -12660,7 +13358,13 @@
           "dose": "6X, 4 tablets after meals",
           "justification": "Nat Phos is the classical acid-neutralizing salt, directly addressing the hyperacidity behind GERD's reflux."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional disturbance of acid regulation without structural damage."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "h-pylori",
@@ -12772,6 +13476,17 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Phos addresses the associated hyperacidity and sour stomach that commonly accompanies H. pylori gastritis."
         }
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "Functional gastric disturbance driven by a specific, identifiable infectious agent."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "hpylori-noso",
+          "reason": "Suggested because the protocol strongly indicates chronic H. pylori-associated gastritis."
+        }
       ]
     },
     {
@@ -12861,7 +13576,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Mur corrects the poor water distribution in the bowel that produces dry, hard stool."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional bowel complaint without structural obstruction, typical of psoric pathology."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "malabsorption",
@@ -12976,7 +13697,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Calc Phos is the classical tissue-building salt for poor digestion and nutrient assimilation."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Tubercular",
+        "explanation": "Chronic nutrient wasting alongside functional digestive weakness suggests a psoric-tubercular picture."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "migraine",
@@ -13075,7 +13802,13 @@
           "dose": "6X, 4 tablets during acute pain, warm water",
           "justification": "Mag Phos is classically indicated for neuralgic, spasmodic head pain such as migraine."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Tubercular",
+        "explanation": "Functional, recurring head pain with heightened nervous sensitivity reflects the psoric-tubercular overlap common in migraine sufferers."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "uti",
@@ -13177,7 +13910,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Ferrum Phos covers the acute inflammatory stage of the urinary tract."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute functional/infectious urinary complaint."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "tonsillitis",
@@ -13305,6 +14044,17 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Mur is classically indicated once white exudate appears on the tonsils."
         }
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Sycosis",
+        "explanation": "Recurring tonsillar inflammation and swelling reflects a psoric-sycotic mix."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "strep-noso",
+          "reason": "Suggested for chronic, recurrent tonsillitis, which is frequently streptococcal in origin."
+        }
       ]
     },
     {
@@ -13411,7 +14161,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Sulph addresses the yellow, scaly, desquamating skin changes typical of chronic eczema."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "Eczema is the archetypal psoric skin disease in Hahnemann's original chronic-disease theory."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "insomnia",
@@ -13493,7 +14249,13 @@
           "dose": "6X, 4 tablets at bedtime",
           "justification": "Kali Phos is the classical indication for insomnia from nervous exhaustion or overwork."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional nervous complaint without structural change."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "scarlet-fever",
@@ -13564,6 +14326,17 @@
           "id": "ferrum-phos",
           "dose": "6X, 4 tablets every 2 hours during acute fever",
           "justification": "Ferrum Phos covers the acute febrile inflammatory stage."
+        }
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Syphilis",
+        "explanation": "An acute severe infection with potential for deeper post-infectious complications."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "scarlatinum",
+          "reason": "Suggested because the presentation is classically that of scarlet fever."
         }
       ]
     },
@@ -13636,6 +14409,17 @@
           "id": "mag-phos",
           "dose": "6X, 4 tablets as needed during coughing fits",
           "justification": "Mag Phos is the well-established classical indication for the spasmodic coughing fits of pertussis."
+        }
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Tubercular",
+        "explanation": "An acute infectious respiratory illness with marked bronchial hyperreactivity."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "pertussinum",
+          "reason": "Suggested because the presentation is classically that of pertussis (whooping cough)."
         }
       ]
     },
@@ -13736,7 +14520,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Mur is indicated for glandular swelling with associated catarrh."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Glandular swelling is a classic sycotic presentation."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "chickenpox",
@@ -13849,7 +14639,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Sulph supports the later, desquamating/healing stage of the rash."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute, self-limiting infectious skin/systemic illness."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "typhoid",
@@ -13949,6 +14745,17 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Phos addresses the nervous prostration and stupor characteristic of the typhoid state."
         }
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Syphilis",
+        "explanation": "A severe infectious illness with potential for deep, prostrating complications."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "typhoidinum",
+          "reason": "Suggested because the presentation is classically that of typhoid fever, or lingering post-typhoid debility."
+        }
       ]
     },
     {
@@ -14046,7 +14853,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Mur is the classical indication for periodic, recurring fevers with a distinct chill stage."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "Periodic, recurring fever is classically tied to the psoric miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "pcos",
@@ -14128,7 +14941,13 @@
           "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Ovarian cyst formation is a classic sycotic (excess-growth) process."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "hypothyroid",
@@ -14208,7 +15027,18 @@
           "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional glandular under-activity without destructive change."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "thyroidinum",
+          "reason": "Suggested to support underlying thyroid gland function in confirmed hypothyroidism."
+        }
+      ]
     },
     {
       "id": "sciatica",
@@ -14284,7 +15114,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Mag Phos is the classical nerve-pain relief salt, well suited to sciatic neuralgia."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Syphilis",
+        "explanation": "Nerve pain, more deeply rooted when persistent or progressive."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "osteoarthritis",
@@ -14402,7 +15238,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Calc Phos supports bone nutrition in degenerative joint changes."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Syphilis",
+        "secondary": "Sycosis",
+        "explanation": "Degenerative joint destruction with bony overgrowth (spurs) reflects a syphilitic-sycotic mix."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "genital-warts",
@@ -14488,7 +15330,13 @@
           "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Warts are the textbook classical manifestation of the sycotic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "kidney-stones",
@@ -14568,7 +15416,13 @@
           "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Stone/deposit formation is a classic sycotic process."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "warts",
@@ -14636,7 +15490,13 @@
           "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Warts are the textbook classical manifestation of the sycotic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "sinusitis",
@@ -14703,7 +15563,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Mur is indicated for thick catarrh and congestion in the sinuses."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Sycosis",
+        "explanation": "Chronic catarrh with thick discharge reflects a psoric-sycotic mix."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "ganglion-cyst",
@@ -14796,7 +15662,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Calc Fluor addresses the fibrous, connective-tissue nodule of a ganglion cyst."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Cystic overgrowth is a classic sycotic presentation."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "abscess-acute-painful",
@@ -14864,7 +15736,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Silicea promotes maturation and discharge of an abscess once suppuration has begun."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Sycosis",
+        "explanation": "Acute suppuration with an underlying tendency toward recurrent infection."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "acidity-hyperacidity",
@@ -14934,7 +15812,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Phos is the classical acid-neutralizing tissue salt, directly addressing hyperacidity."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional digestive disturbance without structural change, typical of psoric pathology."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "acne",
@@ -15002,7 +15886,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Calc Sulph is indicated once acne lesions have become pustular, supporting drainage and healing."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": "Psora",
+        "explanation": "Pustular, excess sebaceous activity reflects the sycotic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "alopecia-hair-loss",
@@ -15075,7 +15965,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Silicea supports hair and connective tissue quality, the classical basis for its use in hair loss."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "Functional hair-follicle disturbance without deeper structural pathology."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "amenorrhea-delayedabsent-periods",
@@ -15139,7 +16035,13 @@
           "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional hormonal disturbance without structural change."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "anemia",
@@ -15220,7 +16122,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Ferrum Phos is the iron-carrying tissue salt, directly relevant to anemia."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional deficiency state without structural change."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "angina-pectoris-adjunct",
@@ -15297,7 +16205,13 @@
           "dose": "6X, 4 tablets during episode, warm water",
           "justification": "Mag Phos is the classical antispasmodic salt for cramping chest pain, used only as adjunct alongside required cardiac care."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Syphilis",
+        "secondary": null,
+        "explanation": "Vascular degeneration reflects the destructive syphilitic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "anxiety-panic",
@@ -15372,7 +16286,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Phos is the classical nerve-nutrient salt for anxiety from nervous exhaustion."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional nervous complaint — the classic psoric presentation."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "appendicitis-acute-adjunct",
@@ -15449,7 +16369,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Ferrum Phos covers acute inflammation as adjunct support only, while awaiting urgent surgical evaluation."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute inflammatory process, as adjunct alongside required surgical evaluation."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "asthma-acute-attack",
@@ -15522,7 +16448,13 @@
           "dose": "6X, 4 tablets dissolved in warm water during attack",
           "justification": "Mag Phos is the classical antispasmodic, relaxing the bronchial muscle spasm of an acute attack."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Tubercular",
+        "secondary": "Psora",
+        "explanation": "Recurrent bronchial hyperreactivity is classically associated with the tubercular miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "athletes-foot-fungal-skin-infection",
@@ -15579,7 +16511,13 @@
           "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Fungal overgrowth is a classic sycotic (excess-growth) process."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "back-pain-lumbar-muscular",
@@ -15647,7 +16585,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Mag Phos relieves muscular cramping and spasm underlying non-structural back pain."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional muscular complaint without structural change."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "bells-palsy-adjunct",
@@ -15720,7 +16664,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Phos supports general nerve nutrition as adjunct care alongside required medical treatment."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Syphilis",
+        "secondary": null,
+        "explanation": "Nerve paralysis is classically associated with the syphilitic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "boils-furunculosis",
@@ -15794,6 +16744,17 @@
           "id": "silicea-bc",
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Silicea is the classical suppuration salt, promoting maturation and discharge of boils."
+        }
+      ],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": "Psora",
+        "explanation": "Recurrent suppurative skin infection reflects the sycotic miasm."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "staph-noso",
+          "reason": "Suggested for recurrent boils, which are frequently staphylococcal in origin."
         }
       ]
     },
@@ -15879,7 +16840,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Mur addresses the second stage, once thick white catarrh develops."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute, self-limiting respiratory inflammation."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "bronchitis-chronic",
@@ -15952,6 +16919,17 @@
           "id": "kali-sulph",
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Sulph is indicated for the yellow, slimy catarrh typical of chronic bronchitis."
+        }
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Tubercular",
+        "explanation": "Recurring respiratory vulnerability reflects the tubercular miasm layered on a psoric base."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "bacil",
+          "reason": "Suggested to address recurrent respiratory susceptibility consistent with a tubercular tendency."
         }
       ]
     },
@@ -16026,7 +17004,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Calc Fluor supports elasticity of ligaments and bone in degenerative spinal changes."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Syphilis",
+        "secondary": "Sycosis",
+        "explanation": "Degenerative spinal change reflects the syphilitic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "cholecystitis-gallstones-acute-colic",
@@ -16116,7 +17100,13 @@
           "dose": "6X, 4 tablets during acute colic pain, warm water",
           "justification": "Mag Phos relieves the spasmodic, cramping pain of an acute colic episode."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": "Psora",
+        "explanation": "Stone/deposit formation with acute functional colic reflects a sycotic-psoric mix."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "cold-common-coryza",
@@ -16195,7 +17185,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Mur addresses the thin, watery nasal discharge typical of the coryza stage."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A mild, self-limiting functional complaint — no deeper miasmatic support needed."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "colitis",
@@ -16272,7 +17268,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Mag Phos relieves the cramping, spasmodic pain common in colitis."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Sycosis",
+        "explanation": "Chronic inflammatory bowel change with excess mucus/discharge reflects a psoric-sycotic mix."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "conjunctivitis",
@@ -16340,7 +17342,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Ferrum Phos covers the acute inflammatory stage of the conjunctiva."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute functional inflammation."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "copd-adjunct",
@@ -16404,7 +17412,18 @@
           "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Tubercular",
+        "secondary": "Psora",
+        "explanation": "Chronic, progressive respiratory degeneration reflects the tubercular miasm."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "bacil",
+          "reason": "Suggested to address the underlying chronic respiratory susceptibility."
+        }
+      ]
     },
     {
       "id": "cystitis-uti-acute",
@@ -16483,7 +17502,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Ferrum Phos covers the acute inflammatory stage of the bladder lining."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute functional/infectious urinary complaint."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "dandruff",
@@ -16551,7 +17576,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Sulph addresses scaly, flaking scalp skin."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A mild, functional scalp complaint."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "dengue-fever-adjunct-supportive",
@@ -16628,7 +17659,13 @@
           "dose": "6X, 4 tablets every 2 hours during fever",
           "justification": "Ferrum Phos covers the acute febrile stage, as supportive adjunct care."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Syphilis",
+        "explanation": "An acute severe febrile illness with potential for hemorrhagic complications."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "depression",
@@ -16696,7 +17733,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Phos is the classical nerve-nutrient salt for depression from nervous exhaustion."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional nervous/emotional complaint without structural change."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "diarrhea-acute",
@@ -16764,7 +17807,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Sulph is the classical indication for watery, bilious diarrhea, especially worse in the morning or damp weather."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute functional disturbance without deeper miasmatic involvement."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "diarrhea-chronic",
@@ -16867,6 +17916,17 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Sulph addresses chronic bilious, watery diarrhea through its liver/bile-elimination action."
         }
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Sycosis",
+        "explanation": "Persistent bowel dysfunction with a discharge component suggests a psoric-sycotic mix."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "gaertner-noso",
+          "reason": "Suggested when chronic diarrhea reflects an underlying bowel-flora imbalance (dysbiosis)."
+        }
       ]
     },
     {
@@ -16939,6 +17999,17 @@
           "id": "ferrum-phos",
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Ferrum Phos covers the acute inflammatory stage of the bowel lining in dysentery."
+        }
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Sycosis",
+        "explanation": "Acute inflammatory bowel infection with mucus/blood discharge."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "dysentery-co",
+          "reason": "Suggested because the clinical picture is classically that of a dysentery-type bowel presentation."
         }
       ]
     },
@@ -17013,7 +18084,13 @@
           "dose": "6X, 4 tablets during acute pain, warm water",
           "justification": "Mag Phos is the classical antispasmodic salt, directly relieving menstrual cramping."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional complaint without structural change."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "ear-infection-otitis-media-acute",
@@ -17092,7 +18169,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Mur addresses the fluid/effusion stage that commonly follows."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute functional/infectious inflammation."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "epilepsy-adjunct-only",
@@ -17156,7 +18239,13 @@
           "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Syphilis",
+        "secondary": "Tubercular",
+        "explanation": "Deep neurological dysfunction reflects the syphilitic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "fatty-liver",
@@ -17233,7 +18322,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Sulph is the classical tissue salt supporting liver and bile function."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Sycosis",
+        "explanation": "Functional metabolic derangement with tissue-level excess (fatty infiltration)."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "fissure-anal",
@@ -17301,7 +18396,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Calc Fluor restores elasticity to cracked, torn tissue, directly addressing an anal fissure."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional tissue complaint without deeper miasmatic involvement."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "fistula-anal-adjunct",
@@ -17374,7 +18475,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Silicea is the classical salt for chronic suppuration, supporting resolution of a fistula tract."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Fistula formation with chronic discharge is a classic sycotic (excess-tissue, discharge) presentation."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "flatulence-gas",
@@ -17444,7 +18551,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Phos addresses fermentative, acid-driven gas from indigestion."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A purely functional digestive complaint."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "flu-influenza",
@@ -17514,6 +18627,17 @@
           "dose": "6X, 4 tablets every 2 hours during fever",
           "justification": "Ferrum Phos is the classical first-stage remedy for acute febrile onset."
         }
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute, self-limiting infectious illness."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "influenzinum",
+          "reason": "Suggested for recurrent or severe seasonal influenza."
+        }
       ]
     },
     {
@@ -17582,7 +18706,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Ferrum Phos covers the acute inflammatory stage of the gut lining in food poisoning."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute, self-limiting functional disturbance."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "gallstones",
@@ -17655,7 +18785,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Sulph is the classical liver/bile-flow salt, indicated in gallstone and biliary complaints."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": "Psora",
+        "explanation": "Stone/deposit formation is a classic sycotic (excess-formation) process."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "gastritis",
@@ -17723,7 +18859,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Phos neutralizes the excess acidity underlying gastritis."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional inflammatory disturbance of the stomach lining."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "gastroenteritis-acute",
@@ -17791,7 +18933,13 @@
           "dose": "6X, 4 tablets every 2 hours during acute stage",
           "justification": "Ferrum Phos covers the acute inflammatory/febrile stage of gastroenteritis."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute, self-limiting functional disturbance."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "gerd-acid-reflux",
@@ -17866,7 +19014,13 @@
           "dose": "6X, 4 tablets after meals",
           "justification": "Nat Phos is the classical acid-neutralizing salt, directly addressing the hyperacidity behind reflux."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional disturbance of acid regulation without structural damage."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "goiter",
@@ -17942,6 +19096,17 @@
           "id": "calc-fluor",
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Calc Fluor is classically indicated for hardened, enlarged glandular tissue."
+        }
+      ],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Glandular enlargement is a classic sycotic (excess-growth) presentation."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "thyroidinum",
+          "reason": "Suggested to support underlying thyroid gland function."
         }
       ]
     },
@@ -18020,7 +19185,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Phos is the classical acid-neutralizing salt, directly relevant to gout's uric-acid mechanism."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Uric acid deposit formation is a classic sycotic (excess-deposit) process."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "headache-tension-type",
@@ -18088,7 +19259,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Mag Phos relieves the muscular tension and spasm underlying a tension-type headache."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional, non-destructive complaint without structural change — the hallmark of the psoric miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "headache-migraine",
@@ -18161,7 +19338,13 @@
           "dose": "6X, 4 tablets during acute pain, warm water",
           "justification": "Mag Phos is classically indicated for neuralgic, spasmodic head pain such as migraine."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Tubercular",
+        "explanation": "Functional, recurring head pain with heightened nervous sensitivity reflects the psoric-tubercular overlap common in migraine sufferers."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "heart-palpitations-functional-adjunct",
@@ -18238,7 +19421,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Phos addresses functional (nervous-origin) palpitations."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional cardiac complaint without structural change, as the name implies."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "hemorrhoids-piles",
@@ -18313,7 +19502,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Calc Fluor strengthens relaxed, weakened vein walls, the classical basis for varicosities like hemorrhoids."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Venous engorgement and excess tissue formation reflect the sycotic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "hepatitis-viral-adjunct",
@@ -18390,7 +19585,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Sulph supports liver/bile function as adjunct care alongside medical treatment."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Sycosis",
+        "explanation": "Acute-to-chronic infectious liver inflammation."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "herpes-oralgenital",
@@ -18450,7 +19651,13 @@
           "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "A recurring viral eruption reflects the sycotic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "hyperthyroidism-adjunct",
@@ -18518,7 +19725,18 @@
           "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Syphilis",
+        "explanation": "Hypermetabolic glandular over-activity, occasionally with deeper tissue change."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "thyroidinum",
+          "reason": "Suggested to support thyroid gland regulation as adjunct care."
+        }
+      ]
     },
     {
       "id": "impetigo",
@@ -18586,6 +19804,17 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Calc Sulph is indicated for pustular skin eruptions once discharge has started."
         }
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Sycosis",
+        "explanation": "A superficial, contagious suppurative skin infection."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "strep-noso",
+          "reason": "Suggested because impetigo is frequently streptococcal in origin."
+        }
       ]
     },
     {
@@ -18646,7 +19875,13 @@
           "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Sycosis",
+        "explanation": "Functional hormonal or structural reproductive factors, often mixed."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "infertility-male-adjunct",
@@ -18706,7 +19941,13 @@
           "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "Typically a functional reproductive disturbance."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "jaundice",
@@ -18783,7 +20024,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Sulph is the classical indication for bile-flow disturbance underlying jaundice."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Sycosis",
+        "explanation": "Functional bile disturbance, often with an obstructive/excess component."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "laryngitis",
@@ -18851,7 +20098,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Ferrum Phos covers the acute inflammatory stage of laryngeal irritation."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute functional inflammation of the larynx."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "leucorrhea-vaginal-discharge",
@@ -18924,7 +20177,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Mur is indicated for thick, whitish mucous-membrane discharge."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Persistent discharge is a classic sycotic presentation."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "liver-cirrhosis-adjunct-only",
@@ -18988,7 +20247,13 @@
           "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Syphilis",
+        "secondary": null,
+        "explanation": "Structural, destructive tissue change is the hallmark of the syphilitic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "lymph-node-swelling",
@@ -19065,7 +20330,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Silicea promotes resolution of chronic glandular swelling."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": "Tubercular",
+        "explanation": "Glandular swelling reflects the sycotic miasm, with a tubercular overlay if persistent or hard."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "measles",
@@ -19132,6 +20403,17 @@
           "id": "ferrum-phos",
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Ferrum Phos covers the acute febrile stage of measles."
+        }
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute, self-limiting infectious illness."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "morbillinum",
+          "reason": "Suggested because the presentation is classically that of measles."
         }
       ]
     },
@@ -19208,7 +20490,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Phos supports nerve nutrition in mental fatigue and poor concentration."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Syphilis",
+        "explanation": "Functional mental fatigue, more deeply rooted if progressive."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "menieres-disease",
@@ -19272,7 +20560,13 @@
           "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Syphilis",
+        "secondary": null,
+        "explanation": "Degenerative inner-ear/nerve pathology reflects the syphilitic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "menopause-symptoms",
@@ -19345,7 +20639,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Phos addresses the nervous irritability and sleep disturbance common during menopause."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional hormonal transition without structural change."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "mouth-ulcers",
@@ -19418,7 +20718,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Mur addresses mucous-membrane inflammation such as mouth ulcers."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional mucous-membrane complaint."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "nausea-vomiting-acute",
@@ -19493,7 +20799,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Phos is classically indicated for vomiting of sour, acidic stomach contents."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute functional gastric disturbance."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "nephrotic-syndrome-adjunct-only",
@@ -19557,7 +20869,13 @@
           "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Syphilis",
+        "secondary": null,
+        "explanation": "Structural kidney damage reflects the destructive, syphilitic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "obesity",
@@ -19621,7 +20939,13 @@
           "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Sycosis",
+        "explanation": "Metabolic dysfunction with tissue-level excess."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "osteoporosis-adjunct",
@@ -19694,7 +21018,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Calc Phos is the classical bone-building salt, directly relevant to bone density loss."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Syphilis",
+        "secondary": null,
+        "explanation": "Progressive bone loss reflects the destructive syphilitic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "ovarian-cyst",
@@ -19754,7 +21084,13 @@
           "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Cystic overgrowth is a classic sycotic presentation."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "pancreatitis-adjunct-only",
@@ -19818,7 +21154,13 @@
           "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Syphilis",
+        "secondary": null,
+        "explanation": "Acute tissue destruction of the pancreas reflects the syphilitic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "paralysis-post-stroke-adjunct-only",
@@ -19878,7 +21220,13 @@
           "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Syphilis",
+        "secondary": null,
+        "explanation": "Paralysis is a hallmark presentation of the syphilitic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "peptic-ulcer",
@@ -19955,6 +21303,17 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Phos neutralizes the excess acid that aggravates peptic ulceration."
         }
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "Functional/erosive gastric pathology frequently tied to a specific infectious cause."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "hpylori-noso",
+          "reason": "Suggested because the protocol strongly indicates chronic H. pylori-associated peptic ulcer disease."
+        }
       ]
     },
     {
@@ -20023,7 +21382,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Ferrum Phos covers the acute inflammatory stage of throat irritation."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute functional inflammation of the throat."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "pneumonia-adjunct-only",
@@ -20100,6 +21465,17 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Ferrum Phos covers the acute inflammatory/febrile stage, as adjunct alongside required medical treatment."
         }
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Tubercular",
+        "explanation": "Acute lung inflammation with underlying respiratory vulnerability."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "pneumococcinum",
+          "reason": "Suggested for recurrent or lobar pneumococcal-type pneumonia, as adjunct alongside required medical care."
+        }
       ]
     },
     {
@@ -20164,7 +21540,13 @@
           "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Glandular overgrowth is a classic sycotic presentation."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "psoriasis",
@@ -20233,7 +21615,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Sulph is indicated for scaly, desquamating skin conditions such as psoriasis."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": "Tubercular",
+        "explanation": "A chronic, recurring skin disease with a tubercular overlay in more severe or family-linked cases."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "ringworm",
@@ -20289,7 +21677,13 @@
           "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Fungal overgrowth is a classic sycotic (excess-growth) process."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "skin-allergy-urticaria",
@@ -20351,7 +21745,18 @@
           "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "Allergic hypersensitivity is classically psoric in nature."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "morgan-gaertner",
+          "reason": "Suggested when urticaria reflects an underlying allergic, hypersensitive bowel-flora constitution."
+        }
+      ]
     },
     {
       "id": "sleep-apnea-adjunct-only",
@@ -20411,7 +21816,13 @@
           "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": "Tubercular",
+        "explanation": "Obstructive airway tissue excess reflects the sycotic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "sore-throat",
@@ -20479,7 +21890,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Ferrum Phos covers the acute inflammatory stage of a sore throat."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute functional throat complaint."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "spondylitis-lumbar",
@@ -20552,7 +21969,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Calc Fluor supports elasticity of ligaments and bone in degenerative spinal changes."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Syphilis",
+        "secondary": "Sycosis",
+        "explanation": "Degenerative spinal change reflects the syphilitic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "stammering",
@@ -20620,7 +22043,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Phos addresses the nervous origin often underlying stammering."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional nervous speech disturbance."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "stye",
@@ -20687,6 +22116,17 @@
           "id": "silicea-bc",
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Silicea addresses chronic, recurring glandular suppuration such as a stye."
+        }
+      ],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "A recurring, localized glandular infection reflects the sycotic miasm."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "staph-noso",
+          "reason": "Suggested for recurrent styes, which are frequently staphylococcal in origin."
         }
       ]
     },
@@ -20756,7 +22196,13 @@
           "dose": "6X, 4 tablets dissolved in warm water",
           "justification": "Mag Phos is the classical nerve-pain relief salt, well known for toothache specifically."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute functional/inflammatory complaint."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "varicose-veins",
@@ -20829,7 +22275,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Calc Fluor strengthens relaxed, weakened vein walls, the classical basis for varicosities."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": null,
+        "explanation": "Venous dilation and excess is a classic sycotic presentation."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "vertigo",
@@ -20889,7 +22341,13 @@
           "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "Most vertigo presentations are functional in nature without deeper structural change."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "vitiligo",
@@ -20949,7 +22407,13 @@
           "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
         }
       ],
-      "biochemicSalts": []
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Syphilis",
+        "secondary": null,
+        "explanation": "Destructive loss of pigment cells reflects the syphilitic miasm."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "worms-intestinal",
@@ -21022,7 +22486,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Nat Phos corrects the excess intestinal acidity classically associated with a worm-favorable gut environment."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A functional parasitic disturbance without deeper miasmatic involvement."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "rheumatoid-arthritis",
@@ -21115,7 +22585,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Ferrum Phos covers the acute inflammatory component of joint flares."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Syphilis",
+        "secondary": "Sycosis",
+        "explanation": "Destructive joint deformity with nodular excess reflects a syphilitic-sycotic mix."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "cough-productive-loose",
@@ -21185,7 +22661,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Kali Mur is classically indicated for thick, white mucus in a productive cough."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute functional respiratory complaint."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "cough-dry-irritating",
@@ -21254,7 +22736,13 @@
           "dose": "6X, 4 tablets 3x daily",
           "justification": "Ferrum Phos covers the early inflammatory stage before a cough becomes productive."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute functional respiratory complaint."
+      },
+      "diseaseNosodes": []
     },
     {
       "id": "fever-general-viral",
@@ -21331,7 +22819,13 @@
           "dose": "6X, 4 tablets every 2 hours during acute fever",
           "justification": "Ferrum Phos is the classical first-stage remedy for acute, undifferentiated fever."
         }
-      ]
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "An acute, self-limiting febrile illness."
+      },
+      "diseaseNosodes": []
     }
   ]
 }
