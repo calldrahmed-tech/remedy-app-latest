@@ -279,18 +279,16 @@ function diseaseRelatesToSelection(diseaseName) {
 
 function relatedProtocolNote(card) {
   if (!card.relatedDiseaseProtocols || !card.relatedDiseaseProtocols.length) return "";
-  return card.relatedDiseaseProtocols.map(rp => {
-    // If the disease name actually shares real wording with what's currently selected (e.g.
-    // the case IS "hair loss" and the disease is "Alopecia (hair loss)"), saying "not related
-    // to this case" would be flatly wrong, not just unhelpful — so the summary text branches
-    // on real overlap instead of always assuming the two are unconnected.
-    const related = diseaseRelatesToSelection(rp.name);
-    const summary = related
-      ? `📋 ${esc(card.remedy.name)} also has a curated protocol on file for <b>${esc(rp.name)}</b> — may be worth reviewing`
-      : `📋 FYI — ${esc(card.remedy.name)} is also separately used for <b>${esc(rp.name)}</b> (not related to this case, shown for reference only)`;
-    return `
+  // Only surface this note when the disease actually shares real wording with what's
+  // currently selected (e.g. the case IS "hair loss" and the disease is "Alopecia (hair
+  // loss)"). A disclaimed "also used for Pneumonia — not related to this case" note is still
+  // noise even collapsed — a doctor scanning past it gets nothing from being told to ignore
+  // it, so an unrelated disease is dropped entirely rather than shown with an apology.
+  return card.relatedDiseaseProtocols
+    .filter(rp => diseaseRelatesToSelection(rp.name))
+    .map(rp => `
     <details class="rc-related">
-      <summary>${summary}</summary>
+      <summary>📋 ${esc(card.remedy.name)} also has a curated protocol on file for <b>${esc(rp.name)}</b> — may be worth reviewing</summary>
       <div class="rc-related-body">
         ${rp.protocols.map(proto => `
           ${proto.doses.map(doseLine).join("")}
@@ -298,8 +296,7 @@ function relatedProtocolNote(card) {
         `).join("<hr class=\"rc-related-divider\">")}
       </div>
     </details>
-  `;
-  }).join("");
+  `).join("");
 }
 
 function renderProtocolCard(card, colorClass, headerLabel) {
