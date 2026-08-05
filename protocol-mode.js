@@ -436,7 +436,7 @@ function renderCombinationCard(card) {
   return `
     <div class="remedy-card gold">
       <div class="rc-head">
-        <div class="rc-eyebrow">Quick Match 3 · Banerji-style combination</div>
+        <div class="rc-eyebrow">Expert Protocol 3 · Banerji-style combination</div>
         <div class="rc-name">${esc(card.diseaseContext)}</div>
       </div>
       <div class="rc-body">
@@ -467,7 +467,7 @@ function renderDiseaseShortcutCard(disease, p, headerLabel) {
     </div>`;
 }
 
-// MATERIA-MEDICA FALLBACK — Quick Match's rubric-grade scoring (scoreProtocolMatch) can come
+// MATERIA-MEDICA FALLBACK — Expert Protocol's rubric-grade scoring (scoreProtocolMatch) can come
 // back thin when a doctor has only picked one or two generic tags: the rubric arithmetic has
 // no confirmatory signal to fall back on the way Classical mode's scoreRemedies() does (its
 // REP_WEIGHT + MM_WEIGHT_CONFIRM/PRIMARY blend). Rather than duplicate that whole two-signal
@@ -476,7 +476,7 @@ function renderDiseaseShortcutCard(disease, p, headerLabel) {
 // own clause so they can't spuriously bridge into one another) and runs it through the exact
 // same scoreRemedies() Classical mode calls. This is ONLY shown when the pure rubric-grade path
 // was empty or low-confidence, and always clearly labelled as a broader, less-verified read —
-// it supplements Quick Match's normal output, never replaces it.
+// it supplements Expert Protocol's normal output, never replaces it.
 function buildMateriaMedicaFallbackCard(selections) {
   if (!selections.length) return null;
   const searchText = selections.map(s => s.tag.label + ". " + s.tag.rubric).join(". ");
@@ -538,7 +538,7 @@ function renderSupportiveCare(topRemedy) {
 /* ---------- main entry point ---------- */
 function runProtocolSearch() {
   if (!protocolDataReady) { protocolResultsEl.innerHTML = `<div class="msg">Database still loading — try again in a moment.</div>`; return; }
-  if (!selectedSymptoms.length && !selectedDiseaseShortcuts.length) { protocolResultsEl.innerHTML = `<div class="msg">Add at least one chief symptom or a curated condition to get a quick match.</div>`; return; }
+  if (!selectedSymptoms.length && !selectedDiseaseShortcuts.length) { protocolResultsEl.innerHTML = `<div class="msg">Add at least one chief symptom or a curated condition to get a protocol.</div>`; return; }
 
   let html = "";
   let supportiveRemedy = null; // whichever path runs first supplies the remedy used for the
@@ -553,7 +553,7 @@ function runProtocolSearch() {
   // a real clinical operation. Flag that plainly rather than let the doctor assume the separate
   // cards below represent one unified read of a single patient.
   if (selectedDiseaseShortcuts.length > 1) {
-    html += `<div class="msg protocol-shortcut-note">📋 Each curated protocol below is looked up independently for its own named condition — they are not combined into one recommendation. For a single patient with multiple symptoms together, remove the disease-name chips above and add individual chief-symptom tags with intensity marks instead — those combine into one best-fit remedy.</div>`;
+    html += `<div class="msg protocol-shortcut-note">⚠️ Each condition below has its own separate protocol — they are not blended into one remedy. Want a single combined remedy instead? Remove these condition names and add the patient's individual symptoms with + marks.</div>`;
   }
   selectedDiseaseShortcuts.forEach(d => {
     const disease = (DB.diseaseProtocols || []).find(p => p.id === d.diseaseId);
@@ -575,8 +575,8 @@ function runProtocolSearch() {
     if (cards.length) {
       if (selectedDiseaseShortcuts.length) html += `<div class="protocol-section-divider">Based on the individual symptoms you also selected:</div>`;
       cards.forEach(card => {
-        if (card.tier === "primary") html += renderProtocolCard(card, "green", "Quick Match 1 · Primary");
-        else if (card.tier === "alternative") html += renderProtocolCard(card, "blue", "Quick Match 2 · Alternative");
+        if (card.tier === "primary") html += renderProtocolCard(card, "green", "Expert Protocol 1 · Primary");
+        else if (card.tier === "alternative") html += renderProtocolCard(card, "blue", "Expert Protocol 2 · Alternative");
         // Only surface the full Banerji-style combination card — a complete separate dosing
         // protocol, shown with equal visual weight to the actual matches — when the disease it
         // was authored for genuinely overlaps with what the doctor selected. An unrelated
@@ -603,12 +603,12 @@ function runProtocolSearch() {
   }
 
   if (!html) {
-    protocolResultsEl.innerHTML = `<div class="msg">No confident quick match for this combination — try adding a more specific chief symptom, or switch to Full Repertory mode for full-text case-taking.</div>`;
+    protocolResultsEl.innerHTML = `<div class="msg">No confident protocol match for this combination — try adding a more specific chief symptom, or switch to Full Repertory mode for full-text case-taking.</div>`;
     return;
   }
 
   if (supportiveRemedy) html += renderSupportiveCare(supportiveRemedy);
-  html += `<div class="caution">⚠ Quick Match gives a fast, symptom-merit-based suggestion from chief complaints only — it is not a substitute for full case-taking. Switch to Full Repertory mode for a complete repertorized analysis.</div>`;
+  html += `<div class="caution">⚠ Expert Protocol gives a fast, symptom-merit-based suggestion from chief complaints only — it is not a substitute for full case-taking. Switch to Full Repertory mode for a complete repertorized analysis.</div>`;
 
   protocolResultsEl.innerHTML = html;
 }
