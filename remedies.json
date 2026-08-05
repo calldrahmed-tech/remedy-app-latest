@@ -12435,7 +12435,56 @@
           "Raw salads and gas-forming foods (beans, cabbage)",
           "Artificial sweeteners"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "nux-v",
+              "remedyNameRaw": "Nux Vomica",
+              "potency": "200",
+              "timing": "morning",
+              "schedule": "single dose"
+            },
+            {
+              "remedy": "lyc",
+              "remedyNameRaw": "Lycopodium",
+              "potency": "200",
+              "timing": "evening",
+              "schedule": "single dose"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Nat Phos 6X, 4 tablets 3x daily"
+          },
+          "note": "Widely used dual-remedy pairing for IBS with bloating and alternating bowel habit.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "carb-v",
+              "remedyNameRaw": "Carbo Vegetabilis",
+              "potency": "200C occasional dose",
+              "timing": "as needed",
+              "schedule": "Single dose, then observe"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for IBS (Irritable Bowel Syndrome) — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "gerd",
@@ -12474,7 +12523,56 @@
           "Citrus, tomato, chocolate, caffeine",
           "Lying down immediately after meals"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "nux-v",
+              "remedyNameRaw": "Nux Vomica",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "before meals"
+            },
+            {
+              "remedy": "carb-v",
+              "remedyNameRaw": "Carbo Veg",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "after dinner"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Nat Phos 6X, 4 tablets after meals"
+          },
+          "note": "Common dual-remedy split for reflux worse after meals and at night.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "robinia",
+              "remedyNameRaw": "Robinia Pseudoacacia",
+              "potency": "30C after meals 2-3x daily",
+              "timing": "as needed",
+              "schedule": "Repeat every 2-3 hours until improvement, then reduce to 3 times daily"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for GERD (Acid Reflux) — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "h-pylori",
@@ -12513,7 +12611,56 @@
           "Alcohol and smoking",
           "NSAIDs unless prescribed"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "kali-bi",
+              "remedyNameRaw": "Kali Bichromicum",
+              "potency": "6",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "nux-v",
+              "remedyNameRaw": "Nux Vomica",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "at night"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Nat Phos 6X, 4 tablets 3x daily"
+          },
+          "note": "Adjunctive support pairing; confirm eradication with standard triple therapy and retesting.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "ars-alb",
+              "remedyNameRaw": "Arsenicum Album",
+              "potency": "200C every 2-3h",
+              "timing": "as needed",
+              "schedule": "Repeat every 2-3 hours until improvement, then reduce to 3 times daily"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for H. Pylori Infection — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "constipation",
@@ -12551,7 +12698,37 @@
           "Ignoring the urge to defecate"
         ]
       },
-      "nosode": "Psorinum"
+      "nosode": "Psorinum",
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "alum",
+              "remedyNameRaw": "Alumina",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "hydr",
+              "remedyNameRaw": "Hydrastis",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Nat Mur 6X, 4 tablets 3x daily"
+          },
+          "note": "Alumina for no urge with difficult straining; Hydrastis for sluggish digestion with constipation.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "malabsorption",
@@ -12590,7 +12767,56 @@
           "Raw, cold, hard-to-digest items",
           "Skipping meals"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "calc-p",
+              "remedyNameRaw": "Calcarea Phosphorica",
+              "potency": "200",
+              "timing": "morning",
+              "schedule": "weekly"
+            },
+            {
+              "remedy": "iris",
+              "remedyNameRaw": "Iris Versicolor",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "before meals"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Calc Phos 6X, 4 tablets 3x daily"
+          },
+          "note": "Constitutional plus digestive-support pairing for confirmed malabsorption picture.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "chin",
+              "remedyNameRaw": "China Officinalis",
+              "potency": "30C 2-3x daily",
+              "timing": "as needed",
+              "schedule": "Repeat every 2-3 hours until improvement, then reduce to 3 times daily"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Malabsorption Syndrome — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "migraine",
@@ -12627,7 +12853,49 @@
           "Chocolate, aged cheese, alcohol (common triggers)",
           "Irregular sleep"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "nat-mur",
+              "remedyNameRaw": "Natrum Muriaticum",
+              "potency": "200",
+              "timing": "morning",
+              "schedule": "single weekly dose"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Mag Phos 6X, 4 tablets during acute pain, warm water"
+          },
+          "note": "Single constitutional dose typically preferred over dual for migraine; add Iris if biliary/visual aura present.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "bell",
+              "remedyNameRaw": "Belladonna",
+              "potency": "200C every 2-4h",
+              "timing": "as needed",
+              "schedule": "Repeat every 2-3 hours until improvement, then reduce to 3 times daily"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Migraine — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "uti",
@@ -12663,7 +12931,49 @@
           "Holding urine for long periods",
           "Spicy irritant food during acute phase"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "canth",
+              "remedyNameRaw": "Cantharis",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "every 3 hours during acute burning"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Ferrum Phos 6X, 4 tablets 3x daily"
+          },
+          "note": "Repeat Cantharis through the day during acute phase; add Staphysagria for post-intercourse cystitis.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "apis",
+              "remedyNameRaw": "Apis Mellifica",
+              "potency": "200C every 2-3h",
+              "timing": "as needed",
+              "schedule": "Repeat every 2-3 hours until improvement, then reduce to 3 times daily"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Urinary Tract Infection — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "tonsillitis",
@@ -12701,7 +13011,56 @@
           "Dairy if it increases mucus"
         ]
       },
-      "nosode": "Tuberculinum"
+      "nosode": "Tuberculinum",
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "bell",
+              "remedyNameRaw": "Belladonna",
+              "potency": "200",
+              "timing": "morning",
+              "schedule": "every 3h in early stage"
+            },
+            {
+              "remedy": "hep",
+              "remedyNameRaw": "Hepar Sulph",
+              "potency": "200",
+              "timing": "evening",
+              "schedule": "if pus formation begins"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Kali Mur 6X, 4 tablets 3x daily"
+          },
+          "note": "Switch from Belladonna to Hepar Sulph as the picture moves from red/throbbing to suppurative.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "merc-sol",
+              "remedyNameRaw": "Mercurius Solubilis",
+              "potency": "30C 3x daily",
+              "timing": "as needed",
+              "schedule": "Repeat every 2-3 hours until improvement, then reduce to 3 times daily"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Tonsillitis — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "eczema",
@@ -12737,7 +13096,56 @@
           "Excess sugar"
         ]
       },
-      "nosode": "Psorinum"
+      "nosode": "Psorinum",
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "sulph",
+              "remedyNameRaw": "Sulphur",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "morning"
+            },
+            {
+              "remedy": "rhus-t",
+              "remedyNameRaw": "Rhus Tox",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "evening if intense itching at night"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Calc Sulph 6X, 4 tablets 3x daily"
+          },
+          "note": "Confirm constitutional totality before committing to higher potency Sulphur.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "graph",
+              "remedyNameRaw": "Graphites",
+              "potency": "200C to 1M constitutional case needed",
+              "timing": "as needed",
+              "schedule": "Single dose, then observe"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Eczema / Chronic Skin Disease — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        }
+      ]
     },
     {
       "id": "insomnia",
@@ -12771,7 +13179,37 @@
           "Screen exposure before bed",
           "Heavy meals late at night"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "coff",
+              "remedyNameRaw": "Coffea Cruda",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "nux-v",
+              "remedyNameRaw": "Nux Vomica",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Kali Phos 6X, 4 tablets at bedtime"
+          },
+          "note": "Coffea Cruda for over-active mind unable to switch off; Nux Vomica for insomnia from overwork or stimulant excess.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "scarlet-fever",
@@ -12803,7 +13241,30 @@
           "Cold drinks",
           "Hard or scratchy foods that irritate the throat"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "bell",
+              "remedyNameRaw": "Belladonna",
+              "potency": "200",
+              "timing": "morning",
+              "schedule": "single dose"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Ferrum Phos 6X, 4 tablets 3x daily"
+          },
+          "note": "Classic remedy for the sudden high fever, bright red skin, and throat involvement of scarlet fever.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "whooping-cough",
@@ -12834,7 +13295,30 @@
           "Foods that trigger coughing (dry, crumbly foods)",
           "Cold air exposure"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "dros",
+              "remedyNameRaw": "Drosera",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Mag Phos 6X, 4 tablets as needed during coughing fits"
+          },
+          "note": "Classic remedy for the paroxysmal, spasmodic coughing fits of pertussis.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "mumps",
@@ -12867,7 +13351,49 @@
           "Sour or acidic foods that stimulate salivation and pain",
           "Hard-to-chew foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "merc-sol",
+              "remedyNameRaw": "Mercurius Solubilis",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Kali Mur 6X, 4 tablets 3x daily"
+          },
+          "note": "For glandular swelling with salivation; Pulsatilla often used if testicular involvement in males.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "puls",
+              "remedyNameRaw": "Pulsatilla Nigricans",
+              "potency": "200C weekly under guidance",
+              "timing": "as needed",
+              "schedule": "Single dose, then observe"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Mumps — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "chickenpox",
@@ -12900,7 +13426,49 @@
           "Spicy or acidic foods",
           "Scratching-inducing tight clothing"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "rhus-t",
+              "remedyNameRaw": "Rhus Tox",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Kali Mur 6X + Kali Sulph 6X alternating, 4 tablets 3x daily"
+          },
+          "note": "For the intense itching and vesicular eruptions of chickenpox.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "ant-c",
+              "remedyNameRaw": "Antimonium Crudum",
+              "potency": "200C to 1M, constitutional case needed",
+              "timing": "as needed",
+              "schedule": "Single dose, then observe"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Chickenpox (Varicella) — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "typhoid",
@@ -12934,7 +13502,49 @@
           "Raw or unwashed foods",
           "Spicy or fibrous foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "bapt",
+              "remedyNameRaw": "Baptisia",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Kali Phos 6X, 4 tablets 3x daily"
+          },
+          "note": "For the stupor, foul discharges, and prostration typical of typhoid.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "ars-alb",
+              "remedyNameRaw": "Arsenicum Album",
+              "potency": "200C every 2-3h",
+              "timing": "as needed",
+              "schedule": "Repeat every 2-3 hours until improvement, then reduce to 3 times daily"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Typhoid Fever — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "malaria",
@@ -12964,7 +13574,49 @@
         "avoid": [
           "Heavy, fatty foods during acute fever"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "chin",
+              "remedyNameRaw": "China Officinalis",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Nat Mur 6X, 4 tablets 3x daily"
+          },
+          "note": "Classic remedy for periodic fever with chill-heat-sweat stages and debility.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "ars-alb",
+              "remedyNameRaw": "Arsenicum Album",
+              "potency": "200C every 2-3h",
+              "timing": "as needed",
+              "schedule": "Repeat every 2-3 hours until improvement, then reduce to 3 times daily"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Malaria — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "pcos",
@@ -13001,7 +13653,49 @@
           "Refined sugar and processed carbohydrates",
           "Excess dairy in some cases"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "sep",
+              "remedyNameRaw": "Sepia",
+              "potency": "200",
+              "timing": "morning",
+              "schedule": "weekly dose"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Calc Phos 6X, 4 tablets 3x daily"
+          },
+          "note": "For irregular menses with indifference/exhaustion; Pulsatilla for milder, weepy presentations.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "puls",
+              "remedyNameRaw": "Pulsatilla Nigricans",
+              "potency": "200C weekly under guidance",
+              "timing": "as needed",
+              "schedule": "Single dose, then observe"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for PCOS (Polycystic Ovary Syndrome) — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "hypothyroid",
@@ -13034,7 +13728,49 @@
           "Excessive raw cruciferous vegetables (goitrogens) in significant hypothyroidism",
           "Excess soy in some cases"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "calc-c",
+              "remedyNameRaw": "Calcarea Carbonica",
+              "potency": "200",
+              "timing": "morning",
+              "schedule": "weekly dose"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Calc Phos 6X, 4 tablets 3x daily"
+          },
+          "note": "For the chilly, sluggish, weight-gaining constitutional picture associated with hypothyroidism.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "iod",
+              "remedyNameRaw": "Iodum",
+              "potency": "200C to 1M, constitutional case needed",
+              "timing": "as needed",
+              "schedule": "Single dose, then observe"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Hypothyroidism — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "sciatica",
@@ -13066,7 +13802,37 @@
           "Prolonged sitting",
           "Heavy lifting during acute phase"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "coloc",
+              "remedyNameRaw": "Colocynthis",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "mag-p",
+              "remedyNameRaw": "Magnesia Phosphorica",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Mag Phos 6X, 4 tablets 3x daily"
+          },
+          "note": "Colocynthis for cramping pain better bending double; Magnesia Phosphorica for cramping, neuralgic pain better warmth and pressure.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "osteoarthritis",
@@ -13100,7 +13866,49 @@
           "Excess sugar and processed foods (pro-inflammatory)",
           "Excess weight-bearing strain"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "rhus-t",
+              "remedyNameRaw": "Rhus Tox",
+              "potency": "200",
+              "timing": "morning",
+              "schedule": "single dose"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Calc Fluor 6X, 4 tablets 3x daily"
+          },
+          "note": "For stiffness worse on first motion, better with continued movement — classic osteoarthritis pattern.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "bry",
+              "remedyNameRaw": "Bryonia Alba",
+              "potency": "30C 3-4x daily",
+              "timing": "as needed",
+              "schedule": "Repeat every 2-3 hours until improvement, then reduce to 3 times daily"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Osteoarthritis — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "genital-warts",
@@ -13133,7 +13941,56 @@
           "Smoking (impairs clearance)",
           "Excess alcohol"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "thuj",
+              "remedyNameRaw": "Thuja",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "thuj",
+              "remedyNameRaw": "Thuja",
+              "potency": "Q",
+              "timing": "evening",
+              "schedule": "external application"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Nat Sulph 6X, 4 tablets 3x daily"
+          },
+          "note": "Widely documented Banerji protocol for genital and other warts; Nitric Acid for warts that bleed easily.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "nit-ac",
+              "remedyNameRaw": "Nitric Acid",
+              "potency": "200C to 1M, constitutional case needed",
+              "timing": "as needed",
+              "schedule": "Single dose, then observe"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Genital Warts / HPV — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "kidney-stones",
@@ -13168,7 +14025,49 @@
           "High oxalate foods (spinach, nuts) if calcium oxalate stones",
           "Excess salt and animal protein"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "berb",
+              "remedyNameRaw": "Berberis Vulgaris",
+              "potency": "Q",
+              "timing": "morning",
+              "schedule": "10 drops 3x daily in water"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Calc Phos 6X, 4 tablets 3x daily"
+          },
+          "note": "Classic remedy for renal colic with pain radiating down the ureter.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "lyc",
+              "remedyNameRaw": "Lycopodium Clavatum",
+              "potency": "200C to 1M, constitutional case needed",
+              "timing": "as needed",
+              "schedule": "Single dose, then observe"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Kidney Stones (Renal Calculi) — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        }
+      ]
     },
     {
       "id": "warts",
@@ -13197,7 +14096,49 @@
         "avoid": [
           "Nothing specific dietary"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "thuj",
+              "remedyNameRaw": "Thuja",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Nat Sulph 6X, 4 tablets 3x daily"
+          },
+          "note": "Antimonium Crudum favored for warts on palms/soles that are hard and horny.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "ant-c",
+              "remedyNameRaw": "Antimonium Crudum",
+              "potency": "200C to 1M, constitutional case needed",
+              "timing": "as needed",
+              "schedule": "Single dose, then observe"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Common Warts — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "sinusitis",
@@ -13227,7 +14168,30 @@
           "Dairy (can thicken mucus in some people)",
           "Cold drinks"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "kali-bi",
+              "remedyNameRaw": "Kali Bichromicum",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Kali Mur 6X, 4 tablets 3x daily"
+          },
+          "note": "Classic remedy for thick, stringy, ropy nasal discharge with sinus pressure.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "ganglion-cyst",
@@ -13257,7 +14221,49 @@
         "avoid": [
           "Repetitive strain on the affected joint"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "ruta",
+              "remedyNameRaw": "Ruta",
+              "potency": "200",
+              "timing": "morning",
+              "schedule": "weekly dose"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Calc Fluor 6X, 4 tablets 3x daily"
+          },
+          "note": "Classic remedy for ganglion cysts and injuries to tendons/periosteum.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "sil",
+              "remedyNameRaw": "Silicea Terra",
+              "potency": "200C to 1M, constitutional case needed",
+              "timing": "as needed",
+              "schedule": "Single dose, then observe"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Ganglion Cyst — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        }
+      ]
     },
     {
       "id": "abscess-acute-painful",
@@ -13286,7 +14292,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "hep",
+              "remedyNameRaw": "Hepar Sulph",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "bell",
+              "remedyNameRaw": "Belladonna",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "acidity-hyperacidity",
@@ -13317,7 +14353,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "nux-v",
+              "remedyNameRaw": "Nux Vomica",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "robinia",
+              "remedyNameRaw": "Robinia",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "acne",
@@ -13346,7 +14412,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "kali-br",
+              "remedyNameRaw": "Kali Bromatum",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "hep",
+              "remedyNameRaw": "Hepar Sulph",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "alopecia-hair-loss",
@@ -13375,7 +14471,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "fl-ac",
+              "remedyNameRaw": "Fluoric Acid",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "phos",
+              "remedyNameRaw": "Phosphorus",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "amenorrhea-delayedabsent-periods",
@@ -13404,7 +14530,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "puls",
+              "remedyNameRaw": "Pulsatilla",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "sep",
+              "remedyNameRaw": "Sepia",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "anemia",
@@ -13433,7 +14589,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "chin",
+              "remedyNameRaw": "China",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "nat-mur",
+              "remedyNameRaw": "Natrum Mur",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "angina-pectoris-adjunct",
@@ -13462,7 +14648,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "cact",
+              "remedyNameRaw": "Cactus Grandiflorus",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "spig",
+              "remedyNameRaw": "Spigelia",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "anxiety-panic",
@@ -13493,7 +14709,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "arg-n",
+              "remedyNameRaw": "Argentum Nitricum",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "gels",
+              "remedyNameRaw": "Gelsemium",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "appendicitis-acute-adjunct",
@@ -13522,7 +14768,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "bell",
+              "remedyNameRaw": "Belladonna",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "bry",
+              "remedyNameRaw": "Bryonia",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "asthma-acute-attack",
@@ -13551,7 +14827,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "ars-alb",
+              "remedyNameRaw": "Arsenicum Album",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "ip",
+              "remedyNameRaw": "Ipecac",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "athletes-foot-fungal-skin-infection",
@@ -13582,7 +14888,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "graph",
+              "remedyNameRaw": "Graphites",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "sil",
+              "remedyNameRaw": "Silicea",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        }
+      ]
     },
     {
       "id": "back-pain-lumbar-muscular",
@@ -13611,7 +14947,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "rhus-t",
+              "remedyNameRaw": "Rhus Tox",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "kali-c",
+              "remedyNameRaw": "Kali Carb",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "bells-palsy-adjunct",
@@ -13640,7 +15006,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "caust",
+              "remedyNameRaw": "Causticum",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "gels",
+              "remedyNameRaw": "Gelsemium",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "boils-furunculosis",
@@ -13671,7 +15067,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "hep",
+              "remedyNameRaw": "Hepar Sulph",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "bell",
+              "remedyNameRaw": "Belladonna",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "bronchitis-acute",
@@ -13700,7 +15126,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "ant-t",
+              "remedyNameRaw": "Antimonium Tart",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "bry",
+              "remedyNameRaw": "Bryonia",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "bronchitis-chronic",
@@ -13730,7 +15186,37 @@
           "Known individual trigger foods"
         ]
       },
-      "nosode": "Tuberculinum"
+      "nosode": "Tuberculinum",
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "hep",
+              "remedyNameRaw": "Hepar Sulph",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "kali-bi",
+              "remedyNameRaw": "Kali Bichromicum",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "cervical-spondylosis",
@@ -13759,7 +15245,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "kali-c",
+              "remedyNameRaw": "Kali Carb",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "rhus-t",
+              "remedyNameRaw": "Rhus Tox",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "cholecystitis-gallstones-acute-colic",
@@ -13790,7 +15306,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "chel",
+              "remedyNameRaw": "Chelidonium",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "coloc",
+              "remedyNameRaw": "Colocynth",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "cold-common-coryza",
@@ -13819,7 +15365,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "all-c",
+              "remedyNameRaw": "Allium Cepa",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "nat-mur",
+              "remedyNameRaw": "Natrum Mur",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "colitis",
@@ -13848,7 +15424,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "merc-c",
+              "remedyNameRaw": "Mercurius Corrosivus",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "coloc",
+              "remedyNameRaw": "Colocynth",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "conjunctivitis",
@@ -13877,7 +15483,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "euphr",
+              "remedyNameRaw": "Euphrasia",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "bell",
+              "remedyNameRaw": "Belladonna",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "copd-adjunct",
@@ -13906,7 +15542,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "kali-c",
+              "remedyNameRaw": "Kali Carb",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "ant-t",
+              "remedyNameRaw": "Antimonium Tart",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "cystitis-uti-acute",
@@ -13937,7 +15603,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "canth",
+              "remedyNameRaw": "Cantharis",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "staph",
+              "remedyNameRaw": "Staphysagria",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "dandruff",
@@ -13966,7 +15662,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "kali-sulph-rem",
+              "remedyNameRaw": "Kali Sulph",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "nat-mur",
+              "remedyNameRaw": "Natrum Mur",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "dengue-fever-adjunct-supportive",
@@ -13995,7 +15721,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "eup-per",
+              "remedyNameRaw": "Eupatorium Perfoliatum",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "rhus-t",
+              "remedyNameRaw": "Rhus Tox",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "depression",
@@ -14024,7 +15780,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "nat-mur",
+              "remedyNameRaw": "Natrum Mur",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "aur",
+              "remedyNameRaw": "Aurum Metallicum",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        }
+      ]
     },
     {
       "id": "diarrhea-acute",
@@ -14053,7 +15839,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "ars-alb",
+              "remedyNameRaw": "Arsenicum Album",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "podo",
+              "remedyNameRaw": "Podophyllum",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "diarrhea-chronic",
@@ -14082,7 +15898,56 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "nat-sulph",
+              "remedyNameRaw": "Natrum Sulph",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "nat-sulph",
+              "remedyNameRaw": "Sulphur",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "sulph",
+              "remedyNameRaw": "Sulphur",
+              "potency": "200C to 1M, constitutional case needed",
+              "timing": "as needed",
+              "schedule": "Single dose, then observe"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "One of the other commonly-indicated remedies for Diarrhea (chronic) — select based on the patient's specific modalities rather than using automatically.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        }
+      ]
     },
     {
       "id": "dysentery",
@@ -14111,7 +15976,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "merc-c",
+              "remedyNameRaw": "Mercurius Corrosivus",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "coloc",
+              "remedyNameRaw": "Colocynth",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "dysmenorrhea-painful-periods",
@@ -14140,7 +16035,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "mag-p",
+              "remedyNameRaw": "Magnesia Phosphorica",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "coloc",
+              "remedyNameRaw": "Colocynth",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "ear-infection-otitis-media-acute",
@@ -14169,7 +16094,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "bell",
+              "remedyNameRaw": "Belladonna",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "cham",
+              "remedyNameRaw": "Chamomilla",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "epilepsy-adjunct-only",
@@ -14198,7 +16153,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "cupr",
+              "remedyNameRaw": "Cuprum Metallicum",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "bell",
+              "remedyNameRaw": "Belladonna",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "fatty-liver",
@@ -14227,7 +16212,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "chel",
+              "remedyNameRaw": "Chelidonium",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "lyc",
+              "remedyNameRaw": "Lycopodium",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "fissure-anal",
@@ -14256,7 +16271,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "rat",
+              "remedyNameRaw": "Ratanhia",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "nit-ac",
+              "remedyNameRaw": "Nitric Acid",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "fistula-anal-adjunct",
@@ -14285,7 +16330,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "berb",
+              "remedyNameRaw": "Berberis Vulgaris",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "sil",
+              "remedyNameRaw": "Silicea",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "flatulence-gas",
@@ -14316,7 +16391,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "carb-v",
+              "remedyNameRaw": "Carbo Veg",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "lyc",
+              "remedyNameRaw": "Lycopodium",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "flu-influenza",
@@ -14347,7 +16452,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "gels",
+              "remedyNameRaw": "Gelsemium",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "bry",
+              "remedyNameRaw": "Bryonia",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "food-poisoning",
@@ -14376,7 +16511,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "ars-alb",
+              "remedyNameRaw": "Arsenicum Album",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "carb-v",
+              "remedyNameRaw": "Carbo Veg",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "gallstones",
@@ -14405,7 +16570,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "chel",
+              "remedyNameRaw": "Chelidonium",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "berb",
+              "remedyNameRaw": "Berberis Vulgaris",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "gastritis",
@@ -14434,7 +16629,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "nux-v",
+              "remedyNameRaw": "Nux Vomica",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "arg-n",
+              "remedyNameRaw": "Argentum Nitricum",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "gastroenteritis-acute",
@@ -14463,7 +16688,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "ars-alb",
+              "remedyNameRaw": "Arsenicum Album",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "verat",
+              "remedyNameRaw": "Veratrum Album",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "gerd-acid-reflux",
@@ -14494,7 +16749,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "robinia",
+              "remedyNameRaw": "Robinia",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "nux-v",
+              "remedyNameRaw": "Nux Vomica",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "goiter",
@@ -14523,7 +16808,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "spong",
+              "remedyNameRaw": "Spongia",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "iod",
+              "remedyNameRaw": "Iodum",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "gout",
@@ -14552,7 +16867,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "colch",
+              "remedyNameRaw": "Colchicum",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "benz-ac",
+              "remedyNameRaw": "Benzoic Acid",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "headache-tension-type",
@@ -14581,7 +16926,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "nux-v",
+              "remedyNameRaw": "Nux Vomica",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "bry",
+              "remedyNameRaw": "Bryonia",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "headache-migraine",
@@ -14610,7 +16985,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "sang",
+              "remedyNameRaw": "Sanguinaria",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "iris",
+              "remedyNameRaw": "Iris Versicolor",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "heart-palpitations-functional-adjunct",
@@ -14639,7 +17044,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "spig",
+              "remedyNameRaw": "Spigelia",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "naja",
+              "remedyNameRaw": "Naja",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "hemorrhoids-piles",
@@ -14670,7 +17105,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "aesc",
+              "remedyNameRaw": "Aesculus Hippocastanum",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "ham",
+              "remedyNameRaw": "Hamamelis",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "hepatitis-viral-adjunct",
@@ -14699,7 +17164,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "chel",
+              "remedyNameRaw": "Chelidonium",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "phos",
+              "remedyNameRaw": "Phosphorus",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "herpes-oralgenital",
@@ -14728,7 +17223,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "rhus-t",
+              "remedyNameRaw": "Rhus Tox",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "nat-mur",
+              "remedyNameRaw": "Natrum Mur",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "hyperthyroidism-adjunct",
@@ -14757,7 +17282,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "iod",
+              "remedyNameRaw": "Iodum",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "nat-mur",
+              "remedyNameRaw": "Natrum Mur",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "impetigo",
@@ -14786,7 +17341,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "ant-c",
+              "remedyNameRaw": "Antimonium Crudum",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "mez",
+              "remedyNameRaw": "Mezereum",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "infertility-female-adjunct",
@@ -14815,7 +17400,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "sep",
+              "remedyNameRaw": "Sepia",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "puls",
+              "remedyNameRaw": "Pulsatilla",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        }
+      ]
     },
     {
       "id": "infertility-male-adjunct",
@@ -14844,7 +17459,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "agn",
+              "remedyNameRaw": "Agnus Castus",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "sel",
+              "remedyNameRaw": "Selenium",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "jaundice",
@@ -14873,7 +17518,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "chel",
+              "remedyNameRaw": "Chelidonium",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "phos",
+              "remedyNameRaw": "Phosphorus",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "laryngitis",
@@ -14902,7 +17577,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "caust",
+              "remedyNameRaw": "Causticum",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "phos",
+              "remedyNameRaw": "Phosphorus",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "leucorrhea-vaginal-discharge",
@@ -14931,7 +17636,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "sep",
+              "remedyNameRaw": "Sepia",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "puls",
+              "remedyNameRaw": "Pulsatilla",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        }
+      ]
     },
     {
       "id": "liver-cirrhosis-adjunct-only",
@@ -14960,7 +17695,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "chel",
+              "remedyNameRaw": "Chelidonium",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "phos",
+              "remedyNameRaw": "Phosphorus",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "lymph-node-swelling",
@@ -14989,7 +17754,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "sil",
+              "remedyNameRaw": "Silicea",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "bar-c",
+              "remedyNameRaw": "Baryta Carb",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        }
+      ]
     },
     {
       "id": "measles",
@@ -15018,7 +17813,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "puls",
+              "remedyNameRaw": "Pulsatilla",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "euphr",
+              "remedyNameRaw": "Euphrasia",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "memory-weakness-poor-concentration",
@@ -15049,7 +17874,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "anac",
+              "remedyNameRaw": "Anacardium",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "bar-c",
+              "remedyNameRaw": "Baryta Carb",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "menieres-disease",
@@ -15078,7 +17933,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "con",
+              "remedyNameRaw": "Conium",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "cocc",
+              "remedyNameRaw": "Cocculus",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "menopause-symptoms",
@@ -15107,7 +17992,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "sep",
+              "remedyNameRaw": "Sepia",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "lach",
+              "remedyNameRaw": "Lachesis",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        }
+      ]
     },
     {
       "id": "mouth-ulcers",
@@ -15136,7 +18051,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "bor",
+              "remedyNameRaw": "Borax",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "merc-sol",
+              "remedyNameRaw": "Mercurius Solubilis",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "nausea-vomiting-acute",
@@ -15167,7 +18112,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "ip",
+              "remedyNameRaw": "Ipecac",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "ars-alb",
+              "remedyNameRaw": "Arsenicum Album",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "nephrotic-syndrome-adjunct-only",
@@ -15196,7 +18171,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "apis",
+              "remedyNameRaw": "Apis Mellifica",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "ars-alb",
+              "remedyNameRaw": "Arsenicum Album",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "obesity",
@@ -15225,7 +18230,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "calc-c",
+              "remedyNameRaw": "Calcarea Carb",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "graph",
+              "remedyNameRaw": "Graphites",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        }
+      ]
     },
     {
       "id": "osteoporosis-adjunct",
@@ -15254,7 +18289,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "calc-p",
+              "remedyNameRaw": "Calcarea Phos",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "symph",
+              "remedyNameRaw": "Symphytum",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        }
+      ]
     },
     {
       "id": "ovarian-cyst",
@@ -15283,7 +18348,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "apis",
+              "remedyNameRaw": "Apis Mellifica",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "lach",
+              "remedyNameRaw": "Lachesis",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "pancreatitis-adjunct-only",
@@ -15312,7 +18407,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "iris",
+              "remedyNameRaw": "Iris Versicolor",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "phos",
+              "remedyNameRaw": "Phosphorus",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "paralysis-post-stroke-adjunct-only",
@@ -15341,7 +18466,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "caust",
+              "remedyNameRaw": "Causticum",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "gels",
+              "remedyNameRaw": "Gelsemium",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "peptic-ulcer",
@@ -15370,7 +18525,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "arg-n",
+              "remedyNameRaw": "Argentum Nitricum",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "kali-bi",
+              "remedyNameRaw": "Kali Bichromicum",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "pharyngitis",
@@ -15399,7 +18584,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "bell",
+              "remedyNameRaw": "Belladonna",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "merc-sol",
+              "remedyNameRaw": "Mercurius Solubilis",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "pneumonia-adjunct-only",
@@ -15428,7 +18643,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "bry",
+              "remedyNameRaw": "Bryonia",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "phos",
+              "remedyNameRaw": "Phosphorus",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "prostate-enlargement-bph",
@@ -15457,7 +18702,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "con",
+              "remedyNameRaw": "Conium",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "thuj",
+              "remedyNameRaw": "Thuja",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "psoriasis",
@@ -15487,7 +18762,37 @@
           "Known individual trigger foods"
         ]
       },
-      "nosode": "Psorinum"
+      "nosode": "Psorinum",
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "ars-alb",
+              "remedyNameRaw": "Arsenicum Album",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "graph",
+              "remedyNameRaw": "Graphites",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "ringworm",
@@ -15517,7 +18822,37 @@
           "Known individual trigger foods"
         ]
       },
-      "nosode": "Tuberculinum"
+      "nosode": "Tuberculinum",
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "sep",
+              "remedyNameRaw": "Sepia",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "tell",
+              "remedyNameRaw": "Tellurium",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 3-4 weeks before considering a repeat",
+          "review": "Review in 3-4 weeks",
+          "expectedResponse": "Constitutional remedies act gradually — watch for overall improvement in energy and well-being, not just the presenting complaint",
+          "tip": "Note any brief initial aggravation of symptoms before improvement — this is common with well-indicated constitutional remedies"
+        }
+      ]
     },
     {
       "id": "skin-allergy-urticaria",
@@ -15548,7 +18883,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "apis",
+              "remedyNameRaw": "Apis Mellifica",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "nat-mur",
+              "remedyNameRaw": "Natrum Mur",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "sleep-apnea-adjunct-only",
@@ -15577,7 +18942,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "lach",
+              "remedyNameRaw": "Lachesis",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "op",
+              "remedyNameRaw": "Opium",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "sore-throat",
@@ -15606,7 +19001,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "bell",
+              "remedyNameRaw": "Belladonna",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "merc-sol",
+              "remedyNameRaw": "Mercurius Solubilis",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "spondylitis-lumbar",
@@ -15635,7 +19060,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "rhus-t",
+              "remedyNameRaw": "Rhus Tox",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "kali-c",
+              "remedyNameRaw": "Kali Carb",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "stammering",
@@ -15664,7 +19119,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "stram",
+              "remedyNameRaw": "Stramonium",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "caust",
+              "remedyNameRaw": "Causticum",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "stye",
@@ -15693,7 +19178,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "staph",
+              "remedyNameRaw": "Staphysagria",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "puls",
+              "remedyNameRaw": "Pulsatilla",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "toothache",
@@ -15722,7 +19237,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "cham",
+              "remedyNameRaw": "Chamomilla",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "coff",
+              "remedyNameRaw": "Coffea Cruda",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "varicose-veins",
@@ -15751,7 +19296,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "ham",
+              "remedyNameRaw": "Hamamelis",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "puls",
+              "remedyNameRaw": "Pulsatilla",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "vertigo",
@@ -15780,7 +19355,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "con",
+              "remedyNameRaw": "Conium",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "cocc",
+              "remedyNameRaw": "Cocculus",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "vitiligo",
@@ -15809,7 +19414,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "ars-alb",
+              "remedyNameRaw": "Arsenicum Album",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "sil",
+              "remedyNameRaw": "Silicea",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "worms-intestinal",
@@ -15838,7 +19473,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "cina",
+              "remedyNameRaw": "Cina",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "sabad",
+              "remedyNameRaw": "Sabadilla",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "rheumatoid-arthritis",
@@ -15868,7 +19533,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "caust",
+              "remedyNameRaw": "Causticum",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "colch",
+              "remedyNameRaw": "Colchicum",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Causticum for deformed joints with contracted tendons; Colchicum for intense pain worse on motion and touch, worse cold damp weather.",
+          "duration": "Observe for 2-4 weeks before repeating",
+          "review": "Review in 2-4 weeks, or sooner if new symptoms appear",
+          "expectedResponse": "Deeper-acting remedies often show gradual improvement over days to weeks",
+          "tip": "Avoid repeating the dose just because symptoms return mildly — reassess the whole case first"
+        }
+      ]
     },
     {
       "id": "cough-productive-loose",
@@ -15899,7 +19594,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "ant-t",
+              "remedyNameRaw": "Antimonium Tartaricum",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "ip",
+              "remedyNameRaw": "Ipecacuanha",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Antimonium Tart for loose rattling cough with little expectorated; Ipecac for cough with gagging and vomiting.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "cough-dry-irritating",
@@ -15929,7 +19654,37 @@
         "avoid": [
           "Known individual trigger foods"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "bry",
+              "remedyNameRaw": "Bryonia Alba",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "dros",
+              "remedyNameRaw": "Drosera Rotundifolia",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Select constitutional biochemic salts based on presenting symptoms"
+          },
+          "note": "Bryonia for dry cough worse from any motion, holds chest; Drosera for dry spasmodic cough worse at night.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     },
     {
       "id": "fever-general-viral",
@@ -15963,7 +19718,37 @@
         "avoid": [
           "Heavy, oily, or hard-to-digest food during acute fever"
         ]
-      }
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "ars-alb",
+              "remedyNameRaw": "Arsenicum Album",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "bell",
+              "remedyNameRaw": "Belladonna",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": {
+            "text": "Ferrum Phos 6X, 4 tablets every 2 hours during acute fever"
+          },
+          "note": "Arsenicum Album for fever with restlessness, chilliness, and prostration; Belladonna for sudden high fever with hot red face and throbbing.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ]
     }
   ]
 }
