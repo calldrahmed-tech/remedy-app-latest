@@ -5894,9 +5894,11 @@
       "section": "Common",
       "rubric": "Frequent urging to urinate with scanty, painful output",
       "triggers": [
-        "constant urge to urinate but barely anything comes out",
+        "constant urge to urinate with hardly anything coming out",
         "frequent urging with scanty painful urine",
-        "burning with frequent scanty urination"
+        "burning with frequent scanty urination",
+        "urge to urinate with barely anything passing",
+        "ineffectual urging to urinate with scanty output"
       ],
       "remedies": [
         {
@@ -6034,9 +6036,11 @@
       "section": "Sleep",
       "rubric": "Sleeplessness from an overactive mind, cannot stop thinking at night",
       "triggers": [
-        "mind won't stop racing at night",
+        "mind won t stop racing at night",
         "cannot fall asleep because thoughts keep going",
-        "overactive mind keeps her awake"
+        "overactive mind keeps her awake",
+        "mind won t stop racing",
+        "thoughts keep racing and she cannot sleep"
       ],
       "remedies": [
         {
@@ -6084,6 +6088,420 @@
         {
           "id": "apis",
           "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "rubric": "Hot patient, cannot bear heat, wants windows open and covers off",
+      "triggers": [
+        "cannot bear the heat wants covers off",
+        "always too hot throws off the blankets",
+        "cannot stand being covered kicks off the blankets"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 3
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "rubric": "Chilly patient, very sensitive to cold, better wrapped up warm",
+      "triggers": [
+        "always feels cold, wants to be wrapped up",
+        "extremely chilly, cannot get warm",
+        "sensitive to the slightest cold, must stay bundled up"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "rubric": "Worse from cold, damp, wet weather",
+      "triggers": [
+        "always worse in damp weather",
+        "symptoms flare up in cold wet weather",
+        "worse whenever it is cold and damp outside"
+      ],
+      "remedies": [
+        {
+          "id": "dulc",
+          "grade": 3
+        },
+        {
+          "id": "rhus-t",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "rubric": "Worse before a thunderstorm, better once it breaks",
+      "triggers": [
+        "gets worse before a thunderstorm",
+        "feels terrible before a storm hits",
+        "symptoms build up before a storm and ease once it breaks"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "rhod",
+          "grade": 2
+        },
+        {
+          "id": "nat-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "rubric": "Symptoms alternate or migrate from one side of the body to the other",
+      "triggers": [
+        "pain moves from one side to the other",
+        "symptoms shift from the right side to the left",
+        "goes from one side of the body to the other"
+      ],
+      "remedies": [
+        {
+          "id": "lac-c",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "rubric": "All symptoms worse immediately after waking from sleep",
+      "triggers": [
+        "worse right after waking up",
+        "feels worse than before falling asleep",
+        "wakes up feeling worse than when she went to sleep",
+        "wakes up feeling much worse than before she went to sleep"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "rubric": "Worse between 3 and 4 in the morning",
+      "triggers": [
+        "wakes up worse around 3am",
+        "symptoms flare between 3 and 4 in the morning",
+        "always wakes at 3am feeling terrible"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "rubric": "Worse in the late afternoon, between 4 and 8 pm",
+      "triggers": [
+        "gets worse every afternoon between 4 and 8",
+        "symptoms peak in the late afternoon around 4pm",
+        "always worse from 4pm to 8pm"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "rubric": "Symptoms better with continued motion, though worse on first starting to move",
+      "triggers": [
+        "worse on first moving but better with continued motion",
+        "stiff at first then loosens up with continued movement",
+        "hurts to start moving but improves the more he moves"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "rubric": "Worse going upstairs, becomes breathless or exhausted climbing",
+      "triggers": [
+        "breathless going up the stairs",
+        "exhausted after climbing stairs",
+        "worse whenever she goes upstairs"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "rubric": "Great weakness and trembling from the slightest exertion",
+      "triggers": [
+        "trembles from the slightest effort",
+        "weak and shaky after minimal exertion",
+        "even small exertion leaves him trembling"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "ph-ac",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "rubric": "Right-sided headache",
+      "triggers": [
+        "headache always on the right side",
+        "right-sided headache",
+        "pain confined to the right side of the head"
+      ],
+      "remedies": [
+        {
+          "id": "sang",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "rubric": "Left-sided headache or neuralgia",
+      "triggers": [
+        "headache always on the left side",
+        "left-sided headache",
+        "pain confined to the left side of the head"
+      ],
+      "remedies": [
+        {
+          "id": "spig",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "rubric": "Spasmodic, dry, barking cough, worse after midnight",
+      "triggers": [
+        "dry barking cough worse after midnight",
+        "spasmodic cough that gets worse after midnight",
+        "coughing fits after midnight, dry and barking"
+      ],
+      "remedies": [
+        {
+          "id": "dros",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "rubric": "Constant tickling in the throat pit triggers the cough",
+      "triggers": [
+        "tickle in the throat pit sets off the cough",
+        "constant tickle in the throat pit sets off his cough",
+        "cough triggered by a tickle low in the throat",
+        "tickling sensation in the throat pit brings on the cough"
+      ],
+      "remedies": [
+        {
+          "id": "rumx",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "rubric": "Cough worse lying down at night, better sitting up",
+      "triggers": [
+        "cough is worse lying down and better sitting up",
+        "has to sit up at night because lying down worsens the cough",
+        "coughs more lying flat, better sitting"
+      ],
+      "remedies": [
+        {
+          "id": "hyos",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "rubric": "Loud, rattling mucus in the chest with little expectorated, especially in infants or the elderly",
+      "triggers": [
+        "loud rattling in the chest but cannot bring anything up",
+        "chest sounds full of mucus but very little comes out",
+        "rattly chest, especially in the elderly, hard to expectorate"
+      ],
+      "remedies": [
+        {
+          "id": "ant-t",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "rubric": "Croupy, dry, barking cough worse before midnight",
+      "triggers": [
+        "croupy barking cough worse before midnight",
+        "dry croup cough that worsens before midnight",
+        "barking croup cough, worse in the evening before midnight"
+      ],
+      "remedies": [
+        {
+          "id": "spong",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "rubric": "Hoarseness worse in the evening",
+      "triggers": [
+        "voice gets more hoarse in the evening",
+        "hoarseness that worsens by evening",
+        "hoarse voice, always worse at night"
+      ],
+      "remedies": [
+        {
+          "id": "caust",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "rubric": "Itching worse from the warmth of the bed",
+      "triggers": [
+        "itching gets worse in the warmth of the bed",
+        "itches intensely once warm in bed at night",
+        "warmth of the bed makes the itching worse"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 3
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "rubric": "Unhealthy skin, every small injury tends to suppurate or fester",
+      "triggers": [
+        "every little cut turns into an infection",
+        "small injuries always fester and suppurate",
+        "skin does not heal easily, minor wounds fester"
+      ],
+      "remedies": [
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "graph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "rubric": "Skin dry, rough, and cracked, especially in cold weather",
+      "triggers": [
+        "skin gets dry and cracked in the winter",
+        "rough cracked skin, worse in cold weather",
+        "dry rough skin that cracks every winter"
+      ],
+      "remedies": [
+        {
+          "id": "petr",
+          "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "rubric": "Menses too early and too profuse",
+      "triggers": [
+        "periods come early and are very heavy",
+        "menses arrive early with heavy flow",
+        "periods are early and much too profuse"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "rubric": "Bearing-down sensation in the pelvis as if everything would fall out",
+      "triggers": [
+        "feels like everything is going to fall out down there",
+        "bearing down sensation in the pelvis",
+        "heavy dragging sensation as if organs would fall out"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 3
         }
       ]
     }
@@ -7834,6 +8252,150 @@
       "label": "Craves fresh air constantly, must have windows open…",
       "section": "Common",
       "rubric": "Craves fresh air constantly, must have windows open even in cold weather"
+    },
+    {
+      "id": "sym_hot_patient_cannot_bear_heat_wants_windows_open_an",
+      "label": "Hot patient, cannot bear heat, wants windows open…",
+      "section": "Generalities",
+      "rubric": "Hot patient, cannot bear heat, wants windows open and covers off"
+    },
+    {
+      "id": "sym_chilly_patient_very_sensitive_to_cold_better_wrapp",
+      "label": "Chilly patient, very sensitive to cold, better…",
+      "section": "Generalities",
+      "rubric": "Chilly patient, very sensitive to cold, better wrapped up warm"
+    },
+    {
+      "id": "sym_worse_from_cold_damp_wet_weather",
+      "label": "Worse from cold, damp, wet weather",
+      "section": "Generalities",
+      "rubric": "Worse from cold, damp, wet weather"
+    },
+    {
+      "id": "sym_worse_before_a_thunderstorm_better_once_it_breaks",
+      "label": "Worse before a thunderstorm, better once it breaks",
+      "section": "Generalities",
+      "rubric": "Worse before a thunderstorm, better once it breaks"
+    },
+    {
+      "id": "sym_symptoms_alternate_or_migrate_from_one_side_of_the",
+      "label": "Symptoms alternate or migrate from one side of the…",
+      "section": "Generalities",
+      "rubric": "Symptoms alternate or migrate from one side of the body to the other"
+    },
+    {
+      "id": "sym_all_symptoms_worse_immediately_after_waking_from_s",
+      "label": "All symptoms worse immediately after waking from…",
+      "section": "Generalities",
+      "rubric": "All symptoms worse immediately after waking from sleep"
+    },
+    {
+      "id": "sym_worse_between_3_and_4_in_the_morning",
+      "label": "Worse between 3 and 4 in the morning",
+      "section": "Generalities",
+      "rubric": "Worse between 3 and 4 in the morning"
+    },
+    {
+      "id": "sym_worse_in_the_late_afternoon_between_4_and_8_pm",
+      "label": "Worse in the late afternoon, between 4 and 8 pm",
+      "section": "Generalities",
+      "rubric": "Worse in the late afternoon, between 4 and 8 pm"
+    },
+    {
+      "id": "sym_symptoms_better_with_continued_motion_though_worse",
+      "label": "Symptoms better with continued motion, though worse…",
+      "section": "Generalities",
+      "rubric": "Symptoms better with continued motion, though worse on first starting to move"
+    },
+    {
+      "id": "sym_worse_going_upstairs_becomes_breathless_or_exhaust",
+      "label": "Worse going upstairs, becomes breathless or…",
+      "section": "Generalities",
+      "rubric": "Worse going upstairs, becomes breathless or exhausted climbing"
+    },
+    {
+      "id": "sym_great_weakness_and_trembling_from_the_slightest_ex",
+      "label": "Great weakness and trembling from the slightest…",
+      "section": "Generalities",
+      "rubric": "Great weakness and trembling from the slightest exertion"
+    },
+    {
+      "id": "sym_right_sided_headache",
+      "label": "Right-sided headache",
+      "section": "Head",
+      "rubric": "Right-sided headache"
+    },
+    {
+      "id": "sym_left_sided_headache_or_neuralgia",
+      "label": "Left-sided headache or neuralgia",
+      "section": "Head",
+      "rubric": "Left-sided headache or neuralgia"
+    },
+    {
+      "id": "sym_spasmodic_dry_barking_cough_worse_after_midnight",
+      "label": "Spasmodic, dry, barking cough, worse after midnight",
+      "section": "Respiratory",
+      "rubric": "Spasmodic, dry, barking cough, worse after midnight"
+    },
+    {
+      "id": "sym_constant_tickling_in_the_throat_pit_triggers_the_c",
+      "label": "Constant tickling in the throat pit triggers the…",
+      "section": "Respiratory",
+      "rubric": "Constant tickling in the throat pit triggers the cough"
+    },
+    {
+      "id": "sym_cough_worse_lying_down_at_night_better_sitting_up",
+      "label": "Cough worse lying down at night, better sitting up",
+      "section": "Respiratory",
+      "rubric": "Cough worse lying down at night, better sitting up"
+    },
+    {
+      "id": "sym_loud_rattling_mucus_in_the_chest_with_little_expec",
+      "label": "Loud, rattling mucus in the chest with little…",
+      "section": "Respiratory",
+      "rubric": "Loud, rattling mucus in the chest with little expectorated, especially in infants or the elderly"
+    },
+    {
+      "id": "sym_croupy_dry_barking_cough_worse_before_midnight",
+      "label": "Croupy, dry, barking cough worse before midnight",
+      "section": "Respiratory",
+      "rubric": "Croupy, dry, barking cough worse before midnight"
+    },
+    {
+      "id": "sym_hoarseness_worse_in_the_evening",
+      "label": "Hoarseness worse in the evening",
+      "section": "Respiratory",
+      "rubric": "Hoarseness worse in the evening"
+    },
+    {
+      "id": "sym_itching_worse_from_the_warmth_of_the_bed",
+      "label": "Itching worse from the warmth of the bed",
+      "section": "Skin",
+      "rubric": "Itching worse from the warmth of the bed"
+    },
+    {
+      "id": "sym_unhealthy_skin_every_small_injury_tends_to_suppura",
+      "label": "Unhealthy skin, every small injury tends to…",
+      "section": "Skin",
+      "rubric": "Unhealthy skin, every small injury tends to suppurate or fester"
+    },
+    {
+      "id": "sym_skin_dry_rough_and_cracked_especially_in_cold_weat",
+      "label": "Skin dry, rough, and cracked, especially in cold…",
+      "section": "Skin",
+      "rubric": "Skin dry, rough, and cracked, especially in cold weather"
+    },
+    {
+      "id": "sym_menses_too_early_and_too_profuse",
+      "label": "Menses too early and too profuse",
+      "section": "Female",
+      "rubric": "Menses too early and too profuse"
+    },
+    {
+      "id": "sym_bearing_down_sensation_in_the_pelvis_as_if_everyth",
+      "label": "Bearing-down sensation in the pelvis as if…",
+      "section": "Female",
+      "rubric": "Bearing-down sensation in the pelvis as if everything would fall out"
     }
   ]
 }
