@@ -85,8 +85,13 @@ function renderSuggestions(query) {
   if (!protocolDataReady || !query.trim()) { protocolSuggestionsEl.style.display = "none"; return; }
   const q = query.trim().toLowerCase();
   const selectedIds = new Set(selectedSymptoms.map(s => s.tag.id));
+  // Match against the full rubric text, not just the (truncated-to-52-char) display
+  // label — a word like "stammering" can sit past the label's cutoff point (e.g. the
+  // rubric "Confused sense of time... performance anxiety with stammering" displays as
+  // "Confused sense of time, forgets what was just said…"), so label-only search silently
+  // missed real matches and made it look like the symptom wasn't in the repertory at all.
   const matches = CHIEF_SYMPTOM_TAGS
-    .filter(t => !selectedIds.has(t.id) && t.label.toLowerCase().includes(q))
+    .filter(t => !selectedIds.has(t.id) && (t.label.toLowerCase().includes(q) || t.rubric.toLowerCase().includes(q)))
     .slice(0, 8);
   if (!matches.length) {
     protocolSuggestionsEl.innerHTML = `<div class="protocol-suggestion-empty">No matching symptom — try a different word</div>`;
