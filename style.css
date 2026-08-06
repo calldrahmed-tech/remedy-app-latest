@@ -20,6 +20,25 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .login-trigger-btn:hover { opacity: 0.9; }
 .account-bar { margin: 0 20px 14px; background: #eef6f1; border: 1.5px solid #cfe8d8; border-radius: 12px; padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; font-weight: 600; color: #2c5c3a; }
 .account-bar-btn { background: none; border: 1px solid #2c5c3a; color: #2c5c3a; padding: 5px 12px; border-radius: 8px; font-size: 0.78rem; font-weight: 700; cursor: pointer; }
+.account-bar-btn:hover { background: #2c5c3a; color: #fff; }
+
+/* ---------- AUTH MODAL (login / sign up) ---------- */
+.settings-modal { position: fixed; inset: 0; background: rgba(20,22,31,0.55); display: flex; align-items: center; justify-content: center; z-index: 200; padding: 16px; }
+.settings-modal-inner { background: var(--card); border-radius: var(--radius); max-width: 380px; width: 100%; padding: 22px 22px 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.25); }
+.settings-modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 800; font-size: 1.02rem; color: var(--ink); }
+.settings-close { background: none; border: none; font-size: 1.1rem; cursor: pointer; color: var(--muted); line-height: 1; }
+.settings-close:hover { color: var(--ink); }
+.settings-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; margin: 0 0 16px; }
+.settings-label { display: block; font-size: 0.78rem; font-weight: 700; color: var(--ink); margin: 12px 0 5px; }
+.settings-input { width: 100%; box-sizing: border-box; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: 10px; font-size: 0.88rem; font-family: inherit; }
+.settings-input:focus { outline: none; border-color: var(--green-1); }
+.settings-actions { display: flex; flex-direction: column; gap: 8px; margin-top: 18px; }
+.settings-save { background: var(--green-1); color: #fff; border: none; border-radius: 10px; padding: 11px; font-size: 0.9rem; font-weight: 700; cursor: pointer; }
+.settings-save:hover { opacity: 0.92; }
+.settings-save:disabled { opacity: 0.6; cursor: not-allowed; }
+.settings-remove { background: none; border: none; color: var(--green-2); font-size: 0.8rem; font-weight: 600; cursor: pointer; padding: 4px; }
+.settings-remove:hover { text-decoration: underline; }
+.settings-status { min-height: 1.1em; font-size: 0.78rem; font-weight: 600; margin-top: 10px; text-align: center; }
 .brand.center { display: flex; align-items: center; gap: 10px; }
 .brand .logo-circle { width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.05rem; flex-shrink: 0; }
 .brand .word { font-size: 1.25rem; font-weight: 700; }
