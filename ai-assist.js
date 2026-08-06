@@ -118,13 +118,18 @@
         statusEl.textContent = "✔ AI analysis complete — " + aiResult.remaining + " AI searches left this month.";
         statusEl.className = "ai-assist-status ai-assist-success";
       } catch (err) {
+        console.error("AI assist error:", err);
         const code = err && err.code;
         if (code === "functions/resource-exhausted") {
           statusEl.textContent = "You've used all your AI searches this month — the search below still works normally.";
         } else if (code === "functions/unauthenticated") {
           statusEl.textContent = "Please log in first to use AI-assisted analysis.";
         } else {
-          statusEl.textContent = "AI assist unavailable right now — try the search as-is.";
+          // The backend's error message is shown directly (it's written for a
+          // doctor/developer reading it, e.g. "DEBUG: ..." during the current
+          // rollout) rather than hidden behind a generic message.
+          statusEl.textContent = "AI assist unavailable right now — try the search as-is." +
+            (err && err.message ? " (" + err.message + ")" : "");
         }
         statusEl.className = "ai-assist-status ai-assist-error";
       } finally {
