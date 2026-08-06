@@ -32,6 +32,7 @@
     const accountBar = document.getElementById("accountBar");
     const accountBarText = document.getElementById("accountBarText");
     const accountBarBtn = document.getElementById("accountBarBtn");
+    const googleSignInBtn = document.getElementById("googleSignInBtn");
 
     let mode = "login"; // or "signup"
 
@@ -115,9 +116,24 @@
         case "auth/invalid-credential": return "Incorrect email or password.";
         case "auth/email-already-in-use": return "An account with that email already exists.";
         case "auth/weak-password": return "Password must be at least 6 characters.";
+        case "auth/popup-closed-by-user": return "";  // doctor just closed the Google popup — not an error worth showing
+        case "auth/popup-blocked": return "Your browser blocked the Google sign-in popup — please allow popups and try again.";
         default: return "Something went wrong — please try again.";
       }
     }
+
+    googleSignInBtn.addEventListener("click", async () => {
+      googleSignInBtn.disabled = true;
+      setStatus("");
+      try {
+        await window.RemedyAuth.signInWithGoogle();
+        closeModal();
+      } catch (err) {
+        setStatus(friendlyAuthError(err), true);
+      } finally {
+        googleSignInBtn.disabled = false;
+      }
+    });
 
     authSubmitBtn.addEventListener("click", submitAuthForm);
     authForm.addEventListener("submit", (e) => {

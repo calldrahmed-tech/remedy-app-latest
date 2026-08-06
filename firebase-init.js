@@ -4,10 +4,12 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import {
   getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,
-  signOut, onAuthStateChanged, updateProfile
+  signOut, onAuthStateChanged, updateProfile,
+  GoogleAuthProvider, signInWithPopup
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import {
-  getFirestore, doc, getDoc, setDoc, serverTimestamp
+  getFirestore, doc, getDoc, setDoc, serverTimestamp,
+  collection, addDoc, updateDoc, query, where, orderBy, getDocs, arrayUnion
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 import {
   getFunctions, httpsCallable
@@ -29,6 +31,7 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const functions = getFunctions(app);
 const aiNormalizeCallable = httpsCallable(functions, "aiNormalize");
+const googleProvider = new GoogleAuthProvider();
 
 let currentUser = null;
 
@@ -60,6 +63,23 @@ window.RemedyAuth = {
     await signOut(auth);
   },
 
+  // One-click Google login. Creates the same "users" doc as email signup does,
+  // but only the first time — signInWithPopup returns the same account on
+  // every later login, so we check first instead of overwriting createdAt.
+  async signInWithGoogle() {
+    const cred = await signInWithPopup(auth, googleProvider);
+    const userRef = doc(db, "users", cred.user.uid);
+    const snap = await getDoc(userRef);
+    if (!snap.exists()) {
+      await setDoc(userRef, {
+        name: cred.user.displayName || "",
+        email: cred.user.email || "",
+        createdAt: serverTimestamp()
+      });
+    }
+    return cred.user;
+  },
+
   // Returns { used, limit, remaining } for the CURRENT calendar month.
   async getUsage() {
     if (!currentUser) return null;
@@ -84,5 +104,46 @@ window.RemedyAuth = {
       currentUser = user;
       callback(user);
     });
+  },
+
+  // ---------- Patient records (private to each doctor — see firestore.rules) ----------
+  // patientData: { name, age, contact }. visitData: { date, symptoms, remedy }.
+  // Matches an existing patient by exact name (case-insensitive) and appends a new
+  // visit; otherwise creates a new patient record with this as the first visit.
+  async savePatientVisit(patientData, visitData) {
+    if (!currentUser) throw new Error("Please log in first.");
+    const name = (patientData.name || "").trim();
+    if (!name) throw new Error("Patient name is required.");
+    const patientsRef = collection(db, "users", currentUser.uid, "patients");
+    const existingSnap = await getDocs(query(patientsRef, where("nameLower", "==", name.toLowerCase())));
+    if (!existingSnap.empty) {
+      const existing = existingSnap.docs[0];
+      await updateDoc(existing.ref, {
+        age: patientData.age || existing.data().age || "",
+        contact: patientData.contact || existing.data().contact || "",
+        updatedAt: serverTimestamp(),
+        visits: arrayUnion(visitData)
+      });
+      return existing.id;
+    }
+    const created = await addDoc(patientsRef, {
+      name,
+      nameLower: name.toLowerCase(),
+      age: patientData.age || "",
+      contact: patientData.contact || "",
+      createdAt: serverTimestamp(),
+      updatedAt: serverTimestamp(),
+      visits: [visitData]
+    });
+    return created.id;
+  },
+
+  // Returns [{ id, name, age, contact, visits: [...] }, ...] for the logged-in doctor,
+  // most recently updated first.
+  async getMyPatients() {
+    if (!currentUser) return [];
+    const patientsRef = collection(db, "users", currentUser.uid, "patients");
+    const snap = await getDocs(query(patientsRef, orderBy("updatedAt", "desc")));
+    return snap.docs.map(d => ({ id: d.id, ...d.data() }));
   }
 };
