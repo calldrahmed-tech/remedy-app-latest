@@ -568,10 +568,6 @@
         "pain",
         "heaviness"
       ],
-      "location": {
-        "main": "leg",
-        "side": null
-      },
       "remedies": [
         {
           "id": "rhus-t",
@@ -585,7 +581,11 @@
           "id": "plb",
           "grade": 2
         }
-      ]
+      ],
+      "location": {
+        "main": "leg",
+        "side": null
+      }
     },
     {
       "section": "Extremities",
@@ -2069,14 +2069,20 @@
     },
     {
       "section": "Common",
-      "rubric": "Air hunger, wants to be fanned, collapse with icy coldness of extremities",
+      "rubric": "Air hunger, wants to be fanned, desires open windows/moving air, collapse with icy coldness of extremities",
       "triggers": [
         "air hunger wants fanned",
         "wants to be fanned",
         "icy cold hands and feet",
         "collapse with coldness",
         "clammy pale weak faint",
-        "cannot stand warm stuffy room despite coldness"
+        "cannot stand warm stuffy room despite coldness",
+        "hand fan going",
+        "moving air across my face",
+        "must have the window open",
+        "must have all the windows open",
+        "air hunger",
+        "wants fresh air blowing on face"
       ],
       "remedies": [
         {
@@ -2343,11 +2349,11 @@
       "remedies": [
         {
           "id": "ars-alb",
-          "grade": 3
+          "grade": 1
         },
         {
           "id": "all-c",
-          "grade": 1
+          "grade": 3
         }
       ]
     },
@@ -2650,25 +2656,6 @@
       "remedies": [
         {
           "id": "puls",
-          "grade": 3
-        }
-      ]
-    },
-    {
-      "section": "Common",
-      "rubric": "Wants to be fanned, air hunger, desires open windows and moving air on face",
-      "triggers": [
-        "wants to be fanned",
-        "hand fan going",
-        "moving air across my face",
-        "must have the window open",
-        "must have all the windows open",
-        "air hunger",
-        "wants fresh air blowing on face"
-      ],
-      "remedies": [
-        {
-          "id": "carb-v",
           "grade": 3
         }
       ]
@@ -3384,11 +3371,11 @@
       "remedies": [
         {
           "id": "ars-alb",
-          "grade": 3
+          "grade": 1
         },
         {
           "id": "colch",
-          "grade": 2
+          "grade": 3
         },
         {
           "id": "puls",
@@ -4951,11 +4938,11 @@
       "remedies": [
         {
           "id": "ars-alb",
-          "grade": 3
+          "grade": 1
         },
         {
           "id": "phos",
-          "grade": 2
+          "grade": 3
         },
         {
           "id": "kali-c",
@@ -7137,10 +7124,10 @@
       "rubric": "Right-sided headache that follows the course of the sun, better firm pressure and dark room"
     },
     {
-      "id": "sym_air_hunger_wants_to_be_fanned_collapse_with_icy_co",
-      "label": "Air hunger, wants to be fanned, collapse with icy…",
+      "id": "sym_air_hunger_wants_to_be_fanned_desires_open_windo",
+      "label": "Air hunger, wants to be fanned, desires open windows…",
       "section": "Common",
-      "rubric": "Air hunger, wants to be fanned, collapse with icy coldness of extremities"
+      "rubric": "Air hunger, wants to be fanned, desires open windows/moving air, collapse with icy coldness of extremities"
     },
     {
       "id": "sym_vertigo_worse_from_looking_up_better_from_pressure",
@@ -7309,12 +7296,6 @@
       "label": "Better in open air, worse in a warm closed room",
       "section": "Common",
       "rubric": "Better in open air, worse in a warm closed room"
-    },
-    {
-      "id": "sym_wants_to_be_fanned_air_hunger_desires_open_windows",
-      "label": "Wants to be fanned, air hunger, desires open…",
-      "section": "Common",
-      "rubric": "Wants to be fanned, air hunger, desires open windows and moving air on face"
     },
     {
       "id": "sym_collapse_and_exhaustion_after_acute_illness_food_p",
