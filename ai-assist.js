@@ -160,6 +160,7 @@
         ${agreementLine}
         ${symptomsLine}
         <div class="ai-reasoning">${esc(aiResult.reasoning)}</div>
+        <div class="ai-potency-note">💊 Dr. Ahmed often begins with a single dose of a high potency (CM or 10M) when clinically appropriate, followed by lower potencies such as 30C for continued management — final potency selection depends on the individual case.</div>
       `;
     }
   }

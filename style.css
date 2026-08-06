@@ -260,6 +260,7 @@ footer.app-footer .f-item b { display: block; color: var(--navy); font-size: 0.7
 .ai-disagree { color: var(--red-1); font-weight: 700; font-size: 0.85rem; margin-bottom: 6px; }
 .ai-key-symptoms { font-size: 0.82rem; color: var(--muted); margin-bottom: 8px; }
 .ai-reasoning { font-size: 0.88rem; color: var(--ink); line-height: 1.55; }
+.ai-potency-note { font-size: 0.78rem; color: var(--muted); line-height: 1.5; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
 
 /* ---------- CONFIDENCE NUDGE (ai-assist.js, shown right after "Get Remedy") ---------- */
 .ai-confidence-hint { margin: 10px 20px 0; padding: 10px 14px; border-radius: 10px; font-size: 0.82rem; font-weight: 700; }
