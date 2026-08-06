@@ -14334,8 +14334,8 @@
       ],
       "miasm": {
         "primary": "Psora",
-        "secondary": "Syphilis",
-        "explanation": "An acute severe infection with potential for deeper post-infectious complications."
+        "secondary": null,
+        "explanation": "An acute, self-limiting infectious illness, in the same class as measles and chickenpox."
       },
       "diseaseNosodes": [
         {
@@ -14752,8 +14752,8 @@
       ],
       "miasm": {
         "primary": "Psora",
-        "secondary": "Syphilis",
-        "explanation": "A severe infectious illness with potential for deep, prostrating complications."
+        "secondary": "Tubercular",
+        "explanation": "A severe, prostrating infectious fever with marked debility — Tuberculinum has a specific classical indication for lingering post-typhoid weakness, reflecting the susceptibility pattern of the tubercular miasm rather than a syphilitic one."
       },
       "diseaseNosodes": [
         {
@@ -17671,8 +17671,8 @@
       ],
       "miasm": {
         "primary": "Psora",
-        "secondary": "Syphilis",
-        "explanation": "An acute severe febrile illness with potential for hemorrhagic complications."
+        "secondary": "Tubercular",
+        "explanation": "An acute severe febrile illness — the hemorrhagic tendency seen in more severe presentations reflects the tubercular miasm, which is classically associated with a hemorrhagic diathesis."
       },
       "diseaseNosodes": []
     },
@@ -19737,8 +19737,8 @@
       "biochemicSalts": [],
       "miasm": {
         "primary": "Psora",
-        "secondary": "Syphilis",
-        "explanation": "Hypermetabolic glandular over-activity, occasionally with deeper tissue change."
+        "secondary": "Sycosis",
+        "explanation": "Hypermetabolic glandular over-activity is a functional excess state, reflecting the sycotic pattern of overgrowth/overproduction rather than syphilitic destruction."
       },
       "diseaseNosodes": [
         {
@@ -20502,8 +20502,8 @@
       ],
       "miasm": {
         "primary": "Psora",
-        "secondary": "Syphilis",
-        "explanation": "Functional mental fatigue, more deeply rooted if progressive."
+        "secondary": null,
+        "explanation": "Functional mental fatigue without organic decline is straightforwardly psoric."
       },
       "diseaseNosodes": []
     },
