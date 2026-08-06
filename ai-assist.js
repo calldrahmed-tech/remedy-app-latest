@@ -27,7 +27,7 @@
   waitForReady(
     () => document.getElementById("symptomInput") && window.RemedyAuth,
     setup,
-    40
+    120 // 30s — Firebase SDK can take a while to load from CDN on a slow first visit
   );
 
   function esc(s) {
