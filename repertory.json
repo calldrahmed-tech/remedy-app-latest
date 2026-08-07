@@ -28155,6 +28155,817 @@
           "grade": 1
         }
       ]
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo that is worse specifically in a crowded room or closed space, better in open air",
+      "triggers": [
+        "dizziness worse in a crowded room better in open air",
+        "vertigo in closed crowded spaces relieved outdoors"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "acon",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo that occurs specifically while reading or doing close eye work",
+      "triggers": [
+        "dizziness while reading or doing close eye work",
+        "vertigo triggered by focused near vision tasks"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "ruta",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo with a sensation of the ground swaying or moving underfoot, as if on a boat",
+      "triggers": [
+        "ground feels like it's swaying like being on a boat",
+        "sensation of moving ground underfoot during vertigo"
+      ],
+      "remedies": [
+        {
+          "id": "cocc",
+          "grade": 1
+        },
+        {
+          "id": "bor",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo that comes on specifically after eating a heavy meal",
+      "triggers": [
+        "dizziness after eating a heavy meal",
+        "vertigo triggered by a large or rich meal"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Perspiration",
+      "category": "Particulars",
+      "rubric": "Night sweats specifically in a chronically ill or debilitated patient, exhausting and recurring",
+      "triggers": [
+        "night sweats in a chronically ill debilitated patient",
+        "recurring exhausting sweats at night in a weak patient"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 2
+        },
+        {
+          "id": "ph-ac",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Perspiration",
+      "category": "Particulars",
+      "rubric": "Sweat that stains clothing yellow, distinct from ordinary perspiration",
+      "triggers": [
+        "sweat leaves a yellow stain on clothing",
+        "perspiration that discolors clothes yellow"
+      ],
+      "remedies": [
+        {
+          "id": "carb-v",
+          "grade": 1
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Perspiration",
+      "category": "Particulars",
+      "rubric": "Perspiration that breaks out specifically during anger or emotional upset",
+      "triggers": [
+        "sweats during anger or emotional upset",
+        "perspiration triggered specifically by getting angry"
+      ],
+      "remedies": [
+        {
+          "id": "cham",
+          "grade": 1
+        },
+        {
+          "id": "staph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Sharp pain under the left breast that comes and goes suddenly, not linked to exertion",
+      "triggers": [
+        "sharp pain under the left breast comes and goes",
+        "sudden stabbing pain below the left breast unrelated to exertion"
+      ],
+      "remedies": [
+        {
+          "id": "spig",
+          "grade": 2
+        },
+        {
+          "id": "acon",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Chest oppression relieved specifically by loosening tight clothing around the chest",
+      "triggers": [
+        "chest tightness relieved by loosening clothing",
+        "oppression in the chest eased once clothes are loosened"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Palpitations that come on specifically during or right after sexual activity",
+      "triggers": [
+        "palpitations during or right after intimacy",
+        "heart pounds specifically following sexual activity"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Pain in the upper back and neck brought on specifically by carrying a heavy bag or child",
+      "triggers": [
+        "upper back and neck pain from carrying a heavy bag or child",
+        "backache from carrying weight on the shoulder"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Sensation of a weak, giving-way feeling in the lower back specifically before menses",
+      "triggers": [
+        "lower back feels weak and giving way before period",
+        "backache with a feeling the back might give out before menses"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Back pain that improves markedly with gentle continuous walking but returns on stopping",
+      "triggers": [
+        "back pain better with gentle continuous walking returns on stopping",
+        "backache eased by steady walking flares again once still"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Premature ejaculation associated with anxiety about performance",
+      "triggers": [
+        "premature ejaculation linked to performance anxiety",
+        "sexual timing issue tied to anxiety about performing well"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 2
+        },
+        {
+          "id": "arg-n",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Chronic prostatitis-type discomfort with a dull ache worse after ejaculation",
+      "triggers": [
+        "chronic prostate discomfort worse after ejaculation",
+        "dull prostate ache that increases following sexual activity"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 2
+        },
+        {
+          "id": "sel",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Excessive masturbation in adolescence leading to weakness and loss of confidence",
+      "triggers": [
+        "excessive masturbation in a teenager leading to weakness",
+        "adolescent habit causing weakness and low confidence"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 1
+        },
+        {
+          "id": "staph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache that alternates sides, right one day, left the next, never both together",
+      "triggers": [
+        "headache alternates sides right one day left the next",
+        "head pain switches sides never affects both at once"
+      ],
+      "remedies": [
+        {
+          "id": "lac-c",
+          "grade": 2
+        },
+        {
+          "id": "sang",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache accompanied by visible pulsation or throbbing of the blood vessels in the temples",
+      "triggers": [
+        "visible throbbing of the temple arteries during headache",
+        "pulsating blood vessels seen at the temples with head pain"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "glon",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache confined to a small area the size of a coin, sharply localized",
+      "triggers": [
+        "headache confined to a small coin sized spot",
+        "sharply localized head pain in a tiny area"
+      ],
+      "remedies": [
+        {
+          "id": "ign",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache brought on specifically by exposure to strong perfume or chemical smells",
+      "triggers": [
+        "headache from strong perfume or chemical smells",
+        "head pain triggered by exposure to strong odors"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 1
+        },
+        {
+          "id": "coloc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Sensation of the head being unusually heavy, must support it with the hands",
+      "triggers": [
+        "head feels unusually heavy must support it with hands",
+        "heaviness of the head needs to be held up"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "ph-ac",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache that improves markedly with firm binding or a tight bandage around the head",
+      "triggers": [
+        "headache improves with a tight bandage around the head",
+        "head pain relieved by firm binding pressure"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache accompanied by a sensation of water splashing or sloshing inside the skull on movement",
+      "triggers": [
+        "sensation of water sloshing inside the skull with movement",
+        "feels like liquid splashing inside the head when moving"
+      ],
+      "remedies": [
+        {
+          "id": "asar",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Sensation of electric shocks shooting through the limbs, brief and sudden",
+      "triggers": [
+        "sudden electric shock sensation shooting through the limbs",
+        "brief shock like jolts in the arms or legs"
+      ],
+      "remedies": [
+        {
+          "id": "agar",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Painful contraction or drawing up of the toes, especially at night",
+      "triggers": [
+        "toes cramp and draw up painfully especially at night",
+        "painful curling of the toes at night"
+      ],
+      "remedies": [
+        {
+          "id": "cupr",
+          "grade": 2
+        },
+        {
+          "id": "sec",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Weakness of the hands that makes gripping objects firmly difficult",
+      "triggers": [
+        "weak grip difficulty holding objects firmly",
+        "hands lack strength to grip things securely"
+      ],
+      "remedies": [
+        {
+          "id": "caust",
+          "grade": 2
+        },
+        {
+          "id": "plb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Joint pain that is markedly better from continued gentle motion but worse from the first movement after rest",
+      "triggers": [
+        "joint pain worse the first movement after rest better once moving",
+        "stiffness on starting eases with continued gentle motion"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Swelling of a single joint only, red and hot, without involvement of other joints",
+      "triggers": [
+        "one joint swollen red and hot other joints unaffected",
+        "single joint inflammation not spreading to others"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Sensation as if a tight band or garter were wrapped around the leg or arm",
+      "triggers": [
+        "feels like a tight garter wrapped around the leg",
+        "band like constriction sensation around a limb"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Weakness in the ankles causing them to give way or turn unexpectedly while walking",
+      "triggers": [
+        "ankles give way or turn unexpectedly while walking",
+        "weak ankles cause sudden turning during walking"
+      ],
+      "remedies": [
+        {
+          "id": "nat-c",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Cough that ends with retching or vomiting of mucus, especially in children",
+      "triggers": [
+        "cough ends with vomiting mucus especially in children",
+        "child coughs until they retch or throw up phlegm"
+      ],
+      "remedies": [
+        {
+          "id": "ip",
+          "grade": 2
+        },
+        {
+          "id": "cupr",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Breathing that is noisy and rattling in a newborn or young infant, without distress",
+      "triggers": [
+        "noisy rattling breathing in a newborn without distress",
+        "infant breathes with audible rattle but seems comfortable"
+      ],
+      "remedies": [
+        {
+          "id": "ant-t",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Cough triggered specifically by laughing or crying, stops once calm again",
+      "triggers": [
+        "cough triggered by laughing or crying stops once calm",
+        "coughing fit starts with laughter or tears settles when calm"
+      ],
+      "remedies": [
+        {
+          "id": "ign",
+          "grade": 1
+        },
+        {
+          "id": "cupr",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Sensation of suffocation on falling asleep, jerks awake gasping for air",
+      "triggers": [
+        "feels suffocated falling asleep jerks awake gasping",
+        "sudden gasping awakening right as sleep begins"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Cough that is worse specifically from talking for an extended period",
+      "triggers": [
+        "cough worse after talking for a long time",
+        "extended talking brings on a coughing fit"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 1
+        },
+        {
+          "id": "caust",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Chronic itching that is worse specifically from wool or synthetic fabric against the skin",
+      "triggers": [
+        "itching worse from wool or synthetic fabric",
+        "skin irritation flares from certain fabric types"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "psor",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Painful red nodules under the skin, especially on the shins, tender to pressure",
+      "triggers": [
+        "painful red nodules under the skin on the shins",
+        "tender lumps beneath the skin on the lower legs"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Skin eruptions that appear in a clear band or stripe pattern along a nerve path (shingles-type)",
+      "triggers": [
+        "rash in a band or stripe along a nerve shingles type",
+        "eruption follows a nerve path in a distinct band"
+      ],
+      "remedies": [
+        {
+          "id": "ran-b",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Itching that moves from one part of the body to another, never staying in one place",
+      "triggers": [
+        "itch moves from one part of the body to another",
+        "itching migrates never stays in the same spot"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Small, itchy blisters confined to the palms and soles, worse in warm weather",
+      "triggers": [
+        "small itchy blisters on the palms and soles worse in warm weather",
+        "blistering confined to hands and feet flares in warmth"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Sensation of pelvic congestion or fullness that is worse from prolonged standing",
+      "triggers": [
+        "pelvic congestion or fullness worse from standing a long time",
+        "heaviness in the pelvis increases with prolonged standing"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Menses accompanied by marked mood swings that resolve completely once the flow begins",
+      "triggers": [
+        "mood swings before period resolve once flow begins",
+        "emotional ups and downs stop as soon as the period starts"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Ovarian pain that is sharp and shooting, worse from the jarring of walking",
+      "triggers": [
+        "sharp shooting ovarian pain worse from walking",
+        "ovary pain increases with jarring movement while walking"
+      ],
+      "remedies": [
+        {
+          "id": "apis",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Delayed onset of puberty in a girl, menses have not yet started at the expected age",
+      "triggers": [
+        "delayed puberty menses have not started at expected age",
+        "girl's first period is late compared to peers"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Recurrent yeast-type vaginal infections with thick white discharge and intense itching",
+      "triggers": [
+        "recurring yeast infection thick white discharge and itching",
+        "frequent candida type vaginal infection with intense itch"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 1
+        },
+        {
+          "id": "kreos",
+          "grade": 1
+        }
+      ]
     }
   ],
   "chiefSymptomTags": [
@@ -36803,6 +37614,276 @@
       "label": "Marked fear of being judged on social media or by st…",
       "section": "Mind",
       "rubric": "Marked fear of being judged on social media or by strangers online"
+    },
+    {
+      "id": "sym_vertigo_that_is_worse_specifically_in_a_crowded_room_or_clos",
+      "label": "Vertigo that is worse specifically in a crowded room…",
+      "section": "Vertigo",
+      "rubric": "Vertigo that is worse specifically in a crowded room or closed space, better in open air"
+    },
+    {
+      "id": "sym_vertigo_that_occurs_specifically_while_reading_or_doing_clos",
+      "label": "Vertigo that occurs specifically while reading or do…",
+      "section": "Vertigo",
+      "rubric": "Vertigo that occurs specifically while reading or doing close eye work"
+    },
+    {
+      "id": "sym_vertigo_with_a_sensation_of_the_ground_swaying_or_moving_und",
+      "label": "Vertigo with a sensation of the ground swaying or mo…",
+      "section": "Vertigo",
+      "rubric": "Vertigo with a sensation of the ground swaying or moving underfoot, as if on a boat"
+    },
+    {
+      "id": "sym_vertigo_that_comes_on_specifically_after_eating_a_heavy_meal",
+      "label": "Vertigo that comes on specifically after eating a he…",
+      "section": "Vertigo",
+      "rubric": "Vertigo that comes on specifically after eating a heavy meal"
+    },
+    {
+      "id": "sym_night_sweats_specifically_in_a_chronically_ill_or_debilitate",
+      "label": "Night sweats specifically in a chronically ill or de…",
+      "section": "Perspiration",
+      "rubric": "Night sweats specifically in a chronically ill or debilitated patient, exhausting and recurring"
+    },
+    {
+      "id": "sym_sweat_that_stains_clothing_yellow_distinct_from_ordinary_per",
+      "label": "Sweat that stains clothing yellow, distinct from ord…",
+      "section": "Perspiration",
+      "rubric": "Sweat that stains clothing yellow, distinct from ordinary perspiration"
+    },
+    {
+      "id": "sym_perspiration_that_breaks_out_specifically_during_anger_or_em",
+      "label": "Perspiration that breaks out specifically during ang…",
+      "section": "Perspiration",
+      "rubric": "Perspiration that breaks out specifically during anger or emotional upset"
+    },
+    {
+      "id": "sym_sharp_pain_under_the_left_breast_that_comes_and_goes_suddenl",
+      "label": "Sharp pain under the left breast that comes and goes…",
+      "section": "Chest",
+      "rubric": "Sharp pain under the left breast that comes and goes suddenly, not linked to exertion"
+    },
+    {
+      "id": "sym_chest_oppression_relieved_specifically_by_loosening_tight_cl",
+      "label": "Chest oppression relieved specifically by loosening …",
+      "section": "Chest",
+      "rubric": "Chest oppression relieved specifically by loosening tight clothing around the chest"
+    },
+    {
+      "id": "sym_palpitations_that_come_on_specifically_during_or_right_after",
+      "label": "Palpitations that come on specifically during or rig…",
+      "section": "Chest",
+      "rubric": "Palpitations that come on specifically during or right after sexual activity"
+    },
+    {
+      "id": "sym_pain_in_the_upper_back_and_neck_brought_on_specifically_by_c",
+      "label": "Pain in the upper back and neck brought on specifica…",
+      "section": "Back",
+      "rubric": "Pain in the upper back and neck brought on specifically by carrying a heavy bag or child"
+    },
+    {
+      "id": "sym_sensation_of_a_weak_giving_way_feeling_in_the_lower_back_spe",
+      "label": "Sensation of a weak, giving-way feeling in the lower…",
+      "section": "Back",
+      "rubric": "Sensation of a weak, giving-way feeling in the lower back specifically before menses"
+    },
+    {
+      "id": "sym_back_pain_that_improves_markedly_with_gentle_continuous_walk",
+      "label": "Back pain that improves markedly with gentle continu…",
+      "section": "Back",
+      "rubric": "Back pain that improves markedly with gentle continuous walking but returns on stopping"
+    },
+    {
+      "id": "sym_premature_ejaculation_associated_with_anxiety_about_performa",
+      "label": "Premature ejaculation associated with anxiety about …",
+      "section": "Male",
+      "rubric": "Premature ejaculation associated with anxiety about performance"
+    },
+    {
+      "id": "sym_chronic_prostatitis_type_discomfort_with_a_dull_ache_worse_a",
+      "label": "Chronic prostatitis-type discomfort with a dull ache…",
+      "section": "Male",
+      "rubric": "Chronic prostatitis-type discomfort with a dull ache worse after ejaculation"
+    },
+    {
+      "id": "sym_excessive_masturbation_in_adolescence_leading_to_weakness_an",
+      "label": "Excessive masturbation in adolescence leading to wea…",
+      "section": "Male",
+      "rubric": "Excessive masturbation in adolescence leading to weakness and loss of confidence"
+    },
+    {
+      "id": "sym_headache_that_alternates_sides_right_one_day_left_the_next_n",
+      "label": "Headache that alternates sides, right one day, left …",
+      "section": "Head",
+      "rubric": "Headache that alternates sides, right one day, left the next, never both together"
+    },
+    {
+      "id": "sym_headache_accompanied_by_visible_pulsation_or_throbbing_of_th",
+      "label": "Headache accompanied by visible pulsation or throbbi…",
+      "section": "Head",
+      "rubric": "Headache accompanied by visible pulsation or throbbing of the blood vessels in the temples"
+    },
+    {
+      "id": "sym_headache_confined_to_a_small_area_the_size_of_a_coin_sharply",
+      "label": "Headache confined to a small area the size of a coin…",
+      "section": "Head",
+      "rubric": "Headache confined to a small area the size of a coin, sharply localized"
+    },
+    {
+      "id": "sym_headache_brought_on_specifically_by_exposure_to_strong_perfu",
+      "label": "Headache brought on specifically by exposure to stro…",
+      "section": "Head",
+      "rubric": "Headache brought on specifically by exposure to strong perfume or chemical smells"
+    },
+    {
+      "id": "sym_sensation_of_the_head_being_unusually_heavy_must_support_it_",
+      "label": "Sensation of the head being unusually heavy, must su…",
+      "section": "Head",
+      "rubric": "Sensation of the head being unusually heavy, must support it with the hands"
+    },
+    {
+      "id": "sym_headache_that_improves_markedly_with_firm_binding_or_a_tight",
+      "label": "Headache that improves markedly with firm binding or…",
+      "section": "Head",
+      "rubric": "Headache that improves markedly with firm binding or a tight bandage around the head"
+    },
+    {
+      "id": "sym_headache_accompanied_by_a_sensation_of_water_splashing_or_sl",
+      "label": "Headache accompanied by a sensation of water splashi…",
+      "section": "Head",
+      "rubric": "Headache accompanied by a sensation of water splashing or sloshing inside the skull on movement"
+    },
+    {
+      "id": "sym_sensation_of_electric_shocks_shooting_through_the_limbs_brie",
+      "label": "Sensation of electric shocks shooting through the li…",
+      "section": "Extremities",
+      "rubric": "Sensation of electric shocks shooting through the limbs, brief and sudden"
+    },
+    {
+      "id": "sym_painful_contraction_or_drawing_up_of_the_toes_especially_at_",
+      "label": "Painful contraction or drawing up of the toes, espec…",
+      "section": "Extremities",
+      "rubric": "Painful contraction or drawing up of the toes, especially at night"
+    },
+    {
+      "id": "sym_weakness_of_the_hands_that_makes_gripping_objects_firmly_dif",
+      "label": "Weakness of the hands that makes gripping objects fi…",
+      "section": "Extremities",
+      "rubric": "Weakness of the hands that makes gripping objects firmly difficult"
+    },
+    {
+      "id": "sym_joint_pain_that_is_markedly_better_from_continued_gentle_mot",
+      "label": "Joint pain that is markedly better from continued ge…",
+      "section": "Extremities",
+      "rubric": "Joint pain that is markedly better from continued gentle motion but worse from the first movement after rest"
+    },
+    {
+      "id": "sym_swelling_of_a_single_joint_only_red_and_hot_without_involvem",
+      "label": "Swelling of a single joint only, red and hot, withou…",
+      "section": "Extremities",
+      "rubric": "Swelling of a single joint only, red and hot, without involvement of other joints"
+    },
+    {
+      "id": "sym_sensation_as_if_a_tight_band_or_garter_were_wrapped_around_t",
+      "label": "Sensation as if a tight band or garter were wrapped …",
+      "section": "Extremities",
+      "rubric": "Sensation as if a tight band or garter were wrapped around the leg or arm"
+    },
+    {
+      "id": "sym_weakness_in_the_ankles_causing_them_to_give_way_or_turn_unex",
+      "label": "Weakness in the ankles causing them to give way or t…",
+      "section": "Extremities",
+      "rubric": "Weakness in the ankles causing them to give way or turn unexpectedly while walking"
+    },
+    {
+      "id": "sym_cough_that_ends_with_retching_or_vomiting_of_mucus_especiall",
+      "label": "Cough that ends with retching or vomiting of mucus, …",
+      "section": "Respiratory",
+      "rubric": "Cough that ends with retching or vomiting of mucus, especially in children"
+    },
+    {
+      "id": "sym_breathing_that_is_noisy_and_rattling_in_a_newborn_or_young_i",
+      "label": "Breathing that is noisy and rattling in a newborn or…",
+      "section": "Respiratory",
+      "rubric": "Breathing that is noisy and rattling in a newborn or young infant, without distress"
+    },
+    {
+      "id": "sym_cough_triggered_specifically_by_laughing_or_crying_stops_onc",
+      "label": "Cough triggered specifically by laughing or crying, …",
+      "section": "Respiratory",
+      "rubric": "Cough triggered specifically by laughing or crying, stops once calm again"
+    },
+    {
+      "id": "sym_sensation_of_suffocation_on_falling_asleep_jerks_awake_gaspi",
+      "label": "Sensation of suffocation on falling asleep, jerks aw…",
+      "section": "Respiratory",
+      "rubric": "Sensation of suffocation on falling asleep, jerks awake gasping for air"
+    },
+    {
+      "id": "sym_cough_that_is_worse_specifically_from_talking_for_an_extende",
+      "label": "Cough that is worse specifically from talking for an…",
+      "section": "Respiratory",
+      "rubric": "Cough that is worse specifically from talking for an extended period"
+    },
+    {
+      "id": "sym_chronic_itching_that_is_worse_specifically_from_wool_or_synt",
+      "label": "Chronic itching that is worse specifically from wool…",
+      "section": "Skin",
+      "rubric": "Chronic itching that is worse specifically from wool or synthetic fabric against the skin"
+    },
+    {
+      "id": "sym_painful_red_nodules_under_the_skin_especially_on_the_shins_t",
+      "label": "Painful red nodules under the skin, especially on th…",
+      "section": "Skin",
+      "rubric": "Painful red nodules under the skin, especially on the shins, tender to pressure"
+    },
+    {
+      "id": "sym_skin_eruptions_that_appear_in_a_clear_band_or_stripe_pattern",
+      "label": "Skin eruptions that appear in a clear band or stripe…",
+      "section": "Skin",
+      "rubric": "Skin eruptions that appear in a clear band or stripe pattern along a nerve path (shingles-type)"
+    },
+    {
+      "id": "sym_itching_that_moves_from_one_part_of_the_body_to_another_neve",
+      "label": "Itching that moves from one part of the body to anot…",
+      "section": "Skin",
+      "rubric": "Itching that moves from one part of the body to another, never staying in one place"
+    },
+    {
+      "id": "sym_small_itchy_blisters_confined_to_the_palms_and_soles_worse_i",
+      "label": "Small, itchy blisters confined to the palms and sole…",
+      "section": "Skin",
+      "rubric": "Small, itchy blisters confined to the palms and soles, worse in warm weather"
+    },
+    {
+      "id": "sym_sensation_of_pelvic_congestion_or_fullness_that_is_worse_fro",
+      "label": "Sensation of pelvic congestion or fullness that is w…",
+      "section": "Female",
+      "rubric": "Sensation of pelvic congestion or fullness that is worse from prolonged standing"
+    },
+    {
+      "id": "sym_menses_accompanied_by_marked_mood_swings_that_resolve_comple",
+      "label": "Menses accompanied by marked mood swings that resolv…",
+      "section": "Female",
+      "rubric": "Menses accompanied by marked mood swings that resolve completely once the flow begins"
+    },
+    {
+      "id": "sym_ovarian_pain_that_is_sharp_and_shooting_worse_from_the_jarri",
+      "label": "Ovarian pain that is sharp and shooting, worse from …",
+      "section": "Female",
+      "rubric": "Ovarian pain that is sharp and shooting, worse from the jarring of walking"
+    },
+    {
+      "id": "sym_delayed_onset_of_puberty_in_a_girl_menses_have_not_yet_start",
+      "label": "Delayed onset of puberty in a girl, menses have not …",
+      "section": "Female",
+      "rubric": "Delayed onset of puberty in a girl, menses have not yet started at the expected age"
+    },
+    {
+      "id": "sym_recurrent_yeast_type_vaginal_infections_with_thick_white_dis",
+      "label": "Recurrent yeast-type vaginal infections with thick w…",
+      "section": "Female",
+      "rubric": "Recurrent yeast-type vaginal infections with thick white discharge and intense itching"
     }
   ]
 }
