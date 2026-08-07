@@ -24940,6 +24940,2204 @@
           "grade": 1
         }
       ]
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Involuntary urination during a deep, sound sleep at night, the child unaware it happened",
+      "triggers": [
+        "wets the bed during deep sleep unaware it happened",
+        "involuntary urination at night child doesn't know it occurred"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Retention of urine after childbirth or surgery, unable to pass urine despite the urge",
+      "triggers": [
+        "cannot urinate after childbirth or surgery despite the urge",
+        "urinary retention following delivery or an operation"
+      ],
+      "remedies": [
+        {
+          "id": "acon",
+          "grade": 1
+        },
+        {
+          "id": "op",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Pain along the urethra that shoots forward toward the tip during urination",
+      "triggers": [
+        "shooting pain along the urethra during urination",
+        "pain travels forward through the urethra while urinating"
+      ],
+      "remedies": [
+        {
+          "id": "canth",
+          "grade": 2
+        },
+        {
+          "id": "sars",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Urine that deposits a thick, brick-dust or reddish sediment on standing",
+      "triggers": [
+        "urine leaves reddish brick dust sediment on standing",
+        "urine settles with thick red deposit"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 2
+        },
+        {
+          "id": "sars",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Weak, thin urinary stream in an older man, must strain or wait for the flow to start",
+      "triggers": [
+        "weak thin urine stream older man must strain to start",
+        "elderly man's urine flow is thin and slow to begin"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Bedwetting specifically during the first part of the night, before midnight",
+      "triggers": [
+        "bedwetting happens before midnight not later",
+        "child wets the bed early in the night before midnight"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 1
+        },
+        {
+          "id": "caust",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Urgent need to urinate that comes on suddenly with anxiety or fright",
+      "triggers": [
+        "sudden urge to urinate from anxiety or fright",
+        "urgent need to pee triggered by a scare"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "acon",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Swelling and tenderness of the testicles following an injury or blow to the groin",
+      "triggers": [
+        "testicle swelling and tenderness after an injury",
+        "groin injury causing testicular swelling and pain"
+      ],
+      "remedies": [
+        {
+          "id": "arn",
+          "grade": 2
+        },
+        {
+          "id": "con",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Nocturnal emissions occurring frequently and leaving the patient weak and drained the next day",
+      "triggers": [
+        "frequent nocturnal emissions leaving him drained next day",
+        "night emissions happening often causing weakness"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Discomfort or dragging sensation in the testicles that is worse from walking",
+      "triggers": [
+        "dragging discomfort in the testicles worse from walking",
+        "testicular ache increases while walking"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Complete or near-complete loss of libido following prolonged emotional stress or overwork",
+      "triggers": [
+        "lost all interest in intimacy after prolonged stress or overwork",
+        "libido gone following long period of emotional strain"
+      ],
+      "remedies": [
+        {
+          "id": "ph-ac",
+          "grade": 2
+        },
+        {
+          "id": "sel",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Sharp, stitching pain in the prostate area, worse from sitting for long periods",
+      "triggers": [
+        "sharp stitching prostate pain worse from sitting long",
+        "prostate area pain increases with prolonged sitting"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Menses that arrive too early, cycle consistently shorter than the normal 28 days",
+      "triggers": [
+        "periods come early cycle shorter than normal",
+        "menses arrive ahead of schedule consistently short cycle"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Menses that are delayed, arriving consistently later than expected each month",
+      "triggers": [
+        "periods always come late every month",
+        "menses delayed beyond the expected date consistently"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Menstrual flow that stops and starts intermittently over several days rather than flowing continuously",
+      "triggers": [
+        "period flow stops and starts over several days",
+        "menses comes and goes intermittently instead of flowing steadily"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Ovulation pain (mid-cycle) felt distinctly on one side of the lower abdomen",
+      "triggers": [
+        "mid cycle ovulation pain on one side",
+        "one sided lower abdominal pain around ovulation time"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Breast tenderness that is worse specifically from the jarring of walking or exercise",
+      "triggers": [
+        "breast tenderness worse from walking or exercise",
+        "breasts hurt more with jarring movement"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 1
+        },
+        {
+          "id": "bry",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Menopausal hot flashes accompanied by marked irritability and sudden anger",
+      "triggers": [
+        "hot flashes with irritability and sudden anger",
+        "menopause flushes accompanied by short temper"
+      ],
+      "remedies": [
+        {
+          "id": "sang",
+          "grade": 1
+        },
+        {
+          "id": "sep",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Vaginal dryness and discomfort during intimacy, worse around and after menopause",
+      "triggers": [
+        "vaginal dryness during intimacy worse after menopause",
+        "dryness causing discomfort around menopause"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Prolapse sensation of the uterus, as if it were bearing down and might come out, worse standing",
+      "triggers": [
+        "feels like the uterus is bearing down might come out",
+        "prolapse sensation worse from standing"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 3
+        },
+        {
+          "id": "lil-tig",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Menstrual pain that begins in the back and radiates forward to the front of the abdomen",
+      "triggers": [
+        "period pain starts in the back radiates to the front",
+        "menstrual cramp begins in the back moves forward"
+      ],
+      "remedies": [
+        {
+          "id": "caul",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Absence of any menstrual pain despite a heavy or irregular flow, patient otherwise well",
+      "triggers": [
+        "no period pain at all despite heavy irregular flow",
+        "painless menses even though flow is heavy or irregular"
+      ],
+      "remedies": [
+        {
+          "id": "ip",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Morning sickness during early pregnancy with nausea that is better after eating a little",
+      "triggers": [
+        "morning sickness nausea better after eating a little",
+        "pregnancy nausea relieved by small amounts of food"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Persistent nausea and vomiting during pregnancy that is unrelieved by any food or position",
+      "triggers": [
+        "constant pregnancy vomiting nothing relieves it",
+        "severe unrelenting nausea during pregnancy no relief found"
+      ],
+      "remedies": [
+        {
+          "id": "ip",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Swelling of the legs and feet that develops in the later months of pregnancy",
+      "triggers": [
+        "swollen legs and feet in late pregnancy",
+        "pregnancy related swelling of the lower limbs later months"
+      ],
+      "remedies": [
+        {
+          "id": "apis",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Insufficient or diminished milk supply while breastfeeding, despite adequate nursing frequency",
+      "triggers": [
+        "low milk supply despite nursing often",
+        "breastfeeding milk supply seems insufficient though nursing regularly"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "agn",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Painful, cracked nipples during breastfeeding, worse the moment the baby latches",
+      "triggers": [
+        "cracked painful nipples worse the moment baby latches",
+        "nipple pain during breastfeeding right when latching"
+      ],
+      "remedies": [
+        {
+          "id": "graph",
+          "grade": 1
+        },
+        {
+          "id": "caust",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Postpartum depression with tearfulness and detachment that began soon after delivery",
+      "triggers": [
+        "postpartum depression tearful and detached after delivery",
+        "sad and withdrawn feeling soon after giving birth"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Vaginal discharge that is greenish and irritating, with an offensive odor",
+      "triggers": [
+        "greenish irritating vaginal discharge with bad smell",
+        "offensive green discharge causing irritation"
+      ],
+      "remedies": [
+        {
+          "id": "kreos",
+          "grade": 1
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Uterine fibroid with a sensation of heaviness or dragging in the pelvis, worse standing",
+      "triggers": [
+        "fibroid with heaviness or dragging in the pelvis",
+        "uterine fibroid worse standing dragging sensation"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "thlaspi",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Irregular ovulation confirmed by tracking, cycles vary widely in length month to month",
+      "triggers": [
+        "irregular ovulation cycles vary widely month to month",
+        "tracking shows unpredictable ovulation timing"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Sensation of coldness in the pelvic or vaginal area, worse in cold weather",
+      "triggers": [
+        "coldness felt in the pelvic area worse in cold weather",
+        "vaginal area feels cold worse in cold weather"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Pain in the small of the back that is markedly better lying on the back with knees drawn up",
+      "triggers": [
+        "lower back pain better lying with knees drawn up",
+        "small of back pain relieved in knee chest type position"
+      ],
+      "remedies": [
+        {
+          "id": "coloc",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Stiffness of the whole spine, worse first thing in the morning, improving slowly through the day",
+      "triggers": [
+        "whole spine stiff worse in the morning improves through the day",
+        "stiffness of the back worse on waking better as the day goes on"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Backache in a pregnant woman, worse in the later months, better with support",
+      "triggers": [
+        "backache during pregnancy worse later months better with support",
+        "pregnancy back pain eased by wearing support belt"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Sensation of a hot iron pressing into the back between the shoulder blades",
+      "triggers": [
+        "feels like a hot iron pressing between the shoulder blades",
+        "burning iron sensation on the upper back"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Back pain that is markedly worse in cold, damp weather and better with dry heat",
+      "triggers": [
+        "back pain worse in cold damp weather better with dry heat",
+        "backache flares in humid cold conditions eases with warmth"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 2
+        },
+        {
+          "id": "dulc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Sudden locking or catching sensation in the knee joint on certain movements",
+      "triggers": [
+        "knee locks or catches on certain movements",
+        "sudden catching sensation in the knee joint"
+      ],
+      "remedies": [
+        {
+          "id": "calc-f",
+          "grade": 1
+        },
+        {
+          "id": "rhus-t",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Weakness of the wrists causing objects to be dropped unexpectedly from the hand",
+      "triggers": [
+        "wrist weakness drops things unexpectedly",
+        "weak wrists cause objects to slip from the hand"
+      ],
+      "remedies": [
+        {
+          "id": "caust",
+          "grade": 2
+        },
+        {
+          "id": "plb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Swelling of the ankles that is worse by evening, better after a night's rest",
+      "triggers": [
+        "ankle swelling worse by evening better after resting overnight",
+        "swollen ankles build up through the day improve overnight"
+      ],
+      "remedies": [
+        {
+          "id": "apis",
+          "grade": 1
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Burning sensation in the soles of the feet, must uncover or put feet outside the blanket at night",
+      "triggers": [
+        "burning soles must put feet outside the blanket at night",
+        "hot burning feet uncovered for relief at night"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 3
+        },
+        {
+          "id": "med",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Painful bunion or bony enlargement at the base of the big toe, worse from tight shoes",
+      "triggers": [
+        "painful bunion at the base of the big toe worse tight shoes",
+        "bony growth on the big toe joint hurts in narrow shoes"
+      ],
+      "remedies": [
+        {
+          "id": "led",
+          "grade": 1
+        },
+        {
+          "id": "calc-f",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Numbness in the fingertips that is worse in cold weather, better with warmth",
+      "triggers": [
+        "fingertip numbness worse in cold weather better with warmth",
+        "numb fingers in cold eases with warming"
+      ],
+      "remedies": [
+        {
+          "id": "agar",
+          "grade": 1
+        },
+        {
+          "id": "sec",
+          "grade": 0
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Restless, fidgety legs in the evening while sitting still, urge to keep moving them",
+      "triggers": [
+        "restless legs in the evening while sitting still",
+        "urge to move the legs constantly at rest in the evening"
+      ],
+      "remedies": [
+        {
+          "id": "zinc",
+          "grade": 2
+        },
+        {
+          "id": "tarent",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Pain that runs down the outer side of the thigh, worse from lying on that side",
+      "triggers": [
+        "pain down the outer thigh worse lying on that side",
+        "outer leg pain increases lying on the affected side"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Cracking of the skin at the heels, painful fissures that bleed occasionally",
+      "triggers": [
+        "cracked heels with painful fissures that sometimes bleed",
+        "heel cracks causing pain and occasional bleeding"
+      ],
+      "remedies": [
+        {
+          "id": "petr",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Weakness and trembling of the legs specifically after a fright or sudden shock",
+      "triggers": [
+        "legs weak and trembling after a fright",
+        "shaky legs following a sudden shock or scare"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "op",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Painful, hard corns on the soles of the feet, worse from walking on hard surfaces",
+      "triggers": [
+        "painful hard corns on the soles worse walking on hard surfaces",
+        "corns on feet hurt more on hard flooring"
+      ],
+      "remedies": [
+        {
+          "id": "ant-c",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Psoriasis-type dry, scaly patches with silvery scales, worse in winter, better in summer sun",
+      "triggers": [
+        "psoriasis dry scaly patches worse in winter better in sun",
+        "silvery scaly skin patches improve in summer sunlight"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Eczema that weeps and oozes a sticky, honey-colored fluid, forming crusts",
+      "triggers": [
+        "weeping eczema oozing sticky honey colored fluid",
+        "oozing skin eruption forms crusts sticky discharge"
+      ],
+      "remedies": [
+        {
+          "id": "graph",
+          "grade": 3
+        },
+        {
+          "id": "psor",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Skin eruptions that appear or worsen specifically after vaccination",
+      "triggers": [
+        "skin rash appeared after vaccination",
+        "eruption worsened following a vaccine"
+      ],
+      "remedies": [
+        {
+          "id": "thuj",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Ringworm-type circular, scaly, itchy patches with a clear or raised border",
+      "triggers": [
+        "ringworm circular scaly itchy patch with a raised border",
+        "round itchy rash with a defined edge"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Chronic itching that is markedly worse from undressing, better once clothed again",
+      "triggers": [
+        "itching worse from undressing better once dressed again",
+        "skin itch flares when clothes come off"
+      ],
+      "remedies": [
+        {
+          "id": "psor",
+          "grade": 1
+        },
+        {
+          "id": "hep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "White patches of skin with a loss of pigment, spreading gradually over time (vitiligo-type)",
+      "triggers": [
+        "white patches of skin losing pigment spreading over time",
+        "vitiligo type depigmented skin patches gradually enlarging"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Painful red streaks running up a limb from an infected wound, a serious warning sign",
+      "triggers": [
+        "red streaks running up the arm or leg from a wound",
+        "painful red line spreading from an infected cut needs urgent care"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 2
+        },
+        {
+          "id": "pyrog",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Chronic dry skin all over the body that never seems to sweat, even in heat",
+      "triggers": [
+        "dry skin all over never sweats even in heat",
+        "body skin stays dry does not perspire even when hot"
+      ],
+      "remedies": [
+        {
+          "id": "san",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Recurring styes, boils, or pimples that keep appearing in different spots on the body",
+      "triggers": [
+        "recurring styes and boils keep appearing in different spots",
+        "keeps getting new pimples or boils in various places"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 2
+        },
+        {
+          "id": "hep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Skin that bruises easily from the slightest bump, discoloration lasts longer than expected",
+      "triggers": [
+        "bruises easily from the slightest bump lasts a long time",
+        "skin marks easily from minor knocks discoloration lingers"
+      ],
+      "remedies": [
+        {
+          "id": "arn",
+          "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Itchy red welts that appear in lines or streaks after scratching (dermatographism)",
+      "triggers": [
+        "scratching leaves raised red welts in lines",
+        "skin writes itself into welts after being scratched"
+      ],
+      "remedies": [
+        {
+          "id": "urt-u",
+          "grade": 1
+        },
+        {
+          "id": "apis",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Warts that bleed easily when touched or knocked, otherwise not painful",
+      "triggers": [
+        "warts bleed easily when touched otherwise painless",
+        "wart bleeds from minor contact no other pain"
+      ],
+      "remedies": [
+        {
+          "id": "nit-ac",
+          "grade": 2
+        },
+        {
+          "id": "caust",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Thickened, leathery skin developing gradually over years in one particular area",
+      "triggers": [
+        "skin has thickened and become leathery over the years",
+        "gradual thickening of skin in one specific area"
+      ],
+      "remedies": [
+        {
+          "id": "graph",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Skin infection or abscess that develops repeatedly at the site of an old scar",
+      "triggers": [
+        "infection keeps developing at the site of an old scar",
+        "abscess recurs repeatedly at a previous scar location"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "caust",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Chronic itching of the skin worse specifically in the evening and at bedtime, no rash visible",
+      "triggers": [
+        "itching worse in the evening and at bedtime no visible rash",
+        "skin itch increases at night nothing to see on the skin"
+      ],
+      "remedies": [
+        {
+          "id": "caust",
+          "grade": 1
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Keloid or raised, thickened scarring that forms after even minor cuts or piercings",
+      "triggers": [
+        "keloid scar forms after even a small cut or piercing",
+        "thickened raised scarring from minor skin injury"
+      ],
+      "remedies": [
+        {
+          "id": "graph",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Painful cracks in the skin on the palms of the hands, worse in cold dry weather",
+      "triggers": [
+        "painful cracks in the palms worse in cold dry weather",
+        "hand skin fissures increase in cold dry conditions"
+      ],
+      "remedies": [
+        {
+          "id": "petr",
+          "grade": 2
+        },
+        {
+          "id": "sars",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "category": "Generals",
+      "rubric": "Fever with a burning sensation internally while the skin itself feels cool to touch",
+      "triggers": [
+        "burning feeling inside but skin feels cool to touch",
+        "internal heat during fever though skin is not hot"
+      ],
+      "remedies": [
+        {
+          "id": "sec",
+          "grade": 1
+        },
+        {
+          "id": "camph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "category": "Generals",
+      "rubric": "Fever accompanied by profuse sweating that fails to bring down the temperature",
+      "triggers": [
+        "fever with heavy sweating that doesn't reduce the temperature",
+        "profuse sweat during fever without cooling effect"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "category": "Generals",
+      "rubric": "Low-grade fever that persists for weeks without a clear cause being found",
+      "triggers": [
+        "low grade fever for weeks no clear cause found",
+        "persistent mild fever unexplained after weeks"
+      ],
+      "remedies": [
+        {
+          "id": "psor",
+          "grade": 1
+        },
+        {
+          "id": "tub",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "category": "Generals",
+      "rubric": "Fever in which the patient wants to be completely covered despite feeling hot to others",
+      "triggers": [
+        "wants to be covered up though feels hot to others during fever",
+        "fever patient insists on blankets despite feeling warm to touch"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "category": "Generals",
+      "rubric": "Fever that spikes specifically in the late afternoon or early evening each day",
+      "triggers": [
+        "fever spikes every late afternoon or early evening",
+        "temperature rises at the same time each evening"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "category": "Generals",
+      "rubric": "Intermittent fever with a distinct chill, heat, and sweat stage occurring in that order",
+      "triggers": [
+        "fever comes in distinct chill then heat then sweat stages",
+        "classic three stage fever pattern chill heat sweat"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Sleep",
+      "category": "Generals",
+      "rubric": "Sleepwalking or talking during sleep, no memory of it upon waking",
+      "triggers": [
+        "sleepwalks or talks during sleep no memory next day",
+        "walks or talks while asleep does not recall it"
+      ],
+      "remedies": [
+        {
+          "id": "stram",
+          "grade": 1
+        },
+        {
+          "id": "kali-br",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Sleep",
+      "category": "Generals",
+      "rubric": "Insomnia specifically from overexcitement after good news or a pleasant event",
+      "triggers": [
+        "cannot sleep from excitement after good news",
+        "overexcited after happy event unable to fall asleep"
+      ],
+      "remedies": [
+        {
+          "id": "coff",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Sleep",
+      "category": "Generals",
+      "rubric": "Sleep disturbed by frequent, vivid nightmares of falling",
+      "triggers": [
+        "nightmares of falling disturb sleep frequently",
+        "recurring dreams of falling wake the patient"
+      ],
+      "remedies": [
+        {
+          "id": "bor",
+          "grade": 1
+        },
+        {
+          "id": "stram",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Sleep",
+      "category": "Generals",
+      "rubric": "Waking suddenly with a start just before drifting fully into sleep, feeling as if falling",
+      "triggers": [
+        "wakes with a sudden start right before falling asleep feels like falling",
+        "startles awake at the exact point of drifting off"
+      ],
+      "remedies": [
+        {
+          "id": "bor",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Sleep",
+      "category": "Generals",
+      "rubric": "Talks incessantly or is unusually active in the hours right before finally falling asleep",
+      "triggers": [
+        "talks nonstop or very active right before finally falling asleep",
+        "hyperactive chatter in the hour before sleep comes"
+      ],
+      "remedies": [
+        {
+          "id": "cham",
+          "grade": 1
+        },
+        {
+          "id": "coff",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weakness",
+      "category": "Generals",
+      "rubric": "Weakness that comes on specifically after prolonged mental concentration or study",
+      "triggers": [
+        "weak and drained after long mental concentration or study",
+        "exhaustion following extended studying or focused mental work"
+      ],
+      "remedies": [
+        {
+          "id": "ph-ac",
+          "grade": 2
+        },
+        {
+          "id": "calc-p",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weakness",
+      "category": "Generals",
+      "rubric": "Sudden collapse or faintness brought on by standing up too quickly",
+      "triggers": [
+        "sudden faintness or collapse from standing up too fast",
+        "feels weak and about to faint on standing quickly"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 1
+        },
+        {
+          "id": "verat",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weakness",
+      "category": "Generals",
+      "rubric": "Weakness in convalescence after a long illness that lingers far longer than expected",
+      "triggers": [
+        "weakness after a long illness lingers longer than expected",
+        "convalescent weakness drags on well beyond recovery time"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 2
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weakness",
+      "category": "Generals",
+      "rubric": "Weakness of the voice, must speak in a whisper as ordinary speaking exhausts the throat",
+      "triggers": [
+        "voice too weak must whisper speaking exhausts the throat",
+        "talking normally tires the throat forces a whisper"
+      ],
+      "remedies": [
+        {
+          "id": "stann",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Appetite",
+      "category": "Generals",
+      "rubric": "Ravenous hunger during pregnancy, must eat frequently to avoid feeling faint",
+      "triggers": [
+        "extreme hunger during pregnancy must eat often to avoid faintness",
+        "pregnant with ravenous appetite needs frequent food"
+      ],
+      "remedies": [
+        {
+          "id": "iod",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Appetite",
+      "category": "Generals",
+      "rubric": "Marked aversion to bread despite otherwise normal appetite",
+      "triggers": [
+        "cannot stand bread otherwise appetite is normal",
+        "aversion specifically to bread rest of diet fine"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Appetite",
+      "category": "Generals",
+      "rubric": "Appetite that disappears completely the moment food is placed in front of the patient",
+      "triggers": [
+        "appetite vanishes the moment food is served",
+        "hungry until food actually arrives then no desire to eat"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Appetite",
+      "category": "Generals",
+      "rubric": "Desire for unusual food combinations, such as sweet and salty together",
+      "triggers": [
+        "craves odd combinations like sweet and salty together",
+        "unusual food cravings mixing sweet and salty"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Appetite",
+      "category": "Generals",
+      "rubric": "Appetite that is capricious, changes from meal to meal with no consistent pattern",
+      "triggers": [
+        "appetite changes unpredictably meal to meal",
+        "capricious hunger no consistent pattern day to day"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "chin",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "category": "Generals",
+      "rubric": "Thirst that appears specifically during chill or the cold stage of a fever, absent during the heat stage",
+      "triggers": [
+        "thirsty only during the chill stage of fever not during heat",
+        "thirst present in the cold phase absent when hot"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "eup-per",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "category": "Generals",
+      "rubric": "Absence of thirst throughout an entire illness despite dry mucous membranes",
+      "triggers": [
+        "no thirst at all during illness despite dry mouth and lips",
+        "completely thirstless though mucous membranes are dry"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "gels",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "category": "Generals",
+      "rubric": "Thirst for fizzy or carbonated drinks specifically, still water is less appealing",
+      "triggers": [
+        "craves fizzy or carbonated drinks over plain water",
+        "wants soda or sparkling water more than still water"
+      ],
+      "remedies": [
+        {
+          "id": "carb-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "category": "Generals",
+      "rubric": "Significant weight loss occurring specifically during a period of prolonged worry or overwork",
+      "triggers": [
+        "lost significant weight during prolonged worry or overwork",
+        "weight dropped notably during a stressful demanding period"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "ph-ac",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "category": "Generals",
+      "rubric": "Weight that remains stubbornly the same despite active dieting and exercise efforts",
+      "triggers": [
+        "weight will not budge despite dieting and exercise",
+        "stubborn weight that resists diet and exercise changes"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "nat-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "category": "Generals",
+      "rubric": "Weight loss localized to the face specifically, cheeks appearing sunken while the body stays fuller",
+      "triggers": [
+        "face looks thin and sunken while rest of the body stays full",
+        "facial weight loss with sunken cheeks body unaffected"
+      ],
+      "remedies": [
+        {
+          "id": "abrot",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Palpitations that are markedly worse from lying on the back, better on the side",
+      "triggers": [
+        "palpitations worse lying on the back better on the side",
+        "heart pounding increases flat on back eases on the side"
+      ],
+      "remedies": [
+        {
+          "id": "spig",
+          "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Sensation of the heart skipping or pausing a beat, noticed especially when resting quietly",
+      "triggers": [
+        "heart feels like it skips a beat noticed at rest",
+        "sensation of a pause in the heartbeat while sitting quietly"
+      ],
+      "remedies": [
+        {
+          "id": "spig",
+          "grade": 1
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Chest pain that is sharp and stitching, worse from deep breathing or coughing",
+      "triggers": [
+        "sharp stitching chest pain worse deep breath or cough",
+        "stabbing chest pain increases with breathing or coughing"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Heaviness or weight sensation in the chest that improves after belching",
+      "triggers": [
+        "chest feels heavy improves after belching",
+        "weight sensation in the chest eased by burping"
+      ],
+      "remedies": [
+        {
+          "id": "carb-v",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo brought on specifically by riding in a car, boat, or any moving vehicle",
+      "triggers": [
+        "dizzy from riding in a car boat or moving vehicle",
+        "vertigo triggered by any form of vehicle travel"
+      ],
+      "remedies": [
+        {
+          "id": "cocc",
+          "grade": 2
+        },
+        {
+          "id": "tab",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo that occurs specifically when closing the eyes, better with eyes open",
+      "triggers": [
+        "dizziness happens when closing the eyes better with eyes open",
+        "vertigo worse eyes shut improves keeping eyes open"
+      ],
+      "remedies": [
+        {
+          "id": "nat-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo accompanied by ringing in the ears and gradual hearing loss (Meniere's-type)",
+      "triggers": [
+        "vertigo with ringing ears and hearing loss meniere type",
+        "dizziness with tinnitus and progressive hearing decline"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 2
+        },
+        {
+          "id": "con",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Perspiration",
+      "category": "Particulars",
+      "rubric": "Profuse sweating during and after any physical exertion, more than would be expected",
+      "triggers": [
+        "sweats profusely during and after exertion more than expected",
+        "excessive perspiration from even mild physical activity"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "sel",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Perspiration",
+      "category": "Particulars",
+      "rubric": "Perspiration with a strongly offensive, penetrating odor noticeable across the room",
+      "triggers": [
+        "sweat has a strong penetrating odor noticeable across the room",
+        "perspiration smell is offensive enough others notice from a distance"
+      ],
+      "remedies": [
+        {
+          "id": "psor",
+          "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Perspiration",
+      "category": "Particulars",
+      "rubric": "Absence of perspiration even in hot weather or during exertion, skin stays dry",
+      "triggers": [
+        "does not sweat even in hot weather or during exertion",
+        "dry skin with no perspiration despite heat or activity"
+      ],
+      "remedies": [
+        {
+          "id": "alum",
+          "grade": 1
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Enlarged thyroid (goiter) that fluctuates in size with the menstrual cycle",
+      "triggers": [
+        "goiter size changes with the menstrual cycle",
+        "thyroid swelling fluctuates around periods"
+      ],
+      "remedies": [
+        {
+          "id": "iod",
+          "grade": 1
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Painless, rubbery, mobile lymph node felt in the neck, present for months without change",
+      "triggers": [
+        "painless rubbery lymph node in the neck unchanged for months",
+        "mobile firm gland in the neck present a long time no change"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "con",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "General aggravation of all complaints during a full moon or around lunar phases",
+      "triggers": [
+        "symptoms worse around the full moon",
+        "complaints flare with lunar phases"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "One-sided complaints throughout the body that consistently affect the right side more than the left",
+      "triggers": [
+        "most complaints are worse on the right side of the body overall",
+        "general tendency for right sided symptoms across the body"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "One-sided complaints throughout the body that consistently affect the left side more than the right",
+      "triggers": [
+        "most complaints are worse on the left side of the body overall",
+        "general tendency for left sided symptoms across the body"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "General aggravation from the change of seasons, particularly spring and autumn",
+      "triggers": [
+        "symptoms worse during seasonal change spring or autumn",
+        "general aggravation tied to shifting seasons"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 1
+        },
+        {
+          "id": "dulc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Marked improvement in general well-being while on vacation or away from usual routine",
+      "triggers": [
+        "feels much better overall while on vacation",
+        "general wellbeing improves away from usual routine"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "General aggravation of symptoms specifically from tobacco smoke, whether smoking or secondhand",
+      "triggers": [
+        "symptoms worse from tobacco smoke exposure",
+        "general aggravation from being around cigarette smoke"
+      ],
+      "remedies": [
+        {
+          "id": "ign",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "One-sided sensations of numbness, heat, or coldness affecting an entire half of the body",
+      "triggers": [
+        "numbness or odd sensations affecting one entire side of the body",
+        "half of the body feels different in temperature or sensation"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "stram",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Great sensitivity to being touched anywhere on the body, even light contact is uncomfortable",
+      "triggers": [
+        "cannot bear being touched anywhere even lightly",
+        "extreme sensitivity to light touch all over the body"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "cham",
+          "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "General aggravation from the odor of flowers, especially strongly scented ones",
+      "triggers": [
+        "symptoms worse from the smell of flowers",
+        "strong flower scent triggers general aggravation"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Sudden alternation between opposite states, such as heat and chill, or laughter and tears, within a short time",
+      "triggers": [
+        "suddenly switches between opposite states like heat and chill",
+        "alternates rapidly between laughing and crying or hot and cold"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "ign",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "General weakness or aggravation that is markedly worse on days when barometric pressure drops before rain",
+      "triggers": [
+        "feels worse overall on days before it rains",
+        "general weakness or aching ahead of a pressure drop before rain"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 2
+        },
+        {
+          "id": "nat-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Marked general improvement after a good cry, emotional release brings physical relief",
+      "triggers": [
+        "feels physically better after having a good cry",
+        "crying brings noticeable general relief"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "General sensitivity to changes in altitude, symptoms appear or worsen at high elevation",
+      "triggers": [
+        "symptoms worse at high altitude",
+        "body reacts badly to elevation changes overall"
+      ],
+      "remedies": [
+        {
+          "id": "coca",
+          "grade": 2
+        },
+        {
+          "id": "arg-n",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "One-sided swelling affecting an entire limb, arm or leg, without a clear localized cause",
+      "triggers": [
+        "whole arm or leg swells on one side no clear cause",
+        "one sided limb swelling not localized to a joint"
+      ],
+      "remedies": [
+        {
+          "id": "apis",
+          "grade": 1
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "General aggravation of all symptoms specifically after a haircut or shaving",
+      "triggers": [
+        "feels worse overall after a haircut or shaving",
+        "general aggravation following cutting the hair or shaving"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "graph",
+          "grade": 1
+        }
+      ]
     }
   ],
   "chiefSymptomTags": [
@@ -32550,6 +34748,714 @@
       "label": "Stool that is blackish and tarry in appearance, a se…",
       "section": "Stool",
       "rubric": "Stool that is blackish and tarry in appearance, a serious warning sign requiring urgent evaluation"
+    },
+    {
+      "id": "sym_involuntary_urination_during_a_deep_sound_sleep_at_night_the",
+      "label": "Involuntary urination during a deep, sound sleep at …",
+      "section": "Urinary",
+      "rubric": "Involuntary urination during a deep, sound sleep at night, the child unaware it happened"
+    },
+    {
+      "id": "sym_retention_of_urine_after_childbirth_or_surgery_unable_to_pas",
+      "label": "Retention of urine after childbirth or surgery, unab…",
+      "section": "Urinary",
+      "rubric": "Retention of urine after childbirth or surgery, unable to pass urine despite the urge"
+    },
+    {
+      "id": "sym_pain_along_the_urethra_that_shoots_forward_toward_the_tip_du",
+      "label": "Pain along the urethra that shoots forward toward th…",
+      "section": "Urinary",
+      "rubric": "Pain along the urethra that shoots forward toward the tip during urination"
+    },
+    {
+      "id": "sym_urine_that_deposits_a_thick_brick_dust_or_reddish_sediment_o",
+      "label": "Urine that deposits a thick, brick-dust or reddish s…",
+      "section": "Urinary",
+      "rubric": "Urine that deposits a thick, brick-dust or reddish sediment on standing"
+    },
+    {
+      "id": "sym_weak_thin_urinary_stream_in_an_older_man_must_strain_or_wait",
+      "label": "Weak, thin urinary stream in an older man, must stra…",
+      "section": "Urinary",
+      "rubric": "Weak, thin urinary stream in an older man, must strain or wait for the flow to start"
+    },
+    {
+      "id": "sym_bedwetting_specifically_during_the_first_part_of_the_night_b",
+      "label": "Bedwetting specifically during the first part of the…",
+      "section": "Urinary",
+      "rubric": "Bedwetting specifically during the first part of the night, before midnight"
+    },
+    {
+      "id": "sym_urgent_need_to_urinate_that_comes_on_suddenly_with_anxiety_o",
+      "label": "Urgent need to urinate that comes on suddenly with a…",
+      "section": "Urinary",
+      "rubric": "Urgent need to urinate that comes on suddenly with anxiety or fright"
+    },
+    {
+      "id": "sym_swelling_and_tenderness_of_the_testicles_following_an_injury",
+      "label": "Swelling and tenderness of the testicles following a…",
+      "section": "Male",
+      "rubric": "Swelling and tenderness of the testicles following an injury or blow to the groin"
+    },
+    {
+      "id": "sym_nocturnal_emissions_occurring_frequently_and_leaving_the_pat",
+      "label": "Nocturnal emissions occurring frequently and leaving…",
+      "section": "Male",
+      "rubric": "Nocturnal emissions occurring frequently and leaving the patient weak and drained the next day"
+    },
+    {
+      "id": "sym_discomfort_or_dragging_sensation_in_the_testicles_that_is_wo",
+      "label": "Discomfort or dragging sensation in the testicles th…",
+      "section": "Male",
+      "rubric": "Discomfort or dragging sensation in the testicles that is worse from walking"
+    },
+    {
+      "id": "sym_complete_or_near_complete_loss_of_libido_following_prolonged",
+      "label": "Complete or near-complete loss of libido following p…",
+      "section": "Male",
+      "rubric": "Complete or near-complete loss of libido following prolonged emotional stress or overwork"
+    },
+    {
+      "id": "sym_sharp_stitching_pain_in_the_prostate_area_worse_from_sitting",
+      "label": "Sharp, stitching pain in the prostate area, worse fr…",
+      "section": "Male",
+      "rubric": "Sharp, stitching pain in the prostate area, worse from sitting for long periods"
+    },
+    {
+      "id": "sym_menses_that_arrive_too_early_cycle_consistently_shorter_than",
+      "label": "Menses that arrive too early, cycle consistently sho…",
+      "section": "Female",
+      "rubric": "Menses that arrive too early, cycle consistently shorter than the normal 28 days"
+    },
+    {
+      "id": "sym_menses_that_are_delayed_arriving_consistently_later_than_exp",
+      "label": "Menses that are delayed, arriving consistently later…",
+      "section": "Female",
+      "rubric": "Menses that are delayed, arriving consistently later than expected each month"
+    },
+    {
+      "id": "sym_menstrual_flow_that_stops_and_starts_intermittently_over_sev",
+      "label": "Menstrual flow that stops and starts intermittently …",
+      "section": "Female",
+      "rubric": "Menstrual flow that stops and starts intermittently over several days rather than flowing continuously"
+    },
+    {
+      "id": "sym_ovulation_pain_mid_cycle_felt_distinctly_on_one_side_of_the_",
+      "label": "Ovulation pain (mid-cycle) felt distinctly on one si…",
+      "section": "Female",
+      "rubric": "Ovulation pain (mid-cycle) felt distinctly on one side of the lower abdomen"
+    },
+    {
+      "id": "sym_breast_tenderness_that_is_worse_specifically_from_the_jarrin",
+      "label": "Breast tenderness that is worse specifically from th…",
+      "section": "Female",
+      "rubric": "Breast tenderness that is worse specifically from the jarring of walking or exercise"
+    },
+    {
+      "id": "sym_menopausal_hot_flashes_accompanied_by_marked_irritability_an",
+      "label": "Menopausal hot flashes accompanied by marked irritab…",
+      "section": "Female",
+      "rubric": "Menopausal hot flashes accompanied by marked irritability and sudden anger"
+    },
+    {
+      "id": "sym_vaginal_dryness_and_discomfort_during_intimacy_worse_around_",
+      "label": "Vaginal dryness and discomfort during intimacy, wors…",
+      "section": "Female",
+      "rubric": "Vaginal dryness and discomfort during intimacy, worse around and after menopause"
+    },
+    {
+      "id": "sym_prolapse_sensation_of_the_uterus_as_if_it_were_bearing_down_",
+      "label": "Prolapse sensation of the uterus, as if it were bear…",
+      "section": "Female",
+      "rubric": "Prolapse sensation of the uterus, as if it were bearing down and might come out, worse standing"
+    },
+    {
+      "id": "sym_menstrual_pain_that_begins_in_the_back_and_radiates_forward_",
+      "label": "Menstrual pain that begins in the back and radiates …",
+      "section": "Female",
+      "rubric": "Menstrual pain that begins in the back and radiates forward to the front of the abdomen"
+    },
+    {
+      "id": "sym_absence_of_any_menstrual_pain_despite_a_heavy_or_irregular_f",
+      "label": "Absence of any menstrual pain despite a heavy or irr…",
+      "section": "Female",
+      "rubric": "Absence of any menstrual pain despite a heavy or irregular flow, patient otherwise well"
+    },
+    {
+      "id": "sym_morning_sickness_during_early_pregnancy_with_nausea_that_is_",
+      "label": "Morning sickness during early pregnancy with nausea …",
+      "section": "Female",
+      "rubric": "Morning sickness during early pregnancy with nausea that is better after eating a little"
+    },
+    {
+      "id": "sym_persistent_nausea_and_vomiting_during_pregnancy_that_is_unre",
+      "label": "Persistent nausea and vomiting during pregnancy that…",
+      "section": "Female",
+      "rubric": "Persistent nausea and vomiting during pregnancy that is unrelieved by any food or position"
+    },
+    {
+      "id": "sym_swelling_of_the_legs_and_feet_that_develops_in_the_later_mon",
+      "label": "Swelling of the legs and feet that develops in the l…",
+      "section": "Female",
+      "rubric": "Swelling of the legs and feet that develops in the later months of pregnancy"
+    },
+    {
+      "id": "sym_insufficient_or_diminished_milk_supply_while_breastfeeding_d",
+      "label": "Insufficient or diminished milk supply while breastf…",
+      "section": "Female",
+      "rubric": "Insufficient or diminished milk supply while breastfeeding, despite adequate nursing frequency"
+    },
+    {
+      "id": "sym_painful_cracked_nipples_during_breastfeeding_worse_the_momen",
+      "label": "Painful, cracked nipples during breastfeeding, worse…",
+      "section": "Female",
+      "rubric": "Painful, cracked nipples during breastfeeding, worse the moment the baby latches"
+    },
+    {
+      "id": "sym_postpartum_depression_with_tearfulness_and_detachment_that_b",
+      "label": "Postpartum depression with tearfulness and detachmen…",
+      "section": "Female",
+      "rubric": "Postpartum depression with tearfulness and detachment that began soon after delivery"
+    },
+    {
+      "id": "sym_vaginal_discharge_that_is_greenish_and_irritating_with_an_of",
+      "label": "Vaginal discharge that is greenish and irritating, w…",
+      "section": "Female",
+      "rubric": "Vaginal discharge that is greenish and irritating, with an offensive odor"
+    },
+    {
+      "id": "sym_uterine_fibroid_with_a_sensation_of_heaviness_or_dragging_in",
+      "label": "Uterine fibroid with a sensation of heaviness or dra…",
+      "section": "Female",
+      "rubric": "Uterine fibroid with a sensation of heaviness or dragging in the pelvis, worse standing"
+    },
+    {
+      "id": "sym_irregular_ovulation_confirmed_by_tracking_cycles_vary_widely",
+      "label": "Irregular ovulation confirmed by tracking, cycles va…",
+      "section": "Female",
+      "rubric": "Irregular ovulation confirmed by tracking, cycles vary widely in length month to month"
+    },
+    {
+      "id": "sym_sensation_of_coldness_in_the_pelvic_or_vaginal_area_worse_in",
+      "label": "Sensation of coldness in the pelvic or vaginal area,…",
+      "section": "Female",
+      "rubric": "Sensation of coldness in the pelvic or vaginal area, worse in cold weather"
+    },
+    {
+      "id": "sym_pain_in_the_small_of_the_back_that_is_markedly_better_lying_",
+      "label": "Pain in the small of the back that is markedly bette…",
+      "section": "Back",
+      "rubric": "Pain in the small of the back that is markedly better lying on the back with knees drawn up"
+    },
+    {
+      "id": "sym_stiffness_of_the_whole_spine_worse_first_thing_in_the_mornin",
+      "label": "Stiffness of the whole spine, worse first thing in t…",
+      "section": "Back",
+      "rubric": "Stiffness of the whole spine, worse first thing in the morning, improving slowly through the day"
+    },
+    {
+      "id": "sym_backache_in_a_pregnant_woman_worse_in_the_later_months_bette",
+      "label": "Backache in a pregnant woman, worse in the later mon…",
+      "section": "Back",
+      "rubric": "Backache in a pregnant woman, worse in the later months, better with support"
+    },
+    {
+      "id": "sym_sensation_of_a_hot_iron_pressing_into_the_back_between_the_s",
+      "label": "Sensation of a hot iron pressing into the back betwe…",
+      "section": "Back",
+      "rubric": "Sensation of a hot iron pressing into the back between the shoulder blades"
+    },
+    {
+      "id": "sym_back_pain_that_is_markedly_worse_in_cold_damp_weather_and_be",
+      "label": "Back pain that is markedly worse in cold, damp weath…",
+      "section": "Back",
+      "rubric": "Back pain that is markedly worse in cold, damp weather and better with dry heat"
+    },
+    {
+      "id": "sym_sudden_locking_or_catching_sensation_in_the_knee_joint_on_ce",
+      "label": "Sudden locking or catching sensation in the knee joi…",
+      "section": "Extremities",
+      "rubric": "Sudden locking or catching sensation in the knee joint on certain movements"
+    },
+    {
+      "id": "sym_weakness_of_the_wrists_causing_objects_to_be_dropped_unexpec",
+      "label": "Weakness of the wrists causing objects to be dropped…",
+      "section": "Extremities",
+      "rubric": "Weakness of the wrists causing objects to be dropped unexpectedly from the hand"
+    },
+    {
+      "id": "sym_swelling_of_the_ankles_that_is_worse_by_evening_better_after",
+      "label": "Swelling of the ankles that is worse by evening, bet…",
+      "section": "Extremities",
+      "rubric": "Swelling of the ankles that is worse by evening, better after a night's rest"
+    },
+    {
+      "id": "sym_burning_sensation_in_the_soles_of_the_feet_must_uncover_or_p",
+      "label": "Burning sensation in the soles of the feet, must unc…",
+      "section": "Extremities",
+      "rubric": "Burning sensation in the soles of the feet, must uncover or put feet outside the blanket at night"
+    },
+    {
+      "id": "sym_painful_bunion_or_bony_enlargement_at_the_base_of_the_big_to",
+      "label": "Painful bunion or bony enlargement at the base of th…",
+      "section": "Extremities",
+      "rubric": "Painful bunion or bony enlargement at the base of the big toe, worse from tight shoes"
+    },
+    {
+      "id": "sym_numbness_in_the_fingertips_that_is_worse_in_cold_weather_bet",
+      "label": "Numbness in the fingertips that is worse in cold wea…",
+      "section": "Extremities",
+      "rubric": "Numbness in the fingertips that is worse in cold weather, better with warmth"
+    },
+    {
+      "id": "sym_restless_fidgety_legs_in_the_evening_while_sitting_still_urg",
+      "label": "Restless, fidgety legs in the evening while sitting …",
+      "section": "Extremities",
+      "rubric": "Restless, fidgety legs in the evening while sitting still, urge to keep moving them"
+    },
+    {
+      "id": "sym_pain_that_runs_down_the_outer_side_of_the_thigh_worse_from_l",
+      "label": "Pain that runs down the outer side of the thigh, wor…",
+      "section": "Extremities",
+      "rubric": "Pain that runs down the outer side of the thigh, worse from lying on that side"
+    },
+    {
+      "id": "sym_cracking_of_the_skin_at_the_heels_painful_fissures_that_blee",
+      "label": "Cracking of the skin at the heels, painful fissures …",
+      "section": "Extremities",
+      "rubric": "Cracking of the skin at the heels, painful fissures that bleed occasionally"
+    },
+    {
+      "id": "sym_weakness_and_trembling_of_the_legs_specifically_after_a_frig",
+      "label": "Weakness and trembling of the legs specifically afte…",
+      "section": "Extremities",
+      "rubric": "Weakness and trembling of the legs specifically after a fright or sudden shock"
+    },
+    {
+      "id": "sym_painful_hard_corns_on_the_soles_of_the_feet_worse_from_walki",
+      "label": "Painful, hard corns on the soles of the feet, worse …",
+      "section": "Extremities",
+      "rubric": "Painful, hard corns on the soles of the feet, worse from walking on hard surfaces"
+    },
+    {
+      "id": "sym_psoriasis_type_dry_scaly_patches_with_silvery_scales_worse_i",
+      "label": "Psoriasis-type dry, scaly patches with silvery scale…",
+      "section": "Skin",
+      "rubric": "Psoriasis-type dry, scaly patches with silvery scales, worse in winter, better in summer sun"
+    },
+    {
+      "id": "sym_eczema_that_weeps_and_oozes_a_sticky_honey_colored_fluid_for",
+      "label": "Eczema that weeps and oozes a sticky, honey-colored …",
+      "section": "Skin",
+      "rubric": "Eczema that weeps and oozes a sticky, honey-colored fluid, forming crusts"
+    },
+    {
+      "id": "sym_skin_eruptions_that_appear_or_worsen_specifically_after_vacc",
+      "label": "Skin eruptions that appear or worsen specifically af…",
+      "section": "Skin",
+      "rubric": "Skin eruptions that appear or worsen specifically after vaccination"
+    },
+    {
+      "id": "sym_ringworm_type_circular_scaly_itchy_patches_with_a_clear_or_r",
+      "label": "Ringworm-type circular, scaly, itchy patches with a …",
+      "section": "Skin",
+      "rubric": "Ringworm-type circular, scaly, itchy patches with a clear or raised border"
+    },
+    {
+      "id": "sym_chronic_itching_that_is_markedly_worse_from_undressing_bette",
+      "label": "Chronic itching that is markedly worse from undressi…",
+      "section": "Skin",
+      "rubric": "Chronic itching that is markedly worse from undressing, better once clothed again"
+    },
+    {
+      "id": "sym_white_patches_of_skin_with_a_loss_of_pigment_spreading_gradu",
+      "label": "White patches of skin with a loss of pigment, spread…",
+      "section": "Skin",
+      "rubric": "White patches of skin with a loss of pigment, spreading gradually over time (vitiligo-type)"
+    },
+    {
+      "id": "sym_painful_red_streaks_running_up_a_limb_from_an_infected_wound",
+      "label": "Painful red streaks running up a limb from an infect…",
+      "section": "Skin",
+      "rubric": "Painful red streaks running up a limb from an infected wound, a serious warning sign"
+    },
+    {
+      "id": "sym_chronic_dry_skin_all_over_the_body_that_never_seems_to_sweat",
+      "label": "Chronic dry skin all over the body that never seems …",
+      "section": "Skin",
+      "rubric": "Chronic dry skin all over the body that never seems to sweat, even in heat"
+    },
+    {
+      "id": "sym_recurring_styes_boils_or_pimples_that_keep_appearing_in_diff",
+      "label": "Recurring styes, boils, or pimples that keep appeari…",
+      "section": "Skin",
+      "rubric": "Recurring styes, boils, or pimples that keep appearing in different spots on the body"
+    },
+    {
+      "id": "sym_skin_that_bruises_easily_from_the_slightest_bump_discolorati",
+      "label": "Skin that bruises easily from the slightest bump, di…",
+      "section": "Skin",
+      "rubric": "Skin that bruises easily from the slightest bump, discoloration lasts longer than expected"
+    },
+    {
+      "id": "sym_itchy_red_welts_that_appear_in_lines_or_streaks_after_scratc",
+      "label": "Itchy red welts that appear in lines or streaks afte…",
+      "section": "Skin",
+      "rubric": "Itchy red welts that appear in lines or streaks after scratching (dermatographism)"
+    },
+    {
+      "id": "sym_warts_that_bleed_easily_when_touched_or_knocked_otherwise_no",
+      "label": "Warts that bleed easily when touched or knocked, oth…",
+      "section": "Skin",
+      "rubric": "Warts that bleed easily when touched or knocked, otherwise not painful"
+    },
+    {
+      "id": "sym_thickened_leathery_skin_developing_gradually_over_years_in_o",
+      "label": "Thickened, leathery skin developing gradually over y…",
+      "section": "Skin",
+      "rubric": "Thickened, leathery skin developing gradually over years in one particular area"
+    },
+    {
+      "id": "sym_skin_infection_or_abscess_that_develops_repeatedly_at_the_si",
+      "label": "Skin infection or abscess that develops repeatedly a…",
+      "section": "Skin",
+      "rubric": "Skin infection or abscess that develops repeatedly at the site of an old scar"
+    },
+    {
+      "id": "sym_chronic_itching_of_the_skin_worse_specifically_in_the_evenin",
+      "label": "Chronic itching of the skin worse specifically in th…",
+      "section": "Skin",
+      "rubric": "Chronic itching of the skin worse specifically in the evening and at bedtime, no rash visible"
+    },
+    {
+      "id": "sym_keloid_or_raised_thickened_scarring_that_forms_after_even_mi",
+      "label": "Keloid or raised, thickened scarring that forms afte…",
+      "section": "Skin",
+      "rubric": "Keloid or raised, thickened scarring that forms after even minor cuts or piercings"
+    },
+    {
+      "id": "sym_painful_cracks_in_the_skin_on_the_palms_of_the_hands_worse_i",
+      "label": "Painful cracks in the skin on the palms of the hands…",
+      "section": "Skin",
+      "rubric": "Painful cracks in the skin on the palms of the hands, worse in cold dry weather"
+    },
+    {
+      "id": "sym_fever_with_a_burning_sensation_internally_while_the_skin_its",
+      "label": "Fever with a burning sensation internally while the …",
+      "section": "Fever",
+      "rubric": "Fever with a burning sensation internally while the skin itself feels cool to touch"
+    },
+    {
+      "id": "sym_fever_accompanied_by_profuse_sweating_that_fails_to_bring_do",
+      "label": "Fever accompanied by profuse sweating that fails to …",
+      "section": "Fever",
+      "rubric": "Fever accompanied by profuse sweating that fails to bring down the temperature"
+    },
+    {
+      "id": "sym_low_grade_fever_that_persists_for_weeks_without_a_clear_caus",
+      "label": "Low-grade fever that persists for weeks without a cl…",
+      "section": "Fever",
+      "rubric": "Low-grade fever that persists for weeks without a clear cause being found"
+    },
+    {
+      "id": "sym_fever_in_which_the_patient_wants_to_be_completely_covered_de",
+      "label": "Fever in which the patient wants to be completely co…",
+      "section": "Fever",
+      "rubric": "Fever in which the patient wants to be completely covered despite feeling hot to others"
+    },
+    {
+      "id": "sym_fever_that_spikes_specifically_in_the_late_afternoon_or_earl",
+      "label": "Fever that spikes specifically in the late afternoon…",
+      "section": "Fever",
+      "rubric": "Fever that spikes specifically in the late afternoon or early evening each day"
+    },
+    {
+      "id": "sym_intermittent_fever_with_a_distinct_chill_heat_and_sweat_stag",
+      "label": "Intermittent fever with a distinct chill, heat, and …",
+      "section": "Fever",
+      "rubric": "Intermittent fever with a distinct chill, heat, and sweat stage occurring in that order"
+    },
+    {
+      "id": "sym_sleepwalking_or_talking_during_sleep_no_memory_of_it_upon_wa",
+      "label": "Sleepwalking or talking during sleep, no memory of i…",
+      "section": "Sleep",
+      "rubric": "Sleepwalking or talking during sleep, no memory of it upon waking"
+    },
+    {
+      "id": "sym_insomnia_specifically_from_overexcitement_after_good_news_or",
+      "label": "Insomnia specifically from overexcitement after good…",
+      "section": "Sleep",
+      "rubric": "Insomnia specifically from overexcitement after good news or a pleasant event"
+    },
+    {
+      "id": "sym_sleep_disturbed_by_frequent_vivid_nightmares_of_falling",
+      "label": "Sleep disturbed by frequent, vivid nightmares of fal…",
+      "section": "Sleep",
+      "rubric": "Sleep disturbed by frequent, vivid nightmares of falling"
+    },
+    {
+      "id": "sym_waking_suddenly_with_a_start_just_before_drifting_fully_into",
+      "label": "Waking suddenly with a start just before drifting fu…",
+      "section": "Sleep",
+      "rubric": "Waking suddenly with a start just before drifting fully into sleep, feeling as if falling"
+    },
+    {
+      "id": "sym_talks_incessantly_or_is_unusually_active_in_the_hours_right_",
+      "label": "Talks incessantly or is unusually active in the hour…",
+      "section": "Sleep",
+      "rubric": "Talks incessantly or is unusually active in the hours right before finally falling asleep"
+    },
+    {
+      "id": "sym_weakness_that_comes_on_specifically_after_prolonged_mental_c",
+      "label": "Weakness that comes on specifically after prolonged …",
+      "section": "Weakness",
+      "rubric": "Weakness that comes on specifically after prolonged mental concentration or study"
+    },
+    {
+      "id": "sym_sudden_collapse_or_faintness_brought_on_by_standing_up_too_q",
+      "label": "Sudden collapse or faintness brought on by standing …",
+      "section": "Weakness",
+      "rubric": "Sudden collapse or faintness brought on by standing up too quickly"
+    },
+    {
+      "id": "sym_weakness_in_convalescence_after_a_long_illness_that_lingers_",
+      "label": "Weakness in convalescence after a long illness that …",
+      "section": "Weakness",
+      "rubric": "Weakness in convalescence after a long illness that lingers far longer than expected"
+    },
+    {
+      "id": "sym_weakness_of_the_voice_must_speak_in_a_whisper_as_ordinary_sp",
+      "label": "Weakness of the voice, must speak in a whisper as or…",
+      "section": "Weakness",
+      "rubric": "Weakness of the voice, must speak in a whisper as ordinary speaking exhausts the throat"
+    },
+    {
+      "id": "sym_ravenous_hunger_during_pregnancy_must_eat_frequently_to_avoi",
+      "label": "Ravenous hunger during pregnancy, must eat frequentl…",
+      "section": "Appetite",
+      "rubric": "Ravenous hunger during pregnancy, must eat frequently to avoid feeling faint"
+    },
+    {
+      "id": "sym_marked_aversion_to_bread_despite_otherwise_normal_appetite",
+      "label": "Marked aversion to bread despite otherwise normal ap…",
+      "section": "Appetite",
+      "rubric": "Marked aversion to bread despite otherwise normal appetite"
+    },
+    {
+      "id": "sym_appetite_that_disappears_completely_the_moment_food_is_place",
+      "label": "Appetite that disappears completely the moment food …",
+      "section": "Appetite",
+      "rubric": "Appetite that disappears completely the moment food is placed in front of the patient"
+    },
+    {
+      "id": "sym_desire_for_unusual_food_combinations_such_as_sweet_and_salty",
+      "label": "Desire for unusual food combinations, such as sweet …",
+      "section": "Appetite",
+      "rubric": "Desire for unusual food combinations, such as sweet and salty together"
+    },
+    {
+      "id": "sym_appetite_that_is_capricious_changes_from_meal_to_meal_with_n",
+      "label": "Appetite that is capricious, changes from meal to me…",
+      "section": "Appetite",
+      "rubric": "Appetite that is capricious, changes from meal to meal with no consistent pattern"
+    },
+    {
+      "id": "sym_thirst_that_appears_specifically_during_chill_or_the_cold_st",
+      "label": "Thirst that appears specifically during chill or the…",
+      "section": "Thirst",
+      "rubric": "Thirst that appears specifically during chill or the cold stage of a fever, absent during the heat stage"
+    },
+    {
+      "id": "sym_absence_of_thirst_throughout_an_entire_illness_despite_dry_m",
+      "label": "Absence of thirst throughout an entire illness despi…",
+      "section": "Thirst",
+      "rubric": "Absence of thirst throughout an entire illness despite dry mucous membranes"
+    },
+    {
+      "id": "sym_thirst_for_fizzy_or_carbonated_drinks_specifically_still_wat",
+      "label": "Thirst for fizzy or carbonated drinks specifically, …",
+      "section": "Thirst",
+      "rubric": "Thirst for fizzy or carbonated drinks specifically, still water is less appealing"
+    },
+    {
+      "id": "sym_significant_weight_loss_occurring_specifically_during_a_peri",
+      "label": "Significant weight loss occurring specifically durin…",
+      "section": "Weight",
+      "rubric": "Significant weight loss occurring specifically during a period of prolonged worry or overwork"
+    },
+    {
+      "id": "sym_weight_that_remains_stubbornly_the_same_despite_active_dieti",
+      "label": "Weight that remains stubbornly the same despite acti…",
+      "section": "Weight",
+      "rubric": "Weight that remains stubbornly the same despite active dieting and exercise efforts"
+    },
+    {
+      "id": "sym_weight_loss_localized_to_the_face_specifically_cheeks_appear",
+      "label": "Weight loss localized to the face specifically, chee…",
+      "section": "Weight",
+      "rubric": "Weight loss localized to the face specifically, cheeks appearing sunken while the body stays fuller"
+    },
+    {
+      "id": "sym_palpitations_that_are_markedly_worse_from_lying_on_the_back_",
+      "label": "Palpitations that are markedly worse from lying on t…",
+      "section": "Chest",
+      "rubric": "Palpitations that are markedly worse from lying on the back, better on the side"
+    },
+    {
+      "id": "sym_sensation_of_the_heart_skipping_or_pausing_a_beat_noticed_es",
+      "label": "Sensation of the heart skipping or pausing a beat, n…",
+      "section": "Chest",
+      "rubric": "Sensation of the heart skipping or pausing a beat, noticed especially when resting quietly"
+    },
+    {
+      "id": "sym_chest_pain_that_is_sharp_and_stitching_worse_from_deep_breat",
+      "label": "Chest pain that is sharp and stitching, worse from d…",
+      "section": "Chest",
+      "rubric": "Chest pain that is sharp and stitching, worse from deep breathing or coughing"
+    },
+    {
+      "id": "sym_heaviness_or_weight_sensation_in_the_chest_that_improves_aft",
+      "label": "Heaviness or weight sensation in the chest that impr…",
+      "section": "Chest",
+      "rubric": "Heaviness or weight sensation in the chest that improves after belching"
+    },
+    {
+      "id": "sym_vertigo_brought_on_specifically_by_riding_in_a_car_boat_or_a",
+      "label": "Vertigo brought on specifically by riding in a car, …",
+      "section": "Vertigo",
+      "rubric": "Vertigo brought on specifically by riding in a car, boat, or any moving vehicle"
+    },
+    {
+      "id": "sym_vertigo_that_occurs_specifically_when_closing_the_eyes_bette",
+      "label": "Vertigo that occurs specifically when closing the ey…",
+      "section": "Vertigo",
+      "rubric": "Vertigo that occurs specifically when closing the eyes, better with eyes open"
+    },
+    {
+      "id": "sym_vertigo_accompanied_by_ringing_in_the_ears_and_gradual_heari",
+      "label": "Vertigo accompanied by ringing in the ears and gradu…",
+      "section": "Vertigo",
+      "rubric": "Vertigo accompanied by ringing in the ears and gradual hearing loss (Meniere's-type)"
+    },
+    {
+      "id": "sym_profuse_sweating_during_and_after_any_physical_exertion_more",
+      "label": "Profuse sweating during and after any physical exert…",
+      "section": "Perspiration",
+      "rubric": "Profuse sweating during and after any physical exertion, more than would be expected"
+    },
+    {
+      "id": "sym_perspiration_with_a_strongly_offensive_penetrating_odor_noti",
+      "label": "Perspiration with a strongly offensive, penetrating …",
+      "section": "Perspiration",
+      "rubric": "Perspiration with a strongly offensive, penetrating odor noticeable across the room"
+    },
+    {
+      "id": "sym_absence_of_perspiration_even_in_hot_weather_or_during_exerti",
+      "label": "Absence of perspiration even in hot weather or durin…",
+      "section": "Perspiration",
+      "rubric": "Absence of perspiration even in hot weather or during exertion, skin stays dry"
+    },
+    {
+      "id": "sym_enlarged_thyroid_goiter_that_fluctuates_in_size_with_the_men",
+      "label": "Enlarged thyroid (goiter) that fluctuates in size wi…",
+      "section": "Glands",
+      "rubric": "Enlarged thyroid (goiter) that fluctuates in size with the menstrual cycle"
+    },
+    {
+      "id": "sym_painless_rubbery_mobile_lymph_node_felt_in_the_neck_present_",
+      "label": "Painless, rubbery, mobile lymph node felt in the nec…",
+      "section": "Glands",
+      "rubric": "Painless, rubbery, mobile lymph node felt in the neck, present for months without change"
+    },
+    {
+      "id": "sym_general_aggravation_of_all_complaints_during_a_full_moon_or_",
+      "label": "General aggravation of all complaints during a full …",
+      "section": "Generalities",
+      "rubric": "General aggravation of all complaints during a full moon or around lunar phases"
+    },
+    {
+      "id": "sym_one_sided_complaints_throughout_the_body_that_consistently_a",
+      "label": "One-sided complaints throughout the body that consis…",
+      "section": "Generalities",
+      "rubric": "One-sided complaints throughout the body that consistently affect the right side more than the left"
+    },
+    {
+      "id": "sym_one_sided_complaints_throughout_the_body_that_consistently_a",
+      "label": "One-sided complaints throughout the body that consis…",
+      "section": "Generalities",
+      "rubric": "One-sided complaints throughout the body that consistently affect the left side more than the right"
+    },
+    {
+      "id": "sym_general_aggravation_from_the_change_of_seasons_particularly_",
+      "label": "General aggravation from the change of seasons, part…",
+      "section": "Generalities",
+      "rubric": "General aggravation from the change of seasons, particularly spring and autumn"
+    },
+    {
+      "id": "sym_marked_improvement_in_general_well_being_while_on_vacation_o",
+      "label": "Marked improvement in general well-being while on va…",
+      "section": "Generalities",
+      "rubric": "Marked improvement in general well-being while on vacation or away from usual routine"
+    },
+    {
+      "id": "sym_general_aggravation_of_symptoms_specifically_from_tobacco_sm",
+      "label": "General aggravation of symptoms specifically from to…",
+      "section": "Generalities",
+      "rubric": "General aggravation of symptoms specifically from tobacco smoke, whether smoking or secondhand"
+    },
+    {
+      "id": "sym_one_sided_sensations_of_numbness_heat_or_coldness_affecting_",
+      "label": "One-sided sensations of numbness, heat, or coldness …",
+      "section": "Generalities",
+      "rubric": "One-sided sensations of numbness, heat, or coldness affecting an entire half of the body"
+    },
+    {
+      "id": "sym_great_sensitivity_to_being_touched_anywhere_on_the_body_even",
+      "label": "Great sensitivity to being touched anywhere on the b…",
+      "section": "Generalities",
+      "rubric": "Great sensitivity to being touched anywhere on the body, even light contact is uncomfortable"
+    },
+    {
+      "id": "sym_general_aggravation_from_the_odor_of_flowers_especially_stro",
+      "label": "General aggravation from the odor of flowers, especi…",
+      "section": "Generalities",
+      "rubric": "General aggravation from the odor of flowers, especially strongly scented ones"
+    },
+    {
+      "id": "sym_sudden_alternation_between_opposite_states_such_as_heat_and_",
+      "label": "Sudden alternation between opposite states, such as …",
+      "section": "Generalities",
+      "rubric": "Sudden alternation between opposite states, such as heat and chill, or laughter and tears, within a short time"
+    },
+    {
+      "id": "sym_general_weakness_or_aggravation_that_is_markedly_worse_on_da",
+      "label": "General weakness or aggravation that is markedly wor…",
+      "section": "Generalities",
+      "rubric": "General weakness or aggravation that is markedly worse on days when barometric pressure drops before rain"
+    },
+    {
+      "id": "sym_marked_general_improvement_after_a_good_cry_emotional_releas",
+      "label": "Marked general improvement after a good cry, emotion…",
+      "section": "Generalities",
+      "rubric": "Marked general improvement after a good cry, emotional release brings physical relief"
+    },
+    {
+      "id": "sym_general_sensitivity_to_changes_in_altitude_symptoms_appear_o",
+      "label": "General sensitivity to changes in altitude, symptoms…",
+      "section": "Generalities",
+      "rubric": "General sensitivity to changes in altitude, symptoms appear or worsen at high elevation"
+    },
+    {
+      "id": "sym_one_sided_swelling_affecting_an_entire_limb_arm_or_leg_witho",
+      "label": "One-sided swelling affecting an entire limb, arm or …",
+      "section": "Generalities",
+      "rubric": "One-sided swelling affecting an entire limb, arm or leg, without a clear localized cause"
+    },
+    {
+      "id": "sym_general_aggravation_of_all_symptoms_specifically_after_a_hai",
+      "label": "General aggravation of all symptoms specifically aft…",
+      "section": "Generalities",
+      "rubric": "General aggravation of all symptoms specifically after a haircut or shaving"
     }
   ]
 }
