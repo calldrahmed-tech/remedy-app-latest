@@ -23628,6 +23628,38 @@
           "grade": 1
         }
       ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Acute toothache with throbbing or sharp pain, worse from cold or hot, better sometimes from cold water rinse",
+      "triggers": [
+        "toothache",
+        "tooth pain with throbbing",
+        "tooth ache worse from cold or hot"
+      ],
+      "remedies": [
+        {
+          "id": "cham",
+          "grade": 3
+        },
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "coff",
+          "grade": 2
+        },
+        {
+          "id": "staph",
+          "grade": 1
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ]
     }
   ],
   "chiefSymptomTags": [
@@ -30824,6 +30856,12 @@
       "label": "Acute sinusitis with facial pain, pressure, fever, t…",
       "section": "Nose",
       "rubric": "Acute sinusitis with facial pain, pressure, fever, thick discharge, and inflammation"
+    },
+    {
+      "id": "sym_acute_toothache_with_throbbing_or_sharp_pain_worse_from_cold",
+      "label": "Acute toothache with throbbing or sharp pain, worse …",
+      "section": "Mouth",
+      "rubric": "Acute toothache with throbbing or sharp pain, worse from cold or hot, better sometimes from cold water rinse"
     }
   ]
 }

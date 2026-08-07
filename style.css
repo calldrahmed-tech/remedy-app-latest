@@ -162,6 +162,9 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .repertorize-modal-inner .browse-chapter-list,
 .repertorize-modal-inner .browse-rubric-pane,
 .repertorize-modal-inner .browse-remedy-pane { overflow-y: auto; }
+.repertorize-mode-tabs { display: flex; gap: 6px; margin-bottom: 10px; flex-shrink: 0; }
+.repertorize-mode-tab { flex: 1; background: #f6f5f0; border: 1.5px solid var(--line); border-radius: 10px; padding: 9px 8px; font-size: 0.8rem; font-weight: 700; color: var(--muted); cursor: pointer; font-family: inherit; }
+.repertorize-mode-tab-active { background: var(--green-1); border-color: var(--green-1); color: #fff; }
 .repertorize-tray { background: #f6f5f0; border-radius: 12px; padding: 10px 12px; margin-bottom: 10px; max-height: 150px; overflow-y: auto; flex-shrink: 0; }
 .repertorize-tray-empty { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
 .repertorize-tray-title { font-size: 0.75rem; font-weight: 700; color: var(--muted); margin-bottom: 6px; }
