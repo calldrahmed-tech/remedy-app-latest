@@ -21691,6 +21691,1600 @@
           "grade": 1
         }
       ]
+    },
+    {
+      "section": "Thirst",
+      "category": "Generals",
+      "rubric": "Alternating thirst and thirstlessness, thirsty one day and completely without thirst the next",
+      "triggers": [
+        "thirst comes and goes day to day",
+        "thirsty one day no thirst at all the next"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "alum",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "category": "Generals",
+      "rubric": "Thirst for very cold water only, room temperature water is refused or disliked",
+      "triggers": [
+        "only wants ice cold water refuses room temperature",
+        "drinks only very cold water dislikes lukewarm"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "category": "Generals",
+      "rubric": "Dryness of the mouth and throat without a corresponding desire to drink much",
+      "triggers": [
+        "mouth and throat feel dry but not very thirsty",
+        "dry mouth without wanting to drink much"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "nux-m",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Swollen glands under the arms that are tender and worse from deodorant or shaving",
+      "triggers": [
+        "armpit glands tender worse from deodorant or shaving",
+        "underarm swelling irritated by shaving or products"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Chronic swelling of glands in a child who is also slow to grow or gain weight",
+      "triggers": [
+        "child with swollen glands and slow growth",
+        "kid not gaining weight with chronic gland swelling"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "bar-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Glandular swelling that appeared after a vaccination and never fully went down",
+      "triggers": [
+        "gland swelling since a vaccination never resolved",
+        "lymph node enlarged after a vaccine stayed swollen"
+      ],
+      "remedies": [
+        {
+          "id": "thuj",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "category": "Generals",
+      "rubric": "Weight that fluctuates significantly with mood, gains during low periods, loses when active and happy",
+      "triggers": [
+        "weight changes a lot with mood gains when low",
+        "weight tied closely to emotional state"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "category": "Generals",
+      "rubric": "Underweight child who eats well but simply does not gain, otherwise active and playful",
+      "triggers": [
+        "child eats well but does not gain weight otherwise active",
+        "thin kid despite good appetite still playful"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "iod",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Repeated sneezing fits early in the morning right after waking, settles by midday",
+      "triggers": [
+        "sneezing fits every morning after waking settles by noon",
+        "sneezes a lot early morning eases later in the day"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Nose bleeds that occur during or right after a hot shower or bath",
+      "triggers": [
+        "nosebleed during or right after a hot shower",
+        "bleeding nose triggered by hot bath"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Loss of smell that developed gradually over months, not linked to any cold or injury",
+      "triggers": [
+        "gradually lost sense of smell over months no cause",
+        "smell faded slowly not from a cold or injury"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Buzzing or humming sound in the ears that is worse in a quiet room at night",
+      "triggers": [
+        "buzzing sound in ears worse at night in quiet",
+        "humming in the ears increases in a silent room"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Ear pain in a child that is worse lying on the affected side",
+      "triggers": [
+        "child's ear pain worse lying on that side",
+        "earache in kid increases when lying on painful ear"
+      ],
+      "remedies": [
+        {
+          "id": "cham",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Sensation of water or fluid trapped in the ear without any actual water exposure",
+      "triggers": [
+        "feels like water trapped in the ear no swimming",
+        "sensation of fluid stuck in ear unrelated to water"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Excessive thirst combined with a dry, sticky feeling inside the mouth despite drinking",
+      "triggers": [
+        "mouth feels sticky and dry despite drinking a lot",
+        "dry sticky mouth even after drinking water frequently"
+      ],
+      "remedies": [
+        {
+          "id": "nux-m",
+          "grade": 1
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Bleeding gums that are noticed mainly while brushing the teeth, otherwise no pain",
+      "triggers": [
+        "gums bleed while brushing teeth otherwise painless",
+        "bleeding gums only noticed during brushing"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Sleep",
+      "category": "Generals",
+      "rubric": "Wakes up abruptly around 3am and cannot fall back asleep for over an hour",
+      "triggers": [
+        "wakes up at 3am cannot fall back asleep for an hour",
+        "regularly wakes at three in the morning stays awake long after"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Sleep",
+      "category": "Generals",
+      "rubric": "Sleeps deeply and is very difficult to wake in the morning, feels groggy for a while after",
+      "triggers": [
+        "sleeps very deeply hard to wake in the morning",
+        "difficult to rouse from sleep groggy for a while after"
+      ],
+      "remedies": [
+        {
+          "id": "op",
+          "grade": 1
+        },
+        {
+          "id": "ph-ac",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Sleep",
+      "category": "Generals",
+      "rubric": "Restless tossing and turning through the night without any clear reason, no pain or worry",
+      "triggers": [
+        "tosses and turns all night no clear reason",
+        "restless in bed all night without pain or worry"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Sore throat that is markedly worse on the right side and better on the left",
+      "triggers": [
+        "sore throat worse on the right side better on left",
+        "right sided throat pain more severe than left"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 2
+        },
+        {
+          "id": "merc-i-r",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Feeling of a lump in the throat that is worse when not swallowing, better while eating",
+      "triggers": [
+        "lump in throat worse between swallows better while eating",
+        "throat lump sensation eases while actively eating"
+      ],
+      "remedies": [
+        {
+          "id": "ign",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Chronic throat clearing habit in a child, worse with anxiety or before school",
+      "triggers": [
+        "child clears throat constantly worse with anxiety",
+        "kid's throat clearing habit worse before school"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "kali-bi",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Urine that appears cloudy or turbid, without pain or burning while passing it",
+      "triggers": [
+        "cloudy urine no pain or burning",
+        "turbid urine passes without discomfort"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Bedwetting in a child that happens mainly during the first deep sleep of the night",
+      "triggers": [
+        "child wets the bed during the first deep sleep",
+        "bedwetting happens early in the night during deep sleep"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 1
+        },
+        {
+          "id": "caust",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Urgency to urinate that is worse specifically from coughing or laughing",
+      "triggers": [
+        "urge to urinate worse from coughing or laughing",
+        "urinary urgency triggered by a cough or laugh"
+      ],
+      "remedies": [
+        {
+          "id": "caust",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "category": "Generals",
+      "rubric": "Thirst that is worse specifically before a fever chill begins, warning sign of the chill to come",
+      "triggers": [
+        "gets very thirsty right before a chill starts",
+        "thirst is the first sign a chill is coming"
+      ],
+      "remedies": [
+        {
+          "id": "eup-per",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "category": "Generals",
+      "rubric": "Thirst for large quantities at long intervals rather than frequent small sips",
+      "triggers": [
+        "drinks a lot at once but not often",
+        "big drinks at long gaps rather than frequent sips"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Glandular swelling in the neck that is worse specifically before or during menses",
+      "triggers": [
+        "neck glands swell worse before or during period",
+        "glandular tenderness in the neck tied to menstrual cycle"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "con",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Hard, stony glands that have remained unchanged in size for a very long time, years even",
+      "triggers": [
+        "hard stony gland unchanged for years",
+        "glandular lump size has not changed in a long time"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 2
+        },
+        {
+          "id": "calc-f",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "category": "Generals",
+      "rubric": "Weight gain concentrated on the hips and thighs while the upper body stays slim",
+      "triggers": [
+        "weight gain mostly hips and thighs upper body thin",
+        "fat concentrated lower body slim upper body"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "category": "Generals",
+      "rubric": "Rapid weight gain after stopping a regular exercise routine, otherwise no change in diet",
+      "triggers": [
+        "gained weight fast after stopping exercise same diet",
+        "weight went up quickly once they stopped working out"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Eyelids stuck together on waking, crusted shut and need to be gently opened",
+      "triggers": [
+        "eyelids stuck shut on waking crusted",
+        "eyes crusted closed in the morning need to be pried open"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "graph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Sensation of pressure behind the eyes that is worse from bending forward",
+      "triggers": [
+        "pressure behind the eyes worse bending forward",
+        "eyes feel pushed from behind worse when bending down"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "glon",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Redness of the eyes that appears specifically after prolonged crying",
+      "triggers": [
+        "eyes turn red after crying for a while",
+        "redness in the eyes following prolonged crying"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Nasal discharge that changes character through the day, watery in the morning, thick by evening",
+      "triggers": [
+        "watery discharge in the morning thick by evening",
+        "nasal mucus changes from thin to thick through the day"
+      ],
+      "remedies": [
+        {
+          "id": "kali-bi",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Chronic dryness inside the nose leading to crust formation and occasional bleeding when picked",
+      "triggers": [
+        "chronic dry nose forms crusts that bleed if picked",
+        "dry nostrils crust over bleed when disturbed"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "nit-ac",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weakness",
+      "category": "Generals",
+      "rubric": "Weakness that is worse specifically after any strong emotional conversation or confrontation",
+      "triggers": [
+        "weak and drained after an emotional confrontation",
+        "exhausted following any intense emotional conversation"
+      ],
+      "remedies": [
+        {
+          "id": "staph",
+          "grade": 1
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weakness",
+      "category": "Generals",
+      "rubric": "General weakness in a nursing mother, worse the longer breastfeeding continues",
+      "triggers": [
+        "nursing mother feels weaker the longer she breastfeeds",
+        "weakness in a breastfeeding mother worsens over months"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "chin",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Abdominal pain that is markedly relieved by passing gas or belching, builds up again after",
+      "triggers": [
+        "belly pain relieved by passing gas builds up again",
+        "abdominal cramp eases after burping then returns"
+      ],
+      "remedies": [
+        {
+          "id": "carb-v",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Sensitivity of the abdomen to tight clothing, must loosen the waistband to feel comfortable",
+      "triggers": [
+        "belly sensitive to tight clothes must loosen waistband",
+        "abdomen cannot tolerate tight clothing around it"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Ear pain that radiates down into the jaw or teeth on the same side",
+      "triggers": [
+        "ear pain radiates down into the jaw or teeth",
+        "earache spreads to the jaw on the same side"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Sensation of a weight or stone in the stomach that lasts for hours after a meal",
+      "triggers": [
+        "stone like weight in the stomach lasts for hours after eating",
+        "heavy feeling in stomach persists long after a meal"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Nausea that is markedly worse from the smell or sight of food being prepared",
+      "triggers": [
+        "nausea worse from smell of food cooking",
+        "feels sick just seeing food being prepared"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "coloc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "category": "Generals",
+      "rubric": "Fever with one cold hand and one hot hand at the same time",
+      "triggers": [
+        "one hand cold one hand hot during fever",
+        "asymmetric hand temperature during a fever"
+      ],
+      "remedies": [
+        {
+          "id": "cham",
+          "grade": 2
+        },
+        {
+          "id": "ip",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "category": "Generals",
+      "rubric": "Fever that comes on specifically after getting chilled from sweating and then cooling down too fast",
+      "triggers": [
+        "fever after sweating then getting chilled too quickly",
+        "caught a fever from cooling down fast after sweating"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 1
+        },
+        {
+          "id": "acon",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Low back pain that is markedly better lying on something hard, worse on a soft mattress",
+      "triggers": [
+        "back pain better lying on a hard surface",
+        "low back better on hard floor worse on soft bed"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Back pain that is worse on first rising from a seated position, better after walking a bit",
+      "triggers": [
+        "back pain worse standing up from a chair better after walking",
+        "stiff back on first rising eases with a little walking"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 3
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Sudden, sharp catching pain in the lower back that takes the breath away on movement",
+      "triggers": [
+        "sudden sharp catch in the lower back takes breath away",
+        "sharp back pain stops them mid movement"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Weakness of the lower back that feels as if it could give way, especially with bending",
+      "triggers": [
+        "lower back feels weak like it could give way",
+        "back feels unstable especially when bending"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Back pain that is markedly better from firm pressure or leaning against something",
+      "triggers": [
+        "back pain better from firm pressure against it",
+        "relief from leaning back against something firm"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Pain between the shoulder blades that is worse from stress or sitting at a desk for long hours",
+      "triggers": [
+        "pain between the shoulder blades worse from stress or desk work",
+        "upper back pain between shoulder blades from long sitting"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Back pain that radiates down one leg, worse from sitting, better lying down",
+      "triggers": [
+        "back pain shoots down one leg worse sitting",
+        "sciatic type pain down the leg better lying down"
+      ],
+      "remedies": [
+        {
+          "id": "coloc",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Backache that comes on specifically before or during the menstrual period",
+      "triggers": [
+        "back pain before or during period",
+        "backache tied to the menstrual cycle"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        },
+        {
+          "id": "caul",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Palpitations that come on suddenly with anxiety, heart pounds and races without exertion",
+      "triggers": [
+        "sudden palpitations with anxiety heart races without exertion",
+        "heart pounds suddenly from anxiety not from exercise"
+      ],
+      "remedies": [
+        {
+          "id": "acon",
+          "grade": 2
+        },
+        {
+          "id": "gels",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Sensation of tightness or constriction across the chest brought on by emotional stress",
+      "triggers": [
+        "chest feels tight from emotional stress",
+        "constriction across the chest triggered by stress"
+      ],
+      "remedies": [
+        {
+          "id": "cact",
+          "grade": 2
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Palpitations that are worse specifically lying on the left side",
+      "triggers": [
+        "heart palpitations worse lying on the left side",
+        "palpitations increase when lying on left side"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "spig",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Chest pain that feels like a band or cord tightening around the heart",
+      "triggers": [
+        "chest pain feels like a band around the heart",
+        "sensation of a cord squeezing around the chest"
+      ],
+      "remedies": [
+        {
+          "id": "cact",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Fluttering sensation in the chest brought on by drinking coffee or tea",
+      "triggers": [
+        "chest flutters after drinking coffee or tea",
+        "heart flutter triggered by caffeine"
+      ],
+      "remedies": [
+        {
+          "id": "coff",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Palpitations noticed mainly while lying down at night, calm during the day",
+      "triggers": [
+        "palpitations mainly at night lying down calm during the day",
+        "heart pounding noticed only when lying down to sleep"
+      ],
+      "remedies": [
+        {
+          "id": "spig",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Sense of anxious fullness in the chest that improves with belching or passing gas",
+      "triggers": [
+        "chest feels full and anxious better after belching",
+        "tightness in chest relieved by passing gas or burping"
+      ],
+      "remedies": [
+        {
+          "id": "carb-v",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Frequent urge to urinate at night in an older man, weak stream, feeling of incomplete emptying",
+      "triggers": [
+        "older man urinates often at night weak stream incomplete emptying",
+        "enlarged prostate type urination in an elderly man"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "con",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Sexual weakness or reduced desire following excessive exertion or a long illness",
+      "triggers": [
+        "reduced sexual desire after a long illness or exhaustion",
+        "sexual weakness following excessive exertion"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 1
+        },
+        {
+          "id": "agn",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Discomfort or heaviness in the groin area that is worse from prolonged sitting",
+      "triggers": [
+        "heaviness in the groin worse from sitting a long time",
+        "groin discomfort from prolonged sitting"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Sexual performance anxiety that undermines confidence despite no physical cause found",
+      "triggers": [
+        "performance anxiety affecting confidence no physical cause found",
+        "sexual anxiety undermines confidence tests normal"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 2
+        },
+        {
+          "id": "arg-n",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Itching of the genital area that is worse at night, disturbing sleep",
+      "triggers": [
+        "genital itching worse at night disturbs sleep",
+        "itching in the groin area increases at night"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Male infertility with a low sperm count found on testing, no other symptoms noticed",
+      "triggers": [
+        "low sperm count on semen test no other symptoms",
+        "male infertility found through low sperm count testing"
+      ],
+      "remedies": [
+        {
+          "id": "agn",
+          "grade": 2
+        },
+        {
+          "id": "sel",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Male infertility with weak or sluggish sperm motility on semen analysis",
+      "triggers": [
+        "poor sperm motility on semen analysis",
+        "sperm found sluggish or weak on fertility testing"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 1
+        },
+        {
+          "id": "agn",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Infertility in a man with a history of varicocele or dragging testicular discomfort",
+      "triggers": [
+        "infertility with a known varicocele",
+        "dragging testicular discomfort with fertility trouble"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "con",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Loss of interest in intimacy alongside fertility difficulty, more mental than physical in origin",
+      "triggers": [
+        "lost interest in intimacy along with fertility trouble",
+        "fertility difficulty seems more mental than physical"
+      ],
+      "remedies": [
+        {
+          "id": "agn",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo that is markedly worse turning the head quickly, better keeping still",
+      "triggers": [
+        "dizziness worse turning the head quickly better staying still",
+        "vertigo triggered by fast head movement"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo that comes on specifically when looking upward or tilting the head back",
+      "triggers": [
+        "dizzy when looking up or tilting the head back",
+        "vertigo triggered by looking upward"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo worse going down stairs or downhill, relatively better going up",
+      "triggers": [
+        "dizziness worse going down stairs better going up",
+        "vertigo worse walking downhill than uphill"
+      ],
+      "remedies": [
+        {
+          "id": "bor",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo accompanied by a sensation of objects spinning around the patient (true rotational vertigo)",
+      "triggers": [
+        "room spins around them true rotational dizziness",
+        "objects appear to spin during vertigo episode"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 1
+        },
+        {
+          "id": "con",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo that is worse rising from a lying or stooping position, momentary blackout feeling",
+      "triggers": [
+        "dizzy on standing up from lying or bending momentary blackout",
+        "vertigo when rising quickly from bed or bending"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Perspiration",
+      "category": "Particulars",
+      "rubric": "Profuse sweating of the head and scalp during sleep, soaking the pillow, especially in children",
+      "triggers": [
+        "head sweats profusely during sleep soaking the pillow",
+        "scalp sweating heavily at night especially in a child"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 3
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Perspiration",
+      "category": "Particulars",
+      "rubric": "One-sided sweating, one half of the body sweats while the other remains dry",
+      "triggers": [
+        "sweats on only one side of the body other side dry",
+        "one sided perspiration asymmetric sweating"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Perspiration",
+      "category": "Particulars",
+      "rubric": "Sweat that is sour-smelling, distinct from ordinary body odor",
+      "triggers": [
+        "sweat smells distinctly sour",
+        "sour smelling perspiration different from normal body odor"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 2
+        },
+        {
+          "id": "hep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Perspiration",
+      "category": "Particulars",
+      "rubric": "Perspiration that fails to relieve the underlying discomfort, patient feels no better after sweating",
+      "triggers": [
+        "sweating does not bring any relief",
+        "perspires but feels no better afterward"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "gels",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Perspiration",
+      "category": "Particulars",
+      "rubric": "Cold, clammy sweat brought on by anxiety or fear, palms and soles especially affected",
+      "triggers": [
+        "cold clammy sweat from anxiety or fear",
+        "clammy palms and soles during anxious moments"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "verat",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Perspiration",
+      "category": "Particulars",
+      "rubric": "Perspiration that appears only on covered parts of the body, exposed skin stays dry",
+      "triggers": [
+        "sweats only where clothing covers exposed skin stays dry",
+        "perspiration only under clothes not on exposed areas"
+      ],
+      "remedies": [
+        {
+          "id": "sel",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Female infertility with consistently delayed or scanty menses, difficulty conceiving over time",
+      "triggers": [
+        "infertility with delayed or scanty periods",
+        "difficulty conceiving alongside irregular light menses"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "sep",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Infertility associated with a tendency to miscarry in the early months of pregnancy",
+      "triggers": [
+        "infertility with history of early miscarriage",
+        "tends to miscarry early struggling to carry to term"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 1
+        },
+        {
+          "id": "caul",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Infertility in a woman with cold hands and feet and a generally sluggish, chilly constitution",
+      "triggers": [
+        "infertility with cold hands and feet chilly constitution",
+        "struggling to conceive with sluggish chilly body type"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Difficulty conceiving alongside painful, cramping menses that have been present since the teenage years",
+      "triggers": [
+        "infertility with painful cramping periods since teenage years",
+        "fertility trouble alongside lifelong period pain"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "mag-p",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Infertility with a known history of blocked or narrowed fallopian tubes",
+      "triggers": [
+        "infertility with blocked fallopian tubes on testing",
+        "fertility issue linked to narrowed or blocked tubes"
+      ],
+      "remedies": [
+        {
+          "id": "thuj",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Emotional grief or anxiety about not conceiving that has become the dominant concern in the marriage",
+      "triggers": [
+        "grief and anxiety about not conceiving dominates the marriage",
+        "emotional distress over infertility overwhelming for the couple"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        }
+      ]
     }
   ],
   "chiefSymptomTags": [
@@ -28317,6 +29911,522 @@
       "label": "Lack of confidence performing or presenting in publi…",
       "section": "Mind",
       "rubric": "Lack of confidence performing or presenting in public despite thorough preparation, fears the mind will go blank once started, developed gradually over recent years"
+    },
+    {
+      "id": "sym_alternating_thirst_and_thirstlessness_thirsty_one_day_and_co",
+      "label": "Alternating thirst and thirstlessness, thirsty one d…",
+      "section": "Thirst",
+      "rubric": "Alternating thirst and thirstlessness, thirsty one day and completely without thirst the next"
+    },
+    {
+      "id": "sym_thirst_for_very_cold_water_only_room_temperature_water_is_re",
+      "label": "Thirst for very cold water only, room temperature wa…",
+      "section": "Thirst",
+      "rubric": "Thirst for very cold water only, room temperature water is refused or disliked"
+    },
+    {
+      "id": "sym_dryness_of_the_mouth_and_throat_without_a_corresponding_desi",
+      "label": "Dryness of the mouth and throat without a correspond…",
+      "section": "Thirst",
+      "rubric": "Dryness of the mouth and throat without a corresponding desire to drink much"
+    },
+    {
+      "id": "sym_swollen_glands_under_the_arms_that_are_tender_and_worse_from",
+      "label": "Swollen glands under the arms that are tender and wo…",
+      "section": "Glands",
+      "rubric": "Swollen glands under the arms that are tender and worse from deodorant or shaving"
+    },
+    {
+      "id": "sym_chronic_swelling_of_glands_in_a_child_who_is_also_slow_to_gr",
+      "label": "Chronic swelling of glands in a child who is also sl…",
+      "section": "Glands",
+      "rubric": "Chronic swelling of glands in a child who is also slow to grow or gain weight"
+    },
+    {
+      "id": "sym_glandular_swelling_that_appeared_after_a_vaccination_and_nev",
+      "label": "Glandular swelling that appeared after a vaccination…",
+      "section": "Glands",
+      "rubric": "Glandular swelling that appeared after a vaccination and never fully went down"
+    },
+    {
+      "id": "sym_weight_that_fluctuates_significantly_with_mood_gains_during_",
+      "label": "Weight that fluctuates significantly with mood, gain…",
+      "section": "Weight",
+      "rubric": "Weight that fluctuates significantly with mood, gains during low periods, loses when active and happy"
+    },
+    {
+      "id": "sym_underweight_child_who_eats_well_but_simply_does_not_gain_oth",
+      "label": "Underweight child who eats well but simply does not …",
+      "section": "Weight",
+      "rubric": "Underweight child who eats well but simply does not gain, otherwise active and playful"
+    },
+    {
+      "id": "sym_repeated_sneezing_fits_early_in_the_morning_right_after_waki",
+      "label": "Repeated sneezing fits early in the morning right af…",
+      "section": "Nose",
+      "rubric": "Repeated sneezing fits early in the morning right after waking, settles by midday"
+    },
+    {
+      "id": "sym_nose_bleeds_that_occur_during_or_right_after_a_hot_shower_or",
+      "label": "Nose bleeds that occur during or right after a hot s…",
+      "section": "Nose",
+      "rubric": "Nose bleeds that occur during or right after a hot shower or bath"
+    },
+    {
+      "id": "sym_loss_of_smell_that_developed_gradually_over_months_not_linke",
+      "label": "Loss of smell that developed gradually over months, …",
+      "section": "Nose",
+      "rubric": "Loss of smell that developed gradually over months, not linked to any cold or injury"
+    },
+    {
+      "id": "sym_buzzing_or_humming_sound_in_the_ears_that_is_worse_in_a_quie",
+      "label": "Buzzing or humming sound in the ears that is worse i…",
+      "section": "Ear",
+      "rubric": "Buzzing or humming sound in the ears that is worse in a quiet room at night"
+    },
+    {
+      "id": "sym_ear_pain_in_a_child_that_is_worse_lying_on_the_affected_side",
+      "label": "Ear pain in a child that is worse lying on the affec…",
+      "section": "Ear",
+      "rubric": "Ear pain in a child that is worse lying on the affected side"
+    },
+    {
+      "id": "sym_sensation_of_water_or_fluid_trapped_in_the_ear_without_any_a",
+      "label": "Sensation of water or fluid trapped in the ear witho…",
+      "section": "Ear",
+      "rubric": "Sensation of water or fluid trapped in the ear without any actual water exposure"
+    },
+    {
+      "id": "sym_excessive_thirst_combined_with_a_dry_sticky_feeling_inside_t",
+      "label": "Excessive thirst combined with a dry, sticky feeling…",
+      "section": "Mouth",
+      "rubric": "Excessive thirst combined with a dry, sticky feeling inside the mouth despite drinking"
+    },
+    {
+      "id": "sym_bleeding_gums_that_are_noticed_mainly_while_brushing_the_tee",
+      "label": "Bleeding gums that are noticed mainly while brushing…",
+      "section": "Mouth",
+      "rubric": "Bleeding gums that are noticed mainly while brushing the teeth, otherwise no pain"
+    },
+    {
+      "id": "sym_wakes_up_abruptly_around_3am_and_cannot_fall_back_asleep_for",
+      "label": "Wakes up abruptly around 3am and cannot fall back as…",
+      "section": "Sleep",
+      "rubric": "Wakes up abruptly around 3am and cannot fall back asleep for over an hour"
+    },
+    {
+      "id": "sym_sleeps_deeply_and_is_very_difficult_to_wake_in_the_morning_f",
+      "label": "Sleeps deeply and is very difficult to wake in the m…",
+      "section": "Sleep",
+      "rubric": "Sleeps deeply and is very difficult to wake in the morning, feels groggy for a while after"
+    },
+    {
+      "id": "sym_restless_tossing_and_turning_through_the_night_without_any_c",
+      "label": "Restless tossing and turning through the night witho…",
+      "section": "Sleep",
+      "rubric": "Restless tossing and turning through the night without any clear reason, no pain or worry"
+    },
+    {
+      "id": "sym_sore_throat_that_is_markedly_worse_on_the_right_side_and_bet",
+      "label": "Sore throat that is markedly worse on the right side…",
+      "section": "Throat",
+      "rubric": "Sore throat that is markedly worse on the right side and better on the left"
+    },
+    {
+      "id": "sym_feeling_of_a_lump_in_the_throat_that_is_worse_when_not_swall",
+      "label": "Feeling of a lump in the throat that is worse when n…",
+      "section": "Throat",
+      "rubric": "Feeling of a lump in the throat that is worse when not swallowing, better while eating"
+    },
+    {
+      "id": "sym_chronic_throat_clearing_habit_in_a_child_worse_with_anxiety_",
+      "label": "Chronic throat clearing habit in a child, worse with…",
+      "section": "Throat",
+      "rubric": "Chronic throat clearing habit in a child, worse with anxiety or before school"
+    },
+    {
+      "id": "sym_urine_that_appears_cloudy_or_turbid_without_pain_or_burning_",
+      "label": "Urine that appears cloudy or turbid, without pain or…",
+      "section": "Urinary",
+      "rubric": "Urine that appears cloudy or turbid, without pain or burning while passing it"
+    },
+    {
+      "id": "sym_bedwetting_in_a_child_that_happens_mainly_during_the_first_d",
+      "label": "Bedwetting in a child that happens mainly during the…",
+      "section": "Urinary",
+      "rubric": "Bedwetting in a child that happens mainly during the first deep sleep of the night"
+    },
+    {
+      "id": "sym_urgency_to_urinate_that_is_worse_specifically_from_coughing_",
+      "label": "Urgency to urinate that is worse specifically from c…",
+      "section": "Urinary",
+      "rubric": "Urgency to urinate that is worse specifically from coughing or laughing"
+    },
+    {
+      "id": "sym_thirst_that_is_worse_specifically_before_a_fever_chill_begin",
+      "label": "Thirst that is worse specifically before a fever chi…",
+      "section": "Thirst",
+      "rubric": "Thirst that is worse specifically before a fever chill begins, warning sign of the chill to come"
+    },
+    {
+      "id": "sym_thirst_for_large_quantities_at_long_intervals_rather_than_fr",
+      "label": "Thirst for large quantities at long intervals rather…",
+      "section": "Thirst",
+      "rubric": "Thirst for large quantities at long intervals rather than frequent small sips"
+    },
+    {
+      "id": "sym_glandular_swelling_in_the_neck_that_is_worse_specifically_be",
+      "label": "Glandular swelling in the neck that is worse specifi…",
+      "section": "Glands",
+      "rubric": "Glandular swelling in the neck that is worse specifically before or during menses"
+    },
+    {
+      "id": "sym_hard_stony_glands_that_have_remained_unchanged_in_size_for_a",
+      "label": "Hard, stony glands that have remained unchanged in s…",
+      "section": "Glands",
+      "rubric": "Hard, stony glands that have remained unchanged in size for a very long time, years even"
+    },
+    {
+      "id": "sym_weight_gain_concentrated_on_the_hips_and_thighs_while_the_up",
+      "label": "Weight gain concentrated on the hips and thighs whil…",
+      "section": "Weight",
+      "rubric": "Weight gain concentrated on the hips and thighs while the upper body stays slim"
+    },
+    {
+      "id": "sym_rapid_weight_gain_after_stopping_a_regular_exercise_routine_",
+      "label": "Rapid weight gain after stopping a regular exercise …",
+      "section": "Weight",
+      "rubric": "Rapid weight gain after stopping a regular exercise routine, otherwise no change in diet"
+    },
+    {
+      "id": "sym_eyelids_stuck_together_on_waking_crusted_shut_and_need_to_be",
+      "label": "Eyelids stuck together on waking, crusted shut and n…",
+      "section": "Eye",
+      "rubric": "Eyelids stuck together on waking, crusted shut and need to be gently opened"
+    },
+    {
+      "id": "sym_sensation_of_pressure_behind_the_eyes_that_is_worse_from_ben",
+      "label": "Sensation of pressure behind the eyes that is worse …",
+      "section": "Eye",
+      "rubric": "Sensation of pressure behind the eyes that is worse from bending forward"
+    },
+    {
+      "id": "sym_redness_of_the_eyes_that_appears_specifically_after_prolonge",
+      "label": "Redness of the eyes that appears specifically after …",
+      "section": "Eye",
+      "rubric": "Redness of the eyes that appears specifically after prolonged crying"
+    },
+    {
+      "id": "sym_nasal_discharge_that_changes_character_through_the_day_water",
+      "label": "Nasal discharge that changes character through the d…",
+      "section": "Nose",
+      "rubric": "Nasal discharge that changes character through the day, watery in the morning, thick by evening"
+    },
+    {
+      "id": "sym_chronic_dryness_inside_the_nose_leading_to_crust_formation_a",
+      "label": "Chronic dryness inside the nose leading to crust for…",
+      "section": "Nose",
+      "rubric": "Chronic dryness inside the nose leading to crust formation and occasional bleeding when picked"
+    },
+    {
+      "id": "sym_weakness_that_is_worse_specifically_after_any_strong_emotion",
+      "label": "Weakness that is worse specifically after any strong…",
+      "section": "Weakness",
+      "rubric": "Weakness that is worse specifically after any strong emotional conversation or confrontation"
+    },
+    {
+      "id": "sym_general_weakness_in_a_nursing_mother_worse_the_longer_breast",
+      "label": "General weakness in a nursing mother, worse the long…",
+      "section": "Weakness",
+      "rubric": "General weakness in a nursing mother, worse the longer breastfeeding continues"
+    },
+    {
+      "id": "sym_abdominal_pain_that_is_markedly_relieved_by_passing_gas_or_b",
+      "label": "Abdominal pain that is markedly relieved by passing …",
+      "section": "Abdomen",
+      "rubric": "Abdominal pain that is markedly relieved by passing gas or belching, builds up again after"
+    },
+    {
+      "id": "sym_sensitivity_of_the_abdomen_to_tight_clothing_must_loosen_the",
+      "label": "Sensitivity of the abdomen to tight clothing, must l…",
+      "section": "Abdomen",
+      "rubric": "Sensitivity of the abdomen to tight clothing, must loosen the waistband to feel comfortable"
+    },
+    {
+      "id": "sym_ear_pain_that_radiates_down_into_the_jaw_or_teeth_on_the_sam",
+      "label": "Ear pain that radiates down into the jaw or teeth on…",
+      "section": "Ear",
+      "rubric": "Ear pain that radiates down into the jaw or teeth on the same side"
+    },
+    {
+      "id": "sym_sensation_of_a_weight_or_stone_in_the_stomach_that_lasts_for",
+      "label": "Sensation of a weight or stone in the stomach that l…",
+      "section": "Stomach",
+      "rubric": "Sensation of a weight or stone in the stomach that lasts for hours after a meal"
+    },
+    {
+      "id": "sym_nausea_that_is_markedly_worse_from_the_smell_or_sight_of_foo",
+      "label": "Nausea that is markedly worse from the smell or sigh…",
+      "section": "Stomach",
+      "rubric": "Nausea that is markedly worse from the smell or sight of food being prepared"
+    },
+    {
+      "id": "sym_fever_with_one_cold_hand_and_one_hot_hand_at_the_same_time",
+      "label": "Fever with one cold hand and one hot hand at the sam…",
+      "section": "Fever",
+      "rubric": "Fever with one cold hand and one hot hand at the same time"
+    },
+    {
+      "id": "sym_fever_that_comes_on_specifically_after_getting_chilled_from_",
+      "label": "Fever that comes on specifically after getting chill…",
+      "section": "Fever",
+      "rubric": "Fever that comes on specifically after getting chilled from sweating and then cooling down too fast"
+    },
+    {
+      "id": "sym_low_back_pain_that_is_markedly_better_lying_on_something_har",
+      "label": "Low back pain that is markedly better lying on somet…",
+      "section": "Back",
+      "rubric": "Low back pain that is markedly better lying on something hard, worse on a soft mattress"
+    },
+    {
+      "id": "sym_back_pain_that_is_worse_on_first_rising_from_a_seated_positi",
+      "label": "Back pain that is worse on first rising from a seate…",
+      "section": "Back",
+      "rubric": "Back pain that is worse on first rising from a seated position, better after walking a bit"
+    },
+    {
+      "id": "sym_sudden_sharp_catching_pain_in_the_lower_back_that_takes_the_",
+      "label": "Sudden, sharp catching pain in the lower back that t…",
+      "section": "Back",
+      "rubric": "Sudden, sharp catching pain in the lower back that takes the breath away on movement"
+    },
+    {
+      "id": "sym_weakness_of_the_lower_back_that_feels_as_if_it_could_give_wa",
+      "label": "Weakness of the lower back that feels as if it could…",
+      "section": "Back",
+      "rubric": "Weakness of the lower back that feels as if it could give way, especially with bending"
+    },
+    {
+      "id": "sym_back_pain_that_is_markedly_better_from_firm_pressure_or_lean",
+      "label": "Back pain that is markedly better from firm pressure…",
+      "section": "Back",
+      "rubric": "Back pain that is markedly better from firm pressure or leaning against something"
+    },
+    {
+      "id": "sym_pain_between_the_shoulder_blades_that_is_worse_from_stress_o",
+      "label": "Pain between the shoulder blades that is worse from …",
+      "section": "Back",
+      "rubric": "Pain between the shoulder blades that is worse from stress or sitting at a desk for long hours"
+    },
+    {
+      "id": "sym_back_pain_that_radiates_down_one_leg_worse_from_sitting_bett",
+      "label": "Back pain that radiates down one leg, worse from sit…",
+      "section": "Back",
+      "rubric": "Back pain that radiates down one leg, worse from sitting, better lying down"
+    },
+    {
+      "id": "sym_backache_that_comes_on_specifically_before_or_during_the_men",
+      "label": "Backache that comes on specifically before or during…",
+      "section": "Back",
+      "rubric": "Backache that comes on specifically before or during the menstrual period"
+    },
+    {
+      "id": "sym_palpitations_that_come_on_suddenly_with_anxiety_heart_pounds",
+      "label": "Palpitations that come on suddenly with anxiety, hea…",
+      "section": "Chest",
+      "rubric": "Palpitations that come on suddenly with anxiety, heart pounds and races without exertion"
+    },
+    {
+      "id": "sym_sensation_of_tightness_or_constriction_across_the_chest_brou",
+      "label": "Sensation of tightness or constriction across the ch…",
+      "section": "Chest",
+      "rubric": "Sensation of tightness or constriction across the chest brought on by emotional stress"
+    },
+    {
+      "id": "sym_palpitations_that_are_worse_specifically_lying_on_the_left_s",
+      "label": "Palpitations that are worse specifically lying on th…",
+      "section": "Chest",
+      "rubric": "Palpitations that are worse specifically lying on the left side"
+    },
+    {
+      "id": "sym_chest_pain_that_feels_like_a_band_or_cord_tightening_around_",
+      "label": "Chest pain that feels like a band or cord tightening…",
+      "section": "Chest",
+      "rubric": "Chest pain that feels like a band or cord tightening around the heart"
+    },
+    {
+      "id": "sym_fluttering_sensation_in_the_chest_brought_on_by_drinking_cof",
+      "label": "Fluttering sensation in the chest brought on by drin…",
+      "section": "Chest",
+      "rubric": "Fluttering sensation in the chest brought on by drinking coffee or tea"
+    },
+    {
+      "id": "sym_palpitations_noticed_mainly_while_lying_down_at_night_calm_d",
+      "label": "Palpitations noticed mainly while lying down at nigh…",
+      "section": "Chest",
+      "rubric": "Palpitations noticed mainly while lying down at night, calm during the day"
+    },
+    {
+      "id": "sym_sense_of_anxious_fullness_in_the_chest_that_improves_with_be",
+      "label": "Sense of anxious fullness in the chest that improves…",
+      "section": "Chest",
+      "rubric": "Sense of anxious fullness in the chest that improves with belching or passing gas"
+    },
+    {
+      "id": "sym_frequent_urge_to_urinate_at_night_in_an_older_man_weak_strea",
+      "label": "Frequent urge to urinate at night in an older man, w…",
+      "section": "Male",
+      "rubric": "Frequent urge to urinate at night in an older man, weak stream, feeling of incomplete emptying"
+    },
+    {
+      "id": "sym_sexual_weakness_or_reduced_desire_following_excessive_exerti",
+      "label": "Sexual weakness or reduced desire following excessiv…",
+      "section": "Male",
+      "rubric": "Sexual weakness or reduced desire following excessive exertion or a long illness"
+    },
+    {
+      "id": "sym_discomfort_or_heaviness_in_the_groin_area_that_is_worse_from",
+      "label": "Discomfort or heaviness in the groin area that is wo…",
+      "section": "Male",
+      "rubric": "Discomfort or heaviness in the groin area that is worse from prolonged sitting"
+    },
+    {
+      "id": "sym_sexual_performance_anxiety_that_undermines_confidence_despit",
+      "label": "Sexual performance anxiety that undermines confidenc…",
+      "section": "Male",
+      "rubric": "Sexual performance anxiety that undermines confidence despite no physical cause found"
+    },
+    {
+      "id": "sym_itching_of_the_genital_area_that_is_worse_at_night_disturbin",
+      "label": "Itching of the genital area that is worse at night, …",
+      "section": "Male",
+      "rubric": "Itching of the genital area that is worse at night, disturbing sleep"
+    },
+    {
+      "id": "sym_male_infertility_with_a_low_sperm_count_found_on_testing_no_",
+      "label": "Male infertility with a low sperm count found on tes…",
+      "section": "Male",
+      "rubric": "Male infertility with a low sperm count found on testing, no other symptoms noticed"
+    },
+    {
+      "id": "sym_male_infertility_with_weak_or_sluggish_sperm_motility_on_sem",
+      "label": "Male infertility with weak or sluggish sperm motilit…",
+      "section": "Male",
+      "rubric": "Male infertility with weak or sluggish sperm motility on semen analysis"
+    },
+    {
+      "id": "sym_infertility_in_a_man_with_a_history_of_varicocele_or_draggin",
+      "label": "Infertility in a man with a history of varicocele or…",
+      "section": "Male",
+      "rubric": "Infertility in a man with a history of varicocele or dragging testicular discomfort"
+    },
+    {
+      "id": "sym_loss_of_interest_in_intimacy_alongside_fertility_difficulty_",
+      "label": "Loss of interest in intimacy alongside fertility dif…",
+      "section": "Male",
+      "rubric": "Loss of interest in intimacy alongside fertility difficulty, more mental than physical in origin"
+    },
+    {
+      "id": "sym_vertigo_that_is_markedly_worse_turning_the_head_quickly_bett",
+      "label": "Vertigo that is markedly worse turning the head quic…",
+      "section": "Vertigo",
+      "rubric": "Vertigo that is markedly worse turning the head quickly, better keeping still"
+    },
+    {
+      "id": "sym_vertigo_that_comes_on_specifically_when_looking_upward_or_ti",
+      "label": "Vertigo that comes on specifically when looking upwa…",
+      "section": "Vertigo",
+      "rubric": "Vertigo that comes on specifically when looking upward or tilting the head back"
+    },
+    {
+      "id": "sym_vertigo_worse_going_down_stairs_or_downhill_relatively_bette",
+      "label": "Vertigo worse going down stairs or downhill, relativ…",
+      "section": "Vertigo",
+      "rubric": "Vertigo worse going down stairs or downhill, relatively better going up"
+    },
+    {
+      "id": "sym_vertigo_accompanied_by_a_sensation_of_objects_spinning_aroun",
+      "label": "Vertigo accompanied by a sensation of objects spinni…",
+      "section": "Vertigo",
+      "rubric": "Vertigo accompanied by a sensation of objects spinning around the patient (true rotational vertigo)"
+    },
+    {
+      "id": "sym_vertigo_that_is_worse_rising_from_a_lying_or_stooping_positi",
+      "label": "Vertigo that is worse rising from a lying or stoopin…",
+      "section": "Vertigo",
+      "rubric": "Vertigo that is worse rising from a lying or stooping position, momentary blackout feeling"
+    },
+    {
+      "id": "sym_profuse_sweating_of_the_head_and_scalp_during_sleep_soaking_",
+      "label": "Profuse sweating of the head and scalp during sleep,…",
+      "section": "Perspiration",
+      "rubric": "Profuse sweating of the head and scalp during sleep, soaking the pillow, especially in children"
+    },
+    {
+      "id": "sym_one_sided_sweating_one_half_of_the_body_sweats_while_the_oth",
+      "label": "One-sided sweating, one half of the body sweats whil…",
+      "section": "Perspiration",
+      "rubric": "One-sided sweating, one half of the body sweats while the other remains dry"
+    },
+    {
+      "id": "sym_sweat_that_is_sour_smelling_distinct_from_ordinary_body_odor",
+      "label": "Sweat that is sour-smelling, distinct from ordinary …",
+      "section": "Perspiration",
+      "rubric": "Sweat that is sour-smelling, distinct from ordinary body odor"
+    },
+    {
+      "id": "sym_perspiration_that_fails_to_relieve_the_underlying_discomfort",
+      "label": "Perspiration that fails to relieve the underlying di…",
+      "section": "Perspiration",
+      "rubric": "Perspiration that fails to relieve the underlying discomfort, patient feels no better after sweating"
+    },
+    {
+      "id": "sym_cold_clammy_sweat_brought_on_by_anxiety_or_fear_palms_and_so",
+      "label": "Cold, clammy sweat brought on by anxiety or fear, pa…",
+      "section": "Perspiration",
+      "rubric": "Cold, clammy sweat brought on by anxiety or fear, palms and soles especially affected"
+    },
+    {
+      "id": "sym_perspiration_that_appears_only_on_covered_parts_of_the_body_",
+      "label": "Perspiration that appears only on covered parts of t…",
+      "section": "Perspiration",
+      "rubric": "Perspiration that appears only on covered parts of the body, exposed skin stays dry"
+    },
+    {
+      "id": "sym_female_infertility_with_consistently_delayed_or_scanty_mense",
+      "label": "Female infertility with consistently delayed or scan…",
+      "section": "Female",
+      "rubric": "Female infertility with consistently delayed or scanty menses, difficulty conceiving over time"
+    },
+    {
+      "id": "sym_infertility_associated_with_a_tendency_to_miscarry_in_the_ea",
+      "label": "Infertility associated with a tendency to miscarry i…",
+      "section": "Female",
+      "rubric": "Infertility associated with a tendency to miscarry in the early months of pregnancy"
+    },
+    {
+      "id": "sym_infertility_in_a_woman_with_cold_hands_and_feet_and_a_genera",
+      "label": "Infertility in a woman with cold hands and feet and …",
+      "section": "Female",
+      "rubric": "Infertility in a woman with cold hands and feet and a generally sluggish, chilly constitution"
+    },
+    {
+      "id": "sym_difficulty_conceiving_alongside_painful_cramping_menses_that",
+      "label": "Difficulty conceiving alongside painful, cramping me…",
+      "section": "Female",
+      "rubric": "Difficulty conceiving alongside painful, cramping menses that have been present since the teenage years"
+    },
+    {
+      "id": "sym_infertility_with_a_known_history_of_blocked_or_narrowed_fall",
+      "label": "Infertility with a known history of blocked or narro…",
+      "section": "Female",
+      "rubric": "Infertility with a known history of blocked or narrowed fallopian tubes"
+    },
+    {
+      "id": "sym_emotional_grief_or_anxiety_about_not_conceiving_that_has_bec",
+      "label": "Emotional grief or anxiety about not conceiving that…",
+      "section": "Female",
+      "rubric": "Emotional grief or anxiety about not conceiving that has become the dominant concern in the marriage"
     }
   ]
 }
