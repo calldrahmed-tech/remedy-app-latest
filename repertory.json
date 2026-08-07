@@ -21087,6 +21087,610 @@
           "grade": 1
         }
       ]
+    },
+    {
+      "section": "Thirst",
+      "category": "Generals",
+      "rubric": "Thirst for hot drinks specifically, cold drinks are disliked or cause discomfort",
+      "triggers": [
+        "craves hot drinks cold drinks upset them",
+        "prefers everything hot to drink dislikes cold beverages"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "category": "Generals",
+      "rubric": "Thirstlessness during fever but normal thirst once the fever breaks",
+      "triggers": [
+        "no thirst during the fever but thirsty once it breaks",
+        "thirstless while feverish normal thirst after fever passes"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "category": "Generals",
+      "rubric": "Thirst for milk specifically, unusual craving not seen with other drinks",
+      "triggers": [
+        "craves milk specifically unusual thirst",
+        "strong desire for milk more than other drinks"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "category": "Generals",
+      "rubric": "Great thirst but drinking brings on vomiting or discomfort almost immediately",
+      "triggers": [
+        "very thirsty but drinking causes vomiting right away",
+        "thirsty yet water comes back up almost immediately"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "category": "Generals",
+      "rubric": "Thirst that increases specifically in the evening or at night, minimal during the day",
+      "triggers": [
+        "thirst worse in the evening or at night",
+        "barely thirsty in the day but very thirsty at night"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "category": "Generals",
+      "rubric": "Thirst for sour drinks such as lemon water or vinegar-based drinks",
+      "triggers": [
+        "craves sour drinks like lemon water",
+        "wants vinegar or sour beverages specifically"
+      ],
+      "remedies": [
+        {
+          "id": "ant-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Thirst",
+      "category": "Generals",
+      "rubric": "Extreme unquenchable thirst, drinks large amounts and still feels thirsty",
+      "triggers": [
+        "unquenchable thirst drinks a lot still feels thirsty",
+        "huge thirst that never seems satisfied"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Chronically enlarged tonsils that remain large even between infections, not just during illness",
+      "triggers": [
+        "tonsils stay enlarged even when not sick",
+        "chronically big tonsils between infections"
+      ],
+      "remedies": [
+        {
+          "id": "bar-c",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Swollen glands that are soft and painless, move easily under the skin when touched",
+      "triggers": [
+        "soft painless glands move under the skin easily",
+        "glandular swelling not fixed slides when touched"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "bar-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Recurrent boils or abscesses near a gland that keep coming back in the same spot",
+      "triggers": [
+        "boils keep recurring in the same glandular area",
+        "recurring abscess near a gland same location"
+      ],
+      "remedies": [
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Glandular swelling that is worse specifically in damp, rainy weather",
+      "triggers": [
+        "glands swell more in damp rainy weather",
+        "glandular symptoms flare with rain or humidity"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "dulc",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Enlarged spleen with a dragging sensation or fullness on the left side of the abdomen",
+      "triggers": [
+        "enlarged spleen dragging feeling left side of belly",
+        "fullness under the left ribs spleen swelling"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 2
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Discharge from the ear that is thick, yellow, and offensive-smelling",
+      "triggers": [
+        "thick yellow smelly discharge from the ear",
+        "offensive ear discharge thick and colored"
+      ],
+      "remedies": [
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Sensitivity to noise so intense that ordinary sounds feel painfully loud",
+      "triggers": [
+        "ordinary sounds feel painfully loud",
+        "extreme sensitivity to noise everyday sounds hurt"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "asar",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Ear pain that is markedly worse from swallowing or chewing",
+      "triggers": [
+        "ear pain worse when swallowing or chewing",
+        "earache increases while eating or swallowing"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "A cracking or popping sound in the ear when swallowing or moving the jaw",
+      "triggers": [
+        "ear cracks or pops when swallowing",
+        "popping sound in ear moving the jaw"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Ear infection that tends to follow every episode of swimming or water exposure",
+      "triggers": [
+        "ear infection every time after swimming",
+        "swimmer's ear happens after water exposure repeatedly"
+      ],
+      "remedies": [
+        {
+          "id": "graph",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "category": "Generals",
+      "rubric": "Weight concentrated mostly around the abdomen while the limbs remain relatively thin",
+      "triggers": [
+        "weight mostly around the belly limbs stay thin",
+        "fat concentrated in the abdomen not the arms and legs"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "category": "Generals",
+      "rubric": "Sudden noticeable weight loss following a major emotional shock or grief",
+      "triggers": [
+        "lost weight suddenly after a big emotional shock",
+        "rapid weight drop following grief or bad news"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "category": "Generals",
+      "rubric": "Obesity in a patient who eats very little, weight gain seems out of proportion to intake",
+      "triggers": [
+        "overweight despite eating very little food",
+        "weight gain seems out of proportion to how little they eat"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "graph",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "category": "Generals",
+      "rubric": "Weight loss confined mainly to the upper body while the lower body stays the same",
+      "triggers": [
+        "losing weight mainly in the upper body",
+        "upper body getting thin lower body unchanged"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Cracks at the corners of the mouth, often sore or slightly bleeding",
+      "triggers": [
+        "cracks at the corners of the mouth sore or bleeding",
+        "sore fissures at the corners of the lips"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "graph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Tongue coated thick white as if painted with chalk or milk",
+      "triggers": [
+        "tongue coated thick white like chalk",
+        "white coated tongue looks painted"
+      ],
+      "remedies": [
+        {
+          "id": "ant-c",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Excessive dryness of the mouth on waking that clears soon after getting up",
+      "triggers": [
+        "mouth very dry on waking clears soon after",
+        "wake up with dry mouth eases shortly after rising"
+      ],
+      "remedies": [
+        {
+          "id": "nux-m",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Metallic taste in the mouth not linked to any medication",
+      "triggers": [
+        "metallic taste in the mouth no medication reason",
+        "taste like metal in mouth unrelated to any drug"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Yellow discoloration of the whites of the eyes, suggestive of jaundice",
+      "triggers": [
+        "whites of the eyes turned yellow jaundice",
+        "yellow eyes suggestive of liver trouble"
+      ],
+      "remedies": [
+        {
+          "id": "chel",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Watering of the eyes specifically triggered by cold wind or draft",
+      "triggers": [
+        "eyes water in cold wind or draft",
+        "tearing triggered by exposure to cold air"
+      ],
+      "remedies": [
+        {
+          "id": "all-c",
+          "grade": 1
+        },
+        {
+          "id": "acon",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Dark circles or discoloration under the eyes, chronic and not from lack of sleep",
+      "triggers": [
+        "chronic dark circles under the eyes not from tiredness",
+        "persistent under eye discoloration unrelated to sleep"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Squinting or sensitivity to bright light that is worse specifically outdoors in daylight",
+      "triggers": [
+        "squints in bright daylight outdoors",
+        "sensitivity to sunlight worse than indoor light"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "con",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Nose that feels dry and stuffy without any actual discharge, uncomfortable dryness inside",
+      "triggers": [
+        "nose feels dry and stuffy no discharge at all",
+        "dry stuffy nose uncomfortable no actual mucus"
+      ],
+      "remedies": [
+        {
+          "id": "nux-m",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Sleep",
+      "category": "Generals",
+      "rubric": "Vivid, disturbing dreams that are remembered clearly upon waking, disturb the rest of the day",
+      "triggers": [
+        "vivid disturbing dreams remembered clearly next morning",
+        "unsettling dreams that linger and affect the whole day"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weakness",
+      "category": "Generals",
+      "rubric": "Weakness that comes on gradually over several weeks with no clear cause found",
+      "triggers": [
+        "gradual weakness over several weeks no clear cause",
+        "slowly worsening tiredness for weeks unexplained"
+      ],
+      "remedies": [
+        {
+          "id": "ph-ac",
+          "grade": 1
+        },
+        {
+          "id": "chin",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Lack of confidence performing or presenting in public despite thorough preparation, fears the mind will go blank once started, developed gradually over recent years",
+      "triggers": [
+        "forget everything the second i stand up",
+        "lost confidence presenting despite knowing the material well",
+        "used to be confident presenting now dreads it terribly"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 3
+        },
+        {
+          "id": "arg-n",
+          "grade": 1
+        },
+        {
+          "id": "gels",
+          "grade": 1
+        }
+      ]
     }
   ],
   "chiefSymptomTags": [
@@ -27515,6 +28119,204 @@
       "label": "Common mild headache from wearing a tight cap, helme…",
       "section": "Head",
       "rubric": "Common mild headache from wearing a tight cap, helmet, or tight hair tie for long hours"
+    },
+    {
+      "id": "sym_thirst_for_hot_drinks_specifically_cold_drinks_are_disliked_",
+      "label": "Thirst for hot drinks specifically, cold drinks are …",
+      "section": "Thirst",
+      "rubric": "Thirst for hot drinks specifically, cold drinks are disliked or cause discomfort"
+    },
+    {
+      "id": "sym_thirstlessness_during_fever_but_normal_thirst_once_the_fever",
+      "label": "Thirstlessness during fever but normal thirst once t…",
+      "section": "Thirst",
+      "rubric": "Thirstlessness during fever but normal thirst once the fever breaks"
+    },
+    {
+      "id": "sym_thirst_for_milk_specifically_unusual_craving_not_seen_with_o",
+      "label": "Thirst for milk specifically, unusual craving not se…",
+      "section": "Thirst",
+      "rubric": "Thirst for milk specifically, unusual craving not seen with other drinks"
+    },
+    {
+      "id": "sym_great_thirst_but_drinking_brings_on_vomiting_or_discomfort_a",
+      "label": "Great thirst but drinking brings on vomiting or disc…",
+      "section": "Thirst",
+      "rubric": "Great thirst but drinking brings on vomiting or discomfort almost immediately"
+    },
+    {
+      "id": "sym_thirst_that_increases_specifically_in_the_evening_or_at_nigh",
+      "label": "Thirst that increases specifically in the evening or…",
+      "section": "Thirst",
+      "rubric": "Thirst that increases specifically in the evening or at night, minimal during the day"
+    },
+    {
+      "id": "sym_thirst_for_sour_drinks_such_as_lemon_water_or_vinegar_based_",
+      "label": "Thirst for sour drinks such as lemon water or vinega…",
+      "section": "Thirst",
+      "rubric": "Thirst for sour drinks such as lemon water or vinegar-based drinks"
+    },
+    {
+      "id": "sym_extreme_unquenchable_thirst_drinks_large_amounts_and_still_f",
+      "label": "Extreme unquenchable thirst, drinks large amounts an…",
+      "section": "Thirst",
+      "rubric": "Extreme unquenchable thirst, drinks large amounts and still feels thirsty"
+    },
+    {
+      "id": "sym_chronically_enlarged_tonsils_that_remain_large_even_between_",
+      "label": "Chronically enlarged tonsils that remain large even …",
+      "section": "Glands",
+      "rubric": "Chronically enlarged tonsils that remain large even between infections, not just during illness"
+    },
+    {
+      "id": "sym_swollen_glands_that_are_soft_and_painless_move_easily_under_",
+      "label": "Swollen glands that are soft and painless, move easi…",
+      "section": "Glands",
+      "rubric": "Swollen glands that are soft and painless, move easily under the skin when touched"
+    },
+    {
+      "id": "sym_recurrent_boils_or_abscesses_near_a_gland_that_keep_coming_b",
+      "label": "Recurrent boils or abscesses near a gland that keep …",
+      "section": "Glands",
+      "rubric": "Recurrent boils or abscesses near a gland that keep coming back in the same spot"
+    },
+    {
+      "id": "sym_glandular_swelling_that_is_worse_specifically_in_damp_rainy_",
+      "label": "Glandular swelling that is worse specifically in dam…",
+      "section": "Glands",
+      "rubric": "Glandular swelling that is worse specifically in damp, rainy weather"
+    },
+    {
+      "id": "sym_enlarged_spleen_with_a_dragging_sensation_or_fullness_on_the",
+      "label": "Enlarged spleen with a dragging sensation or fullnes…",
+      "section": "Glands",
+      "rubric": "Enlarged spleen with a dragging sensation or fullness on the left side of the abdomen"
+    },
+    {
+      "id": "sym_discharge_from_the_ear_that_is_thick_yellow_and_offensive_sm",
+      "label": "Discharge from the ear that is thick, yellow, and of…",
+      "section": "Ear",
+      "rubric": "Discharge from the ear that is thick, yellow, and offensive-smelling"
+    },
+    {
+      "id": "sym_sensitivity_to_noise_so_intense_that_ordinary_sounds_feel_pa",
+      "label": "Sensitivity to noise so intense that ordinary sounds…",
+      "section": "Ear",
+      "rubric": "Sensitivity to noise so intense that ordinary sounds feel painfully loud"
+    },
+    {
+      "id": "sym_ear_pain_that_is_markedly_worse_from_swallowing_or_chewing",
+      "label": "Ear pain that is markedly worse from swallowing or c…",
+      "section": "Ear",
+      "rubric": "Ear pain that is markedly worse from swallowing or chewing"
+    },
+    {
+      "id": "sym_a_cracking_or_popping_sound_in_the_ear_when_swallowing_or_mo",
+      "label": "A cracking or popping sound in the ear when swallowi…",
+      "section": "Ear",
+      "rubric": "A cracking or popping sound in the ear when swallowing or moving the jaw"
+    },
+    {
+      "id": "sym_ear_infection_that_tends_to_follow_every_episode_of_swimming",
+      "label": "Ear infection that tends to follow every episode of …",
+      "section": "Ear",
+      "rubric": "Ear infection that tends to follow every episode of swimming or water exposure"
+    },
+    {
+      "id": "sym_weight_concentrated_mostly_around_the_abdomen_while_the_limb",
+      "label": "Weight concentrated mostly around the abdomen while …",
+      "section": "Weight",
+      "rubric": "Weight concentrated mostly around the abdomen while the limbs remain relatively thin"
+    },
+    {
+      "id": "sym_sudden_noticeable_weight_loss_following_a_major_emotional_sh",
+      "label": "Sudden noticeable weight loss following a major emot…",
+      "section": "Weight",
+      "rubric": "Sudden noticeable weight loss following a major emotional shock or grief"
+    },
+    {
+      "id": "sym_obesity_in_a_patient_who_eats_very_little_weight_gain_seems_",
+      "label": "Obesity in a patient who eats very little, weight ga…",
+      "section": "Weight",
+      "rubric": "Obesity in a patient who eats very little, weight gain seems out of proportion to intake"
+    },
+    {
+      "id": "sym_weight_loss_confined_mainly_to_the_upper_body_while_the_lowe",
+      "label": "Weight loss confined mainly to the upper body while …",
+      "section": "Weight",
+      "rubric": "Weight loss confined mainly to the upper body while the lower body stays the same"
+    },
+    {
+      "id": "sym_cracks_at_the_corners_of_the_mouth_often_sore_or_slightly_bl",
+      "label": "Cracks at the corners of the mouth, often sore or sl…",
+      "section": "Mouth",
+      "rubric": "Cracks at the corners of the mouth, often sore or slightly bleeding"
+    },
+    {
+      "id": "sym_tongue_coated_thick_white_as_if_painted_with_chalk_or_milk",
+      "label": "Tongue coated thick white as if painted with chalk o…",
+      "section": "Mouth",
+      "rubric": "Tongue coated thick white as if painted with chalk or milk"
+    },
+    {
+      "id": "sym_excessive_dryness_of_the_mouth_on_waking_that_clears_soon_af",
+      "label": "Excessive dryness of the mouth on waking that clears…",
+      "section": "Mouth",
+      "rubric": "Excessive dryness of the mouth on waking that clears soon after getting up"
+    },
+    {
+      "id": "sym_metallic_taste_in_the_mouth_not_linked_to_any_medication",
+      "label": "Metallic taste in the mouth not linked to any medica…",
+      "section": "Mouth",
+      "rubric": "Metallic taste in the mouth not linked to any medication"
+    },
+    {
+      "id": "sym_yellow_discoloration_of_the_whites_of_the_eyes_suggestive_of",
+      "label": "Yellow discoloration of the whites of the eyes, sugg…",
+      "section": "Eye",
+      "rubric": "Yellow discoloration of the whites of the eyes, suggestive of jaundice"
+    },
+    {
+      "id": "sym_watering_of_the_eyes_specifically_triggered_by_cold_wind_or_",
+      "label": "Watering of the eyes specifically triggered by cold …",
+      "section": "Eye",
+      "rubric": "Watering of the eyes specifically triggered by cold wind or draft"
+    },
+    {
+      "id": "sym_dark_circles_or_discoloration_under_the_eyes_chronic_and_not",
+      "label": "Dark circles or discoloration under the eyes, chroni…",
+      "section": "Eye",
+      "rubric": "Dark circles or discoloration under the eyes, chronic and not from lack of sleep"
+    },
+    {
+      "id": "sym_squinting_or_sensitivity_to_bright_light_that_is_worse_speci",
+      "label": "Squinting or sensitivity to bright light that is wor…",
+      "section": "Eye",
+      "rubric": "Squinting or sensitivity to bright light that is worse specifically outdoors in daylight"
+    },
+    {
+      "id": "sym_nose_that_feels_dry_and_stuffy_without_any_actual_discharge_",
+      "label": "Nose that feels dry and stuffy without any actual di…",
+      "section": "Nose",
+      "rubric": "Nose that feels dry and stuffy without any actual discharge, uncomfortable dryness inside"
+    },
+    {
+      "id": "sym_vivid_disturbing_dreams_that_are_remembered_clearly_upon_wak",
+      "label": "Vivid, disturbing dreams that are remembered clearly…",
+      "section": "Sleep",
+      "rubric": "Vivid, disturbing dreams that are remembered clearly upon waking, disturb the rest of the day"
+    },
+    {
+      "id": "sym_weakness_that_comes_on_gradually_over_several_weeks_with_no_",
+      "label": "Weakness that comes on gradually over several weeks …",
+      "section": "Weakness",
+      "rubric": "Weakness that comes on gradually over several weeks with no clear cause found"
+    },
+    {
+      "id": "sym_lack_of_confidence_performing_or_presenting_in_public_despit",
+      "label": "Lack of confidence performing or presenting in publi…",
+      "section": "Mind",
+      "rubric": "Lack of confidence performing or presenting in public despite thorough preparation, fears the mind will go blank once started, developed gradually over recent years"
     }
   ]
 }
