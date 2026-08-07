@@ -1150,6 +1150,10 @@
         {
           "id": "ign",
           "grade": 3
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -1418,6 +1422,10 @@
         {
           "id": "hep",
           "grade": 3
+        },
+        {
+          "id": "nit-ac",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -1529,6 +1537,10 @@
         {
           "id": "hep",
           "grade": 3
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -2949,6 +2961,10 @@
         {
           "id": "nat-mur",
           "grade": 3
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -4117,6 +4133,10 @@
         {
           "id": "nux-v",
           "grade": 3
+        },
+        {
+          "id": "puls",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -5704,6 +5724,10 @@
         {
           "id": "nux-v",
           "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -6156,6 +6180,10 @@
         {
           "id": "sulph",
           "grade": 3
+        },
+        {
+          "id": "podo",
+          "grade": 2
         }
       ],
       "category": "Particulars"
@@ -6174,6 +6202,10 @@
         {
           "id": "canth",
           "grade": 3
+        },
+        {
+          "id": "apis",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -6678,6 +6710,10 @@
         {
           "id": "ant-t",
           "grade": 3
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -15438,6 +15474,10 @@
         {
           "id": "carb-v",
           "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
         }
       ]
     },
@@ -20888,6 +20928,10 @@
         {
           "id": "apis",
           "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
         }
       ]
     },
@@ -20921,6 +20965,10 @@
       "remedies": [
         {
           "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "calc-c",
           "grade": 1
         }
       ]
@@ -21031,6 +21079,10 @@
       "remedies": [
         {
           "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "nat-c",
           "grade": 1
         }
       ]
@@ -21358,6 +21410,10 @@
         {
           "id": "merc-sol",
           "grade": 1
+        },
+        {
+          "id": "hep",
+          "grade": 1
         }
       ]
     },
@@ -21517,6 +21573,10 @@
         {
           "id": "nux-m",
           "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
         }
       ]
     },
@@ -21871,6 +21931,10 @@
         {
           "id": "bell",
           "grade": 1
+        },
+        {
+          "id": "ferr",
+          "grade": 1
         }
       ]
     },
@@ -22076,6 +22140,10 @@
         {
           "id": "ign",
           "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 1
         }
       ]
     },
@@ -22257,6 +22325,10 @@
       "remedies": [
         {
           "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "nat-c",
           "grade": 1
         }
       ]
@@ -23282,6 +23354,277 @@
         },
         {
           "id": "ign",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Acute tonsillitis with throat swelling, fever, redness, and pain, with or without pus or suppuration",
+      "triggers": [
+        "tonsillitis",
+        "tonsils swollen",
+        "tonsils infected",
+        "tonsils red and swollen"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 3
+        },
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "phyt",
+          "grade": 1
+        },
+        {
+          "id": "bar-c",
+          "grade": 1
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Acute ear infection with fever, pain, redness, and inflammation, with or without pus formation",
+      "triggers": [
+        "ear infection",
+        "otitis",
+        "infected ear with fever"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 3
+        },
+        {
+          "id": "cham",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "hep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Acute urinary tract infection with burning, frequency, fever, and inflammation of the urinary passage",
+      "triggers": [
+        "urinary tract infection",
+        "uti with burning",
+        "bladder infection",
+        "urine infection with burning"
+      ],
+      "remedies": [
+        {
+          "id": "canth",
+          "grade": 3
+        },
+        {
+          "id": "apis",
+          "grade": 2
+        },
+        {
+          "id": "merc-c",
+          "grade": 1
+        },
+        {
+          "id": "sars",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Boils or abscesses with redness, swelling, throbbing pain, and pus formation or suppuration",
+      "triggers": [
+        "boil with pus",
+        "abscess with pus",
+        "suppurating boil",
+        "boils and pus"
+      ],
+      "remedies": [
+        {
+          "id": "hep",
+          "grade": 3
+        },
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Acute bronchitis or chest infection with fever, cough, congestion, and inflammation of the airway",
+      "triggers": [
+        "bronchitis",
+        "chest infection",
+        "lung infection with fever"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "ant-t",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Acute conjunctivitis (pink eye) with redness, discharge, swelling, and inflammation of the eye",
+      "triggers": [
+        "conjunctivitis",
+        "pink eye",
+        "eye infection with discharge"
+      ],
+      "remedies": [
+        {
+          "id": "euphr",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "apis",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Mouth ulcers or stomatitis with pain, inflammation, redness, and difficulty eating or drinking",
+      "triggers": [
+        "stomatitis",
+        "mouth ulcers with pain",
+        "mouth infection with pain"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "bor",
+          "grade": 1
+        },
+        {
+          "id": "kali-bi",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Acute glandular swelling (lymphadenitis) with fever, tenderness, redness, and inflammation",
+      "triggers": [
+        "lymphadenitis",
+        "swollen glands with fever",
+        "infected lymph node"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Acute sinusitis with facial pain, pressure, fever, thick discharge, and inflammation",
+      "triggers": [
+        "sinusitis",
+        "sinus infection",
+        "blocked sinuses with fever"
+      ],
+      "remedies": [
+        {
+          "id": "kali-bi",
+          "grade": 3
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "hep",
           "grade": 1
         }
       ]
@@ -30427,6 +30770,60 @@
       "label": "Emotional grief or anxiety about not conceiving that…",
       "section": "Female",
       "rubric": "Emotional grief or anxiety about not conceiving that has become the dominant concern in the marriage"
+    },
+    {
+      "id": "sym_acute_tonsillitis_with_throat_swelling_fever_redness_and_pai",
+      "label": "Acute tonsillitis with throat swelling, fever, redne…",
+      "section": "Throat",
+      "rubric": "Acute tonsillitis with throat swelling, fever, redness, and pain, with or without pus or suppuration"
+    },
+    {
+      "id": "sym_acute_ear_infection_with_fever_pain_redness_and_inflammation",
+      "label": "Acute ear infection with fever, pain, redness, and i…",
+      "section": "Ear",
+      "rubric": "Acute ear infection with fever, pain, redness, and inflammation, with or without pus formation"
+    },
+    {
+      "id": "sym_acute_urinary_tract_infection_with_burning_frequency_fever_a",
+      "label": "Acute urinary tract infection with burning, frequenc…",
+      "section": "Urinary",
+      "rubric": "Acute urinary tract infection with burning, frequency, fever, and inflammation of the urinary passage"
+    },
+    {
+      "id": "sym_boils_or_abscesses_with_redness_swelling_throbbing_pain_and_",
+      "label": "Boils or abscesses with redness, swelling, throbbing…",
+      "section": "Skin",
+      "rubric": "Boils or abscesses with redness, swelling, throbbing pain, and pus formation or suppuration"
+    },
+    {
+      "id": "sym_acute_bronchitis_or_chest_infection_with_fever_cough_congest",
+      "label": "Acute bronchitis or chest infection with fever, coug…",
+      "section": "Respiratory",
+      "rubric": "Acute bronchitis or chest infection with fever, cough, congestion, and inflammation of the airway"
+    },
+    {
+      "id": "sym_acute_conjunctivitis_pink_eye_with_redness_discharge_swellin",
+      "label": "Acute conjunctivitis (pink eye) with redness, discha…",
+      "section": "Eye",
+      "rubric": "Acute conjunctivitis (pink eye) with redness, discharge, swelling, and inflammation of the eye"
+    },
+    {
+      "id": "sym_mouth_ulcers_or_stomatitis_with_pain_inflammation_redness_an",
+      "label": "Mouth ulcers or stomatitis with pain, inflammation, …",
+      "section": "Mouth",
+      "rubric": "Mouth ulcers or stomatitis with pain, inflammation, redness, and difficulty eating or drinking"
+    },
+    {
+      "id": "sym_acute_glandular_swelling_lymphadenitis_with_fever_tenderness",
+      "label": "Acute glandular swelling (lymphadenitis) with fever,…",
+      "section": "Glands",
+      "rubric": "Acute glandular swelling (lymphadenitis) with fever, tenderness, redness, and inflammation"
+    },
+    {
+      "id": "sym_acute_sinusitis_with_facial_pain_pressure_fever_thick_discha",
+      "label": "Acute sinusitis with facial pain, pressure, fever, t…",
+      "section": "Nose",
+      "rubric": "Acute sinusitis with facial pain, pressure, fever, thick discharge, and inflammation"
     }
   ]
 }
