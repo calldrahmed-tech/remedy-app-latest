@@ -144,6 +144,7 @@
     <button class="sample-chip" data-sample="malabsorption weight loss despite good appetite fecal elastase low">Malabsorption</button>
     <button class="sample-chip" data-sample="back pain worse with motion">Back pain, worse motion</button>
     <button type="button" id="browseRepertoryBtn" class="sample-chip browse-repertory-chip">📖 Browse by Chapter</button>
+    <button type="button" id="repertorizeBtn" class="sample-chip browse-repertory-chip">🧮 Repertorize Case</button>
   </div>
   <div id="statusMsg"></div>
 
@@ -162,6 +163,33 @@
       <div id="browseRemedyPane" class="browse-remedy-pane" style="display:none;">
         <button type="button" id="browseRubricBackBtn" class="patient-back-btn">← Back</button>
         <div id="browseRemedyContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="repertorizeModal" class="settings-modal" style="display:none;">
+    <div class="settings-modal-inner browse-modal-inner repertorize-modal-inner">
+      <div class="settings-modal-header">
+        <span id="repModalTitle">🧮 Repertorize Case</span>
+        <button id="repCloseBtn" class="settings-close">✕</button>
+      </div>
+
+      <div id="repTray" class="repertorize-tray">
+        <div class="repertorize-tray-empty">No rubrics picked yet. Choose a chapter below, then tick the rubrics that fit this case.</div>
+      </div>
+      <button type="button" id="repComputeBtn" class="md-cta" style="display:none;width:100%;margin-bottom:14px;">🧮 Compute Best Remedy</button>
+
+      <div id="repChapterList" class="browse-chapter-list"></div>
+
+      <div id="repRubricPane" class="browse-rubric-pane" style="display:none;">
+        <button type="button" id="repBackBtn" class="patient-back-btn">← All chapters</button>
+        <input type="search" id="repRubricSearch" class="settings-input" placeholder="Search inside this chapter…" autocomplete="off">
+        <div id="repRubricList" class="browse-rubric-list"></div>
+      </div>
+
+      <div id="repResultsPane" class="browse-remedy-pane" style="display:none;">
+        <button type="button" id="repResultsBackBtn" class="patient-back-btn">← Back to rubrics</button>
+        <div id="repResultsContent"></div>
       </div>
     </div>
   </div>
@@ -190,5 +218,6 @@
 <script src="patient-info.js"></script>
 <script src="patient-records.js"></script>
 <script src="browse-repertory.js"></script>
+<script src="repertorize.js"></script>
 </body>
 </html>

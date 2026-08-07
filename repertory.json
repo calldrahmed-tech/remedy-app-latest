@@ -20442,6 +20442,651 @@
           "grade": 1
         }
       ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Ordinary migraine-type headache that comes back every few weeks, often one-sided",
+      "triggers": [
+        "recurring one sided headache every few weeks",
+        "regular migraine pattern comes back periodically"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "sang",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Common headache triggered by hunger, relieved quickly once the patient eats something",
+      "triggers": [
+        "headache from hunger relieved after eating",
+        "hungry headache goes away once they eat"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "category": "Generals",
+      "rubric": "Common viral fever in a child, with body warm to touch and low appetite, otherwise playful",
+      "triggers": [
+        "child has ordinary viral fever still playful",
+        "kid warm with fever but appetite low nothing serious"
+      ],
+      "remedies": [
+        {
+          "id": "acon",
+          "grade": 1
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Ordinary chesty cough with mucus that a patient can hear rattling but cannot bring up easily",
+      "triggers": [
+        "chesty cough can hear mucus rattling but hard to bring up",
+        "common productive cough difficult to expectorate"
+      ],
+      "remedies": [
+        {
+          "id": "ant-t",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Common dry, tickly cough that is worse at night and disturbs sleep, no other symptoms",
+      "triggers": [
+        "dry tickly cough worse at night disturbs sleep",
+        "common night cough keeps them awake nothing else wrong"
+      ],
+      "remedies": [
+        {
+          "id": "dros",
+          "grade": 1
+        },
+        {
+          "id": "rumx",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Ordinary hoarseness of voice after talking too much or shouting, like at a wedding or event",
+      "triggers": [
+        "hoarse voice after talking too much at an event",
+        "voice went hoarse from shouting or singing at a wedding"
+      ],
+      "remedies": [
+        {
+          "id": "arg-met",
+          "grade": 2
+        },
+        {
+          "id": "caust",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Common mild earache in a child during a cold, without high fever or discharge",
+      "triggers": [
+        "child has mild earache during a cold no fever",
+        "common ear pain in kid alongside a cold"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "cham",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Ordinary stuffy blocked nose at night that clears up during the day",
+      "triggers": [
+        "nose blocked at night clears during the day",
+        "stuffy nose worse lying down at night better in daytime"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Common mild conjunctivitis (pink eye) with slight redness and watering, no thick discharge",
+      "triggers": [
+        "mild pink eye slight redness and watering",
+        "common conjunctivitis watery not thick discharge"
+      ],
+      "remedies": [
+        {
+          "id": "euphr",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Ordinary nausea from motion sickness during a car or bus ride",
+      "triggers": [
+        "nausea from motion sickness on a car ride",
+        "feels sick traveling by bus or car"
+      ],
+      "remedies": [
+        {
+          "id": "cocc",
+          "grade": 2
+        },
+        {
+          "id": "tab",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Common loss of appetite for a day or two after an emotional upset, otherwise healthy",
+      "triggers": [
+        "no appetite for a day or two after being upset",
+        "lost appetite briefly after emotional stress otherwise fine"
+      ],
+      "remedies": [
+        {
+          "id": "ign",
+          "grade": 2
+        },
+        {
+          "id": "staph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Ordinary colicky stomach pain in an infant, draws up the legs, common in the evenings",
+      "triggers": [
+        "baby colic draws up legs common in the evening",
+        "infant stomach pain fussy in the evening hours"
+      ],
+      "remedies": [
+        {
+          "id": "cham",
+          "grade": 2
+        },
+        {
+          "id": "coloc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Common constipation in a child who is otherwise healthy, simply does not feel the urge often",
+      "triggers": [
+        "child constipated otherwise healthy does not feel urge",
+        "kid rarely needs to go but is fine otherwise"
+      ],
+      "remedies": [
+        {
+          "id": "alum",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Ordinary pimples or acne around the time of the menstrual period",
+      "triggers": [
+        "pimples flare up around period time",
+        "acne breakout before or during menses"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Common dry, chapped lips in cold or windy weather",
+      "triggers": [
+        "chapped dry lips in cold windy weather",
+        "lips crack in winter weather common"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "petr",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Ordinary stiffness of the neck from sleeping in an awkward position",
+      "triggers": [
+        "stiff neck from sleeping in a bad position",
+        "neck pain after waking up from awkward sleep posture"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "rhus-t",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Common tired, aching legs after standing or walking for long hours at work",
+      "triggers": [
+        "legs ache and tired after standing all day at work",
+        "common leg fatigue from long hours of walking"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weakness",
+      "category": "Generals",
+      "rubric": "Ordinary general weakness during the hot summer months, common seasonal complaint",
+      "triggers": [
+        "general weakness in the hot summer season",
+        "common tiredness during the summer heat"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "ant-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Sleep",
+      "category": "Generals",
+      "rubric": "Common light sleep with frequent waking in an elderly patient, otherwise healthy",
+      "triggers": [
+        "elderly patient sleeps lightly wakes often otherwise fine",
+        "light broken sleep common in old age"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Ordinary mild homesickness in a student living away from home for studies",
+      "triggers": [
+        "student feels homesick living away for studies",
+        "mild homesickness away at college or hostel"
+      ],
+      "remedies": [
+        {
+          "id": "caps",
+          "grade": 2
+        },
+        {
+          "id": "ph-ac",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Common mild anxiety before visiting the doctor or dentist, otherwise a calm person",
+      "triggers": [
+        "nervous before visiting the doctor or dentist",
+        "mild anxiety at medical appointments otherwise calm"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 1
+        },
+        {
+          "id": "acon",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Ordinary heavy first day of the period, lighter on the following days, common pattern",
+      "triggers": [
+        "heavy flow first day of period lighter after",
+        "common period pattern heavy day one then lighter"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Common vaginal discharge that is normal in amount and color, just more noticeable before ovulation",
+      "triggers": [
+        "normal discharge more noticeable around ovulation",
+        "common mid cycle discharge nothing abnormal"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Ordinary frequent urination from drinking a lot of water or tea in one sitting",
+      "triggers": [
+        "frequent urination after drinking a lot of water or tea",
+        "peeing often after drinking too many fluids at once"
+      ],
+      "remedies": [
+        {
+          "id": "apis",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Common mildly swollen glands in the neck during an ordinary cold, go down after the cold clears",
+      "triggers": [
+        "mild swollen neck glands during a cold go down after",
+        "common gland swelling with a cold resolves once better"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Ordinary breathlessness after climbing several flights of stairs quickly, resolves with rest",
+      "triggers": [
+        "out of breath after climbing stairs quickly resolves with rest",
+        "common breathlessness from fast stair climbing"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Common bad breath related to poor digestion rather than dental problems",
+      "triggers": [
+        "bad breath from poor digestion not dental issue",
+        "common mouth odor linked to stomach not teeth"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Ordinary headache from dehydration on a hot day or after sweating a lot",
+      "triggers": [
+        "headache from dehydration on a hot day",
+        "head pain after sweating a lot in the heat"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Common minor cut or scrape that is slow to heal in an otherwise healthy person",
+      "triggers": [
+        "small cut slow to heal in a healthy person",
+        "minor scrape taking longer than usual to heal"
+      ],
+      "remedies": [
+        {
+          "id": "calen",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Ordinary hiccups after eating or drinking too quickly, resolve on their own in a few minutes",
+      "triggers": [
+        "hiccups after eating too fast resolve on their own",
+        "common hiccups from drinking quickly go away by themselves"
+      ],
+      "remedies": [
+        {
+          "id": "cycl",
+          "grade": 1
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Appetite",
+      "category": "Generals",
+      "rubric": "Common increased appetite and cravings for sweets during times of stress",
+      "triggers": [
+        "craves sweets more during stressful times",
+        "increased appetite for sugar when stressed"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "arg-n",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "category": "Generals",
+      "rubric": "Ordinary slight weight gain after starting a desk job with less physical activity",
+      "triggers": [
+        "gained a little weight after starting a desk job",
+        "slight weight increase from a less active new job"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Common cold hands and feet in winter, otherwise a generally warm-blooded person",
+      "triggers": [
+        "cold hands and feet in winter otherwise warm person",
+        "common winter coldness of extremities despite being warm blooded"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Ordinary jet lag or tiredness after a long flight or overnight journey",
+      "triggers": [
+        "jet lag after a long flight",
+        "tired and off after an overnight journey"
+      ],
+      "remedies": [
+        {
+          "id": "cocc",
+          "grade": 1
+        },
+        {
+          "id": "arn",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Common mild headache from wearing a tight cap, helmet, or tight hair tie for long hours",
+      "triggers": [
+        "headache from wearing a tight cap or helmet for hours",
+        "head pain from tight hair tie or headband"
+      ],
+      "remedies": [
+        {
+          "id": "spig",
+          "grade": 1
+        }
+      ]
     }
   ],
   "chiefSymptomTags": [
@@ -26660,6 +27305,216 @@
       "label": "Common daytime sleepiness after a poor night's sleep…",
       "section": "Sleep",
       "rubric": "Common daytime sleepiness after a poor night's sleep, not a chronic sleep disorder"
+    },
+    {
+      "id": "sym_ordinary_migraine_type_headache_that_comes_back_every_few_we",
+      "label": "Ordinary migraine-type headache that comes back ever…",
+      "section": "Head",
+      "rubric": "Ordinary migraine-type headache that comes back every few weeks, often one-sided"
+    },
+    {
+      "id": "sym_common_headache_triggered_by_hunger_relieved_quickly_once_th",
+      "label": "Common headache triggered by hunger, relieved quickl…",
+      "section": "Head",
+      "rubric": "Common headache triggered by hunger, relieved quickly once the patient eats something"
+    },
+    {
+      "id": "sym_common_viral_fever_in_a_child_with_body_warm_to_touch_and_lo",
+      "label": "Common viral fever in a child, with body warm to tou…",
+      "section": "Fever",
+      "rubric": "Common viral fever in a child, with body warm to touch and low appetite, otherwise playful"
+    },
+    {
+      "id": "sym_ordinary_chesty_cough_with_mucus_that_a_patient_can_hear_rat",
+      "label": "Ordinary chesty cough with mucus that a patient can …",
+      "section": "Respiratory",
+      "rubric": "Ordinary chesty cough with mucus that a patient can hear rattling but cannot bring up easily"
+    },
+    {
+      "id": "sym_common_dry_tickly_cough_that_is_worse_at_night_and_disturbs_",
+      "label": "Common dry, tickly cough that is worse at night and …",
+      "section": "Respiratory",
+      "rubric": "Common dry, tickly cough that is worse at night and disturbs sleep, no other symptoms"
+    },
+    {
+      "id": "sym_ordinary_hoarseness_of_voice_after_talking_too_much_or_shout",
+      "label": "Ordinary hoarseness of voice after talking too much …",
+      "section": "Throat",
+      "rubric": "Ordinary hoarseness of voice after talking too much or shouting, like at a wedding or event"
+    },
+    {
+      "id": "sym_common_mild_earache_in_a_child_during_a_cold_without_high_fe",
+      "label": "Common mild earache in a child during a cold, withou…",
+      "section": "Ear",
+      "rubric": "Common mild earache in a child during a cold, without high fever or discharge"
+    },
+    {
+      "id": "sym_ordinary_stuffy_blocked_nose_at_night_that_clears_up_during_",
+      "label": "Ordinary stuffy blocked nose at night that clears up…",
+      "section": "Nose",
+      "rubric": "Ordinary stuffy blocked nose at night that clears up during the day"
+    },
+    {
+      "id": "sym_common_mild_conjunctivitis_pink_eye_with_slight_redness_and_",
+      "label": "Common mild conjunctivitis (pink eye) with slight re…",
+      "section": "Eye",
+      "rubric": "Common mild conjunctivitis (pink eye) with slight redness and watering, no thick discharge"
+    },
+    {
+      "id": "sym_ordinary_nausea_from_motion_sickness_during_a_car_or_bus_rid",
+      "label": "Ordinary nausea from motion sickness during a car or…",
+      "section": "Stomach",
+      "rubric": "Ordinary nausea from motion sickness during a car or bus ride"
+    },
+    {
+      "id": "sym_common_loss_of_appetite_for_a_day_or_two_after_an_emotional_",
+      "label": "Common loss of appetite for a day or two after an em…",
+      "section": "Stomach",
+      "rubric": "Common loss of appetite for a day or two after an emotional upset, otherwise healthy"
+    },
+    {
+      "id": "sym_ordinary_colicky_stomach_pain_in_an_infant_draws_up_the_legs",
+      "label": "Ordinary colicky stomach pain in an infant, draws up…",
+      "section": "Abdomen",
+      "rubric": "Ordinary colicky stomach pain in an infant, draws up the legs, common in the evenings"
+    },
+    {
+      "id": "sym_common_constipation_in_a_child_who_is_otherwise_healthy_simp",
+      "label": "Common constipation in a child who is otherwise heal…",
+      "section": "Stool",
+      "rubric": "Common constipation in a child who is otherwise healthy, simply does not feel the urge often"
+    },
+    {
+      "id": "sym_ordinary_pimples_or_acne_around_the_time_of_the_menstrual_pe",
+      "label": "Ordinary pimples or acne around the time of the mens…",
+      "section": "Skin",
+      "rubric": "Ordinary pimples or acne around the time of the menstrual period"
+    },
+    {
+      "id": "sym_common_dry_chapped_lips_in_cold_or_windy_weather",
+      "label": "Common dry, chapped lips in cold or windy weather",
+      "section": "Skin",
+      "rubric": "Common dry, chapped lips in cold or windy weather"
+    },
+    {
+      "id": "sym_ordinary_stiffness_of_the_neck_from_sleeping_in_an_awkward_p",
+      "label": "Ordinary stiffness of the neck from sleeping in an a…",
+      "section": "Extremities",
+      "rubric": "Ordinary stiffness of the neck from sleeping in an awkward position"
+    },
+    {
+      "id": "sym_common_tired_aching_legs_after_standing_or_walking_for_long_",
+      "label": "Common tired, aching legs after standing or walking …",
+      "section": "Extremities",
+      "rubric": "Common tired, aching legs after standing or walking for long hours at work"
+    },
+    {
+      "id": "sym_ordinary_general_weakness_during_the_hot_summer_months_commo",
+      "label": "Ordinary general weakness during the hot summer mont…",
+      "section": "Weakness",
+      "rubric": "Ordinary general weakness during the hot summer months, common seasonal complaint"
+    },
+    {
+      "id": "sym_common_light_sleep_with_frequent_waking_in_an_elderly_patien",
+      "label": "Common light sleep with frequent waking in an elderl…",
+      "section": "Sleep",
+      "rubric": "Common light sleep with frequent waking in an elderly patient, otherwise healthy"
+    },
+    {
+      "id": "sym_ordinary_mild_homesickness_in_a_student_living_away_from_hom",
+      "label": "Ordinary mild homesickness in a student living away …",
+      "section": "Mind",
+      "rubric": "Ordinary mild homesickness in a student living away from home for studies"
+    },
+    {
+      "id": "sym_common_mild_anxiety_before_visiting_the_doctor_or_dentist_ot",
+      "label": "Common mild anxiety before visiting the doctor or de…",
+      "section": "Mind",
+      "rubric": "Common mild anxiety before visiting the doctor or dentist, otherwise a calm person"
+    },
+    {
+      "id": "sym_ordinary_heavy_first_day_of_the_period_lighter_on_the_follow",
+      "label": "Ordinary heavy first day of the period, lighter on t…",
+      "section": "Female",
+      "rubric": "Ordinary heavy first day of the period, lighter on the following days, common pattern"
+    },
+    {
+      "id": "sym_common_vaginal_discharge_that_is_normal_in_amount_and_color_",
+      "label": "Common vaginal discharge that is normal in amount an…",
+      "section": "Female",
+      "rubric": "Common vaginal discharge that is normal in amount and color, just more noticeable before ovulation"
+    },
+    {
+      "id": "sym_ordinary_frequent_urination_from_drinking_a_lot_of_water_or_",
+      "label": "Ordinary frequent urination from drinking a lot of w…",
+      "section": "Urinary",
+      "rubric": "Ordinary frequent urination from drinking a lot of water or tea in one sitting"
+    },
+    {
+      "id": "sym_common_mildly_swollen_glands_in_the_neck_during_an_ordinary_",
+      "label": "Common mildly swollen glands in the neck during an o…",
+      "section": "Glands",
+      "rubric": "Common mildly swollen glands in the neck during an ordinary cold, go down after the cold clears"
+    },
+    {
+      "id": "sym_ordinary_breathlessness_after_climbing_several_flights_of_st",
+      "label": "Ordinary breathlessness after climbing several fligh…",
+      "section": "Respiratory",
+      "rubric": "Ordinary breathlessness after climbing several flights of stairs quickly, resolves with rest"
+    },
+    {
+      "id": "sym_common_bad_breath_related_to_poor_digestion_rather_than_dent",
+      "label": "Common bad breath related to poor digestion rather t…",
+      "section": "Mouth",
+      "rubric": "Common bad breath related to poor digestion rather than dental problems"
+    },
+    {
+      "id": "sym_ordinary_headache_from_dehydration_on_a_hot_day_or_after_swe",
+      "label": "Ordinary headache from dehydration on a hot day or a…",
+      "section": "Head",
+      "rubric": "Ordinary headache from dehydration on a hot day or after sweating a lot"
+    },
+    {
+      "id": "sym_common_minor_cut_or_scrape_that_is_slow_to_heal_in_an_otherw",
+      "label": "Common minor cut or scrape that is slow to heal in a…",
+      "section": "Skin",
+      "rubric": "Common minor cut or scrape that is slow to heal in an otherwise healthy person"
+    },
+    {
+      "id": "sym_ordinary_hiccups_after_eating_or_drinking_too_quickly_resolv",
+      "label": "Ordinary hiccups after eating or drinking too quickl…",
+      "section": "Stomach",
+      "rubric": "Ordinary hiccups after eating or drinking too quickly, resolve on their own in a few minutes"
+    },
+    {
+      "id": "sym_common_increased_appetite_and_cravings_for_sweets_during_tim",
+      "label": "Common increased appetite and cravings for sweets du…",
+      "section": "Appetite",
+      "rubric": "Common increased appetite and cravings for sweets during times of stress"
+    },
+    {
+      "id": "sym_ordinary_slight_weight_gain_after_starting_a_desk_job_with_l",
+      "label": "Ordinary slight weight gain after starting a desk jo…",
+      "section": "Weight",
+      "rubric": "Ordinary slight weight gain after starting a desk job with less physical activity"
+    },
+    {
+      "id": "sym_common_cold_hands_and_feet_in_winter_otherwise_a_generally_w",
+      "label": "Common cold hands and feet in winter, otherwise a ge…",
+      "section": "Extremities",
+      "rubric": "Common cold hands and feet in winter, otherwise a generally warm-blooded person"
+    },
+    {
+      "id": "sym_ordinary_jet_lag_or_tiredness_after_a_long_flight_or_overnig",
+      "label": "Ordinary jet lag or tiredness after a long flight or…",
+      "section": "Generalities",
+      "rubric": "Ordinary jet lag or tiredness after a long flight or overnight journey"
+    },
+    {
+      "id": "sym_common_mild_headache_from_wearing_a_tight_cap_helmet_or_tigh",
+      "label": "Common mild headache from wearing a tight cap, helme…",
+      "section": "Head",
+      "rubric": "Common mild headache from wearing a tight cap, helmet, or tight hair tie for long hours"
     }
   ]
 }
