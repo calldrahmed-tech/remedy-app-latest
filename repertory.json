@@ -27138,6 +27138,1023 @@
           "grade": 1
         }
       ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Cough that is worse specifically on entering a cold room from a warm one",
+      "triggers": [
+        "cough worse entering a cold room from a warm one",
+        "coughing starts moving from warm space into cold"
+      ],
+      "remedies": [
+        {
+          "id": "rumx",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Asthma attacks that come on specifically around 3am, wake the patient gasping",
+      "triggers": [
+        "asthma attack around 3am wakes gasping for air",
+        "breathing difficulty specifically at 3 in the morning"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Cough that is triggered by cold air the moment it is inhaled, immediate reaction",
+      "triggers": [
+        "cough starts the instant cold air is breathed in",
+        "immediate coughing reaction to inhaling cold air"
+      ],
+      "remedies": [
+        {
+          "id": "rumx",
+          "grade": 2
+        },
+        {
+          "id": "acon",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Expectoration that is difficult to raise, thick and stringy, must be pulled out with effort",
+      "triggers": [
+        "thick stringy mucus hard to cough up must be pulled out",
+        "difficult ropy expectoration requires great effort"
+      ],
+      "remedies": [
+        {
+          "id": "kali-bi",
+          "grade": 2
+        },
+        {
+          "id": "hydr",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Breathlessness that is markedly better sitting upright, worse lying down at any time",
+      "triggers": [
+        "breathless worse lying down better sitting upright anytime",
+        "cannot breathe well lying flat must sit up"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "spong",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Cough that produces expectoration only in the morning, dry the rest of the day",
+      "triggers": [
+        "coughs up mucus only in the morning dry rest of day",
+        "productive cough limited to morning hours only"
+      ],
+      "remedies": [
+        {
+          "id": "caust",
+          "grade": 1
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Whistling or wheezing sound audible in the chest without a stethoscope, heard across the room",
+      "triggers": [
+        "wheezing heard across the room without a stethoscope",
+        "whistling chest sound audible to others nearby"
+      ],
+      "remedies": [
+        {
+          "id": "ant-t",
+          "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Cough that worsens specifically when the patient becomes angry or emotionally upset",
+      "triggers": [
+        "cough worse when angry or emotionally upset",
+        "coughing fit triggered by anger or emotional distress"
+      ],
+      "remedies": [
+        {
+          "id": "cham",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Sensation of a feather or tickling thread in the throat that provokes coughing",
+      "triggers": [
+        "feels like a feather tickling the throat causes cough",
+        "sensation of a thread in the throat provokes coughing"
+      ],
+      "remedies": [
+        {
+          "id": "rumx",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Breathing that is shallow and rapid specifically during fever, out of proportion to the temperature",
+      "triggers": [
+        "rapid shallow breathing during fever out of proportion to temperature",
+        "fast breathing with fever more than the temperature explains"
+      ],
+      "remedies": [
+        {
+          "id": "acon",
+          "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "category": "Generals",
+      "rubric": "Ailments beginning after prolonged exposure to loud noise, such as a factory or concert environment",
+      "triggers": [
+        "symptoms since working in a loud noisy environment",
+        "ailments from prolonged exposure to loud sound like a concert or factory"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 1
+        },
+        {
+          "id": "coff",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "category": "Generals",
+      "rubric": "Ailments from a period of financial loss or business failure",
+      "triggers": [
+        "symptoms began after a business failure or financial loss",
+        "ailments since losing money or a failed business venture"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "category": "Generals",
+      "rubric": "Ailments from being jilted, betrayed, or humiliated by someone once trusted deeply",
+      "triggers": [
+        "symptoms since being betrayed by someone trusted",
+        "ailments from humiliation by a person once deeply trusted"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "staph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "category": "Generals",
+      "rubric": "Ailments dating from a long period of caring for a sick or dying family member",
+      "triggers": [
+        "symptoms since caring for a dying or sick relative for a long time",
+        "ailments from prolonged caregiving of a sick family member"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "category": "Generals",
+      "rubric": "Ailments from a serious accident narrowly avoided, fright without physical injury",
+      "triggers": [
+        "shaken up after narrowly avoiding a serious accident",
+        "symptoms from the fright of a near miss accident no injury"
+      ],
+      "remedies": [
+        {
+          "id": "acon",
+          "grade": 2
+        },
+        {
+          "id": "op",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "category": "Generals",
+      "rubric": "Ailments beginning after immigration or a major cultural relocation",
+      "triggers": [
+        "symptoms since immigrating to a new country",
+        "ailments after a major move to a different culture"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "category": "Generals",
+      "rubric": "Ailments from excessive use of the eyes at close work, such as tailoring or fine detailed craft",
+      "triggers": [
+        "symptoms from years of close eye work like tailoring",
+        "ailments from straining the eyes on detailed handiwork"
+      ],
+      "remedies": [
+        {
+          "id": "ruta",
+          "grade": 2
+        },
+        {
+          "id": "sel",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "category": "Generals",
+      "rubric": "Ailments from long-term use of laxatives or purgatives",
+      "triggers": [
+        "symptoms from years of laxative use",
+        "ailments since relying on purgatives for a long time"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Causation",
+      "category": "Generals",
+      "rubric": "Ailments beginning after a job loss or forced retirement",
+      "triggers": [
+        "symptoms since losing a job or forced retirement",
+        "ailments after unexpectedly leaving work"
+      ],
+      "remedies": [
+        {
+          "id": "ph-ac",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Symptoms markedly worse from combing or brushing the hair",
+      "triggers": [
+        "symptoms worse from combing or brushing the hair",
+        "head or scalp complaint flares when hair is brushed"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Better from lying on the painful side, worse lying on the unaffected side",
+      "triggers": [
+        "better lying on the painful side worse on the other side",
+        "pain eases lying on the affected side flares on the healthy side"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Worse specifically from the pressure of clothing seams or waistbands",
+      "triggers": [
+        "worse from the pressure of clothing seams",
+        "irritated by waistband or seam pressure specifically"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Symptoms better after a short nap, worse after a long or deep sleep",
+      "triggers": [
+        "feels better after a short nap worse after long sleep",
+        "brief nap helps but long deep sleep makes it worse"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Worse from the motion of swinging or rocking, though better from steady walking",
+      "triggers": [
+        "worse from swinging or rocking motion better from steady walking",
+        "rocking motion aggravates though walking steadily is fine"
+      ],
+      "remedies": [
+        {
+          "id": "cocc",
+          "grade": 2
+        },
+        {
+          "id": "bor",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Better from raising the affected part above the level of the heart",
+      "triggers": [
+        "better when the affected limb is raised above the heart",
+        "relief from elevating the painful part higher than the chest"
+      ],
+      "remedies": [
+        {
+          "id": "ferr",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Worse specifically from the vibration of machinery or engines, such as travel by train or boat",
+      "triggers": [
+        "worse from vibration of machinery engines train or boat",
+        "symptoms flare from the shaking vibration of travel"
+      ],
+      "remedies": [
+        {
+          "id": "petr",
+          "grade": 1
+        },
+        {
+          "id": "cocc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Better from steady, continuous pressure but worse from a light or fleeting touch",
+      "triggers": [
+        "better from steady firm pressure worse from light touch",
+        "continuous pressure relieves but a light touch aggravates"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "mag-p",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Worse specifically during or just after a hot, humid summer day",
+      "triggers": [
+        "worse on hot humid summer days",
+        "symptoms flare during muggy summer weather"
+      ],
+      "remedies": [
+        {
+          "id": "ant-c",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Better from sour foods or drinks, worse from anything sweet",
+      "triggers": [
+        "better from sour foods worse from sweets",
+        "sour food or drink relieves symptoms sweets make them worse"
+      ],
+      "remedies": [
+        {
+          "id": "ant-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Symptoms worse specifically while undressing at night before bed",
+      "triggers": [
+        "worse while undressing at night before bed",
+        "symptoms flare specifically during the process of undressing for bed"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 1
+        },
+        {
+          "id": "psor",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Better from warm food and drinks going down, even though the patient is not generally chilly",
+      "triggers": [
+        "better from warm food or drink going down though not generally chilly",
+        "warm food or drink soothes despite not being a cold sensitive person"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Worse on alternate days, a distinctly periodic pattern skipping one day between flares",
+      "triggers": [
+        "symptoms worse every other day skipping a day between",
+        "alternate day pattern of flare and calm"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Better from being fanned gently, worse from a direct or strong draft of air",
+      "triggers": [
+        "better from being gently fanned worse from a strong draft",
+        "gentle fanning helps but a direct draft aggravates"
+      ],
+      "remedies": [
+        {
+          "id": "carb-v",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Worse specifically from tight, restrictive footwear, better barefoot or in loose shoes",
+      "triggers": [
+        "worse from tight shoes better barefoot or loose shoes",
+        "symptoms flare in restrictive footwear improve without shoes"
+      ],
+      "remedies": [
+        {
+          "id": "led",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Symptoms worse specifically after napping during the day, groggy and worse on waking from it",
+      "triggers": [
+        "worse after a daytime nap groggy on waking from it",
+        "daytime sleep leaves them feeling worse than before"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Fixed delusion of being watched or followed, though nothing supports the belief",
+      "triggers": [
+        "convinced someone is watching or following them no evidence",
+        "fixed belief of being followed without any real cause"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "stram",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Marked fear of being poisoned, refuses food or medicine prepared by others",
+      "triggers": [
+        "fear of being poisoned refuses food from others",
+        "suspicious of food or medicine prepared by other people"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 2
+        },
+        {
+          "id": "hyos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Grief that is never openly expressed, held silently inside for years",
+      "triggers": [
+        "grief held silently inside for years never expressed openly",
+        "never talks about an old loss keeps it buried inside"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 3
+        },
+        {
+          "id": "ph-ac",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Excessive religious preoccupation, spends disproportionate time on prayer or religious guilt",
+      "triggers": [
+        "excessive religious preoccupation disproportionate prayer time",
+        "overwhelmed by religious guilt spends too much time on it"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "aur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Marked fear of failure that prevents starting new tasks or projects at all",
+      "triggers": [
+        "fear of failure prevents even starting new projects",
+        "avoids beginning tasks entirely out of fear of failing"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Sudden bursts of generosity, gives away possessions impulsively when in a certain mood",
+      "triggers": [
+        "impulsively gives away possessions in a certain mood",
+        "sudden generosity giving things away on impulse"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Aversion to being praised or complimented, becomes visibly uncomfortable",
+      "triggers": [
+        "uncomfortable when praised or complimented",
+        "dislikes receiving compliments becomes visibly awkward"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Feels responsible for the wellbeing of everyone around them, cannot relax while others are unwell",
+      "triggers": [
+        "feels responsible for everyone's wellbeing around them",
+        "cannot relax while anyone nearby is unwell or upset"
+      ],
+      "remedies": [
+        {
+          "id": "caust",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Marked dislike of surprises of any kind, even pleasant ones, prefers to know what's coming",
+      "triggers": [
+        "dislikes surprises even pleasant ones prefers to know in advance",
+        "uncomfortable with any surprise wants to be prepared"
+      ],
+      "remedies": [
+        {
+          "id": "arg-n",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Sudden urge to confess something from long ago that has weighed on the conscience",
+      "triggers": [
+        "sudden urge to confess something from long ago",
+        "old guilt resurfaces with a strong need to confess"
+      ],
+      "remedies": [
+        {
+          "id": "nit-ac",
+          "grade": 2
+        },
+        {
+          "id": "aur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Compares themselves unfavorably to others constantly, feels perpetually behind or inadequate",
+      "triggers": [
+        "constantly compares self unfavorably to others",
+        "feels perpetually behind or not good enough compared to others"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Extreme reluctance to let go of old possessions, keeps things long after they are useful",
+      "triggers": [
+        "cannot throw away old possessions keeps things too long",
+        "hoards old items long after they've stopped being useful"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Sudden mood shift into deep sadness triggered by a specific piece of music or song",
+      "triggers": [
+        "specific song triggers deep sadness suddenly",
+        "particular piece of music brings on a wave of sadness"
+      ],
+      "remedies": [
+        {
+          "id": "nat-c",
+          "grade": 1
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Marked need for control over small details, becomes anxious when plans change unexpectedly",
+      "triggers": [
+        "needs control over small details anxious with unexpected change",
+        "becomes anxious when plans shift without warning"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Feels a sense of unreality about their own life, as though watching it from a distance",
+      "triggers": [
+        "life feels unreal like watching it from a distance",
+        "detached sense of unreality about their own existence"
+      ],
+      "remedies": [
+        {
+          "id": "anac",
+          "grade": 2
+        },
+        {
+          "id": "stram",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Marked impatience with slow-moving people or processes, finishes others' sentences",
+      "triggers": [
+        "impatient with slow people finishes their sentences",
+        "cannot stand slow moving processes or conversations"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "arg-n",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Persistent worry about a minor health symptom despite repeated reassurance from doctors",
+      "triggers": [
+        "worries constantly about a minor symptom despite reassurance",
+        "cannot stop fixating on a small health issue doctors say is fine"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Cries more easily and more often since starting a new medication or hormonal change",
+      "triggers": [
+        "cries more easily since a new medication or hormonal change",
+        "increased tearfulness since starting a medicine or hormone shift"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Feels most like themselves and calm specifically when helping or caring for others",
+      "triggers": [
+        "feels calm and like themselves when caring for others",
+        "most at ease specifically while helping someone else"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Marked fear of being judged on social media or by strangers online",
+      "triggers": [
+        "fear of being judged on social media",
+        "anxious about strangers' opinions online"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
     }
   ],
   "chiefSymptomTags": [
@@ -35456,6 +36473,336 @@
       "label": "General aggravation of all symptoms specifically aft…",
       "section": "Generalities",
       "rubric": "General aggravation of all symptoms specifically after a haircut or shaving"
+    },
+    {
+      "id": "sym_cough_that_is_worse_specifically_on_entering_a_cold_room_fro",
+      "label": "Cough that is worse specifically on entering a cold …",
+      "section": "Respiratory",
+      "rubric": "Cough that is worse specifically on entering a cold room from a warm one"
+    },
+    {
+      "id": "sym_asthma_attacks_that_come_on_specifically_around_3am_wake_the",
+      "label": "Asthma attacks that come on specifically around 3am,…",
+      "section": "Respiratory",
+      "rubric": "Asthma attacks that come on specifically around 3am, wake the patient gasping"
+    },
+    {
+      "id": "sym_cough_that_is_triggered_by_cold_air_the_moment_it_is_inhaled",
+      "label": "Cough that is triggered by cold air the moment it is…",
+      "section": "Respiratory",
+      "rubric": "Cough that is triggered by cold air the moment it is inhaled, immediate reaction"
+    },
+    {
+      "id": "sym_expectoration_that_is_difficult_to_raise_thick_and_stringy_m",
+      "label": "Expectoration that is difficult to raise, thick and …",
+      "section": "Respiratory",
+      "rubric": "Expectoration that is difficult to raise, thick and stringy, must be pulled out with effort"
+    },
+    {
+      "id": "sym_breathlessness_that_is_markedly_better_sitting_upright_worse",
+      "label": "Breathlessness that is markedly better sitting uprig…",
+      "section": "Respiratory",
+      "rubric": "Breathlessness that is markedly better sitting upright, worse lying down at any time"
+    },
+    {
+      "id": "sym_cough_that_produces_expectoration_only_in_the_morning_dry_th",
+      "label": "Cough that produces expectoration only in the mornin…",
+      "section": "Respiratory",
+      "rubric": "Cough that produces expectoration only in the morning, dry the rest of the day"
+    },
+    {
+      "id": "sym_whistling_or_wheezing_sound_audible_in_the_chest_without_a_s",
+      "label": "Whistling or wheezing sound audible in the chest wit…",
+      "section": "Respiratory",
+      "rubric": "Whistling or wheezing sound audible in the chest without a stethoscope, heard across the room"
+    },
+    {
+      "id": "sym_cough_that_worsens_specifically_when_the_patient_becomes_ang",
+      "label": "Cough that worsens specifically when the patient bec…",
+      "section": "Respiratory",
+      "rubric": "Cough that worsens specifically when the patient becomes angry or emotionally upset"
+    },
+    {
+      "id": "sym_sensation_of_a_feather_or_tickling_thread_in_the_throat_that",
+      "label": "Sensation of a feather or tickling thread in the thr…",
+      "section": "Respiratory",
+      "rubric": "Sensation of a feather or tickling thread in the throat that provokes coughing"
+    },
+    {
+      "id": "sym_breathing_that_is_shallow_and_rapid_specifically_during_feve",
+      "label": "Breathing that is shallow and rapid specifically dur…",
+      "section": "Respiratory",
+      "rubric": "Breathing that is shallow and rapid specifically during fever, out of proportion to the temperature"
+    },
+    {
+      "id": "sym_ailments_beginning_after_prolonged_exposure_to_loud_noise_su",
+      "label": "Ailments beginning after prolonged exposure to loud …",
+      "section": "Causation",
+      "rubric": "Ailments beginning after prolonged exposure to loud noise, such as a factory or concert environment"
+    },
+    {
+      "id": "sym_ailments_from_a_period_of_financial_loss_or_business_failure",
+      "label": "Ailments from a period of financial loss or business…",
+      "section": "Causation",
+      "rubric": "Ailments from a period of financial loss or business failure"
+    },
+    {
+      "id": "sym_ailments_from_being_jilted_betrayed_or_humiliated_by_someone",
+      "label": "Ailments from being jilted, betrayed, or humiliated …",
+      "section": "Causation",
+      "rubric": "Ailments from being jilted, betrayed, or humiliated by someone once trusted deeply"
+    },
+    {
+      "id": "sym_ailments_dating_from_a_long_period_of_caring_for_a_sick_or_d",
+      "label": "Ailments dating from a long period of caring for a s…",
+      "section": "Causation",
+      "rubric": "Ailments dating from a long period of caring for a sick or dying family member"
+    },
+    {
+      "id": "sym_ailments_from_a_serious_accident_narrowly_avoided_fright_wit",
+      "label": "Ailments from a serious accident narrowly avoided, f…",
+      "section": "Causation",
+      "rubric": "Ailments from a serious accident narrowly avoided, fright without physical injury"
+    },
+    {
+      "id": "sym_ailments_beginning_after_immigration_or_a_major_cultural_rel",
+      "label": "Ailments beginning after immigration or a major cult…",
+      "section": "Causation",
+      "rubric": "Ailments beginning after immigration or a major cultural relocation"
+    },
+    {
+      "id": "sym_ailments_from_excessive_use_of_the_eyes_at_close_work_such_a",
+      "label": "Ailments from excessive use of the eyes at close wor…",
+      "section": "Causation",
+      "rubric": "Ailments from excessive use of the eyes at close work, such as tailoring or fine detailed craft"
+    },
+    {
+      "id": "sym_ailments_from_long_term_use_of_laxatives_or_purgatives",
+      "label": "Ailments from long-term use of laxatives or purgatives",
+      "section": "Causation",
+      "rubric": "Ailments from long-term use of laxatives or purgatives"
+    },
+    {
+      "id": "sym_ailments_beginning_after_a_job_loss_or_forced_retirement",
+      "label": "Ailments beginning after a job loss or forced retire…",
+      "section": "Causation",
+      "rubric": "Ailments beginning after a job loss or forced retirement"
+    },
+    {
+      "id": "sym_symptoms_markedly_worse_from_combing_or_brushing_the_hair",
+      "label": "Symptoms markedly worse from combing or brushing the…",
+      "section": "Modalities",
+      "rubric": "Symptoms markedly worse from combing or brushing the hair"
+    },
+    {
+      "id": "sym_better_from_lying_on_the_painful_side_worse_lying_on_the_una",
+      "label": "Better from lying on the painful side, worse lying o…",
+      "section": "Modalities",
+      "rubric": "Better from lying on the painful side, worse lying on the unaffected side"
+    },
+    {
+      "id": "sym_worse_specifically_from_the_pressure_of_clothing_seams_or_wa",
+      "label": "Worse specifically from the pressure of clothing sea…",
+      "section": "Modalities",
+      "rubric": "Worse specifically from the pressure of clothing seams or waistbands"
+    },
+    {
+      "id": "sym_symptoms_better_after_a_short_nap_worse_after_a_long_or_deep",
+      "label": "Symptoms better after a short nap, worse after a lon…",
+      "section": "Modalities",
+      "rubric": "Symptoms better after a short nap, worse after a long or deep sleep"
+    },
+    {
+      "id": "sym_worse_from_the_motion_of_swinging_or_rocking_though_better_f",
+      "label": "Worse from the motion of swinging or rocking, though…",
+      "section": "Modalities",
+      "rubric": "Worse from the motion of swinging or rocking, though better from steady walking"
+    },
+    {
+      "id": "sym_better_from_raising_the_affected_part_above_the_level_of_the",
+      "label": "Better from raising the affected part above the leve…",
+      "section": "Modalities",
+      "rubric": "Better from raising the affected part above the level of the heart"
+    },
+    {
+      "id": "sym_worse_specifically_from_the_vibration_of_machinery_or_engine",
+      "label": "Worse specifically from the vibration of machinery o…",
+      "section": "Modalities",
+      "rubric": "Worse specifically from the vibration of machinery or engines, such as travel by train or boat"
+    },
+    {
+      "id": "sym_better_from_steady_continuous_pressure_but_worse_from_a_ligh",
+      "label": "Better from steady, continuous pressure but worse fr…",
+      "section": "Modalities",
+      "rubric": "Better from steady, continuous pressure but worse from a light or fleeting touch"
+    },
+    {
+      "id": "sym_worse_specifically_during_or_just_after_a_hot_humid_summer_d",
+      "label": "Worse specifically during or just after a hot, humid…",
+      "section": "Modalities",
+      "rubric": "Worse specifically during or just after a hot, humid summer day"
+    },
+    {
+      "id": "sym_better_from_sour_foods_or_drinks_worse_from_anything_sweet",
+      "label": "Better from sour foods or drinks, worse from anythin…",
+      "section": "Modalities",
+      "rubric": "Better from sour foods or drinks, worse from anything sweet"
+    },
+    {
+      "id": "sym_symptoms_worse_specifically_while_undressing_at_night_before",
+      "label": "Symptoms worse specifically while undressing at nigh…",
+      "section": "Modalities",
+      "rubric": "Symptoms worse specifically while undressing at night before bed"
+    },
+    {
+      "id": "sym_better_from_warm_food_and_drinks_going_down_even_though_the_",
+      "label": "Better from warm food and drinks going down, even th…",
+      "section": "Modalities",
+      "rubric": "Better from warm food and drinks going down, even though the patient is not generally chilly"
+    },
+    {
+      "id": "sym_worse_on_alternate_days_a_distinctly_periodic_pattern_skippi",
+      "label": "Worse on alternate days, a distinctly periodic patte…",
+      "section": "Modalities",
+      "rubric": "Worse on alternate days, a distinctly periodic pattern skipping one day between flares"
+    },
+    {
+      "id": "sym_better_from_being_fanned_gently_worse_from_a_direct_or_stron",
+      "label": "Better from being fanned gently, worse from a direct…",
+      "section": "Modalities",
+      "rubric": "Better from being fanned gently, worse from a direct or strong draft of air"
+    },
+    {
+      "id": "sym_worse_specifically_from_tight_restrictive_footwear_better_ba",
+      "label": "Worse specifically from tight, restrictive footwear,…",
+      "section": "Modalities",
+      "rubric": "Worse specifically from tight, restrictive footwear, better barefoot or in loose shoes"
+    },
+    {
+      "id": "sym_symptoms_worse_specifically_after_napping_during_the_day_gro",
+      "label": "Symptoms worse specifically after napping during the…",
+      "section": "Modalities",
+      "rubric": "Symptoms worse specifically after napping during the day, groggy and worse on waking from it"
+    },
+    {
+      "id": "sym_fixed_delusion_of_being_watched_or_followed_though_nothing_s",
+      "label": "Fixed delusion of being watched or followed, though …",
+      "section": "Mind",
+      "rubric": "Fixed delusion of being watched or followed, though nothing supports the belief"
+    },
+    {
+      "id": "sym_marked_fear_of_being_poisoned_refuses_food_or_medicine_prepa",
+      "label": "Marked fear of being poisoned, refuses food or medic…",
+      "section": "Mind",
+      "rubric": "Marked fear of being poisoned, refuses food or medicine prepared by others"
+    },
+    {
+      "id": "sym_grief_that_is_never_openly_expressed_held_silently_inside_fo",
+      "label": "Grief that is never openly expressed, held silently …",
+      "section": "Mind",
+      "rubric": "Grief that is never openly expressed, held silently inside for years"
+    },
+    {
+      "id": "sym_excessive_religious_preoccupation_spends_disproportionate_ti",
+      "label": "Excessive religious preoccupation, spends disproport…",
+      "section": "Mind",
+      "rubric": "Excessive religious preoccupation, spends disproportionate time on prayer or religious guilt"
+    },
+    {
+      "id": "sym_marked_fear_of_failure_that_prevents_starting_new_tasks_or_p",
+      "label": "Marked fear of failure that prevents starting new ta…",
+      "section": "Mind",
+      "rubric": "Marked fear of failure that prevents starting new tasks or projects at all"
+    },
+    {
+      "id": "sym_sudden_bursts_of_generosity_gives_away_possessions_impulsive",
+      "label": "Sudden bursts of generosity, gives away possessions …",
+      "section": "Mind",
+      "rubric": "Sudden bursts of generosity, gives away possessions impulsively when in a certain mood"
+    },
+    {
+      "id": "sym_aversion_to_being_praised_or_complimented_becomes_visibly_un",
+      "label": "Aversion to being praised or complimented, becomes v…",
+      "section": "Mind",
+      "rubric": "Aversion to being praised or complimented, becomes visibly uncomfortable"
+    },
+    {
+      "id": "sym_feels_responsible_for_the_wellbeing_of_everyone_around_them_",
+      "label": "Feels responsible for the wellbeing of everyone arou…",
+      "section": "Mind",
+      "rubric": "Feels responsible for the wellbeing of everyone around them, cannot relax while others are unwell"
+    },
+    {
+      "id": "sym_marked_dislike_of_surprises_of_any_kind_even_pleasant_ones_p",
+      "label": "Marked dislike of surprises of any kind, even pleasa…",
+      "section": "Mind",
+      "rubric": "Marked dislike of surprises of any kind, even pleasant ones, prefers to know what's coming"
+    },
+    {
+      "id": "sym_sudden_urge_to_confess_something_from_long_ago_that_has_weig",
+      "label": "Sudden urge to confess something from long ago that …",
+      "section": "Mind",
+      "rubric": "Sudden urge to confess something from long ago that has weighed on the conscience"
+    },
+    {
+      "id": "sym_compares_themselves_unfavorably_to_others_constantly_feels_p",
+      "label": "Compares themselves unfavorably to others constantly…",
+      "section": "Mind",
+      "rubric": "Compares themselves unfavorably to others constantly, feels perpetually behind or inadequate"
+    },
+    {
+      "id": "sym_extreme_reluctance_to_let_go_of_old_possessions_keeps_things",
+      "label": "Extreme reluctance to let go of old possessions, kee…",
+      "section": "Mind",
+      "rubric": "Extreme reluctance to let go of old possessions, keeps things long after they are useful"
+    },
+    {
+      "id": "sym_sudden_mood_shift_into_deep_sadness_triggered_by_a_specific_",
+      "label": "Sudden mood shift into deep sadness triggered by a s…",
+      "section": "Mind",
+      "rubric": "Sudden mood shift into deep sadness triggered by a specific piece of music or song"
+    },
+    {
+      "id": "sym_marked_need_for_control_over_small_details_becomes_anxious_w",
+      "label": "Marked need for control over small details, becomes …",
+      "section": "Mind",
+      "rubric": "Marked need for control over small details, becomes anxious when plans change unexpectedly"
+    },
+    {
+      "id": "sym_feels_a_sense_of_unreality_about_their_own_life_as_though_wa",
+      "label": "Feels a sense of unreality about their own life, as …",
+      "section": "Mind",
+      "rubric": "Feels a sense of unreality about their own life, as though watching it from a distance"
+    },
+    {
+      "id": "sym_marked_impatience_with_slow_moving_people_or_processes_finis",
+      "label": "Marked impatience with slow-moving people or process…",
+      "section": "Mind",
+      "rubric": "Marked impatience with slow-moving people or processes, finishes others' sentences"
+    },
+    {
+      "id": "sym_persistent_worry_about_a_minor_health_symptom_despite_repeat",
+      "label": "Persistent worry about a minor health symptom despit…",
+      "section": "Mind",
+      "rubric": "Persistent worry about a minor health symptom despite repeated reassurance from doctors"
+    },
+    {
+      "id": "sym_cries_more_easily_and_more_often_since_starting_a_new_medica",
+      "label": "Cries more easily and more often since starting a ne…",
+      "section": "Mind",
+      "rubric": "Cries more easily and more often since starting a new medication or hormonal change"
+    },
+    {
+      "id": "sym_feels_most_like_themselves_and_calm_specifically_when_helpin",
+      "label": "Feels most like themselves and calm specifically whe…",
+      "section": "Mind",
+      "rubric": "Feels most like themselves and calm specifically when helping or caring for others"
+    },
+    {
+      "id": "sym_marked_fear_of_being_judged_on_social_media_or_by_strangers_",
+      "label": "Marked fear of being judged on social media or by st…",
+      "section": "Mind",
+      "rubric": "Marked fear of being judged on social media or by strangers online"
     }
   ]
 }
