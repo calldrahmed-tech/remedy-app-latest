@@ -19781,6 +19781,667 @@
           "grade": 1
         }
       ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Common cold that starts with sneezing and a thin watery discharge, worse in a warm room, better in open air",
+      "triggers": [
+        "cold starts with sneezing thin watery discharge",
+        "runny nose worse indoors better in fresh air"
+      ],
+      "remedies": [
+        {
+          "id": "all-c",
+          "grade": 3
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Common cold with thick yellow-green mucus in the later stage, discharge no longer watery",
+      "triggers": [
+        "cold turned into thick yellow green mucus",
+        "later stage of cold thick colored discharge"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "kali-bi",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "category": "Generals",
+      "rubric": "Ordinary fever with body ache and chill, comes on gradually over a day, mild in intensity",
+      "triggers": [
+        "mild fever with body ache came on gradually",
+        "ordinary fever chill body pain not too severe"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "eup-per",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Fever",
+      "category": "Generals",
+      "rubric": "Fever that comes on very suddenly and intensely within a couple of hours, patient was fine before",
+      "triggers": [
+        "fever came on suddenly within hours",
+        "patient was fine then fever hit suddenly hard"
+      ],
+      "remedies": [
+        {
+          "id": "acon",
+          "grade": 3
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Ordinary headache from stress or overwork at the end of a long day",
+      "triggers": [
+        "headache from stress after a long tiring day",
+        "tension headache from overwork by evening"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "calc-p",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache that comes with every episode of gas or acidity, relieved once the gas passes",
+      "triggers": [
+        "headache with acidity or gas relieved once gas passes",
+        "gas related headache eases after burping or passing wind"
+      ],
+      "remedies": [
+        {
+          "id": "carb-v",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Common acidity or heartburn after eating spicy or oily food",
+      "triggers": [
+        "acidity or heartburn after spicy oily food",
+        "burning in stomach after eating fried food"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Ordinary indigestion with fullness and discomfort after a normal-sized meal, nothing unusual eaten",
+      "triggers": [
+        "indigestion and fullness after a normal meal",
+        "stomach discomfort after eating even a regular amount"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Ordinary gas and bloating after meals, common and recurring, not from any one specific food",
+      "triggers": [
+        "regular gas and bloating after eating",
+        "bloated stomach after meals happens often"
+      ],
+      "remedies": [
+        {
+          "id": "carb-v",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Simple travel-related diarrhea after eating outside food or unfamiliar water",
+      "triggers": [
+        "diarrhea after eating outside food while traveling",
+        "loose motions from unfamiliar food or water on a trip"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "chin",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Occasional mild constipation from a change in routine, such as travel or a new job schedule",
+      "triggers": [
+        "mild constipation after travel or schedule change",
+        "bowels irregular since routine changed recently"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Common muscular back pain from lifting something heavy or from poor posture at a desk",
+      "triggers": [
+        "back pain from lifting something heavy",
+        "muscle back pain from sitting at a desk too long"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Ordinary joint pain in an elderly patient, worse in the morning, improves once they start moving around",
+      "triggers": [
+        "elderly joint pain worse in the morning better once moving",
+        "old age joint stiffness eases with movement"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Minor sprain or twist of the ankle with swelling and bruising, no fracture",
+      "triggers": [
+        "sprained ankle with swelling and bruising",
+        "twisted ankle mild swelling no broken bone"
+      ],
+      "remedies": [
+        {
+          "id": "arn",
+          "grade": 2
+        },
+        {
+          "id": "rhus-t",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Sleep",
+      "category": "Generals",
+      "rubric": "Ordinary difficulty falling asleep from everyday worry about work or family, not a chronic problem",
+      "triggers": [
+        "cannot fall asleep worrying about work or family",
+        "everyday stress keeps them up at night occasionally"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "coff",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Everyday nervousness before common events like an exam, interview, or travel",
+      "triggers": [
+        "nervous before an exam or interview",
+        "everyday anxiety before travel or an event"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "arg-n",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "General irritability and short temper from lack of sleep the night before",
+      "triggers": [
+        "irritable and short tempered from poor sleep",
+        "cranky after a bad night's sleep"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "cham",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Ordinary menstrual cramps that are common every month, relieved with warmth and gentle pressure",
+      "triggers": [
+        "normal period cramps every month relieved with warmth",
+        "menstrual pain eased with a hot water bottle and pressure"
+      ],
+      "remedies": [
+        {
+          "id": "mag-p",
+          "grade": 2
+        },
+        {
+          "id": "coloc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Common premenstrual irritability and mood swings a few days before the period starts",
+      "triggers": [
+        "irritable and moody few days before period",
+        "common PMS mood swings before menses"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "sep",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Ordinary seasonal allergy with sneezing and itchy eyes at the start of a new season",
+      "triggers": [
+        "seasonal allergy sneezing and itchy eyes",
+        "hay fever type symptoms at season change"
+      ],
+      "remedies": [
+        {
+          "id": "all-c",
+          "grade": 2
+        },
+        {
+          "id": "sabad",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Common mild sore throat from a cold, without fever, resolves in a few days",
+      "triggers": [
+        "mild sore throat with a cold no fever",
+        "common scratchy throat that clears in a few days"
+      ],
+      "remedies": [
+        {
+          "id": "acon",
+          "grade": 1
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Ordinary heat rash or prickly heat in hot, humid weather, common in summer",
+      "triggers": [
+        "prickly heat rash in hot humid weather",
+        "common summer heat rash"
+      ],
+      "remedies": [
+        {
+          "id": "apis",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weakness",
+      "category": "Generals",
+      "rubric": "General tiredness and low energy after recovering from an ordinary cold or flu",
+      "triggers": [
+        "tired and low energy after recovering from a cold",
+        "weak feeling for a few days after ordinary flu"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 2
+        },
+        {
+          "id": "gels",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Appetite",
+      "category": "Generals",
+      "rubric": "Ordinary reduced appetite for a day or two during a common cold or mild fever",
+      "triggers": [
+        "less hungry during a common cold",
+        "appetite dropped for a couple days with mild fever"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 1
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Common mild burning during urination in a woman, without fever, resolves quickly",
+      "triggers": [
+        "mild burning urination in a woman no fever",
+        "common urinary discomfort clears up quickly"
+      ],
+      "remedies": [
+        {
+          "id": "canth",
+          "grade": 2
+        },
+        {
+          "id": "apis",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Ordinary headache from too much screen time or reading, relieved by rest and closing the eyes",
+      "triggers": [
+        "headache from too much screen time relieved by rest",
+        "eye strain headache from reading better with rest"
+      ],
+      "remedies": [
+        {
+          "id": "ruta",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Common tired, dry eyes after a long day at work, especially with screens",
+      "triggers": [
+        "tired dry eyes after a long day at work",
+        "eyes feel dry and strained from screen use"
+      ],
+      "remedies": [
+        {
+          "id": "ruta",
+          "grade": 1
+        },
+        {
+          "id": "sel",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Ordinary dry cough that lingers a few days after a cold has otherwise cleared",
+      "triggers": [
+        "dry cough that lingers after a cold clears up",
+        "leftover cough for a few days after cold is gone"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Common mild allergic itching or hives after eating a specific food, comes up quickly",
+      "triggers": [
+        "hives after eating a certain food comes up fast",
+        "mild allergic skin itching after a specific food"
+      ],
+      "remedies": [
+        {
+          "id": "apis",
+          "grade": 2
+        },
+        {
+          "id": "urt-u",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "category": "Generals",
+      "rubric": "Ordinary slight weight fluctuation tied to stress or diet changes, nothing dramatic",
+      "triggers": [
+        "weight goes up and down a little with stress or diet",
+        "slight normal weight change from lifestyle habits"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Common mouth ulcer after eating something too spicy or hot, heals in about a week",
+      "triggers": [
+        "mouth ulcer after spicy food heals in a week",
+        "common canker sore from hot or spicy food"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "bor",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Everyday fatigue in a busy working person, feels better after a full night's rest",
+      "triggers": [
+        "everyday tiredness in a busy working person",
+        "fatigue from a demanding schedule better with rest"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "calc-p",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Common loose stool from eating too much oily or street food, settles in a day or two",
+      "triggers": [
+        "loose motions after eating too much oily food",
+        "upset stomach from street food settles quickly"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Ordinary leg cramps after standing for long hours at work",
+      "triggers": [
+        "leg cramps after standing for long hours",
+        "calf cramps from a job that requires standing all day"
+      ],
+      "remedies": [
+        {
+          "id": "cupr",
+          "grade": 1
+        },
+        {
+          "id": "mag-p",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Sleep",
+      "category": "Generals",
+      "rubric": "Common daytime sleepiness after a poor night's sleep, not a chronic sleep disorder",
+      "triggers": [
+        "sleepy during the day after a bad night's sleep",
+        "occasional daytime drowsiness from missed sleep"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
     }
   ],
   "chiefSymptomTags": [
@@ -25789,6 +26450,216 @@
       "label": "Ailments beginning after a long period of intense st…",
       "section": "Causation",
       "rubric": "Ailments beginning after a long period of intense studying or mental overwork before exams"
+    },
+    {
+      "id": "sym_common_cold_that_starts_with_sneezing_and_a_thin_watery_disc",
+      "label": "Common cold that starts with sneezing and a thin wat…",
+      "section": "Respiratory",
+      "rubric": "Common cold that starts with sneezing and a thin watery discharge, worse in a warm room, better in open air"
+    },
+    {
+      "id": "sym_common_cold_with_thick_yellow_green_mucus_in_the_later_stage",
+      "label": "Common cold with thick yellow-green mucus in the lat…",
+      "section": "Respiratory",
+      "rubric": "Common cold with thick yellow-green mucus in the later stage, discharge no longer watery"
+    },
+    {
+      "id": "sym_ordinary_fever_with_body_ache_and_chill_comes_on_gradually_o",
+      "label": "Ordinary fever with body ache and chill, comes on gr…",
+      "section": "Fever",
+      "rubric": "Ordinary fever with body ache and chill, comes on gradually over a day, mild in intensity"
+    },
+    {
+      "id": "sym_fever_that_comes_on_very_suddenly_and_intensely_within_a_cou",
+      "label": "Fever that comes on very suddenly and intensely with…",
+      "section": "Fever",
+      "rubric": "Fever that comes on very suddenly and intensely within a couple of hours, patient was fine before"
+    },
+    {
+      "id": "sym_ordinary_headache_from_stress_or_overwork_at_the_end_of_a_lo",
+      "label": "Ordinary headache from stress or overwork at the end…",
+      "section": "Head",
+      "rubric": "Ordinary headache from stress or overwork at the end of a long day"
+    },
+    {
+      "id": "sym_headache_that_comes_with_every_episode_of_gas_or_acidity_rel",
+      "label": "Headache that comes with every episode of gas or aci…",
+      "section": "Head",
+      "rubric": "Headache that comes with every episode of gas or acidity, relieved once the gas passes"
+    },
+    {
+      "id": "sym_common_acidity_or_heartburn_after_eating_spicy_or_oily_food",
+      "label": "Common acidity or heartburn after eating spicy or oi…",
+      "section": "Stomach",
+      "rubric": "Common acidity or heartburn after eating spicy or oily food"
+    },
+    {
+      "id": "sym_ordinary_indigestion_with_fullness_and_discomfort_after_a_no",
+      "label": "Ordinary indigestion with fullness and discomfort af…",
+      "section": "Stomach",
+      "rubric": "Ordinary indigestion with fullness and discomfort after a normal-sized meal, nothing unusual eaten"
+    },
+    {
+      "id": "sym_ordinary_gas_and_bloating_after_meals_common_and_recurring_n",
+      "label": "Ordinary gas and bloating after meals, common and re…",
+      "section": "Abdomen",
+      "rubric": "Ordinary gas and bloating after meals, common and recurring, not from any one specific food"
+    },
+    {
+      "id": "sym_simple_travel_related_diarrhea_after_eating_outside_food_or_",
+      "label": "Simple travel-related diarrhea after eating outside …",
+      "section": "Stool",
+      "rubric": "Simple travel-related diarrhea after eating outside food or unfamiliar water"
+    },
+    {
+      "id": "sym_occasional_mild_constipation_from_a_change_in_routine_such_a",
+      "label": "Occasional mild constipation from a change in routin…",
+      "section": "Stool",
+      "rubric": "Occasional mild constipation from a change in routine, such as travel or a new job schedule"
+    },
+    {
+      "id": "sym_common_muscular_back_pain_from_lifting_something_heavy_or_fr",
+      "label": "Common muscular back pain from lifting something hea…",
+      "section": "Extremities",
+      "rubric": "Common muscular back pain from lifting something heavy or from poor posture at a desk"
+    },
+    {
+      "id": "sym_ordinary_joint_pain_in_an_elderly_patient_worse_in_the_morni",
+      "label": "Ordinary joint pain in an elderly patient, worse in …",
+      "section": "Extremities",
+      "rubric": "Ordinary joint pain in an elderly patient, worse in the morning, improves once they start moving around"
+    },
+    {
+      "id": "sym_minor_sprain_or_twist_of_the_ankle_with_swelling_and_bruisin",
+      "label": "Minor sprain or twist of the ankle with swelling and…",
+      "section": "Extremities",
+      "rubric": "Minor sprain or twist of the ankle with swelling and bruising, no fracture"
+    },
+    {
+      "id": "sym_ordinary_difficulty_falling_asleep_from_everyday_worry_about",
+      "label": "Ordinary difficulty falling asleep from everyday wor…",
+      "section": "Sleep",
+      "rubric": "Ordinary difficulty falling asleep from everyday worry about work or family, not a chronic problem"
+    },
+    {
+      "id": "sym_everyday_nervousness_before_common_events_like_an_exam_inter",
+      "label": "Everyday nervousness before common events like an ex…",
+      "section": "Mind",
+      "rubric": "Everyday nervousness before common events like an exam, interview, or travel"
+    },
+    {
+      "id": "sym_general_irritability_and_short_temper_from_lack_of_sleep_the",
+      "label": "General irritability and short temper from lack of s…",
+      "section": "Mind",
+      "rubric": "General irritability and short temper from lack of sleep the night before"
+    },
+    {
+      "id": "sym_ordinary_menstrual_cramps_that_are_common_every_month_reliev",
+      "label": "Ordinary menstrual cramps that are common every mont…",
+      "section": "Female",
+      "rubric": "Ordinary menstrual cramps that are common every month, relieved with warmth and gentle pressure"
+    },
+    {
+      "id": "sym_common_premenstrual_irritability_and_mood_swings_a_few_days_",
+      "label": "Common premenstrual irritability and mood swings a f…",
+      "section": "Female",
+      "rubric": "Common premenstrual irritability and mood swings a few days before the period starts"
+    },
+    {
+      "id": "sym_ordinary_seasonal_allergy_with_sneezing_and_itchy_eyes_at_th",
+      "label": "Ordinary seasonal allergy with sneezing and itchy ey…",
+      "section": "Nose",
+      "rubric": "Ordinary seasonal allergy with sneezing and itchy eyes at the start of a new season"
+    },
+    {
+      "id": "sym_common_mild_sore_throat_from_a_cold_without_fever_resolves_i",
+      "label": "Common mild sore throat from a cold, without fever, …",
+      "section": "Throat",
+      "rubric": "Common mild sore throat from a cold, without fever, resolves in a few days"
+    },
+    {
+      "id": "sym_ordinary_heat_rash_or_prickly_heat_in_hot_humid_weather_comm",
+      "label": "Ordinary heat rash or prickly heat in hot, humid wea…",
+      "section": "Skin",
+      "rubric": "Ordinary heat rash or prickly heat in hot, humid weather, common in summer"
+    },
+    {
+      "id": "sym_general_tiredness_and_low_energy_after_recovering_from_an_or",
+      "label": "General tiredness and low energy after recovering fr…",
+      "section": "Weakness",
+      "rubric": "General tiredness and low energy after recovering from an ordinary cold or flu"
+    },
+    {
+      "id": "sym_ordinary_reduced_appetite_for_a_day_or_two_during_a_common_c",
+      "label": "Ordinary reduced appetite for a day or two during a …",
+      "section": "Appetite",
+      "rubric": "Ordinary reduced appetite for a day or two during a common cold or mild fever"
+    },
+    {
+      "id": "sym_common_mild_burning_during_urination_in_a_woman_without_feve",
+      "label": "Common mild burning during urination in a woman, wit…",
+      "section": "Urinary",
+      "rubric": "Common mild burning during urination in a woman, without fever, resolves quickly"
+    },
+    {
+      "id": "sym_ordinary_headache_from_too_much_screen_time_or_reading_relie",
+      "label": "Ordinary headache from too much screen time or readi…",
+      "section": "Head",
+      "rubric": "Ordinary headache from too much screen time or reading, relieved by rest and closing the eyes"
+    },
+    {
+      "id": "sym_common_tired_dry_eyes_after_a_long_day_at_work_especially_wi",
+      "label": "Common tired, dry eyes after a long day at work, esp…",
+      "section": "Eye",
+      "rubric": "Common tired, dry eyes after a long day at work, especially with screens"
+    },
+    {
+      "id": "sym_ordinary_dry_cough_that_lingers_a_few_days_after_a_cold_has_",
+      "label": "Ordinary dry cough that lingers a few days after a c…",
+      "section": "Respiratory",
+      "rubric": "Ordinary dry cough that lingers a few days after a cold has otherwise cleared"
+    },
+    {
+      "id": "sym_common_mild_allergic_itching_or_hives_after_eating_a_specifi",
+      "label": "Common mild allergic itching or hives after eating a…",
+      "section": "Skin",
+      "rubric": "Common mild allergic itching or hives after eating a specific food, comes up quickly"
+    },
+    {
+      "id": "sym_ordinary_slight_weight_fluctuation_tied_to_stress_or_diet_ch",
+      "label": "Ordinary slight weight fluctuation tied to stress or…",
+      "section": "Weight",
+      "rubric": "Ordinary slight weight fluctuation tied to stress or diet changes, nothing dramatic"
+    },
+    {
+      "id": "sym_common_mouth_ulcer_after_eating_something_too_spicy_or_hot_h",
+      "label": "Common mouth ulcer after eating something too spicy …",
+      "section": "Mouth",
+      "rubric": "Common mouth ulcer after eating something too spicy or hot, heals in about a week"
+    },
+    {
+      "id": "sym_everyday_fatigue_in_a_busy_working_person_feels_better_after",
+      "label": "Everyday fatigue in a busy working person, feels bet…",
+      "section": "Generalities",
+      "rubric": "Everyday fatigue in a busy working person, feels better after a full night's rest"
+    },
+    {
+      "id": "sym_common_loose_stool_from_eating_too_much_oily_or_street_food_",
+      "label": "Common loose stool from eating too much oily or stre…",
+      "section": "Stool",
+      "rubric": "Common loose stool from eating too much oily or street food, settles in a day or two"
+    },
+    {
+      "id": "sym_ordinary_leg_cramps_after_standing_for_long_hours_at_work",
+      "label": "Ordinary leg cramps after standing for long hours at…",
+      "section": "Extremities",
+      "rubric": "Ordinary leg cramps after standing for long hours at work"
+    },
+    {
+      "id": "sym_common_daytime_sleepiness_after_a_poor_night_s_sleep_not_a_c",
+      "label": "Common daytime sleepiness after a poor night's sleep…",
+      "section": "Sleep",
+      "rubric": "Common daytime sleepiness after a poor night's sleep, not a chronic sleep disorder"
     }
   ]
 }
