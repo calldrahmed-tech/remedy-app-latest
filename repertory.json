@@ -24412,6 +24412,534 @@
           "grade": 1
         }
       ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Vomiting that brings temporary relief, nausea returns again within a short time",
+      "triggers": [
+        "vomiting brings brief relief nausea returns soon after",
+        "throws up feels better briefly then nauseous again"
+      ],
+      "remedies": [
+        {
+          "id": "ip",
+          "grade": 2
+        },
+        {
+          "id": "ant-t",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Water-brash, a sudden rush of watery saliva filling the mouth before or with nausea",
+      "triggers": [
+        "mouth suddenly fills with watery saliva before nausea",
+        "water brash rush of saliva with nausea"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Vomiting of blood or coffee-ground material, a serious warning sign requiring urgent evaluation",
+      "triggers": [
+        "vomiting blood or coffee ground material",
+        "blood in vomit needs urgent medical evaluation"
+      ],
+      "remedies": [
+        {
+          "id": "ip",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Nausea and vomiting specifically triggered by strong smells or perfumes",
+      "triggers": [
+        "nausea triggered by strong smells or perfume",
+        "vomiting from exposure to strong odors"
+      ],
+      "remedies": [
+        {
+          "id": "coloc",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Constant, gnawing hunger that returns within an hour or two of eating a full meal",
+      "triggers": [
+        "hungry again within an hour or two after a full meal",
+        "gnawing hunger returns quickly after eating"
+      ],
+      "remedies": [
+        {
+          "id": "iod",
+          "grade": 2
+        },
+        {
+          "id": "chin",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Aversion to meat while retaining a normal or increased appetite for other foods",
+      "triggers": [
+        "cannot stand meat but eats other food normally",
+        "aversion to meat only rest of appetite fine"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Desires or craves indigestible things such as chalk, clay, or dirt (pica)",
+      "triggers": [
+        "craves chalk clay or dirt unusual eating",
+        "desires to eat non food items like dirt or chalk"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "alum",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Sensation as if the stomach were hanging loose or relaxed, worse standing",
+      "triggers": [
+        "stomach feels like it's hanging loose worse standing",
+        "sensation of a relaxed loose stomach worse when standing"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Pain in the stomach that is markedly relieved by vomiting",
+      "triggers": [
+        "stomach pain relieved after vomiting",
+        "pain in stomach eases once they throw up"
+      ],
+      "remedies": [
+        {
+          "id": "ip",
+          "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Sour or acidic regurgitation, especially after eating starchy or sugary foods",
+      "triggers": [
+        "sour acidic regurgitation after starchy or sugary food",
+        "acid reflux after eating carbs or sweets"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Abdominal pain that shifts location frequently, never staying in one fixed spot",
+      "triggers": [
+        "belly pain moves around never stays in one spot",
+        "abdominal pain that shifts location frequently"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "lac-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Sensation of a hard lump or mass in the abdomen that can be felt on palpation",
+      "triggers": [
+        "feels a hard lump in the belly on palpation",
+        "hard mass in the abdomen felt when pressed"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 1
+        },
+        {
+          "id": "carb-an",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Pain in the right lower abdomen, worse from motion or pressure, mimicking appendicitis-type presentation",
+      "triggers": [
+        "right lower belly pain worse from motion appendicitis type",
+        "pain in the lower right abdomen worse pressure or movement"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Colicky abdominal pain in an infant that is relieved specifically by passing wind",
+      "triggers": [
+        "baby colic pain relieved by passing gas",
+        "infant abdominal cramp eases after passing wind"
+      ],
+      "remedies": [
+        {
+          "id": "carb-v",
+          "grade": 2
+        },
+        {
+          "id": "cham",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Sensitivity of the abdomen to the slightest jarring or motion, such as riding in a vehicle",
+      "triggers": [
+        "abdomen sensitive to jarring or motion in a vehicle",
+        "belly pain worse from bumpy car rides"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "bry",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Sensation of internal trembling or fluttering in the abdomen, not visible externally",
+      "triggers": [
+        "internal trembling feeling in the abdomen not visible",
+        "fluttering sensation inside the belly no visible movement"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 1
+        },
+        {
+          "id": "arg-n",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Abdominal swelling that is worse after eating fruit or raw vegetables",
+      "triggers": [
+        "belly bloats after eating fruit or raw vegetables",
+        "abdominal swelling worse from raw produce"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 1
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Pain in the umbilical region relieved specifically by firm pressure or a tight belt",
+      "triggers": [
+        "navel pain relieved by firm pressure or a tight belt",
+        "pain around the belly button eased by pressing hard"
+      ],
+      "remedies": [
+        {
+          "id": "coloc",
+          "grade": 2
+        },
+        {
+          "id": "mag-p",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Stool that is small, hard, and passed in separate balls like sheep or goat droppings",
+      "triggers": [
+        "stool passed as small hard separate balls",
+        "droppings like sheep or goat stool hard and small"
+      ],
+      "remedies": [
+        {
+          "id": "mag-m",
+          "grade": 2
+        },
+        {
+          "id": "plb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Involuntary escape of stool while passing gas, cannot always tell the two apart",
+      "triggers": [
+        "stool leaks out while passing gas by accident",
+        "cannot tell gas from stool sometimes leaks"
+      ],
+      "remedies": [
+        {
+          "id": "aloe",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Painless diarrhea that occurs immediately or very soon after eating or drinking",
+      "triggers": [
+        "diarrhea right after eating or drinking painless",
+        "loose stool almost immediately after a meal no pain"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 1
+        },
+        {
+          "id": "ferr",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "External hemorrhoids that protrude and must be pushed back in manually after a bowel movement",
+      "triggers": [
+        "hemorrhoids protrude must push back in after stool",
+        "piles come out and need manual replacement after bowel movement"
+      ],
+      "remedies": [
+        {
+          "id": "nit-ac",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Itching around the anus that is worse at night, especially in children (pinworm-type presentation)",
+      "triggers": [
+        "itching around the anus worse at night in a child",
+        "anal itching at night suggestive of pinworms"
+      ],
+      "remedies": [
+        {
+          "id": "cina",
+          "grade": 3
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Stool that is passed only after great and prolonged straining, though the stool itself is not hard",
+      "triggers": [
+        "strains a long time to pass stool though not hard",
+        "prolonged straining needed even though stool isn't hard"
+      ],
+      "remedies": [
+        {
+          "id": "alum",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Sensation that the rectum remains full even immediately after a complete bowel movement",
+      "triggers": [
+        "rectum feels full right after a complete bowel movement",
+        "sensation of incomplete emptying despite full evacuation"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Fissure or tear at the anus causing sharp cutting pain that lingers long after passing stool",
+      "triggers": [
+        "anal fissure sharp cutting pain lingers after stool",
+        "tear at the anus with pain lasting hours after bowel movement"
+      ],
+      "remedies": [
+        {
+          "id": "nit-ac",
+          "grade": 2
+        },
+        {
+          "id": "caust",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Diarrhea alternating with constipation on a recurring basis, no consistent pattern",
+      "triggers": [
+        "diarrhea and constipation alternate on and off",
+        "bowel pattern switches between loose and hard recurrently"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "ant-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Stool that is blackish and tarry in appearance, a serious warning sign requiring urgent evaluation",
+      "triggers": [
+        "black tarry stool needs urgent medical evaluation",
+        "dark tarry bowel movement warning sign"
+      ],
+      "remedies": [
+        {
+          "id": "crot-t",
+          "grade": 1
+        },
+        {
+          "id": "ham",
+          "grade": 1
+        }
+      ]
     }
   ],
   "chiefSymptomTags": [
@@ -31854,6 +32382,174 @@
       "label": "Delayed teething in an infant, gums swollen but the …",
       "section": "Mouth",
       "rubric": "Delayed teething in an infant, gums swollen but the teeth are slow to emerge"
+    },
+    {
+      "id": "sym_vomiting_that_brings_temporary_relief_nausea_returns_again_w",
+      "label": "Vomiting that brings temporary relief, nausea return…",
+      "section": "Stomach",
+      "rubric": "Vomiting that brings temporary relief, nausea returns again within a short time"
+    },
+    {
+      "id": "sym_water_brash_a_sudden_rush_of_watery_saliva_filling_the_mouth",
+      "label": "Water-brash, a sudden rush of watery saliva filling …",
+      "section": "Stomach",
+      "rubric": "Water-brash, a sudden rush of watery saliva filling the mouth before or with nausea"
+    },
+    {
+      "id": "sym_vomiting_of_blood_or_coffee_ground_material_a_serious_warnin",
+      "label": "Vomiting of blood or coffee-ground material, a serio…",
+      "section": "Stomach",
+      "rubric": "Vomiting of blood or coffee-ground material, a serious warning sign requiring urgent evaluation"
+    },
+    {
+      "id": "sym_nausea_and_vomiting_specifically_triggered_by_strong_smells_",
+      "label": "Nausea and vomiting specifically triggered by strong…",
+      "section": "Stomach",
+      "rubric": "Nausea and vomiting specifically triggered by strong smells or perfumes"
+    },
+    {
+      "id": "sym_constant_gnawing_hunger_that_returns_within_an_hour_or_two_o",
+      "label": "Constant, gnawing hunger that returns within an hour…",
+      "section": "Stomach",
+      "rubric": "Constant, gnawing hunger that returns within an hour or two of eating a full meal"
+    },
+    {
+      "id": "sym_aversion_to_meat_while_retaining_a_normal_or_increased_appet",
+      "label": "Aversion to meat while retaining a normal or increas…",
+      "section": "Stomach",
+      "rubric": "Aversion to meat while retaining a normal or increased appetite for other foods"
+    },
+    {
+      "id": "sym_desires_or_craves_indigestible_things_such_as_chalk_clay_or_",
+      "label": "Desires or craves indigestible things such as chalk,…",
+      "section": "Stomach",
+      "rubric": "Desires or craves indigestible things such as chalk, clay, or dirt (pica)"
+    },
+    {
+      "id": "sym_sensation_as_if_the_stomach_were_hanging_loose_or_relaxed_wo",
+      "label": "Sensation as if the stomach were hanging loose or re…",
+      "section": "Stomach",
+      "rubric": "Sensation as if the stomach were hanging loose or relaxed, worse standing"
+    },
+    {
+      "id": "sym_pain_in_the_stomach_that_is_markedly_relieved_by_vomiting",
+      "label": "Pain in the stomach that is markedly relieved by vom…",
+      "section": "Stomach",
+      "rubric": "Pain in the stomach that is markedly relieved by vomiting"
+    },
+    {
+      "id": "sym_sour_or_acidic_regurgitation_especially_after_eating_starchy",
+      "label": "Sour or acidic regurgitation, especially after eatin…",
+      "section": "Stomach",
+      "rubric": "Sour or acidic regurgitation, especially after eating starchy or sugary foods"
+    },
+    {
+      "id": "sym_abdominal_pain_that_shifts_location_frequently_never_staying",
+      "label": "Abdominal pain that shifts location frequently, neve…",
+      "section": "Abdomen",
+      "rubric": "Abdominal pain that shifts location frequently, never staying in one fixed spot"
+    },
+    {
+      "id": "sym_sensation_of_a_hard_lump_or_mass_in_the_abdomen_that_can_be_",
+      "label": "Sensation of a hard lump or mass in the abdomen that…",
+      "section": "Abdomen",
+      "rubric": "Sensation of a hard lump or mass in the abdomen that can be felt on palpation"
+    },
+    {
+      "id": "sym_pain_in_the_right_lower_abdomen_worse_from_motion_or_pressur",
+      "label": "Pain in the right lower abdomen, worse from motion o…",
+      "section": "Abdomen",
+      "rubric": "Pain in the right lower abdomen, worse from motion or pressure, mimicking appendicitis-type presentation"
+    },
+    {
+      "id": "sym_colicky_abdominal_pain_in_an_infant_that_is_relieved_specifi",
+      "label": "Colicky abdominal pain in an infant that is relieved…",
+      "section": "Abdomen",
+      "rubric": "Colicky abdominal pain in an infant that is relieved specifically by passing wind"
+    },
+    {
+      "id": "sym_sensitivity_of_the_abdomen_to_the_slightest_jarring_or_motio",
+      "label": "Sensitivity of the abdomen to the slightest jarring …",
+      "section": "Abdomen",
+      "rubric": "Sensitivity of the abdomen to the slightest jarring or motion, such as riding in a vehicle"
+    },
+    {
+      "id": "sym_sensation_of_internal_trembling_or_fluttering_in_the_abdomen",
+      "label": "Sensation of internal trembling or fluttering in the…",
+      "section": "Abdomen",
+      "rubric": "Sensation of internal trembling or fluttering in the abdomen, not visible externally"
+    },
+    {
+      "id": "sym_abdominal_swelling_that_is_worse_after_eating_fruit_or_raw_v",
+      "label": "Abdominal swelling that is worse after eating fruit …",
+      "section": "Abdomen",
+      "rubric": "Abdominal swelling that is worse after eating fruit or raw vegetables"
+    },
+    {
+      "id": "sym_pain_in_the_umbilical_region_relieved_specifically_by_firm_p",
+      "label": "Pain in the umbilical region relieved specifically b…",
+      "section": "Abdomen",
+      "rubric": "Pain in the umbilical region relieved specifically by firm pressure or a tight belt"
+    },
+    {
+      "id": "sym_stool_that_is_small_hard_and_passed_in_separate_balls_like_s",
+      "label": "Stool that is small, hard, and passed in separate ba…",
+      "section": "Stool",
+      "rubric": "Stool that is small, hard, and passed in separate balls like sheep or goat droppings"
+    },
+    {
+      "id": "sym_involuntary_escape_of_stool_while_passing_gas_cannot_always_",
+      "label": "Involuntary escape of stool while passing gas, canno…",
+      "section": "Stool",
+      "rubric": "Involuntary escape of stool while passing gas, cannot always tell the two apart"
+    },
+    {
+      "id": "sym_painless_diarrhea_that_occurs_immediately_or_very_soon_after",
+      "label": "Painless diarrhea that occurs immediately or very so…",
+      "section": "Stool",
+      "rubric": "Painless diarrhea that occurs immediately or very soon after eating or drinking"
+    },
+    {
+      "id": "sym_external_hemorrhoids_that_protrude_and_must_be_pushed_back_i",
+      "label": "External hemorrhoids that protrude and must be pushe…",
+      "section": "Stool",
+      "rubric": "External hemorrhoids that protrude and must be pushed back in manually after a bowel movement"
+    },
+    {
+      "id": "sym_itching_around_the_anus_that_is_worse_at_night_especially_in",
+      "label": "Itching around the anus that is worse at night, espe…",
+      "section": "Stool",
+      "rubric": "Itching around the anus that is worse at night, especially in children (pinworm-type presentation)"
+    },
+    {
+      "id": "sym_stool_that_is_passed_only_after_great_and_prolonged_strainin",
+      "label": "Stool that is passed only after great and prolonged …",
+      "section": "Stool",
+      "rubric": "Stool that is passed only after great and prolonged straining, though the stool itself is not hard"
+    },
+    {
+      "id": "sym_sensation_that_the_rectum_remains_full_even_immediately_afte",
+      "label": "Sensation that the rectum remains full even immediat…",
+      "section": "Stool",
+      "rubric": "Sensation that the rectum remains full even immediately after a complete bowel movement"
+    },
+    {
+      "id": "sym_fissure_or_tear_at_the_anus_causing_sharp_cutting_pain_that_",
+      "label": "Fissure or tear at the anus causing sharp cutting pa…",
+      "section": "Stool",
+      "rubric": "Fissure or tear at the anus causing sharp cutting pain that lingers long after passing stool"
+    },
+    {
+      "id": "sym_diarrhea_alternating_with_constipation_on_a_recurring_basis_",
+      "label": "Diarrhea alternating with constipation on a recurrin…",
+      "section": "Stool",
+      "rubric": "Diarrhea alternating with constipation on a recurring basis, no consistent pattern"
+    },
+    {
+      "id": "sym_stool_that_is_blackish_and_tarry_in_appearance_a_serious_war",
+      "label": "Stool that is blackish and tarry in appearance, a se…",
+      "section": "Stool",
+      "rubric": "Stool that is blackish and tarry in appearance, a serious warning sign requiring urgent evaluation"
     }
   ]
 }
