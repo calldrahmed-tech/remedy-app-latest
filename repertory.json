@@ -1,7 +1,7 @@
 {
   "repertory": [
     {
-      "section": "Common",
+      "section": "Skin",
       "rubric": "Hair loss, hair falling",
       "triggers": [
         "hair fall",
@@ -74,7 +74,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Skin",
       "rubric": "Dandruff, scalp scaling",
       "triggers": [
         "dandruff",
@@ -104,7 +104,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Mouth",
       "rubric": "Bleeding gums",
       "triggers": [
         "bleeding gums",
@@ -128,7 +128,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Nose",
       "rubric": "Nosebleed, epistaxis",
       "triggers": [
         "nosebleed",
@@ -153,7 +153,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Sleep",
       "rubric": "Restless sleep, grinding teeth, talks or starts during sleep",
       "triggers": [
         "restless sleep",
@@ -178,7 +178,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Sleep",
       "rubric": "Insomnia from worry, overwork, or mental strain",
       "triggers": [
         "cannot sleep from worry",
@@ -202,7 +202,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Respiratory",
       "rubric": "Dry, spasmodic cough, worse at night",
       "triggers": [
         "dry cough worse night",
@@ -222,7 +222,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Respiratory",
       "rubric": "Loose, rattling cough with difficulty expectorating",
       "triggers": [
         "rattling cough",
@@ -246,7 +246,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Stomach",
       "rubric": "Nausea and vomiting with clean tongue",
       "triggers": [
         "constant nausea",
@@ -307,7 +307,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Skin",
       "rubric": "Itching, worse from warmth or scratching",
       "triggers": [
         "itching worse warmth",
@@ -326,7 +326,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Skin",
       "rubric": "Burning skin eruptions, better from cold applications",
       "triggers": [
         "burning eruptions better cold",
@@ -350,7 +350,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Skin",
       "rubric": "Boils or abscesses, acutely very sensitive to touch",
       "triggers": [
         "boils sensitive to touch",
@@ -369,7 +369,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Skin",
       "rubric": "Acne with pus, slow to heal, scarring tendency",
       "triggers": [
         "acne with pus",
@@ -390,7 +390,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Female",
       "rubric": "Menses too early and profuse",
       "triggers": [
         "menses too early",
@@ -409,7 +409,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Female",
       "rubric": "Menses too late, scanty, or suppressed",
       "triggers": [
         "menses too late",
@@ -717,7 +717,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Weakness",
       "rubric": "Heavy muscular weakness like lead, drooping eyelids, thick slow speech, during fever/flu",
       "triggers": [
         "arms and legs feel like lead",
@@ -767,7 +767,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Female",
       "rubric": "Bearing-down sensation in pelvis, as if organs will fall out",
       "triggers": [
         "bearing-down sensation",
@@ -792,7 +792,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Skin",
       "rubric": "Thick silvery or scaly skin eruption, psoriasis-like",
       "triggers": [
         "silvery scales",
@@ -812,7 +812,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Skin",
       "rubric": "Vesicular, itching rash from plant or chemical contact",
       "triggers": [
         "vesicular rash",
@@ -837,7 +837,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Skin",
       "rubric": "Chronic recurrent boils or skin eruptions, craves sweets or alcohol",
       "triggers": [
         "recurrent boils",
@@ -903,7 +903,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Respiratory",
       "rubric": "Sudden asthma or dyspnea, must sit upright, fear of death, worse midnight",
       "triggers": [
         "must sit upright to breathe",
@@ -928,7 +928,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Skin",
       "rubric": "Burns, better from cold applications, worse when cold is removed",
       "triggers": [
         "burns better cold",
@@ -948,7 +948,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Weakness",
       "rubric": "Faintness or collapse with cold clammy sweat, worse standing, better lying head low",
       "triggers": [
         "faintness on standing",
@@ -969,7 +969,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Head",
       "rubric": "Dizzy, dull, heavy head with drowsiness, worse damp weather, better pressure",
       "triggers": [
         "dull heavy headache",
@@ -992,7 +992,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Mind",
       "rubric": "Delirium or hallucinations with high fever, dilated pupils, does not recognize others",
       "triggers": [
         "sees imaginary things",
@@ -1025,7 +1025,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Head",
       "rubric": "Extreme sensitivity to light and noise, with sudden fever and flushed face",
       "triggers": [
         "light hurts her eyes",
@@ -1064,7 +1064,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Mouth",
       "rubric": "One cheek red one pale, better from being carried, irritable child",
       "triggers": [
         "one cheek red",
@@ -1089,7 +1089,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Throat",
       "rubric": "Lump in throat sensation, worse from liquids or soft food, better from swallowing something solid",
       "triggers": [
         "lump in throat worse liquids",
@@ -1178,7 +1178,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Head",
       "rubric": "Headache from cold draft to head, better from wrapping the head warmly",
       "triggers": [
         "headache from cold draft",
@@ -1195,7 +1195,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Skin",
       "rubric": "Every minor wound or cut suppurates, festers, or heals slowly",
       "triggers": [
         "cut gets infected",
@@ -1280,7 +1280,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Respiratory",
       "rubric": "Dry cough like a saw through wood, worse cold drinks better warm drinks, cannot lie with head low",
       "triggers": [
         "saw cutting through wood",
@@ -1305,7 +1305,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Head",
       "rubric": "Headache from occiput settling over the left eye, better hot application directly over the eye",
       "triggers": [
         "headache occiput settles left eye",
@@ -1323,7 +1323,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Stomach",
       "rubric": "Loud forceful belching gives no relief, craves sweets that aggravate the bloating",
       "triggers": [
         "loud belching gives no relief",
@@ -1348,7 +1348,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Throat",
       "rubric": "Sharp splinter or needle sensation in tonsil radiating to ear, extremely sensitive to cold air or draft",
       "triggers": [
         "splinter or needle stuck in tonsil",
@@ -1365,7 +1365,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Stomach",
       "rubric": "Infant vomits curdled milk in large lumps, falls into deep exhausted sleep after vomiting, wants milk again",
       "triggers": [
         "vomits milk in curdled lumps",
@@ -1381,7 +1381,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Abdomen",
       "rubric": "Abdomen drawn back toward the spine, sunken retracted abdominal wall, constipation with sheep-dung stool and weak wrists",
       "triggers": [
         "abdomen drawn back toward the spine",
@@ -1482,7 +1482,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Urinary",
       "rubric": "Urinary pain worse at the very end of urination, better as stream starts",
       "triggers": [
         "worse end of urination",
@@ -1498,7 +1498,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Respiratory",
       "rubric": "Coughing fits in rapid succession, hardly time to breathe between them",
       "triggers": [
         "coughing fits rapid succession",
@@ -1514,7 +1514,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Head",
       "rubric": "Periodic sick headache with visual disturbance before pain begins, intense GI burning mouth to anus",
       "triggers": [
         "visual disturbance before headache",
@@ -1530,7 +1530,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Respiratory",
       "rubric": "Wakes suddenly from sleep with suffocation, must sit up to breathe, anxious and fearful",
       "triggers": [
         "wakes suddenly with suffocation",
@@ -1594,7 +1594,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Respiratory",
       "rubric": "Chronic catarrh with thin yellow or greenish discharge, wandering pains worse in warm room",
       "triggers": [
         "thin yellow greenish discharge",
@@ -1610,7 +1610,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Generalities",
       "rubric": "Excessively sour smell to all discharges, vomit, stool, or perspiration",
       "triggers": [
         "sour smell to all discharges",
@@ -1626,7 +1626,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Urinary",
       "rubric": "Urine smells like violets, burning in kidneys and urinary tract, dark smoky urine",
       "triggers": [
         "urine smells like violets",
@@ -1642,7 +1642,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Glands",
       "rubric": "Worse at the seaside despite general benefit from sea air, hard glandular swellings",
       "triggers": [
         "worse at the seaside",
@@ -1658,7 +1658,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Weakness",
       "rubric": "Rapid emaciation with intense, overpowering offensive body odor, septic states",
       "triggers": [
         "overpowering offensive odor",
@@ -1690,7 +1690,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Generalities",
       "rubric": "Bleeding brought on by overexertion or straining, bright red and free-flowing, feels well otherwise",
       "triggers": [
         "bleeding from overexertion",
@@ -1706,7 +1706,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Head",
       "rubric": "Burning heat of hands and soles despite general chilliness, right-sided periodic headache",
       "triggers": [
         "burning heat of hands and soles",
@@ -1722,7 +1722,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Weakness",
       "rubric": "Extreme exhaustion, sleepy all day yet cannot sleep at night, weakness after exertion",
       "triggers": [
         "sleepy all day cannot sleep at night",
@@ -1770,7 +1770,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Abdomen",
       "rubric": "Sensation of broken glass or splinters in the rectum during and after stool",
       "triggers": [
         "broken glass in rectum",
@@ -1802,7 +1802,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Female",
       "rubric": "Bearing-down pains from sacrum shooting to pubic bone, profuse gushing bleeding with clots",
       "triggers": [
         "pains from sacrum to pubic bone",
@@ -1849,7 +1849,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Head",
       "rubric": "Throbbing headache with red face relieved suddenly by nosebleed",
       "triggers": [
         "headache relieved by nosebleed",
@@ -1879,7 +1879,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Weakness",
       "rubric": "Great prostration with involuntary stool while urinating, extreme sensitivity to bedding",
       "triggers": [
         "involuntary stool while urinating",
@@ -1910,7 +1910,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Appetite",
       "rubric": "Aversion to milk which now disagrees intensely, despite formerly enjoying it",
       "triggers": [
         "aversion to milk",
@@ -1941,7 +1941,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Female",
       "rubric": "Pulling, dragging sensation in the pelvis when standing, extreme fatigue relieved by sitting",
       "triggers": [
         "dragging sensation in pelvis standing",
@@ -1971,7 +1971,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Female",
       "rubric": "Sensation of pelvis falling apart or hips separating, must bind tightly for relief",
       "triggers": [
         "pelvis falling apart",
@@ -2003,7 +2003,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Respiratory",
       "rubric": "Presses hands against chest to support it during cough, dry cough worse entering warm room from cold",
       "triggers": [
         "presses hands against chest",
@@ -2019,7 +2019,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Abdomen",
       "rubric": "Violent cramping pains bending double, brought on by anger, better hot drinks worse cold drinks",
       "triggers": [
         "bend me double",
@@ -2036,7 +2036,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Nose",
       "rubric": "Nose blocked at night lying down, runs with thick yellow-green mucus during day, worse warm stuffy room",
       "triggers": [
         "nose stopped up at night",
@@ -2052,7 +2052,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Head",
       "rubric": "Right-sided headache that follows the course of the sun, better firm pressure and dark room",
       "triggers": [
         "headache follows the sun",
@@ -2068,7 +2068,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Respiratory",
       "rubric": "Air hunger, wants to be fanned, desires open windows/moving air, collapse with icy coldness of extremities",
       "triggers": [
         "air hunger wants fanned",
@@ -2092,7 +2092,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Head",
       "rubric": "Vertigo worse from looking up, better from pressure",
       "triggers": [
         "vertigo worse looking up",
@@ -2112,7 +2112,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Head",
       "rubric": "Vertigo worse from closing the eyes or turning in bed",
       "triggers": [
         "vertigo worse closing eyes",
@@ -2131,7 +2131,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Head",
       "rubric": "Throbbing headache as if head will burst, worse stooping or jarring, hot face, cold feet",
       "triggers": [
         "head will burst",
@@ -2152,7 +2152,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Stomach",
       "rubric": "Motion sickness, nausea vomiting from travel, better lying with eyes closed",
       "triggers": [
         "motion sickness",
@@ -2254,7 +2254,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Generalities",
       "rubric": "Offensive body odor, foul-smelling perspiration or secretions despite cleanliness",
       "triggers": [
         "offensive body odor",
@@ -2301,7 +2301,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Generalities",
       "rubric": "Severe aching bone pain as if broken or bruised, breakbone fever",
       "triggers": [
         "bone pain as if broken",
@@ -2338,7 +2338,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Nose",
       "rubric": "Thin, watery, acrid nasal discharge that excoriates the lip, worse cold air",
       "triggers": [
         "acrid nasal discharge",
@@ -2358,7 +2358,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Female",
       "rubric": "Exhaustion from repeated childbearing, everything feels heavy/an effort, dragging bearing-down sensation worse standing",
       "triggers": [
         "four kids in six years",
@@ -2376,7 +2376,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Extremities",
       "rubric": "Twitching/jerky involuntary movements of fingers and eyelids, formication or frostbite-like sensation despite warm room, clumsiness",
       "triggers": [
         "won't stop twitching",
@@ -2394,7 +2394,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Mind",
       "rubric": "Recent grief with alternating laughing/weeping, pulls away from being hugged, lump in throat worse empty swallowing better eating solid food",
       "triggers": [
         "laughing with friends one moment then crying",
@@ -2412,7 +2412,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Mind",
       "rubric": "Extreme sensitivity to grating/penetrating sounds (silk, paper) sets teeth on edge, sensation of brain loose/sloshing in skull",
       "triggers": [
         "tissue paper being crumpled",
@@ -2429,7 +2429,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Throat",
       "rubric": "Professional voice user whose voice gives out after use, joint pain worse any movement better complete rest, loses train of thought writing",
       "triggers": [
         "voice just gives out",
@@ -2446,7 +2446,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Abdomen",
       "rubric": "Anticipatory diarrhea before important events despite over-preparation, vertigo/fear at heights, better open air",
       "triggers": [
         "important meeting coming up",
@@ -2469,7 +2469,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Skin",
       "rubric": "Hives with intolerable itching, puffy edematous swelling, worse warmth of bed, better cold, anxious and restless",
       "triggers": [
         "itch so much its unbearable",
@@ -2486,7 +2486,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Skin",
       "rubric": "Sudden hives/urticaria, burning and stinging rather than itching, often from shellfish, better cold applications",
       "triggers": [
         "hives came up suddenly",
@@ -2504,7 +2504,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Weakness",
       "rubric": "Emaciation especially of the legs while the face stays round and full; irritable, complains constantly",
       "triggers": [
         "legs have gone quite thin",
@@ -2521,7 +2521,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Head",
       "rubric": "Migraine with visual aura (zigzag lines/blur) before pain begins, right-sided, vomiting of greasy/bilious fluid eases the headache",
       "triggers": [
         "zigzag lines in my vision",
@@ -2538,7 +2538,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Eye",
       "rubric": "Hot burning acrid tears that scald the cheeks, bland non-burning nasal discharge, worse light and wind",
       "triggers": [
         "hot, burning tears",
@@ -2556,7 +2556,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Respiratory",
       "rubric": "Croupy barking cough waking child at night, better sitting up and warm drinks",
       "triggers": [
         "croupy cough",
@@ -2576,7 +2576,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Respiratory",
       "rubric": "Asthma or cough worse damp weather, rattling with greenish mucus, better dry warmth",
       "triggers": [
         "asthma worse damp",
@@ -2596,7 +2596,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Ear",
       "rubric": "Ear pain worse swallowing or cold drafts, weepy and clingy, wants to be carried",
       "triggers": [
         "ear pain worse swallowing",
@@ -2621,7 +2621,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Mind",
       "rubric": "Panic or claustrophobia in closed rooms, must open window, better open air",
       "triggers": [
         "panic in closed rooms",
@@ -2642,7 +2642,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Generalities",
       "rubric": "Better in open air, worse in a warm closed room",
       "triggers": [
         "better in the evening when we take her out for some air",
@@ -2661,7 +2661,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Weakness",
       "rubric": "Collapse and exhaustion after acute illness (food poisoning, diarrhea), cold extremities but craves air",
       "triggers": [
         "wrung out after food poisoning",
@@ -2679,7 +2679,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Mouth",
       "rubric": "Teething, one cheek red and hot, other pale, impossible to satisfy, wants to be carried",
       "triggers": [
         "one cheek red and hot",
@@ -2735,7 +2735,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Abdomen",
       "rubric": "Retracted/drawn-in abdomen with severe colic, mental dullness, weakness of limbs",
       "triggers": [
         "abdomen drawn inward",
@@ -2754,7 +2754,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Extremities",
       "rubric": "Joint stiffness with tendon contractures, worse cold dry weather, better warmth; progressive weakness; sympathetic, emotional",
       "triggers": [
         "joint stiffness with contractures",
@@ -2771,7 +2771,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Ear",
       "rubric": "Sharp, stabbing, bursting ear pain, red and hot, worse warmth and lying on affected side",
       "triggers": [
         "stabbing pain in the ear",
@@ -2791,7 +2791,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Appetite",
       "rubric": "Craving for salt or salty foods",
       "triggers": [
         "craving for salt",
@@ -3002,7 +3002,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Appetite",
       "rubric": "Craves eggs, sweats on head during sleep, slow development in children",
       "triggers": [
         "craves eggs",
@@ -3039,7 +3039,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Generalities",
       "rubric": "Chilly, sluggish, fair/fat/flabby constitution, craves sweets, slow to warm up",
       "triggers": [
         "chilly all the time",
@@ -3107,7 +3107,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Mind",
       "rubric": "Fear of downward motion, vertigo on looking down or downward stairs",
       "triggers": [
         "fear of downward motion",
@@ -3123,7 +3123,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Generalities",
       "rubric": "Extreme dryness of mucous membranes, thirstless, confusion of mind",
       "triggers": [
         "dryness of mucous membranes",
@@ -3143,7 +3143,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Weakness",
       "rubric": "Extreme weakness and apathy, desire for sweets, worse from sun",
       "triggers": [
         "extreme weakness desire for sweets",
@@ -3159,7 +3159,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Sleep",
       "rubric": "Loud, snoring, stertorous breathing during sleep or coma",
       "triggers": [
         "loud snoring",
@@ -3197,7 +3197,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Mind",
       "rubric": "Indecisive with financial anxiety, cracked skin fissures, poor tooth enamel, hard painless nodules, joints crack loudly",
       "triggers": [
         "constantly anxious about money",
@@ -3932,7 +3932,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Appetite",
       "rubric": "Desire for coffee, wine, or stimulants, often to excess",
       "triggers": [
         "drinking too much coffee",
@@ -3949,7 +3949,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Abdomen",
       "rubric": "First part of stool hard and difficult, remainder soft",
       "triggers": [
         "hard first stool",
@@ -4349,7 +4349,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Glands",
       "rubric": "Stony hard glandular swellings, no suppuration, indurated tissue",
       "triggers": [
         "stony hard glandular swellings",
@@ -4367,7 +4367,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Glands",
       "rubric": "Chronic glandular swelling, hard nodules, slow to suppurate",
       "triggers": [
         "glandular swelling",
@@ -4385,7 +4385,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Weakness",
       "rubric": "Chronic weakness, chilly, offensive sweaty feet, slow-healing wounds",
       "triggers": [
         "sweaty feet",
@@ -5319,7 +5319,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Appetite",
       "rubric": "Craves ice or ice-cold drinks and food",
       "triggers": [
         "craves ice",
@@ -5339,7 +5339,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Appetite",
       "rubric": "Aversion to fat, rich, or greasy food",
       "triggers": [
         "cannot stand fatty food",
@@ -5358,7 +5358,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Appetite",
       "rubric": "Craves eggs",
       "triggers": [
         "craves eggs",
@@ -5373,7 +5373,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Appetite",
       "rubric": "Milk disagrees, worse after drinking milk",
       "triggers": [
         "milk disagrees with him",
@@ -5392,7 +5392,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Generalities",
       "rubric": "Sensation as if a nail were driven into the part, localized pain",
       "triggers": [
         "like a nail driven into",
@@ -5415,7 +5415,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Throat",
       "rubric": "Sensation of a hair on the tongue or in the throat",
       "triggers": [
         "feels like a hair on my tongue",
@@ -5434,7 +5434,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Appetite",
       "rubric": "Craving for spicy or highly seasoned food",
       "triggers": [
         "craves spicy food",
@@ -5481,7 +5481,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Throat",
       "rubric": "Sudden loss of voice or inability to speak from emotion",
       "triggers": [
         "suddenly lost her voice",
@@ -5748,7 +5748,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Respiratory",
       "rubric": "Sensation as if the chest were bound tightly by an iron band or hoop",
       "triggers": [
         "like an iron band around my chest",
@@ -5768,7 +5768,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Eye",
       "rubric": "Styes recurring, especially on the same eyelid",
       "triggers": [
         "keeps getting styes on the same eyelid",
@@ -5787,7 +5787,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Ear",
       "rubric": "Roaring or ringing in the ears with deafness",
       "triggers": [
         "roaring in the ears",
@@ -5806,7 +5806,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Nose",
       "rubric": "Frequent, easy nosebleeds",
       "triggers": [
         "nosebleeds very easily",
@@ -5825,7 +5825,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Stomach",
       "rubric": "Vomiting of food immediately after eating or drinking",
       "triggers": [
         "vomits right after eating",
@@ -5844,7 +5844,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Stomach",
       "rubric": "Sensation as if a stone or heavy weight lay in the stomach after eating",
       "triggers": [
         "feels like a stone in my stomach",
@@ -5878,7 +5878,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Urinary",
       "rubric": "Frequent urging to urinate with scanty, painful output",
       "triggers": [
         "constant urge to urinate with hardly anything coming out",
@@ -5895,7 +5895,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Urinary",
       "rubric": "Urine strong-smelling, ammonia-like odor",
       "triggers": [
         "urine smells strongly of ammonia",
@@ -5910,7 +5910,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Female",
       "rubric": "Menses too late and scanty",
       "triggers": [
         "periods are late and light",
@@ -5929,7 +5929,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Female",
       "rubric": "Menses with dark, clotted blood",
       "triggers": [
         "periods with dark clots",
@@ -5982,7 +5982,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Skin",
       "rubric": "Large, jagged warts that bleed easily",
       "triggers": [
         "big jagged wart that bleeds",
@@ -6001,7 +6001,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Skin",
       "rubric": "Cracked skin at the corners of the mouth",
       "triggers": [
         "cracks at the corners of the mouth",
@@ -6060,7 +6060,7 @@
       ]
     },
     {
-      "section": "Common",
+      "section": "Generalities",
       "rubric": "Craves fresh air constantly, must have windows open even in cold weather",
       "triggers": [
         "always wants the window open",

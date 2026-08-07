@@ -143,8 +143,28 @@
     <button class="sample-chip" data-sample="fever with chill restlessness">Fever with chill</button>
     <button class="sample-chip" data-sample="malabsorption weight loss despite good appetite fecal elastase low">Malabsorption</button>
     <button class="sample-chip" data-sample="back pain worse with motion">Back pain, worse motion</button>
+    <button type="button" id="browseRepertoryBtn" class="sample-chip browse-repertory-chip">📖 Browse by Chapter</button>
   </div>
   <div id="statusMsg"></div>
+
+  <div id="browseRepertoryModal" class="settings-modal" style="display:none;">
+    <div class="settings-modal-inner browse-modal-inner">
+      <div class="settings-modal-header">
+        <span id="browseModalTitle">📖 Browse Repertory</span>
+        <button id="browseCloseBtn" class="settings-close">✕</button>
+      </div>
+      <div id="browseChapterList" class="browse-chapter-list"></div>
+      <div id="browseRubricPane" class="browse-rubric-pane" style="display:none;">
+        <button type="button" id="browseBackBtn" class="patient-back-btn">← All chapters</button>
+        <input type="search" id="browseRubricSearch" class="settings-input" placeholder="Search inside this chapter…" autocomplete="off">
+        <div id="browseRubricList" class="browse-rubric-list"></div>
+      </div>
+      <div id="browseRemedyPane" class="browse-remedy-pane" style="display:none;">
+        <button type="button" id="browseRubricBackBtn" class="patient-back-btn">← Back</button>
+        <div id="browseRemedyContent"></div>
+      </div>
+    </div>
+  </div>
 
   <div id="protocolResults"></div>
   <div id="results" style="display:none;"></div>
@@ -160,6 +180,7 @@
   <div class="f-item">💚 <div><b>Stay regular, stay natural.</b>Homeopathy stimulates your body's natural healing.</div></div>
   <div class="f-item">🛡️ <div><b>Safe · Natural · Effective</b>No side effects when properly indicated.</div></div>
   <div class="f-item">📋 <div><b>Note:</b>This is a suggested remedy plan. Consult your physician for personalized treatment.</div></div>
+  <div class="f-item footer-legal-link"><a href="privacy.html">🔒 Privacy Policy</a></div>
 </footer>
 
 <script src="script.js"></script>
@@ -168,5 +189,6 @@
 <script src="auth-ui.js"></script>
 <script src="patient-info.js"></script>
 <script src="patient-records.js"></script>
+<script src="browse-repertory.js"></script>
 </body>
 </html>

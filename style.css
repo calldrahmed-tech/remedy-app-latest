@@ -145,6 +145,18 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .patient-visit-remedy { font-weight: 700; font-size: 0.88rem; color: var(--ink); margin-top: 2px; }
 .patient-visit-symptoms { font-size: 0.78rem; color: var(--muted); margin-top: 4px; line-height: 1.4; }
 
+/* ---------- BROWSE REPERTORY BY CHAPTER ---------- */
+.browse-repertory-chip { background: #eef6f1; border-color: var(--green-1); color: var(--green-2); font-weight: 700; }
+.browse-modal-inner { max-width: 460px; }
+.browse-chapter-list { max-height: 420px; overflow-y: auto; margin-top: 4px; }
+.browse-rubric-pane { margin-top: 4px; }
+.browse-rubric-list { max-height: 340px; overflow-y: auto; margin-top: 10px; }
+.browse-rubric-name { font-weight: 600; font-size: 0.85rem; line-height: 1.35; }
+.browse-remedy-pane { margin-top: 4px; }
+.browse-remedy-item { display: flex; align-items: center; gap: 10px; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+.browse-remedy-stars { color: var(--green-1); font-size: 0.9rem; letter-spacing: 1px; flex-shrink: 0; }
+.browse-remedy-name { font-weight: 700; font-size: 0.9rem; color: var(--ink); }
+
 /* ---------- SAMPLES + STATUS ---------- */
 .samples-bar { padding: 14px 20px 4px; font-size: 0.8rem; }
 .samples-bar .lbl { color: var(--muted); margin-bottom: 6px; }
@@ -283,6 +295,8 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 footer.app-footer { background: linear-gradient(90deg, #e8f5ec, #ecf7ee); padding: 13px 20px; text-align: center; font-size: 0.74rem; font-weight: 700; color: #1e6b3a; }
 footer.app-footer .f-item { display: flex; align-items: center; gap: 7px; color: #275c3f; margin-bottom: 6px; }
 footer.app-footer .f-item b { display: block; color: var(--navy); font-size: 0.76rem; }
+.footer-legal-link { justify-content: center; margin-top: 8px; margin-bottom: 0; }
+.footer-legal-link a { color: #1e6b3a; text-decoration: underline; font-size: 0.76rem; }
 .disclaimer { font-size: 0.68rem; color: var(--muted); padding: 12px 20px; text-align: center; }
 
 /* ---------- AI ASSIST BUTTON (ai-assist.js) ---------- */
