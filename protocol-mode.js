@@ -642,13 +642,13 @@ function runProtocolSearch() {
   }
 
   if (!html) {
-    protocolResultsEl.innerHTML = `<div class="msg">No confident protocol match for this combination — try adding a more specific chief symptom, or switch to Full Repertory mode for full-text case-taking.</div>`;
+    protocolResultsEl.innerHTML = `<div class="msg">No confident protocol match for this combination — try adding a more specific chief symptom, or switch to Expert Repertory mode for full-text case-taking.</div>`;
     return;
   }
 
   html += potencyGuideSection("expert");
   if (supportiveRemedy) html += renderSupportiveCare(supportiveRemedy, supportiveBiochemicSalts, supportiveTests);
-  html += `<div class="caution">⚠ Expert Protocol gives a fast, symptom-merit-based suggestion from chief complaints only — it is not a substitute for full case-taking. Switch to Full Repertory mode for a complete repertorized analysis.</div>`;
+  html += `<div class="caution">⚠ Expert Protocol gives a fast, symptom-merit-based suggestion from chief complaints only — it is not a substitute for full case-taking. Switch to Expert Repertory mode for a complete repertorized analysis.</div>`;
 
   protocolResultsEl.innerHTML = html;
 }

@@ -1658,20 +1658,27 @@ function runSearch() {
   </div>`;
   html += renderClinicalPearl(main.remedy);
 
-  /* ---------- 2. ALTERNATIVE — collapsed by default ---------- */
-  if (close) {
+  /* ---------- 2. ALTERNATIVES — collapsed by default. Shows up to 2 other candidates (not
+     just 1) with a one-line differentiating question for each, so a doctor gets a short list
+     to choose from instead of only a single forced answer. A third candidate only appears
+     above the same CONFIDENCE_FLOOR used for the main pick — otherwise it's just noise. */
+  const third = remedyResults[2] && remedyResults[2].percent >= CONFIDENCE_FLOOR ? remedyResults[2] : null;
+  const alternatives = [close, third].filter(Boolean);
+  if (alternatives.length) {
     html += `<div class="collapsible-section neutral">
       <button class="collapsible-toggle" onclick="toggleSection('alt-section')">
         <span>🔄 Not satisfied with result?</span>
-        <span class="ct-link"><span id="alt-section-arrow">▶</span> View alternative option</span>
+        <span class="ct-link"><span id="alt-section-arrow">▶</span> View ${alternatives.length > 1 ? "other options" : "alternative option"}</span>
       </button>
       <div id="alt-section" class="collapsible-content" style="display:none;">
-        <div class="alt-remedy-name display">${esc(close.remedy.name)}</div>
-        <ul class="alt-reasons">
-          <li>${esc(shortKeynote(close))}</li>
-          <li>Consider this if the main remedy doesn't fit after a few doses</li>
-        </ul>
-        <button class="md-cta neutral-cta">View alternative option</button>
+        ${alternatives.map(alt => `
+          <div class="alt-remedy-name display">${esc(alt.remedy.name)} <span style="font-size:0.6em;font-weight:normal;opacity:0.7;">(${alt.percent}% match)</span></div>
+          <ul class="alt-reasons">
+            <li>${esc(shortKeynote(alt))}</li>
+          </ul>
+          <div class="support-line" style="margin-bottom:10px;">${differentiatingQuestion(main, alt) || ""}</div>
+        `).join("")}
+        <button class="md-cta neutral-cta">View ${alternatives.length > 1 ? "other options" : "alternative option"}</button>
       </div>
     </div>`;
   }
@@ -1681,7 +1688,7 @@ function runSearch() {
   // detectDiseaseProtocol() matched a named condition. That's now Expert Protocol mode's job
   // (its disease-name shortcuts surface the exact same curated combination, more prominently)
   // — showing it here too duplicated the same content across both modes and blurred the split
-  // between "Full Repertory: pure rubric/materia-medica analysis" and "Expert Protocol: curated
+  // between "Expert Repertory: pure rubric/materia-medica analysis" and "Expert Protocol: curated
   // named-condition protocols." diseaseProtocol itself is still detected and still feeds the
   // nosode suggestion below and the remedy-scoring boost elsewhere — only this card's rendering
   // was removed.
