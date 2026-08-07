@@ -8795,7 +8795,11 @@
         "loves a good debate",
         "could talk for hours about philosophy",
         "not the tidiest person",
-        "careless about appearance"
+        "careless about appearance",
+        "could argue philosophy or politics for hours",
+        "find ideas fascinating",
+        "absolute mess",
+        "doesn't bother me one bit"
       ],
       "remedies": [
         {
@@ -12811,6 +12815,1162 @@
           "grade": 1
         }
       ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Dreads failure so intensely that they avoid attempting new tasks entirely",
+      "triggers": [
+        "avoids trying new things fear of failing",
+        "so afraid of failing avoids attempting at all"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Yielding, easily persuaded, submits to the will of others against own judgment",
+      "triggers": [
+        "easily persuaded against own judgment",
+        "yields to others will passively"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Averse to undertaking anything, though capable, from lack of self-reliance",
+      "triggers": [
+        "capable but lacks self reliance to start",
+        "avoids undertaking tasks despite ability"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Dwells on business affairs even while trying to rest, cannot switch off from work",
+      "triggers": [
+        "thinks about business even while resting",
+        "cannot stop thinking about work to relax"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 3
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Extremely punctual and orderly, distressed by any deviation from schedule",
+      "triggers": [
+        "extremely punctual distressed by delays",
+        "upset by any deviation from schedule"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Dutiful to the point of self-neglect, always puts others' needs first",
+      "triggers": [
+        "neglects own needs for others",
+        "always puts family or work before self"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Rigid, set in their ways, resistant to any change in routine or opinion",
+      "triggers": [
+        "very rigid resistant to change",
+        "set in their ways refuses new approach"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        },
+        {
+          "id": "thuj",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Feels responsible for the wellbeing of the whole family, carries the emotional burden alone",
+      "triggers": [
+        "feels responsible for entire family's wellbeing",
+        "carries the family's emotional burden alone"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Prefers solitude and independence, resents being needed or depended upon",
+      "triggers": [
+        "resents being needed by others",
+        "prefers independence dislikes being depended on"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 3
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Loses interest in hobbies or activities that were once enjoyed, without clear cause",
+      "triggers": [
+        "lost interest in former hobbies",
+        "no longer enjoys activities liked before"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Bursts of temper that come on suddenly and subside just as quickly",
+      "triggers": [
+        "sudden temper outburst fades quickly",
+        "flares up then calms down fast"
+      ],
+      "remedies": [
+        {
+          "id": "cham",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Cannot tolerate being told what to do, rebels against authority even when reasonable",
+      "triggers": [
+        "rebels against being told what to do",
+        "cannot accept authority even when reasonable"
+      ],
+      "remedies": [
+        {
+          "id": "anac",
+          "grade": 1
+        },
+        {
+          "id": "tarent",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Apathy and drowsiness following an injury, with strangely little complaint of pain",
+      "triggers": [
+        "strangely calm and drowsy after injury",
+        "little complaint of pain despite injury"
+      ],
+      "remedies": [
+        {
+          "id": "op",
+          "grade": 3
+        },
+        {
+          "id": "arn",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Denies being ill or hurt even when visibly suffering, insists they are fine",
+      "triggers": [
+        "denies being hurt though visibly injured",
+        "insists fine despite clear suffering"
+      ],
+      "remedies": [
+        {
+          "id": "arn",
+          "grade": 3
+        },
+        {
+          "id": "op",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Confusion about identity or location after a head injury or concussion",
+      "triggers": [
+        "confused about where they are after head injury",
+        "disoriented following a concussion"
+      ],
+      "remedies": [
+        {
+          "id": "nat-sulph",
+          "grade": 2
+        },
+        {
+          "id": "arn",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Slow to answer, gives short one-word replies, mentally sluggish but not confused",
+      "triggers": [
+        "gives only short one word answers",
+        "slow to respond but understands fine"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 2
+        },
+        {
+          "id": "plb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Marked improvement in mood and energy from vigorous physical activity",
+      "triggers": [
+        "feels much better after vigorous exercise",
+        "mood lifts with intense physical activity"
+      ],
+      "remedies": [
+        {
+          "id": "zinc",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Talks to themselves quietly, unaware they are doing it",
+      "triggers": [
+        "talks to self without realizing it",
+        "mutters to themselves unaware"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "nat-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Weak memory for recent events though memory for the distant past remains sharp",
+      "triggers": [
+        "forgets recent things but remembers old memories well",
+        "recent memory poor distant memory intact"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 1
+        },
+        {
+          "id": "bar-c",
+          "grade": 1
+        },
+        {
+          "id": "nat-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Impatient with slowness in others, finishes their sentences or interrupts constantly",
+      "triggers": [
+        "interrupts others impatiently",
+        "finishes other people's sentences"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "arg-n",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Marked startle response, jumps at the slightest unexpected touch or sound",
+      "triggers": [
+        "jumps at slightest touch",
+        "startles easily at small sounds"
+      ],
+      "remedies": [
+        {
+          "id": "bor",
+          "grade": 2
+        },
+        {
+          "id": "caust",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Cheerful and sociable despite significant physical suffering, hides distress behind a smile",
+      "triggers": [
+        "stays cheerful despite significant pain",
+        "hides distress behind a smile"
+      ],
+      "remedies": [
+        {
+          "id": "ign",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Prefers dim light, worse from bright artificial light indoors",
+      "triggers": [
+        "prefers dim lighting",
+        "worse from bright indoor lights"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Anxious about small errors, re-checks completed work obsessively for mistakes",
+      "triggers": [
+        "obsessively rechecks work for errors",
+        "anxious over small mistakes rechecks constantly"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Feels a strong urge to travel or change scenery when distressed",
+      "triggers": [
+        "wants to travel when upset",
+        "urge to get away and change scenery when stressed"
+      ],
+      "remedies": [
+        {
+          "id": "tub",
+          "grade": 2
+        },
+        {
+          "id": "med",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache with a sensation as though a tight band were placed above the eyes",
+      "triggers": [
+        "band sensation above the eyes",
+        "tight strap feeling across the forehead"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "plat",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache that begins in the back of the head and moves forward over the eye",
+      "triggers": [
+        "headache starts at back moves to the eye",
+        "pain travels from occiput to over the eye"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "lac-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache accompanied by a strong desire to press the head against something hard",
+      "triggers": [
+        "wants to press head against something hard",
+        "presses head into pillow or wall for relief"
+      ],
+      "remedies": [
+        {
+          "id": "hell",
+          "grade": 2
+        },
+        {
+          "id": "apis",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Vertigo on rising from a stooping position",
+      "triggers": [
+        "dizzy on standing up from bending over",
+        "vertigo after stooping then rising"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Vertigo relieved by eating, worse from an empty stomach",
+      "triggers": [
+        "vertigo better after eating",
+        "dizziness worse on an empty stomach"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Skin that bruises easily from the slightest injury, discoloration out of proportion",
+      "triggers": [
+        "bruises very easily minor bump",
+        "bruise disproportionate to slight injury"
+      ],
+      "remedies": [
+        {
+          "id": "arn",
+          "grade": 3
+        },
+        {
+          "id": "led",
+          "grade": 1
+        },
+        {
+          "id": "ham",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Small pimples or acne that are painful to touch though small in size",
+      "triggers": [
+        "small pimples very painful to touch",
+        "tiny acne spots but very tender"
+      ],
+      "remedies": [
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "kali-bi",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Dry, scaly skin that worsens noticeably in winter and improves in summer",
+      "triggers": [
+        "skin much worse in winter better summer",
+        "dry scaly skin seasonal worse cold months"
+      ],
+      "remedies": [
+        {
+          "id": "petr",
+          "grade": 2
+        },
+        {
+          "id": "psor",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Chapped, cracked lips that bleed easily, especially in cold weather",
+      "triggers": [
+        "lips crack and bleed in cold weather",
+        "chapped bleeding lips winter"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "petr",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Corns or calluses that are painful and tend to recur after removal",
+      "triggers": [
+        "painful corns keep coming back",
+        "calluses recur after being removed"
+      ],
+      "remedies": [
+        {
+          "id": "ant-c",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Cough that is dry during the day and loose or productive at night",
+      "triggers": [
+        "dry cough by day loose at night",
+        "cough changes character day to night"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "caust",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Chest pain that is sharp and stitching, worse from the slightest movement or breath",
+      "triggers": [
+        "sharp stitching chest pain worse breathing",
+        "stabbing chest pain worse any motion"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 3
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Cough with a sensation of rawness or soreness behind the breastbone",
+      "triggers": [
+        "rawness behind the breastbone when coughing",
+        "soreness under sternum from coughing"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Nosebleed that occurs regularly with the onset of the menstrual period, substituting for the flow",
+      "triggers": [
+        "nosebleed instead of period",
+        "nose bleeds when period should start"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Uterine or ovarian pain that is markedly relieved by firm pressure or lying on the abdomen",
+      "triggers": [
+        "pelvic pain better lying on stomach",
+        "ovary pain relieved by firm pressure"
+      ],
+      "remedies": [
+        {
+          "id": "coloc",
+          "grade": 2
+        },
+        {
+          "id": "mag-p",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Menses accompanied by marked bloating and fluid retention beforehand",
+      "triggers": [
+        "bloats before period fluid retention",
+        "premenstrual water retention and swelling"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "First menses delayed well beyond the usual age, with poor physical development",
+      "triggers": [
+        "first period very delayed",
+        "late onset of menstruation with poor development"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "calc-c",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Pain in the great toe joint, worse from the slightest touch or jarring",
+      "triggers": [
+        "big toe joint very painful to touch",
+        "great toe pain worse jarring"
+      ],
+      "remedies": [
+        {
+          "id": "coloc",
+          "grade": 1
+        },
+        {
+          "id": "led",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Cramping of the calf muscles, especially at night or when stretching the leg in bed",
+      "triggers": [
+        "calf cramps at night",
+        "leg cramps when stretching in bed"
+      ],
+      "remedies": [
+        {
+          "id": "cupr",
+          "grade": 3
+        },
+        {
+          "id": "mag-p",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Painless paralysis or weakness affecting one specific limb only",
+      "triggers": [
+        "one limb weak or paralyzed painlessly",
+        "paralysis confined to a single limb no pain"
+      ],
+      "remedies": [
+        {
+          "id": "caust",
+          "grade": 2
+        },
+        {
+          "id": "plb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Trembling of the legs on going up or down stairs",
+      "triggers": [
+        "legs tremble climbing stairs",
+        "shaky legs going downstairs"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "agar",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Diarrhea that is worse specifically in the early morning, driving the patient out of bed",
+      "triggers": [
+        "diarrhea early morning drives out of bed",
+        "must rush to bathroom early morning bowels"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 3
+        },
+        {
+          "id": "nat-sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Stool that is alternately constipated and loose, never normal for long",
+      "triggers": [
+        "alternates between constipation and diarrhea",
+        "bowel movements swing between hard and loose"
+      ],
+      "remedies": [
+        {
+          "id": "ant-c",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Abdominal pain relieved specifically by belching, worse until gas is brought up",
+      "triggers": [
+        "belly pain relieved by belching",
+        "pain until able to burp"
+      ],
+      "remedies": [
+        {
+          "id": "carb-v",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Sensation of a lump or ball rolling around in the abdomen",
+      "triggers": [
+        "feels like a ball rolling in the belly",
+        "lump sensation moving around abdomen"
+      ],
+      "remedies": [
+        {
+          "id": "croc",
+          "grade": 2
+        },
+        {
+          "id": "nux-m",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Urine that deposits a thick, brick-dust red sediment on standing",
+      "triggers": [
+        "brick dust red sediment in urine",
+        "urine leaves reddish sandy deposit"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 3
+        },
+        {
+          "id": "sars",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Burning in the urethra that continues after urination has finished",
+      "triggers": [
+        "burning continues after urinating",
+        "urethral burning persists after urine passed"
+      ],
+      "remedies": [
+        {
+          "id": "sars",
+          "grade": 2
+        },
+        {
+          "id": "canth",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Extreme pain in the ear at night that is worse from any warmth, better from cold",
+      "triggers": [
+        "ear pain worse from warmth at night",
+        "ear ache better from cold worse warm"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "cham",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Redness confined to a small triangular patch on the white of the eye",
+      "triggers": [
+        "small red triangular patch on the eye",
+        "triangular reddened area on sclera"
+      ],
+      "remedies": [
+        {
+          "id": "euphr",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Sneezing fits triggered specifically by exposure to dust",
+      "triggers": [
+        "sneezing fits from dust exposure",
+        "dust triggers repeated sneezing"
+      ],
+      "remedies": [
+        {
+          "id": "sabad",
+          "grade": 2
+        },
+        {
+          "id": "all-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Hawking of mucus constantly, worse in the morning on waking",
+      "triggers": [
+        "constant hawking of mucus in the morning",
+        "clears throat repeatedly on waking"
+      ],
+      "remedies": [
+        {
+          "id": "kali-bi",
+          "grade": 2
+        },
+        {
+          "id": "hydr",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Bad breath that is noticeable to others though the patient cannot smell it themselves",
+      "triggers": [
+        "others notice bad breath but patient cannot smell it",
+        "offensive breath unaware of it themselves"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "kreos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Swelling of glands that comes on rapidly with acute inflammation and heat",
+      "triggers": [
+        "glands swell up fast with heat and inflammation",
+        "rapid painful glandular swelling acute"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weight",
+      "category": "Generals",
+      "rubric": "Sudden and unexplained weight loss despite no change in appetite or diet",
+      "triggers": [
+        "losing weight suddenly no diet change",
+        "unexplained rapid weight loss same appetite"
+      ],
+      "remedies": [
+        {
+          "id": "iod",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Weakness",
+      "category": "Generals",
+      "rubric": "Weakness confined mostly to the morning, improving as the day progresses",
+      "triggers": [
+        "weakest in the morning better as day goes on",
+        "morning weakness improves through the day"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "lac-c",
+          "grade": 1
+        }
+      ]
     }
   ],
   "chiefSymptomTags": [
@@ -16551,6 +17711,366 @@
       "label": "Hard, distended abdomen in an infant with colic, wor…",
       "section": "Abdomen",
       "rubric": "Hard, distended abdomen in an infant with colic, worse after nursing"
+    },
+    {
+      "id": "sym_dreads_failure_so_intensely_that_they_avoid_attempting_new_t",
+      "label": "Dreads failure so intensely that they avoid attempti…",
+      "section": "Mind",
+      "rubric": "Dreads failure so intensely that they avoid attempting new tasks entirely"
+    },
+    {
+      "id": "sym_yielding_easily_persuaded_submits_to_the_will_of_others_agai",
+      "label": "Yielding, easily persuaded, submits to the will of o…",
+      "section": "Mind",
+      "rubric": "Yielding, easily persuaded, submits to the will of others against own judgment"
+    },
+    {
+      "id": "sym_averse_to_undertaking_anything_though_capable_from_lack_of_s",
+      "label": "Averse to undertaking anything, though capable, from…",
+      "section": "Mind",
+      "rubric": "Averse to undertaking anything, though capable, from lack of self-reliance"
+    },
+    {
+      "id": "sym_dwells_on_business_affairs_even_while_trying_to_rest_cannot_",
+      "label": "Dwells on business affairs even while trying to rest…",
+      "section": "Mind",
+      "rubric": "Dwells on business affairs even while trying to rest, cannot switch off from work"
+    },
+    {
+      "id": "sym_extremely_punctual_and_orderly_distressed_by_any_deviation_f",
+      "label": "Extremely punctual and orderly, distressed by any de…",
+      "section": "Mind",
+      "rubric": "Extremely punctual and orderly, distressed by any deviation from schedule"
+    },
+    {
+      "id": "sym_dutiful_to_the_point_of_self_neglect_always_puts_others_need",
+      "label": "Dutiful to the point of self-neglect, always puts ot…",
+      "section": "Mind",
+      "rubric": "Dutiful to the point of self-neglect, always puts others' needs first"
+    },
+    {
+      "id": "sym_rigid_set_in_their_ways_resistant_to_any_change_in_routine_o",
+      "label": "Rigid, set in their ways, resistant to any change in…",
+      "section": "Mind",
+      "rubric": "Rigid, set in their ways, resistant to any change in routine or opinion"
+    },
+    {
+      "id": "sym_feels_responsible_for_the_wellbeing_of_the_whole_family_carr",
+      "label": "Feels responsible for the wellbeing of the whole fam…",
+      "section": "Mind",
+      "rubric": "Feels responsible for the wellbeing of the whole family, carries the emotional burden alone"
+    },
+    {
+      "id": "sym_prefers_solitude_and_independence_resents_being_needed_or_de",
+      "label": "Prefers solitude and independence, resents being nee…",
+      "section": "Mind",
+      "rubric": "Prefers solitude and independence, resents being needed or depended upon"
+    },
+    {
+      "id": "sym_loses_interest_in_hobbies_or_activities_that_were_once_enjoy",
+      "label": "Loses interest in hobbies or activities that were on…",
+      "section": "Mind",
+      "rubric": "Loses interest in hobbies or activities that were once enjoyed, without clear cause"
+    },
+    {
+      "id": "sym_bursts_of_temper_that_come_on_suddenly_and_subside_just_as_q",
+      "label": "Bursts of temper that come on suddenly and subside j…",
+      "section": "Mind",
+      "rubric": "Bursts of temper that come on suddenly and subside just as quickly"
+    },
+    {
+      "id": "sym_cannot_tolerate_being_told_what_to_do_rebels_against_authori",
+      "label": "Cannot tolerate being told what to do, rebels agains…",
+      "section": "Mind",
+      "rubric": "Cannot tolerate being told what to do, rebels against authority even when reasonable"
+    },
+    {
+      "id": "sym_apathy_and_drowsiness_following_an_injury_with_strangely_lit",
+      "label": "Apathy and drowsiness following an injury, with stra…",
+      "section": "Mind",
+      "rubric": "Apathy and drowsiness following an injury, with strangely little complaint of pain"
+    },
+    {
+      "id": "sym_denies_being_ill_or_hurt_even_when_visibly_suffering_insists",
+      "label": "Denies being ill or hurt even when visibly suffering…",
+      "section": "Mind",
+      "rubric": "Denies being ill or hurt even when visibly suffering, insists they are fine"
+    },
+    {
+      "id": "sym_confusion_about_identity_or_location_after_a_head_injury_or_",
+      "label": "Confusion about identity or location after a head in…",
+      "section": "Mind",
+      "rubric": "Confusion about identity or location after a head injury or concussion"
+    },
+    {
+      "id": "sym_slow_to_answer_gives_short_one_word_replies_mentally_sluggis",
+      "label": "Slow to answer, gives short one-word replies, mental…",
+      "section": "Mind",
+      "rubric": "Slow to answer, gives short one-word replies, mentally sluggish but not confused"
+    },
+    {
+      "id": "sym_marked_improvement_in_mood_and_energy_from_vigorous_physical",
+      "label": "Marked improvement in mood and energy from vigorous …",
+      "section": "Mind",
+      "rubric": "Marked improvement in mood and energy from vigorous physical activity"
+    },
+    {
+      "id": "sym_talks_to_themselves_quietly_unaware_they_are_doing_it",
+      "label": "Talks to themselves quietly, unaware they are doing it",
+      "section": "Mind",
+      "rubric": "Talks to themselves quietly, unaware they are doing it"
+    },
+    {
+      "id": "sym_weak_memory_for_recent_events_though_memory_for_the_distant_",
+      "label": "Weak memory for recent events though memory for the …",
+      "section": "Mind",
+      "rubric": "Weak memory for recent events though memory for the distant past remains sharp"
+    },
+    {
+      "id": "sym_impatient_with_slowness_in_others_finishes_their_sentences_o",
+      "label": "Impatient with slowness in others, finishes their se…",
+      "section": "Mind",
+      "rubric": "Impatient with slowness in others, finishes their sentences or interrupts constantly"
+    },
+    {
+      "id": "sym_marked_startle_response_jumps_at_the_slightest_unexpected_to",
+      "label": "Marked startle response, jumps at the slightest unex…",
+      "section": "Mind",
+      "rubric": "Marked startle response, jumps at the slightest unexpected touch or sound"
+    },
+    {
+      "id": "sym_cheerful_and_sociable_despite_significant_physical_suffering",
+      "label": "Cheerful and sociable despite significant physical s…",
+      "section": "Mind",
+      "rubric": "Cheerful and sociable despite significant physical suffering, hides distress behind a smile"
+    },
+    {
+      "id": "sym_prefers_dim_light_worse_from_bright_artificial_light_indoors",
+      "label": "Prefers dim light, worse from bright artificial ligh…",
+      "section": "Mind",
+      "rubric": "Prefers dim light, worse from bright artificial light indoors"
+    },
+    {
+      "id": "sym_anxious_about_small_errors_re_checks_completed_work_obsessiv",
+      "label": "Anxious about small errors, re-checks completed work…",
+      "section": "Mind",
+      "rubric": "Anxious about small errors, re-checks completed work obsessively for mistakes"
+    },
+    {
+      "id": "sym_feels_a_strong_urge_to_travel_or_change_scenery_when_distres",
+      "label": "Feels a strong urge to travel or change scenery when…",
+      "section": "Mind",
+      "rubric": "Feels a strong urge to travel or change scenery when distressed"
+    },
+    {
+      "id": "sym_headache_with_a_sensation_as_though_a_tight_band_were_placed",
+      "label": "Headache with a sensation as though a tight band wer…",
+      "section": "Head",
+      "rubric": "Headache with a sensation as though a tight band were placed above the eyes"
+    },
+    {
+      "id": "sym_headache_that_begins_in_the_back_of_the_head_and_moves_forwa",
+      "label": "Headache that begins in the back of the head and mov…",
+      "section": "Head",
+      "rubric": "Headache that begins in the back of the head and moves forward over the eye"
+    },
+    {
+      "id": "sym_headache_accompanied_by_a_strong_desire_to_press_the_head_ag",
+      "label": "Headache accompanied by a strong desire to press the…",
+      "section": "Head",
+      "rubric": "Headache accompanied by a strong desire to press the head against something hard"
+    },
+    {
+      "id": "sym_vertigo_on_rising_from_a_stooping_position",
+      "label": "Vertigo on rising from a stooping position",
+      "section": "Head",
+      "rubric": "Vertigo on rising from a stooping position"
+    },
+    {
+      "id": "sym_vertigo_relieved_by_eating_worse_from_an_empty_stomach",
+      "label": "Vertigo relieved by eating, worse from an empty stomach",
+      "section": "Head",
+      "rubric": "Vertigo relieved by eating, worse from an empty stomach"
+    },
+    {
+      "id": "sym_skin_that_bruises_easily_from_the_slightest_injury_discolora",
+      "label": "Skin that bruises easily from the slightest injury, …",
+      "section": "Skin",
+      "rubric": "Skin that bruises easily from the slightest injury, discoloration out of proportion"
+    },
+    {
+      "id": "sym_small_pimples_or_acne_that_are_painful_to_touch_though_small",
+      "label": "Small pimples or acne that are painful to touch thou…",
+      "section": "Skin",
+      "rubric": "Small pimples or acne that are painful to touch though small in size"
+    },
+    {
+      "id": "sym_dry_scaly_skin_that_worsens_noticeably_in_winter_and_improve",
+      "label": "Dry, scaly skin that worsens noticeably in winter an…",
+      "section": "Skin",
+      "rubric": "Dry, scaly skin that worsens noticeably in winter and improves in summer"
+    },
+    {
+      "id": "sym_chapped_cracked_lips_that_bleed_easily_especially_in_cold_we",
+      "label": "Chapped, cracked lips that bleed easily, especially …",
+      "section": "Skin",
+      "rubric": "Chapped, cracked lips that bleed easily, especially in cold weather"
+    },
+    {
+      "id": "sym_corns_or_calluses_that_are_painful_and_tend_to_recur_after_r",
+      "label": "Corns or calluses that are painful and tend to recur…",
+      "section": "Skin",
+      "rubric": "Corns or calluses that are painful and tend to recur after removal"
+    },
+    {
+      "id": "sym_cough_that_is_dry_during_the_day_and_loose_or_productive_at_",
+      "label": "Cough that is dry during the day and loose or produc…",
+      "section": "Respiratory",
+      "rubric": "Cough that is dry during the day and loose or productive at night"
+    },
+    {
+      "id": "sym_chest_pain_that_is_sharp_and_stitching_worse_from_the_slight",
+      "label": "Chest pain that is sharp and stitching, worse from t…",
+      "section": "Respiratory",
+      "rubric": "Chest pain that is sharp and stitching, worse from the slightest movement or breath"
+    },
+    {
+      "id": "sym_cough_with_a_sensation_of_rawness_or_soreness_behind_the_bre",
+      "label": "Cough with a sensation of rawness or soreness behind…",
+      "section": "Respiratory",
+      "rubric": "Cough with a sensation of rawness or soreness behind the breastbone"
+    },
+    {
+      "id": "sym_nosebleed_that_occurs_regularly_with_the_onset_of_the_menstr",
+      "label": "Nosebleed that occurs regularly with the onset of th…",
+      "section": "Respiratory",
+      "rubric": "Nosebleed that occurs regularly with the onset of the menstrual period, substituting for the flow"
+    },
+    {
+      "id": "sym_uterine_or_ovarian_pain_that_is_markedly_relieved_by_firm_pr",
+      "label": "Uterine or ovarian pain that is markedly relieved by…",
+      "section": "Female",
+      "rubric": "Uterine or ovarian pain that is markedly relieved by firm pressure or lying on the abdomen"
+    },
+    {
+      "id": "sym_menses_accompanied_by_marked_bloating_and_fluid_retention_be",
+      "label": "Menses accompanied by marked bloating and fluid rete…",
+      "section": "Female",
+      "rubric": "Menses accompanied by marked bloating and fluid retention beforehand"
+    },
+    {
+      "id": "sym_first_menses_delayed_well_beyond_the_usual_age_with_poor_phy",
+      "label": "First menses delayed well beyond the usual age, with…",
+      "section": "Female",
+      "rubric": "First menses delayed well beyond the usual age, with poor physical development"
+    },
+    {
+      "id": "sym_pain_in_the_great_toe_joint_worse_from_the_slightest_touch_o",
+      "label": "Pain in the great toe joint, worse from the slightes…",
+      "section": "Extremities",
+      "rubric": "Pain in the great toe joint, worse from the slightest touch or jarring"
+    },
+    {
+      "id": "sym_cramping_of_the_calf_muscles_especially_at_night_or_when_str",
+      "label": "Cramping of the calf muscles, especially at night or…",
+      "section": "Extremities",
+      "rubric": "Cramping of the calf muscles, especially at night or when stretching the leg in bed"
+    },
+    {
+      "id": "sym_painless_paralysis_or_weakness_affecting_one_specific_limb_o",
+      "label": "Painless paralysis or weakness affecting one specifi…",
+      "section": "Extremities",
+      "rubric": "Painless paralysis or weakness affecting one specific limb only"
+    },
+    {
+      "id": "sym_trembling_of_the_legs_on_going_up_or_down_stairs",
+      "label": "Trembling of the legs on going up or down stairs",
+      "section": "Extremities",
+      "rubric": "Trembling of the legs on going up or down stairs"
+    },
+    {
+      "id": "sym_diarrhea_that_is_worse_specifically_in_the_early_morning_dri",
+      "label": "Diarrhea that is worse specifically in the early mor…",
+      "section": "Stool",
+      "rubric": "Diarrhea that is worse specifically in the early morning, driving the patient out of bed"
+    },
+    {
+      "id": "sym_stool_that_is_alternately_constipated_and_loose_never_normal",
+      "label": "Stool that is alternately constipated and loose, nev…",
+      "section": "Stool",
+      "rubric": "Stool that is alternately constipated and loose, never normal for long"
+    },
+    {
+      "id": "sym_abdominal_pain_relieved_specifically_by_belching_worse_until",
+      "label": "Abdominal pain relieved specifically by belching, wo…",
+      "section": "Abdomen",
+      "rubric": "Abdominal pain relieved specifically by belching, worse until gas is brought up"
+    },
+    {
+      "id": "sym_sensation_of_a_lump_or_ball_rolling_around_in_the_abdomen",
+      "label": "Sensation of a lump or ball rolling around in the ab…",
+      "section": "Abdomen",
+      "rubric": "Sensation of a lump or ball rolling around in the abdomen"
+    },
+    {
+      "id": "sym_urine_that_deposits_a_thick_brick_dust_red_sediment_on_stand",
+      "label": "Urine that deposits a thick, brick-dust red sediment…",
+      "section": "Urinary",
+      "rubric": "Urine that deposits a thick, brick-dust red sediment on standing"
+    },
+    {
+      "id": "sym_burning_in_the_urethra_that_continues_after_urination_has_fi",
+      "label": "Burning in the urethra that continues after urinatio…",
+      "section": "Urinary",
+      "rubric": "Burning in the urethra that continues after urination has finished"
+    },
+    {
+      "id": "sym_extreme_pain_in_the_ear_at_night_that_is_worse_from_any_warm",
+      "label": "Extreme pain in the ear at night that is worse from …",
+      "section": "Ear",
+      "rubric": "Extreme pain in the ear at night that is worse from any warmth, better from cold"
+    },
+    {
+      "id": "sym_redness_confined_to_a_small_triangular_patch_on_the_white_of",
+      "label": "Redness confined to a small triangular patch on the …",
+      "section": "Eye",
+      "rubric": "Redness confined to a small triangular patch on the white of the eye"
+    },
+    {
+      "id": "sym_sneezing_fits_triggered_specifically_by_exposure_to_dust",
+      "label": "Sneezing fits triggered specifically by exposure to …",
+      "section": "Nose",
+      "rubric": "Sneezing fits triggered specifically by exposure to dust"
+    },
+    {
+      "id": "sym_hawking_of_mucus_constantly_worse_in_the_morning_on_waking",
+      "label": "Hawking of mucus constantly, worse in the morning on…",
+      "section": "Throat",
+      "rubric": "Hawking of mucus constantly, worse in the morning on waking"
+    },
+    {
+      "id": "sym_bad_breath_that_is_noticeable_to_others_though_the_patient_c",
+      "label": "Bad breath that is noticeable to others though the p…",
+      "section": "Mouth",
+      "rubric": "Bad breath that is noticeable to others though the patient cannot smell it themselves"
+    },
+    {
+      "id": "sym_swelling_of_glands_that_comes_on_rapidly_with_acute_inflamma",
+      "label": "Swelling of glands that comes on rapidly with acute …",
+      "section": "Glands",
+      "rubric": "Swelling of glands that comes on rapidly with acute inflammation and heat"
+    },
+    {
+      "id": "sym_sudden_and_unexplained_weight_loss_despite_no_change_in_appe",
+      "label": "Sudden and unexplained weight loss despite no change…",
+      "section": "Weight",
+      "rubric": "Sudden and unexplained weight loss despite no change in appetite or diet"
+    },
+    {
+      "id": "sym_weakness_confined_mostly_to_the_morning_improving_as_the_day",
+      "label": "Weakness confined mostly to the morning, improving a…",
+      "section": "Weakness",
+      "rubric": "Weakness confined mostly to the morning, improving as the day progresses"
     }
   ]
 }
