@@ -23660,6 +23660,758 @@
           "grade": 1
         }
       ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache confined to the forehead, above the eyes, worse from mental exertion or reading",
+      "triggers": [
+        "frontal headache above the eyes worse from reading",
+        "forehead headache from mental exertion or study"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "kali-bi",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache located specifically at the back of the head extending into the neck",
+      "triggers": [
+        "occipital headache extending into the neck",
+        "back of head pain radiating into the neck"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache confined to one temple, throbbing in character, worse with noise",
+      "triggers": [
+        "throbbing headache in one temple worse with noise",
+        "temple pain that pounds and worsens with sound"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "glon",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache felt at the very top of the head (vertex), as if a nail were driven in",
+      "triggers": [
+        "headache at the top of the head like a nail driven in",
+        "vertex pain feels like a nail pressed into the skull"
+      ],
+      "remedies": [
+        {
+          "id": "ign",
+          "grade": 3
+        },
+        {
+          "id": "coff",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Bursting, congestive headache worse from stooping or bending forward, better sitting upright",
+      "triggers": [
+        "bursting headache worse bending forward better sitting up",
+        "congestive head pain worsens on stooping"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "glon",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache that is directly linked to constipation or a delayed bowel movement, better once the bowels move",
+      "triggers": [
+        "headache from constipation better after bowel movement",
+        "head pain tied to a missed bowel motion clears once stool passes"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache that worsens progressively through the day, mild in the morning, severe by evening",
+      "triggers": [
+        "headache mild in the morning severe by evening",
+        "head pain builds gradually worse as the day goes on"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache accompanied by a sensation of the scalp being too tight, as though the skull had shrunk",
+      "triggers": [
+        "scalp feels too tight like the skull shrank",
+        "sensation of a tight cap on the head during headache"
+      ],
+      "remedies": [
+        {
+          "id": "verat",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Inflammation of the eyelid margins (blepharitis) with redness, crusting, and itching",
+      "triggers": [
+        "red crusty itchy eyelid margins",
+        "blepharitis with crusting on the lid edges"
+      ],
+      "remedies": [
+        {
+          "id": "graph",
+          "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Sensation of a foreign body or splinter in the eye without any object actually present",
+      "triggers": [
+        "feels like something is stuck in the eye nothing found",
+        "sensation of a foreign object in the eye no cause found"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Involuntary spasm or twitching of the eyelid that continues for days without stopping",
+      "triggers": [
+        "eyelid keeps twitching for days won't stop",
+        "persistent eyelid spasm lasting several days"
+      ],
+      "remedies": [
+        {
+          "id": "agar",
+          "grade": 2
+        },
+        {
+          "id": "zinc",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Blurred or dimmed vision that comes and goes, worse with fatigue, clears after rest",
+      "triggers": [
+        "vision blurs and clears worse when tired better after rest",
+        "dimmed sight that fluctuates with tiredness"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Sensitivity of the eyes to artificial or electric light specifically, daylight tolerated better",
+      "triggers": [
+        "eyes sensitive to artificial light but fine in daylight",
+        "electric light bothers the eyes more than sunlight"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Sunken, hollow appearance of the eyes, especially noticeable during acute illness",
+      "triggers": [
+        "eyes look sunken and hollow during illness",
+        "hollow sunken eyes noticed during acute sickness"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "verat",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Swelling confined to the upper eyelid only, puffy and heavy feeling",
+      "triggers": [
+        "upper eyelid puffy and swollen feels heavy",
+        "swelling only in the upper part of the eyelid"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        },
+        {
+          "id": "apis",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Small, painless, hard nodule on the eyelid that has persisted for weeks (chalazion-type)",
+      "triggers": [
+        "hard painless lump on the eyelid persisting for weeks",
+        "small firm nodule on eyelid not going away"
+      ],
+      "remedies": [
+        {
+          "id": "staph",
+          "grade": 2
+        },
+        {
+          "id": "thuj",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Deep boring or drilling pain inside the ear that comes in sudden intense waves",
+      "triggers": [
+        "deep boring pain inside the ear comes in waves",
+        "drilling sensation in the ear sudden and intense"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "cham",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Sensation of the ear being blocked as if with cotton wool, muffling sound",
+      "triggers": [
+        "ear feels blocked like stuffed with cotton",
+        "muffled hearing like cotton wool in the ear"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 1
+        },
+        {
+          "id": "graph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Tenderness of the bone behind the ear (mastoid area), worse to touch, with fever",
+      "triggers": [
+        "tender bone behind the ear with fever",
+        "mastoid area sore to touch during ear infection"
+      ],
+      "remedies": [
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Eczema or crusted eruption in and around the external ear canal, itching and oozing",
+      "triggers": [
+        "crusty itchy eruption around the ear canal",
+        "eczema in the outer ear oozing and itching"
+      ],
+      "remedies": [
+        {
+          "id": "graph",
+          "grade": 2
+        },
+        {
+          "id": "psor",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Hearing that improves temporarily in a noisy environment, worse in silence (paradoxical hearing)",
+      "triggers": [
+        "hears better in a noisy place worse in silence",
+        "paradoxical hearing improvement with background noise"
+      ],
+      "remedies": [
+        {
+          "id": "graph",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Ear pain that is markedly relieved by warm applications held against the ear",
+      "triggers": [
+        "ear pain relieved by warm compress",
+        "earache eases with warmth applied to the ear"
+      ],
+      "remedies": [
+        {
+          "id": "cham",
+          "grade": 2
+        },
+        {
+          "id": "hep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Loss of smell that follows directly after a head injury or concussion",
+      "triggers": [
+        "lost sense of smell after a head injury",
+        "smell disappeared following a blow to the head"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "arn",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Nasal voice or nasal-sounding speech due to chronic nasal blockage",
+      "triggers": [
+        "talks with a nasal voice from chronic blockage",
+        "nasal sounding speech due to blocked nose"
+      ],
+      "remedies": [
+        {
+          "id": "kali-bi",
+          "grade": 1
+        },
+        {
+          "id": "hydr",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Redness and soreness of the nostril rims from a persistent runny nose",
+      "triggers": [
+        "sore red nostril rims from constant runny nose",
+        "nostrils raw and sore from ongoing nasal discharge"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "all-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Sneezing that occurs in violent, exhausting fits, several sneezes in a row",
+      "triggers": [
+        "violent exhausting sneezing fits several in a row",
+        "sneezes hard repeatedly leaving them tired"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 1
+        },
+        {
+          "id": "sabad",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "One-sided nasal obstruction that alternates from the left to the right nostril and back",
+      "triggers": [
+        "nose blockage alternates from left to right nostril",
+        "one sided nasal congestion that switches sides"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Foul or putrid smell perceived in the nose that others cannot detect",
+      "triggers": [
+        "smells something foul that others cannot smell",
+        "perceives a putrid odor in the nose no one else notices"
+      ],
+      "remedies": [
+        {
+          "id": "kali-bi",
+          "grade": 1
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Enlarged uvula (elongated soft palate) causing a constant gagging or tickling sensation",
+      "triggers": [
+        "elongated uvula causes gagging sensation",
+        "swollen uvula tickles the throat constantly"
+      ],
+      "remedies": [
+        {
+          "id": "apis",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Sore throat that is markedly worse from empty swallowing than from swallowing food",
+      "triggers": [
+        "throat pain worse swallowing saliva than food",
+        "sore throat hurts more on empty swallow than eating"
+      ],
+      "remedies": [
+        {
+          "id": "ign",
+          "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Chronic hawking to clear the throat of mucus, worse in the morning on waking",
+      "triggers": [
+        "constant hawking to clear throat mucus worse in the morning",
+        "clears throat of phlegm repeatedly on waking"
+      ],
+      "remedies": [
+        {
+          "id": "kali-bi",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Sensation of constriction in the throat that prevents swallowing solid food, liquids pass easily",
+      "triggers": [
+        "throat feels tight cannot swallow solid food liquids fine",
+        "constriction blocks solid food but liquids go down easily"
+      ],
+      "remedies": [
+        {
+          "id": "bapt",
+          "grade": 1
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Recurrent quinsy (peritonsillar abscess) with intense throat pain and difficulty opening the mouth",
+      "triggers": [
+        "recurring quinsy with severe throat pain",
+        "peritonsillar abscess difficulty opening the mouth"
+      ],
+      "remedies": [
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Voice that breaks or cracks suddenly while speaking or singing, comes and goes",
+      "triggers": [
+        "voice cracks suddenly while speaking or singing",
+        "voice breaks unexpectedly comes and goes"
+      ],
+      "remedies": [
+        {
+          "id": "spong",
+          "grade": 1
+        },
+        {
+          "id": "caust",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Excessive salivation with a constant need to spit, without nausea",
+      "triggers": [
+        "excess saliva constant need to spit no nausea",
+        "drools a lot must spit frequently without feeling sick"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "lac-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Swollen, spongy gums that bleed easily on the slightest touch",
+      "triggers": [
+        "spongy swollen gums bleed at the slightest touch",
+        "gums bleed easily even from light contact"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "nit-ac",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Painful, deep cracks or fissures on the tongue, especially down the middle",
+      "triggers": [
+        "deep painful crack down the middle of the tongue",
+        "fissured tongue with a painful central crack"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Burning sensation of the tongue and mouth without any visible redness or lesion",
+      "triggers": [
+        "burning tongue and mouth nothing visible on exam",
+        "mouth burns though it looks completely normal"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "nit-ac",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Teeth that feel elongated or too long, painful sensation when biting down",
+      "triggers": [
+        "teeth feel too long painful when biting down",
+        "sensation teeth have grown longer hurts to bite"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "plat",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Delayed teething in an infant, gums swollen but the teeth are slow to emerge",
+      "triggers": [
+        "infant's teeth slow to come in gums swollen",
+        "delayed teething baby's gums swollen no teeth yet"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "calc-p",
+          "grade": 1
+        }
+      ]
     }
   ],
   "chiefSymptomTags": [
@@ -30862,6 +31614,246 @@
       "label": "Acute toothache with throbbing or sharp pain, worse …",
       "section": "Mouth",
       "rubric": "Acute toothache with throbbing or sharp pain, worse from cold or hot, better sometimes from cold water rinse"
+    },
+    {
+      "id": "sym_headache_confined_to_the_forehead_above_the_eyes_worse_from_",
+      "label": "Headache confined to the forehead, above the eyes, w…",
+      "section": "Head",
+      "rubric": "Headache confined to the forehead, above the eyes, worse from mental exertion or reading"
+    },
+    {
+      "id": "sym_headache_located_specifically_at_the_back_of_the_head_extend",
+      "label": "Headache located specifically at the back of the hea…",
+      "section": "Head",
+      "rubric": "Headache located specifically at the back of the head extending into the neck"
+    },
+    {
+      "id": "sym_headache_confined_to_one_temple_throbbing_in_character_worse",
+      "label": "Headache confined to one temple, throbbing in charac…",
+      "section": "Head",
+      "rubric": "Headache confined to one temple, throbbing in character, worse with noise"
+    },
+    {
+      "id": "sym_headache_felt_at_the_very_top_of_the_head_vertex_as_if_a_nai",
+      "label": "Headache felt at the very top of the head (vertex), …",
+      "section": "Head",
+      "rubric": "Headache felt at the very top of the head (vertex), as if a nail were driven in"
+    },
+    {
+      "id": "sym_bursting_congestive_headache_worse_from_stooping_or_bending_",
+      "label": "Bursting, congestive headache worse from stooping or…",
+      "section": "Head",
+      "rubric": "Bursting, congestive headache worse from stooping or bending forward, better sitting upright"
+    },
+    {
+      "id": "sym_headache_that_is_directly_linked_to_constipation_or_a_delaye",
+      "label": "Headache that is directly linked to constipation or …",
+      "section": "Head",
+      "rubric": "Headache that is directly linked to constipation or a delayed bowel movement, better once the bowels move"
+    },
+    {
+      "id": "sym_headache_that_worsens_progressively_through_the_day_mild_in_",
+      "label": "Headache that worsens progressively through the day,…",
+      "section": "Head",
+      "rubric": "Headache that worsens progressively through the day, mild in the morning, severe by evening"
+    },
+    {
+      "id": "sym_headache_accompanied_by_a_sensation_of_the_scalp_being_too_t",
+      "label": "Headache accompanied by a sensation of the scalp bei…",
+      "section": "Head",
+      "rubric": "Headache accompanied by a sensation of the scalp being too tight, as though the skull had shrunk"
+    },
+    {
+      "id": "sym_inflammation_of_the_eyelid_margins_blepharitis_with_redness_",
+      "label": "Inflammation of the eyelid margins (blepharitis) wit…",
+      "section": "Eye",
+      "rubric": "Inflammation of the eyelid margins (blepharitis) with redness, crusting, and itching"
+    },
+    {
+      "id": "sym_sensation_of_a_foreign_body_or_splinter_in_the_eye_without_a",
+      "label": "Sensation of a foreign body or splinter in the eye w…",
+      "section": "Eye",
+      "rubric": "Sensation of a foreign body or splinter in the eye without any object actually present"
+    },
+    {
+      "id": "sym_involuntary_spasm_or_twitching_of_the_eyelid_that_continues_",
+      "label": "Involuntary spasm or twitching of the eyelid that co…",
+      "section": "Eye",
+      "rubric": "Involuntary spasm or twitching of the eyelid that continues for days without stopping"
+    },
+    {
+      "id": "sym_blurred_or_dimmed_vision_that_comes_and_goes_worse_with_fati",
+      "label": "Blurred or dimmed vision that comes and goes, worse …",
+      "section": "Eye",
+      "rubric": "Blurred or dimmed vision that comes and goes, worse with fatigue, clears after rest"
+    },
+    {
+      "id": "sym_sensitivity_of_the_eyes_to_artificial_or_electric_light_spec",
+      "label": "Sensitivity of the eyes to artificial or electric li…",
+      "section": "Eye",
+      "rubric": "Sensitivity of the eyes to artificial or electric light specifically, daylight tolerated better"
+    },
+    {
+      "id": "sym_sunken_hollow_appearance_of_the_eyes_especially_noticeable_d",
+      "label": "Sunken, hollow appearance of the eyes, especially no…",
+      "section": "Eye",
+      "rubric": "Sunken, hollow appearance of the eyes, especially noticeable during acute illness"
+    },
+    {
+      "id": "sym_swelling_confined_to_the_upper_eyelid_only_puffy_and_heavy_f",
+      "label": "Swelling confined to the upper eyelid only, puffy an…",
+      "section": "Eye",
+      "rubric": "Swelling confined to the upper eyelid only, puffy and heavy feeling"
+    },
+    {
+      "id": "sym_small_painless_hard_nodule_on_the_eyelid_that_has_persisted_",
+      "label": "Small, painless, hard nodule on the eyelid that has …",
+      "section": "Eye",
+      "rubric": "Small, painless, hard nodule on the eyelid that has persisted for weeks (chalazion-type)"
+    },
+    {
+      "id": "sym_deep_boring_or_drilling_pain_inside_the_ear_that_comes_in_su",
+      "label": "Deep boring or drilling pain inside the ear that com…",
+      "section": "Ear",
+      "rubric": "Deep boring or drilling pain inside the ear that comes in sudden intense waves"
+    },
+    {
+      "id": "sym_sensation_of_the_ear_being_blocked_as_if_with_cotton_wool_mu",
+      "label": "Sensation of the ear being blocked as if with cotton…",
+      "section": "Ear",
+      "rubric": "Sensation of the ear being blocked as if with cotton wool, muffling sound"
+    },
+    {
+      "id": "sym_tenderness_of_the_bone_behind_the_ear_mastoid_area_worse_to_",
+      "label": "Tenderness of the bone behind the ear (mastoid area)…",
+      "section": "Ear",
+      "rubric": "Tenderness of the bone behind the ear (mastoid area), worse to touch, with fever"
+    },
+    {
+      "id": "sym_eczema_or_crusted_eruption_in_and_around_the_external_ear_ca",
+      "label": "Eczema or crusted eruption in and around the externa…",
+      "section": "Ear",
+      "rubric": "Eczema or crusted eruption in and around the external ear canal, itching and oozing"
+    },
+    {
+      "id": "sym_hearing_that_improves_temporarily_in_a_noisy_environment_wor",
+      "label": "Hearing that improves temporarily in a noisy environ…",
+      "section": "Ear",
+      "rubric": "Hearing that improves temporarily in a noisy environment, worse in silence (paradoxical hearing)"
+    },
+    {
+      "id": "sym_ear_pain_that_is_markedly_relieved_by_warm_applications_held",
+      "label": "Ear pain that is markedly relieved by warm applicati…",
+      "section": "Ear",
+      "rubric": "Ear pain that is markedly relieved by warm applications held against the ear"
+    },
+    {
+      "id": "sym_loss_of_smell_that_follows_directly_after_a_head_injury_or_c",
+      "label": "Loss of smell that follows directly after a head inj…",
+      "section": "Nose",
+      "rubric": "Loss of smell that follows directly after a head injury or concussion"
+    },
+    {
+      "id": "sym_nasal_voice_or_nasal_sounding_speech_due_to_chronic_nasal_bl",
+      "label": "Nasal voice or nasal-sounding speech due to chronic …",
+      "section": "Nose",
+      "rubric": "Nasal voice or nasal-sounding speech due to chronic nasal blockage"
+    },
+    {
+      "id": "sym_redness_and_soreness_of_the_nostril_rims_from_a_persistent_r",
+      "label": "Redness and soreness of the nostril rims from a pers…",
+      "section": "Nose",
+      "rubric": "Redness and soreness of the nostril rims from a persistent runny nose"
+    },
+    {
+      "id": "sym_sneezing_that_occurs_in_violent_exhausting_fits_several_snee",
+      "label": "Sneezing that occurs in violent, exhausting fits, se…",
+      "section": "Nose",
+      "rubric": "Sneezing that occurs in violent, exhausting fits, several sneezes in a row"
+    },
+    {
+      "id": "sym_one_sided_nasal_obstruction_that_alternates_from_the_left_to",
+      "label": "One-sided nasal obstruction that alternates from the…",
+      "section": "Nose",
+      "rubric": "One-sided nasal obstruction that alternates from the left to the right nostril and back"
+    },
+    {
+      "id": "sym_foul_or_putrid_smell_perceived_in_the_nose_that_others_canno",
+      "label": "Foul or putrid smell perceived in the nose that othe…",
+      "section": "Nose",
+      "rubric": "Foul or putrid smell perceived in the nose that others cannot detect"
+    },
+    {
+      "id": "sym_enlarged_uvula_elongated_soft_palate_causing_a_constant_gagg",
+      "label": "Enlarged uvula (elongated soft palate) causing a con…",
+      "section": "Throat",
+      "rubric": "Enlarged uvula (elongated soft palate) causing a constant gagging or tickling sensation"
+    },
+    {
+      "id": "sym_sore_throat_that_is_markedly_worse_from_empty_swallowing_tha",
+      "label": "Sore throat that is markedly worse from empty swallo…",
+      "section": "Throat",
+      "rubric": "Sore throat that is markedly worse from empty swallowing than from swallowing food"
+    },
+    {
+      "id": "sym_chronic_hawking_to_clear_the_throat_of_mucus_worse_in_the_mo",
+      "label": "Chronic hawking to clear the throat of mucus, worse …",
+      "section": "Throat",
+      "rubric": "Chronic hawking to clear the throat of mucus, worse in the morning on waking"
+    },
+    {
+      "id": "sym_sensation_of_constriction_in_the_throat_that_prevents_swallo",
+      "label": "Sensation of constriction in the throat that prevent…",
+      "section": "Throat",
+      "rubric": "Sensation of constriction in the throat that prevents swallowing solid food, liquids pass easily"
+    },
+    {
+      "id": "sym_recurrent_quinsy_peritonsillar_abscess_with_intense_throat_p",
+      "label": "Recurrent quinsy (peritonsillar abscess) with intens…",
+      "section": "Throat",
+      "rubric": "Recurrent quinsy (peritonsillar abscess) with intense throat pain and difficulty opening the mouth"
+    },
+    {
+      "id": "sym_voice_that_breaks_or_cracks_suddenly_while_speaking_or_singi",
+      "label": "Voice that breaks or cracks suddenly while speaking …",
+      "section": "Throat",
+      "rubric": "Voice that breaks or cracks suddenly while speaking or singing, comes and goes"
+    },
+    {
+      "id": "sym_excessive_salivation_with_a_constant_need_to_spit_without_na",
+      "label": "Excessive salivation with a constant need to spit, w…",
+      "section": "Mouth",
+      "rubric": "Excessive salivation with a constant need to spit, without nausea"
+    },
+    {
+      "id": "sym_swollen_spongy_gums_that_bleed_easily_on_the_slightest_touch",
+      "label": "Swollen, spongy gums that bleed easily on the slight…",
+      "section": "Mouth",
+      "rubric": "Swollen, spongy gums that bleed easily on the slightest touch"
+    },
+    {
+      "id": "sym_painful_deep_cracks_or_fissures_on_the_tongue_especially_dow",
+      "label": "Painful, deep cracks or fissures on the tongue, espe…",
+      "section": "Mouth",
+      "rubric": "Painful, deep cracks or fissures on the tongue, especially down the middle"
+    },
+    {
+      "id": "sym_burning_sensation_of_the_tongue_and_mouth_without_any_visibl",
+      "label": "Burning sensation of the tongue and mouth without an…",
+      "section": "Mouth",
+      "rubric": "Burning sensation of the tongue and mouth without any visible redness or lesion"
+    },
+    {
+      "id": "sym_teeth_that_feel_elongated_or_too_long_painful_sensation_when",
+      "label": "Teeth that feel elongated or too long, painful sensa…",
+      "section": "Mouth",
+      "rubric": "Teeth that feel elongated or too long, painful sensation when biting down"
+    },
+    {
+      "id": "sym_delayed_teething_in_an_infant_gums_swollen_but_the_teeth_are",
+      "label": "Delayed teething in an infant, gums swollen but the …",
+      "section": "Mouth",
+      "rubric": "Delayed teething in an infant, gums swollen but the teeth are slow to emerge"
     }
   ]
 }
