@@ -420,6 +420,14 @@
         {
           "id": "nux-v",
           "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        },
+        {
+          "id": "bell",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -441,6 +449,18 @@
         {
           "id": "sep",
           "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -533,6 +553,10 @@
         {
           "id": "lyc",
           "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -557,6 +581,10 @@
         {
           "id": "kali-bi",
           "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -576,6 +604,18 @@
         },
         {
           "id": "ign",
+          "grade": 1
+        },
+        {
+          "id": "coloc",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
           "grade": 1
         }
       ],
@@ -670,6 +710,18 @@
         {
           "id": "ign",
           "grade": 2
+        },
+        {
+          "id": "staph",
+          "grade": 1
+        },
+        {
+          "id": "ph-ac",
+          "grade": 2
+        },
+        {
+          "id": "aur",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -698,6 +750,14 @@
         {
           "id": "ign",
           "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "caust",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -719,6 +779,14 @@
         {
           "id": "acon",
           "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        },
+        {
+          "id": "psor",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -741,6 +809,14 @@
         {
           "id": "gels",
           "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -792,6 +868,18 @@
         },
         {
           "id": "sep",
+          "grade": 1
+        },
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "staph",
+          "grade": 1
+        },
+        {
+          "id": "caust",
           "grade": 1
         }
       ],
@@ -908,6 +996,14 @@
         {
           "id": "lach",
           "grade": 2
+        },
+        {
+          "id": "hyos",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -934,6 +1030,14 @@
         },
         {
           "id": "cham",
+          "grade": 1
+        },
+        {
+          "id": "coloc",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
           "grade": 1
         }
       ],
@@ -1062,6 +1166,14 @@
         {
           "id": "stram",
           "grade": 2
+        },
+        {
+          "id": "hyos",
+          "grade": 2
+        },
+        {
+          "id": "op",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -1204,6 +1316,10 @@
         {
           "id": "arg-n",
           "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -1314,6 +1430,10 @@
         {
           "id": "plat",
           "grade": 3
+        },
+        {
+          "id": "lyc",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -1677,6 +1797,10 @@
         {
           "id": "bism",
           "grade": 3
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -2375,6 +2499,10 @@
         {
           "id": "psor",
           "grade": 3
+        },
+        {
+          "id": "lyc",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -2783,6 +2911,14 @@
         {
           "id": "arg-n",
           "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "acon",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -3007,6 +3143,10 @@
         {
           "id": "rhus-t",
           "grade": 1
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -3029,6 +3169,10 @@
         {
           "id": "coloc",
           "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -3049,6 +3193,14 @@
         },
         {
           "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "ph-ac",
+          "grade": 2
+        },
+        {
+          "id": "con",
           "grade": 1
         }
       ],
@@ -3098,6 +3250,10 @@
         {
           "id": "sil",
           "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -3136,6 +3292,18 @@
         {
           "id": "zinc",
           "grade": 1
+        },
+        {
+          "id": "ph-ac",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -3163,6 +3331,10 @@
         },
         {
           "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "calc-c",
           "grade": 1
         }
       ],
@@ -4200,6 +4372,18 @@
         {
           "id": "bry",
           "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "kali-bi",
+          "grade": 1
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -4225,6 +4409,14 @@
         {
           "id": "nat-mur",
           "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -4249,6 +4441,18 @@
         {
           "id": "lach",
           "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "kali-bi",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -4272,6 +4476,22 @@
         },
         {
           "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
           "grade": 1
         }
       ],
@@ -4298,6 +4518,18 @@
         {
           "id": "spong",
           "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "ip",
+          "grade": 1
+        },
+        {
+          "id": "cocc",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -4319,6 +4551,14 @@
         {
           "id": "puls",
           "grade": 2
+        },
+        {
+          "id": "ferr",
+          "grade": 2
+        },
+        {
+          "id": "calc-f",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -4345,6 +4585,26 @@
         {
           "id": "rhus-t",
           "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "dulc",
+          "grade": 1
+        },
+        {
+          "id": "sep",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -4378,6 +4638,18 @@
         },
         {
           "id": "glon",
+          "grade": 1
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "iod",
+          "grade": 1
+        },
+        {
+          "id": "nat-c",
           "grade": 1
         }
       ],
@@ -5151,6 +5423,14 @@
         {
           "id": "arg-n",
           "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -5174,6 +5454,10 @@
         },
         {
           "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "puls",
           "grade": 1
         }
       ],
@@ -5200,6 +5484,14 @@
         {
           "id": "kali-c",
           "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "stram",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -5219,6 +5511,14 @@
         },
         {
           "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 2
+        },
+        {
+          "id": "acon",
           "grade": 1
         }
       ],
@@ -5265,6 +5565,10 @@
         {
           "id": "phos",
           "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -5290,6 +5594,10 @@
         {
           "id": "gels",
           "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -5314,6 +5622,10 @@
         {
           "id": "kali-c",
           "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 2
         }
       ],
       "category": "Mind"
@@ -5354,6 +5666,10 @@
         {
           "id": "ign",
           "grade": 1
+        },
+        {
+          "id": "ph-ac",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -5374,6 +5690,10 @@
         {
           "id": "stram",
           "grade": 1
+        },
+        {
+          "id": "hyos",
+          "grade": 2
         }
       ],
       "category": "Mind"
@@ -5435,6 +5755,10 @@
         {
           "id": "cham",
           "grade": 1
+        },
+        {
+          "id": "cina",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -5475,6 +5799,14 @@
         {
           "id": "ars-alb",
           "grade": 3
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -5499,6 +5831,14 @@
         {
           "id": "lyc",
           "grade": 1
+        },
+        {
+          "id": "caust",
+          "grade": 1
+        },
+        {
+          "id": "cham",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -5519,6 +5859,14 @@
         {
           "id": "aur",
           "grade": 1
+        },
+        {
+          "id": "nit-ac",
+          "grade": 2
+        },
+        {
+          "id": "psor",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -5535,6 +5883,10 @@
         {
           "id": "nat-mur",
           "grade": 3
+        },
+        {
+          "id": "staph",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -5554,6 +5906,14 @@
         },
         {
           "id": "gels",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "bar-c",
           "grade": 1
         }
       ],
@@ -5946,6 +6306,10 @@
         {
           "id": "hyos",
           "grade": 2
+        },
+        {
+          "id": "stram",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -5982,6 +6346,10 @@
         {
           "id": "phos",
           "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -6001,6 +6369,14 @@
         },
         {
           "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "anac",
           "grade": 1
         }
       ],
@@ -6022,6 +6398,10 @@
         {
           "id": "verat",
           "grade": 1
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
         }
       ],
       "category": "Mind"
@@ -6042,6 +6422,10 @@
         },
         {
           "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
           "grade": 1
         }
       ],
@@ -6261,6 +6645,10 @@
         },
         {
           "id": "chin",
+          "grade": 1
+        },
+        {
+          "id": "lach",
           "grade": 1
         }
       ],
@@ -7017,6 +7405,14 @@
         {
           "id": "tarent",
           "grade": 2
+        },
+        {
+          "id": "cham",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
         }
       ]
     },
@@ -7134,6 +7530,10 @@
         },
         {
           "id": "phos",
+          "grade": 1
+        },
+        {
+          "id": "calc-c",
           "grade": 1
         }
       ]
@@ -7537,6 +7937,10 @@
         {
           "id": "nux-v",
           "grade": 1
+        },
+        {
+          "id": "staph",
+          "grade": 1
         }
       ]
     },
@@ -7647,6 +8051,10 @@
         {
           "id": "bry",
           "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
         }
       ]
     },
@@ -7684,6 +8092,10 @@
         },
         {
           "id": "stram",
+          "grade": 1
+        },
+        {
+          "id": "kali-c",
           "grade": 1
         }
       ]
@@ -7737,6 +8149,10 @@
         },
         {
           "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "ph-ac",
           "grade": 1
         }
       ]
@@ -7859,6 +8275,10 @@
         {
           "id": "sulph",
           "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
         }
       ]
     },
@@ -8007,6 +8427,10 @@
         {
           "id": "crot-t",
           "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
         }
       ]
     },
@@ -8148,6 +8572,10 @@
         {
           "id": "tarent",
           "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
         }
       ]
     },
@@ -8209,6 +8637,10 @@
         {
           "id": "nat-mur",
           "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
         }
       ]
     },
@@ -8246,6 +8678,10 @@
         },
         {
           "id": "colch",
+          "grade": 1
+        },
+        {
+          "id": "phos",
           "grade": 1
         }
       ]
@@ -8303,6 +8739,10 @@
         },
         {
           "id": "sep",
+          "grade": 1
+        },
+        {
+          "id": "bry",
           "grade": 1
         }
       ]
@@ -8581,6 +9021,10 @@
         {
           "id": "ars-alb",
           "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
         }
       ]
     },
@@ -8762,6 +9206,10 @@
         },
         {
           "id": "caust",
+          "grade": 1
+        },
+        {
+          "id": "puls",
           "grade": 1
         }
       ]
@@ -9082,6 +9530,18 @@
         {
           "id": "carb-v",
           "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "apis",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
         }
       ]
     },
@@ -9139,6 +9599,10 @@
         {
           "id": "sep",
           "grade": 1
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
         }
       ]
     },
@@ -9157,6 +9621,10 @@
         },
         {
           "id": "zinc",
+          "grade": 1
+        },
+        {
+          "id": "puls",
           "grade": 1
         }
       ]
@@ -9337,6 +9805,10 @@
         {
           "id": "nat-mur",
           "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
         }
       ]
     },
@@ -12031,6 +12503,10 @@
         {
           "id": "lyc",
           "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
         }
       ]
     },
@@ -12088,6 +12564,10 @@
         {
           "id": "puls",
           "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
         }
       ]
     },
@@ -12106,6 +12586,10 @@
         },
         {
           "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "puls",
           "grade": 1
         }
       ]
@@ -12887,6 +13371,10 @@
         {
           "id": "puls",
           "grade": 2
+        },
+        {
+          "id": "caust",
+          "grade": 1
         }
       ]
     },
@@ -12920,6 +13408,10 @@
         },
         {
           "id": "kali-c",
+          "grade": 1
+        },
+        {
+          "id": "arg-n",
           "grade": 1
         }
       ]
@@ -12959,6 +13451,10 @@
         {
           "id": "sep",
           "grade": 1
+        },
+        {
+          "id": "caust",
+          "grade": 1
         }
       ]
     },
@@ -12977,6 +13473,10 @@
         },
         {
           "id": "thuj",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
           "grade": 1
         }
       ]
@@ -13031,6 +13531,10 @@
         {
           "id": "nat-mur",
           "grade": 1
+        },
+        {
+          "id": "ph-ac",
+          "grade": 1
         }
       ]
     },
@@ -13049,6 +13553,10 @@
         },
         {
           "id": "bry",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
           "grade": 1
         }
       ]
@@ -13072,6 +13580,10 @@
         },
         {
           "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
           "grade": 1
         }
       ]
@@ -13228,6 +13740,10 @@
         },
         {
           "id": "arg-n",
+          "grade": 1
+        },
+        {
+          "id": "med",
           "grade": 1
         }
       ]
@@ -13639,6 +14155,10 @@
         },
         {
           "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
           "grade": 1
         }
       ]
@@ -15045,6 +15565,10 @@
         {
           "id": "ther",
           "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
         }
       ]
     },
@@ -15063,6 +15587,10 @@
         },
         {
           "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "ph-ac",
           "grade": 1
         }
       ]
@@ -15234,6 +15762,10 @@
         },
         {
           "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "kali-c",
           "grade": 1
         }
       ]
@@ -15550,6 +16082,10 @@
         {
           "id": "sep",
           "grade": 1
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
         }
       ]
     },
@@ -15568,6 +16104,10 @@
         },
         {
           "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "nit-ac",
           "grade": 1
         }
       ]
@@ -15854,6 +16394,10 @@
         {
           "id": "sil",
           "grade": 1
+        },
+        {
+          "id": "bry",
+          "grade": 1
         }
       ]
     },
@@ -15910,6 +16454,10 @@
         },
         {
           "id": "syph",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
           "grade": 1
         }
       ]
@@ -16595,6 +17143,10 @@
         {
           "id": "nux-v",
           "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
         }
       ]
     },
@@ -16651,6 +17203,10 @@
         },
         {
           "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "med",
           "grade": 1
         }
       ]
@@ -16709,6 +17265,10 @@
         {
           "id": "calc-c",
           "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
         }
       ]
     },
@@ -16728,6 +17288,10 @@
         {
           "id": "bell",
           "grade": 1
+        },
+        {
+          "id": "sang",
+          "grade": 1
         }
       ]
     },
@@ -16746,6 +17310,10 @@
         },
         {
           "id": "graph",
+          "grade": 1
+        },
+        {
+          "id": "spig",
           "grade": 1
         }
       ]
@@ -17207,6 +17775,10 @@
         {
           "id": "tarent",
           "grade": 1
+        },
+        {
+          "id": "hyos",
+          "grade": 1
         }
       ]
     },
@@ -17340,6 +17912,10 @@
         {
           "id": "nat-c",
           "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
         }
       ]
     },
@@ -17377,6 +17953,10 @@
         },
         {
           "id": "calc-p",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
           "grade": 1
         }
       ]
@@ -17879,6 +18459,10 @@
         {
           "id": "nat-mur",
           "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
         }
       ]
     },
@@ -18304,6 +18888,10 @@
         {
           "id": "puls",
           "grade": 1
+        },
+        {
+          "id": "ign",
+          "grade": 1
         }
       ]
     },
@@ -18494,6 +19082,10 @@
         {
           "id": "lac-c",
           "grade": 1
+        },
+        {
+          "id": "nit-ac",
+          "grade": 1
         }
       ]
     },
@@ -18569,6 +19161,10 @@
         },
         {
           "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
           "grade": 1
         }
       ]
@@ -19261,6 +19857,10 @@
         {
           "id": "lyc",
           "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
         }
       ]
     },
@@ -19800,6 +20400,10 @@
         {
           "id": "ars-alb",
           "grade": 1
+        },
+        {
+          "id": "dulc",
+          "grade": 1
         }
       ]
     },
@@ -20180,6 +20784,10 @@
         {
           "id": "sep",
           "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
         }
       ]
     },
@@ -25280,6 +25888,10 @@
         {
           "id": "sep",
           "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 1
         }
       ]
     },
@@ -25370,6 +25982,10 @@
         },
         {
           "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "puls",
           "grade": 1
         }
       ]
@@ -25465,6 +26081,10 @@
         },
         {
           "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "puls",
           "grade": 1
         }
       ]
@@ -27986,6 +28606,10 @@
         {
           "id": "sulph",
           "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
         }
       ]
     },
@@ -28907,6 +29531,10 @@
         {
           "id": "lach",
           "grade": 2
+        },
+        {
+          "id": "sep",
+          "grade": 1
         }
       ]
     },
