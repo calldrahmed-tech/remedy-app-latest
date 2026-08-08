@@ -4133,6 +4133,10 @@
         {
           "id": "sil",
           "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -4212,6 +4216,14 @@
         {
           "id": "crot-t",
           "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "ip",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -14416,6 +14428,10 @@
         },
         {
           "id": "mag-p",
+          "grade": 1
+        },
+        {
+          "id": "sec",
           "grade": 1
         }
       ]
@@ -25652,6 +25668,10 @@
         {
           "id": "sulph",
           "grade": 1
+        },
+        {
+          "id": "aesc",
+          "grade": 1
         }
       ]
     },
@@ -26582,7 +26602,7 @@
         },
         {
           "id": "sec",
-          "grade": 0
+          "grade": 1
         }
       ]
     },
