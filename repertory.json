@@ -11430,6 +11430,10 @@
         {
           "id": "calc-c",
           "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
         }
       ]
     },
@@ -11696,6 +11700,10 @@
         },
         {
           "id": "cupr",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
           "grade": 1
         }
       ]
@@ -19702,6 +19710,10 @@
         {
           "id": "ign",
           "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
         }
       ]
     },
@@ -22425,6 +22437,10 @@
         },
         {
           "id": "kali-c",
+          "grade": 1
+        },
+        {
+          "id": "puls",
           "grade": 1
         }
       ]
@@ -25175,6 +25191,10 @@
         },
         {
           "id": "caust",
+          "grade": 1
+        },
+        {
+          "id": "arg-met",
           "grade": 1
         }
       ]
