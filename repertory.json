@@ -469,7 +469,10 @@
       "triggers": [
         "menses too early",
         "profuse menses",
-        "early and heavy periods"
+        "early and heavy periods",
+        "periods come early and are very heavy",
+        "menses arrive early with heavy flow",
+        "periods are early and much too profuse"
       ],
       "remedies": [
         {
@@ -499,7 +502,10 @@
         "menses too late",
         "scanty menses",
         "suppressed menses",
-        "delayed periods"
+        "delayed periods",
+        "periods are late and light",
+        "menses delayed and scanty",
+        "periods come late with very little flow"
       ],
       "remedies": [
         {
@@ -968,7 +974,10 @@
         "bearing down sensation",
         "everything will come out",
         "feels everything will fall out",
-        "pelvic organs falling out"
+        "pelvic organs falling out",
+        "feels like everything is going to fall out down there",
+        "bearing down sensation in the pelvis",
+        "heavy dragging sensation as if organs would fall out"
       ],
       "remedies": [
         {
@@ -3629,34 +3638,6 @@
     },
     {
       "section": "Modalities",
-      "rubric": "Worse on first beginning to move, better with continued motion",
-      "triggers": [
-        "worse first motion",
-        "worse beginning to move",
-        "better continued motion",
-        "worse initial motion",
-        "initial push is pure agony",
-        "stiffness works itself out",
-        "stiffness slowly works",
-        "worse first starting to move",
-        "ease up as she keeps moving",
-        "ease up as he keeps moving",
-        "roll out of bed and shuffle",
-        "moving around it eases up",
-        "eases up considerably",
-        "sit still again for too long"
-      ],
-      "remedies": [
-        {
-          "id": "rhus-t",
-          "grade": 3
-        }
-      ],
-      "category": "Generals",
-      "rubricType": "keynote"
-    },
-    {
-      "section": "Modalities",
       "rubric": "Sharp stitching pain worse from any motion, better from firm pressure or holding the part",
       "triggers": [
         "knife like pain",
@@ -5101,7 +5082,9 @@
         "one side hot",
         "one sided heat",
         "face hot body cold",
-        "one cheek red one pale"
+        "one cheek red one pale",
+        "one half of body chilly other feverish",
+        "one sided chilliness during fever"
       ],
       "remedies": [
         {
@@ -5110,6 +5093,10 @@
         },
         {
           "id": "ip",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
           "grade": 1
         }
       ],
@@ -5624,7 +5611,9 @@
         "since losing the business",
         "after the financial loss",
         "since going bankrupt",
-        "ever since the business failed"
+        "ever since the business failed",
+        "symptoms began after a business failure or financial loss",
+        "ailments since losing money or a failed business venture"
       ],
       "remedies": [
         {
@@ -5634,10 +5623,18 @@
         {
           "id": "calc-c",
           "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
         }
       ],
       "category": "Generals",
-      "rubricType": "keynote"
+      "rubricType": "differential"
     },
     {
       "section": "Causation",
@@ -5670,7 +5667,9 @@
       "triggers": [
         "never been the same since the fall",
         "old injury that never healed right",
-        "since the accident years ago"
+        "since the accident years ago",
+        "ailments dating from an old fall",
+        "symptoms since an injury long healed"
       ],
       "remedies": [
         {
@@ -6454,26 +6453,6 @@
     },
     {
       "section": "Modalities",
-      "rubric": "Better lying on the painful side",
-      "triggers": [
-        "better lying on the painful side",
-        "feels better on the affected side"
-      ],
-      "remedies": [
-        {
-          "id": "bry",
-          "grade": 2
-        },
-        {
-          "id": "puls",
-          "grade": 1
-        }
-      ],
-      "category": "Generals",
-      "rubricType": "differential"
-    },
-    {
-      "section": "Modalities",
       "rubric": "Worse lying on the painful side, better on the unaffected side",
       "triggers": [
         "worse lying on the affected side",
@@ -6720,7 +6699,9 @@
       "triggers": [
         "cannot bear to see anyone suffer",
         "gets deeply upset hearing sad news about strangers",
-        "overwhelmed by others' pain"
+        "overwhelmed by others' pain",
+        "cannot bear hearing about accidents or cruelty",
+        "overwhelmed by other people's suffering or bad news"
       ],
       "remedies": [
         {
@@ -6956,7 +6937,9 @@
       "triggers": [
         "diarrhea that drives him out of bed in the morning",
         "has to rush out of bed early morning with diarrhea",
-        "wakes him up early with the urge to go"
+        "wakes him up early with the urge to go",
+        "diarrhea early morning drives out of bed",
+        "must rush to bathroom early morning bowels"
       ],
       "remedies": [
         {
@@ -6966,6 +6949,10 @@
         {
           "id": "podo",
           "grade": 2
+        },
+        {
+          "id": "nat-sulph",
+          "grade": 1
         }
       ],
       "category": "Particulars",
@@ -7013,27 +7000,6 @@
     },
     {
       "section": "Female",
-      "rubric": "Menses too late and scanty",
-      "triggers": [
-        "periods are late and light",
-        "menses delayed and scanty",
-        "periods come late with very little flow"
-      ],
-      "remedies": [
-        {
-          "id": "puls",
-          "grade": 2
-        },
-        {
-          "id": "sep",
-          "grade": 1
-        }
-      ],
-      "category": "Particulars",
-      "rubricType": "differential"
-    },
-    {
-      "section": "Female",
       "rubric": "Menses with dark, clotted blood",
       "triggers": [
         "periods with dark clots",
@@ -7063,7 +7029,9 @@
       "triggers": [
         "ankles give way when walking",
         "weak ankles that buckle",
-        "ankles feel like they'll give out"
+        "ankles feel like they'll give out",
+        "ankles give way or turn unexpectedly while walking",
+        "weak ankles cause sudden turning during walking"
       ],
       "remedies": [
         {
@@ -7084,16 +7052,22 @@
       "triggers": [
         "heel pain worse first thing in the morning",
         "pain in the heel on first stepping",
-        "heels hurt most with the first steps"
+        "heels hurt most with the first steps",
+        "heel pain first step in the morning",
+        "pain in heel getting out of bed"
       ],
       "remedies": [
         {
           "id": "led",
           "grade": 2
+        },
+        {
+          "id": "phyt",
+          "grade": 1
         }
       ],
       "category": "Particulars",
-      "rubricType": "keynote"
+      "rubricType": "differential"
     },
     {
       "section": "Skin",
@@ -7537,7 +7511,9 @@
       "triggers": [
         "cough is worse lying down and better sitting up",
         "has to sit up at night because lying down worsens the cough",
-        "coughs more lying flat, better sitting"
+        "coughs more lying flat, better sitting",
+        "cough starts when lying flat",
+        "must sit propped up to avoid coughing"
       ],
       "remedies": [
         {
@@ -7550,6 +7526,10 @@
         },
         {
           "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "dros",
           "grade": 1
         }
       ],
@@ -7642,27 +7622,6 @@
     },
     {
       "section": "Skin",
-      "rubric": "Unhealthy skin, every small injury tends to suppurate or fester",
-      "triggers": [
-        "every little cut turns into an infection",
-        "small injuries always fester and suppurate",
-        "skin does not heal easily, minor wounds fester"
-      ],
-      "remedies": [
-        {
-          "id": "hep",
-          "grade": 2
-        },
-        {
-          "id": "graph",
-          "grade": 1
-        }
-      ],
-      "category": "Particulars",
-      "rubricType": "differential"
-    },
-    {
-      "section": "Skin",
       "rubric": "Skin dry, rough, and cracked, especially in cold weather",
       "triggers": [
         "skin gets dry and cracked in the winter",
@@ -7685,44 +7644,6 @@
       ],
       "category": "Particulars",
       "rubricType": "differential"
-    },
-    {
-      "section": "Female",
-      "rubric": "Menses too early and too profuse",
-      "triggers": [
-        "periods come early and are very heavy",
-        "menses arrive early with heavy flow",
-        "periods are early and much too profuse"
-      ],
-      "remedies": [
-        {
-          "id": "calc-c",
-          "grade": 2
-        },
-        {
-          "id": "phos",
-          "grade": 1
-        }
-      ],
-      "category": "Particulars",
-      "rubricType": "differential"
-    },
-    {
-      "section": "Female",
-      "rubric": "Bearing-down sensation in the pelvis as if everything would fall out",
-      "triggers": [
-        "feels like everything is going to fall out down there",
-        "bearing down sensation in the pelvis",
-        "heavy dragging sensation as if organs would fall out"
-      ],
-      "remedies": [
-        {
-          "id": "sep",
-          "grade": 3
-        }
-      ],
-      "category": "Particulars",
-      "rubricType": "keynote"
     },
     {
       "section": "Causation",
@@ -9057,7 +8978,9 @@
       "rubric": "Fear of being poisoned, refuses food or medicine from others",
       "triggers": [
         "fear of being poisoned refuses food",
-        "suspicious of medicine being tampered"
+        "suspicious of medicine being tampered",
+        "fear of being poisoned refuses food from others",
+        "suspicious of food or medicine prepared by other people"
       ],
       "remedies": [
         {
@@ -9066,7 +8989,7 @@
         },
         {
           "id": "lach",
-          "grade": 1
+          "grade": 2
         }
       ],
       "rubricType": "differential"
@@ -9968,31 +9891,13 @@
     {
       "section": "Modalities",
       "category": "Generals",
-      "rubric": "Worse from lying on the painless side",
-      "triggers": [
-        "worse lying on the painless side",
-        "worse on the unaffected side"
-      ],
-      "remedies": [
-        {
-          "id": "bry",
-          "grade": 2
-        },
-        {
-          "id": "puls",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Modalities",
-      "category": "Generals",
       "rubric": "Better after a short nap, worse from a long sleep or from oversleeping",
       "triggers": [
         "better after short nap",
         "worse after oversleeping",
-        "worse from long sleep"
+        "worse from long sleep",
+        "feels better after a short nap worse after long sleep",
+        "brief nap helps but long deep sleep makes it worse"
       ],
       "remedies": [
         {
@@ -10029,7 +9934,21 @@
       "rubric": "Worse on beginning to move, better with continued gentle motion",
       "triggers": [
         "worse on first moving",
-        "better as motion continues"
+        "better as motion continues",
+        "worse first motion",
+        "worse beginning to move",
+        "better continued motion",
+        "worse initial motion",
+        "initial push is pure agony",
+        "stiffness works itself out",
+        "stiffness slowly works",
+        "worse first starting to move",
+        "ease up as she keeps moving",
+        "ease up as he keeps moving",
+        "roll out of bed and shuffle",
+        "moving around it eases up",
+        "eases up considerably",
+        "sit still again for too long"
       ],
       "remedies": [
         {
@@ -10302,26 +10221,6 @@
         },
         {
           "id": "psor",
-          "grade": 2
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Modalities",
-      "category": "Generals",
-      "rubric": "Better lying on the affected/painful side",
-      "triggers": [
-        "better lying on the painful side",
-        "relief lying on affected side"
-      ],
-      "remedies": [
-        {
-          "id": "puls",
-          "grade": 1
-        },
-        {
-          "id": "kali-c",
           "grade": 2
         }
       ],
@@ -11197,7 +11096,9 @@
       "rubric": "Rapid weight gain despite a poor or reduced appetite",
       "triggers": [
         "gaining weight despite poor appetite",
-        "weight increases though eating little"
+        "weight increases though eating little",
+        "gains weight despite eating very little",
+        "weight increases even with reduced appetite"
       ],
       "remedies": [
         {
@@ -11217,7 +11118,9 @@
       "rubric": "Obesity concentrated around the abdomen while the limbs remain thin",
       "triggers": [
         "fat belly thin limbs",
-        "abdominal obesity thin arms and legs"
+        "abdominal obesity thin arms and legs",
+        "weight mostly around the belly limbs stay thin",
+        "fat concentrated in the abdomen not the arms and legs"
       ],
       "remedies": [
         {
@@ -11226,6 +11129,10 @@
         },
         {
           "id": "nat-c",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
           "grade": 1
         }
       ],
@@ -11266,26 +11173,6 @@
         },
         {
           "id": "eup-per",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Fever",
-      "category": "Generals",
-      "rubric": "One-sided chill or heat, half the body cold while the other half is hot",
-      "triggers": [
-        "one half of body chilly other feverish",
-        "one sided chilliness during fever"
-      ],
-      "remedies": [
-        {
-          "id": "lyc",
-          "grade": 1
-        },
-        {
-          "id": "cham",
           "grade": 1
         }
       ],
@@ -11402,26 +11289,6 @@
         }
       ],
       "rubricType": "keynote"
-    },
-    {
-      "section": "Causation",
-      "category": "Generals",
-      "rubric": "Ailments from a fall or physical injury, even long after the injury has healed",
-      "triggers": [
-        "ailments dating from an old fall",
-        "symptoms since an injury long healed"
-      ],
-      "remedies": [
-        {
-          "id": "arn",
-          "grade": 2
-        },
-        {
-          "id": "hyper",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
     },
     {
       "section": "Causation",
@@ -11873,7 +11740,9 @@
       "rubric": "Own voice sounds too loud or echoing to the patient",
       "triggers": [
         "own voice sounds too loud",
-        "echoing sensation hearing own voice"
+        "echoing sensation hearing own voice",
+        "own voice sounds too loud or echoing to them",
+        "hears their own voice as if echoing"
       ],
       "remedies": [
         {
@@ -11882,6 +11751,10 @@
         },
         {
           "id": "phos",
+          "grade": 1
+        },
+        {
+          "id": "kali-c",
           "grade": 1
         }
       ],
@@ -11893,7 +11766,9 @@
       "rubric": "Ear discharge that is thick, yellow-green, and offensive",
       "triggers": [
         "thick yellow green offensive ear discharge",
-        "foul smelling ear discharge thick"
+        "foul smelling ear discharge thick",
+        "thick yellow smelly discharge from the ear",
+        "offensive ear discharge thick and colored"
       ],
       "remedies": [
         {
@@ -11917,7 +11792,9 @@
       "rubric": "Cracking or popping noise in the ear on swallowing or moving the jaw",
       "triggers": [
         "cracking noise in ear swallowing",
-        "popping sound in ear moving jaw"
+        "popping sound in ear moving jaw",
+        "ear cracks or pops when swallowing",
+        "popping sound in ear moving the jaw"
       ],
       "remedies": [
         {
@@ -11962,30 +11839,12 @@
     {
       "section": "Nose",
       "category": "Particulars",
-      "rubric": "Chronic post-nasal drip constantly trickling down the back of the throat",
-      "triggers": [
-        "post nasal drip constant trickling",
-        "mucus constantly running down back of throat"
-      ],
-      "remedies": [
-        {
-          "id": "kali-bi",
-          "grade": 2
-        },
-        {
-          "id": "hydr",
-          "grade": 2
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Nose",
-      "category": "Particulars",
       "rubric": "Alternating nostril obstruction, blocked on one side then switches to the other",
       "triggers": [
         "one nostril blocked then switches sides",
-        "alternating nostril congestion"
+        "alternating nostril congestion",
+        "nose blocks on one side then switches to the other",
+        "alternating nostril congestion side to side"
       ],
       "remedies": [
         {
@@ -11998,6 +11857,10 @@
         },
         {
           "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "lach",
           "grade": 1
         }
       ],
@@ -12097,7 +11960,9 @@
       "rubric": "Sore throat markedly worse from empty swallowing, better from swallowing solid food",
       "triggers": [
         "worse swallowing saliva better solid food",
-        "empty swallow hurts more than eating"
+        "empty swallow hurts more than eating",
+        "throat pain worse swallowing saliva than food",
+        "sore throat hurts more on empty swallow than eating"
       ],
       "remedies": [
         {
@@ -12157,7 +12022,9 @@
       "rubric": "Tongue takes the imprint of the teeth around its edges",
       "triggers": [
         "tongue shows teeth marks",
-        "imprint of teeth on edge of tongue"
+        "imprint of teeth on edge of tongue",
+        "tongue shows teeth marks along the edges",
+        "imprint of teeth visible on the tongue"
       ],
       "remedies": [
         {
@@ -12170,6 +12037,10 @@
         },
         {
           "id": "chel",
+          "grade": 1
+        },
+        {
+          "id": "podo",
           "grade": 1
         }
       ],
@@ -12329,7 +12200,9 @@
       "rubric": "Rumbling and gurgling in the abdomen, audible to others across the room",
       "triggers": [
         "loud rumbling in belly heard across room",
-        "gurgling stomach noises audible to others"
+        "gurgling stomach noises audible to others",
+        "loud gurgling in the stomach others can hear",
+        "abdomen rumbles noisily audible across the room"
       ],
       "remedies": [
         {
@@ -12549,7 +12422,9 @@
       "rubric": "Bedwetting in children, especially during the first deep sleep of the night",
       "triggers": [
         "bedwetting during first sleep of night",
-        "child wets bed early in the night deep sleep"
+        "child wets bed early in the night deep sleep",
+        "child wets the bed during the first deep sleep",
+        "bedwetting happens early in the night during deep sleep"
       ],
       "remedies": [
         {
@@ -12573,7 +12448,9 @@
       "rubric": "Menstrual flow that stops and starts intermittently rather than flowing continuously",
       "triggers": [
         "period stops and starts intermittently",
-        "flow comes and goes rather than steady"
+        "flow comes and goes rather than steady",
+        "period flow stops and starts over several days",
+        "menses comes and goes intermittently instead of flowing steadily"
       ],
       "remedies": [
         {
@@ -12582,6 +12459,10 @@
         },
         {
           "id": "caust",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
           "grade": 1
         }
       ],
@@ -12657,7 +12538,9 @@
       "rubric": "Dry cough that is worse specifically on entering a warm room from cold air",
       "triggers": [
         "dry cough worse entering warm room",
-        "cough triggered going from cold into warm room"
+        "cough triggered going from cold into warm room",
+        "dry teasing cough on entering a warm room",
+        "cough worse moving from cold air into warmth"
       ],
       "remedies": [
         {
@@ -12666,7 +12549,7 @@
         },
         {
           "id": "puls",
-          "grade": 1
+          "grade": 2
         }
       ],
       "rubricType": "differential"
@@ -12701,7 +12584,9 @@
       "rubric": "Sensation of a feather or crumb tickling the throat that triggers coughing",
       "triggers": [
         "feather like tickle triggers cough",
-        "crumb sensation in throat causes coughing"
+        "crumb sensation in throat causes coughing",
+        "feels like a feather tickling the throat causes cough",
+        "sensation of a thread in the throat provokes coughing"
       ],
       "remedies": [
         {
@@ -12711,6 +12596,10 @@
         {
           "id": "rumx",
           "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -12809,7 +12698,10 @@
       "rubric": "Chronic unhealthy skin, every small wound tends to fester or ulcerate",
       "triggers": [
         "every scratch turns into a sore",
-        "small wounds fester into ulcers easily"
+        "small wounds fester into ulcers easily",
+        "every little cut turns into an infection",
+        "small injuries always fester and suppurate",
+        "skin does not heal easily, minor wounds fester"
       ],
       "remedies": [
         {
@@ -12822,6 +12714,10 @@
         },
         {
           "id": "sil",
+          "grade": 1
+        },
+        {
+          "id": "graph",
           "grade": 1
         }
       ],
@@ -12978,26 +12874,6 @@
     {
       "section": "Extremities",
       "category": "Particulars",
-      "rubric": "Pain in the heel specifically on first stepping down in the morning",
-      "triggers": [
-        "heel pain first step in the morning",
-        "pain in heel getting out of bed"
-      ],
-      "remedies": [
-        {
-          "id": "led",
-          "grade": 2
-        },
-        {
-          "id": "phyt",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Extremities",
-      "category": "Particulars",
       "rubric": "Weakness of the ankles, tends to turn or sprain easily on uneven ground",
       "triggers": [
         "weak ankles sprain easily",
@@ -13041,7 +12917,9 @@
       "rubric": "Enlarged tonsils that remain permanently large even between infections",
       "triggers": [
         "tonsils stay enlarged even when not infected",
-        "permanently large tonsils between illnesses"
+        "permanently large tonsils between illnesses",
+        "tonsils stay enlarged even when not sick",
+        "chronically big tonsils between infections"
       ],
       "remedies": [
         {
@@ -15025,7 +14903,9 @@
       "rubric": "Uterine or ovarian pain that is markedly relieved by firm pressure or lying on the abdomen",
       "triggers": [
         "pelvic pain better lying on stomach",
-        "ovary pain relieved by firm pressure"
+        "ovary pain relieved by firm pressure",
+        "ovarian pain relieved by lying face down",
+        "uterine ache better from firm pressure"
       ],
       "remedies": [
         {
@@ -15170,26 +15050,6 @@
     {
       "section": "Stool",
       "category": "Particulars",
-      "rubric": "Diarrhea that is worse specifically in the early morning, driving the patient out of bed",
-      "triggers": [
-        "diarrhea early morning drives out of bed",
-        "must rush to bathroom early morning bowels"
-      ],
-      "remedies": [
-        {
-          "id": "sulph",
-          "grade": 3
-        },
-        {
-          "id": "nat-sulph",
-          "grade": 1
-        }
-      ],
-      "rubricType": "keynote"
-    },
-    {
-      "section": "Stool",
-      "category": "Particulars",
       "rubric": "Stool that is alternately constipated and loose, never normal for long",
       "triggers": [
         "alternates between constipation and diarrhea",
@@ -15206,26 +15066,6 @@
         },
         {
           "id": "puls",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Abdomen",
-      "category": "Particulars",
-      "rubric": "Abdominal pain relieved specifically by belching, worse until gas is brought up",
-      "triggers": [
-        "belly pain relieved by belching",
-        "pain until able to burp"
-      ],
-      "remedies": [
-        {
-          "id": "carb-v",
-          "grade": 2
-        },
-        {
-          "id": "nux-v",
           "grade": 1
         }
       ],
@@ -15257,7 +15097,9 @@
       "rubric": "Urine that deposits a thick, brick-dust red sediment on standing",
       "triggers": [
         "brick dust red sediment in urine",
-        "urine leaves reddish sandy deposit"
+        "urine leaves reddish sandy deposit",
+        "urine leaves reddish brick dust sediment on standing",
+        "urine settles with thick red deposit"
       ],
       "remedies": [
         {
@@ -15357,7 +15199,9 @@
       "rubric": "Hawking of mucus constantly, worse in the morning on waking",
       "triggers": [
         "constant hawking of mucus in the morning",
-        "clears throat repeatedly on waking"
+        "clears throat repeatedly on waking",
+        "constant hawking to clear throat mucus worse in the morning",
+        "clears throat of phlegm repeatedly on waking"
       ],
       "remedies": [
         {
@@ -15366,6 +15210,10 @@
         },
         {
           "id": "hydr",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
           "grade": 1
         }
       ],
@@ -16303,26 +16151,6 @@
         {
           "id": "rhus-t",
           "grade": 2
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Female",
-      "category": "Particulars",
-      "rubric": "Uterine or ovarian pain relieved specifically by pressure and by lying on the abdomen",
-      "triggers": [
-        "ovarian pain relieved by lying face down",
-        "uterine ache better from firm pressure"
-      ],
-      "remedies": [
-        {
-          "id": "coloc",
-          "grade": 1
-        },
-        {
-          "id": "mag-p",
-          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -17984,30 +17812,6 @@
       "rubricType": "differential"
     },
     {
-      "section": "Respiratory",
-      "category": "Particulars",
-      "rubric": "Cough triggered specifically by lying down flat, better sitting propped up",
-      "triggers": [
-        "cough starts when lying flat",
-        "must sit propped up to avoid coughing"
-      ],
-      "remedies": [
-        {
-          "id": "puls",
-          "grade": 1
-        },
-        {
-          "id": "ars-alb",
-          "grade": 1
-        },
-        {
-          "id": "dros",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
       "section": "Skin",
       "category": "Particulars",
       "rubric": "Blackheads and clogged pores especially over the nose and forehead",
@@ -18242,26 +18046,6 @@
         },
         {
           "id": "nat-mur",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Mind",
-      "category": "Mind",
-      "rubric": "Sensitive to the suffering of others, cannot bear to hear of accidents or cruelty",
-      "triggers": [
-        "cannot bear hearing about accidents or cruelty",
-        "overwhelmed by other people's suffering or bad news"
-      ],
-      "remedies": [
-        {
-          "id": "caust",
-          "grade": 2
-        },
-        {
-          "id": "phos",
           "grade": 1
         }
       ],
@@ -18644,26 +18428,6 @@
       "rubricType": "differential"
     },
     {
-      "section": "Mouth",
-      "category": "Particulars",
-      "rubric": "Tongue that takes a clear imprint of the teeth along its edges",
-      "triggers": [
-        "tongue shows teeth marks along the edges",
-        "imprint of teeth visible on the tongue"
-      ],
-      "remedies": [
-        {
-          "id": "merc-sol",
-          "grade": 2
-        },
-        {
-          "id": "podo",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
       "section": "Stomach",
       "category": "Particulars",
       "rubric": "Nausea that is markedly relieved by eating something, worse on an empty stomach",
@@ -18682,26 +18446,6 @@
         },
         {
           "id": "anac",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Abdomen",
-      "category": "Particulars",
-      "rubric": "Rumbling and gurgling noises in the abdomen audible to others nearby",
-      "triggers": [
-        "loud gurgling in the stomach others can hear",
-        "abdomen rumbles noisily audible across the room"
-      ],
-      "remedies": [
-        {
-          "id": "lyc",
-          "grade": 1
-        },
-        {
-          "id": "puls",
           "grade": 1
         }
       ],
@@ -18762,26 +18506,6 @@
         },
         {
           "id": "calc-c",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Respiratory",
-      "category": "Particulars",
-      "rubric": "Cough that is dry and teasing, worse on entering a warm room from cold air",
-      "triggers": [
-        "dry teasing cough on entering a warm room",
-        "cough worse moving from cold air into warmth"
-      ],
-      "remedies": [
-        {
-          "id": "puls",
-          "grade": 2
-        },
-        {
-          "id": "bry",
           "grade": 1
         }
       ],
@@ -19892,22 +19616,6 @@
       "rubricType": "differential"
     },
     {
-      "section": "Ear",
-      "category": "Particulars",
-      "rubric": "Own voice sounds unusually loud or echoing to the patient",
-      "triggers": [
-        "own voice sounds too loud or echoing to them",
-        "hears their own voice as if echoing"
-      ],
-      "remedies": [
-        {
-          "id": "kali-c",
-          "grade": 1
-        }
-      ],
-      "rubricType": "keynote"
-    },
-    {
       "section": "Nose",
       "category": "Particulars",
       "rubric": "Sneezing fits triggered specifically by bright sunlight",
@@ -20532,26 +20240,6 @@
       "rubricType": "differential"
     },
     {
-      "section": "Weight",
-      "category": "Generals",
-      "rubric": "Steady weight gain despite a reduced appetite, gains weight without eating much",
-      "triggers": [
-        "gains weight despite eating very little",
-        "weight increases even with reduced appetite"
-      ],
-      "remedies": [
-        {
-          "id": "calc-c",
-          "grade": 1
-        },
-        {
-          "id": "graph",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
       "section": "Head",
       "category": "Particulars",
       "rubric": "Headache that comes with a sensation of the eyes being pushed or pulled outward",
@@ -20622,26 +20310,6 @@
         },
         {
           "id": "puls",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Nose",
-      "category": "Particulars",
-      "rubric": "Alternating nostril blockage, one side clear then the other blocks in turn",
-      "triggers": [
-        "nose blocks on one side then switches to the other",
-        "alternating nostril congestion side to side"
-      ],
-      "remedies": [
-        {
-          "id": "lach",
-          "grade": 1
-        },
-        {
-          "id": "nux-v",
           "grade": 1
         }
       ],
@@ -21333,7 +21001,9 @@
       "rubric": "Chronic post-nasal drip that trickles down the back of the throat, worse lying down at night",
       "triggers": [
         "post nasal drip worse lying down at night",
-        "mucus trickles down the throat especially at night"
+        "mucus trickles down the throat especially at night",
+        "post nasal drip constant trickling",
+        "mucus constantly running down back of throat"
       ],
       "remedies": [
         {
@@ -21342,7 +21012,7 @@
         },
         {
           "id": "hydr",
-          "grade": 1
+          "grade": 2
         }
       ],
       "rubricType": "differential"
@@ -23234,26 +22904,6 @@
     {
       "section": "Glands",
       "category": "Particulars",
-      "rubric": "Chronically enlarged tonsils that remain large even between infections, not just during illness",
-      "triggers": [
-        "tonsils stay enlarged even when not sick",
-        "chronically big tonsils between infections"
-      ],
-      "remedies": [
-        {
-          "id": "bar-c",
-          "grade": 2
-        },
-        {
-          "id": "calc-c",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Glands",
-      "category": "Particulars",
       "rubric": "Swollen glands that are soft and painless, move easily under the skin when touched",
       "triggers": [
         "soft painless glands move under the skin easily",
@@ -23334,26 +22984,6 @@
     {
       "section": "Ear",
       "category": "Particulars",
-      "rubric": "Discharge from the ear that is thick, yellow, and offensive-smelling",
-      "triggers": [
-        "thick yellow smelly discharge from the ear",
-        "offensive ear discharge thick and colored"
-      ],
-      "remedies": [
-        {
-          "id": "hep",
-          "grade": 2
-        },
-        {
-          "id": "merc-sol",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Ear",
-      "category": "Particulars",
       "rubric": "Sensitivity to noise so intense that ordinary sounds feel painfully loud",
       "triggers": [
         "ordinary sounds feel painfully loud",
@@ -23394,22 +23024,6 @@
     {
       "section": "Ear",
       "category": "Particulars",
-      "rubric": "A cracking or popping sound in the ear when swallowing or moving the jaw",
-      "triggers": [
-        "ear cracks or pops when swallowing",
-        "popping sound in ear moving the jaw"
-      ],
-      "remedies": [
-        {
-          "id": "kali-c",
-          "grade": 1
-        }
-      ],
-      "rubricType": "keynote"
-    },
-    {
-      "section": "Ear",
-      "category": "Particulars",
       "rubric": "Ear infection that tends to follow every episode of swimming or water exposure",
       "triggers": [
         "ear infection every time after swimming",
@@ -23423,26 +23037,6 @@
         {
           "id": "puls",
           "grade": 2
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Weight",
-      "category": "Generals",
-      "rubric": "Weight concentrated mostly around the abdomen while the limbs remain relatively thin",
-      "triggers": [
-        "weight mostly around the belly limbs stay thin",
-        "fat concentrated in the abdomen not the arms and legs"
-      ],
-      "remedies": [
-        {
-          "id": "calc-c",
-          "grade": 1
-        },
-        {
-          "id": "sulph",
-          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -24215,26 +23809,6 @@
     {
       "section": "Urinary",
       "category": "Particulars",
-      "rubric": "Bedwetting in a child that happens mainly during the first deep sleep of the night",
-      "triggers": [
-        "child wets the bed during the first deep sleep",
-        "bedwetting happens early in the night during deep sleep"
-      ],
-      "remedies": [
-        {
-          "id": "sep",
-          "grade": 1
-        },
-        {
-          "id": "caust",
-          "grade": 2
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Urinary",
-      "category": "Particulars",
       "rubric": "Urgency to urinate that is worse specifically from coughing or laughing",
       "triggers": [
         "urge to urinate worse from coughing or laughing",
@@ -24514,7 +24088,9 @@
       "rubric": "Abdominal pain that is markedly relieved by passing gas or belching, builds up again after",
       "triggers": [
         "belly pain relieved by passing gas builds up again",
-        "abdominal cramp eases after burping then returns"
+        "abdominal cramp eases after burping then returns",
+        "belly pain relieved by belching",
+        "pain until able to burp"
       ],
       "remedies": [
         {
@@ -24523,6 +24099,10 @@
         },
         {
           "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
           "grade": 1
         }
       ],
@@ -26340,46 +25920,6 @@
     {
       "section": "Throat",
       "category": "Particulars",
-      "rubric": "Sore throat that is markedly worse from empty swallowing than from swallowing food",
-      "triggers": [
-        "throat pain worse swallowing saliva than food",
-        "sore throat hurts more on empty swallow than eating"
-      ],
-      "remedies": [
-        {
-          "id": "ign",
-          "grade": 2
-        },
-        {
-          "id": "lach",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Throat",
-      "category": "Particulars",
-      "rubric": "Chronic hawking to clear the throat of mucus, worse in the morning on waking",
-      "triggers": [
-        "constant hawking to clear throat mucus worse in the morning",
-        "clears throat of phlegm repeatedly on waking"
-      ],
-      "remedies": [
-        {
-          "id": "kali-bi",
-          "grade": 2
-        },
-        {
-          "id": "nat-mur",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Throat",
-      "category": "Particulars",
       "rubric": "Sensation of constriction in the throat that prevents swallowing solid food, liquids pass easily",
       "triggers": [
         "throat feels tight cannot swallow solid food liquids fine",
@@ -27188,26 +26728,6 @@
     {
       "section": "Urinary",
       "category": "Particulars",
-      "rubric": "Urine that deposits a thick, brick-dust or reddish sediment on standing",
-      "triggers": [
-        "urine leaves reddish brick dust sediment on standing",
-        "urine settles with thick red deposit"
-      ],
-      "remedies": [
-        {
-          "id": "lyc",
-          "grade": 2
-        },
-        {
-          "id": "sars",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Urinary",
-      "category": "Particulars",
       "rubric": "Weak, thin urinary stream in an older man, must strain or wait for the flow to start",
       "triggers": [
         "weak thin urine stream older man must strain to start",
@@ -27400,26 +26920,6 @@
         },
         {
           "id": "sep",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Female",
-      "category": "Particulars",
-      "rubric": "Menstrual flow that stops and starts intermittently over several days rather than flowing continuously",
-      "triggers": [
-        "period flow stops and starts over several days",
-        "menses comes and goes intermittently instead of flowing steadily"
-      ],
-      "remedies": [
-        {
-          "id": "puls",
-          "grade": 1
-        },
-        {
-          "id": "nat-mur",
           "grade": 1
         }
       ],
@@ -29644,26 +29144,6 @@
     {
       "section": "Respiratory",
       "category": "Particulars",
-      "rubric": "Sensation of a feather or tickling thread in the throat that provokes coughing",
-      "triggers": [
-        "feels like a feather tickling the throat causes cough",
-        "sensation of a thread in the throat provokes coughing"
-      ],
-      "remedies": [
-        {
-          "id": "rumx",
-          "grade": 1
-        },
-        {
-          "id": "phos",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Respiratory",
-      "category": "Particulars",
       "rubric": "Breathing that is shallow and rapid specifically during fever, out of proportion to the temperature",
       "triggers": [
         "rapid shallow breathing during fever out of proportion to temperature",
@@ -29696,26 +29176,6 @@
         },
         {
           "id": "coff",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Causation",
-      "category": "Generals",
-      "rubric": "Ailments from a period of financial loss or business failure",
-      "triggers": [
-        "symptoms began after a business failure or financial loss",
-        "ailments since losing money or a failed business venture"
-      ],
-      "remedies": [
-        {
-          "id": "ars-alb",
-          "grade": 1
-        },
-        {
-          "id": "nat-mur",
           "grade": 1
         }
       ],
@@ -29887,7 +29347,12 @@
       "rubric": "Better from lying on the painful side, worse lying on the unaffected side",
       "triggers": [
         "better lying on the painful side worse on the other side",
-        "pain eases lying on the affected side flares on the healthy side"
+        "pain eases lying on the affected side flares on the healthy side",
+        "better lying on the painful side",
+        "feels better on the affected side",
+        "relief lying on affected side",
+        "worse lying on the painless side",
+        "worse on the unaffected side"
       ],
       "remedies": [
         {
@@ -29897,6 +29362,10 @@
         {
           "id": "puls",
           "grade": 1
+        },
+        {
+          "id": "kali-c",
+          "grade": 2
         }
       ],
       "rubricType": "differential"
@@ -29920,22 +29389,6 @@
         }
       ],
       "rubricType": "differential"
-    },
-    {
-      "section": "Modalities",
-      "category": "Generals",
-      "rubric": "Symptoms better after a short nap, worse after a long or deep sleep",
-      "triggers": [
-        "feels better after a short nap worse after long sleep",
-        "brief nap helps but long deep sleep makes it worse"
-      ],
-      "remedies": [
-        {
-          "id": "lach",
-          "grade": 1
-        }
-      ],
-      "rubricType": "keynote"
     },
     {
       "section": "Modalities",
@@ -30176,26 +29629,6 @@
         },
         {
           "id": "stram",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Mind",
-      "category": "Mind",
-      "rubric": "Marked fear of being poisoned, refuses food or medicine prepared by others",
-      "triggers": [
-        "fear of being poisoned refuses food from others",
-        "suspicious of food or medicine prepared by other people"
-      ],
-      "remedies": [
-        {
-          "id": "lach",
-          "grade": 2
-        },
-        {
-          "id": "hyos",
           "grade": 1
         }
       ],
@@ -31104,26 +30537,6 @@
         }
       ],
       "rubricType": "keynote"
-    },
-    {
-      "section": "Extremities",
-      "category": "Particulars",
-      "rubric": "Weakness in the ankles causing them to give way or turn unexpectedly while walking",
-      "triggers": [
-        "ankles give way or turn unexpectedly while walking",
-        "weak ankles cause sudden turning during walking"
-      ],
-      "remedies": [
-        {
-          "id": "nat-c",
-          "grade": 2
-        },
-        {
-          "id": "calc-c",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
     },
     {
       "section": "Respiratory",
