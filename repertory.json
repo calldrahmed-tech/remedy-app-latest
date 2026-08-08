@@ -11857,6 +11857,10 @@
         {
           "id": "chin",
           "grade": 1
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
         }
       ]
     },
@@ -11956,6 +11960,10 @@
         {
           "id": "con",
           "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
         }
       ]
     },
@@ -19063,6 +19071,10 @@
         {
           "id": "carb-v",
           "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
         }
       ]
     },
@@ -23037,6 +23049,10 @@
       "remedies": [
         {
           "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
           "grade": 1
         }
       ]
