@@ -6664,6 +6664,10 @@
         {
           "id": "bry",
           "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -20792,6 +20796,10 @@
         {
           "id": "carb-v",
           "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
         }
       ]
     },
@@ -20810,6 +20818,10 @@
         },
         {
           "id": "carb-v",
+          "grade": 1
+        },
+        {
+          "id": "lyc",
           "grade": 1
         }
       ]
@@ -22492,6 +22504,10 @@
         },
         {
           "id": "sep",
+          "grade": 1
+        },
+        {
+          "id": "calc-c",
           "grade": 1
         }
       ]
@@ -24725,6 +24741,10 @@
         },
         {
           "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "phos",
           "grade": 1
         }
       ]
