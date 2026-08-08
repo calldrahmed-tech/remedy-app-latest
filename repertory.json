@@ -3007,6 +3007,14 @@
         {
           "id": "puls",
           "grade": 3
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
+        },
+        {
+          "id": "lach",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -5024,6 +5032,10 @@
         {
           "id": "aur",
           "grade": 1
+        },
+        {
+          "id": "caust",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -5049,6 +5061,10 @@
         },
         {
           "id": "gels",
+          "grade": 1
+        },
+        {
+          "id": "stram",
           "grade": 1
         }
       ],
@@ -5171,6 +5187,10 @@
         {
           "id": "bry",
           "grade": 1
+        },
+        {
+          "id": "ruta",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -5195,6 +5215,10 @@
         },
         {
           "id": "ph-ac",
+          "grade": 1
+        },
+        {
+          "id": "anac",
           "grade": 1
         }
       ],
@@ -6256,6 +6280,10 @@
         {
           "id": "ph-ac",
           "grade": 2
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -6275,6 +6303,10 @@
         },
         {
           "id": "cycl",
+          "grade": 1
+        },
+        {
+          "id": "sep",
           "grade": 1
         }
       ],
@@ -6336,6 +6368,10 @@
         },
         {
           "id": "arn",
+          "grade": 1
+        },
+        {
+          "id": "op",
           "grade": 1
         }
       ],
@@ -6880,6 +6916,14 @@
         {
           "id": "puls",
           "grade": 1
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "apis",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -6904,6 +6948,14 @@
         {
           "id": "sil",
           "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -6924,6 +6976,10 @@
         {
           "id": "rhus-t",
           "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -7029,6 +7085,10 @@
         {
           "id": "rhus-t",
           "grade": 3
+        },
+        {
+          "id": "ferr",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -7045,6 +7105,10 @@
         {
           "id": "calc-c",
           "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
         }
       ],
       "category": "Generals"
@@ -7085,6 +7149,10 @@
         {
           "id": "bell",
           "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -7101,6 +7169,10 @@
         {
           "id": "spig",
           "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -10877,6 +10949,10 @@
         {
           "id": "caust",
           "grade": 1
+        },
+        {
+          "id": "lyc",
+          "grade": 1
         }
       ]
     },
@@ -10895,6 +10971,10 @@
         },
         {
           "id": "arg-n",
+          "grade": 1
+        },
+        {
+          "id": "caust",
           "grade": 1
         }
       ]
@@ -11055,6 +11135,10 @@
         },
         {
           "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "sil",
           "grade": 1
         }
       ]
@@ -18753,6 +18837,10 @@
         },
         {
           "id": "nat-mur",
+          "grade": 1
+        },
+        {
+          "id": "coloc",
           "grade": 1
         }
       ]
@@ -27661,6 +27749,10 @@
         {
           "id": "bell",
           "grade": 1
+        },
+        {
+          "id": "sang",
+          "grade": 1
         }
       ]
     },
@@ -27679,6 +27771,10 @@
         },
         {
           "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "spig",
           "grade": 1
         }
       ]
