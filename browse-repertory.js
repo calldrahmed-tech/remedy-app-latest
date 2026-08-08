@@ -17,6 +17,17 @@
     return d.innerHTML;
   }
 
+  // Matches search words in ANY order against both the rubric title and its trigger
+  // phrases — a plain includes() on the title alone missed real matches whenever the
+  // doctor's word order differed from the canonical rubric wording (e.g. searching
+  // "foreign body sensation eye" for a rubric titled "Sensation of a foreign body...").
+  function matchesSearch(item, term) {
+    const words = term.split(/\s+/).filter(Boolean);
+    if (!words.length) return true;
+    const haystack = (item.rubric + " " + (item.triggers || []).join(" ")).toLowerCase();
+    return words.every(w => haystack.includes(w));
+  }
+
   function waitForReady(check, thenRun, triesLeft) {
     if (check()) { thenRun(); return; }
     if (triesLeft <= 0) return;
@@ -87,7 +98,7 @@
     function renderRubricList(filterText) {
       const term = (filterText || "").trim().toLowerCase();
       const items = repertory.filter(r => r.section === currentChapter);
-      const filtered = term ? items.filter(r => r.rubric.toLowerCase().includes(term)) : items;
+      const filtered = term ? items.filter(r => matchesSearch(r, term)) : items;
       if (!filtered.length) {
         rubricList.innerHTML = `<div class="patient-list-empty">No match in this chapter.</div>`;
         return;

@@ -30837,6 +30837,175 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Fever",
+      "category": "Generals",
+      "rubric": "Chikungunya-type fever with severe, disabling joint pain that lingers well after the fever itself has gone",
+      "triggers": [
+        "chikungunya",
+        "severe joint pain with fever that lingers after fever clears",
+        "disabling joint pain following a mosquito-borne fever"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "eup-per",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Chronic cough with blood-streaked sputum, night sweats, and progressive weight loss suggestive of tuberculosis",
+      "triggers": [
+        "tuberculosis",
+        "tb symptoms",
+        "coughing blood",
+        "blood streaked sputum",
+        "blood in the sputum",
+        "chronic cough with night sweats and weight loss"
+      ],
+      "remedies": [
+        {
+          "id": "tub",
+          "grade": 3
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Endometriosis-type pelvic pain that is severe during menses and may extend through the whole cycle, often with painful intimacy",
+      "triggers": [
+        "endometriosis",
+        "severe pelvic pain during periods extending through the cycle",
+        "painful periods with painful intimacy suggestive of endometriosis"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "caul",
+          "grade": 1
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "con",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Frozen shoulder with marked stiffness and restricted movement in all directions, worse at night and from cold",
+      "triggers": [
+        "frozen shoulder",
+        "shoulder stiffness restricted movement in all directions worse at night",
+        "adhesive capsulitis shoulder pain and stiffness"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 2
+        },
+        {
+          "id": "caust",
+          "grade": 2
+        },
+        {
+          "id": "sang",
+          "grade": 2
+        },
+        {
+          "id": "kalm",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Stool",
+      "category": "Particulars",
+      "rubric": "Diarrhea that comes on specifically after eating fruit or drinking something cold",
+      "triggers": [
+        "diarrhea after eating fruit",
+        "loose stool after cold drinks or cold food",
+        "stomach upset from fruit or iced drinks"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Acute back pain and soreness following a specific injury or strain, better lying still",
+      "triggers": [
+        "back pain after an injury or strain",
+        "backache from a specific accident or fall",
+        "sore back following a strain better lying still"
+      ],
+      "remedies": [
+        {
+          "id": "arn",
+          "grade": 3
+        },
+        {
+          "id": "rhus-t",
+          "grade": 1
+        },
+        {
+          "id": "hyper",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -39755,6 +39924,42 @@
       "label": "Recurrent yeast-type vaginal infections with thick w…",
       "section": "Female",
       "rubric": "Recurrent yeast-type vaginal infections with thick white discharge and intense itching"
+    },
+    {
+      "id": "sym_chikungunya_type_fever_with_severe_disabling_joint_pain_that",
+      "label": "Chikungunya-type fever with severe, disabling joint …",
+      "section": "Fever",
+      "rubric": "Chikungunya-type fever with severe, disabling joint pain that lingers well after the fever itself has gone"
+    },
+    {
+      "id": "sym_chronic_cough_with_blood_streaked_sputum_night_sweats_and_pr",
+      "label": "Chronic cough with blood-streaked sputum, night swea…",
+      "section": "Respiratory",
+      "rubric": "Chronic cough with blood-streaked sputum, night sweats, and progressive weight loss suggestive of tuberculosis"
+    },
+    {
+      "id": "sym_endometriosis_type_pelvic_pain_that_is_severe_during_menses_",
+      "label": "Endometriosis-type pelvic pain that is severe during…",
+      "section": "Female",
+      "rubric": "Endometriosis-type pelvic pain that is severe during menses and may extend through the whole cycle, often with painful intimacy"
+    },
+    {
+      "id": "sym_frozen_shoulder_with_marked_stiffness_and_restricted_movemen",
+      "label": "Frozen shoulder with marked stiffness and restricted…",
+      "section": "Extremities",
+      "rubric": "Frozen shoulder with marked stiffness and restricted movement in all directions, worse at night and from cold"
+    },
+    {
+      "id": "sym_diarrhea_that_comes_on_specifically_after_eating_fruit_or_dr",
+      "label": "Diarrhea that comes on specifically after eating fru…",
+      "section": "Stool",
+      "rubric": "Diarrhea that comes on specifically after eating fruit or drinking something cold"
+    },
+    {
+      "id": "sym_acute_back_pain_and_soreness_following_a_specific_injury_or_",
+      "label": "Acute back pain and soreness following a specific in…",
+      "section": "Back",
+      "rubric": "Acute back pain and soreness following a specific injury or strain, better lying still"
     }
   ]
 }
