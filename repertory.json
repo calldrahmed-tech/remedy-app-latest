@@ -224,6 +224,14 @@
         {
           "id": "spong",
           "grade": 2
+        },
+        {
+          "id": "hyos",
+          "grade": 1
+        },
+        {
+          "id": "bell",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -249,6 +257,14 @@
         {
           "id": "nat-sulph",
           "grade": 2
+        },
+        {
+          "id": "ip",
+          "grade": 1
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -333,6 +349,14 @@
         {
           "id": "ars-alb",
           "grade": 1
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "psor",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -358,6 +382,10 @@
         {
           "id": "apis",
           "grade": 3
+        },
+        {
+          "id": "rhus-t",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -378,6 +406,14 @@
         {
           "id": "sil",
           "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "bell",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -400,6 +436,14 @@
         {
           "id": "hep",
           "grade": 2
+        },
+        {
+          "id": "kali-bi",
+          "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -928,6 +972,14 @@
         {
           "id": "sulph",
           "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "petr",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -954,6 +1006,10 @@
         {
           "id": "anac",
           "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -974,6 +1030,10 @@
         },
         {
           "id": "sep",
+          "grade": 1
+        },
+        {
+          "id": "hep",
           "grade": 1
         }
       ],
@@ -1085,6 +1145,10 @@
         },
         {
           "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "urt-u",
           "grade": 1
         }
       ],
@@ -1384,6 +1448,10 @@
         },
         {
           "id": "hep",
+          "grade": 1
+        },
+        {
+          "id": "merc-sol",
           "grade": 1
         }
       ],
@@ -6706,6 +6774,10 @@
         {
           "id": "caust",
           "grade": 1
+        },
+        {
+          "id": "nit-ac",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -7082,6 +7154,10 @@
         {
           "id": "puls",
           "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -7134,6 +7210,10 @@
         {
           "id": "caust",
           "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 1
         }
       ],
       "category": "Particulars"
@@ -7153,6 +7233,10 @@
         },
         {
           "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "merc-sol",
           "grade": 1
         }
       ],
@@ -7193,6 +7277,10 @@
         },
         {
           "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "ars-alb",
           "grade": 1
         }
       ],
@@ -12077,6 +12165,10 @@
         {
           "id": "sep",
           "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
         }
       ]
     },
@@ -12952,6 +13044,14 @@
         {
           "id": "dig",
           "grade": 1
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
         }
       ]
     },
@@ -12970,6 +13070,10 @@
         },
         {
           "id": "mez",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
           "grade": 1
         }
       ]
@@ -13985,6 +14089,10 @@
         {
           "id": "kali-bi",
           "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
         }
       ]
     },
@@ -14022,6 +14130,10 @@
         },
         {
           "id": "petr",
+          "grade": 1
+        },
+        {
+          "id": "graph",
           "grade": 1
         }
       ]
@@ -14098,6 +14210,10 @@
         },
         {
           "id": "phos",
+          "grade": 1
+        },
+        {
+          "id": "caust",
           "grade": 1
         }
       ]
@@ -15424,6 +15540,14 @@
         },
         {
           "id": "carb-ac",
+          "grade": 1
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "sil",
           "grade": 1
         }
       ]
@@ -20442,6 +20566,10 @@
         {
           "id": "nat-mur",
           "grade": 1
+        },
+        {
+          "id": "euphr",
+          "grade": 1
         }
       ]
     },
@@ -20460,6 +20588,10 @@
         },
         {
           "id": "kali-bi",
+          "grade": 1
+        },
+        {
+          "id": "hydr",
           "grade": 1
         }
       ]
@@ -26587,6 +26719,14 @@
         {
           "id": "pyrog",
           "grade": 1
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "apis",
+          "grade": 1
         }
       ]
     },
@@ -26643,6 +26783,14 @@
         },
         {
           "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "led",
+          "grade": 1
+        },
+        {
+          "id": "ham",
           "grade": 1
         }
       ]
@@ -26719,6 +26867,10 @@
         },
         {
           "id": "caust",
+          "grade": 1
+        },
+        {
+          "id": "graph",
           "grade": 1
         }
       ]
@@ -29334,6 +29486,10 @@
         {
           "id": "cupr",
           "grade": 1
+        },
+        {
+          "id": "ant-t",
+          "grade": 1
         }
       ]
     },
@@ -29443,6 +29599,10 @@
         },
         {
           "id": "bry",
+          "grade": 1
+        },
+        {
+          "id": "rhus-t",
           "grade": 1
         }
       ]
