@@ -33995,6 +33995,217 @@
         }
       ],
       "rubricType": "keynote"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Threatened miscarriage, bleeding or cramping during early pregnancy",
+      "triggers": [
+        "threatened miscarriage",
+        "bleeding during early pregnancy",
+        "cramping and bleeding in early pregnancy",
+        "threatened abortion"
+      ],
+      "remedies": [
+        {
+          "id": "sabin",
+          "grade": 2
+        },
+        {
+          "id": "sec",
+          "grade": 1
+        },
+        {
+          "id": "caul",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Painful intercourse (dyspareunia)",
+      "triggers": [
+        "painful intercourse",
+        "dyspareunia",
+        "pain during intimacy",
+        "sex is painful"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Puerperal fever, fever and infection following childbirth",
+      "triggers": [
+        "puerperal fever",
+        "fever after childbirth",
+        "infection after delivery",
+        "fever following labor"
+      ],
+      "remedies": [
+        {
+          "id": "pyrog",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "merc-c",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Weak or ineffectual labor pains that fail to progress or dilate the cervix",
+      "triggers": [
+        "weak labor pains",
+        "ineffectual contractions during labor",
+        "labor not progressing",
+        "contractions too weak to dilate the cervix"
+      ],
+      "remedies": [
+        {
+          "id": "caul",
+          "grade": 3
+        },
+        {
+          "id": "act-r",
+          "grade": 1
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Retained placenta after delivery",
+      "triggers": [
+        "retained placenta",
+        "placenta not delivered after birth",
+        "placenta retained after childbirth"
+      ],
+      "remedies": [
+        {
+          "id": "sec",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Rigid os, the cervix fails to dilate or soften during labor",
+      "triggers": [
+        "rigid os",
+        "cervix will not dilate during labor",
+        "cervix too rigid in labor",
+        "undilatable cervix in labor"
+      ],
+      "remedies": [
+        {
+          "id": "caul",
+          "grade": 2
+        },
+        {
+          "id": "gels",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Salpingitis, inflammation of the fallopian tubes",
+      "triggers": [
+        "salpingitis",
+        "inflammation of the fallopian tubes",
+        "fallopian tube inflammation",
+        "infected fallopian tubes"
+      ],
+      "remedies": [
+        {
+          "id": "apis",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Lochia that is offensive, too profuse, or suppressed after childbirth",
+      "triggers": [
+        "offensive lochia",
+        "lochia too profuse after childbirth",
+        "lochia suppressed after delivery",
+        "foul smelling discharge after childbirth",
+        "lochia foul smelling",
+        "lochia offensive and profuse"
+      ],
+      "remedies": [
+        {
+          "id": "sec",
+          "grade": 2
+        },
+        {
+          "id": "sabin",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Itching of the vulva (pruritus vulvae), sometimes leading to a habit of touching in young children",
+      "triggers": [
+        "pruritus vulvae",
+        "itching of the vulva",
+        "vulva itches intensely",
+        "child touches herself from vulva itching"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -43693,6 +43904,60 @@
       "label": "A hard, painless lump or mass felt in the testicle, …",
       "section": "Male",
       "rubric": "A hard, painless lump or mass felt in the testicle, requiring prompt medical evaluation"
+    },
+    {
+      "id": "sym_threatened_miscarriage_bleeding_or_cramping_during_early_pre",
+      "label": "Threatened miscarriage, bleeding or cramping during …",
+      "section": "Female",
+      "rubric": "Threatened miscarriage, bleeding or cramping during early pregnancy"
+    },
+    {
+      "id": "sym_painful_intercourse_dyspareunia",
+      "label": "Painful intercourse (dyspareunia)",
+      "section": "Female",
+      "rubric": "Painful intercourse (dyspareunia)"
+    },
+    {
+      "id": "sym_puerperal_fever_fever_and_infection_following_childbirth",
+      "label": "Puerperal fever, fever and infection following child…",
+      "section": "Female",
+      "rubric": "Puerperal fever, fever and infection following childbirth"
+    },
+    {
+      "id": "sym_weak_or_ineffectual_labor_pains_that_fail_to_progress_or_dil",
+      "label": "Weak or ineffectual labor pains that fail to progres…",
+      "section": "Female",
+      "rubric": "Weak or ineffectual labor pains that fail to progress or dilate the cervix"
+    },
+    {
+      "id": "sym_retained_placenta_after_delivery",
+      "label": "Retained placenta after delivery",
+      "section": "Female",
+      "rubric": "Retained placenta after delivery"
+    },
+    {
+      "id": "sym_rigid_os_the_cervix_fails_to_dilate_or_soften_during_labor",
+      "label": "Rigid os, the cervix fails to dilate or soften durin…",
+      "section": "Female",
+      "rubric": "Rigid os, the cervix fails to dilate or soften during labor"
+    },
+    {
+      "id": "sym_salpingitis_inflammation_of_the_fallopian_tubes",
+      "label": "Salpingitis, inflammation of the fallopian tubes",
+      "section": "Female",
+      "rubric": "Salpingitis, inflammation of the fallopian tubes"
+    },
+    {
+      "id": "sym_lochia_that_is_offensive_too_profuse_or_suppressed_after_chi",
+      "label": "Lochia that is offensive, too profuse, or suppressed…",
+      "section": "Female",
+      "rubric": "Lochia that is offensive, too profuse, or suppressed after childbirth"
+    },
+    {
+      "id": "sym_itching_of_the_vulva_pruritus_vulvae_sometimes_leading_to_a_",
+      "label": "Itching of the vulva (pruritus vulvae), sometimes le…",
+      "section": "Female",
+      "rubric": "Itching of the vulva (pruritus vulvae), sometimes leading to a habit of touching in young children"
     }
   ]
 }
