@@ -31006,6 +31006,359 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Vomiting of bile, bitter and yellow-green in color, often on an empty stomach in the morning",
+      "triggers": [
+        "bilious vomiting",
+        "vomits bile bitter yellow green",
+        "bitter bile vomit on an empty stomach in the morning"
+      ],
+      "remedies": [
+        {
+          "id": "chel",
+          "grade": 2
+        },
+        {
+          "id": "podo",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Sour or acrid vomiting and regurgitation that sets the teeth on edge",
+      "triggers": [
+        "sour vomit",
+        "sour vomiting",
+        "acrid vomit sets teeth on edge",
+        "vomit sets the teeth on edge"
+      ],
+      "remedies": [
+        {
+          "id": "robinia",
+          "grade": 3
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Stomach pain that radiates through to the back or right shoulder blade, worse after fatty or rich food",
+      "triggers": [
+        "stomach pain radiates to the back or right shoulder blade",
+        "pain under the right shoulder blade after fatty food",
+        "gallbladder type pain after rich food"
+      ],
+      "remedies": [
+        {
+          "id": "chel",
+          "grade": 3
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Sudden intense hunger that comes on immediately after vomiting",
+      "triggers": [
+        "hungry again after vomiting",
+        "hungry immediately after vomiting",
+        "wants to eat right after throwing up"
+      ],
+      "remedies": [
+        {
+          "id": "ferr",
+          "grade": 2
+        },
+        {
+          "id": "psor",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Heartburn or pyrosis that is markedly worse lying down, better sitting or standing upright",
+      "triggers": [
+        "heartburn worse lying down better sitting up",
+        "acid reflux worse flat better upright",
+        "pyrosis worse when lying flat"
+      ],
+      "remedies": [
+        {
+          "id": "kali-bi",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Vomiting that occurs specifically first thing in the morning before eating anything",
+      "triggers": [
+        "vomits first thing in the morning before eating",
+        "morning vomiting on an empty stomach",
+        "throws up before breakfast every day"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "kali-bi",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Persistent bitter taste in the mouth that is worse in the morning and after eating fatty food",
+      "triggers": [
+        "bitter taste in the mouth worse in the morning",
+        "bitter mouth after fatty food",
+        "persistent bitter taste especially after eating fat"
+      ],
+      "remedies": [
+        {
+          "id": "chel",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "ant-c",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Cramping stomach pain that is markedly better from vomiting, worse until vomiting occurs",
+      "triggers": [
+        "stomach cramp relieved only after vomiting",
+        "pain builds until vomiting brings relief",
+        "cramping worse until they finally throw up"
+      ],
+      "remedies": [
+        {
+          "id": "ip",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Chilblains, itching red or purple swellings on the fingers or toes brought on by cold weather",
+      "triggers": [
+        "chilblains",
+        "itchy purple swelling on toes from cold",
+        "red swelling on fingers or toes from cold weather"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "agar",
+          "grade": 2
+        },
+        {
+          "id": "petr",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Erysipelas, a spreading bright red, hot, shiny skin infection with a sharply defined raised border",
+      "triggers": [
+        "erysipelas",
+        "bright red hot shiny skin spreading",
+        "skin infection with a sharp raised edge"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "apis",
+          "grade": 2
+        },
+        {
+          "id": "rhus-t",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Insect bite or sting with intense itching, burning, and swelling around the bite",
+      "triggers": [
+        "insect bite",
+        "mosquito bite",
+        "bug bite swollen itchy and burning",
+        "insect bite swelling and burning"
+      ],
+      "remedies": [
+        {
+          "id": "apis",
+          "grade": 2
+        },
+        {
+          "id": "led",
+          "grade": 2
+        },
+        {
+          "id": "urt-u",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Bedsores or pressure ulcers in a bedridden patient, slow to heal with unhealthy surrounding skin",
+      "triggers": [
+        "bedsores in a bedridden patient",
+        "pressure ulcer slow to heal",
+        "decubitus ulcer in a patient confined to bed"
+      ],
+      "remedies": [
+        {
+          "id": "arn",
+          "grade": 2
+        },
+        {
+          "id": "carb-ac",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Gooseflesh or bristling of the skin brought on by cold, fright, or a chill running through the body",
+      "triggers": [
+        "gooseflesh from cold or fright",
+        "skin bristles or prickles with a chill",
+        "goosebumps triggered by fright or sudden cold"
+      ],
+      "remedies": [
+        {
+          "id": "acon",
+          "grade": 1
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Bee sting with marked swelling, redness, and stinging pain, better from cold applications",
+      "triggers": [
+        "bee sting swollen red and stinging",
+        "wasp sting with swelling relieved by cold",
+        "stung by a bee or wasp intense stinging pain"
+      ],
+      "remedies": [
+        {
+          "id": "apis",
+          "grade": 3
+        },
+        {
+          "id": "led",
+          "grade": 1
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Frostbite or severe cold-damage to the skin with numbness, discoloration, and burning on rewarming",
+      "triggers": [
+        "frostbite",
+        "frostbitten",
+        "numb and discolored skin from cold burning as it warms up"
+      ],
+      "remedies": [
+        {
+          "id": "agar",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -39960,6 +40313,96 @@
       "label": "Acute back pain and soreness following a specific in…",
       "section": "Back",
       "rubric": "Acute back pain and soreness following a specific injury or strain, better lying still"
+    },
+    {
+      "id": "sym_vomiting_of_bile_bitter_and_yellow_green_in_color_often_on_a",
+      "label": "Vomiting of bile, bitter and yellow-green in color, …",
+      "section": "Stomach",
+      "rubric": "Vomiting of bile, bitter and yellow-green in color, often on an empty stomach in the morning"
+    },
+    {
+      "id": "sym_sour_or_acrid_vomiting_and_regurgitation_that_sets_the_teeth",
+      "label": "Sour or acrid vomiting and regurgitation that sets t…",
+      "section": "Stomach",
+      "rubric": "Sour or acrid vomiting and regurgitation that sets the teeth on edge"
+    },
+    {
+      "id": "sym_stomach_pain_that_radiates_through_to_the_back_or_right_shou",
+      "label": "Stomach pain that radiates through to the back or ri…",
+      "section": "Stomach",
+      "rubric": "Stomach pain that radiates through to the back or right shoulder blade, worse after fatty or rich food"
+    },
+    {
+      "id": "sym_sudden_intense_hunger_that_comes_on_immediately_after_vomiti",
+      "label": "Sudden intense hunger that comes on immediately afte…",
+      "section": "Stomach",
+      "rubric": "Sudden intense hunger that comes on immediately after vomiting"
+    },
+    {
+      "id": "sym_heartburn_or_pyrosis_that_is_markedly_worse_lying_down_bette",
+      "label": "Heartburn or pyrosis that is markedly worse lying do…",
+      "section": "Stomach",
+      "rubric": "Heartburn or pyrosis that is markedly worse lying down, better sitting or standing upright"
+    },
+    {
+      "id": "sym_vomiting_that_occurs_specifically_first_thing_in_the_morning",
+      "label": "Vomiting that occurs specifically first thing in the…",
+      "section": "Stomach",
+      "rubric": "Vomiting that occurs specifically first thing in the morning before eating anything"
+    },
+    {
+      "id": "sym_persistent_bitter_taste_in_the_mouth_that_is_worse_in_the_mo",
+      "label": "Persistent bitter taste in the mouth that is worse i…",
+      "section": "Stomach",
+      "rubric": "Persistent bitter taste in the mouth that is worse in the morning and after eating fatty food"
+    },
+    {
+      "id": "sym_cramping_stomach_pain_that_is_markedly_better_from_vomiting_",
+      "label": "Cramping stomach pain that is markedly better from v…",
+      "section": "Stomach",
+      "rubric": "Cramping stomach pain that is markedly better from vomiting, worse until vomiting occurs"
+    },
+    {
+      "id": "sym_chilblains_itching_red_or_purple_swellings_on_the_fingers_or",
+      "label": "Chilblains, itching red or purple swellings on the f…",
+      "section": "Skin",
+      "rubric": "Chilblains, itching red or purple swellings on the fingers or toes brought on by cold weather"
+    },
+    {
+      "id": "sym_erysipelas_a_spreading_bright_red_hot_shiny_skin_infection_w",
+      "label": "Erysipelas, a spreading bright red, hot, shiny skin …",
+      "section": "Skin",
+      "rubric": "Erysipelas, a spreading bright red, hot, shiny skin infection with a sharply defined raised border"
+    },
+    {
+      "id": "sym_insect_bite_or_sting_with_intense_itching_burning_and_swelli",
+      "label": "Insect bite or sting with intense itching, burning, …",
+      "section": "Skin",
+      "rubric": "Insect bite or sting with intense itching, burning, and swelling around the bite"
+    },
+    {
+      "id": "sym_bedsores_or_pressure_ulcers_in_a_bedridden_patient_slow_to_h",
+      "label": "Bedsores or pressure ulcers in a bedridden patient, …",
+      "section": "Skin",
+      "rubric": "Bedsores or pressure ulcers in a bedridden patient, slow to heal with unhealthy surrounding skin"
+    },
+    {
+      "id": "sym_gooseflesh_or_bristling_of_the_skin_brought_on_by_cold_frigh",
+      "label": "Gooseflesh or bristling of the skin brought on by co…",
+      "section": "Skin",
+      "rubric": "Gooseflesh or bristling of the skin brought on by cold, fright, or a chill running through the body"
+    },
+    {
+      "id": "sym_bee_sting_with_marked_swelling_redness_and_stinging_pain_bet",
+      "label": "Bee sting with marked swelling, redness, and stingin…",
+      "section": "Skin",
+      "rubric": "Bee sting with marked swelling, redness, and stinging pain, better from cold applications"
+    },
+    {
+      "id": "sym_frostbite_or_severe_cold_damage_to_the_skin_with_numbness_di",
+      "label": "Frostbite or severe cold-damage to the skin with num…",
+      "section": "Skin",
+      "rubric": "Frostbite or severe cold-damage to the skin with numbness, discoloration, and burning on rewarming"
     }
   ]
 }
