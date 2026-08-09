@@ -32446,6 +32446,97 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Enlarged adenoids in a child causing mouth breathing, snoring, and nasal obstruction",
+      "triggers": [
+        "adenoids",
+        "enlarged adenoids",
+        "mouth breathing from adenoids",
+        "snoring child with adenoids",
+        "adenoid child breathes through mouth"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "bar-c",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Redness and inflammation of the fauces, the arch at the back of the throat",
+      "triggers": [
+        "inflammation of the fauces",
+        "fauces red and inflamed",
+        "fauces swollen",
+        "bright red fauces"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Sensation of food sticking or lodging in the esophagus while swallowing",
+      "triggers": [
+        "food sticks in the esophagus",
+        "food gets stuck swallowing esophagus",
+        "sensation food lodges in esophagus",
+        "oesophagus food stuck",
+        "food sticking in the esophagus",
+        "food sticking in the oesophagus"
+      ],
+      "remedies": [
+        {
+          "id": "bar-c",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Chronic pharyngitis, constant dryness, redness, and irritation of the throat lining not from an acute infection",
+      "triggers": [
+        "chronic pharyngitis",
+        "constant dry irritated pharynx",
+        "pharynx always red and dry",
+        "chronic irritation of the pharynx"
+      ],
+      "remedies": [
+        {
+          "id": "arg-n",
+          "grade": 2
+        },
+        {
+          "id": "bar-c",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -41766,6 +41857,30 @@
       "label": "Cloudy or purulent urine suggesting pus or infection…",
       "section": "Urinary",
       "rubric": "Cloudy or purulent urine suggesting pus or infection (pyuria)"
+    },
+    {
+      "id": "sym_enlarged_adenoids_in_a_child_causing_mouth_breathing_snoring",
+      "label": "Enlarged adenoids in a child causing mouth breathing…",
+      "section": "Throat",
+      "rubric": "Enlarged adenoids in a child causing mouth breathing, snoring, and nasal obstruction"
+    },
+    {
+      "id": "sym_redness_and_inflammation_of_the_fauces_the_arch_at_the_back_",
+      "label": "Redness and inflammation of the fauces, the arch at …",
+      "section": "Throat",
+      "rubric": "Redness and inflammation of the fauces, the arch at the back of the throat"
+    },
+    {
+      "id": "sym_sensation_of_food_sticking_or_lodging_in_the_esophagus_while",
+      "label": "Sensation of food sticking or lodging in the esophag…",
+      "section": "Throat",
+      "rubric": "Sensation of food sticking or lodging in the esophagus while swallowing"
+    },
+    {
+      "id": "sym_chronic_pharyngitis_constant_dryness_redness_and_irritation_",
+      "label": "Chronic pharyngitis, constant dryness, redness, and …",
+      "section": "Throat",
+      "rubric": "Chronic pharyngitis, constant dryness, redness, and irritation of the throat lining not from an acute infection"
     }
   ]
 }
