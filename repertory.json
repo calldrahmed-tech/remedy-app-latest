@@ -32181,6 +32181,10 @@
         {
           "id": "nat-mur",
           "grade": 1
+        },
+        {
+          "id": "ruta",
+          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -32281,9 +32285,17 @@
         {
           "id": "dulc",
           "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "rhus-t",
+          "grade": 1
         }
       ],
-      "rubricType": "keynote"
+      "rubricType": "differential"
     },
     {
       "section": "Modalities",
@@ -32298,9 +32310,13 @@
         {
           "id": "con",
           "grade": 2
+        },
+        {
+          "id": "staph",
+          "grade": 1
         }
       ],
-      "rubricType": "keynote"
+      "rubricType": "differential"
     },
     {
       "section": "Modalities",
@@ -32347,6 +32363,10 @@
         {
           "id": "mill",
           "grade": 2
+        },
+        {
+          "id": "ham",
+          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -32374,6 +32394,10 @@
         {
           "id": "coloc",
           "grade": 1
+        },
+        {
+          "id": "sars",
+          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -32396,6 +32420,10 @@
         {
           "id": "ars-alb",
           "grade": 2
+        },
+        {
+          "id": "canth",
+          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -32417,6 +32445,10 @@
         },
         {
           "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
           "grade": 1
         }
       ],
@@ -32443,6 +32475,10 @@
         {
           "id": "canth",
           "grade": 1
+        },
+        {
+          "id": "sars",
+          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -32466,6 +32502,10 @@
         {
           "id": "bar-c",
           "grade": 2
+        },
+        {
+          "id": "tub",
+          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -32487,6 +32527,10 @@
         },
         {
           "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "apis",
           "grade": 1
         }
       ],
@@ -32534,6 +32578,10 @@
         {
           "id": "bar-c",
           "grade": 1
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -32555,6 +32603,10 @@
         },
         {
           "id": "apis",
+          "grade": 1
+        },
+        {
+          "id": "sec",
           "grade": 1
         }
       ],
@@ -32600,6 +32652,10 @@
         {
           "id": "stram",
           "grade": 1
+        },
+        {
+          "id": "cocc",
+          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -32622,6 +32678,10 @@
         },
         {
           "id": "carb-v",
+          "grade": 1
+        },
+        {
+          "id": "acon",
           "grade": 1
         }
       ],
@@ -32668,6 +32728,10 @@
         {
           "id": "con",
           "grade": 1
+        },
+        {
+          "id": "anac",
+          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -32689,6 +32753,10 @@
         },
         {
           "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "calc-c",
           "grade": 1
         }
       ],
@@ -32734,6 +32802,10 @@
         {
           "id": "agar",
           "grade": 1
+        },
+        {
+          "id": "gels",
+          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -32758,9 +32830,13 @@
         {
           "id": "sil",
           "grade": 1
+        },
+        {
+          "id": "calc-p",
+          "grade": 1
         }
       ],
-      "rubricType": "keynote"
+      "rubricType": "differential"
     },
     {
       "section": "Head",
@@ -32780,6 +32856,10 @@
         {
           "id": "apis",
           "grade": 2
+        },
+        {
+          "id": "hell",
+          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -32802,6 +32882,26 @@
         {
           "id": "sil",
           "grade": 1
+        },
+        {
+          "id": "calc-f",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "caust",
+          "grade": 2
+        },
+        {
+          "id": "con",
+          "grade": 1
+        },
+        {
+          "id": "sec",
+          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -32822,6 +32922,10 @@
         },
         {
           "id": "spig",
+          "grade": 1
+        },
+        {
+          "id": "bell",
           "grade": 1
         }
       ],
@@ -32845,6 +32949,10 @@
         {
           "id": "gels",
           "grade": 1
+        },
+        {
+          "id": "bell",
+          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -32866,9 +32974,13 @@
         {
           "id": "puls",
           "grade": 1
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
         }
       ],
-      "rubricType": "keynote"
+      "rubricType": "differential"
     },
     {
       "section": "Eye",
@@ -32930,6 +33042,10 @@
         },
         {
           "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "spong",
           "grade": 1
         }
       ],
