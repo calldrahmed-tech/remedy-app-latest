@@ -32328,6 +32328,124 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Blood in the urine (hematuria) without a clear explanation",
+      "triggers": [
+        "blood in the urine",
+        "hematuria",
+        "urine tinged with blood",
+        "passing blood in urine"
+      ],
+      "remedies": [
+        {
+          "id": "canth",
+          "grade": 2
+        },
+        {
+          "id": "mill",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Renal colic, severe cramping kidney stone pain radiating from the loin down toward the groin",
+      "triggers": [
+        "renal colic",
+        "kidney stone pain",
+        "kidney stone",
+        "pain from loin to groin",
+        "severe pain from a kidney stone"
+      ],
+      "remedies": [
+        {
+          "id": "berb",
+          "grade": 3
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "coloc",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Nephritis or Bright's disease, kidney inflammation with scanty urine and swelling of the body",
+      "triggers": [
+        "nephritis",
+        "bright's disease",
+        "kidney inflammation with swelling",
+        "scanty urine with body swelling"
+      ],
+      "remedies": [
+        {
+          "id": "apis",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Nocturia, needing to get up and urinate several times during the night",
+      "triggers": [
+        "nocturia",
+        "urinating several times at night",
+        "frequent urination at night disturbs sleep",
+        "wakes up many times at night to urinate"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Cloudy or purulent urine suggesting pus or infection (pyuria)",
+      "triggers": [
+        "cloudy purulent urine",
+        "pus in the urine",
+        "pyuria",
+        "urine looks like pus",
+        "urine cloudy and purulent",
+        "urine appears purulent",
+        "urine pus"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "canth",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -41618,6 +41736,36 @@
       "label": "Gagging, retching, or nausea specifically triggered …",
       "section": "Modalities",
       "rubric": "Gagging, retching, or nausea specifically triggered by brushing the teeth"
+    },
+    {
+      "id": "sym_blood_in_the_urine_hematuria_without_a_clear_explanation",
+      "label": "Blood in the urine (hematuria) without a clear expla…",
+      "section": "Urinary",
+      "rubric": "Blood in the urine (hematuria) without a clear explanation"
+    },
+    {
+      "id": "sym_renal_colic_severe_cramping_kidney_stone_pain_radiating_from",
+      "label": "Renal colic, severe cramping kidney stone pain radia…",
+      "section": "Urinary",
+      "rubric": "Renal colic, severe cramping kidney stone pain radiating from the loin down toward the groin"
+    },
+    {
+      "id": "sym_nephritis_or_bright_s_disease_kidney_inflammation_with_scant",
+      "label": "Nephritis or Bright's disease, kidney inflammation w…",
+      "section": "Urinary",
+      "rubric": "Nephritis or Bright's disease, kidney inflammation with scanty urine and swelling of the body"
+    },
+    {
+      "id": "sym_nocturia_needing_to_get_up_and_urinate_several_times_during_",
+      "label": "Nocturia, needing to get up and urinate several time…",
+      "section": "Urinary",
+      "rubric": "Nocturia, needing to get up and urinate several times during the night"
+    },
+    {
+      "id": "sym_cloudy_or_purulent_urine_suggesting_pus_or_infection_pyuria",
+      "label": "Cloudy or purulent urine suggesting pus or infection…",
+      "section": "Urinary",
+      "rubric": "Cloudy or purulent urine suggesting pus or infection (pyuria)"
     }
   ]
 }
