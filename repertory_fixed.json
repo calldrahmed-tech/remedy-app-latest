@@ -108,32 +108,6 @@
       "rubricType": "differential"
     },
     {
-      "section": "Mouth",
-      "rubric": "Bleeding gums",
-      "triggers": [
-        "bleeding gums",
-        "gums bleeding",
-        "blood from gums",
-        "gums bleed"
-      ],
-      "remedies": [
-        {
-          "id": "merc-sol",
-          "grade": 3
-        },
-        {
-          "id": "phos",
-          "grade": 2
-        },
-        {
-          "id": "kreos",
-          "grade": 2
-        }
-      ],
-      "category": "Particulars",
-      "rubricType": "differential"
-    },
-    {
       "section": "Nose",
       "rubric": "Nosebleed, epistaxis",
       "triggers": [
@@ -11999,56 +11973,6 @@
     {
       "section": "Mouth",
       "category": "Particulars",
-      "rubric": "Excessive, ropy, offensive salivation, wets the pillow at night",
-      "triggers": [
-        "excessive drooling wets pillow",
-        "ropy offensive saliva at night"
-      ],
-      "remedies": [
-        {
-          "id": "merc-sol",
-          "grade": 3
-        },
-        {
-          "id": "nux-m",
-          "grade": 1
-        }
-      ],
-      "rubricType": "keynote"
-    },
-    {
-      "section": "Mouth",
-      "category": "Particulars",
-      "rubric": "Tongue takes the imprint of the teeth around its edges",
-      "triggers": [
-        "tongue shows teeth marks",
-        "imprint of teeth on edge of tongue",
-        "tongue shows teeth marks along the edges",
-        "imprint of teeth visible on the tongue"
-      ],
-      "remedies": [
-        {
-          "id": "merc-sol",
-          "grade": 2
-        },
-        {
-          "id": "puls",
-          "grade": 1
-        },
-        {
-          "id": "chel",
-          "grade": 1
-        },
-        {
-          "id": "podo",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Mouth",
-      "category": "Particulars",
       "rubric": "Mapped or geographic tongue, with patches of missing coating that shift location",
       "triggers": [
         "geographic tongue patches shifting",
@@ -12085,30 +12009,6 @@
         },
         {
           "id": "rhus-t",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Mouth",
-      "category": "Particulars",
-      "rubric": "Metallic taste in the mouth unrelated to any food eaten",
-      "triggers": [
-        "metallic taste in mouth",
-        "taste of metal without eating anything"
-      ],
-      "remedies": [
-        {
-          "id": "merc-sol",
-          "grade": 2
-        },
-        {
-          "id": "cupr",
-          "grade": 1
-        },
-        {
-          "id": "nat-mur",
           "grade": 1
         }
       ],
@@ -21038,26 +20938,6 @@
       "rubricType": "differential"
     },
     {
-      "section": "Mouth",
-      "category": "Particulars",
-      "rubric": "Excessive saliva that soaks the pillow during sleep at night",
-      "triggers": [
-        "drools heavily at night soaking the pillow",
-        "excessive saliva while sleeping wets the pillow"
-      ],
-      "remedies": [
-        {
-          "id": "merc-sol",
-          "grade": 2
-        },
-        {
-          "id": "nat-mur",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
       "section": "Stomach",
       "category": "Particulars",
       "rubric": "Vomiting that occurs specifically after drinking milk, though other dairy is tolerated",
@@ -23162,22 +23042,6 @@
       "rubricType": "differential"
     },
     {
-      "section": "Mouth",
-      "category": "Particulars",
-      "rubric": "Metallic taste in the mouth not linked to any medication",
-      "triggers": [
-        "metallic taste in the mouth no medication reason",
-        "taste like metal in mouth unrelated to any drug"
-      ],
-      "remedies": [
-        {
-          "id": "merc-sol",
-          "grade": 2
-        }
-      ],
-      "rubricType": "keynote"
-    },
-    {
       "section": "Eye",
       "category": "Particulars",
       "rubric": "Yellow discoloration of the whites of the eyes, suggestive of jaundice",
@@ -23641,26 +23505,6 @@
         },
         {
           "id": "bry",
-          "grade": 1
-        }
-      ],
-      "rubricType": "differential"
-    },
-    {
-      "section": "Mouth",
-      "category": "Particulars",
-      "rubric": "Bleeding gums that are noticed mainly while brushing the teeth, otherwise no pain",
-      "triggers": [
-        "gums bleed while brushing teeth otherwise painless",
-        "bleeding gums only noticed during brushing"
-      ],
-      "remedies": [
-        {
-          "id": "merc-sol",
-          "grade": 1
-        },
-        {
-          "id": "nat-mur",
           "grade": 1
         }
       ],
@@ -32374,25 +32218,6 @@
       "rubricType": "keynote"
     },
     {
-      "section": "Mouth",
-      "rubric": "Tongue that takes a clear imprint of the teeth along its edges",
-      "triggers": [
-        "tongue that takes a clear imprint of the teeth along its edges"
-      ],
-      "remedies": [
-        {
-          "id": "merc-sol",
-          "grade": 3
-        },
-        {
-          "id": "podo",
-          "grade": 1
-        }
-      ],
-      "category": "Particulars",
-      "rubricType": "keynote"
-    },
-    {
       "section": "Abdomen",
       "rubric": "Rumbling and gurgling noises in the abdomen audible to others nearby",
       "triggers": [
@@ -32716,6 +32541,1072 @@
       ],
       "category": "Particulars",
       "rubricType": "keynote"
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Tongue takes the imprint of the teeth along its edges",
+      "triggers": [
+        "tongue shows teeth marks",
+        "imprint of teeth on edge of tongue",
+        "tongue shows teeth marks along the edges",
+        "imprint of teeth visible on the tongue",
+        "tongue that takes a clear imprint of the teeth along its edges"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 3
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "chel",
+          "grade": 1
+        },
+        {
+          "id": "podo",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Excessive, ropy, offensive salivation that wets the pillow at night",
+      "triggers": [
+        "excessive drooling wets pillow",
+        "ropy offensive saliva at night",
+        "drools heavily at night soaking the pillow",
+        "excessive saliva while sleeping wets the pillow"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 3
+        },
+        {
+          "id": "nux-m",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Metallic taste in the mouth, unrelated to food or medication",
+      "triggers": [
+        "metallic taste in mouth",
+        "taste of metal without eating anything",
+        "metallic taste in the mouth no medication reason",
+        "taste like metal in mouth unrelated to any drug"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "cupr",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Bleeding gums",
+      "triggers": [
+        "bleeding gums",
+        "gums bleeding",
+        "blood from gums",
+        "gums bleed",
+        "gums bleed while brushing teeth otherwise painless",
+        "bleeding gums only noticed during brushing"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 3
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "kreos",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Dry, cracked lips, especially the lower lip, worse in cold dry weather",
+      "triggers": [
+        "dry cracked lips",
+        "lower lip cracks in cold weather",
+        "chapped lips"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 3
+        },
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Swollen, puffy lips without much pain",
+      "triggers": [
+        "swollen lips",
+        "puffy lips",
+        "lip swelling"
+      ],
+      "remedies": [
+        {
+          "id": "apis",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Herpes eruption on the lips, small blisters, often with fever or cold",
+      "triggers": [
+        "cold sore on lip",
+        "fever blister lip",
+        "herpes lip eruption"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 3
+        },
+        {
+          "id": "rhus-t",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Peeling, desquamating lips with a burning sensation",
+      "triggers": [
+        "peeling lips",
+        "skin peeling off lips",
+        "burning lips"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Bluish, discolored lips",
+      "triggers": [
+        "blue lips",
+        "bluish lips",
+        "cyanotic lips"
+      ],
+      "remedies": [
+        {
+          "id": "verat-alb",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Sore, blistered soft palate with burning pain",
+      "triggers": [
+        "sore palate",
+        "blistered palate",
+        "burning roof of mouth"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 3
+        },
+        {
+          "id": "nit-ac",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Ulcers on the soft palate, painful especially on swallowing",
+      "triggers": [
+        "ulcers on palate",
+        "sore throat with palate ulcers",
+        "painful swallowing palate sores"
+      ],
+      "remedies": [
+        {
+          "id": "merc-cy",
+          "grade": 2
+        },
+        {
+          "id": "kali-bi",
+          "grade": 2
+        },
+        {
+          "id": "nit-ac",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Roof of mouth feels raw or burning without any visible sore",
+      "triggers": [
+        "burning roof of mouth no sore",
+        "raw feeling palate"
+      ],
+      "remedies": [
+        {
+          "id": "caps",
+          "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Fetid, offensive breath not explained by dental problems",
+      "triggers": [
+        "bad breath no dental cause",
+        "fetid breath",
+        "offensive smell from mouth"
+      ],
+      "remedies": [
+        {
+          "id": "kali-p",
+          "grade": 3
+        },
+        {
+          "id": "merc-sol",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Sour-smelling breath, especially in children after vomiting or with sour stomach",
+      "triggers": [
+        "sour breath child",
+        "sour smelling breath after vomiting"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "mag-c",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Putrid, cadaverous-smelling breath",
+      "triggers": [
+        "putrid breath",
+        "cadaverous smelling breath"
+      ],
+      "remedies": [
+        {
+          "id": "kreos",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Dry mouth with no desire to drink despite the dryness",
+      "triggers": [
+        "dry mouth no thirst",
+        "mouth dry but not thirsty"
+      ],
+      "remedies": [
+        {
+          "id": "nux-m",
+          "grade": 3
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Blood-tinged or bloody saliva",
+      "triggers": [
+        "blood in saliva",
+        "bloody saliva",
+        "spitting blood-tinged saliva"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "nit-ac",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Gums, blue line along the margin",
+      "triggers": [
+        "blue line on gums",
+        "blue margin of gums",
+        "dark line along gum edge"
+      ],
+      "remedies": [
+        {
+          "id": "plb",
+          "grade": 3
+        },
+        {
+          "id": "merc-sol",
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Gums, burning",
+      "triggers": [
+        "burning gums",
+        "gums feel like they are burning"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Gums, cold feeling",
+      "triggers": [
+        "cold feeling in gums",
+        "gums feel cold or icy"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Gums, desire to press teeth together",
+      "triggers": [
+        "wants to bite down hard on gums",
+        "desire to clench or press teeth together",
+        "teething wants to bite something hard"
+      ],
+      "remedies": [
+        {
+          "id": "cham",
+          "grade": 3
+        },
+        {
+          "id": "podo",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Gums, epulis (fleshy growth on the gum)",
+      "triggers": [
+        "gum tumor",
+        "epulis",
+        "fleshy growth on gum"
+      ],
+      "remedies": [
+        {
+          "id": "calc-f",
+          "grade": 2
+        },
+        {
+          "id": "kreos",
+          "grade": 1
+        },
+        {
+          "id": "thuj",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Gums, inflammation (gingivitis)",
+      "triggers": [
+        "gum inflammation",
+        "gingivitis",
+        "red inflamed gums"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 3
+        },
+        {
+          "id": "kreos",
+          "grade": 1
+        },
+        {
+          "id": "plan",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Gums, painful",
+      "triggers": [
+        "painful gums",
+        "gums hurt",
+        "sore painful gums"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "cham",
+          "grade": 2
+        },
+        {
+          "id": "coff",
+          "grade": 1
+        },
+        {
+          "id": "plan",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Gums, receding from the teeth",
+      "triggers": [
+        "receding gums",
+        "gums pulling back from teeth",
+        "gum recession"
+      ],
+      "remedies": [
+        {
+          "id": "staph",
+          "grade": 3
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "kreos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Gums, scorbutic (spongy, bluish-red, bleed easily as in scurvy)",
+      "triggers": [
+        "scorbutic gums",
+        "spongy scurvy-like gums",
+        "scurvy gums"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "nit-ac",
+          "grade": 2
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Gums, swelling",
+      "triggers": [
+        "swollen gums",
+        "gum swelling",
+        "puffy gums"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "hep",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubricType": "differential",
+      "rubric": "Gums, ulceration",
+      "triggers": [
+        "gum ulcers",
+        "ulcerated gums",
+        "open sores on gums"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "nit-ac",
+          "grade": 2
+        },
+        {
+          "id": "kreos",
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Amaurosis, sudden or gradual loss of vision without visible damage to the eye itself",
+      "triggers": [
+        "amaurosis",
+        "sudden blindness no visible eye damage",
+        "gradual loss of vision eye looks normal",
+        "went blind but eye examination normal"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Amblyopia, dimness or weakness of vision without obvious eye disease",
+      "triggers": [
+        "amblyopia",
+        "dim weak vision no eye disease found",
+        "vision dull and weak eye looks fine",
+        "lazy eye dim vision"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "ruta",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Asthenopia, eyes tire quickly and strain easily from reading or close work",
+      "triggers": [
+        "asthenopia",
+        "eyes tire quickly reading",
+        "eye strain from close work",
+        "eyes feel tired and weak after reading"
+      ],
+      "remedies": [
+        {
+          "id": "ruta",
+          "grade": 3
+        },
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Diplopia, seeing two images of a single object",
+      "triggers": [
+        "diplopia",
+        "seeing double two images of one object",
+        "double vision seeing two of everything"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "agar",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Hemiopia, only half of an object or half the visual field is seen",
+      "triggers": [
+        "hemiopia",
+        "hemianopia",
+        "seeing only half of an object",
+        "half the field of vision missing"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "con",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Myopia, nearsightedness, difficulty clearly seeing distant objects",
+      "triggers": [
+        "myopia",
+        "nearsighted",
+        "cannot see far objects clearly",
+        "distant vision blurry near vision fine"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Optical illusions, seeing spots, colors, or images that are not really there",
+      "triggers": [
+        "seeing spots that are not there",
+        "visual hallucinations",
+        "seeing things that are not real",
+        "optical illusions"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "stram",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "anac",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Weakness or exhaustion that comes on specifically after sexual intercourse (coitus)",
+      "triggers": [
+        "weak after sex",
+        "exhausted after intercourse",
+        "coitus leaves patient weak",
+        "tired after sexual activity"
+      ],
+      "remedies": [
+        {
+          "id": "sel",
+          "grade": 2
+        },
+        {
+          "id": "chin",
+          "grade": 1
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Headache or physical ailments brought on or aggravated specifically by drinking coffee",
+      "triggers": [
+        "headache from coffee",
+        "ailments from drinking coffee",
+        "coffee brings on headache",
+        "symptoms worse after coffee"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 3
+        },
+        {
+          "id": "cham",
+          "grade": 2
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Chronic ill effects from living in a damp house or damp dwelling",
+      "triggers": [
+        "living in a damp house",
+        "damp dwelling caused chronic problems",
+        "ill effects of a damp home",
+        "health declined after moving to a damp house"
+      ],
+      "remedies": [
+        {
+          "id": "dulc",
+          "grade": 2
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Worse from sexual abstinence or celibacy, symptoms brought on by suppressed desire",
+      "triggers": [
+        "worse from celibacy",
+        "symptoms from sexual abstinence",
+        "suppressed sexual desire causing symptoms"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 2
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Gagging, retching, or nausea specifically triggered by brushing the teeth",
+      "triggers": [
+        "gags brushing teeth",
+        "gagging brushing teeth",
+        "retches brushing teeth",
+        "retching brushing teeth",
+        "nausea brushing teeth",
+        "gags brushes teeth",
+        "retches brushes teeth",
+        "brushing teeth causes gagging",
+        "nauseous brushing teeth"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Blood in the urine (hematuria) without a clear explanation",
+      "triggers": [
+        "blood in the urine",
+        "hematuria",
+        "urine tinged with blood",
+        "passing blood in urine"
+      ],
+      "remedies": [
+        {
+          "id": "canth",
+          "grade": 2
+        },
+        {
+          "id": "mill",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Renal colic, severe cramping kidney stone pain radiating from the loin down toward the groin",
+      "triggers": [
+        "renal colic",
+        "kidney stone pain",
+        "kidney stone",
+        "pain from loin to groin",
+        "severe pain from a kidney stone"
+      ],
+      "remedies": [
+        {
+          "id": "berb",
+          "grade": 3
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "coloc",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Nephritis or Bright's disease, kidney inflammation with scanty urine and swelling of the body",
+      "triggers": [
+        "nephritis",
+        "bright's disease",
+        "kidney inflammation with swelling",
+        "scanty urine with body swelling"
+      ],
+      "remedies": [
+        {
+          "id": "apis",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Nocturia, needing to get up and urinate several times during the night",
+      "triggers": [
+        "nocturia",
+        "urinating several times at night",
+        "frequent urination at night disturbs sleep",
+        "wakes up many times at night to urinate"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Cloudy or purulent urine suggesting pus or infection (pyuria)",
+      "triggers": [
+        "cloudy purulent urine",
+        "pus in the urine",
+        "pyuria",
+        "urine looks like pus",
+        "urine cloudy and purulent",
+        "urine appears purulent",
+        "urine pus"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "canth",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -35879,13 +36770,13 @@
       "id": "sym_excessive_ropy_offensive_salivation_wets_the_pillow_at_night",
       "label": "Excessive, ropy, offensive salivation, wets the pill…",
       "section": "Mouth",
-      "rubric": "Excessive, ropy, offensive salivation, wets the pillow at night"
+      "rubric": "Excessive, ropy, offensive salivation that wets the pillow at night"
     },
     {
       "id": "sym_tongue_takes_the_imprint_of_the_teeth_around_its_edges",
       "label": "Tongue takes the imprint of the teeth around its edges",
       "section": "Mouth",
-      "rubric": "Tongue takes the imprint of the teeth around its edges"
+      "rubric": "Tongue takes the imprint of the teeth along its edges"
     },
     {
       "id": "sym_mapped_or_geographic_tongue_with_patches_of_missing_coating_",
@@ -35903,7 +36794,7 @@
       "id": "sym_metallic_taste_in_the_mouth_unrelated_to_any_food_eaten",
       "label": "Metallic taste in the mouth unrelated to any food eaten",
       "section": "Mouth",
-      "rubric": "Metallic taste in the mouth unrelated to any food eaten"
+      "rubric": "Metallic taste in the mouth, unrelated to food or medication"
     },
     {
       "id": "sym_craves_and_is_relieved_temporarily_by_very_hot_food_or_drink",
@@ -37817,7 +38708,7 @@
       "id": "sym_tongue_that_takes_a_clear_imprint_of_the_teeth_along_its_edg",
       "label": "Tongue that takes a clear imprint of the teeth along…",
       "section": "Mouth",
-      "rubric": "Tongue that takes a clear imprint of the teeth along its edges"
+      "rubric": "Tongue takes the imprint of the teeth along its edges"
     },
     {
       "id": "sym_nausea_that_is_markedly_relieved_by_eating_something_worse_o",
@@ -38633,7 +39524,7 @@
       "id": "sym_excessive_saliva_that_soaks_the_pillow_during_sleep_at_night",
       "label": "Excessive saliva that soaks the pillow during sleep …",
       "section": "Mouth",
-      "rubric": "Excessive saliva that soaks the pillow during sleep at night"
+      "rubric": "Excessive, ropy, offensive salivation that wets the pillow at night"
     },
     {
       "id": "sym_vomiting_that_occurs_specifically_after_drinking_milk_though",
@@ -39293,7 +40184,7 @@
       "id": "sym_metallic_taste_in_the_mouth_not_linked_to_any_medication",
       "label": "Metallic taste in the mouth not linked to any medica…",
       "section": "Mouth",
-      "rubric": "Metallic taste in the mouth not linked to any medication"
+      "rubric": "Metallic taste in the mouth, unrelated to food or medication"
     },
     {
       "id": "sym_yellow_discoloration_of_the_whites_of_the_eyes_suggestive_of",
@@ -39437,7 +40328,7 @@
       "id": "sym_bleeding_gums_that_are_noticed_mainly_while_brushing_the_tee",
       "label": "Bleeding gums that are noticed mainly while brushing…",
       "section": "Mouth",
-      "rubric": "Bleeding gums that are noticed mainly while brushing the teeth, otherwise no pain"
+      "rubric": "Bleeding gums"
     },
     {
       "id": "sym_wakes_up_abruptly_around_3am_and_cannot_fall_back_asleep_for",
@@ -41934,6 +42825,108 @@
       "label": "Complete loss of voice (aphonia), unable to speak ab…",
       "section": "Throat",
       "rubric": "Complete loss of voice (aphonia), unable to speak above a whisper"
+    },
+    {
+      "id": "sym_amaurosis_sudden_or_gradual_loss_of_vision_without_visible_d",
+      "label": "Amaurosis, sudden or gradual loss of vision without …",
+      "section": "Eye",
+      "rubric": "Amaurosis, sudden or gradual loss of vision without visible damage to the eye itself"
+    },
+    {
+      "id": "sym_amblyopia_dimness_or_weakness_of_vision_without_obvious_eye_",
+      "label": "Amblyopia, dimness or weakness of vision without obv…",
+      "section": "Eye",
+      "rubric": "Amblyopia, dimness or weakness of vision without obvious eye disease"
+    },
+    {
+      "id": "sym_asthenopia_eyes_tire_quickly_and_strain_easily_from_reading_",
+      "label": "Asthenopia, eyes tire quickly and strain easily from…",
+      "section": "Eye",
+      "rubric": "Asthenopia, eyes tire quickly and strain easily from reading or close work"
+    },
+    {
+      "id": "sym_diplopia_seeing_two_images_of_a_single_object",
+      "label": "Diplopia, seeing two images of a single object",
+      "section": "Eye",
+      "rubric": "Diplopia, seeing two images of a single object"
+    },
+    {
+      "id": "sym_hemiopia_only_half_of_an_object_or_half_the_visual_field_is_",
+      "label": "Hemiopia, only half of an object or half the visual …",
+      "section": "Eye",
+      "rubric": "Hemiopia, only half of an object or half the visual field is seen"
+    },
+    {
+      "id": "sym_myopia_nearsightedness_difficulty_clearly_seeing_distant_obj",
+      "label": "Myopia, nearsightedness, difficulty clearly seeing d…",
+      "section": "Eye",
+      "rubric": "Myopia, nearsightedness, difficulty clearly seeing distant objects"
+    },
+    {
+      "id": "sym_optical_illusions_seeing_spots_colors_or_images_that_are_not",
+      "label": "Optical illusions, seeing spots, colors, or images t…",
+      "section": "Eye",
+      "rubric": "Optical illusions, seeing spots, colors, or images that are not really there"
+    },
+    {
+      "id": "sym_weakness_or_exhaustion_that_comes_on_specifically_after_sexu",
+      "label": "Weakness or exhaustion that comes on specifically af…",
+      "section": "Modalities",
+      "rubric": "Weakness or exhaustion that comes on specifically after sexual intercourse (coitus)"
+    },
+    {
+      "id": "sym_headache_or_physical_ailments_brought_on_or_aggravated_speci",
+      "label": "Headache or physical ailments brought on or aggravat…",
+      "section": "Modalities",
+      "rubric": "Headache or physical ailments brought on or aggravated specifically by drinking coffee"
+    },
+    {
+      "id": "sym_chronic_ill_effects_from_living_in_a_damp_house_or_damp_dwel",
+      "label": "Chronic ill effects from living in a damp house or d…",
+      "section": "Modalities",
+      "rubric": "Chronic ill effects from living in a damp house or damp dwelling"
+    },
+    {
+      "id": "sym_worse_from_sexual_abstinence_or_celibacy_symptoms_brought_on",
+      "label": "Worse from sexual abstinence or celibacy, symptoms b…",
+      "section": "Modalities",
+      "rubric": "Worse from sexual abstinence or celibacy, symptoms brought on by suppressed desire"
+    },
+    {
+      "id": "sym_gagging_retching_or_nausea_specifically_triggered_by_brushin",
+      "label": "Gagging, retching, or nausea specifically triggered …",
+      "section": "Modalities",
+      "rubric": "Gagging, retching, or nausea specifically triggered by brushing the teeth"
+    },
+    {
+      "id": "sym_blood_in_the_urine_hematuria_without_a_clear_explanation",
+      "label": "Blood in the urine (hematuria) without a clear expla…",
+      "section": "Urinary",
+      "rubric": "Blood in the urine (hematuria) without a clear explanation"
+    },
+    {
+      "id": "sym_renal_colic_severe_cramping_kidney_stone_pain_radiating_from",
+      "label": "Renal colic, severe cramping kidney stone pain radia…",
+      "section": "Urinary",
+      "rubric": "Renal colic, severe cramping kidney stone pain radiating from the loin down toward the groin"
+    },
+    {
+      "id": "sym_nephritis_or_bright_s_disease_kidney_inflammation_with_scant",
+      "label": "Nephritis or Bright's disease, kidney inflammation w…",
+      "section": "Urinary",
+      "rubric": "Nephritis or Bright's disease, kidney inflammation with scanty urine and swelling of the body"
+    },
+    {
+      "id": "sym_nocturia_needing_to_get_up_and_urinate_several_times_during_",
+      "label": "Nocturia, needing to get up and urinate several time…",
+      "section": "Urinary",
+      "rubric": "Nocturia, needing to get up and urinate several times during the night"
+    },
+    {
+      "id": "sym_cloudy_or_purulent_urine_suggesting_pus_or_infection_pyuria",
+      "label": "Cloudy or purulent urine suggesting pus or infection…",
+      "section": "Urinary",
+      "rubric": "Cloudy or purulent urine suggesting pus or infection (pyuria)"
     }
   ]
 }
