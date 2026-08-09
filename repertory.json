@@ -33070,6 +33070,146 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Nerve deafness, hearing loss from the auditory nerve rather than a blockage or infection",
+      "triggers": [
+        "nerve deafness",
+        "auditory nerve damage",
+        "hearing loss from the auditory nerve",
+        "sensorineural hearing loss"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        },
+        {
+          "id": "chin",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Eruption, soreness, or redness of the auricle, the outer visible part of the ear",
+      "triggers": [
+        "outer ear sore and red",
+        "auricle inflamed",
+        "eruption on the outer ear",
+        "redness of the auricle"
+      ],
+      "remedies": [
+        {
+          "id": "graph",
+          "grade": 2
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Excessive or hardened earwax (cerumen) causing blockage and reduced hearing",
+      "triggers": [
+        "excessive earwax",
+        "hardened earwax blocking the ear",
+        "cerumen buildup",
+        "too much earwax causing hearing loss"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Labyrinthitis, inner-ear inflammation causing vertigo and balance disturbance",
+      "triggers": [
+        "labyrinthitis",
+        "inner ear inflammation with vertigo",
+        "inner ear causing balance problems",
+        "labyrinth inflamed"
+      ],
+      "remedies": [
+        {
+          "id": "cocc",
+          "grade": 2
+        },
+        {
+          "id": "chin",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Perforation of the eardrum (membrana tympani), often with discharge",
+      "triggers": [
+        "perforated eardrum",
+        "ruptured eardrum",
+        "hole in the eardrum",
+        "membrana tympani perforation"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Bloody discharge from the ear",
+      "triggers": [
+        "bloody discharge from the ear",
+        "blood coming from the ear",
+        "ear discharge tinged with blood"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Thin, clear, watery discharge from the ear",
+      "triggers": [
+        "thin watery discharge from the ear",
+        "clear fluid draining from the ear",
+        "watery ear discharge"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        }
+      ],
+      "rubricType": "keynote"
     }
   ],
   "chiefSymptomTags": [
@@ -42528,6 +42668,48 @@
       "label": "Pterygium, a fleshy growth of tissue extending from …",
       "section": "Eye",
       "rubric": "Pterygium, a fleshy growth of tissue extending from the conjunctiva onto the cornea"
+    },
+    {
+      "id": "sym_nerve_deafness_hearing_loss_from_the_auditory_nerve_rather_t",
+      "label": "Nerve deafness, hearing loss from the auditory nerve…",
+      "section": "Ear",
+      "rubric": "Nerve deafness, hearing loss from the auditory nerve rather than a blockage or infection"
+    },
+    {
+      "id": "sym_eruption_soreness_or_redness_of_the_auricle_the_outer_visibl",
+      "label": "Eruption, soreness, or redness of the auricle, the o…",
+      "section": "Ear",
+      "rubric": "Eruption, soreness, or redness of the auricle, the outer visible part of the ear"
+    },
+    {
+      "id": "sym_excessive_or_hardened_earwax_cerumen_causing_blockage_and_re",
+      "label": "Excessive or hardened earwax (cerumen) causing block…",
+      "section": "Ear",
+      "rubric": "Excessive or hardened earwax (cerumen) causing blockage and reduced hearing"
+    },
+    {
+      "id": "sym_labyrinthitis_inner_ear_inflammation_causing_vertigo_and_bal",
+      "label": "Labyrinthitis, inner-ear inflammation causing vertig…",
+      "section": "Ear",
+      "rubric": "Labyrinthitis, inner-ear inflammation causing vertigo and balance disturbance"
+    },
+    {
+      "id": "sym_perforation_of_the_eardrum_membrana_tympani_often_with_disch",
+      "label": "Perforation of the eardrum (membrana tympani), often…",
+      "section": "Ear",
+      "rubric": "Perforation of the eardrum (membrana tympani), often with discharge"
+    },
+    {
+      "id": "sym_bloody_discharge_from_the_ear",
+      "label": "Bloody discharge from the ear",
+      "section": "Ear",
+      "rubric": "Bloody discharge from the ear"
+    },
+    {
+      "id": "sym_thin_clear_watery_discharge_from_the_ear",
+      "label": "Thin, clear, watery discharge from the ear",
+      "section": "Ear",
+      "rubric": "Thin, clear, watery discharge from the ear"
     }
   ]
 }
