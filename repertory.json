@@ -33210,6 +33210,183 @@
         }
       ],
       "rubricType": "keynote"
+    },
+    {
+      "section": "Face",
+      "category": "Particulars",
+      "rubric": "Sunken, pale, or sickly facial appearance, especially in acute or wasting illness",
+      "triggers": [
+        "sunken pale sickly face",
+        "face looks sunken and pale",
+        "hippocratic face",
+        "collapsed sickly appearance of the face"
+      ],
+      "remedies": [
+        {
+          "id": "verat",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Face",
+      "category": "Particulars",
+      "rubric": "Facial paralysis, one-sided weakness or drooping of the face, especially after cold exposure (Bell's palsy-type)",
+      "triggers": [
+        "facial paralysis",
+        "bell's palsy",
+        "one side of the face is drooping and weak",
+        "face paralyzed after cold exposure or draft"
+      ],
+      "remedies": [
+        {
+          "id": "caust",
+          "grade": 3
+        },
+        {
+          "id": "gels",
+          "grade": 1
+        },
+        {
+          "id": "acon",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Face",
+      "category": "Particulars",
+      "rubric": "Hormonal acne or breakouts confined to the chin and jawline",
+      "triggers": [
+        "chin acne",
+        "jawline breakouts",
+        "hormonal acne on the chin",
+        "acne confined to the chin and jawline"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Face",
+      "category": "Particulars",
+      "rubric": "Jaw pain or stiffness (TMJ), worse on opening the mouth or chewing",
+      "triggers": [
+        "jaw pain worse chewing",
+        "tmj pain",
+        "jaw stiff opening the mouth",
+        "jaw joint pain worse chewing"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Face",
+      "category": "Particulars",
+      "rubric": "Lockjaw, trismus, marked stiffness or inability to open the jaw",
+      "triggers": [
+        "lockjaw",
+        "trismus",
+        "cannot open the jaw",
+        "jaw locked shut"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Face",
+      "category": "Particulars",
+      "rubric": "Twitching or spasm of the facial muscles",
+      "triggers": [
+        "facial muscle twitching",
+        "facial muscles twitch",
+        "spasm of the facial muscles",
+        "face twitches involuntarily",
+        "muscles of the face twitch"
+      ],
+      "remedies": [
+        {
+          "id": "agar",
+          "grade": 2
+        },
+        {
+          "id": "mag-p",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Face",
+      "category": "Particulars",
+      "rubric": "Tic douloureux, trigeminal neuralgia, sudden severe stabbing facial pain",
+      "triggers": [
+        "tic douloureux",
+        "trigeminal neuralgia",
+        "sudden severe stabbing facial pain",
+        "shooting stabbing pain across the face"
+      ],
+      "remedies": [
+        {
+          "id": "mag-p",
+          "grade": 2
+        },
+        {
+          "id": "spig",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Face",
+      "category": "Particulars",
+      "rubric": "Numbness or tingling sensation in the face",
+      "triggers": [
+        "numbness in the face",
+        "tingling sensation in the face",
+        "face feels numb",
+        "pins and needles in the face"
+      ],
+      "remedies": [
+        {
+          "id": "plat",
+          "grade": 1
+        },
+        {
+          "id": "acon",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -42710,6 +42887,54 @@
       "label": "Thin, clear, watery discharge from the ear",
       "section": "Ear",
       "rubric": "Thin, clear, watery discharge from the ear"
+    },
+    {
+      "id": "sym_sunken_pale_or_sickly_facial_appearance_especially_in_acute_",
+      "label": "Sunken, pale, or sickly facial appearance, especiall…",
+      "section": "Face",
+      "rubric": "Sunken, pale, or sickly facial appearance, especially in acute or wasting illness"
+    },
+    {
+      "id": "sym_facial_paralysis_one_sided_weakness_or_drooping_of_the_face_",
+      "label": "Facial paralysis, one-sided weakness or drooping of …",
+      "section": "Face",
+      "rubric": "Facial paralysis, one-sided weakness or drooping of the face, especially after cold exposure (Bell's palsy-type)"
+    },
+    {
+      "id": "sym_hormonal_acne_or_breakouts_confined_to_the_chin_and_jawline",
+      "label": "Hormonal acne or breakouts confined to the chin and …",
+      "section": "Face",
+      "rubric": "Hormonal acne or breakouts confined to the chin and jawline"
+    },
+    {
+      "id": "sym_jaw_pain_or_stiffness_tmj_worse_on_opening_the_mouth_or_chew",
+      "label": "Jaw pain or stiffness (TMJ), worse on opening the mo…",
+      "section": "Face",
+      "rubric": "Jaw pain or stiffness (TMJ), worse on opening the mouth or chewing"
+    },
+    {
+      "id": "sym_lockjaw_trismus_marked_stiffness_or_inability_to_open_the_ja",
+      "label": "Lockjaw, trismus, marked stiffness or inability to o…",
+      "section": "Face",
+      "rubric": "Lockjaw, trismus, marked stiffness or inability to open the jaw"
+    },
+    {
+      "id": "sym_twitching_or_spasm_of_the_facial_muscles",
+      "label": "Twitching or spasm of the facial muscles",
+      "section": "Face",
+      "rubric": "Twitching or spasm of the facial muscles"
+    },
+    {
+      "id": "sym_tic_douloureux_trigeminal_neuralgia_sudden_severe_stabbing_f",
+      "label": "Tic douloureux, trigeminal neuralgia, sudden severe …",
+      "section": "Face",
+      "rubric": "Tic douloureux, trigeminal neuralgia, sudden severe stabbing facial pain"
+    },
+    {
+      "id": "sym_numbness_or_tingling_sensation_in_the_face",
+      "label": "Numbness or tingling sensation in the face",
+      "section": "Face",
+      "rubric": "Numbness or tingling sensation in the face"
     }
   ]
 }
