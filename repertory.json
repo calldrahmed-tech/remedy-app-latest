@@ -32537,6 +32537,184 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Awkward and clumsy, drops things from the hand without noticing",
+      "triggers": [
+        "drops things from hand",
+        "clumsy keeps dropping objects",
+        "awkward always dropping things",
+        "things fall from hand without noticing"
+      ],
+      "remedies": [
+        {
+          "id": "agar",
+          "grade": 2
+        },
+        {
+          "id": "apis",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Brain-fag, mental exhaustion and inability to concentrate from overwork or excessive study",
+      "triggers": [
+        "brain fag",
+        "mental exhaustion from overstudy",
+        "cannot concentrate from overwork",
+        "mind tired from too much studying"
+      ],
+      "remedies": [
+        {
+          "id": "pic-ac",
+          "grade": 3
+        },
+        {
+          "id": "anac",
+          "grade": 1
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Catalepsy or trance, fixed rigid immobility with loss of responsiveness",
+      "triggers": [
+        "catalepsy",
+        "trance-like immobility",
+        "fixed rigid unresponsive state",
+        "stuck in a trance"
+      ],
+      "remedies": [
+        {
+          "id": "op",
+          "grade": 2
+        },
+        {
+          "id": "stram",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Sudden loss of consciousness, fainting or syncope",
+      "triggers": [
+        "sudden loss of consciousness",
+        "fainting spell",
+        "syncope",
+        "fainted suddenly",
+        "blacked out suddenly"
+      ],
+      "remedies": [
+        {
+          "id": "verat",
+          "grade": 2
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Cretinism, imbecility, or significant developmental and intellectual delay",
+      "triggers": [
+        "cretinism",
+        "imbecility",
+        "significant developmental delay",
+        "intellectual delay child",
+        "idiocy"
+      ],
+      "remedies": [
+        {
+          "id": "bar-c",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Dementia, progressive loss of memory and mental function, especially in old age",
+      "triggers": [
+        "dementia",
+        "progressive memory loss old age",
+        "losing mental function with age",
+        "senile dementia"
+      ],
+      "remedies": [
+        {
+          "id": "bar-c",
+          "grade": 2
+        },
+        {
+          "id": "con",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Hypochondriasis, excessive anxious preoccupation with imagined or minor illness",
+      "triggers": [
+        "hypochondriasis",
+        "excessive worry about minor illness",
+        "convinced something is seriously wrong despite normal tests",
+        "health anxiety preoccupation"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Hysteria, dramatic or exaggerated emotional outbursts and hysterical behavior",
+      "triggers": [
+        "hysteria",
+        "dramatic exaggerated emotional outburst",
+        "hysterical behavior",
+        "theatrical emotional display"
+      ],
+      "remedies": [
+        {
+          "id": "ign",
+          "grade": 2
+        },
+        {
+          "id": "plat",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -41881,6 +42059,54 @@
       "label": "Chronic pharyngitis, constant dryness, redness, and …",
       "section": "Throat",
       "rubric": "Chronic pharyngitis, constant dryness, redness, and irritation of the throat lining not from an acute infection"
+    },
+    {
+      "id": "sym_awkward_and_clumsy_drops_things_from_the_hand_without_notici",
+      "label": "Awkward and clumsy, drops things from the hand witho…",
+      "section": "Mind",
+      "rubric": "Awkward and clumsy, drops things from the hand without noticing"
+    },
+    {
+      "id": "sym_brain_fag_mental_exhaustion_and_inability_to_concentrate_fro",
+      "label": "Brain-fag, mental exhaustion and inability to concen…",
+      "section": "Mind",
+      "rubric": "Brain-fag, mental exhaustion and inability to concentrate from overwork or excessive study"
+    },
+    {
+      "id": "sym_catalepsy_or_trance_fixed_rigid_immobility_with_loss_of_resp",
+      "label": "Catalepsy or trance, fixed rigid immobility with los…",
+      "section": "Mind",
+      "rubric": "Catalepsy or trance, fixed rigid immobility with loss of responsiveness"
+    },
+    {
+      "id": "sym_sudden_loss_of_consciousness_fainting_or_syncope",
+      "label": "Sudden loss of consciousness, fainting or syncope",
+      "section": "Mind",
+      "rubric": "Sudden loss of consciousness, fainting or syncope"
+    },
+    {
+      "id": "sym_cretinism_imbecility_or_significant_developmental_and_intell",
+      "label": "Cretinism, imbecility, or significant developmental …",
+      "section": "Mind",
+      "rubric": "Cretinism, imbecility, or significant developmental and intellectual delay"
+    },
+    {
+      "id": "sym_dementia_progressive_loss_of_memory_and_mental_function_espe",
+      "label": "Dementia, progressive loss of memory and mental func…",
+      "section": "Mind",
+      "rubric": "Dementia, progressive loss of memory and mental function, especially in old age"
+    },
+    {
+      "id": "sym_hypochondriasis_excessive_anxious_preoccupation_with_imagine",
+      "label": "Hypochondriasis, excessive anxious preoccupation wit…",
+      "section": "Mind",
+      "rubric": "Hypochondriasis, excessive anxious preoccupation with imagined or minor illness"
+    },
+    {
+      "id": "sym_hysteria_dramatic_or_exaggerated_emotional_outbursts_and_hys",
+      "label": "Hysteria, dramatic or exaggerated emotional outburst…",
+      "section": "Mind",
+      "rubric": "Hysteria, dramatic or exaggerated emotional outbursts and hysterical behavior"
     }
   ]
 }
