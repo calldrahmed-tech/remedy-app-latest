@@ -12093,10 +12093,12 @@
     {
       "section": "Mouth",
       "category": "Particulars",
-      "rubric": "Metallic taste in the mouth unrelated to any food eaten",
+      "rubric": "Metallic taste in the mouth, unrelated to food, medication, or any obvious cause",
       "triggers": [
         "metallic taste in mouth",
-        "taste of metal without eating anything"
+        "taste of metal without eating anything",
+        "metallic taste in the mouth no medication reason",
+        "taste like metal in mouth unrelated to any drug"
       ],
       "remedies": [
         {
@@ -23162,22 +23164,6 @@
       "rubricType": "differential"
     },
     {
-      "section": "Mouth",
-      "category": "Particulars",
-      "rubric": "Metallic taste in the mouth not linked to any medication",
-      "triggers": [
-        "metallic taste in the mouth no medication reason",
-        "taste like metal in mouth unrelated to any drug"
-      ],
-      "remedies": [
-        {
-          "id": "merc-sol",
-          "grade": 2
-        }
-      ],
-      "rubricType": "keynote"
-    },
-    {
       "section": "Eye",
       "category": "Particulars",
       "rubric": "Yellow discoloration of the whites of the eyes, suggestive of jaundice",
@@ -33387,6 +33373,292 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Complete loss of taste, food tastes like nothing at all",
+      "triggers": [
+        "complete loss of taste",
+        "food tastes like nothing",
+        "cannot taste food at all",
+        "total loss of taste ageusia"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Sour or acidic taste in the mouth",
+      "triggers": [
+        "sour taste in the mouth",
+        "acidic taste in mouth",
+        "mouth tastes sour"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Perverted or altered taste, food tastes wrong or different than it should regardless of what is eaten",
+      "triggers": [
+        "perverted taste",
+        "altered taste",
+        "food tastes different than normal",
+        "everything tastes wrong no matter what is eaten"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "alum",
+          "grade": 1
+        },
+        {
+          "id": "mag-m",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Alveolar abscess or dental fistula, a pus-draining swelling at the root of a tooth",
+      "triggers": [
+        "dental fistula",
+        "alveolar abscess",
+        "gum boil draining pus",
+        "tooth root abscess with drainage",
+        "fistula dentalis"
+      ],
+      "remedies": [
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Rigg's disease, pyorrhea, gum recession with looseness of the teeth and pus discharge",
+      "triggers": [
+        "rigg's disease",
+        "pyorrhea",
+        "gum recession with loose teeth",
+        "gums receding with pus around the teeth"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
+        },
+        {
+          "id": "kreos",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Sordes, dark crusty deposits on the teeth and lips during severe fever",
+      "triggers": [
+        "sordes",
+        "dark crusty deposits on the teeth",
+        "crusty deposits on the lips and teeth during fever",
+        "brown crust on teeth and lips"
+      ],
+      "remedies": [
+        {
+          "id": "bapt",
+          "grade": 2
+        },
+        {
+          "id": "mur-ac",
+          "grade": 1
+        },
+        {
+          "id": "rhus-t",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Loose teeth, teeth becoming loose or wobbly not from any injury",
+      "triggers": [
+        "loose teeth",
+        "teeth feel wobbly",
+        "teeth becoming loose no injury",
+        "tooth loosening without trauma",
+        "teeth loose without any injury",
+        "teeth wobbly no injury"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "staph",
+          "grade": 1
+        },
+        {
+          "id": "calc-p",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Gastric atony, weak digestion with food lying undigested in the stomach for hours",
+      "triggers": [
+        "gastric atony",
+        "weak digestion food lies undigested for hours",
+        "stomach lacks tone slow digestion",
+        "food sits undigested for hours in the stomach"
+      ],
+      "remedies": [
+        {
+          "id": "chin",
+          "grade": 2
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Gastritis, inflammation of the stomach with burning pain worse after eating, tender to touch",
+      "triggers": [
+        "gastritis",
+        "inflammation of the stomach",
+        "stomach burns after eating and is tender to touch",
+        "stomach lining inflamed"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Hyperacidity, excessive stomach acid causing burning pain and frequent sour eructations",
+      "triggers": [
+        "hyperacidity",
+        "excessive stomach acid",
+        "too much acid in the stomach",
+        "burning pain with frequent sour belching"
+      ],
+      "remedies": [
+        {
+          "id": "carb-v",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Nervous indigestion, dyspepsia brought on or markedly worse from anxiety and nervous tension",
+      "triggers": [
+        "nervous indigestion",
+        "nervous dyspepsia",
+        "stomach upset from anxiety and nervous tension",
+        "digestion worse when anxious or nervous"
+      ],
+      "remedies": [
+        {
+          "id": "arg-n",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Biliousness, a general bilious state with headache, nausea, bitter taste, and sluggish liver function",
+      "triggers": [
+        "biliousness",
+        "bilious state with headache and nausea",
+        "sluggish liver with bitter taste and nausea",
+        "general biliousness"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -36572,9 +36844,9 @@
     },
     {
       "id": "sym_metallic_taste_in_the_mouth_unrelated_to_any_food_eaten",
-      "label": "Metallic taste in the mouth unrelated to any food eaten",
+      "label": "Metallic taste in the mouth, unrelated to food, medi…",
       "section": "Mouth",
-      "rubric": "Metallic taste in the mouth unrelated to any food eaten"
+      "rubric": "Metallic taste in the mouth, unrelated to food, medication, or any obvious cause"
     },
     {
       "id": "sym_craves_and_is_relieved_temporarily_by_very_hot_food_or_drink",
@@ -39961,12 +40233,6 @@
       "rubric": "Excessive dryness of the mouth on waking that clears soon after getting up"
     },
     {
-      "id": "sym_metallic_taste_in_the_mouth_not_linked_to_any_medication",
-      "label": "Metallic taste in the mouth not linked to any medica…",
-      "section": "Mouth",
-      "rubric": "Metallic taste in the mouth not linked to any medication"
-    },
-    {
       "id": "sym_yellow_discoloration_of_the_whites_of_the_eyes_suggestive_of",
       "label": "Yellow discoloration of the whites of the eyes, sugg…",
       "section": "Eye",
@@ -42935,6 +43201,78 @@
       "label": "Numbness or tingling sensation in the face",
       "section": "Face",
       "rubric": "Numbness or tingling sensation in the face"
+    },
+    {
+      "id": "sym_complete_loss_of_taste_food_tastes_like_nothing_at_all",
+      "label": "Complete loss of taste, food tastes like nothing at all",
+      "section": "Mouth",
+      "rubric": "Complete loss of taste, food tastes like nothing at all"
+    },
+    {
+      "id": "sym_sour_or_acidic_taste_in_the_mouth",
+      "label": "Sour or acidic taste in the mouth",
+      "section": "Mouth",
+      "rubric": "Sour or acidic taste in the mouth"
+    },
+    {
+      "id": "sym_perverted_or_altered_taste_food_tastes_wrong_or_different_th",
+      "label": "Perverted or altered taste, food tastes wrong or dif…",
+      "section": "Mouth",
+      "rubric": "Perverted or altered taste, food tastes wrong or different than it should regardless of what is eaten"
+    },
+    {
+      "id": "sym_alveolar_abscess_or_dental_fistula_a_pus_draining_swelling_a",
+      "label": "Alveolar abscess or dental fistula, a pus-draining s…",
+      "section": "Mouth",
+      "rubric": "Alveolar abscess or dental fistula, a pus-draining swelling at the root of a tooth"
+    },
+    {
+      "id": "sym_rigg_s_disease_pyorrhea_gum_recession_with_looseness_of_the_",
+      "label": "Rigg's disease, pyorrhea, gum recession with loosene…",
+      "section": "Mouth",
+      "rubric": "Rigg's disease, pyorrhea, gum recession with looseness of the teeth and pus discharge"
+    },
+    {
+      "id": "sym_sordes_dark_crusty_deposits_on_the_teeth_and_lips_during_sev",
+      "label": "Sordes, dark crusty deposits on the teeth and lips d…",
+      "section": "Mouth",
+      "rubric": "Sordes, dark crusty deposits on the teeth and lips during severe fever"
+    },
+    {
+      "id": "sym_loose_teeth_teeth_becoming_loose_or_wobbly_not_from_any_inju",
+      "label": "Loose teeth, teeth becoming loose or wobbly not from…",
+      "section": "Mouth",
+      "rubric": "Loose teeth, teeth becoming loose or wobbly not from any injury"
+    },
+    {
+      "id": "sym_gastric_atony_weak_digestion_with_food_lying_undigested_in_t",
+      "label": "Gastric atony, weak digestion with food lying undige…",
+      "section": "Stomach",
+      "rubric": "Gastric atony, weak digestion with food lying undigested in the stomach for hours"
+    },
+    {
+      "id": "sym_gastritis_inflammation_of_the_stomach_with_burning_pain_wors",
+      "label": "Gastritis, inflammation of the stomach with burning …",
+      "section": "Stomach",
+      "rubric": "Gastritis, inflammation of the stomach with burning pain worse after eating, tender to touch"
+    },
+    {
+      "id": "sym_hyperacidity_excessive_stomach_acid_causing_burning_pain_and",
+      "label": "Hyperacidity, excessive stomach acid causing burning…",
+      "section": "Stomach",
+      "rubric": "Hyperacidity, excessive stomach acid causing burning pain and frequent sour eructations"
+    },
+    {
+      "id": "sym_nervous_indigestion_dyspepsia_brought_on_or_markedly_worse_f",
+      "label": "Nervous indigestion, dyspepsia brought on or markedl…",
+      "section": "Stomach",
+      "rubric": "Nervous indigestion, dyspepsia brought on or markedly worse from anxiety and nervous tension"
+    },
+    {
+      "id": "sym_biliousness_a_general_bilious_state_with_headache_nausea_bit",
+      "label": "Biliousness, a general bilious state with headache, …",
+      "section": "Stomach",
+      "rubric": "Biliousness, a general bilious state with headache, nausea, bitter taste, and sluggish liver function"
     }
   ]
 }
