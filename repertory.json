@@ -14971,9 +14971,15 @@
       "rubric": "Pain in the great toe joint, worse from the slightest touch or jarring",
       "triggers": [
         "big toe joint very painful to touch",
-        "great toe pain worse jarring"
+        "great toe pain worse jarring",
+        "gout",
+        "gouty pain in the big toe"
       ],
       "remedies": [
+        {
+          "id": "colch",
+          "grade": 3
+        },
         {
           "id": "coloc",
           "grade": 1
@@ -34206,6 +34212,181 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Varicose veins, swollen twisted bluish veins usually in the legs",
+      "triggers": [
+        "varicose veins",
+        "swollen twisted veins in the legs",
+        "bluish bulging veins in the legs"
+      ],
+      "remedies": [
+        {
+          "id": "ham",
+          "grade": 3
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "calc-f",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Phlebitis, painful inflammation and swelling along the course of a vein",
+      "triggers": [
+        "phlebitis",
+        "inflammation and swelling along a vein",
+        "vein is painful hot and swollen"
+      ],
+      "remedies": [
+        {
+          "id": "ham",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "True angina pectoris, constricting chest pain brought on by exertion and relieved by rest, requiring prompt cardiac evaluation",
+      "triggers": [
+        "angina pectoris",
+        "exertional chest pain relieved by rest",
+        "chest pain on exertion classic angina",
+        "chest pain with exertion needs cardiac evaluation"
+      ],
+      "remedies": [
+        {
+          "id": "cact",
+          "grade": 2
+        },
+        {
+          "id": "spig",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Poor peripheral circulation with cold, bluish extremities from weak circulation rather than general chilliness",
+      "triggers": [
+        "poor peripheral circulation",
+        "cold bluish hands and feet from weak circulation",
+        "extremities cold and bluish from circulation problem",
+        "cold and bluish from poor circulation",
+        "hands and feet cold bluish poor circulation"
+      ],
+      "remedies": [
+        {
+          "id": "sec",
+          "grade": 2
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Arteriosclerosis, hardening and narrowing of the arteries",
+      "triggers": [
+        "arteriosclerosis",
+        "hardening of the arteries",
+        "narrowing of the arteries with age"
+      ],
+      "remedies": [
+        {
+          "id": "bar-c",
+          "grade": 2
+        },
+        {
+          "id": "plb",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Arthritis or rheumatism, general joint and muscle pain and stiffness",
+      "triggers": [
+        "arthritis",
+        "rheumatism",
+        "rheumatoid arthritis",
+        "general joint and muscle pain and stiffness",
+        "joints ache and are stiff"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "calc-p",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Coccyx pain (coccydynia), tailbone pain often following a fall or childbirth",
+      "triggers": [
+        "coccyx pain",
+        "coccydynia",
+        "tailbone pain after a fall",
+        "tailbone pain after childbirth"
+      ],
+      "remedies": [
+        {
+          "id": "hyper",
+          "grade": 2
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Elbow pain from overuse, tennis-elbow type tendon strain",
+      "triggers": [
+        "tennis elbow",
+        "elbow pain from overuse",
+        "tendon strain of the elbow",
+        "elbow hurts from repetitive use"
+      ],
+      "remedies": [
+        {
+          "id": "ruta",
+          "grade": 2
+        }
+      ],
+      "rubricType": "keynote"
     }
   ],
   "chiefSymptomTags": [
@@ -43958,6 +44139,54 @@
       "label": "Itching of the vulva (pruritus vulvae), sometimes le…",
       "section": "Female",
       "rubric": "Itching of the vulva (pruritus vulvae), sometimes leading to a habit of touching in young children"
+    },
+    {
+      "id": "sym_varicose_veins_swollen_twisted_bluish_veins_usually_in_the_l",
+      "label": "Varicose veins, swollen twisted bluish veins usually…",
+      "section": "Chest",
+      "rubric": "Varicose veins, swollen twisted bluish veins usually in the legs"
+    },
+    {
+      "id": "sym_phlebitis_painful_inflammation_and_swelling_along_the_course",
+      "label": "Phlebitis, painful inflammation and swelling along t…",
+      "section": "Chest",
+      "rubric": "Phlebitis, painful inflammation and swelling along the course of a vein"
+    },
+    {
+      "id": "sym_true_angina_pectoris_constricting_chest_pain_brought_on_by_e",
+      "label": "True angina pectoris, constricting chest pain brough…",
+      "section": "Chest",
+      "rubric": "True angina pectoris, constricting chest pain brought on by exertion and relieved by rest, requiring prompt cardiac evaluation"
+    },
+    {
+      "id": "sym_poor_peripheral_circulation_with_cold_bluish_extremities_fro",
+      "label": "Poor peripheral circulation with cold, bluish extrem…",
+      "section": "Chest",
+      "rubric": "Poor peripheral circulation with cold, bluish extremities from weak circulation rather than general chilliness"
+    },
+    {
+      "id": "sym_arteriosclerosis_hardening_and_narrowing_of_the_arteries",
+      "label": "Arteriosclerosis, hardening and narrowing of the art…",
+      "section": "Chest",
+      "rubric": "Arteriosclerosis, hardening and narrowing of the arteries"
+    },
+    {
+      "id": "sym_arthritis_or_rheumatism_general_joint_and_muscle_pain_and_st",
+      "label": "Arthritis or rheumatism, general joint and muscle pa…",
+      "section": "Extremities",
+      "rubric": "Arthritis or rheumatism, general joint and muscle pain and stiffness"
+    },
+    {
+      "id": "sym_coccyx_pain_coccydynia_tailbone_pain_often_following_a_fall_",
+      "label": "Coccyx pain (coccydynia), tailbone pain often follow…",
+      "section": "Extremities",
+      "rubric": "Coccyx pain (coccydynia), tailbone pain often following a fall or childbirth"
+    },
+    {
+      "id": "sym_elbow_pain_from_overuse_tennis_elbow_type_tendon_strain",
+      "label": "Elbow pain from overuse, tennis-elbow type tendon st…",
+      "section": "Extremities",
+      "rubric": "Elbow pain from overuse, tennis-elbow type tendon strain"
     }
   ]
 }
