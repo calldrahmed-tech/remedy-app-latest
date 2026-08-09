@@ -31359,6 +31359,680 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Sudden acute back strain from lifting a heavy object",
+      "triggers": [
+        "hurt back lifting",
+        "back pain from lifting",
+        "lifting a heavy box hurt the back",
+        "strained back lifting something heavy",
+        "threw out back lifting"
+      ],
+      "remedies": [
+        {
+          "id": "arn",
+          "grade": 3
+        },
+        {
+          "id": "rhus-t",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Neck and cervical stiffness or pain brought on specifically by stress or tension",
+      "triggers": [
+        "neck pain from stress",
+        "cervical stiffness from tension",
+        "tight neck from stress",
+        "neck pain worse when stressed"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "caust",
+          "grade": 1
+        },
+        {
+          "id": "act-r",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Sciatica, shooting pain down the back of the leg along the course of the sciatic nerve",
+      "triggers": [
+        "sciatica",
+        "shooting pain down the back of the leg",
+        "sciatic nerve pain",
+        "pain shoots from hip down the leg"
+      ],
+      "remedies": [
+        {
+          "id": "coloc",
+          "grade": 3
+        },
+        {
+          "id": "mag-p",
+          "grade": 2
+        },
+        {
+          "id": "led",
+          "grade": 1
+        },
+        {
+          "id": "rhus-t",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Lumbago, acute pain confined to the lumbar region, often coming on suddenly",
+      "triggers": [
+        "lumbago",
+        "sudden acute lower back pain",
+        "lumbar region pain came on suddenly"
+      ],
+      "remedies": [
+        {
+          "id": "rhus-t",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Enlarged prostate causing urinary difficulty in an older man",
+      "triggers": [
+        "enlarged prostate",
+        "bph benign prostatic hyperplasia",
+        "prostate enlargement with urinary trouble"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 2
+        },
+        {
+          "id": "thuj",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Complete inability to pass urine, acute retention despite strong urge",
+      "triggers": [
+        "cannot pass urine at all",
+        "acute urinary retention",
+        "unable to urinate despite strong urge"
+      ],
+      "remedies": [
+        {
+          "id": "op",
+          "grade": 2
+        },
+        {
+          "id": "canth",
+          "grade": 1
+        },
+        {
+          "id": "acon",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Excessive or increased sexual desire, out of proportion to normal, causing distress",
+      "triggers": [
+        "increased sexual desire",
+        "excessive sexual desire causing distress",
+        "abnormally strong libido"
+      ],
+      "remedies": [
+        {
+          "id": "canth",
+          "grade": 2
+        },
+        {
+          "id": "plat",
+          "grade": 1
+        },
+        {
+          "id": "murx",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Pain during or immediately after ejaculation",
+      "triggers": [
+        "painful ejaculation",
+        "pain after ejaculation",
+        "hurts during ejaculation"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 2
+        },
+        {
+          "id": "sel",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Sense of oppression or difficulty breathing brought on specifically by anxiety",
+      "triggers": [
+        "chest oppression from anxiety",
+        "difficulty breathing when anxious",
+        "tight chest cannot breathe well when anxious"
+      ],
+      "remedies": [
+        {
+          "id": "acon",
+          "grade": 2
+        },
+        {
+          "id": "arg-n",
+          "grade": 1
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Irregular or skipping heartbeat noticed by the patient, worse from emotion or stress",
+      "triggers": [
+        "irregular heartbeat",
+        "heart skips beats",
+        "irregular pulse noticed worse with stress"
+      ],
+      "remedies": [
+        {
+          "id": "spig",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Burning pain in the chest, not linked to eating or acid reflux",
+      "triggers": [
+        "burning chest pain",
+        "chest burns not related to eating",
+        "burning sensation across the chest"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Sharp pain under the right breast that comes and goes suddenly",
+      "triggers": [
+        "pain under the right breast",
+        "sharp pain right side under the breast",
+        "stabbing pain right chest under breast"
+      ],
+      "remedies": [
+        {
+          "id": "chel",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Soreness or tenderness of the chest wall itself, worse to touch or pressure",
+      "triggers": [
+        "chest wall sore to touch",
+        "chest tender when pressed",
+        "sore ribs or chest wall tenderness"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "ran-b",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Chest",
+      "category": "Particulars",
+      "rubric": "Chest tightness or a sensation of weight on the chest following grief or emotional loss",
+      "triggers": [
+        "chest feels tight since a loss or grief",
+        "weight on the chest after grief",
+        "chest tightness following bereavement"
+      ],
+      "remedies": [
+        {
+          "id": "ign",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo that is worse specifically from looking downward",
+      "triggers": [
+        "dizzy looking down",
+        "vertigo worse looking downward",
+        "looking down triggers dizziness"
+      ],
+      "remedies": [
+        {
+          "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "con",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo accompanied by marked nausea, sometimes with vomiting",
+      "triggers": [
+        "vertigo with nausea",
+        "dizziness and nausea together",
+        "vertigo makes them feel like vomiting"
+      ],
+      "remedies": [
+        {
+          "id": "cocc",
+          "grade": 2
+        },
+        {
+          "id": "tab",
+          "grade": 1
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo that is worse specifically from turning over in bed",
+      "triggers": [
+        "dizzy turning over in bed",
+        "vertigo worse turning in bed",
+        "turning over in bed triggers dizziness",
+        "dizzy turn over in bed"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo or dread specifically triggered by heights",
+      "triggers": [
+        "fear of heights with dizziness",
+        "vertigo from being at a height",
+        "dizzy or afraid looking down from height"
+      ],
+      "remedies": [
+        {
+          "id": "arg-n",
+          "grade": 2
+        },
+        {
+          "id": "bor",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Vertigo",
+      "category": "Particulars",
+      "rubric": "Vertigo that is markedly worse from loud or sudden noise",
+      "triggers": [
+        "dizziness worse from loud noise",
+        "vertigo triggered by sudden sound",
+        "loud noise causes dizziness"
+      ],
+      "remedies": [
+        {
+          "id": "ther",
+          "grade": 1
+        },
+        {
+          "id": "bor",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Perspiration",
+      "category": "Particulars",
+      "rubric": "Perspiration confined specifically to the feet, rest of the body remains dry",
+      "triggers": [
+        "sweaty feet only rest of body dry",
+        "perspiration only on the feet",
+        "feet sweat heavily other areas stay dry"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "psor",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Swollen glands in the groin (inguinal), following a minor injury or infection nearby",
+      "triggers": [
+        "swollen glands in the groin",
+        "inguinal lymph node swelling",
+        "groin gland swelling after injury or infection"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Chronic tuberculous-type glandular swelling (scrofula) in a delicate, undernourished constitution",
+      "triggers": [
+        "scrofula",
+        "chronic tuberculous gland swelling",
+        "delicate child with chronic glandular swelling"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        },
+        {
+          "id": "bar-c",
+          "grade": 1
+        },
+        {
+          "id": "tub",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Blurred vision that comes on specifically from reading or close near work",
+      "triggers": [
+        "vision blurs from reading",
+        "blurry vision doing close work",
+        "reading causes vision to blur"
+      ],
+      "remedies": [
+        {
+          "id": "ruta",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Chronic dryness of the eyes, gritty and uncomfortable without much discharge",
+      "triggers": [
+        "chronic dry eyes",
+        "eyes feel dry and gritty",
+        "dryness of the eyes no real discharge"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "alum",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Hearing loss, gradual or sudden, without pain or discharge",
+      "triggers": [
+        "hearing loss",
+        "gradual loss of hearing",
+        "sudden loss of hearing no pain"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 1
+        },
+        {
+          "id": "chin",
+          "grade": 1
+        },
+        {
+          "id": "graph",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Marked sensitivity to noise specifically felt in the ear, ordinary sounds feel painfully sharp",
+      "triggers": [
+        "ears painfully sensitive to noise",
+        "ordinary sounds hurt the ears",
+        "sound feels sharp and painful in the ear"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "asar",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Ear",
+      "category": "Particulars",
+      "rubric": "Prone to recurrent ear infections, several episodes over a short period",
+      "triggers": [
+        "recurring ear infections",
+        "keeps getting ear infections repeatedly",
+        "prone to frequent ear infections"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Dryness of the throat without any accompanying thirst",
+      "triggers": [
+        "dry throat but not thirsty",
+        "throat feels dry without wanting to drink",
+        "dryness of throat no thirst"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "nux-m",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Complete loss of voice (aphonia), unable to speak above a whisper",
+      "triggers": [
+        "complete loss of voice",
+        "cannot speak above a whisper",
+        "total loss of voice aphonia"
+      ],
+      "remedies": [
+        {
+          "id": "caust",
+          "grade": 3
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ],
+      "rubricType": "keynote"
     }
   ],
   "chiefSymptomTags": [
@@ -40403,6 +41077,180 @@
       "label": "Frostbite or severe cold-damage to the skin with num…",
       "section": "Skin",
       "rubric": "Frostbite or severe cold-damage to the skin with numbness, discoloration, and burning on rewarming"
+    },
+    {
+      "id": "sym_sudden_acute_back_strain_from_lifting_a_heavy_object",
+      "label": "Sudden acute back strain from lifting a heavy object",
+      "section": "Back",
+      "rubric": "Sudden acute back strain from lifting a heavy object"
+    },
+    {
+      "id": "sym_neck_and_cervical_stiffness_or_pain_brought_on_specifically_",
+      "label": "Neck and cervical stiffness or pain brought on speci…",
+      "section": "Back",
+      "rubric": "Neck and cervical stiffness or pain brought on specifically by stress or tension"
+    },
+    {
+      "id": "sym_sciatica_shooting_pain_down_the_back_of_the_leg_along_the_co",
+      "label": "Sciatica, shooting pain down the back of the leg alo…",
+      "section": "Back",
+      "rubric": "Sciatica, shooting pain down the back of the leg along the course of the sciatic nerve"
+    },
+    {
+      "id": "sym_lumbago_acute_pain_confined_to_the_lumbar_region_often_comin",
+      "label": "Lumbago, acute pain confined to the lumbar region, o…",
+      "section": "Back",
+      "rubric": "Lumbago, acute pain confined to the lumbar region, often coming on suddenly"
+    },
+    {
+      "id": "sym_enlarged_prostate_causing_urinary_difficulty_in_an_older_man",
+      "label": "Enlarged prostate causing urinary difficulty in an o…",
+      "section": "Male",
+      "rubric": "Enlarged prostate causing urinary difficulty in an older man"
+    },
+    {
+      "id": "sym_complete_inability_to_pass_urine_acute_retention_despite_str",
+      "label": "Complete inability to pass urine, acute retention de…",
+      "section": "Male",
+      "rubric": "Complete inability to pass urine, acute retention despite strong urge"
+    },
+    {
+      "id": "sym_excessive_or_increased_sexual_desire_out_of_proportion_to_no",
+      "label": "Excessive or increased sexual desire, out of proport…",
+      "section": "Male",
+      "rubric": "Excessive or increased sexual desire, out of proportion to normal, causing distress"
+    },
+    {
+      "id": "sym_pain_during_or_immediately_after_ejaculation",
+      "label": "Pain during or immediately after ejaculation",
+      "section": "Male",
+      "rubric": "Pain during or immediately after ejaculation"
+    },
+    {
+      "id": "sym_sense_of_oppression_or_difficulty_breathing_brought_on_speci",
+      "label": "Sense of oppression or difficulty breathing brought …",
+      "section": "Chest",
+      "rubric": "Sense of oppression or difficulty breathing brought on specifically by anxiety"
+    },
+    {
+      "id": "sym_irregular_or_skipping_heartbeat_noticed_by_the_patient_worse",
+      "label": "Irregular or skipping heartbeat noticed by the patie…",
+      "section": "Chest",
+      "rubric": "Irregular or skipping heartbeat noticed by the patient, worse from emotion or stress"
+    },
+    {
+      "id": "sym_burning_pain_in_the_chest_not_linked_to_eating_or_acid_reflu",
+      "label": "Burning pain in the chest, not linked to eating or a…",
+      "section": "Chest",
+      "rubric": "Burning pain in the chest, not linked to eating or acid reflux"
+    },
+    {
+      "id": "sym_sharp_pain_under_the_right_breast_that_comes_and_goes_sudden",
+      "label": "Sharp pain under the right breast that comes and goe…",
+      "section": "Chest",
+      "rubric": "Sharp pain under the right breast that comes and goes suddenly"
+    },
+    {
+      "id": "sym_soreness_or_tenderness_of_the_chest_wall_itself_worse_to_tou",
+      "label": "Soreness or tenderness of the chest wall itself, wor…",
+      "section": "Chest",
+      "rubric": "Soreness or tenderness of the chest wall itself, worse to touch or pressure"
+    },
+    {
+      "id": "sym_chest_tightness_or_a_sensation_of_weight_on_the_chest_follow",
+      "label": "Chest tightness or a sensation of weight on the ches…",
+      "section": "Chest",
+      "rubric": "Chest tightness or a sensation of weight on the chest following grief or emotional loss"
+    },
+    {
+      "id": "sym_vertigo_that_is_worse_specifically_from_looking_downward",
+      "label": "Vertigo that is worse specifically from looking down…",
+      "section": "Vertigo",
+      "rubric": "Vertigo that is worse specifically from looking downward"
+    },
+    {
+      "id": "sym_vertigo_accompanied_by_marked_nausea_sometimes_with_vomiting",
+      "label": "Vertigo accompanied by marked nausea, sometimes with…",
+      "section": "Vertigo",
+      "rubric": "Vertigo accompanied by marked nausea, sometimes with vomiting"
+    },
+    {
+      "id": "sym_vertigo_that_is_worse_specifically_from_turning_over_in_bed",
+      "label": "Vertigo that is worse specifically from turning over…",
+      "section": "Vertigo",
+      "rubric": "Vertigo that is worse specifically from turning over in bed"
+    },
+    {
+      "id": "sym_vertigo_or_dread_specifically_triggered_by_heights",
+      "label": "Vertigo or dread specifically triggered by heights",
+      "section": "Vertigo",
+      "rubric": "Vertigo or dread specifically triggered by heights"
+    },
+    {
+      "id": "sym_vertigo_that_is_markedly_worse_from_loud_or_sudden_noise",
+      "label": "Vertigo that is markedly worse from loud or sudden n…",
+      "section": "Vertigo",
+      "rubric": "Vertigo that is markedly worse from loud or sudden noise"
+    },
+    {
+      "id": "sym_perspiration_confined_specifically_to_the_feet_rest_of_the_b",
+      "label": "Perspiration confined specifically to the feet, rest…",
+      "section": "Perspiration",
+      "rubric": "Perspiration confined specifically to the feet, rest of the body remains dry"
+    },
+    {
+      "id": "sym_swollen_glands_in_the_groin_inguinal_following_a_minor_injur",
+      "label": "Swollen glands in the groin (inguinal), following a …",
+      "section": "Glands",
+      "rubric": "Swollen glands in the groin (inguinal), following a minor injury or infection nearby"
+    },
+    {
+      "id": "sym_chronic_tuberculous_type_glandular_swelling_scrofula_in_a_de",
+      "label": "Chronic tuberculous-type glandular swelling (scroful…",
+      "section": "Glands",
+      "rubric": "Chronic tuberculous-type glandular swelling (scrofula) in a delicate, undernourished constitution"
+    },
+    {
+      "id": "sym_blurred_vision_that_comes_on_specifically_from_reading_or_cl",
+      "label": "Blurred vision that comes on specifically from readi…",
+      "section": "Eye",
+      "rubric": "Blurred vision that comes on specifically from reading or close near work"
+    },
+    {
+      "id": "sym_chronic_dryness_of_the_eyes_gritty_and_uncomfortable_without",
+      "label": "Chronic dryness of the eyes, gritty and uncomfortabl…",
+      "section": "Eye",
+      "rubric": "Chronic dryness of the eyes, gritty and uncomfortable without much discharge"
+    },
+    {
+      "id": "sym_hearing_loss_gradual_or_sudden_without_pain_or_discharge",
+      "label": "Hearing loss, gradual or sudden, without pain or dis…",
+      "section": "Ear",
+      "rubric": "Hearing loss, gradual or sudden, without pain or discharge"
+    },
+    {
+      "id": "sym_marked_sensitivity_to_noise_specifically_felt_in_the_ear_ord",
+      "label": "Marked sensitivity to noise specifically felt in the…",
+      "section": "Ear",
+      "rubric": "Marked sensitivity to noise specifically felt in the ear, ordinary sounds feel painfully sharp"
+    },
+    {
+      "id": "sym_prone_to_recurrent_ear_infections_several_episodes_over_a_sh",
+      "label": "Prone to recurrent ear infections, several episodes …",
+      "section": "Ear",
+      "rubric": "Prone to recurrent ear infections, several episodes over a short period"
+    },
+    {
+      "id": "sym_dryness_of_the_throat_without_any_accompanying_thirst",
+      "label": "Dryness of the throat without any accompanying thirst",
+      "section": "Throat",
+      "rubric": "Dryness of the throat without any accompanying thirst"
+    },
+    {
+      "id": "sym_complete_loss_of_voice_aphonia_unable_to_speak_above_a_whisp",
+      "label": "Complete loss of voice (aphonia), unable to speak ab…",
+      "section": "Throat",
+      "rubric": "Complete loss of voice (aphonia), unable to speak above a whisper"
     }
   ]
 }
