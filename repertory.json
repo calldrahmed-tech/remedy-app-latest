@@ -26338,10 +26338,18 @@
       "remedies": [
         {
           "id": "bry",
-          "grade": 1
+          "grade": 2
         },
         {
           "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "merc-c",
           "grade": 1
         }
       ],
@@ -33655,6 +33663,140 @@
         },
         {
           "id": "nux-v",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Cholera, severe watery rice-water diarrhea and vomiting with rapid collapse and cold extremities, a medical emergency",
+      "triggers": [
+        "cholera",
+        "rice water diarrhea",
+        "severe watery diarrhea and vomiting with collapse",
+        "rapid collapse with cold extremities and profuse diarrhea"
+      ],
+      "remedies": [
+        {
+          "id": "camph",
+          "grade": 2
+        },
+        {
+          "id": "verat",
+          "grade": 2
+        },
+        {
+          "id": "cupr",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Cholerine, a milder cholera-like illness with diarrhea, cramping, and some collapse but less severe than true cholera",
+      "triggers": [
+        "cholerine",
+        "mild cholera-like illness",
+        "cramping diarrhea with mild collapse",
+        "cholera-like symptoms but less severe"
+      ],
+      "remedies": [
+        {
+          "id": "verat",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Peritonitis, rigid board-like abdomen with severe pain worse from any touch or motion, a medical emergency",
+      "triggers": [
+        "peritonitis",
+        "rigid board-like abdomen",
+        "abdomen rigid and cannot bear any touch",
+        "severe abdominal pain worse from the slightest touch or motion"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Duodenal ulcer-type pain, burning pain that comes on a few hours after eating and is relieved immediately by eating again",
+      "triggers": [
+        "duodenal ulcer pain",
+        "burning pain hours after eating relieved by eating",
+        "pain a few hours after a meal relieved by food",
+        "ulcer pain relieved immediately by eating"
+      ],
+      "remedies": [
+        {
+          "id": "arg-n",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Burning heat felt internally in the abdomen",
+      "triggers": [
+        "burning heat in the abdomen",
+        "internal burning sensation in the belly",
+        "abdomen feels like it is burning inside"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Abdomen",
+      "category": "Particulars",
+      "rubric": "Coldness felt internally in the abdomen",
+      "triggers": [
+        "coldness in the abdomen",
+        "abdomen feels cold inside",
+        "internal cold sensation in the belly"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        },
+        {
+          "id": "verat",
           "grade": 1
         }
       ],
@@ -43273,6 +43415,42 @@
       "label": "Biliousness, a general bilious state with headache, …",
       "section": "Stomach",
       "rubric": "Biliousness, a general bilious state with headache, nausea, bitter taste, and sluggish liver function"
+    },
+    {
+      "id": "sym_cholera_severe_watery_rice_water_diarrhea_and_vomiting_with_",
+      "label": "Cholera, severe watery rice-water diarrhea and vomit…",
+      "section": "Abdomen",
+      "rubric": "Cholera, severe watery rice-water diarrhea and vomiting with rapid collapse and cold extremities, a medical emergency"
+    },
+    {
+      "id": "sym_cholerine_a_milder_cholera_like_illness_with_diarrhea_crampi",
+      "label": "Cholerine, a milder cholera-like illness with diarrh…",
+      "section": "Abdomen",
+      "rubric": "Cholerine, a milder cholera-like illness with diarrhea, cramping, and some collapse but less severe than true cholera"
+    },
+    {
+      "id": "sym_peritonitis_rigid_board_like_abdomen_with_severe_pain_worse_",
+      "label": "Peritonitis, rigid board-like abdomen with severe pa…",
+      "section": "Abdomen",
+      "rubric": "Peritonitis, rigid board-like abdomen with severe pain worse from any touch or motion, a medical emergency"
+    },
+    {
+      "id": "sym_duodenal_ulcer_type_pain_burning_pain_that_comes_on_a_few_ho",
+      "label": "Duodenal ulcer-type pain, burning pain that comes on…",
+      "section": "Abdomen",
+      "rubric": "Duodenal ulcer-type pain, burning pain that comes on a few hours after eating and is relieved immediately by eating again"
+    },
+    {
+      "id": "sym_burning_heat_felt_internally_in_the_abdomen",
+      "label": "Burning heat felt internally in the abdomen",
+      "section": "Abdomen",
+      "rubric": "Burning heat felt internally in the abdomen"
+    },
+    {
+      "id": "sym_coldness_felt_internally_in_the_abdomen",
+      "label": "Coldness felt internally in the abdomen",
+      "section": "Abdomen",
+      "rubric": "Coldness felt internally in the abdomen"
     }
   ]
 }
