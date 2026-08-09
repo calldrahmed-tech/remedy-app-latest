@@ -32214,6 +32214,120 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Weakness or exhaustion that comes on specifically after sexual intercourse (coitus)",
+      "triggers": [
+        "weak after sex",
+        "exhausted after intercourse",
+        "coitus leaves patient weak",
+        "tired after sexual activity"
+      ],
+      "remedies": [
+        {
+          "id": "sel",
+          "grade": 2
+        },
+        {
+          "id": "chin",
+          "grade": 1
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Headache or physical ailments brought on or aggravated specifically by drinking coffee",
+      "triggers": [
+        "headache from coffee",
+        "ailments from drinking coffee",
+        "coffee brings on headache",
+        "symptoms worse after coffee"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 3
+        },
+        {
+          "id": "cham",
+          "grade": 2
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Chronic ill effects from living in a damp house or damp dwelling",
+      "triggers": [
+        "living in a damp house",
+        "damp dwelling caused chronic problems",
+        "ill effects of a damp home",
+        "health declined after moving to a damp house"
+      ],
+      "remedies": [
+        {
+          "id": "dulc",
+          "grade": 2
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Worse from sexual abstinence or celibacy, symptoms brought on by suppressed desire",
+      "triggers": [
+        "worse from celibacy",
+        "symptoms from sexual abstinence",
+        "suppressed sexual desire causing symptoms"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 2
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Modalities",
+      "category": "Generals",
+      "rubric": "Gagging, retching, or nausea specifically triggered by brushing the teeth",
+      "triggers": [
+        "gags brushing teeth",
+        "gagging brushing teeth",
+        "retches brushing teeth",
+        "retching brushing teeth",
+        "nausea brushing teeth",
+        "gags brushes teeth",
+        "retches brushes teeth",
+        "brushing teeth causes gagging",
+        "nauseous brushing teeth"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -41474,6 +41588,36 @@
       "label": "Optical illusions, seeing spots, colors, or images t…",
       "section": "Eye",
       "rubric": "Optical illusions, seeing spots, colors, or images that are not really there"
+    },
+    {
+      "id": "sym_weakness_or_exhaustion_that_comes_on_specifically_after_sexu",
+      "label": "Weakness or exhaustion that comes on specifically af…",
+      "section": "Modalities",
+      "rubric": "Weakness or exhaustion that comes on specifically after sexual intercourse (coitus)"
+    },
+    {
+      "id": "sym_headache_or_physical_ailments_brought_on_or_aggravated_speci",
+      "label": "Headache or physical ailments brought on or aggravat…",
+      "section": "Modalities",
+      "rubric": "Headache or physical ailments brought on or aggravated specifically by drinking coffee"
+    },
+    {
+      "id": "sym_chronic_ill_effects_from_living_in_a_damp_house_or_damp_dwel",
+      "label": "Chronic ill effects from living in a damp house or d…",
+      "section": "Modalities",
+      "rubric": "Chronic ill effects from living in a damp house or damp dwelling"
+    },
+    {
+      "id": "sym_worse_from_sexual_abstinence_or_celibacy_symptoms_brought_on",
+      "label": "Worse from sexual abstinence or celibacy, symptoms b…",
+      "section": "Modalities",
+      "rubric": "Worse from sexual abstinence or celibacy, symptoms brought on by suppressed desire"
+    },
+    {
+      "id": "sym_gagging_retching_or_nausea_specifically_triggered_by_brushin",
+      "label": "Gagging, retching, or nausea specifically triggered …",
+      "section": "Modalities",
+      "rubric": "Gagging, retching, or nausea specifically triggered by brushing the teeth"
     }
   ]
 }
