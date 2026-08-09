@@ -1822,6 +1822,6 @@ if (translateBtn) {
   });
 }
 
-document.querySelectorAll(".sample-chip").forEach(chip => {
+document.querySelectorAll(".sample-chip[data-sample]").forEach(chip => {
   chip.addEventListener("click", () => { inputEl.value = chip.dataset.sample; runSearch(); });
 });

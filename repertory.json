@@ -32033,6 +32033,187 @@
         }
       ],
       "rubricType": "keynote"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Amaurosis, sudden or gradual loss of vision without visible damage to the eye itself",
+      "triggers": [
+        "amaurosis",
+        "sudden blindness no visible eye damage",
+        "gradual loss of vision eye looks normal",
+        "went blind but eye examination normal"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Amblyopia, dimness or weakness of vision without obvious eye disease",
+      "triggers": [
+        "amblyopia",
+        "dim weak vision no eye disease found",
+        "vision dull and weak eye looks fine",
+        "lazy eye dim vision"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "ruta",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Asthenopia, eyes tire quickly and strain easily from reading or close work",
+      "triggers": [
+        "asthenopia",
+        "eyes tire quickly reading",
+        "eye strain from close work",
+        "eyes feel tired and weak after reading"
+      ],
+      "remedies": [
+        {
+          "id": "ruta",
+          "grade": 3
+        },
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Diplopia, seeing two images of a single object",
+      "triggers": [
+        "diplopia",
+        "seeing double two images of one object",
+        "double vision seeing two of everything"
+      ],
+      "remedies": [
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "agar",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Hemiopia, only half of an object or half the visual field is seen",
+      "triggers": [
+        "hemiopia",
+        "hemianopia",
+        "seeing only half of an object",
+        "half the field of vision missing"
+      ],
+      "remedies": [
+        {
+          "id": "kali-c",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "con",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Myopia, nearsightedness, difficulty clearly seeing distant objects",
+      "triggers": [
+        "myopia",
+        "nearsighted",
+        "cannot see far objects clearly",
+        "distant vision blurry near vision fine"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Optical illusions, seeing spots, colors, or images that are not really there",
+      "triggers": [
+        "seeing spots that are not there",
+        "visual hallucinations",
+        "seeing things that are not real",
+        "optical illusions"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "stram",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "anac",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -41251,6 +41432,48 @@
       "label": "Complete loss of voice (aphonia), unable to speak ab…",
       "section": "Throat",
       "rubric": "Complete loss of voice (aphonia), unable to speak above a whisper"
+    },
+    {
+      "id": "sym_amaurosis_sudden_or_gradual_loss_of_vision_without_visible_d",
+      "label": "Amaurosis, sudden or gradual loss of vision without …",
+      "section": "Eye",
+      "rubric": "Amaurosis, sudden or gradual loss of vision without visible damage to the eye itself"
+    },
+    {
+      "id": "sym_amblyopia_dimness_or_weakness_of_vision_without_obvious_eye_",
+      "label": "Amblyopia, dimness or weakness of vision without obv…",
+      "section": "Eye",
+      "rubric": "Amblyopia, dimness or weakness of vision without obvious eye disease"
+    },
+    {
+      "id": "sym_asthenopia_eyes_tire_quickly_and_strain_easily_from_reading_",
+      "label": "Asthenopia, eyes tire quickly and strain easily from…",
+      "section": "Eye",
+      "rubric": "Asthenopia, eyes tire quickly and strain easily from reading or close work"
+    },
+    {
+      "id": "sym_diplopia_seeing_two_images_of_a_single_object",
+      "label": "Diplopia, seeing two images of a single object",
+      "section": "Eye",
+      "rubric": "Diplopia, seeing two images of a single object"
+    },
+    {
+      "id": "sym_hemiopia_only_half_of_an_object_or_half_the_visual_field_is_",
+      "label": "Hemiopia, only half of an object or half the visual …",
+      "section": "Eye",
+      "rubric": "Hemiopia, only half of an object or half the visual field is seen"
+    },
+    {
+      "id": "sym_myopia_nearsightedness_difficulty_clearly_seeing_distant_obj",
+      "label": "Myopia, nearsightedness, difficulty clearly seeing d…",
+      "section": "Eye",
+      "rubric": "Myopia, nearsightedness, difficulty clearly seeing distant objects"
+    },
+    {
+      "id": "sym_optical_illusions_seeing_spots_colors_or_images_that_are_not",
+      "label": "Optical illusions, seeing spots, colors, or images t…",
+      "section": "Eye",
+      "rubric": "Optical illusions, seeing spots, colors, or images that are not really there"
     }
   ]
 }

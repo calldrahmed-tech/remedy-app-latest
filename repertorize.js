@@ -193,7 +193,7 @@
     function renderChapterList() {
       const counts = {};
       repertory.forEach(r => { counts[r.section] = (counts[r.section] || 0) + 1; });
-      const sections = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+      const sections = Object.keys(counts).sort((a, b) => a.localeCompare(b));
       chapterList.innerHTML = sections.map(sec => `
         <div class="patient-list-row browse-chapter-row" data-section="${esc(sec)}">
           <div class="patient-list-name">${esc(sec)}</div>
