@@ -32783,6 +32783,177 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Cataract, clouding of the lens of the eye, usually in an older patient",
+      "triggers": [
+        "cataract",
+        "cataract diagnosed",
+        "clouding of the lens of the eye",
+        "lens of the eye turning cloudy"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Glaucoma, increased pressure inside the eye",
+      "triggers": [
+        "glaucoma",
+        "increased eye pressure",
+        "high pressure inside the eye diagnosed"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "spig",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Strabismus, true misalignment or crossing of the eyes",
+      "triggers": [
+        "strabismus",
+        "crossed eyes",
+        "eyes are misaligned",
+        "one eye turns inward or outward"
+      ],
+      "remedies": [
+        {
+          "id": "cina",
+          "grade": 2
+        },
+        {
+          "id": "gels",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Ophthalmia neonatorum, eye infection and discharge in a newborn baby",
+      "triggers": [
+        "ophthalmia neonatorum",
+        "newborn eye infection",
+        "baby's eyes discharging pus after birth"
+      ],
+      "remedies": [
+        {
+          "id": "arg-n",
+          "grade": 3
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Excessive watering or tearing of the eyes without any obvious irritant",
+      "triggers": [
+        "excessive watering of the eyes",
+        "eyes water constantly no irritant",
+        "chronic tearing of the eyes no cause found"
+      ],
+      "remedies": [
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Lagophthalmos, unable to fully close the eyelid",
+      "triggers": [
+        "lagophthalmos",
+        "cannot fully close the eyelid",
+        "eye will not close all the way",
+        "unable to close eye completely"
+      ],
+      "remedies": [
+        {
+          "id": "op",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Bulging or protruding eyes (exophthalmos)",
+      "triggers": [
+        "bulging eyes",
+        "protruding eyes",
+        "exophthalmos",
+        "eyes appear to bulge out"
+      ],
+      "remedies": [
+        {
+          "id": "iod",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Pterygium, a fleshy growth of tissue extending from the conjunctiva onto the cornea",
+      "triggers": [
+        "pterygium",
+        "fleshy growth on the eye extending onto the cornea"
+      ],
+      "remedies": [
+        {
+          "id": "zinc",
+          "grade": 2
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -42193,6 +42364,54 @@
       "label": "Hydrocephalus, water on the brain with an enlarged h…",
       "section": "Head",
       "rubric": "Hydrocephalus, water on the brain with an enlarged head in an infant"
+    },
+    {
+      "id": "sym_cataract_clouding_of_the_lens_of_the_eye_usually_in_an_older",
+      "label": "Cataract, clouding of the lens of the eye, usually i…",
+      "section": "Eye",
+      "rubric": "Cataract, clouding of the lens of the eye, usually in an older patient"
+    },
+    {
+      "id": "sym_glaucoma_increased_pressure_inside_the_eye",
+      "label": "Glaucoma, increased pressure inside the eye",
+      "section": "Eye",
+      "rubric": "Glaucoma, increased pressure inside the eye"
+    },
+    {
+      "id": "sym_strabismus_true_misalignment_or_crossing_of_the_eyes",
+      "label": "Strabismus, true misalignment or crossing of the eyes",
+      "section": "Eye",
+      "rubric": "Strabismus, true misalignment or crossing of the eyes"
+    },
+    {
+      "id": "sym_ophthalmia_neonatorum_eye_infection_and_discharge_in_a_newbo",
+      "label": "Ophthalmia neonatorum, eye infection and discharge i…",
+      "section": "Eye",
+      "rubric": "Ophthalmia neonatorum, eye infection and discharge in a newborn baby"
+    },
+    {
+      "id": "sym_excessive_watering_or_tearing_of_the_eyes_without_any_obviou",
+      "label": "Excessive watering or tearing of the eyes without an…",
+      "section": "Eye",
+      "rubric": "Excessive watering or tearing of the eyes without any obvious irritant"
+    },
+    {
+      "id": "sym_lagophthalmos_unable_to_fully_close_the_eyelid",
+      "label": "Lagophthalmos, unable to fully close the eyelid",
+      "section": "Eye",
+      "rubric": "Lagophthalmos, unable to fully close the eyelid"
+    },
+    {
+      "id": "sym_bulging_or_protruding_eyes_exophthalmos",
+      "label": "Bulging or protruding eyes (exophthalmos)",
+      "section": "Eye",
+      "rubric": "Bulging or protruding eyes (exophthalmos)"
+    },
+    {
+      "id": "sym_pterygium_a_fleshy_growth_of_tissue_extending_from_the_conju",
+      "label": "Pterygium, a fleshy growth of tissue extending from …",
+      "section": "Eye",
+      "rubric": "Pterygium, a fleshy growth of tissue extending from the conjunctiva onto the cornea"
     }
   ]
 }
