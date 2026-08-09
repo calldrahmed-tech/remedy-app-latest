@@ -15398,20 +15398,32 @@
       "rubricType": "keynote"
     },
     {
-      "section": "Female",
+      "section": "Male",
       "category": "Particulars",
       "rubric": "Sexual weakness or impotence with a mind full of amorous thoughts",
       "triggers": [
         "impotence despite strong desire",
-        "physically weak sexually though mentally preoccupied with it"
+        "physically weak sexually though mentally preoccupied with it",
+        "impotence",
+        "erectile dysfunction",
+        "cannot perform despite strong desire",
+        "mind full of amorous thoughts but physically unable"
       ],
       "remedies": [
         {
           "id": "agn",
           "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "sel",
+          "grade": 1
         }
       ],
-      "rubricType": "keynote"
+      "rubricType": "differential"
     },
     {
       "section": "Generalities",
@@ -33801,6 +33813,188 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Gonorrhea, acute urethral discharge with burning on urination",
+      "triggers": [
+        "gonorrhea",
+        "gonorrhoea",
+        "acute urethral discharge with burning",
+        "burning discharge from the penis after exposure"
+      ],
+      "remedies": [
+        {
+          "id": "cann-s",
+          "grade": 2
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "thuj",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Chancre, a painless or painful genital ulcer or sore",
+      "triggers": [
+        "chancre",
+        "chancroid",
+        "genital ulcer",
+        "painless sore on the genitals",
+        "genital sore"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "nit-ac",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Bubo, a painful swollen lymph gland in the groin from a genital infection",
+      "triggers": [
+        "bubo",
+        "swollen painful gland in the groin from infection",
+        "inguinal bubo",
+        "groin gland swollen from genital infection"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "hep",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Condylomata, genital warts",
+      "triggers": [
+        "condylomata",
+        "genital warts",
+        "warts on the genitals",
+        "wart-like growths on the genitals"
+      ],
+      "remedies": [
+        {
+          "id": "thuj",
+          "grade": 3
+        },
+        {
+          "id": "nit-ac",
+          "grade": 1
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Gleet, a chronic thin discharge from the urethra persisting after an infection has cleared",
+      "triggers": [
+        "gleet",
+        "chronic thin urethral discharge after infection cleared",
+        "lingering urethral discharge after gonorrhea"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 1
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Undescended testicle in a boy",
+      "triggers": [
+        "undescended testicle",
+        "undescended testis in a boy",
+        "testicle has not descended"
+      ],
+      "remedies": [
+        {
+          "id": "rhod",
+          "grade": 2
+        },
+        {
+          "id": "aur",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "Hydrocele, painless fluid swelling of the scrotum not from injury",
+      "triggers": [
+        "hydrocele",
+        "painless fluid swelling of the scrotum",
+        "scrotal swelling not from injury"
+      ],
+      "remedies": [
+        {
+          "id": "rhod",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Male",
+      "category": "Particulars",
+      "rubric": "A hard, painless lump or mass felt in the testicle, requiring prompt medical evaluation",
+      "triggers": [
+        "hard painless lump in the testicle",
+        "testicular mass",
+        "testicular lump found on self exam",
+        "hard nodule in the testicle"
+      ],
+      "remedies": [
+        {
+          "id": "con",
+          "grade": 1
+        }
+      ],
+      "rubricType": "keynote"
     }
   ],
   "chiefSymptomTags": [
@@ -37941,7 +38135,7 @@
     {
       "id": "sym_sexual_weakness_or_impotence_with_a_mind_full_of_amorous_tho",
       "label": "Sexual weakness or impotence with a mind full of amo…",
-      "section": "Female",
+      "section": "Male",
       "rubric": "Sexual weakness or impotence with a mind full of amorous thoughts"
     },
     {
@@ -43451,6 +43645,54 @@
       "label": "Coldness felt internally in the abdomen",
       "section": "Abdomen",
       "rubric": "Coldness felt internally in the abdomen"
+    },
+    {
+      "id": "sym_gonorrhea_acute_urethral_discharge_with_burning_on_urination",
+      "label": "Gonorrhea, acute urethral discharge with burning on …",
+      "section": "Male",
+      "rubric": "Gonorrhea, acute urethral discharge with burning on urination"
+    },
+    {
+      "id": "sym_chancre_a_painless_or_painful_genital_ulcer_or_sore",
+      "label": "Chancre, a painless or painful genital ulcer or sore",
+      "section": "Male",
+      "rubric": "Chancre, a painless or painful genital ulcer or sore"
+    },
+    {
+      "id": "sym_bubo_a_painful_swollen_lymph_gland_in_the_groin_from_a_genit",
+      "label": "Bubo, a painful swollen lymph gland in the groin fro…",
+      "section": "Male",
+      "rubric": "Bubo, a painful swollen lymph gland in the groin from a genital infection"
+    },
+    {
+      "id": "sym_condylomata_genital_warts",
+      "label": "Condylomata, genital warts",
+      "section": "Male",
+      "rubric": "Condylomata, genital warts"
+    },
+    {
+      "id": "sym_gleet_a_chronic_thin_discharge_from_the_urethra_persisting_a",
+      "label": "Gleet, a chronic thin discharge from the urethra per…",
+      "section": "Male",
+      "rubric": "Gleet, a chronic thin discharge from the urethra persisting after an infection has cleared"
+    },
+    {
+      "id": "sym_undescended_testicle_in_a_boy",
+      "label": "Undescended testicle in a boy",
+      "section": "Male",
+      "rubric": "Undescended testicle in a boy"
+    },
+    {
+      "id": "sym_hydrocele_painless_fluid_swelling_of_the_scrotum_not_from_in",
+      "label": "Hydrocele, painless fluid swelling of the scrotum no…",
+      "section": "Male",
+      "rubric": "Hydrocele, painless fluid swelling of the scrotum not from injury"
+    },
+    {
+      "id": "sym_a_hard_painless_lump_or_mass_felt_in_the_testicle_requiring_",
+      "label": "A hard, painless lump or mass felt in the testicle, …",
+      "section": "Male",
+      "rubric": "A hard, painless lump or mass felt in the testicle, requiring prompt medical evaluation"
     }
   ]
 }
