@@ -154,12 +154,46 @@
       const symptomsLine = (aiResult.keySymptoms && aiResult.keySymptoms.length)
         ? `<div class="ai-key-symptoms">Key symptoms: ${aiResult.keySymptoms.map(esc).join(", ")}</div>`
         : "";
+      const redFlagBanner = (aiResult.emergencyRedFlags && aiResult.emergencyRedFlags.length)
+        ? `<div class="red-flag-banner">
+            <div class="red-flag-title">🚨 Red Flag – Medical Evaluation Recommended</div>
+            <div class="red-flag-detected">Detected: ${aiResult.emergencyRedFlags.map(esc).join(", ")}</div>
+            <div class="red-flag-text">Some of the symptoms described may indicate a potentially serious medical condition. Prompt evaluation by a qualified physician or emergency medical service is recommended. Homeopathic treatment should not delay appropriate medical assessment.</div>
+          </div>`
+        : "";
+      const rubrics = aiResult.extractedRubrics || [];
+      const rubricSection = rubrics.length ? `
+        <div class="collapsible-section neutral" style="margin: 12px 0 0;">
+          <button class="collapsible-toggle" onclick="toggleSection('ai-rubric-breakdown')">
+            <span>📋 Symptom → Rubric breakdown</span>
+            <span class="ct-link"><span id="ai-rubric-breakdown-arrow">▶</span> View ${rubrics.length} mapped rubric${rubrics.length === 1 ? "" : "s"}</span>
+          </button>
+          <div id="ai-rubric-breakdown" class="collapsible-content" style="display:none;">
+            ${rubrics.map(r => {
+              const pct = Math.round((Number(r.confidenceScore) || 0) * 100);
+              const modParts = [];
+              if (r.modalities && r.modalities.aggravatedBy && r.modalities.aggravatedBy.length) modParts.push(`Worse: ${r.modalities.aggravatedBy.map(esc).join(", ")}`);
+              if (r.modalities && r.modalities.amelioratedBy && r.modalities.amelioratedBy.length) modParts.push(`Better: ${r.modalities.amelioratedBy.map(esc).join(", ")}`);
+              const modLine = modParts.length ? `<div class="ai-rubric-modalities">${modParts.join(" · ")}</div>` : "";
+              const causeLine = r.causation ? `<div class="ai-rubric-causation">Causation: ${esc(r.causation)}</div>` : "";
+              return `
+              <div class="ai-rubric-row">
+                <div class="ai-rubric-statement">"${esc(r.patientStatement)}"</div>
+                <div class="ai-rubric-mapping"><span class="ai-rubric-section-tag">${esc(r.repertorySection)}</span> ${esc(r.rubricName)} <span class="ai-rubric-confidence">${pct}% confidence</span></div>
+                ${modLine}
+                ${causeLine}
+              </div>`;
+            }).join("")}
+          </div>
+        </div>` : "";
       box.innerHTML = `
         <div class="ai-result-title">🧠 AI Second Opinion</div>
+        ${redFlagBanner}
         <div class="ai-result-remedy">${esc(aiResult.aiRemedy)}</div>
         ${agreementLine}
         ${symptomsLine}
         <div class="ai-reasoning">${esc(aiResult.reasoning)}</div>
+        ${rubricSection}
         <div class="ai-potency-note">💊 Dr. Ahmed often begins with a single dose of a high potency (CM or 10M) when clinically appropriate, followed by lower potencies such as 30C for continued management — final potency selection depends on the individual case.</div>
       `;
     }
