@@ -34387,6 +34387,128 @@
         }
       ],
       "rubricType": "keynote"
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Bronchiectasis, chronic dilation of the bronchi with profuse, often foul, purulent expectoration",
+      "triggers": [
+        "bronchiectasis",
+        "profuse foul purulent expectoration",
+        "chronic dilation of the bronchi",
+        "large amounts of foul smelling sputum daily"
+      ],
+      "remedies": [
+        {
+          "id": "kali-bi",
+          "grade": 2
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        },
+        {
+          "id": "stann",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Laryngitis, hoarseness and inflammation of the larynx with a raw sore throat",
+      "triggers": [
+        "laryngitis",
+        "inflammation of the larynx",
+        "raw sore throat with hoarseness",
+        "larynx inflamed and hoarse"
+      ],
+      "remedies": [
+        {
+          "id": "caust",
+          "grade": 2
+        },
+        {
+          "id": "spong",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Pneumonia, lung infection with high fever, cough, and chest pain, requiring prompt medical evaluation",
+      "triggers": [
+        "pneumonia",
+        "lung infection with high fever and cough",
+        "suspected pneumonia",
+        "chest infection with high fever needing evaluation"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "ant-t",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Pleurisy, sharp stitching chest pain worse breathing with fever, inflammation of the lung lining",
+      "triggers": [
+        "pleurisy",
+        "inflammation of the lung lining",
+        "sharp stitching chest pain worse breathing with fever",
+        "pleuritic chest pain"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 3
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Tracheitis, burning raw pain behind the breastbone with a harsh cough",
+      "triggers": [
+        "tracheitis",
+        "burning pain behind the breastbone with cough",
+        "raw burning trachea",
+        "harsh cough with burning behind the sternum"
+      ],
+      "remedies": [
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "sang",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -44187,6 +44309,36 @@
       "label": "Elbow pain from overuse, tennis-elbow type tendon st…",
       "section": "Extremities",
       "rubric": "Elbow pain from overuse, tennis-elbow type tendon strain"
+    },
+    {
+      "id": "sym_bronchiectasis_chronic_dilation_of_the_bronchi_with_profuse_",
+      "label": "Bronchiectasis, chronic dilation of the bronchi with…",
+      "section": "Respiratory",
+      "rubric": "Bronchiectasis, chronic dilation of the bronchi with profuse, often foul, purulent expectoration"
+    },
+    {
+      "id": "sym_laryngitis_hoarseness_and_inflammation_of_the_larynx_with_a_",
+      "label": "Laryngitis, hoarseness and inflammation of the laryn…",
+      "section": "Respiratory",
+      "rubric": "Laryngitis, hoarseness and inflammation of the larynx with a raw sore throat"
+    },
+    {
+      "id": "sym_pneumonia_lung_infection_with_high_fever_cough_and_chest_pai",
+      "label": "Pneumonia, lung infection with high fever, cough, an…",
+      "section": "Respiratory",
+      "rubric": "Pneumonia, lung infection with high fever, cough, and chest pain, requiring prompt medical evaluation"
+    },
+    {
+      "id": "sym_pleurisy_sharp_stitching_chest_pain_worse_breathing_with_fev",
+      "label": "Pleurisy, sharp stitching chest pain worse breathing…",
+      "section": "Respiratory",
+      "rubric": "Pleurisy, sharp stitching chest pain worse breathing with fever, inflammation of the lung lining"
+    },
+    {
+      "id": "sym_tracheitis_burning_raw_pain_behind_the_breastbone_with_a_har",
+      "label": "Tracheitis, burning raw pain behind the breastbone w…",
+      "section": "Respiratory",
+      "rubric": "Tracheitis, burning raw pain behind the breastbone with a harsh cough"
     }
   ]
 }
