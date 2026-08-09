@@ -32715,6 +32715,74 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Cerebellar disease, loss of coordination with a staggering, unsteady gait",
+      "triggers": [
+        "cerebellar disease",
+        "loss of coordination staggering gait",
+        "ataxia unsteady walking",
+        "staggers must watch the feet while walking"
+      ],
+      "remedies": [
+        {
+          "id": "alum",
+          "grade": 2
+        },
+        {
+          "id": "agar",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Fontanelles, tardy or delayed closure of the soft spot in an infant",
+      "triggers": [
+        "fontanelles tardy closure",
+        "fontanelle tardy closure",
+        "delayed closing of the fontanelle",
+        "soft spot on baby head stays open too long",
+        "fontanelle still open",
+        "fontanelle has not closed"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 3
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Hydrocephalus, water on the brain with an enlarged head in an infant",
+      "triggers": [
+        "hydrocephalus",
+        "water on the brain",
+        "enlarged head in an infant",
+        "baby's head growing too large"
+      ],
+      "remedies": [
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "apis",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -42107,6 +42175,24 @@
       "label": "Hysteria, dramatic or exaggerated emotional outburst…",
       "section": "Mind",
       "rubric": "Hysteria, dramatic or exaggerated emotional outbursts and hysterical behavior"
+    },
+    {
+      "id": "sym_cerebellar_disease_loss_of_coordination_with_a_staggering_un",
+      "label": "Cerebellar disease, loss of coordination with a stag…",
+      "section": "Head",
+      "rubric": "Cerebellar disease, loss of coordination with a staggering, unsteady gait"
+    },
+    {
+      "id": "sym_fontanelles_tardy_or_delayed_closure_of_the_soft_spot_in_an_",
+      "label": "Fontanelles, tardy or delayed closure of the soft sp…",
+      "section": "Head",
+      "rubric": "Fontanelles, tardy or delayed closure of the soft spot in an infant"
+    },
+    {
+      "id": "sym_hydrocephalus_water_on_the_brain_with_an_enlarged_head_in_an",
+      "label": "Hydrocephalus, water on the brain with an enlarged h…",
+      "section": "Head",
+      "rubric": "Hydrocephalus, water on the brain with an enlarged head in an infant"
     }
   ]
 }
