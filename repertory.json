@@ -736,7 +736,8 @@
         "crushed fingers",
         "crushed toes",
         "shooting pain",
-        "extreme sensitivity"
+        "extreme sensitivity",
+        "neuritis"
       ],
       "remedies": [
         {
@@ -33065,7 +33066,9 @@
         "bulging eyes",
         "protruding eyes",
         "exophthalmos",
-        "eyes appear to bulge out"
+        "eyes appear to bulge out",
+        "exophthalmic goitre",
+        "graves disease"
       ],
       "remedies": [
         {
@@ -34849,6 +34852,172 @@
         },
         {
           "id": "carb-v",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Alcoholism, ill effects of chronic alcohol abuse",
+      "triggers": [
+        "alcoholism",
+        "ill effects of chronic alcohol abuse",
+        "chronic alcohol abuse effects",
+        "effects of heavy drinking over time"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Chorea, involuntary jerky uncontrolled movements (St Vitus dance)",
+      "triggers": [
+        "chorea",
+        "st vitus dance",
+        "involuntary jerky uncontrolled movements",
+        "uncontrollable jerking movements of the limbs"
+      ],
+      "remedies": [
+        {
+          "id": "agar",
+          "grade": 2
+        },
+        {
+          "id": "act-r",
+          "grade": 1
+        },
+        {
+          "id": "tarent",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Convulsions or seizures, a sudden episode of involuntary muscle contractions",
+      "triggers": [
+        "convulsions",
+        "seizure",
+        "sudden episode of involuntary muscle contractions",
+        "fit with convulsive movements"
+      ],
+      "remedies": [
+        {
+          "id": "cupr",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "stram",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Epilepsy, a recurrent seizure disorder",
+      "triggers": [
+        "epilepsy",
+        "recurrent seizure disorder",
+        "diagnosed with epilepsy",
+        "recurring seizures"
+      ],
+      "remedies": [
+        {
+          "id": "cupr",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "sil",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Morphinism, ill effects of chronic opioid use or opioid withdrawal",
+      "triggers": [
+        "morphinism",
+        "ill effects of chronic opioid use",
+        "opioid withdrawal",
+        "effects of long term opioid use"
+      ],
+      "remedies": [
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "op",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Tetanus, generalized muscle rigidity and spasm, a medical emergency requiring urgent treatment",
+      "triggers": [
+        "tetanus",
+        "generalized muscle rigidity and spasm",
+        "whole body muscle spasm needs urgent treatment",
+        "rigid spasming muscles after a wound"
+      ],
+      "remedies": [
+        {
+          "id": "hyper",
+          "grade": 2
+        },
+        {
+          "id": "stram",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Tetany, muscle cramping or spasm from an electrolyte imbalance",
+      "triggers": [
+        "tetany",
+        "muscle cramping from electrolyte imbalance",
+        "spasm from low calcium",
+        "cramping from an electrolyte imbalance"
+      ],
+      "remedies": [
+        {
+          "id": "mag-p",
+          "grade": 2
+        },
+        {
+          "id": "calc-c",
           "grade": 1
         }
       ],
@@ -44773,6 +44942,48 @@
       "label": "Carbon monoxide or fume poisoning causing headache, …",
       "section": "Generalities",
       "rubric": "Carbon monoxide or fume poisoning causing headache, confusion, or stupor"
+    },
+    {
+      "id": "sym_alcoholism_ill_effects_of_chronic_alcohol_abuse",
+      "label": "Alcoholism, ill effects of chronic alcohol abuse",
+      "section": "Generalities",
+      "rubric": "Alcoholism, ill effects of chronic alcohol abuse"
+    },
+    {
+      "id": "sym_chorea_involuntary_jerky_uncontrolled_movements_st_vitus_dan",
+      "label": "Chorea, involuntary jerky uncontrolled movements (St…",
+      "section": "Generalities",
+      "rubric": "Chorea, involuntary jerky uncontrolled movements (St Vitus dance)"
+    },
+    {
+      "id": "sym_convulsions_or_seizures_a_sudden_episode_of_involuntary_musc",
+      "label": "Convulsions or seizures, a sudden episode of involun…",
+      "section": "Generalities",
+      "rubric": "Convulsions or seizures, a sudden episode of involuntary muscle contractions"
+    },
+    {
+      "id": "sym_epilepsy_a_recurrent_seizure_disorder",
+      "label": "Epilepsy, a recurrent seizure disorder",
+      "section": "Generalities",
+      "rubric": "Epilepsy, a recurrent seizure disorder"
+    },
+    {
+      "id": "sym_morphinism_ill_effects_of_chronic_opioid_use_or_opioid_withd",
+      "label": "Morphinism, ill effects of chronic opioid use or opi…",
+      "section": "Generalities",
+      "rubric": "Morphinism, ill effects of chronic opioid use or opioid withdrawal"
+    },
+    {
+      "id": "sym_tetanus_generalized_muscle_rigidity_and_spasm_a_medical_emer",
+      "label": "Tetanus, generalized muscle rigidity and spasm, a me…",
+      "section": "Generalities",
+      "rubric": "Tetanus, generalized muscle rigidity and spasm, a medical emergency requiring urgent treatment"
+    },
+    {
+      "id": "sym_tetany_muscle_cramping_or_spasm_from_an_electrolyte_imbalanc",
+      "label": "Tetany, muscle cramping or spasm from an electrolyte…",
+      "section": "Generalities",
+      "rubric": "Tetany, muscle cramping or spasm from an electrolyte imbalance"
     }
   ]
 }
