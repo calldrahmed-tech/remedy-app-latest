@@ -11,6 +11,20 @@
   let remedyNames = {}; // id -> display name
   let currentChapter = null;
 
+  // One clear, distinct icon per chapter so the chapter list reads at a glance —
+  // Eye gets an eye, Ear gets an ear, etc. Falls back to a plain book icon for any
+  // section name not in this list (keeps new/renamed sections from breaking the UI).
+  const CHAPTER_ICONS = {
+    Mind: "🧠", Head: "🤕", Vertigo: "💫", Eye: "👁️", Ear: "👂", Nose: "👃",
+    Face: "🙂", Mouth: "👄", Throat: "🗣️", Chest: "❤️", Respiratory: "🌬️",
+    Stomach: "🍽️", Abdomen: "🥣", Stool: "💩", Urinary: "💧", Male: "👨",
+    Female: "👩", Skin: "🧴", Back: "🦴", Extremities: "🦿", Fever: "🌡️",
+    Appetite: "🍴", Thirst: "🥤", Sleep: "😴", Weakness: "🥱", Weight: "⚖️",
+    Glands: "🧅", Perspiration: "💦", Causation: "🎯", Generalities: "🌐",
+    Modalities: "🔄"
+  };
+  function chapterIcon(section) { return CHAPTER_ICONS[section] || "📖"; }
+
   function esc(s) {
     const d = document.createElement("div");
     d.textContent = s == null ? "" : String(s);
@@ -60,7 +74,7 @@
 
     function showRubrics(section) {
       currentChapter = section;
-      titleEl.textContent = "📖 " + section;
+      titleEl.textContent = chapterIcon(section) + " " + section;
       chapterList.style.display = "none";
       remedyPane.style.display = "none";
       rubricPane.style.display = "block";
@@ -83,10 +97,10 @@
     function renderChapterList() {
       const counts = {};
       repertory.forEach(r => { counts[r.section] = (counts[r.section] || 0) + 1; });
-      const sections = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+      const sections = Object.keys(counts).sort((a, b) => a.localeCompare(b));
       chapterList.innerHTML = sections.map(sec => `
         <div class="patient-list-row browse-chapter-row" data-section="${esc(sec)}">
-          <div class="patient-list-name">${esc(sec)}</div>
+          <div class="patient-list-name"><span class="chapter-icon">${chapterIcon(sec)}</span> ${esc(sec)}</div>
           <div class="patient-list-meta">${counts[sec]} rubric${counts[sec] === 1 ? "" : "s"}</div>
         </div>
       `).join("");

@@ -21,6 +21,19 @@
   let currentCondition = null; // { label, keywords }
   let selected = []; // [{key, section, rubric, remedies}]
 
+  // Same chapter-icon map as browse-repertory.js, duplicated here since this is a
+  // separate standalone module (same isolation pattern as the rest of this file).
+  const CHAPTER_ICONS = {
+    Mind: "🧠", Head: "🤕", Vertigo: "💫", Eye: "👁️", Ear: "👂", Nose: "👃",
+    Face: "🙂", Mouth: "👄", Throat: "🗣️", Chest: "❤️", Respiratory: "🌬️",
+    Stomach: "🍽️", Abdomen: "🥣", Stool: "💩", Urinary: "💧", Male: "👨",
+    Female: "👩", Skin: "🧴", Back: "🦴", Extremities: "🦿", Fever: "🌡️",
+    Appetite: "🍴", Thirst: "🥤", Sleep: "😴", Weakness: "🥱", Weight: "⚖️",
+    Glands: "🧅", Perspiration: "💦", Causation: "🎯", Generalities: "🌐",
+    Modalities: "🔄"
+  };
+  function chapterIcon(section) { return CHAPTER_ICONS[section] || "📖"; }
+
   // Curated common conditions a doctor or patient would search by name rather than
   // by picking through chapters. Each keyword is matched as a case-insensitive
   // substring against rubric text — multi-word phrases where possible to avoid
@@ -154,7 +167,7 @@
     function showRubrics(section) {
       currentChapter = section;
       currentCondition = null;
-      titleEl.textContent = "🧮 " + section;
+      titleEl.textContent = chapterIcon(section) + " " + section;
       chapterList.style.display = "none";
       conditionList.style.display = "none";
       resultsPane.style.display = "none";
@@ -196,7 +209,7 @@
       const sections = Object.keys(counts).sort((a, b) => a.localeCompare(b));
       chapterList.innerHTML = sections.map(sec => `
         <div class="patient-list-row browse-chapter-row" data-section="${esc(sec)}">
-          <div class="patient-list-name">${esc(sec)}</div>
+          <div class="patient-list-name"><span class="chapter-icon">${chapterIcon(sec)}</span> ${esc(sec)}</div>
           <div class="patient-list-meta">${counts[sec]} rubric${counts[sec] === 1 ? "" : "s"}</div>
         </div>
       `).join("");

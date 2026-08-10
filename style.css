@@ -134,6 +134,7 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .patient-list-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 8px; border-bottom: 1px solid var(--line); cursor: pointer; }
 .patient-list-row:hover { background: #f6f5f0; }
 .patient-list-name { font-weight: 700; font-size: 0.88rem; color: var(--ink); }
+.chapter-icon { font-size: 1.1rem; display: inline-block; width: 1.3em; text-align: center; }
 .patient-list-meta { font-size: 0.74rem; color: var(--muted); }
 .patient-list-empty { text-align: center; color: var(--muted); font-size: 0.82rem; padding: 24px 10px; }
 .patient-back-btn { background: none; border: none; color: var(--green-2); font-weight: 700; font-size: 0.82rem; cursor: pointer; margin-bottom: 10px; padding: 0; }
