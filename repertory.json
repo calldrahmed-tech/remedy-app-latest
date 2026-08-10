@@ -472,7 +472,8 @@
         "early and heavy periods",
         "periods come early and are very heavy",
         "menses arrive early with heavy flow",
-        "periods are early and much too profuse"
+        "periods are early and much too profuse",
+        "menorrhagia"
       ],
       "remedies": [
         {
@@ -21740,10 +21741,13 @@
     {
       "section": "Female",
       "category": "Particulars",
-      "rubric": "Ordinary menstrual cramps that are common every month, relieved with warmth and gentle pressure",
+      "rubric": "Dysmenorrhea, painful menstrual cramps",
       "triggers": [
+        "dysmenorrhea",
         "normal period cramps every month relieved with warmth",
-        "menstrual pain eased with a hot water bottle and pressure"
+        "menstrual pain eased with a hot water bottle and pressure",
+        "painful menstrual cramps",
+        "painful periods"
       ],
       "remedies": [
         {
@@ -21752,6 +21756,22 @@
         },
         {
           "id": "coloc",
+          "grade": 1
+        },
+        {
+          "id": "cham",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "act-r",
+          "grade": 1
+        },
+        {
+          "id": "caul",
           "grade": 1
         }
       ],
@@ -34509,6 +34529,32 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Gonorrhea, acute vaginal or cervical infection with irritating discharge",
+      "triggers": [
+        "gonorrhea in a woman",
+        "acute vaginal infection with discharge",
+        "cervical gonorrhea infection",
+        "gonorrhoea vaginal discharge"
+      ],
+      "remedies": [
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "thuj",
+          "grade": 1
+        },
+        {
+          "id": "cann-s",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -40622,9 +40668,9 @@
     },
     {
       "id": "sym_ordinary_menstrual_cramps_that_are_common_every_month_reliev",
-      "label": "Ordinary menstrual cramps that are common every mont…",
+      "label": "Dysmenorrhea, painful menstrual cramps",
       "section": "Female",
-      "rubric": "Ordinary menstrual cramps that are common every month, relieved with warmth and gentle pressure"
+      "rubric": "Dysmenorrhea, painful menstrual cramps"
     },
     {
       "id": "sym_common_premenstrual_irritability_and_mood_swings_a_few_days_",
@@ -44339,6 +44385,12 @@
       "label": "Tracheitis, burning raw pain behind the breastbone w…",
       "section": "Respiratory",
       "rubric": "Tracheitis, burning raw pain behind the breastbone with a harsh cough"
+    },
+    {
+      "id": "sym_gonorrhea_acute_vaginal_or_cervical_infection_with_irritatin",
+      "label": "Gonorrhea, acute vaginal or cervical infection with …",
+      "section": "Female",
+      "rubric": "Gonorrhea, acute vaginal or cervical infection with irritating discharge"
     }
   ]
 }
