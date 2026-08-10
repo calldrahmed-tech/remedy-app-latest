@@ -34555,6 +34555,304 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Anhidrosis, complete absence of sweating even when it would normally be expected",
+      "triggers": [
+        "anhidrosis",
+        "cannot sweat at all",
+        "absence of sweating even during fever or exertion",
+        "skin stays dry never sweats"
+      ],
+      "remedies": [
+        {
+          "id": "bry",
+          "grade": 1
+        },
+        {
+          "id": "nat-mur",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Carbuncle, a cluster of connected boils with multiple openings discharging pus",
+      "triggers": [
+        "carbuncle",
+        "cluster of connected boils",
+        "multiple boils joined together discharging pus"
+      ],
+      "remedies": [
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Chloasma, brownish patches of pigmentation on the face, often related to pregnancy or hormones",
+      "triggers": [
+        "chloasma",
+        "liver spots on the face",
+        "moth patches",
+        "brown pigmentation on the face from pregnancy or hormones",
+        "melasma"
+      ],
+      "remedies": [
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Callosities, thickened hardened patches of skin or calluses",
+      "triggers": [
+        "callosities",
+        "calluses",
+        "thickened hardened patches of skin"
+      ],
+      "remedies": [
+        {
+          "id": "ant-c",
+          "grade": 2
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "A non-healing skin sore or ulcer with raised, pearly, or rolled edges, requiring prompt evaluation for possible skin cancer",
+      "triggers": [
+        "non healing skin sore with rolled edges",
+        "pearly edged skin ulcer",
+        "suspicious skin lesion needs evaluation",
+        "sore that will not heal with raised edges"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 1
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "To help expel a splinter, fish bone, or other foreign body embedded in the skin",
+      "triggers": [
+        "splinter stuck in the skin",
+        "foreign body embedded in the skin",
+        "help expel a splinter",
+        "fish bone stuck under the skin"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Gangrene, blackened dying tissue, a medical emergency requiring urgent surgical evaluation",
+      "triggers": [
+        "gangrene",
+        "blackened dying tissue",
+        "tissue turning black and dying needs urgent evaluation"
+      ],
+      "remedies": [
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "sec",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "General blueness or lividity of the skin (cyanosis)",
+      "triggers": [
+        "blueness of the skin",
+        "lividity of the skin",
+        "skin looks blue or livid",
+        "cyanosis of the skin",
+        "skin looks blue and livid",
+        "cyanosis"
+      ],
+      "remedies": [
+        {
+          "id": "carb-v",
+          "grade": 2
+        },
+        {
+          "id": "verat",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Fever",
+      "category": "Generals",
+      "rubric": "Catheter fever, fever that follows urinary catheterization or urethral instrumentation",
+      "triggers": [
+        "catheter fever",
+        "fever after catheterization",
+        "fever following urinary catheter placement",
+        "fever after urethral instrumentation"
+      ],
+      "remedies": [
+        {
+          "id": "staph",
+          "grade": 2
+        },
+        {
+          "id": "acon",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Anaemia, chlorosis, low red blood cell count with pallor and weakness",
+      "triggers": [
+        "anaemia",
+        "anemia",
+        "chlorosis",
+        "low red blood cell count with pallor",
+        "pale and weak from low hemoglobin"
+      ],
+      "remedies": [
+        {
+          "id": "ferr",
+          "grade": 2
+        },
+        {
+          "id": "chin",
+          "grade": 1
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Snake bite",
+      "triggers": [
+        "snake bite",
+        "bitten by a snake",
+        "snakebite"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Dog or animal bite, especially a deep wound or when the animal's rabies status is unknown, requiring prompt medical evaluation",
+      "triggers": [
+        "dog bite",
+        "animal bite",
+        "bitten by a dog",
+        "bite wound needs evaluation for rabies"
+      ],
+      "remedies": [
+        {
+          "id": "lach",
+          "grade": 1
+        },
+        {
+          "id": "hyper",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Cellulitis, a spreading skin infection with redness, warmth, and swelling",
+      "triggers": [
+        "cellulitis",
+        "spreading skin infection with redness and warmth",
+        "skin infection spreading with swelling and warmth"
+      ],
+      "remedies": [
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Carbon monoxide or fume poisoning causing headache, confusion, or stupor",
+      "triggers": [
+        "carbon monoxide poisoning",
+        "fume poisoning with headache and confusion",
+        "gas poisoning causing stupor",
+        "exposure to fumes caused confusion",
+        "carbon monoxide",
+        "exposed to carbon monoxide",
+        "headache and confusion from carbon monoxide"
+      ],
+      "remedies": [
+        {
+          "id": "op",
+          "grade": 2
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
     }
   ],
   "chiefSymptomTags": [
@@ -44391,6 +44689,90 @@
       "label": "Gonorrhea, acute vaginal or cervical infection with …",
       "section": "Female",
       "rubric": "Gonorrhea, acute vaginal or cervical infection with irritating discharge"
+    },
+    {
+      "id": "sym_anhidrosis_complete_absence_of_sweating_even_when_it_would_n",
+      "label": "Anhidrosis, complete absence of sweating even when i…",
+      "section": "Skin",
+      "rubric": "Anhidrosis, complete absence of sweating even when it would normally be expected"
+    },
+    {
+      "id": "sym_carbuncle_a_cluster_of_connected_boils_with_multiple_opening",
+      "label": "Carbuncle, a cluster of connected boils with multipl…",
+      "section": "Skin",
+      "rubric": "Carbuncle, a cluster of connected boils with multiple openings discharging pus"
+    },
+    {
+      "id": "sym_chloasma_brownish_patches_of_pigmentation_on_the_face_often_",
+      "label": "Chloasma, brownish patches of pigmentation on the fa…",
+      "section": "Skin",
+      "rubric": "Chloasma, brownish patches of pigmentation on the face, often related to pregnancy or hormones"
+    },
+    {
+      "id": "sym_callosities_thickened_hardened_patches_of_skin_or_calluses",
+      "label": "Callosities, thickened hardened patches of skin or c…",
+      "section": "Skin",
+      "rubric": "Callosities, thickened hardened patches of skin or calluses"
+    },
+    {
+      "id": "sym_a_non_healing_skin_sore_or_ulcer_with_raised_pearly_or_rolle",
+      "label": "A non-healing skin sore or ulcer with raised, pearly…",
+      "section": "Skin",
+      "rubric": "A non-healing skin sore or ulcer with raised, pearly, or rolled edges, requiring prompt evaluation for possible skin cancer"
+    },
+    {
+      "id": "sym_to_help_expel_a_splinter_fish_bone_or_other_foreign_body_emb",
+      "label": "To help expel a splinter, fish bone, or other foreig…",
+      "section": "Skin",
+      "rubric": "To help expel a splinter, fish bone, or other foreign body embedded in the skin"
+    },
+    {
+      "id": "sym_gangrene_blackened_dying_tissue_a_medical_emergency_requirin",
+      "label": "Gangrene, blackened dying tissue, a medical emergenc…",
+      "section": "Skin",
+      "rubric": "Gangrene, blackened dying tissue, a medical emergency requiring urgent surgical evaluation"
+    },
+    {
+      "id": "sym_general_blueness_or_lividity_of_the_skin_cyanosis",
+      "label": "General blueness or lividity of the skin (cyanosis)",
+      "section": "Skin",
+      "rubric": "General blueness or lividity of the skin (cyanosis)"
+    },
+    {
+      "id": "sym_catheter_fever_fever_that_follows_urinary_catheterization_or",
+      "label": "Catheter fever, fever that follows urinary catheteri…",
+      "section": "Fever",
+      "rubric": "Catheter fever, fever that follows urinary catheterization or urethral instrumentation"
+    },
+    {
+      "id": "sym_anaemia_chlorosis_low_red_blood_cell_count_with_pallor_and_w",
+      "label": "Anaemia, chlorosis, low red blood cell count with pa…",
+      "section": "Generalities",
+      "rubric": "Anaemia, chlorosis, low red blood cell count with pallor and weakness"
+    },
+    {
+      "id": "sym_snake_bite",
+      "label": "Snake bite",
+      "section": "Generalities",
+      "rubric": "Snake bite"
+    },
+    {
+      "id": "sym_dog_or_animal_bite_especially_a_deep_wound_or_when_the_anima",
+      "label": "Dog or animal bite, especially a deep wound or when …",
+      "section": "Generalities",
+      "rubric": "Dog or animal bite, especially a deep wound or when the animal's rabies status is unknown, requiring prompt medical evaluation"
+    },
+    {
+      "id": "sym_cellulitis_a_spreading_skin_infection_with_redness_warmth_an",
+      "label": "Cellulitis, a spreading skin infection with redness,…",
+      "section": "Generalities",
+      "rubric": "Cellulitis, a spreading skin infection with redness, warmth, and swelling"
+    },
+    {
+      "id": "sym_carbon_monoxide_or_fume_poisoning_causing_headache_confusion",
+      "label": "Carbon monoxide or fume poisoning causing headache, …",
+      "section": "Generalities",
+      "rubric": "Carbon monoxide or fume poisoning causing headache, confusion, or stupor"
     }
   ]
 }

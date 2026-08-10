@@ -645,6 +645,18 @@ const GENERIC_MODALITY_RUBRICS = new Set([
   "Worse in evening or night",
   "Constipation, general/unspecified"
 ]);
+// SPECIFIC_NAMED_FEVER_RUBRICS: the inverse of GENERIC_MODALITY_RUBRICS — these live inside a
+// GENERIC_SECTIONS section (Fever) but, unlike the thirst/chill/timing PATTERN rubrics that
+// section is meant to catch, each one names an actual specific condition (not just a generic
+// fever quality). A doctor typing "catheter fever" has stated real diagnostic specificity, not
+// a vague fever description — treating it as generic-only evidence let a bare mention of the
+// word "fever" (via the general viral-fever disease-protocol match and Ars-alb/Bell's own broad
+// "fever" keynotes) outrank the actual matching rubric's remedies entirely, since neither
+// MAIN_COMPLAINT_BOOST nor real repertory credit could apply without corroborating "specific"
+// evidence that, structurally, this single-rubric case can never produce on its own.
+const SPECIFIC_NAMED_FEVER_RUBRICS = new Set([
+  "Catheter fever, fever that follows urinary catheterization or urethral instrumentation"
+]);
 // How hard a remedy's generic-only evidence gets discounted when it has NO corroborating
 // complaint-specific evidence at all (no Mind/Common/Stool/Extremities rubric, no real materia
 // medica keynote hit) — mirrors the existing MM_WEIGHT_CONFIRM-style "this is confirmation,
@@ -921,7 +933,7 @@ function scoreRepertory(inputText) {
     if (bestPos === Infinity) return; // didn't fire
     firedRubrics.push(`${rubric.section}: ${rubric.rubric}`);
     const sw = RUBRIC_WEIGHT_OVERRIDE[rubric.rubric] ?? (SECTION_WEIGHT[rubric.section] || 1.0);
-    const isGeneric = !rubric.location && (
+    const isGeneric = !rubric.location && !SPECIFIC_NAMED_FEVER_RUBRICS.has(rubric.rubric) && (
       GENERIC_SECTIONS.has(rubric.section) || GENERIC_MODALITY_RUBRICS.has(rubric.rubric)
     );
     rubric.remedies.forEach(r => {
@@ -1038,7 +1050,8 @@ function scoreRemedies(inputText, diseaseProtocol) {
   // Whether the case's main-complaint rubric is itself one of the location-agnostic GENERIC
   // sections — if so, MAIN_COMPLAINT_BOOST below must not hand out its full flat bonus to a
   // remedy purely for matching that generic rubric (see GENERIC_ALONE_DISCOUNT above).
-  const mainComplaintIsGeneric = !!mainComplaintRubric && !mainComplaintRubric.location && (
+  const mainComplaintIsGeneric = !!mainComplaintRubric && !mainComplaintRubric.location &&
+    !SPECIFIC_NAMED_FEVER_RUBRICS.has(mainComplaintRubric.rubric) && (
     GENERIC_SECTIONS.has(mainComplaintRubric.section) || GENERIC_MODALITY_RUBRICS.has(mainComplaintRubric.rubric)
   );
   // MAIN COMPLAINT BOOST: remedies graded in the detected main-complaint rubric get a large
