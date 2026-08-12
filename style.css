@@ -320,6 +320,15 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .red-flag-detected { font-size: 0.8rem; font-weight: 700; color: var(--red-1); margin-bottom: 6px; }
 .red-flag-text { font-size: 0.84rem; color: #5a1210; line-height: 1.5; }
 
+/* ---------- POTENCY WARNING — caution-level (orange), one step below the red-flag emergency
+   banner. Shown wherever a high potency (1M/10M/CM) is mentioned, not blocking like a JS
+   alert() would be — a doctor searching many cases a day should never have to dismiss a
+   popup on every single result. */
+.potency-warning-banner { margin-top: 8px; background: #fff7ed; border: 1.5px solid var(--orange-1); border-radius: 10px; padding: 10px 14px; }
+.potency-warning-title { font-size: 0.82rem; font-weight: 800; color: var(--orange-2); margin-bottom: 4px; }
+.potency-warning-text { font-size: 0.8rem; color: #7c2d12; line-height: 1.45; }
+.potency-warning-inline { font-size: 0.74rem; color: var(--orange-2); font-weight: 600; margin-top: 2px; }
+
 /* ---------- FOOTER ---------- */
 footer.app-footer { background: linear-gradient(90deg, #e8f5ec, #ecf7ee); padding: 13px 20px; text-align: center; font-size: 0.74rem; font-weight: 700; color: #1e6b3a; }
 footer.app-footer .f-item { display: flex; align-items: center; gap: 7px; color: #275c3f; margin-bottom: 6px; }

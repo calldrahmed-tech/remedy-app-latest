@@ -1433,6 +1433,10 @@ function potencyGuideSection(idSuffix) {
       <div class="rc-field"><b>Acute Conditions</b><br>Usually 30C</div>
       <div class="rc-field"><b>Chronic Conditions</b><br>Usually 200C</div>
       <div class="rc-field" style="margin-top:6px;"><b>Dr. Ahmed's Clinical Preference:</b> Dr. Ahmed often begins treatment with a single dose of a high potency (CM or 10M) when clinically appropriate, followed by lower potencies such as 30C for continued management. However, potency selection always depends on the individual case and should be determined by the treating physician.</div>
+      <div class="potency-warning-banner">
+        <div class="potency-warning-title">⚠️ High-Potency Caution</div>
+        <div class="potency-warning-text">Potencies like 1M, 10M, and CM act more deeply and for longer than 30C. They should only be prescribed by an experienced homeopathic practitioner — used on the wrong case, a high potency can cause a stronger and longer-lasting aggravation before any improvement. If unsure, start with a lower potency such as 30C.</div>
+      </div>
       <div class="rc-field rc-related-disclosure" style="margin-top:6px;"><b>Disclaimer:</b> Potency selection depends on the patient's constitution, susceptibility, disease stage, previous treatment, and the physician's clinical judgment. These are general educational guidelines and not fixed prescribing rules.</div>
     </div>
   </div>`;
@@ -1577,7 +1581,7 @@ function renderDiseaseSpecificNosodes(diseaseNosodes) {
   const items = diseaseNosodes.map(n => {
     const remedy = DB.remedies.find(r => r.id === n.id);
     if (!remedy) return "";
-    return `<div class="miasm-row"><b>${esc(remedy.name)}</b> ${esc((remedy.potency.chronic || "1M").split(",")[0])}</div><div class="miasm-explanation">${esc(n.reason)}</div>`;
+    return `<div class="miasm-row"><b>${esc(remedy.name)}</b> ${esc((remedy.potency.chronic || "1M").split(",")[0])}</div><div class="miasm-explanation">${esc(n.reason)}</div><div class="potency-warning-inline">⚠️ High potency — best given as a single dose under experienced supervision</div>`;
   }).filter(Boolean).join("");
   if (!items) return "";
   return `<div class="miasm-section">
