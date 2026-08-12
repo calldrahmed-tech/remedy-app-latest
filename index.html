@@ -225,5 +225,16 @@
 <script src="patient-records.js"></script>
 <script src="browse-repertory.js"></script>
 <script src="repertorize.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => {
+        // Offline resilience is a bonus, not a requirement — if registration
+        // fails (unsupported browser, blocked storage), the app still works
+        // normally as long as the connection is up.
+      });
+    });
+  }
+</script>
 </body>
 </html>
