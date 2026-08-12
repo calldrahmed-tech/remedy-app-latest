@@ -146,6 +146,25 @@
     return entries.reduce((s, e) => s + (e.weight || 1), 0);
   }
 
+  // Only ever attached to a CHANGE_REMEDY result — the doctor has just been
+  // told the new complaint needs a fresh case-take, so a quick pointer at
+  // what the new symptom text alone suggests can save a trip to search it
+  // manually. Deliberately conservative: below 40% (the same "too thin to
+  // trust" bar used elsewhere in this app) or with zero repertory backing,
+  // this returns nothing rather than name a low-confidence guess — e.g.
+  // "grey hair" alone scores its top pick at 9% with no repertory match at
+  // all, which is noise, not a recommendation. No nosode can be suggested
+  // here either, same rule as the main search results.
+  function suggestRemedyForText(text) {
+    if (typeof scoreRemedies !== "function" || !text) return null;
+    let results;
+    try { results = scoreRemedies(text, null, null); } catch (e) { return null; }
+    if (!results || !results.length) return null;
+    const top = results.filter((r) => !r.remedy.nosode)[0];
+    if (!top || top.percent < 40 || !top.fromRepertory) return null;
+    return { name: top.remedy.name, percent: top.percent };
+  }
+
   // ---------- Second Visit Decision Engine ----------
   // Compares exactly two saved visits (previous → latest) and returns ONE of
   // four next-step actions, plus a one-line reason. This is the actionable
@@ -224,7 +243,8 @@
         actionLabel: "ACTION: CHANGE REMEDY",
         reasoning: `The original complaint has cleared, but an unrelated new set of symptoms (${namesNew}) has appeared that is NOT a more external/outward shift from it. This looks like a genuinely new picture rather than a healing crisis — re-take the case.`,
         improvementPercent: 100,
-        reliable: true
+        reliable: true,
+        suggestedRemedy: suggestRemedyForText(namesNew)
       };
     }
 
@@ -425,10 +445,12 @@
           };
         }
       }
+      const newText = newOrWorse.map((c) => c.clause).join(", ");
       return {
         action: "CHANGE_REMEDY",
-        reasoning: `"${resolved.map((c) => c.clause).join(", ")}" cleared, but "${newOrWorse.map((c) => c.clause).join(", ")}" is a different, unrelated complaint — re-take the case.`,
-        reliable: true
+        reasoning: `"${resolved.map((c) => c.clause).join(", ")}" cleared, but "${newText}" is a different, unrelated complaint — re-take the case.`,
+        reliable: true,
+        suggestedRemedy: suggestRemedyForText(newText)
       };
     }
 
@@ -487,6 +509,7 @@
       <div class="hering-traffic-card ${d.css}">
         <div class="hering-traffic-icon">${d.icon}</div>
         <div class="hering-traffic-headline">${esc(d.big)}</div>
+        ${result.suggestedRemedy ? `<div class="hering-suggested-remedy">💡 Possible remedy for the new complaint: <strong>${esc(result.suggestedRemedy.name)}</strong> (${result.suggestedRemedy.percent}% match) — verify with a full search before prescribing.</div>` : ""}
         <details class="hering-traffic-details">
           <summary>Details</summary>
           <div class="hering-traffic-reasoning">${esc(result.reasoning)}</div>

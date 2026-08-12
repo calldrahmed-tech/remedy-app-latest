@@ -371,6 +371,7 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .hering-traffic-card.hering-yellow .hering-traffic-headline { color: #713f12; }
 .hering-traffic-card.hering-red .hering-traffic-headline { color: #7f1d1d; }
 .hering-traffic-card.hering-gray .hering-traffic-headline { color: #374151; }
+.hering-suggested-remedy { margin-top: 12px; background: rgba(255,255,255,0.6); border-radius: 10px; padding: 10px 12px; font-size: 0.82rem; color: #1f2937; text-align: left; line-height: 1.45; }
 .hering-traffic-details { margin-top: 14px; text-align: left; }
 .hering-traffic-details summary { cursor: pointer; font-size: 0.78rem; font-weight: 700; color: #4b5563; }
 .hering-traffic-reasoning { font-size: 0.8rem; color: #374151; margin-top: 6px; line-height: 1.5; }
