@@ -257,6 +257,193 @@
     };
   }
 
+  // ---------- Quick Follow-up: one free-text sentence, zero saved records ----------
+  // "Fever gone but cough started" needs no lookup at all — the whole story
+  // (what resolved, what's new) is in the sentence itself. This never calls
+  // the paid AI Cloud Function: it reuses scoreRepertory (the same free,
+  // already-loaded engine that powers every search) purely to figure out
+  // which body system each clause is about, plus a small set of plain-English
+  // direction words (gone/started/worse/same) to know which way it moved.
+  //
+  // This is a coarser read than the chip-based getSecondVisitAction — it
+  // can't measure "how much" better, only "better or not" — so treat it as
+  // the fast, zero-effort option, with Save Visit's chip comparison as the
+  // more precise option for a doctor who wants exact numbers.
+  const RESOLVED_WORDS = /\b(gone|resolved|cleared|disappeared|stopped|settled down|much better|completely better|no more|all better)\b/i;
+  const IMPROVED_WORDS = /\b(better|improving|improved|reducing|reduced|less|subsiding|subsided|good|fine|well|great|okay|ok|normal)\b/i;
+  const STALLED_WORDS = /\b(same|still|no change|unchanged|not improving|no better|persist|continue)\b/i;
+  const WORSE_WORDS = /\b(worse|worsened|worsening|increased|increasing)\b/i;
+  const NEW_WORDS = /\b(started|start|starting|appeared|appearing|new|now has|developed|developing|came on|showed up|onset|began|begun)\b/i;
+  const MIND_NEGATIVE_WORDS = /\b(anxious|anxiety|depressed|depression|worried|worry|restless|tearful|weepy|irritable|panicky|panic|hopeless|withdrawn|nervous|scared|fearful)\b/i;
+  const NEGATION_PREFIX = /\b(no|not|never|without|isn't|wasn't|hasn't|hadn't|doesn't|didn't|don't)\b/i;
+
+  // Common everyday follow-up words that don't always match a curated
+  // repertory rubric on their own (e.g. bare "cough" — the repertory has
+  // specific cough RUBRICS like "dry sawing-wood cough" but no generic
+  // fallback the way Fever/Thirst/Headache/Anxiety do) — this is a small,
+  // deliberately non-exhaustive backstop just for finding which body system
+  // a plain word belongs to, not for matching remedies.
+  const SYMPTOM_SECTION_KEYWORDS = [
+    ["fever", "Fever"], ["temperature", "Fever"], ["chill", "Fever"],
+    ["cough", "Respiratory"], ["wheeze", "Respiratory"], ["breathless", "Respiratory"], ["breathing", "Respiratory"], ["asthma", "Respiratory"], ["phlegm", "Respiratory"], ["mucus", "Respiratory"], ["bronchitis", "Respiratory"],
+    ["nose", "Nose"], ["nasal", "Nose"], ["sneez", "Nose"], ["cold", "Nose"], ["congestion", "Nose"],
+    ["throat", "Throat"], ["tonsil", "Throat"], ["hoarse", "Throat"],
+    ["ear", "Ear"],
+    ["eye", "Eye"], ["vision", "Eye"],
+    ["headache", "Head"], ["migraine", "Head"],
+    ["tooth", "Mouth"], ["teeth", "Mouth"], ["gum", "Mouth"], ["tongue", "Mouth"], ["mouth", "Mouth"],
+    ["nausea", "Stomach"], ["vomit", "Stomach"], ["indigestion", "Stomach"], ["stomach", "Stomach"], ["gastric", "Stomach"], ["acidity", "Stomach"], ["heartburn", "Stomach"],
+    ["abdomen", "Abdomen"], ["abdominal", "Abdomen"], ["belly", "Abdomen"], ["bloat", "Abdomen"], ["cramp", "Abdomen"],
+    ["diarrhea", "Stool"], ["diarrhoea", "Stool"], ["constipat", "Stool"], ["stool", "Stool"], ["bowel", "Stool"],
+    ["urine", "Urinary"], ["urinat", "Urinary"], ["bladder", "Urinary"], ["kidney", "Urinary"],
+    ["period", "Female"], ["menses", "Female"], ["menstrual", "Female"], ["pregnan", "Female"],
+    ["prostate", "Male"],
+    ["rash", "Skin"], ["itch", "Skin"], ["eczema", "Skin"], ["boil", "Skin"], ["acne", "Skin"], ["skin", "Skin"], ["hives", "Skin"],
+    ["joint", "Extremities"], ["knee", "Extremities"], ["elbow", "Extremities"], ["wrist", "Extremities"], ["ankle", "Extremities"], ["hip", "Extremities"], ["arm", "Extremities"], ["leg", "Extremities"], ["limb", "Extremities"], ["muscle", "Extremities"],
+    ["back", "Back"], ["spine", "Back"],
+    ["sleep", "Sleep"], ["insomnia", "Sleep"], ["nightmare", "Sleep"],
+    ["anxious", "Mind"], ["anxiety", "Mind"], ["depress", "Mind"], ["mood", "Mind"], ["irritab", "Mind"], ["fear", "Mind"], ["stress", "Mind"], ["worr", "Mind"], ["sad", "Mind"], ["cry", "Mind"], ["panic", "Mind"],
+    ["weak", "Weakness"], ["tired", "Weakness"], ["fatigue", "Weakness"], ["exhaust", "Weakness"],
+    ["sweat", "Perspiration"], ["perspir", "Perspiration"],
+    ["chest", "Chest"], ["palpitat", "Chest"], ["heart", "Chest"],
+    ["weight", "Weight"],
+    ["thirst", "Thirst"],
+    ["appetite", "Appetite"], ["hunger", "Appetite"]
+  ];
+
+  function keywordSection(clauseLower) {
+    for (const [kw, section] of SYMPTOM_SECTION_KEYWORDS) {
+      if (clauseLower.includes(kw)) return section;
+    }
+    return null;
+  }
+
+  function splitFollowUpClauses(text) {
+    return text
+      .replace(/\b(but|however|although|yet)\b/gi, "|")
+      .split(/[|,;.]/)
+      .map((s) => s.trim())
+      .filter(Boolean);
+  }
+
+  // A negation word right before the matched direction word flips or voids
+  // its meaning ("no NEW symptoms" is the opposite of "new symptoms") — safest
+  // response is to drop that clause from evidence entirely rather than guess
+  // at the negated meaning. STALLED_WORDS already spells out its own negated
+  // phrases as literal compounds ("not improving", "no better"), so it's
+  // exempt from this check — those matches ARE the negation, not a false one.
+  function negatedMatch(clause, match) {
+    if (!match) return false;
+    return NEGATION_PREFIX.test(clause.slice(0, match.index));
+  }
+
+  function classifyClauseDirection(clause) {
+    // A negated RESOLVED/IMPROVED ("hasn't gone", "not better") means the
+    // original complaint is still there — that's genuinely STALLED evidence,
+    // not nothing. A negated NEW/WORSE ("no new symptoms") just means there's
+    // nothing to report either way — safest to drop that as neutral.
+    const resolved = RESOLVED_WORDS.exec(clause);
+    if (resolved) return negatedMatch(clause, resolved) ? "STALLED" : "RESOLVED";
+    const fresh = NEW_WORDS.exec(clause);
+    if (fresh) return negatedMatch(clause, fresh) ? null : "NEW";
+    const worse = WORSE_WORDS.exec(clause);
+    if (worse) return negatedMatch(clause, worse) ? null : "WORSE";
+    if (STALLED_WORDS.test(clause)) return "STALLED";
+    const improved = IMPROVED_WORDS.exec(clause);
+    if (improved) return negatedMatch(clause, improved) ? "STALLED" : "IMPROVED";
+    return null;
+  }
+
+  // A mind-negative word only counts as "present" if it isn't itself being
+  // negated ("no anxiety now" must NOT be read as anxiety being worse).
+  function mindWordPresent(clause) {
+    const match = MIND_NEGATIVE_WORDS.exec(clause);
+    if (!match) return false;
+    return !NEGATION_PREFIX.test(clause.slice(0, match.index));
+  }
+
+  function analyzeQuickFollowUp(text) {
+    const raw = (text || "").trim();
+    if (!raw) {
+      return { action: "UNCLEAR", reasoning: "Type what changed since the last visit — e.g. \"fever gone but cough started\".", reliable: false };
+    }
+    const canRepertory = typeof scoreRepertory === "function" && typeof REPERTORY !== "undefined" && REPERTORY;
+    const classified = splitFollowUpClauses(raw).map((clause) => {
+      const direction = classifyClauseDirection(clause);
+      let section = null;
+      if (canRepertory) {
+        const { firedRubrics } = scoreRepertory(clause, null);
+        if (firedRubrics && firedRubrics.length) {
+          const idx = firedRubrics[0].indexOf(": ");
+          section = idx > -1 ? firedRubrics[0].slice(0, idx) : null;
+        }
+      }
+      if (!section) section = keywordSection(clause.toLowerCase());
+      const level = section ? HERING_LEVEL[section] : null;
+      return { clause, direction, section, level, mindWorse: mindWordPresent(clause) };
+    });
+
+    // Mental state check FIRST — overrides everything else, same priority
+    // rule as the chip-based engine: a patient who's mentally worse is the
+    // clearest suppression warning, even if their body sounds better.
+    const mentalWorse = classified.some((c) => c.mindWorse && c.direction !== "RESOLVED" && c.direction !== "IMPROVED");
+    if (mentalWorse) {
+      return {
+        action: "ANTIDOTE_REEVALUATE",
+        reasoning: "Sounds like a mental/emotional symptom is present or worse, even if the physical complaint is better. Classically a suppression sign — re-take the case.",
+        reliable: true
+      };
+    }
+
+    const resolved = classified.filter((c) => c.direction === "RESOLVED" || c.direction === "IMPROVED");
+    const newOrWorse = classified.filter((c) => c.direction === "NEW" || c.direction === "WORSE");
+    const stalled = classified.filter((c) => c.direction === "STALLED");
+
+    if (resolved.length && newOrWorse.length) {
+      const oldLevels = resolved.filter((c) => c.level).map((c) => c.level);
+      const newLevels = newOrWorse.filter((c) => c.level).map((c) => c.level);
+      if (oldLevels.length && newLevels.length) {
+        const avgOld = oldLevels.reduce((a, b) => a + b, 0) / oldLevels.length;
+        const avgNew = newLevels.reduce((a, b) => a + b, 0) / newLevels.length;
+        if (avgNew > avgOld) {
+          return {
+            action: "WAIT",
+            reasoning: `"${resolved.map((c) => c.clause).join(", ")}" cleared, and "${newOrWorse.map((c) => c.clause).join(", ")}" sits at a more external level — could be a healing crisis, not a new problem. Observe.`,
+            reliable: true
+          };
+        }
+      }
+      return {
+        action: "CHANGE_REMEDY",
+        reasoning: `"${resolved.map((c) => c.clause).join(", ")}" cleared, but "${newOrWorse.map((c) => c.clause).join(", ")}" is a different, unrelated complaint — re-take the case.`,
+        reliable: true
+      };
+    }
+
+    // Checked before the pure-"resolved only" case below on purpose: if the
+    // sentence ALSO says something hasn't changed ("fever hasn't gone but
+    // appetite is better"), that stalled part about the original complaint
+    // is the more clinically important half — don't let a secondary
+    // improvement alone read as "all clear."
+    if (stalled.length && !newOrWorse.length) {
+      return { action: "REPEAT_HIGHER_POTENCY", reasoning: "Sounds like the main complaint hasn't changed yet. Consider repeating the dose or a higher potency.", reliable: true };
+    }
+
+    if (resolved.length && !newOrWorse.length) {
+      return { action: "WAIT", reasoning: "Sounds like things are improving with nothing new. Continue observing.", reliable: true };
+    }
+
+    if (newOrWorse.length && !resolved.length) {
+      return { action: "REPEAT_HIGHER_POTENCY", reasoning: "The original complaint doesn't sound resolved and may be worse — consider repeating the dose, or re-take the case if this continues.", reliable: true };
+    }
+
+    return {
+      action: "UNCLEAR",
+      reasoning: "Couldn't clearly tell what changed from that description. Try phrasing it like \"fever gone but cough started\" or \"joint pain much better, no new symptoms\".",
+      reliable: false
+    };
+  }
+
   function esc(s) {
     const d = document.createElement("div");
     d.textContent = s == null ? "" : String(s);
@@ -291,12 +478,11 @@
         <details class="hering-traffic-details">
           <summary>Details</summary>
           <div class="hering-traffic-reasoning">${esc(result.reasoning)}</div>
-          ${!result.reliable ? `<div class="hering-direction-note">Save both visits from Expert Protocol mode (symptom chips) for a reliable read.</div>` : ""}
           <div class="hering-direction-disclaimer">Decision support only, not a diagnosis — please correlate with full case assessment.</div>
         </details>
       </div>
     `;
   }
 
-  window.HeringAnalysis = { getSecondVisitAction, analyzeFollowUp, getVisitLevelEntries, renderFollowUpActionCard, HERING_LEVEL };
+  window.HeringAnalysis = { getSecondVisitAction, analyzeFollowUp, analyzeQuickFollowUp, getVisitLevelEntries, renderFollowUpActionCard, HERING_LEVEL };
 })();
