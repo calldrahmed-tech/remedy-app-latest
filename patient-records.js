@@ -185,14 +185,34 @@
       const visits = (p.visits || []).slice().sort((a, b) => (b.date || "").localeCompare(a.date || ""));
       // visits[0] is the latest (Visit 2), visits[1] is the one before it (Visit 1) —
       // the Second Visit Decision Engine only ever looks at that most recent pair.
-      const followUpAction = (window.HeringAnalysis && visits.length >= 2)
+      let followUpAction = (window.HeringAnalysis && visits.length >= 2)
         ? window.HeringAnalysis.getSecondVisitAction(visits[1], visits[0])
         : null;
+      // The strict chip comparison needs BOTH visits to carry symptom chips —
+      // if a visit was saved via Quick Update (free text only), it can't run
+      // and returns an honest "not enough info." But the latest visit's own
+      // sentence is often self-contained ("joint pain much better, sleeping
+      // well") — read it the same way the Quick Update box does, so this top
+      // summary doesn't contradict the answer the doctor just got below.
+      if (followUpAction && followUpAction.action === "UNCLEAR" && !followUpAction.reliable && visits[0] && visits[0].symptoms) {
+        const fallback = window.HeringAnalysis.analyzeQuickFollowUp(visits[0].symptoms);
+        if (fallback && fallback.reliable) followUpAction = fallback;
+      }
+      const lastVisit = visits[0]; // carries the remedy/potency forward onto a saved quick update
       patientDetailContent.innerHTML = `
         <div class="patient-detail-header">
           <div class="name">${esc(p.name)}</div>
           <div class="meta">${p.age ? "Age " + esc(p.age) + " · " : ""}${esc(p.contact || "")}</div>
         </div>
+        ${visits.length ? `
+        <div class="patient-quick-update">
+          <label class="patient-quick-update-label">🔄 Quick update for ${esc(p.name)}</label>
+          <div class="patient-quick-update-row">
+            <input type="text" class="patient-quick-update-input" placeholder='e.g. "fever gone but cough started"'>
+            <button type="button" class="patient-quick-update-btn">Check</button>
+          </div>
+          <div class="patient-quick-update-result"></div>
+        </div>` : ""}
         ${window.HeringAnalysis ? window.HeringAnalysis.renderFollowUpActionCard(followUpAction) : ""}
         ${visits.map(v => `
           <div class="patient-visit-card">
@@ -202,6 +222,50 @@
           </div>
         `).join("") || `<div class="patient-list-empty">No visit details.</div>`}
       `;
+
+      const quickInput = patientDetailContent.querySelector(".patient-quick-update-input");
+      const quickBtn = patientDetailContent.querySelector(".patient-quick-update-btn");
+      const quickResult = patientDetailContent.querySelector(".patient-quick-update-result");
+      if (quickInput && quickBtn && quickResult) {
+        function runQuickCheck() {
+          if (!window.HeringAnalysis) return;
+          const text = quickInput.value;
+          const result = window.HeringAnalysis.analyzeQuickFollowUp(text);
+          quickResult.innerHTML = window.HeringAnalysis.renderFollowUpActionCard(result) + `
+            <div>
+              <button type="button" class="patient-quick-save-btn">💾 Save this as a new visit</button>
+              <span class="patient-quick-save-status"></span>
+            </div>
+          `;
+          const saveBtn = quickResult.querySelector(".patient-quick-save-btn");
+          const saveStatus = quickResult.querySelector(".patient-quick-save-status");
+          saveBtn.addEventListener("click", async () => {
+            saveBtn.disabled = true;
+            saveStatus.textContent = "Saving…";
+            try {
+              await window.RemedyAuth.savePatientVisit(
+                { name: p.name, age: p.age, contact: p.contact },
+                {
+                  date: new Date().toISOString(),
+                  symptoms: text.trim(),
+                  tags: [],
+                  remedy: lastVisit ? (lastVisit.remedy || "") : "",
+                  potency: lastVisit ? (lastVisit.potency || "") : ""
+                }
+              );
+              p.visits = p.visits || [];
+              p.visits.push({ date: new Date().toISOString(), symptoms: text.trim(), tags: [], remedy: lastVisit ? lastVisit.remedy : "", potency: lastVisit ? lastVisit.potency : "" });
+              openPatientDetail(patientId); // re-render with the new visit in history
+            } catch (err) {
+              saveStatus.textContent = err && err.message ? err.message : "Could not save — try again.";
+              saveBtn.disabled = false;
+            }
+          });
+        }
+        quickBtn.addEventListener("click", runQuickCheck);
+        quickInput.addEventListener("keydown", (e) => { if (e.key === "Enter") runQuickCheck(); });
+      }
+
       patientListArea.style.display = "none";
       patientSearchInput.style.display = "none";
       patientDetailArea.style.display = "block";
