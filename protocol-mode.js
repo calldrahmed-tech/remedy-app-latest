@@ -652,4 +652,16 @@ function runProtocolSearch() {
 
   protocolResultsEl.innerHTML = html;
 }
+
+// Plain-data snapshot of the currently selected chips, safe to store in a saved
+// visit (no DOM/tag-object references) — used by patient-records.js so a saved
+// visit keeps the exact section+intensity of each chip instead of just the
+// chip text, which patient-records.js used to scrape from the DOM.
+window.getProtocolSymptomSnapshot = function () {
+  return selectedSymptoms.map((s) => ({
+    label: s.tag.label,
+    section: s.tag.section,
+    intensity: s.intensity
+  }));
+};
 getProtocolBtn.addEventListener("click", runProtocolSearch);

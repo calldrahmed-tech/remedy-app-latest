@@ -30,6 +30,7 @@
     const patientName = document.getElementById("patientName");
     const patientAge = document.getElementById("patientAge");
     const patientContact = document.getElementById("patientContact");
+    const patientPotency = document.getElementById("patientPotency");
     const patientHistory = document.getElementById("patientHistory");
 
     const myPatientsModal = document.getElementById("myPatientsModal");
@@ -57,6 +58,7 @@
         const topRemedyEl = document.querySelector("#protocolResults .rc-name");
         return {
           symptoms: chipsText,
+          tags: window.getProtocolSymptomSnapshot ? window.getProtocolSymptomSnapshot() : [],
           remedy: topRemedyEl ? topRemedyEl.textContent.trim() : ""
         };
       }
@@ -64,6 +66,7 @@
       const topRemedyEl = document.querySelector("#results .md-remedy-name");
       return {
         symptoms,
+        tags: [],
         remedy: topRemedyEl ? topRemedyEl.textContent.trim() : ""
       };
     }
@@ -85,7 +88,9 @@
           {
             date: new Date().toISOString(),
             symptoms: caseInfo.symptoms || patientHistory.value.trim(),
-            remedy: caseInfo.remedy
+            tags: caseInfo.tags || [],
+            remedy: caseInfo.remedy,
+            potency: patientPotency.value.trim()
           }
         );
         patientSaveStatus.textContent = "✔ Saved.";
@@ -136,15 +141,21 @@
       const p = myPatients.find(x => x.id === patientId);
       if (!p) return;
       const visits = (p.visits || []).slice().sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+      // visits[0] is the latest (Visit 2), visits[1] is the one before it (Visit 1) —
+      // the Second Visit Decision Engine only ever looks at that most recent pair.
+      const followUpAction = (window.HeringAnalysis && visits.length >= 2)
+        ? window.HeringAnalysis.getSecondVisitAction(visits[1], visits[0])
+        : null;
       patientDetailContent.innerHTML = `
         <div class="patient-detail-header">
           <div class="name">${esc(p.name)}</div>
           <div class="meta">${p.age ? "Age " + esc(p.age) + " · " : ""}${esc(p.contact || "")}</div>
         </div>
+        ${window.HeringAnalysis ? window.HeringAnalysis.renderFollowUpActionCard(followUpAction) : ""}
         ${visits.map(v => `
           <div class="patient-visit-card">
             <div class="patient-visit-date">${esc(formatDate(v.date))}</div>
-            ${v.remedy ? `<div class="patient-visit-remedy">${esc(v.remedy)}</div>` : ""}
+            ${v.remedy ? `<div class="patient-visit-remedy">${esc(v.remedy)}${v.potency ? " " + esc(v.potency) : ""}</div>` : ""}
             ${v.symptoms ? `<div class="patient-visit-symptoms">${esc(v.symptoms)}</div>` : ""}
           </div>
         `).join("") || `<div class="patient-list-empty">No visit details.</div>`}

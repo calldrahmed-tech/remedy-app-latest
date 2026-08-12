@@ -336,6 +336,24 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .potency-warning-text { font-size: 0.8rem; color: #7c2d12; line-height: 1.45; }
 .potency-warning-inline { font-size: 0.74rem; color: var(--orange-2); font-weight: 600; margin-top: 2px; }
 
+/* ---------- HERING'S LAW "CLINICAL DIRECTION" CARD — shown at the top of a
+   patient's visit history once 2+ visits exist. Neutral gray for "unclear",
+   green for "consistent with cure", orange for "review for possible
+   suppression" (never red — this is a prompt to look closer, not an alarm). */
+.hering-direction-card { margin: 4px 0 14px; border-radius: 10px; padding: 12px 14px; border: 1.5px solid #d1d5db; background: #f9fafb; }
+.hering-direction-card.hering-cure { border-color: var(--green-1); background: #f0fdf4; }
+.hering-direction-card.hering-suppression { border-color: var(--orange-1); background: #fff7ed; }
+.hering-direction-card.hering-stalled { border-color: #eab308; background: #fefce8; }
+.hering-direction-card.hering-change { border-color: #3b82f6; background: #eff6ff; }
+.hering-direction-label { font-size: 0.85rem; font-weight: 800; margin-bottom: 4px; }
+.hering-direction-card.hering-cure .hering-direction-label { color: var(--green-2); }
+.hering-direction-card.hering-suppression .hering-direction-label { color: var(--orange-2); }
+.hering-direction-card.hering-stalled .hering-direction-label { color: #854d0e; }
+.hering-direction-card.hering-change .hering-direction-label { color: #1d4ed8; }
+.hering-direction-text { font-size: 0.82rem; color: #374151; line-height: 1.5; }
+.hering-direction-note { font-size: 0.74rem; color: #6b7280; margin-top: 6px; font-style: italic; }
+.hering-direction-disclaimer { font-size: 0.7rem; color: #9ca3af; margin-top: 6px; }
+
 /* ---------- FOOTER ---------- */
 footer.app-footer { background: linear-gradient(90deg, #e8f5ec, #ecf7ee); padding: 13px 20px; text-align: center; font-size: 0.74rem; font-weight: 700; color: #1e6b3a; }
 footer.app-footer .f-item { display: flex; align-items: center; gap: 7px; color: #275c3f; margin-bottom: 6px; }
