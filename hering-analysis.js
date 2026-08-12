@@ -263,17 +263,37 @@
     return d.innerHTML;
   }
 
-  const ACTION_ICON = { WAIT: "\u{1F7E2}", REPEAT_HIGHER_POTENCY: "\u{1F7E1}", CHANGE_REMEDY: "\u{1F535}", ANTIDOTE_REEVALUATE: "\u{1F7E0}", UNCLEAR: "⚪" };
-  const ACTION_CSS = { WAIT: "hering-cure", REPEAT_HIGHER_POTENCY: "hering-stalled", CHANGE_REMEDY: "hering-change", ANTIDOTE_REEVALUATE: "hering-suppression", UNCLEAR: "hering-unclear" };
+  // Traffic-light view: exactly 3 colors (green/yellow/red) plus a neutral
+  // gray for "not enough data yet" — gray isn't a 4th traffic light, it's the
+  // honest alternative to forcing a real "can't tell" case into a color that
+  // would claim more certainty than the app has.
+  //
+  // CHANGE_REMEDY and ANTIDOTE_REEVALUATE share one Red message by design —
+  // both are "stop, re-take the case" moments, and the app owner wants ONE
+  // simple instruction rather than two similar-but-different ones. The real
+  // distinction (mentally worse vs. an unrelated new complaint) is still in
+  // the Details section below for a doctor who wants the specific reason.
+  const ACTION_DISPLAY = {
+    WAIT: { css: "hering-green", icon: "✅", big: "HEALING IS ON TRACK. DO NOT CHANGE REMEDY." },
+    REPEAT_HIGHER_POTENCY: { css: "hering-yellow", icon: "⏳", big: "PROGRESS HAS STALLED. REPEAT THE DOSE." },
+    ANTIDOTE_REEVALUATE: { css: "hering-red", icon: "⚠️", big: "WARNING: NEW SYMPTOMS. RE-TAKE THE CASE." },
+    CHANGE_REMEDY: { css: "hering-red", icon: "⚠️", big: "WARNING: NEW SYMPTOMS. RE-TAKE THE CASE." },
+    UNCLEAR: { css: "hering-gray", icon: "❔", big: "NOT ENOUGH INFO YET." }
+  };
 
   function renderFollowUpActionCard(result) {
     if (!result) return "";
+    const d = ACTION_DISPLAY[result.action] || ACTION_DISPLAY.UNCLEAR;
     return `
-      <div class="hering-direction-card ${ACTION_CSS[result.action] || "hering-unclear"}">
-        <div class="hering-direction-label">${ACTION_ICON[result.action] || "⚪"} ${esc(result.actionLabel)}</div>
-        <div class="hering-direction-text">${esc(result.reasoning)}</div>
-        ${!result.reliable ? `<div class="hering-direction-note">Save both visits from Expert Protocol mode (symptom chips) for a reliable read.</div>` : ""}
-        <div class="hering-direction-disclaimer">Decision support only, not a diagnosis — please correlate with full case assessment.</div>
+      <div class="hering-traffic-card ${d.css}">
+        <div class="hering-traffic-icon">${d.icon}</div>
+        <div class="hering-traffic-headline">${esc(d.big)}</div>
+        <details class="hering-traffic-details">
+          <summary>Details</summary>
+          <div class="hering-traffic-reasoning">${esc(result.reasoning)}</div>
+          ${!result.reliable ? `<div class="hering-direction-note">Save both visits from Expert Protocol mode (symptom chips) for a reliable read.</div>` : ""}
+          <div class="hering-direction-disclaimer">Decision support only, not a diagnosis — please correlate with full case assessment.</div>
+        </details>
       </div>
     `;
   }
