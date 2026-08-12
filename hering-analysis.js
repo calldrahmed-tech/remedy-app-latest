@@ -318,9 +318,14 @@
     return null;
   }
 
+  // "And" splits into separate clauses too, same as "but" — without this, a
+  // sentence like "skin eruption is not improving and also burning started"
+  // stays as ONE clause, and the negation check below (scanning back from
+  // "started") would wrongly find the earlier "not" that was only meant to
+  // negate "improving" and use it to cancel out "started" as well.
   function splitFollowUpClauses(text) {
     return text
-      .replace(/\b(but|however|although|yet)\b/gi, "|")
+      .replace(/\b(but|however|although|yet|and)\b/gi, "|")
       .split(/[|,;.]/)
       .map((s) => s.trim())
       .filter(Boolean);
@@ -332,9 +337,15 @@
   // at the negated meaning. STALLED_WORDS already spells out its own negated
   // phrases as literal compounds ("not improving", "no better"), so it's
   // exempt from this check — those matches ARE the negation, not a false one.
+  //
+  // Only looks a short distance back (not the whole clause) — a negation word
+  // from an earlier, unrelated part of a long clause shouldn't reach forward
+  // and cancel a direction word it was never actually next to.
+  const NEGATION_WINDOW_CHARS = 20;
   function negatedMatch(clause, match) {
     if (!match) return false;
-    return NEGATION_PREFIX.test(clause.slice(0, match.index));
+    const before = clause.slice(Math.max(0, match.index - NEGATION_WINDOW_CHARS), match.index);
+    return NEGATION_PREFIX.test(before);
   }
 
   function classifyClauseDirection(clause) {
@@ -359,7 +370,8 @@
   function mindWordPresent(clause) {
     const match = MIND_NEGATIVE_WORDS.exec(clause);
     if (!match) return false;
-    return !NEGATION_PREFIX.test(clause.slice(0, match.index));
+    const before = clause.slice(Math.max(0, match.index - NEGATION_WINDOW_CHARS), match.index);
+    return !NEGATION_PREFIX.test(before);
   }
 
   function analyzeQuickFollowUp(text) {
