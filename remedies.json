@@ -12889,6 +12889,127 @@
         "acute": "-",
         "chronic": "1M single dose, only under experienced practitioner supervision"
       }
+    },
+    {
+      "id": "syzygium",
+      "name": "Syzygium Jambolanum",
+      "abbr": "Syz-j",
+      "category": "chronic",
+      "system": [
+        "urinary",
+        "glands"
+      ],
+      "keynotes": [
+        {
+          "t": "excessive thirst and urination in diabetes mellitus",
+          "w": 3
+        },
+        {
+          "t": "glycosuria without proportionate thirst",
+          "w": 2.5
+        },
+        {
+          "t": "great weakness and emaciation despite good appetite",
+          "w": 2
+        },
+        {
+          "t": "dryness of mouth and throat",
+          "w": 1.5
+        },
+        {
+          "t": "carbuncles and skin eruptions in diabetics",
+          "w": 1.5
+        },
+        {
+          "t": "polyuria with sweetish-smelling urine",
+          "w": 2
+        }
+      ],
+      "diseaseTags": [],
+      "potency": {
+        "acute": "Not typically used acutely",
+        "chronic": "Mother tincture (Q), 10-15 drops in water 3x daily, or 30C occasional dose"
+      },
+      "maxScore": 12.5
+    },
+    {
+      "id": "crataeg",
+      "name": "Crataegus Oxyacantha",
+      "abbr": "Crat",
+      "category": "chronic",
+      "system": [
+        "circulation"
+      ],
+      "keynotes": [
+        {
+          "t": "cardiac weakness with high blood pressure",
+          "w": 2.5
+        },
+        {
+          "t": "irregular, feeble heart action",
+          "w": 2
+        },
+        {
+          "t": "breathlessness on exertion from heart weakness",
+          "w": 2
+        },
+        {
+          "t": "insomnia from cardiac distress",
+          "w": 1.5
+        },
+        {
+          "t": "dilated heart with valvular weakness",
+          "w": 1.5
+        },
+        {
+          "t": "sense of constriction or oppression around the heart",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "potency": {
+        "acute": "Not typically used acutely",
+        "chronic": "Mother tincture (Q), 10-15 drops 2-3x daily, long-term as a cardiac tonic"
+      },
+      "maxScore": 11
+    },
+    {
+      "id": "rauwolfia",
+      "name": "Rauwolfia Serpentina",
+      "abbr": "Rauw-s",
+      "category": "chronic",
+      "system": [
+        "circulation",
+        "nerves"
+      ],
+      "keynotes": [
+        {
+          "t": "persistent hypertension, especially with anxiety or nervous tension",
+          "w": 3
+        },
+        {
+          "t": "headache with high blood pressure, worse in the occiput",
+          "w": 2
+        },
+        {
+          "t": "restlessness and insomnia with elevated blood pressure",
+          "w": 1.5
+        },
+        {
+          "t": "hypertension in overweight or plethoric individuals",
+          "w": 1.5
+        },
+        {
+          "t": "throbbing of the carotids",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "potency": {
+        "acute": "Not typically used acutely",
+        "chronic": "Mother tincture (Q) or low potency, under practitioner guidance"
+      },
+      "maxScore": 9.5
     }
   ],
   "biochemics": [
@@ -18951,87 +19072,6 @@
       "diseaseNosodes": []
     },
     {
-      "id": "gerd-acid-reflux",
-      "name": "GERD / Acid Reflux",
-      "synonyms": [
-        "gerd / acid reflux",
-        "gerd",
-        "acid reflux"
-      ],
-      "primaryRemedies": [
-        "robinia",
-        "nux-v"
-      ],
-      "banerji": {
-        "morning": "Robinia 30, 3x daily",
-        "evening": "Nux Vomica 30, 3x daily",
-        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities."
-      },
-      "biochemic": "Nat Phos 6X, 4 tablets after meals",
-      "tests": [
-        {
-          "name": "Upper GI endoscopy",
-          "reason": "Only if symptoms are persistent beyond 4 weeks, fail standard treatment, or alarm features are present."
-        }
-      ],
-      "diet": {
-        "eat": [
-          "Balanced, easily digestible diet"
-        ],
-        "avoid": [
-          "Known individual trigger foods"
-        ]
-      },
-      "protocols": [
-        {
-          "tier": "primary",
-          "label": "Banerji-style protocol",
-          "doses": [
-            {
-              "remedy": "robinia",
-              "remedyNameRaw": "Robinia",
-              "potency": "30",
-              "timing": "morning",
-              "schedule": "3x daily"
-            },
-            {
-              "remedy": "nux-v",
-              "remedyNameRaw": "Nux Vomica",
-              "potency": "30",
-              "timing": "evening",
-              "schedule": "3x daily"
-            }
-          ],
-          "biochemicSupport": [
-            {
-              "id": "nat-phos",
-              "name": "Nat Phos",
-              "dose": "6X, 4 tablets after meals",
-              "justification": "Nat Phos is the classical acid-neutralizing salt, directly addressing the hyperacidity behind reflux."
-            }
-          ],
-          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities.",
-          "duration": "2-3 days, or until symptoms resolve",
-          "review": "Reassess if no improvement within 24-48 hours",
-          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
-          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
-        }
-      ],
-      "biochemicSalts": [
-        {
-          "id": "nat-phos",
-          "dose": "6X, 4 tablets after meals",
-          "justification": "Nat Phos is the classical acid-neutralizing salt, directly addressing the hyperacidity behind reflux."
-        }
-      ],
-      "miasm": {
-        "primary": "Psora",
-        "secondary": null,
-        "explanation": "A functional disturbance of acid regulation without structural damage."
-      },
-      "diseaseNosodes": []
-    },
-    {
       "id": "goiter",
       "name": "Goiter",
       "synonyms": [
@@ -22833,6 +22873,392 @@
         "primary": "Psora",
         "secondary": null,
         "explanation": "An acute, self-limiting febrile illness."
+      },
+      "diseaseNosodes": []
+    },
+    {
+      "id": "diabetes-mellitus",
+      "name": "Diabetes Mellitus (adjunct)",
+      "synonyms": [
+        "diabetes",
+        "diabetes mellitus",
+        "high blood sugar",
+        "sugar disease"
+      ],
+      "primaryRemedies": [
+        "syzygium",
+        "ph-ac"
+      ],
+      "banerji": {
+        "morning": "Syzygium Jambolanum Q, 10-15 drops in water 3x daily",
+        "evening": "Phosphoric Acid 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities. Always used alongside, never instead of, the patient's prescribed diabetes medication."
+      },
+      "biochemic": null,
+      "tests": [
+        {
+          "name": "Fasting & random blood sugar (FBS/RBS)",
+          "reason": "To confirm and monitor glycemic control."
+        },
+        {
+          "name": "HbA1c",
+          "reason": "To assess average blood sugar control over the past 2-3 months."
+        },
+        {
+          "name": "Urine for ketones/glucose",
+          "reason": "Only if symptoms suggest poor control or risk of diabetic ketoacidosis."
+        }
+      ],
+      "diet": {
+        "eat": [
+          "Low-glycemic, high-fiber diet",
+          "Bitter gourd (karela), fenugreek if tolerated"
+        ],
+        "avoid": [
+          "Refined sugar and sweets",
+          "White rice and refined flour",
+          "Sugary drinks"
+        ]
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Suggested protocol",
+          "doses": [
+            {
+              "remedy": "syzygium",
+              "remedyNameRaw": "Syzygium Jambolanum",
+              "potency": "Q",
+              "timing": "morning",
+              "schedule": "10-15 drops in water 3x daily"
+            },
+            {
+              "remedy": "ph-ac",
+              "remedyNameRaw": "Phosphoric Acid",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities. Always used alongside, never instead of, the patient's prescribed diabetes medication.",
+          "duration": "Observe for 4-6 weeks before reassessing",
+          "review": "Review blood sugar trend and overall vitality every 4-6 weeks",
+          "expectedResponse": "A chronic metabolic condition — improvement in vitality and thirst/urination pattern is gradual over weeks, not days",
+          "tip": "Never reduce or stop insulin or oral hypoglycemic medication without the treating physician's advice"
+        }
+      ],
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": "Syphilis",
+        "explanation": "The underlying metabolic over-production/dysregulation is sycotic in character, while long-standing diabetic complications (neuropathy, nephropathy, retinopathy) reflect the destructive syphilitic layer."
+      },
+      "diseaseNosodes": [
+        {
+          "id": "insulinum",
+          "reason": "Suggested as a supportive nosode reflecting the underlying endocrine-pancreatic dysfunction in diabetes."
+        }
+      ]
+    },
+    {
+      "id": "hypertension",
+      "name": "Hypertension (adjunct)",
+      "synonyms": [
+        "hypertension",
+        "high blood pressure",
+        "high bp",
+        "raised blood pressure"
+      ],
+      "primaryRemedies": [
+        "rauwolfia",
+        "crataeg"
+      ],
+      "banerji": {
+        "morning": "Rauwolfia Serpentina Q, 8-10 drops 2x daily",
+        "evening": "Crataegus Oxyacantha Q, 10-15 drops 2-3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities. Always used alongside, never instead of, prescribed antihypertensive medication."
+      },
+      "biochemic": null,
+      "tests": [
+        {
+          "name": "Blood pressure monitoring",
+          "reason": "To track control and response to treatment."
+        },
+        {
+          "name": "Renal function tests (urea, creatinine)",
+          "reason": "Only if long-standing or poorly controlled, to screen for kidney involvement."
+        },
+        {
+          "name": "ECG",
+          "reason": "Only if cardiac symptoms or long-standing hypertension, to screen for cardiac strain."
+        }
+      ],
+      "diet": {
+        "eat": [
+          "Low-salt, high-potassium diet (fruits, vegetables)"
+        ],
+        "avoid": [
+          "Excess salt and processed food",
+          "Excess caffeine and alcohol"
+        ]
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Suggested protocol",
+          "doses": [
+            {
+              "remedy": "rauwolfia",
+              "remedyNameRaw": "Rauwolfia Serpentina",
+              "potency": "Q",
+              "timing": "morning",
+              "schedule": "8-10 drops 2x daily"
+            },
+            {
+              "remedy": "crataeg",
+              "remedyNameRaw": "Crataegus Oxyacantha",
+              "potency": "Q",
+              "timing": "evening",
+              "schedule": "10-15 drops 2-3x daily"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities. Always used alongside, never instead of, prescribed antihypertensive medication.",
+          "duration": "Observe for 4-6 weeks before reassessing",
+          "review": "Review blood pressure trend every 4-6 weeks, or sooner if symptomatic",
+          "expectedResponse": "A chronic vascular condition — improvement in blood pressure control is gradual over weeks",
+          "tip": "Never reduce or stop antihypertensive medication without the treating physician's advice"
+        }
+      ],
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Sycosis",
+        "secondary": "Syphilis",
+        "explanation": "Persistent elevated vascular tone reflects the sycotic pattern of functional excess, while long-standing complications (arteriosclerosis, stroke, organ damage) reflect the destructive syphilitic layer."
+      },
+      "diseaseNosodes": []
+    },
+    {
+      "id": "chronic-kidney-disease",
+      "name": "Chronic Kidney Disease (adjunct)",
+      "synonyms": [
+        "chronic kidney disease",
+        "ckd",
+        "kidney failure",
+        "renal failure",
+        "chronic renal failure"
+      ],
+      "primaryRemedies": [
+        "ars-alb",
+        "plb"
+      ],
+      "banerji": {
+        "morning": "Arsenicum Album 30, 3x daily",
+        "evening": "Plumbum Metallicum 30, 3x daily",
+        "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities. Always used alongside, never instead of, ongoing nephrology care."
+      },
+      "biochemic": null,
+      "tests": [
+        {
+          "name": "Serum creatinine & eGFR",
+          "reason": "To stage kidney function and monitor progression."
+        },
+        {
+          "name": "Urine routine/microscopy",
+          "reason": "To check for protein, blood, or casts."
+        },
+        {
+          "name": "Serum electrolytes (sodium, potassium)",
+          "reason": "Only in advanced disease, to screen for dangerous imbalance."
+        }
+      ],
+      "diet": {
+        "eat": [
+          "Kidney-friendly diet as advised by the treating physician (protein/potassium/phosphorus limits vary by stage)"
+        ],
+        "avoid": [
+          "Excess salt",
+          "NSAIDs and other nephrotoxic substances",
+          "Unsupervised herbal or high-dose supplement use"
+        ]
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Suggested protocol",
+          "doses": [
+            {
+              "remedy": "ars-alb",
+              "remedyNameRaw": "Arsenicum Album",
+              "potency": "30",
+              "timing": "morning",
+              "schedule": "3x daily"
+            },
+            {
+              "remedy": "plb",
+              "remedyNameRaw": "Plumbum Metallicum",
+              "potency": "30",
+              "timing": "evening",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": null,
+          "note": "Two of the most commonly indicated remedies for this presentation; select or alternate based on the patient's specific modalities. Always used alongside, never instead of, ongoing nephrology care.",
+          "duration": "Observe for 4-6 weeks before reassessing",
+          "review": "Review kidney function trend with the treating physician every 4-6 weeks",
+          "expectedResponse": "A chronic, structural condition — homeopathic support aims at symptom relief and general vitality, not reversal of established kidney damage",
+          "tip": "Never delay or substitute dialysis, transplant work-up, or nephrology follow-up for homeopathic treatment"
+        }
+      ],
+      "biochemicSalts": [],
+      "miasm": {
+        "primary": "Syphilis",
+        "secondary": null,
+        "explanation": "Progressive, structural loss of kidney tissue is the hallmark destructive pattern of the syphilitic miasm."
+      },
+      "diseaseNosodes": []
+    },
+    {
+      "id": "acute-sprain-strain",
+      "name": "Acute Sprains and Strains",
+      "synonyms": [
+        "sprain",
+        "strain",
+        "sprained ankle",
+        "twisted ankle",
+        "twisted my ankle",
+        "sprained my ankle",
+        "rolled my ankle",
+        "sprained wrist",
+        "sprained my wrist",
+        "pulled muscle",
+        "pulled a muscle",
+        "muscle strain",
+        "strained my back",
+        "strained back",
+        "ligament sprain",
+        "ankle sprain",
+        "wrist sprain",
+        "twisted my wrist"
+      ],
+      "primaryRemedies": [
+        "arn",
+        "rhus-t",
+        "ruta"
+      ],
+      "banerji": {
+        "morning": "Arnica 30, immediately after injury",
+        "evening": "Rhus Tox 30, if stiff and worse on first motion, better with continued gentle motion",
+        "note": "Arnica covers the initial shock/bruising of any fresh injury; Rhus Tox and Ruta differentiate the specific injury pattern once the initial shock has settled."
+      },
+      "biochemic": "Calc Fluor 6X, 4 tablets 3x daily to strengthen stretched or lax ligaments during recovery",
+      "tests": [
+        {
+          "name": "X-ray",
+          "reason": "If unable to bear weight, visible deformity, or severe swelling/bruising — to rule out a fracture rather than a simple sprain."
+        }
+      ],
+      "diet": {
+        "eat": [
+          "Protein-rich food to support tissue repair",
+          "Anti-inflammatory foods — turmeric, ginger, leafy greens"
+        ],
+        "avoid": [
+          "Prolonged rest without any gentle movement once acute pain settles"
+        ]
+      },
+      "protocols": [
+        {
+          "tier": "primary",
+          "label": "Banerji-style protocol",
+          "doses": [
+            {
+              "remedy": "arn",
+              "remedyNameRaw": "Arnica Montana",
+              "potency": "30",
+              "timing": "immediately after injury",
+              "schedule": "every 2 hours for the first day, then 3x daily"
+            }
+          ],
+          "biochemicSupport": [
+            {
+              "id": "calc-fluor",
+              "name": "Calc Fluor",
+              "dose": "6X, 4 tablets 3x daily",
+              "justification": "Calc Fluor is the classical tissue-elasticity salt, strengthening stretched or lax ligaments and tendons during recovery."
+            }
+          ],
+          "note": "Arnica is indicated for essentially every fresh sprain/strain — bruising, soreness, and the keynote reluctance to be touched or examined (\"bed feels too hard\").",
+          "duration": "2-3 days, or until acute bruising/soreness settles",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "rhus-t",
+              "remedyNameRaw": "Rhus Toxicodendron",
+              "potency": "30",
+              "timing": "as needed",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": [
+            {
+              "id": "calc-fluor",
+              "name": "Calc Fluor",
+              "dose": "6X, 4 tablets 3x daily",
+              "justification": "Calc Fluor is the classical tissue-elasticity salt, strengthening stretched or lax ligaments and tendons during recovery."
+            }
+          ],
+          "note": "Indicated when pain and stiffness are worse on first movement but improve with continued gentle motion — typical of overexertion sprains and strains.",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        },
+        {
+          "tier": "secondary",
+          "label": "Also commonly indicated for this presentation",
+          "doses": [
+            {
+              "remedy": "ruta",
+              "remedyNameRaw": "Ruta Graveolens",
+              "potency": "30",
+              "timing": "as needed",
+              "schedule": "3x daily"
+            }
+          ],
+          "biochemicSupport": [
+            {
+              "id": "calc-fluor",
+              "name": "Calc Fluor",
+              "dose": "6X, 4 tablets 3x daily",
+              "justification": "Calc Fluor is the classical tissue-elasticity salt, strengthening stretched or lax ligaments and tendons during recovery."
+            }
+          ],
+          "note": "Indicated for injuries specifically affecting tendons, ligaments, and periosteum (e.g. wrist or ankle sprains, tennis elbow).",
+          "duration": "2-3 days, or until symptoms resolve",
+          "review": "Reassess if no improvement within 24-48 hours",
+          "expectedResponse": "Acute remedies typically show a response within hours to a day if well-indicated",
+          "tip": "Give in a clean mouth — avoid coffee, mint, or strong flavors around dosing"
+        }
+      ],
+      "biochemicSalts": [
+        {
+          "id": "calc-fluor",
+          "dose": "6X, 4 tablets 3x daily",
+          "justification": "Calc Fluor is the classical tissue-elasticity salt, strengthening stretched or lax ligaments and tendons during recovery."
+        }
+      ],
+      "miasm": {
+        "primary": "Psora",
+        "secondary": null,
+        "explanation": "A straightforward functional/traumatic injury without deeper chronic pathology."
       },
       "diseaseNosodes": []
     }
