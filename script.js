@@ -826,6 +826,14 @@ function scoreRepertory(inputText, excludedKeys) {
   // completely unrelated but literally-earlier-firing rubric (like generic "irritable")
   // wrongly claim the main-complaint boost instead.
   function triggerFires(trigger, text) {
+    // Normalize the trigger's hyphens/punctuation the same way the input text was already
+    // normalized before it ever reached this function (see the `t = ...replace(/[^a-z0-9\s]/g,
+    // " ")` sanitization a few dozen lines up) — a trigger authored with a hyphen, like
+    // "right-sided headache", could otherwise never match anything, because by the time the
+    // input text gets here "right-sided" has already become "right sided". Confirmed live
+    // 2026-08-12: this silently broke 23 triggers across 21 rubrics (right/left-sided
+    // headache, bearing-down sensation, fault-finding, etc.) — none of them could ever fire.
+    trigger = trigger.replace(/[^a-z0-9\s]/gi, " ").replace(/\s+/g, " ").trim();
     // NEGATION CHECK: applies to every trigger, not just the hand-picked "no fever" case
     // from earlier. A case can say "haven't been drinking small sips" — the words "small
     // sips" are right there and would otherwise match, but the sentence is explicitly

@@ -11416,7 +11416,11 @@
       "rubric": "Headache better from tightly binding the head or firm pressure",
       "triggers": [
         "headache better tying head tight",
-        "relief from binding the head firmly"
+        "relief from binding the head firmly",
+        "tying headache relief",
+        "tying the head gives relief",
+        "binding the head relieves the headache",
+        "headache relieved by tying"
       ],
       "remedies": [
         {
