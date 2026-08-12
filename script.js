@@ -967,6 +967,22 @@ function scoreRepertory(inputText, excludedKeys) {
     }
   });
 
+  // Generic negation-window check for the bare-word fallbacks below (thirst/headache/anxiety) —
+  // same 25-char lookback and negation-word list already used for real trigger matching in
+  // triggerFires' isNegated, just applied here since these fallbacks match a bare regex
+  // instead of going through triggerFires. Without this, "I don't feel thirsty", "no
+  // headache", "not anxious" were incorrectly awarding fallback credit despite the case
+  // explicitly denying the symptom — confirmed live on 2026-08-12 when a case saying "I
+  // don't feel very thirsty" still fired the Thirst fallback and let Bryonia win a case it
+  // shouldn't have. Fever already has its own domain-specific negation check just below
+  // (catches "afebrile" too, not just a negation word near "fever") and is left as-is.
+  function bareWordNegated(re) {
+    const m = re.exec(t);
+    if (!m) return false;
+    const before = t.slice(Math.max(0, m.index - 25), m.index + 1);
+    return / (not|no|never|haven|hasn|hadn|without|isn|wasn|aren|weren|doesn|didn|don) /.test(before);
+  }
+
   // FALLBACK: a bare, undifferentiated "fever" mention with no qualifying detail (no chill,
   // thirst, onset speed, etc. — so none of the specific Fever rubrics above fired) still
   // deserves a clinically sensible answer rather than falling through to coincidental
@@ -1000,7 +1016,8 @@ function scoreRepertory(inputText, excludedKeys) {
   // detail, drowning out the actual defining complaint.
   const hasSpecificThirstRubric = firedRubrics.some(f => f.startsWith("Thirst:"));
   const thirstFallbackExcluded = excludedKeys && excludedKeys.has("Thirst: General/unspecified");
-  if (!hasSpecificThirstRubric && !thirstFallbackExcluded && / thirst(y)? /.test(t)) {
+  const thirstNegated = bareWordNegated(/ thirst(y)? /);
+  if (!hasSpecificThirstRubric && !thirstNegated && !thirstFallbackExcluded && / thirst(y)? /.test(t)) {
     const GENERAL_THIRST = [{ id: "bry", grade: 2 }, { id: "nat-mur", grade: 1 }, { id: "phos", grade: 1 }];
     const sw = SECTION_WEIGHT.Thirst;
     firedRubrics.push("Thirst: General/unspecified");
@@ -1020,7 +1037,8 @@ function scoreRepertory(inputText, excludedKeys) {
   // broken rather than appropriately cautious.
   const hasSpecificHeadacheRubric = firedRubrics.some(f => f.includes("headache") || f.includes("Headache"));
   const headacheFallbackExcluded = excludedKeys && excludedKeys.has("Common: General/undifferentiated headache");
-  if (!hasSpecificHeadacheRubric && !headacheFallbackExcluded && / headache /.test(t)) {
+  const headacheNegated = bareWordNegated(/ headache /);
+  if (!hasSpecificHeadacheRubric && !headacheNegated && !headacheFallbackExcluded && / headache /.test(t)) {
     const GENERAL_HEADACHE = [{ id: "bell", grade: 3 }, { id: "bry", grade: 2 }, { id: "nux-v", grade: 2 }, { id: "gels", grade: 2 }];
     const sw = SECTION_WEIGHT.Common || 0.33;
     firedRubrics.push("Common: General/undifferentiated headache");
@@ -1033,7 +1051,8 @@ function scoreRepertory(inputText, excludedKeys) {
 
   const hasSpecificAnxietyRubric = firedRubrics.some(f => f.includes("Anxiety") || f.includes("anxiety"));
   const anxietyFallbackExcluded = excludedKeys && excludedKeys.has("Mind: General/unspecified anxiety");
-  if (!hasSpecificAnxietyRubric && !anxietyFallbackExcluded && / anxiety /.test(t)) {
+  const anxietyNegated = bareWordNegated(/ anxiety /);
+  if (!hasSpecificAnxietyRubric && !anxietyNegated && !anxietyFallbackExcluded && / anxiety /.test(t)) {
     const GENERAL_ANXIETY = [{ id: "ars-alb", grade: 3 }, { id: "acon", grade: 2 }, { id: "arg-n", grade: 2 }, { id: "gels", grade: 1 }];
     const sw = SECTION_WEIGHT.Mind;
     firedRubrics.push("Mind: General/unspecified anxiety");
@@ -1154,7 +1173,6 @@ function scoreRemedies(inputText, diseaseProtocol, excludedKeys) {
     const matched = top.map(c => c.t);
 
     const repScore = repScores[r.id] || 0;
-    const mmWeight = repScore > 0 ? MM_WEIGHT_CONFIRM : MM_WEIGHT_PRIMARY;
     // GENERIC-ALONE DISCOUNT: a remedy whose ONLY evidence is location-agnostic (worse
     // heat/thirstless/etc., see GENERIC_SECTIONS) with nothing tying it to what the case is
     // actually about — no Mind/Common/Stool/Extremities rubric, no real materia medica keynote
@@ -1168,6 +1186,19 @@ function scoreRemedies(inputText, diseaseProtocol, excludedKeys) {
     // score well above this from today's testing; coincidental single-weak-word ones don't.
     const MIN_REAL_MM_EVIDENCE = 0.5;
     const hasSpecificEvidence = specificRepScore > 0.01 || mmScore >= MIN_REAL_MM_EVIDENCE;
+    // mmWeight keys off hasSpecificEvidence, not raw repScore>0 (fixed 2026-08-12, see
+    // remedy-matching-engine memory for the full investigation) — a remedy whose only
+    // repertory hit is generic-section-only is about to have that evidence discounted to 20%
+    // by GENERIC_ALONE_DISCOUNT just below; it must not ALSO have its materia medica evidence
+    // slashed to the "confirmatory" weight as if it had real repertory backing it doesn't.
+    // That double penalty let a remedy with ZERO repertory evidence at all (full PRIMARY
+    // weight) outrank one with genuine repertory backing plus real materia medica matches.
+    // The first attempt at this fix (same session, reverted) broke a different case because
+    // the Thirst/Headache/Anxiety generic fallbacks above had no negation check, so a
+    // remedy's spurious generic-only match (e.g. "not thirsty" still firing Thirst) got the
+    // same weight boost unfairly — fixed together with this by adding bareWordNegated() to
+    // those three fallbacks above, so only genuine unnegated generic evidence reaches here.
+    const mmWeight = hasSpecificEvidence ? MM_WEIGHT_CONFIRM : MM_WEIGHT_PRIMARY;
     const effectiveRepScore = hasSpecificEvidence
       ? repScore
       : specificRepScore + genericRepScore * GENERIC_ALONE_DISCOUNT;
