@@ -16,6 +16,11 @@ let DISEASE_SHORTCUT_TAGS = null; // [ {id, label, diseaseId, searchText} ] — 
                                    // named condition's own curated protocol (e.g. typing
                                    // "abscess") instead of having to reconstruct it symptom by
                                    // symptom in Protocol Mode's chief-symptom picker.
+let excludedRubricKeys = new Set(); // "Section: rubric text" keys the doctor has unchecked in
+                                     // the "What I understood" list — reset on every genuinely
+                                     // new search (runSearch() with no args), preserved across a
+                                     // recompute triggered by unchecking an item and clicking
+                                     // "Update result" (runSearch(true)).
 
 const el = (id) => document.getElementById(id);
 const inputEl = el("symptomInput");
@@ -782,7 +787,7 @@ function normalizeSynonyms(text) {
     .replace(/\bhot\b/g, "heat");
 }
 
-function scoreRepertory(inputText) {
+function scoreRepertory(inputText, excludedKeys) {
   // NOTE: preserve digits (a-z AND 0-9) — a version that stripped all non-letter characters
   // meant a trigger like "4pm" could never match anything, since the input's own "4pm" was
   // being reduced to " pm" (digit stripped) while the trigger text still had the digit intact.
@@ -925,6 +930,9 @@ function scoreRepertory(inputText) {
     // substring of it. The input text t is always padded with leading/trailing spaces, so
     // the space-bounded check alone is sufficient for every trigger position.
     if (!matchLocation(rubric, inputLoc)) return;
+    // Lets the "What I understood" checklist exclude a specific rubric the doctor has
+    // unchecked as a mismatch, without needing them to rewrite their case text.
+    if (excludedKeys && excludedKeys.has(`${rubric.section}: ${rubric.rubric}`)) return;
     let bestPos = Infinity;
     rubric.triggers.forEach(trigger => {
       const idx = triggerFires(trigger, t);
@@ -970,7 +978,8 @@ function scoreRepertory(inputText) {
   // somewhere in the sentence — that was awarding fever-remedy credit to cases that
   // specifically said the patient does NOT have a fever.
   const feverNegated = / no fever | without fever | afebrile | not febrile /.test(t);
-  if (!hasSpecificFeverRubric && !feverNegated && / fever /.test(t)) {
+  const feverFallbackExcluded = excludedKeys && excludedKeys.has("Fever: General/undifferentiated fever");
+  if (!hasSpecificFeverRubric && !feverNegated && !feverFallbackExcluded && / fever /.test(t)) {
     const GENERAL_FEVER = [{ id: "acon", grade: 3 }, { id: "bell", grade: 3 }, { id: "gels", grade: 2 }, { id: "bry", grade: 2 }, { id: "ars-alb", grade: 2 }];
     const sw = SECTION_WEIGHT.Fever;
     firedRubrics.push("Fever: General/undifferentiated fever");
@@ -990,7 +999,8 @@ function scoreRepertory(inputText) {
   // ear pain, headache, anything) purely because thirst was mentioned as a minor accompanying
   // detail, drowning out the actual defining complaint.
   const hasSpecificThirstRubric = firedRubrics.some(f => f.startsWith("Thirst:"));
-  if (!hasSpecificThirstRubric && / thirst(y)? /.test(t)) {
+  const thirstFallbackExcluded = excludedKeys && excludedKeys.has("Thirst: General/unspecified");
+  if (!hasSpecificThirstRubric && !thirstFallbackExcluded && / thirst(y)? /.test(t)) {
     const GENERAL_THIRST = [{ id: "bry", grade: 2 }, { id: "nat-mur", grade: 1 }, { id: "phos", grade: 1 }];
     const sw = SECTION_WEIGHT.Thirst;
     firedRubrics.push("Thirst: General/unspecified");
@@ -1009,7 +1019,8 @@ function scoreRepertory(inputText) {
   // match (or nothing at all, below the confidence floor), which felt like the app being
   // broken rather than appropriately cautious.
   const hasSpecificHeadacheRubric = firedRubrics.some(f => f.includes("headache") || f.includes("Headache"));
-  if (!hasSpecificHeadacheRubric && / headache /.test(t)) {
+  const headacheFallbackExcluded = excludedKeys && excludedKeys.has("Common: General/undifferentiated headache");
+  if (!hasSpecificHeadacheRubric && !headacheFallbackExcluded && / headache /.test(t)) {
     const GENERAL_HEADACHE = [{ id: "bell", grade: 3 }, { id: "bry", grade: 2 }, { id: "nux-v", grade: 2 }, { id: "gels", grade: 2 }];
     const sw = SECTION_WEIGHT.Common || 0.33;
     firedRubrics.push("Common: General/undifferentiated headache");
@@ -1021,7 +1032,8 @@ function scoreRepertory(inputText) {
   }
 
   const hasSpecificAnxietyRubric = firedRubrics.some(f => f.includes("Anxiety") || f.includes("anxiety"));
-  if (!hasSpecificAnxietyRubric && / anxiety /.test(t)) {
+  const anxietyFallbackExcluded = excludedKeys && excludedKeys.has("Mind: General/unspecified anxiety");
+  if (!hasSpecificAnxietyRubric && !anxietyFallbackExcluded && / anxiety /.test(t)) {
     const GENERAL_ANXIETY = [{ id: "ars-alb", grade: 3 }, { id: "acon", grade: 2 }, { id: "arg-n", grade: 2 }, { id: "gels", grade: 1 }];
     const sw = SECTION_WEIGHT.Mind;
     firedRubrics.push("Mind: General/unspecified anxiety");
@@ -1035,7 +1047,7 @@ function scoreRepertory(inputText) {
   return { remedyScores, remedyGenericScores, remedyRubrics, firedRubrics, mainComplaintRubric };
 }
 
-function scoreRemedies(inputText, diseaseProtocol) {
+function scoreRemedies(inputText, diseaseProtocol, excludedKeys) {
   const rawWords = inputText.toLowerCase().split(/[^a-z]+/).filter(Boolean);
   const corrected = rawWords.map(fuzzyCorrect);
   const inputWords = [...new Set(corrected)];
@@ -1046,7 +1058,7 @@ function scoreRemedies(inputText, diseaseProtocol) {
   // every rubric the case matches. Materia medica keynote matching (below) only adds a
   // smaller CONFIRMATORY amount on top — it can support or nudge a repertory-driven pick,
   // but can't manufacture a top result out of prose overlap alone the way it used to.
-  const { remedyScores: repScores, remedyGenericScores: repGenericScores, remedyRubrics, mainComplaintRubric } = scoreRepertory(inputText);
+  const { remedyScores: repScores, remedyGenericScores: repGenericScores, remedyRubrics, mainComplaintRubric } = scoreRepertory(inputText, excludedKeys);
   // Whether the case's main-complaint rubric is itself one of the location-agnostic GENERIC
   // sections — if so, MAIN_COMPLAINT_BOOST below must not hand out its full flat bonus to a
   // remedy purely for matching that generic rubric (see GENERIC_ALONE_DISCOUNT above).
@@ -1599,14 +1611,29 @@ window.toggleSection = function(id) {
   if (arrow) arrow.textContent = isHidden ? "▼" : "▶";
 };
 
-function runSearch() {
+// Reads the current checked/unchecked state of the "What I understood" checklist, carries
+// it forward as the exclusion set, and re-runs the search on the SAME case text — lets a
+// doctor fix a misread rubric with one click instead of rewriting their whole case.
+window.recomputeWithExclusions = function() {
+  const boxes = document.querySelectorAll(".understood-checkbox");
+  const nextExcluded = new Set();
+  boxes.forEach(cb => { if (!cb.checked) nextExcluded.add(cb.dataset.rubricKey); });
+  excludedRubricKeys = nextExcluded;
+  runSearch(true);
+};
+
+function runSearch(preserveExclusions) {
   const text = inputEl.value.trim();
   if (!DB) { resultsEl.innerHTML = `<div class="msg">Database still loading — try again in a moment.</div>`; return; }
   if (!text) { resultsEl.innerHTML = `<div class="msg">Enter a symptom description or disease name first.</div>`; return; }
+  // A genuinely new search (typing fresh text, clicking Get Remedy or a sample chip) always
+  // starts with a clean slate — only a recompute triggered from the "What I understood"
+  // checklist itself (runSearch(true)) carries the doctor's unchecked items forward.
+  if (!preserveExclusions) excludedRubricKeys = new Set();
 
   ensureMaxScores();
   const diseaseProtocol = detectDiseaseProtocol(text);
-  let remedyResults = scoreRemedies(text, diseaseProtocol);
+  let remedyResults = scoreRemedies(text, diseaseProtocol, excludedRubricKeys);
   const biochemicResults = scoreBiochemics(text);
   // Separate, read-only call purely to surface which recognized patterns fired for the
   // "what I understood from your case" display below — kept fully isolated from the actual
@@ -1654,12 +1681,27 @@ function runSearch() {
      names), not the winning remedy's own textbook picture — so this reflects what the
      person said, not what the app already believes about the remedy. ---------- */
   if (recognizedPatterns && recognizedPatterns.length) {
-    const readable = [...new Set(recognizedPatterns)]
-      .map(r => r.includes(": ") ? r.split(": ").slice(1).join(": ") : r)
-      .slice(0, 8);
+    // Each item is a checkbox, not plain text — unchecking one and clicking "Update result"
+    // re-runs the search with that specific rubric excluded from scoring, without the doctor
+    // needing to rewrite their case text to fix a misread. Always built from the FULL
+    // recognized set (not the current exclusions) so a previously-unchecked item can be
+    // re-checked later — only the checked/unchecked state reflects excludedRubricKeys.
+    const uniqueKeys = [...new Set(recognizedPatterns)].slice(0, 8);
+    const readableItems = uniqueKeys.map(fullKey => ({
+      key: fullKey,
+      label: fullKey.includes(": ") ? fullKey.split(": ").slice(1).join(": ") : fullKey,
+      checked: !excludedRubricKeys.has(fullKey)
+    }));
     html += `<div class="understood-box">
       <div class="understood-title">🔍 What I understood from your case</div>
-      <ul class="understood-list">${readable.map(r => `<li>${esc(r)}</li>`).join("")}</ul>
+      <ul class="understood-list understood-list-interactive">${readableItems.map(item => `
+        <li>
+          <label class="understood-checkbox-label">
+            <input type="checkbox" class="understood-checkbox" data-rubric-key="${esc(item.key)}" ${item.checked ? "checked" : ""}>
+            <span>${esc(item.label)}</span>
+          </label>
+        </li>`).join("")}</ul>
+      <button class="understood-update-btn" onclick="recomputeWithExclusions()">🔄 Not quite right? Update result</button>
     </div>`;
   }
 

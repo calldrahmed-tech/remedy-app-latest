@@ -226,6 +226,13 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .understood-list { list-style: none; font-size: 0.85rem; color: #2c3550; margin: 0; padding: 0; }
 .understood-list li { padding: 3px 0 3px 18px; position: relative; }
 .understood-list li::before { content: "✓"; position: absolute; left: 0; color: #3a4a8f; font-weight: 700; }
+.understood-list-interactive li { padding: 3px 0; }
+.understood-list-interactive li::before { content: none; }
+.understood-checkbox-label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.understood-checkbox { width: 15px; height: 15px; accent-color: #3a4a8f; cursor: pointer; flex-shrink: 0; }
+.understood-checkbox-label span { line-height: 1.35; }
+.understood-update-btn { margin-top: 10px; background: #fff; color: #3a4a8f; border: 1.5px solid #3a4a8f; border-radius: 8px; padding: 7px 14px; font-size: 0.78rem; font-weight: 700; cursor: pointer; }
+.understood-update-btn:hover { background: #3a4a8f; color: #fff; }
 .md-eyebrow { font-size: 0.8rem; font-weight: 700; color: var(--muted); letter-spacing: 0.02em; }
 .md-remedy-name { font-size: 1.9rem; color: var(--navy); margin: 6px 0 14px; }
 .md-checks { font-size: 0.86rem; color: #2b6b41; font-weight: 600; margin-bottom: 18px; }
