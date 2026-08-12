@@ -10724,7 +10724,12 @@
       "rubric": "Dryness of mouth without corresponding thirst",
       "triggers": [
         "dry mouth without wanting to drink",
-        "mouth dry but no thirst"
+        "mouth dry but no thirst",
+        "little thirst despite dry mouth",
+        "thirstless despite dry mouth",
+        "minimal thirst dry mouth",
+        "not much thirst dry mouth",
+        "dry mouth little thirst"
       ],
       "remedies": [
         {
