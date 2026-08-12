@@ -269,7 +269,7 @@
   // can't measure "how much" better, only "better or not" — so treat it as
   // the fast, zero-effort option, with Save Visit's chip comparison as the
   // more precise option for a doctor who wants exact numbers.
-  const RESOLVED_WORDS = /\b(gone|resolved|cleared|disappeared|stopped|settled down|much better|completely better|no more|all better)\b/i;
+  const RESOLVED_WORDS = /\b(gone|resolved|cleared|disappeared|stop+ed|settled down|much better|completely better|no more|all better)\b/i;
   const IMPROVED_WORDS = /\b(better|improving|improved|reducing|reduced|less|subsiding|subsided|good|fine|well|great|okay|ok|normal)\b/i;
   const STALLED_WORDS = /\b(same|still|no change|unchanged|not improving|no better|persist|continue)\b/i;
   const WORSE_WORDS = /\b(worse|worsened|worsening|increased|increasing)\b/i;
@@ -298,7 +298,7 @@
     ["urine", "Urinary"], ["urinat", "Urinary"], ["bladder", "Urinary"], ["kidney", "Urinary"],
     ["period", "Female"], ["menses", "Female"], ["menstrual", "Female"], ["pregnan", "Female"],
     ["prostate", "Male"],
-    ["rash", "Skin"], ["itch", "Skin"], ["eczema", "Skin"], ["boil", "Skin"], ["acne", "Skin"], ["skin", "Skin"], ["hives", "Skin"],
+    ["rash", "Skin"], ["itch", "Skin"], ["eczema", "Skin"], ["boil", "Skin"], ["acne", "Skin"], ["skin", "Skin"], ["hives", "Skin"], ["hair", "Skin"], ["grey", "Skin"], ["gray", "Skin"],
     ["joint", "Extremities"], ["knee", "Extremities"], ["elbow", "Extremities"], ["wrist", "Extremities"], ["ankle", "Extremities"], ["hip", "Extremities"], ["arm", "Extremities"], ["leg", "Extremities"], ["limb", "Extremities"], ["muscle", "Extremities"],
     ["back", "Back"], ["spine", "Back"],
     ["sleep", "Sleep"], ["insomnia", "Sleep"], ["nightmare", "Sleep"],
