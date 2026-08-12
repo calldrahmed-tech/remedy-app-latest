@@ -46,23 +46,31 @@
   // repertory matcher on free-text symptoms (Expert Repertory mode visits, or
   // older visits saved before this feature existed) — flagged as "derived"
   // since free-text matching is inherently less certain than a picked chip.
+  // Every entry gets a stable `key` used for matching "is this the same
+  // symptom" across visits — the chip's own id when we have one (exact
+  // identity, immune to any rewording of its display text), or the
+  // "Section: rubric" string for free-text-derived entries (that string IS
+  // the rubric's own identity in the repertory, so it's equally stable).
+  // `label` is always the FULL text for display — chip tags carry a
+  // UI-truncated label ("…") on their own `tag.label` meant only for the
+  // small chip button, so the snapshot substitutes `tag.rubric` for that.
   function getVisitLevelEntries(visit) {
     const entries = [];
     if (visit && visit.tags && visit.tags.length) {
       visit.tags.forEach((t) => {
         const level = HERING_LEVEL[t.section];
-        if (level) entries.push({ label: t.label, section: t.section, level, weight: INTENSITY_WEIGHT[t.intensity] || 1 });
+        if (level) entries.push({ key: t.id || `${t.section}: ${t.label}`, label: t.label, section: t.section, level, weight: INTENSITY_WEIGHT[t.intensity] || 1 });
       });
       return { entries, derived: false };
     }
     if (visit && visit.symptoms && typeof scoreRepertory === "function" && typeof REPERTORY !== "undefined" && REPERTORY) {
       const { firedRubrics } = scoreRepertory(visit.symptoms, null);
-      (firedRubrics || []).forEach((key) => {
-        const idx = key.indexOf(": ");
-        const section = idx > -1 ? key.slice(0, idx) : "";
-        const label = idx > -1 ? key.slice(idx + 2) : key;
+      (firedRubrics || []).forEach((rubricKey) => {
+        const idx = rubricKey.indexOf(": ");
+        const section = idx > -1 ? rubricKey.slice(0, idx) : "";
+        const label = idx > -1 ? rubricKey.slice(idx + 2) : rubricKey;
         const level = HERING_LEVEL[section];
-        if (level) entries.push({ label, section, level, weight: 1 });
+        if (level) entries.push({ key: rubricKey, label, section, level, weight: 1 });
       });
       return { entries, derived: true };
     }
@@ -97,22 +105,20 @@
     const prevMinLevel = Math.min(...previous.entries.map((e) => e.level));
     const latestMinLevel = Math.min(...latest.entries.map((e) => e.level));
 
-    const latestLabels = new Set(latest.entries.map((e) => e.label.toLowerCase()));
-    const previousLabels = new Set(previous.entries.map((e) => e.label.toLowerCase()));
+    const latestKeys = new Set(latest.entries.map((e) => e.key));
+    const previousKeys = new Set(previous.entries.map((e) => e.key));
     const returningSymptoms = [];
     for (let i = 0; i < profiles.length - 2; i++) {
       profiles[i].entries.forEach((e) => {
-        const key = e.label.toLowerCase();
-        if (latestLabels.has(key) && !previousLabels.has(key)) {
-          returningSymptoms.push({ label: e.label, firstSeen: profiles[i].visit.date });
+        if (latestKeys.has(e.key) && !previousKeys.has(e.key)) {
+          returningSymptoms.push({ key: e.key, label: e.label, firstSeen: profiles[i].visit.date });
         }
       });
     }
     const seen = new Set();
     const dedupedReturning = returningSymptoms.filter((r) => {
-      const k = r.label.toLowerCase();
-      if (seen.has(k)) return false;
-      seen.add(k);
+      if (seen.has(r.key)) return false;
+      seen.add(r.key);
       return true;
     });
 
@@ -165,8 +171,8 @@
     }
 
     const v1Tags = v1.entries, v2Tags = v2.entries;
-    const v1ByLabel = new Map(v1Tags.map((t) => [t.label.toLowerCase(), t]));
-    const v2ByLabel = new Map(v2Tags.map((t) => [t.label.toLowerCase(), t]));
+    const v1ByKey = new Map(v1Tags.map((t) => [t.key, t]));
+    const v2ByKey = new Map(v2Tags.map((t) => [t.key, t]));
 
     // Mind-level check first — this overrides every other signal. A patient
     // who is mentally worse (even with better physical symptoms) is the
@@ -191,14 +197,14 @@
     let totalWeight = 0, improvedWeight = 0;
     v1Physical.forEach((t) => {
       totalWeight += t.weight;
-      const stillThere = v2ByLabel.get(t.label.toLowerCase());
+      const stillThere = v2ByKey.get(t.key);
       const remaining = stillThere ? stillThere.weight : 0;
       improvedWeight += Math.max(0, t.weight - remaining);
     });
     const improvementPercent = totalWeight ? Math.round((improvedWeight / totalWeight) * 100) : null;
 
-    const oldSymptomsGone = v1Physical.length > 0 && v1Physical.every((t) => !v2ByLabel.has(t.label.toLowerCase()));
-    const newSymptoms = v2Tags.filter((t) => !v1ByLabel.has(t.label.toLowerCase()));
+    const oldSymptomsGone = v1Physical.length > 0 && v1Physical.every((t) => !v2ByKey.has(t.key));
+    const newSymptoms = v2Tags.filter((t) => !v1ByKey.has(t.key));
 
     if (oldSymptomsGone && newSymptoms.length) {
       const avgOldLevel = v1Physical.reduce((s, t) => s + t.level, 0) / v1Physical.length;

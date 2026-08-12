@@ -337,10 +337,14 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .potency-warning-inline { font-size: 0.74rem; color: var(--orange-2); font-weight: 600; margin-top: 2px; }
 
 /* ---------- HERING'S LAW "CLINICAL DIRECTION" CARD — shown at the top of a
-   patient's visit history once 2+ visits exist. Neutral gray for "unclear",
-   green for "consistent with cure", orange for "review for possible
-   suppression" (never red — this is a prompt to look closer, not an alarm). */
-.hering-direction-card { margin: 4px 0 14px; border-radius: 10px; padding: 12px 14px; border: 1.5px solid #d1d5db; background: #f9fafb; }
+   patient's visit history once 2+ visits exist, and also live above the
+   search results when the doctor has typed the name of a returning patient.
+   Neutral gray for "unclear", green for "WAIT", yellow for "REPEAT/HIGHER
+   POTENCY", blue for "CHANGE REMEDY", orange for "ANTIDOTE/RE-EVALUATE"
+   (never red — this is a prompt to look closer, not an alarm). */
+#followUpLiveCard:not(:empty) { margin-top: 14px; }
+.hering-direction-card { margin: 4px 20px 14px; border-radius: 10px; padding: 12px 14px; border: 1.5px solid #d1d5db; background: #f9fafb; }
+#patientDetailContent .hering-direction-card { margin: 4px 0 14px; }
 .hering-direction-card.hering-cure { border-color: var(--green-1); background: #f0fdf4; }
 .hering-direction-card.hering-suppression { border-color: var(--orange-1); background: #fff7ed; }
 .hering-direction-card.hering-stalled { border-color: #eab308; background: #fefce8; }

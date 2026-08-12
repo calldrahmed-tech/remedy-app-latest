@@ -41,13 +41,55 @@
     const patientDetailContent = document.getElementById("patientDetailContent");
     const patientDetailBackBtn = document.getElementById("patientDetailBackBtn");
 
+    const followUpLiveCard = document.getElementById("followUpLiveCard");
+    const getProtocolBtn = document.getElementById("getProtocolBtn");
+    const resultBtn = document.getElementById("resultBtn");
+
     let myPatients = []; // cached after last fetch, filtered locally on search
 
     // Only logged-in doctors see the save/list buttons — nothing about this
     // requires touching script.js/protocol-mode.js, we only read their DOM.
     window.RemedyAuth.onAuthChange((user) => {
       patientActionsRow.style.display = user ? "flex" : "none";
+      if (user) {
+        // Pre-fetch so a returning patient's history is already available the
+        // moment the doctor runs a search — not just after opening "My Patients".
+        window.RemedyAuth.getMyPatients().then((list) => { myPatients = list; }).catch(() => {});
+      } else {
+        myPatients = [];
+        followUpLiveCard.innerHTML = "";
+      }
     });
+
+    function findPatientByName(name) {
+      const term = (name || "").trim().toLowerCase();
+      if (!term) return null;
+      return myPatients.find((p) => (p.name || "").trim().toLowerCase() === term) || null;
+    }
+
+    // Runs after a search, only when the doctor has typed the name of a
+    // patient who already has at least one saved visit — builds a live
+    // "visit 2" snapshot from what's on screen RIGHT NOW (nothing is saved),
+    // compares it to their last saved visit, and shows the same WAIT/REPEAT/
+    // CHANGE/ANTIDOTE card that "My Patients" shows, but before the doctor
+    // has to save anything first.
+    function checkLiveFollowUp() {
+      if (!window.HeringAnalysis) { followUpLiveCard.innerHTML = ""; return; }
+      const existing = findPatientByName(patientName.value);
+      if (!existing || !(existing.visits || []).length) { followUpLiveCard.innerHTML = ""; return; }
+      const lastVisit = existing.visits.slice().sort((a, b) => (b.date || "").localeCompare(a.date || ""))[0];
+      const caseInfo = getCurrentCaseInfo();
+      if (!caseInfo.tags.length && !caseInfo.symptoms) { followUpLiveCard.innerHTML = ""; return; }
+      const liveVisit = { date: new Date().toISOString(), symptoms: caseInfo.symptoms, tags: caseInfo.tags };
+      const result = window.HeringAnalysis.getSecondVisitAction(lastVisit, liveVisit);
+      followUpLiveCard.innerHTML = window.HeringAnalysis.renderFollowUpActionCard(result);
+    }
+
+    // A short delay lets the actual result cards finish rendering first —
+    // both search buttons render synchronously, but this keeps it safe even
+    // if that ever changes.
+    if (getProtocolBtn) getProtocolBtn.addEventListener("click", () => setTimeout(checkLiveFollowUp, 150));
+    if (resultBtn) resultBtn.addEventListener("click", () => setTimeout(checkLiveFollowUp, 150));
 
     // Reads whichever mode is currently visible (Expert Protocol or Full
     // Repertory) to capture what the doctor was just looking at.

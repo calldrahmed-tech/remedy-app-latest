@@ -659,7 +659,8 @@ function runProtocolSearch() {
 // chip text, which patient-records.js used to scrape from the DOM.
 window.getProtocolSymptomSnapshot = function () {
   return selectedSymptoms.map((s) => ({
-    label: s.tag.label,
+    id: s.tag.id,
+    label: s.tag.rubric || s.tag.label, // full text — s.tag.label is UI-truncated ("…") for the chip button
     section: s.tag.section,
     intensity: s.intensity
   }));
