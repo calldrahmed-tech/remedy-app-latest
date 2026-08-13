@@ -285,6 +285,31 @@ function buildTierBProtocol(remedy) {
    already an exact rubric the doctor picked; this function only has to do the arithmetic. */
 const INTENSITY_WEIGHT = { "+": 0.5, "++": 1.0, "+++": 1.75, "++++": 2.75 };
 
+// Intensity legitimately changes ONE thing about a protocol: how often to repeat the SAME
+// verified potency, not which potency to use — potency selection is remedy-specific and only
+// as trustworthy as the curated acute/chronic data already on file, so this never invents a
+// new potency number. Repetition frequency scaling with acuteness is a universal homeopathic
+// principle, true regardless of which remedy is indicated, so it's safe to apply generically.
+// "++" is the default/baseline intensity (what a plain, unmarked pick means) — only marking a
+// symptom above or below that baseline is worth a note; nothing shown at the baseline itself.
+const SEVERITY_REPETITION_NOTE = {
+  "+": "Marked as mild — the routine schedule above is usually enough; no need to repeat more often.",
+  "+++": "Marked as more severe — if there's no improvement within the expected window, repeating somewhat more frequently than the routine schedule is reasonable.",
+  "++++": "Marked as most severe/urgent — consider repeating more frequently (e.g. every 1-2 hours) until the acute intensity settles, then return to the routine schedule."
+};
+// Picks the HIGHEST intensity among the rubrics that actually matched THIS remedy (not just the
+// highest intensity anywhere in the whole selection) — a remedy that only matched a doctor's
+// mildly-marked symptom shouldn't inherit an urgent note meant for a different, more severe one.
+function highestMatchedIntensity(matched) {
+  const RANK = { "+": 1, "++": 2, "+++": 3, "++++": 4 };
+  let best = null, bestRank = -1;
+  (matched || []).forEach((m) => {
+    const rank = RANK[m.intensity] || 0;
+    if (rank > bestRank) { bestRank = rank; best = m.intensity; }
+  });
+  return best;
+}
+
 /* selections: [{ tag: {id, label, section, rubric}, intensity: "+"|"++"|"+++"|"++++" }, ...]
    Returns remedies ranked by weighted rubric-grade sum, percent-normalized against the
    theoretical max (every selection matched at grade 3), with a hard gate: if any symptom
@@ -351,13 +376,20 @@ function findRelatedDiseaseProtocols(remedyId) {
 function buildProtocolCard(rankedEntry, tier) {
   const remedy = rankedEntry.remedy;
   const related = findRelatedDiseaseProtocols(remedy.id);
+  // "Repeat more/less often" only makes sense for remedies actually dosed on a repeat schedule
+  // (category "acute" — see PROTOCOL_SCHEDULE_TEMPLATES above). Chronic/constitutional remedies
+  // are single-dose-then-observe by design — telling a doctor to repeat one of those every 1-2
+  // hours for a severe presentation would directly contradict that remedy's own dosing principle,
+  // not just be unhelpful.
+  const topIntensity = remedy.category === "acute" ? highestMatchedIntensity(rankedEntry.matched) : null;
   return {
     tier, // "primary" | "alternative"
     remedy,
     percent: rankedEntry.percent,
     matchedRubrics: rankedEntry.matched,
     protocol: buildTierBProtocol(remedy),
-    relatedDiseaseProtocols: related.map(p => ({ name: p.name, protocols: p.protocols }))
+    relatedDiseaseProtocols: related.map(p => ({ name: p.name, protocols: p.protocols })),
+    repetitionNote: SEVERITY_REPETITION_NOTE[topIntensity] || null
   };
 }
 

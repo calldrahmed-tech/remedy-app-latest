@@ -439,6 +439,7 @@ function renderProtocolCard(card, colorClass, headerLabel) {
         ${protocolFieldRow("Review", p.review)}
         ${protocolFieldRow("Expected response", p.expectedResponse)}
         ${protocolFieldRow("Tip", p.tip)}
+        ${card.repetitionNote ? protocolFieldRow("Repetition", card.repetitionNote) : ""}
         ${p.note ? `<div class="rc-field">${esc(p.note)}</div>` : ""}
         ${relatedProtocolNote(card)}
       </div>
