@@ -503,7 +503,7 @@ function renderDiseaseShortcutCard(disease, p, headerLabel) {
   return `
     <div class="remedy-card gold">
       <div class="rc-head">
-        <div class="rc-eyebrow">${esc(headerLabel)} · Curated protocol</div>
+        <div class="rc-eyebrow">🏷️ Named Condition Protocol · ${esc(headerLabel)}</div>
         <div class="rc-name">${esc(disease.name)}</div>
       </div>
       <div class="rc-body">
@@ -645,10 +645,15 @@ function runProtocolSearch() {
     const ranked = scoreProtocolMatch(selectedSymptoms);
     const cards = generateProtocolCards(selectedSymptoms);
     if (cards.length) {
-      if (selectedDiseaseShortcuts.length) html += `<div class="protocol-section-divider">Based on the individual symptoms you also selected:</div>`;
+      // When a named-condition (disease shortcut) card was already rendered above, these
+      // symptom-scored cards are a SEPARATE remedy for the rest of the case, not one blended
+      // answer — relabel clearly so the doctor reads two intentional parts, not two competing
+      // "top picks" for the same thing. See mixedWithShortcut branches in renderProtocolCard calls below.
+      const mixedWithShortcut = selectedDiseaseShortcuts.length > 0;
+      if (mixedWithShortcut) html += `<div class="protocol-section-divider">👇 Also matched from your other symptoms — a separate remedy for the rest of the case, alongside the named-condition protocol above:</div>`;
       cards.forEach(card => {
-        if (card.tier === "primary") { html += renderProtocolCard(card, "green", "Expert Protocol 1 · Primary"); html += renderClinicalPearl(card.remedy); }
-        else if (card.tier === "alternative") html += renderProtocolCard(card, "blue", "Expert Protocol 2 · Alternative");
+        if (card.tier === "primary") { html += renderProtocolCard(card, "green", mixedWithShortcut ? "Also Matched · Primary" : "Expert Protocol 1 · Primary"); html += renderClinicalPearl(card.remedy); }
+        else if (card.tier === "alternative") html += renderProtocolCard(card, "blue", mixedWithShortcut ? "Also Matched · Alternative" : "Expert Protocol 2 · Alternative");
         // Only surface the full Banerji-style combination card — a complete separate dosing
         // protocol, shown with equal visual weight to the actual matches — when the disease it
         // was authored for genuinely overlaps with what the doctor selected. An unrelated
