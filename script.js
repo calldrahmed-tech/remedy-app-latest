@@ -1013,25 +1013,37 @@ function scoreRepertory(inputText, excludedKeys) {
       motion: ["rest", "still", "quiet"], rest: ["motion", "moving", "movement"],
       light: ["dark", "darkness"], dark: ["light", "bright"]
     };
+    // Retries with the NEXT occurrence of the trigger's first word when the current one leads
+    // to a dead end — without this, a common word like "feels" appearing once early (in an
+    // unrelated clause) and again right next to the real match later on would permanently
+    // "poison" the search: findWholeWord always returns the EARLIEST occurrence, so the gap
+    // check against that first, wrong "feels" hits a clausebreak and fails, even though the
+    // second "feels" — a few words before the actual match — would have worked fine. Confirmed
+    // live: "Feels mentally confused[clausebreak]Feels as though the body is scattered..." was
+    // failing to fire Baptisia's own defining rubric purely because of the earlier "Feels".
     function tryOrder(orderedWords, polarityWord) {
       const oppositeWord = polarityWord === "worse" ? "better" : (polarityWord === "better" ? "worse" : null);
-      let searchFrom = 0, firstPos = -1;
-      for (const w of orderedWords) {
-        const found = findWholeWord(w, searchFrom);
-        const idx = found.idx;
-        if (idx < 0) return -1;
-        if (firstPos >= 0) {
-          if (idx - searchFrom > MAX_GAP_CHARS) return -1;
+      let firstWordSearchFrom = 0;
+      while (true) {
+        const firstFound = findWholeWord(orderedWords[0], firstWordSearchFrom);
+        if (firstFound.idx < 0) return -1; // no more occurrences of the first word — truly no match
+        let searchFrom = firstFound.idx + firstFound.len;
+        let ok = true;
+        for (let i = 1; i < orderedWords.length; i++) {
+          const w = orderedWords[i];
+          const found = findWholeWord(w, searchFrom);
+          const idx = found.idx;
+          if (idx < 0 || idx - searchFrom > MAX_GAP_CHARS) { ok = false; break; }
           const gapText = text.slice(searchFrom, idx);
-          if ((gapText + " ").includes(" clausebreak ")) return -1;
-          if (oppositeWord && (gapText + " ").includes(" " + oppositeWord + " ")) return -1;
+          if ((gapText + " ").includes(" clausebreak ")) { ok = false; break; }
+          if (oppositeWord && (gapText + " ").includes(" " + oppositeWord + " ")) { ok = false; break; }
           const qualityOpposites = QUALITY_OPPOSITES[w] || [];
-          if (qualityOpposites.some(qw => (gapText + " ").includes(" " + qw + " "))) return -1;
+          if (qualityOpposites.some(qw => (gapText + " ").includes(" " + qw + " "))) { ok = false; break; }
+          searchFrom = idx + found.len;
         }
-        if (firstPos < 0) firstPos = idx;
-        searchFrom = idx + found.len;
+        if (ok) return firstFound.idx;
+        firstWordSearchFrom = firstFound.idx + 1; // this occurrence of the first word didn't pan out — try the next one
       }
-      return firstPos;
     }
     const forwardResult = tryOrder(words, opposite ? words[0] : null);
     if (forwardResult >= 0) return isNegated(forwardResult) ? -1 : forwardResult;

@@ -134,6 +134,28 @@
       "rubricType": "differential"
     },
     {
+      "section": "Mouth",
+      "rubric": "Rapid dental decay, teeth decay soon after eruption or turn black at the gum line",
+      "triggers": [
+        "rapid dental decay",
+        "rapid tooth decay",
+        "teeth decay quickly",
+        "teeth crumble soon after they come in"
+      ],
+      "remedies": [
+        {
+          "id": "kreos",
+          "grade": 3
+        },
+        {
+          "id": "staph",
+          "grade": 1
+        }
+      ],
+      "category": "Particulars",
+      "rubricType": "keynote"
+    },
+    {
       "section": "Nose",
       "rubric": "Nosebleed, epistaxis",
       "triggers": [
@@ -479,7 +501,8 @@
         "periods come early and are very heavy",
         "menses arrive early with heavy flow",
         "periods are early and much too profuse",
-        "menorrhagia"
+        "menorrhagia",
+        "menstruation occurs early and is profuse"
       ],
       "remedies": [
         {
@@ -497,6 +520,10 @@
         {
           "id": "bell",
           "grade": 1
+        },
+        {
+          "id": "kreos",
+          "grade": 2
         }
       ],
       "category": "Particulars",
@@ -1069,8 +1096,6 @@
       "section": "Skin",
       "rubric": "Chronic recurrent boils or skin eruptions, craves sweets or alcohol",
       "triggers": [
-        "recurrent boils",
-        "chronic boils",
         "craving alcohol",
         "boils craves sweets"
       ],
@@ -1086,6 +1111,32 @@
         {
           "id": "hep",
           "grade": 1
+        }
+      ],
+      "category": "Particulars",
+      "rubricType": "differential"
+    },
+    {
+      "section": "Skin",
+      "rubric": "Chronic recurrent boils or abscesses, general/unspecified",
+      "triggers": [
+        "recurrent boils",
+        "chronic boils",
+        "chronic recurrent boils",
+        "keeps getting boils"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 3
+        },
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 2
         }
       ],
       "category": "Particulars",
@@ -1240,7 +1291,8 @@
         "dull heavy headache",
         "dizzy and sluggish",
         "fears falling",
-        "drowsy dull",
+        "drowsy dull head",
+        "head feels drowsy and dull",
         "dizziness after getting wet",
         "better hard pressure on head"
       ],
@@ -2844,7 +2896,11 @@
         "insects crawling under my skin",
         "like i've been frostbitten",
         "unusually clumsy",
-        "dropped things all week"
+        "dropped things all week",
+        "twitching and jerking of muscles",
+        "twitching and jerking",
+        "involuntary movements especially while resting",
+        "clumsy movements and tendency to stumble"
       ],
       "remedies": [
         {
@@ -3024,7 +3080,14 @@
         "burning tears that seem to scald",
         "bright light and wind",
         "nose runs too but that discharge doesn't burn",
-        "eyes that are raw"
+        "eyes that are raw",
+        "burning irritating eye discharge",
+        "profuse watery tears",
+        "nasal discharge comparatively mild",
+        "nasal discharge non irritating",
+        "worse in wind and light",
+        "frequent blinking",
+        "eye symptoms predominate"
       ],
       "remedies": [
         {
@@ -3277,7 +3340,11 @@
         "tendons feel too short",
         "sympathetic emotional patient",
         "sympathetic, emotional patient",
-        "weakness with trembling"
+        "weakness with trembling",
+        "contractures of muscles",
+        "tightness of muscles",
+        "muscle contractures",
+        "progressive stiffness and weakness"
       ],
       "remedies": [
         {
@@ -5173,6 +5240,29 @@
       "rubricType": "keynote"
     },
     {
+      "section": "Generalities",
+      "rubric": "General tendency toward suppuration and slow-healing wounds, not limited to glands",
+      "triggers": [
+        "tendency to suppuration",
+        "tendency toward suppuration",
+        "every injury tends to suppurate",
+        "slow healing wounds",
+        "slow to heal"
+      ],
+      "remedies": [
+        {
+          "id": "sil",
+          "grade": 3
+        },
+        {
+          "id": "hep",
+          "grade": 2
+        }
+      ],
+      "category": "Particulars",
+      "rubricType": "keynote"
+    },
+    {
       "section": "Weakness",
       "rubric": "Chronic weakness, chilly, offensive sweaty feet, slow-healing wounds",
       "triggers": [
@@ -5208,7 +5298,9 @@
         "partially expelled then recedes",
         "stool retracts",
         "stool goes back in",
-        "receding stool"
+        "receding stool",
+        "stool that seems to recede",
+        "stool seems to recede"
       ],
       "remedies": [
         {
@@ -8452,7 +8544,10 @@
       "rubric": "Cannot bear to hear of injustice or cruelty, becomes deeply distressed",
       "triggers": [
         "distressed hearing of injustice",
-        "cannot bear cruelty to others"
+        "cannot bear cruelty to others",
+        "strong sense of justice",
+        "concern about suffering and injustice",
+        "concerned about injustice"
       ],
       "remedies": [
         {
@@ -11930,7 +12025,10 @@
       "rubric": "Nasal discharge that is thick, ropy, and stringy, hard to blow out",
       "triggers": [
         "ropy stringy nasal mucus",
-        "thick stringy discharge hard to blow"
+        "thick stringy discharge hard to blow",
+        "thick stringy tenacious mucus",
+        "thick stringy mucus",
+        "tenacious mucus"
       ],
       "remedies": [
         {
@@ -11940,6 +12038,25 @@
         {
           "id": "hydr",
           "grade": 1
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Pain in a small, sharply defined spot that can be covered or pointed to with one fingertip",
+      "triggers": [
+        "pain can be pointed to with one finger",
+        "pain feels as though it can be pointed to with one finger",
+        "small localized spot of pain",
+        "sinus pressure concentrated at a small localized spot",
+        "pain covered by the tip of a finger"
+      ],
+      "remedies": [
+        {
+          "id": "kali-bi",
+          "grade": 3
         }
       ],
       "rubricType": "keynote"
@@ -18772,7 +18889,8 @@
       "rubric": "Sudden fits of laughter that are inappropriate to the situation, cannot be controlled",
       "triggers": [
         "laughs uncontrollably at inappropriate times",
-        "sudden fits of laughter that don't fit the moment"
+        "sudden fits of laughter that don't fit the moment",
+        "excessive laughter"
       ],
       "remedies": [
         {
@@ -18782,9 +18900,67 @@
         {
           "id": "hyos",
           "grade": 2
+        },
+        {
+          "id": "cann-i",
+          "grade": 2
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Altered perception of time, minutes seem extraordinarily long",
+      "triggers": [
+        "altered perception of time",
+        "minutes seem extraordinarily long",
+        "time seems to pass very slowly",
+        "time feels distorted"
+      ],
+      "remedies": [
+        {
+          "id": "cann-i",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Sensation of floating or being detached from the body",
+      "triggers": [
+        "sensation of floating",
+        "feels detached from the body",
+        "feels floating or detached from the body",
+        "out of body sensation"
+      ],
+      "remedies": [
+        {
+          "id": "cann-i",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Rapid flow of ideas, thoughts come quickly with difficulty concentrating",
+      "triggers": [
+        "thoughts seem to come rapidly",
+        "rapid flow of ideas",
+        "difficulty concentrating with racing thoughts",
+        "ideas crowd the mind"
+      ],
+      "remedies": [
+        {
+          "id": "cann-i",
+          "grade": 2
+        }
+      ],
+      "rubricType": "keynote"
     },
     {
       "section": "Mind",
@@ -23275,7 +23451,9 @@
       "rubric": "Tongue coated thick white as if painted with chalk or milk",
       "triggers": [
         "tongue coated thick white like chalk",
-        "white coated tongue looks painted"
+        "white coated tongue looks painted",
+        "thickly coated white tongue",
+        "thick white coated tongue"
       ],
       "remedies": [
         {
@@ -23288,6 +23466,49 @@
         },
         {
           "id": "puls",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Stomach",
+      "category": "Particulars",
+      "rubric": "Indigestion from overeating, gastric derangement after eating too much",
+      "triggers": [
+        "indigestion after overeating",
+        "complaints from overeating",
+        "gastric upset after eating too much",
+        "symptoms associated with overeating"
+      ],
+      "remedies": [
+        {
+          "id": "ant-c",
+          "grade": 3
+        },
+        {
+          "id": "nux-v",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Irritable and cannot bear to be touched, looked at, or disturbed",
+      "triggers": [
+        "irritable when disturbed",
+        "cannot bear to be touched",
+        "irritable when touched or looked at"
+      ],
+      "remedies": [
+        {
+          "id": "ant-c",
+          "grade": 2
+        },
+        {
+          "id": "ant-t",
           "grade": 1
         }
       ],
@@ -27343,12 +27564,15 @@
       "rubric": "Vaginal discharge that is greenish and irritating, with an offensive odor",
       "triggers": [
         "greenish irritating vaginal discharge with bad smell",
-        "offensive green discharge causing irritation"
+        "offensive green discharge causing irritation",
+        "very offensive vaginal discharge",
+        "discharge is corrosive",
+        "burning and irritation with discharge"
       ],
       "remedies": [
         {
           "id": "kreos",
-          "grade": 1
+          "grade": 2
         },
         {
           "id": "merc-sol",
@@ -32164,7 +32388,9 @@
       "triggers": [
         "complete loss of voice",
         "cannot speak above a whisper",
-        "total loss of voice aphonia"
+        "total loss of voice aphonia",
+        "hoarseness with loss of voice",
+        "loss of voice"
       ],
       "remedies": [
         {
