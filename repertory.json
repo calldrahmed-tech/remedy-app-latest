@@ -7852,7 +7852,9 @@
       "rubric": "Hides objects, secretive about trivial things, deceitful manner",
       "triggers": [
         "hides things secretly",
-        "secretive deceitful"
+        "secretive deceitful",
+        "secretive personality",
+        "very secretive"
       ],
       "remedies": [
         {
@@ -7862,6 +7864,28 @@
         {
           "id": "nat-mur",
           "grade": 1
+        },
+        {
+          "id": "thuj",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Mind",
+      "category": "Mind",
+      "rubric": "Marked sensitivity or self-consciousness about personal appearance",
+      "triggers": [
+        "sensitivity about personal appearance",
+        "marked sensitivity about personal appearance",
+        "self conscious about appearance",
+        "embarrassed about how they look"
+      ],
+      "remedies": [
+        {
+          "id": "thuj",
+          "grade": 2
         }
       ],
       "rubricType": "differential"
@@ -9274,7 +9298,10 @@
       "rubric": "Fixed idea or delusion that persists despite reasoning, patient otherwise sane",
       "triggers": [
         "fixed unshakeable delusion otherwise sane",
-        "persistent false belief immune to logic"
+        "persistent false belief immune to logic",
+        "fixed ideas and obsessive thoughts",
+        "strong fixed ideas",
+        "obsessive thoughts"
       ],
       "remedies": [
         {
@@ -10228,7 +10255,9 @@
       "rubric": "Worse from suppressed eruptions, discharges, or emotions",
       "triggers": [
         "worse since eruption suppressed",
-        "symptoms began after discharge stopped"
+        "symptoms began after discharge stopped",
+        "history of suppressed eruptions",
+        "associated with a history of suppressed eruptions"
       ],
       "remedies": [
         {
@@ -10238,6 +10267,10 @@
         {
           "id": "psor",
           "grade": 2
+        },
+        {
+          "id": "thuj",
+          "grade": 3
         }
       ],
       "rubricType": "differential"
@@ -17069,6 +17102,59 @@
       "rubricType": "differential"
     },
     {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Oily, greasy facial skin",
+      "triggers": [
+        "oily facial skin",
+        "oily skin on the face",
+        "greasy facial skin",
+        "greasy skin"
+      ],
+      "remedies": [
+        {
+          "id": "nat-mur",
+          "grade": 2
+        },
+        {
+          "id": "sel",
+          "grade": 2
+        },
+        {
+          "id": "thuj",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Multiple warts, no specific shape or location described",
+      "triggers": [
+        "multiple wart like growths",
+        "multiple warts",
+        "many warts",
+        "several warts",
+        "wart like growths"
+      ],
+      "remedies": [
+        {
+          "id": "thuj",
+          "grade": 3
+        },
+        {
+          "id": "caust",
+          "grade": 1
+        },
+        {
+          "id": "nit-ac",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
       "section": "Extremities",
       "category": "Particulars",
       "rubric": "Weakness of the ankles causing an awkward or unsteady gait",
@@ -21128,7 +21214,9 @@
       "rubric": "Sensation of something alive moving or turning over in the abdomen",
       "triggers": [
         "feels like something is moving inside the abdomen",
-        "sensation of a live thing turning over in the belly"
+        "sensation of a live thing turning over in the belly",
+        "feels as if something is alive or moving inside the body",
+        "something alive moving inside"
       ],
       "remedies": [
         {
