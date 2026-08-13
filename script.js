@@ -48,7 +48,7 @@ Promise.all([
     DB = remediesJson;
     REPERTORY = repertoryJson.repertory;
     CHIEF_SYMPTOM_TAGS = repertoryJson.chiefSymptomTags || [];
-    DISEASE_SHORTCUT_TAGS = (DB.diseaseProtocols || []).map(p => ({
+    DISEASE_SHORTCUT_TAGS = (DB.diseaseProtocols || []).filter(p => !p.hideFromShortcutSearch).map(p => ({
       id: "disease_" + p.id,
       label: p.name,
       diseaseId: p.id,

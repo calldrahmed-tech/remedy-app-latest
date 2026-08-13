@@ -22796,6 +22796,7 @@
     {
       "id": "fever-general-viral",
       "name": "Fever (General/Viral, Acute)",
+      "hideFromShortcutSearch": true,
       "synonyms": [
         "fever",
         "viral fever",
