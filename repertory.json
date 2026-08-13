@@ -1241,7 +1241,6 @@
         "dizzy and sluggish",
         "fears falling",
         "drowsy dull",
-        "after getting wet",
         "dizziness after getting wet",
         "better hard pressure on head"
       ],
@@ -5478,7 +5477,10 @@
         "after getting chilled",
         "since getting wet in the rain",
         "since getting caught in the rain",
-        "exposure to cold damp"
+        "exposure to cold damp",
+        "began after getting wet in cold rain",
+        "began after getting wet in the rain",
+        "after getting wet in cold rain"
       ],
       "remedies": [
         {
@@ -9956,7 +9958,13 @@
         "roll out of bed and shuffle",
         "moving around it eases up",
         "eases up considerably",
-        "sit still again for too long"
+        "sit still again for too long",
+        "worse first movement",
+        "worse on first movement",
+        "better continued movement",
+        "better continuous movement",
+        "worse initial movement",
+        "cannot stay still because movement relieves"
       ],
       "remedies": [
         {

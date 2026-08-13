@@ -819,6 +819,30 @@ function normalizeSynonyms(text) {
     .replace(/\bhot\b/g, "heat");
 }
 
+// Word-level synonym equivalence used by triggerFires' findWholeWord (below) — a single group
+// here fixes EVERY current and future trigger built on that concept, not just one rubric at a
+// time. Deliberately conservative: only word pairs actually confirmed to cause a real miss
+// (found via real reported cases), not a speculative blanket thesaurus — a wrong equivalence
+// here would silently corrupt matching across the whole repertory at once, the same leverage
+// that makes a right one so valuable. Add to this table, don't touch individual triggers, when
+// the next "right remedy, wrong word" case turns out to be this same class of gap.
+const SYNONYM_GROUPS = [
+  ["motion", "movement", "moving"],
+  ["continued", "continuous"],
+  // "angry"/"anger" deliberately excluded from this group — confirmed via regression testing
+  // that it causes real harm: "colic FROM anger" (a causation trigger, unrelated to temperament)
+  // started firing the Mind/irritability rubric and let Nux Vomica wrongly outrank Colocynthis.
+  // "irritable"/"irritability" alone is safe (same word, different grammatical form only).
+  ["irritable", "irritability"],
+  ["chill", "chilly", "shivering", "shivers"]
+];
+const SYNONYMS_OF = {};
+SYNONYM_GROUPS.forEach((group) => {
+  group.forEach((word) => {
+    SYNONYMS_OF[word] = group.filter((w) => w !== word);
+  });
+});
+
 function scoreRepertory(inputText, excludedKeys) {
   // NOTE: preserve digits (a-z AND 0-9) — a version that stripped all non-letter characters
   // meant a trigger like "4pm" could never match anything, since the input's own "4pm" was
@@ -831,7 +855,16 @@ function scoreRepertory(inputText, excludedKeys) {
   // topics, not by the comma itself. Treating every comma as a hard block broke the much
   // more common case of a plain symptom list ("fever, chills, vomiting, diarrhea") — a
   // list joined by commas describes the SAME patient's symptoms together, not a contrast.
+  // A newline is exactly as strong a clause boundary as a period — a doctor typing case notes
+  // as separate lines ("Joint pain after getting wet\nBetter from warmth\n...") means each line
+  // to be read on its own, the same way a period would separate two sentences. Without this,
+  // newlines were silently collapsed to a plain space by the final whitespace-cleanup below,
+  // leaving no boundary at all — which let word-gap/reversed-pair trigger matching bridge two
+  // completely unrelated lines together (confirmed: "...in cold rain" on one line and "Better
+  // from warmth" several lines later were being read as one "better...cold" pair, firing the
+  // exact opposite modality rubric from what the case actually said).
   const t = " " + normalizeSynonyms(inputText.toLowerCase())
+    .replace(/\n+/g, " clausebreak ")
     .replace(/\b(but|however|although|yet)\b/g, "$1 clausebreak")
     .replace(/[.;!?]/g, " clausebreak ")
     .replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ") + " ";
@@ -882,6 +915,17 @@ function scoreRepertory(inputText, excludedKeys) {
     }
     const exactIdx = text.indexOf(" " + trigger.toLowerCase() + " ");
     if (exactIdx >= 0) return isNegated(exactIdx) ? -1 : exactIdx;
+    // A single-word trigger ("irritable") should get the same synonym benefit multi-word
+    // triggers get below via findWholeWord's SYNONYMS_OF lookup — otherwise a bare one-word
+    // trigger is a dead end no synonym table can ever reach, since it never runs the gap-based
+    // matching path at all (single words return before word-gap logic even starts).
+    const triggerSyns = SYNONYMS_OF[trigger.toLowerCase().trim()];
+    if (triggerSyns) {
+      for (const syn of triggerSyns) {
+        const synIdx = text.indexOf(" " + syn + " ");
+        if (synIdx >= 0) return isNegated(synIdx) ? -1 : synIdx;
+      }
+    }
     // NOTE: deliberately NOT using the global STOPWORDS set here — that list treats
     // "worse"/"better" as optional (correct for materia medica matching), but for a
     // repertory TRIGGER phrase the polarity word is semantically essential ("worse from
@@ -907,15 +951,35 @@ function scoreRepertory(inputText, excludedKeys) {
     // that let "rest" match inside "restless", "restaurant", etc. Must also confirm the
     // character right after the word is a space (or end of string), or every short trigger
     // word risks matching as a prefix of some longer, unrelated word.
-    function findWholeWord(w, fromIdx) {
+    //
+    // Synonym-aware: a trigger authored with "motion" must also fire on a case written with
+    // "movement" — they're the same clinical fact, just different words. Rather than patch
+    // this one rubric at a time (found and fixed today, but there are 50+ other rubrics using
+    // "motion" that have the identical gap), this checks SYNONYMS_OF once, here, so a single
+    // word-pair added to that table fixes every current and future trigger at once. Returns
+    // {idx, len} instead of a bare index — len is the length of whichever word actually
+    // matched (the trigger's own word, or a same-length-or-different synonym), so the caller
+    // advances its search position by the right amount either way.
+    function findLiteralWord(word, fromIdx) {
       let idx = fromIdx;
       while (true) {
-        idx = text.indexOf(" " + w, idx);
+        idx = text.indexOf(" " + word, idx);
         if (idx < 0) return -1;
-        const afterCharIdx = idx + 1 + w.length;
+        const afterCharIdx = idx + 1 + word.length;
         if (text[afterCharIdx] === " ") return idx;
         idx += 1; // this occurrence was a prefix of a longer word — keep searching
       }
+    }
+    function findWholeWord(w, fromIdx) {
+      let best = { idx: findLiteralWord(w, fromIdx), len: w.length };
+      const syns = SYNONYMS_OF[w];
+      if (syns) {
+        syns.forEach((s) => {
+          const idx = findLiteralWord(s, fromIdx);
+          if (idx >= 0 && (best.idx < 0 || idx < best.idx)) best = { idx, len: s.length };
+        });
+      }
+      return best;
     }
     // Extracted so it can be tried in more than one word order — see below. Takes an
     // explicit ORDERED list of words and the polarity word to treat as "opposite-sensitive"
@@ -935,7 +999,8 @@ function scoreRepertory(inputText, excludedKeys) {
       const oppositeWord = polarityWord === "worse" ? "better" : (polarityWord === "better" ? "worse" : null);
       let searchFrom = 0, firstPos = -1;
       for (const w of orderedWords) {
-        const idx = findWholeWord(w, searchFrom);
+        const found = findWholeWord(w, searchFrom);
+        const idx = found.idx;
         if (idx < 0) return -1;
         if (firstPos >= 0) {
           if (idx - searchFrom > MAX_GAP_CHARS) return -1;
@@ -946,7 +1011,7 @@ function scoreRepertory(inputText, excludedKeys) {
           if (qualityOpposites.some(qw => (gapText + " ").includes(" " + qw + " "))) return -1;
         }
         if (firstPos < 0) firstPos = idx;
-        searchFrom = idx + w.length;
+        searchFrom = idx + found.len;
       }
       return firstPos;
     }
