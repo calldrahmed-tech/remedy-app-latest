@@ -5094,6 +5094,40 @@
     },
     {
       "section": "Fever",
+      "rubric": "Fever, general/unspecified",
+      "triggers": [
+        "fever general",
+        "fever unspecified",
+        "nonspecific fever",
+        "undifferentiated fever"
+      ],
+      "remedies": [
+        {
+          "id": "acon",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        },
+        {
+          "id": "gels",
+          "grade": 1
+        }
+      ],
+      "category": "Generals",
+      "rubricType": "differential"
+    },
+    {
+      "section": "Fever",
       "rubric": "Chill predominant / chill with fever / restlessness during chill",
       "triggers": [
         "fever with chill",
@@ -36555,6 +36589,12 @@
       "label": "Fever with thirst",
       "section": "Fever",
       "rubric": "Fever with thirst"
+    },
+    {
+      "id": "sym_fever_general_unspecified",
+      "label": "Fever, general/unspecified",
+      "section": "Fever",
+      "rubric": "Fever, general/unspecified"
     },
     {
       "id": "sym_chill_predominant_chill_with_fever_restlessness_du",
