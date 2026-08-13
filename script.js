@@ -834,7 +834,25 @@ const SYNONYM_GROUPS = [
   // started firing the Mind/irritability rubric and let Nux Vomica wrongly outrank Colocynthis.
   // "irritable"/"irritability" alone is safe (same word, different grammatical form only).
   ["irritable", "irritability"],
-  ["chill", "chilly", "shivering", "shivers"]
+  ["chill", "chilly", "shivering", "shivers"],
+  // Second batch — kept to the same safe pattern as above: mostly grammatical variants of one
+  // root word (lowest possible cross-contamination risk), plus a few genuinely unambiguous
+  // synonym pairs. Words with a real double-meaning risk (like "anger" above, or "faint"/"cries"
+  // which both have a common non-symptom sense) are deliberately left out rather than guessed at.
+  ["exhausted", "exhaustion"],
+  ["restless", "restlessness"],
+  ["swelling", "swollen"],
+  ["nausea", "nauseous", "nauseated"],
+  ["dizzy", "dizziness"],
+  ["sweating", "sweaty", "perspiration", "perspiring"],
+  ["breathless", "breathlessness"],
+  ["weeping", "tearful"],
+  ["sleeplessness", "insomnia", "sleepless"],
+  ["constipated", "constipation"],
+  ["diarrhea", "diarrhoea"],
+  ["fainting", "faintness"],
+  ["numbness", "numb"],
+  ["stammering", "stuttering"]
 ];
 const SYNONYMS_OF = {};
 SYNONYM_GROUPS.forEach((group) => {

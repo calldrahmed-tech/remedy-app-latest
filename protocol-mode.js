@@ -287,18 +287,15 @@ function addDiseaseShortcut(tag) {
   protocolSearchEl.focus();
 }
 
-function renderSuggestions(query) {
-  if (!protocolDataReady || !query.trim()) { protocolSuggestionsEl.style.display = "none"; return; }
-  const q = query.trim().toLowerCase();
-  const selectedIds = new Set(selectedSymptoms.map(s => s.tag.id));
-  const selectedDiseaseIds = new Set(selectedDiseaseShortcuts.map(d => d.id));
-  // Match every word of the query (in any order) against each tag's full haystack —
-  // label + rubric + all of that rubric's own trigger phrases. Plain single-substring
-  // matching on just the label missed real matches two different ways: (1) a keyword like
-  // "stammering" can sit past the label's 52-char truncation point, and (2) word order in
-  // the query often does not match the label's word order (a doctor searching "looking old"
-  // won't match a label written as "old-looking face" even though they mean the same thing).
-  const qWords = q.split(/\s+/).filter(Boolean);
+// Match every word of a search TERM (in any order) against each tag's full haystack — label +
+// rubric + all of that rubric's own trigger phrases. Plain single-substring matching on just
+// the label missed real matches two different ways: (1) a keyword like "stammering" can sit
+// past the label's 52-char truncation point, and (2) word order in the query often does not
+// match the label's word order (a doctor searching "looking old" won't match a label written
+// as "old-looking face" even though they mean the same thing).
+function matchesForTerm(term, selectedIds, selectedDiseaseIds) {
+  const qWords = term.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  if (!qWords.length) return { matches: [], diseaseMatches: [], anyHits: false };
   const allHits = CHIEF_SYMPTOM_TAGS.filter(t => {
     const hay = TAG_SEARCH_TEXT[t.id] || t.label.toLowerCase();
     return qWords.every(w => hay.includes(w));
@@ -307,20 +304,17 @@ function renderSuggestions(query) {
   // ABOVE the granular symptom matches — a doctor typing "abscess" almost certainly wants the
   // one-tap curated Abscess protocol, not to be buried under individual symptom rubrics.
   const diseaseHits = (DISEASE_SHORTCUT_TAGS || []).filter(d => qWords.every(w => d.searchText.includes(w)));
-  const matches = allHits.filter(t => !selectedIds.has(t.id)).slice(0, 8);
-  const diseaseMatches = diseaseHits.filter(d => !selectedDiseaseIds.has(d.id)).slice(0, 5);
-  if (!matches.length && !diseaseMatches.length) {
-    // Distinguish "you already added the only match" (not an error) from "this symptom
-    // is not in the repertory yet" (a real coverage gap) — showing the same generic
-    // message for both made an already-selected symptom look like a broken search.
-    const msg = (allHits.length || diseaseHits.length) ? "Already added" : "No matching symptom — try a different word";
-    protocolSuggestionsEl.innerHTML = `<div class="protocol-suggestion-empty">${msg}</div>`;
-    protocolSuggestionsEl.style.display = "block";
-    return;
-  }
-  protocolSuggestionsEl.innerHTML =
-    diseaseMatches.map(d => `<button type="button" class="protocol-suggestion-item disease-suggestion-item" data-disease-id="${esc(d.id)}">🏷️ ${esc(d.label)} <span class="suggestion-tag-hint">curated protocol</span></button>`).join("") +
+  return {
+    matches: allHits.filter(t => !selectedIds.has(t.id)).slice(0, 8),
+    diseaseMatches: diseaseHits.filter(d => !selectedDiseaseIds.has(d.id)).slice(0, 5),
+    anyHits: allHits.length > 0 || diseaseHits.length > 0
+  };
+}
+function suggestionButtonsHTML(diseaseMatches, matches) {
+  return diseaseMatches.map(d => `<button type="button" class="protocol-suggestion-item disease-suggestion-item" data-disease-id="${esc(d.id)}">🏷️ ${esc(d.label)} <span class="suggestion-tag-hint">curated protocol</span></button>`).join("") +
     matches.map(t => `<button type="button" class="protocol-suggestion-item" data-id="${esc(t.id)}">${esc(t.label)}</button>`).join("");
+}
+function wireSuggestionButtons() {
   protocolSuggestionsEl.querySelectorAll(".disease-suggestion-item").forEach(btn => {
     btn.addEventListener("click", () => {
       const tag = DISEASE_SHORTCUT_TAGS.find(d => d.id === btn.dataset.diseaseId);
@@ -333,6 +327,48 @@ function renderSuggestions(query) {
       if (tag) addSymptom(tag);
     });
   });
+}
+function renderSuggestions(query) {
+  if (!protocolDataReady || !query.trim()) { protocolSuggestionsEl.style.display = "none"; return; }
+  const selectedIds = new Set(selectedSymptoms.map(s => s.tag.id));
+  const selectedDiseaseIds = new Set(selectedDiseaseShortcuts.map(d => d.id));
+
+  // Comma-separated batch search: "fever, chill, weak" — each term needs its OWN match pass
+  // (the old single-pass search required every word of the WHOLE query in one tag's haystack,
+  // so a comma list never matched anything at all). Suggestions are grouped under each term so
+  // a doctor can tap-add the right chip for each symptom without clearing and retyping between
+  // them — this is the actual gap; the free-text Expert Repertory box already handles a comma
+  // list fine on its own, since it scores the whole case as prose rather than matching one tag.
+  const terms = query.split(",").map(s => s.trim()).filter(Boolean);
+  if (terms.length > 1) {
+    let html = "";
+    terms.forEach(term => {
+      const { matches, diseaseMatches, anyHits } = matchesForTerm(term, selectedIds, selectedDiseaseIds);
+      html += `<div class="protocol-suggestion-group-label">${esc(term)}</div>`;
+      if (!matches.length && !diseaseMatches.length) {
+        html += `<div class="protocol-suggestion-empty">${anyHits ? "Already added" : "No matching symptom — try a different word"}</div>`;
+      } else {
+        html += suggestionButtonsHTML(diseaseMatches, matches);
+      }
+    });
+    protocolSuggestionsEl.innerHTML = html;
+    wireSuggestionButtons();
+    protocolSuggestionsEl.style.display = "block";
+    return;
+  }
+
+  const { matches, diseaseMatches, anyHits } = matchesForTerm(query, selectedIds, selectedDiseaseIds);
+  if (!matches.length && !diseaseMatches.length) {
+    // Distinguish "you already added the only match" (not an error) from "this symptom
+    // is not in the repertory yet" (a real coverage gap) — showing the same generic
+    // message for both made an already-selected symptom look like a broken search.
+    const msg = anyHits ? "Already added" : "No matching symptom — try a different word";
+    protocolSuggestionsEl.innerHTML = `<div class="protocol-suggestion-empty">${msg}</div>`;
+    protocolSuggestionsEl.style.display = "block";
+    return;
+  }
+  protocolSuggestionsEl.innerHTML = suggestionButtonsHTML(diseaseMatches, matches);
+  wireSuggestionButtons();
   protocolSuggestionsEl.style.display = "block";
 }
 protocolSearchEl.addEventListener("input", () => renderSuggestions(protocolSearchEl.value));
