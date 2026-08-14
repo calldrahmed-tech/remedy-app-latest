@@ -25524,6 +25524,106 @@
         {
           "id": "sars",
           "grade": 1
+        },
+        {
+          "id": "berb",
+          "grade": 1
+        },
+        {
+          "id": "caps",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Kidney pain, right side",
+      "triggers": [
+        "right kidney pain",
+        "right side kidney pain",
+        "pain in right kidney"
+      ],
+      "remedies": [
+        {
+          "id": "lyc",
+          "grade": 2
+        },
+        {
+          "id": "sars",
+          "grade": 2
+        },
+        {
+          "id": "apis",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Kidney pain, left side",
+      "triggers": [
+        "left kidney pain",
+        "left side kidney pain",
+        "pain in left kidney"
+      ],
+      "remedies": [
+        {
+          "id": "pareir",
+          "grade": 3
+        },
+        {
+          "id": "berb",
+          "grade": 3
+        },
+        {
+          "id": "zinc",
+          "grade": 2
+        },
+        {
+          "id": "coloc",
+          "grade": 1
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Bladder pain, feels like straining or pushing while passing urine",
+      "triggers": [
+        "straining to pass urine",
+        "pushing feeling passing urine",
+        "bladder tenesmus",
+        "urging and straining to urinate"
+      ],
+      "remedies": [
+        {
+          "id": "canth",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
+        },
+        {
+          "id": "dig",
+          "grade": 1
+        },
+        {
+          "id": "dulc",
+          "grade": 1
+        },
+        {
+          "id": "merc-c",
+          "grade": 1
+        },
+        {
+          "id": "sulph",
+          "grade": 1
         }
       ],
       "rubricType": "differential"
@@ -42553,6 +42653,24 @@
       "label": "Acute urinary tract infection with burning, frequenc…",
       "section": "Urinary",
       "rubric": "Acute urinary tract infection with burning, frequency, fever, and inflammation of the urinary passage"
+    },
+    {
+      "id": "sym_kidney_pain_right_side",
+      "label": "Kidney pain, right side",
+      "section": "Urinary",
+      "rubric": "Kidney pain, right side"
+    },
+    {
+      "id": "sym_kidney_pain_left_side",
+      "label": "Kidney pain, left side",
+      "section": "Urinary",
+      "rubric": "Kidney pain, left side"
+    },
+    {
+      "id": "sym_bladder_pain_straining_pushing_while_passing_urine",
+      "label": "Bladder pain, feels like straining/pushing while pas…",
+      "section": "Urinary",
+      "rubric": "Bladder pain, feels like straining or pushing while passing urine"
     },
     {
       "id": "sym_boils_or_abscesses_with_redness_swelling_throbbing_pain_and_",

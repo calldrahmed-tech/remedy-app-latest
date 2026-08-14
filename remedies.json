@@ -13010,6 +13010,43 @@
         "chronic": "Mother tincture (Q) or low potency, under practitioner guidance"
       },
       "maxScore": 9.5
+    },
+    {
+      "id": "pareir",
+      "name": "Pareira Brava",
+      "abbr": "Pareir",
+      "category": "acute",
+      "system": [
+        "urinary"
+      ],
+      "keynotes": [
+        {
+          "t": "must kneel down and press head to the floor to pass urine",
+          "w": 2
+        },
+        {
+          "t": "pain in glans penis and along the urethra during urination",
+          "w": 2
+        },
+        {
+          "t": "renal colic with pain radiating down the thighs",
+          "w": 2
+        },
+        {
+          "t": "violent urging to urinate",
+          "w": 1.5
+        },
+        {
+          "t": "thick mucus in the urine",
+          "w": 1.5
+        }
+      ],
+      "diseaseTags": [],
+      "potency": {
+        "acute": "30C, repeated as needed during colic",
+        "chronic": "-"
+      },
+      "maxScore": 9
     }
   ],
   "biochemics": [
@@ -22796,7 +22833,6 @@
     {
       "id": "fever-general-viral",
       "name": "Fever (General/Viral, Acute)",
-      "hideFromShortcutSearch": true,
       "synonyms": [
         "fever",
         "viral fever",
