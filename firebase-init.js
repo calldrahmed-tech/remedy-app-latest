@@ -9,7 +9,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
 import {
   getFirestore, doc, getDoc, setDoc, serverTimestamp,
-  collection, addDoc, updateDoc, query, where, orderBy, getDocs, arrayUnion
+  collection, addDoc, updateDoc, deleteDoc, query, where, orderBy, getDocs, arrayUnion
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 import {
   getFunctions, httpsCallable
@@ -145,5 +145,13 @@ window.RemedyAuth = {
     const patientsRef = collection(db, "users", currentUser.uid, "patients");
     const snap = await getDocs(query(patientsRef, orderBy("updatedAt", "desc")));
     return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+  },
+
+  // Permanently removes one patient record (and its full visit history) for the
+  // logged-in doctor. firestore.rules already restricts this to the doctor's own
+  // patients — a doctor can never delete another doctor's record.
+  async deletePatient(patientId) {
+    if (!currentUser) throw new Error("Please log in first.");
+    await deleteDoc(doc(db, "users", currentUser.uid, "patients", patientId));
   }
 };

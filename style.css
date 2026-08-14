@@ -163,6 +163,9 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .patient-detail-header { margin-bottom: 10px; }
 .patient-detail-header .name { font-weight: 800; font-size: 1.05rem; color: var(--ink); }
 .patient-detail-header .meta { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+.patient-delete-btn { margin-top: 8px; background: none; border: 1px solid #c0392b; color: #c0392b; font-size: 0.76rem; font-weight: 700; padding: 5px 12px; border-radius: 999px; cursor: pointer; font-family: inherit; }
+.patient-delete-btn:hover:not(:disabled) { background: #c0392b; color: #fff; }
+.patient-delete-btn:disabled { opacity: 0.6; cursor: default; }
 .patient-visit-card { background: #f6f5f0; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
 .patient-visit-date { font-size: 0.72rem; font-weight: 700; color: var(--green-2); }
 .patient-visit-remedy { font-weight: 700; font-size: 0.88rem; color: var(--ink); margin-top: 2px; }

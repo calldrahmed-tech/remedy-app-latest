@@ -206,6 +206,7 @@
         <div class="patient-detail-header">
           <div class="name">${esc(p.name)}</div>
           <div class="meta">${p.age ? "Age " + esc(p.age) + " · " : ""}${esc(p.contact || "")}</div>
+          <button type="button" class="patient-delete-btn">🗑️ Delete patient</button>
         </div>
         ${visits.length ? `
         <div class="patient-quick-update">
@@ -268,6 +269,27 @@
         quickBtn.addEventListener("click", runQuickCheck);
         quickInput.addEventListener("keydown", (e) => { if (e.key === "Enter") runQuickCheck(); });
       }
+
+      const deleteBtn = patientDetailContent.querySelector(".patient-delete-btn");
+      deleteBtn.addEventListener("click", async () => {
+        // Deleting a patient's full visit history is not reversible — a plain
+        // browser confirm is enough friction to stop an accidental tap without
+        // adding a whole extra modal for something a doctor does rarely.
+        const sure = confirm(`Delete ${p.name} and their full visit history? This cannot be undone.`);
+        if (!sure) return;
+        deleteBtn.disabled = true;
+        deleteBtn.textContent = "Deleting…";
+        try {
+          await window.RemedyAuth.deletePatient(patientId);
+          myPatients = myPatients.filter(x => x.id !== patientId);
+          backToList();
+          renderPatientList(patientSearchInput.value);
+        } catch (err) {
+          deleteBtn.disabled = false;
+          deleteBtn.textContent = "🗑️ Delete patient";
+          alert(err && err.message ? err.message : "Could not delete — try again.");
+        }
+      });
 
       patientListArea.style.display = "none";
       patientSearchInput.style.display = "none";
