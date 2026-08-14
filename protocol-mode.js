@@ -261,7 +261,9 @@ const QUICK_SYMPTOM_INDEX = {
   "boils": ["sym_boils_or_abscesses_acutely_very_sensitive_to_touch", "sym_chronic_recurrent_boils_or_skin_eruptions_craves_s", "sym_recurrent_boils_or_abscesses_near_a_gland_that_keep_coming_b", "sym_boils_or_abscesses_with_redness_swelling_throbbing_pain_and_", "sym_recurring_styes_boils_or_pimples_that_keep_appearing_in_diff", "sym_carbuncle_a_cluster_of_connected_boils_with_multiple_opening"],
   "ear pain": ["sym_ear_pain_worse_swallowing_or_cold_drafts_weepy_and", "sym_sharp_stabbing_bursting_ear_pain_red_and_hot_worse", "sym_throat_pain_that_extends_to_the_ear_on_swallowing_one_sided"],
   "toothache": ["sym_acute_toothache_with_throbbing_or_sharp_pain_worse_from_cold"],
-  "burning urination": ["sym_burning_in_the_urethra_that_continues_after_urination_has_fi", "sym_common_mild_burning_during_urination_in_a_woman_without_feve", "sym_gonorrhea_acute_urethral_discharge_with_burning_on_urination"],
+  "burning urination": ["sym_acute_urinary_tract_infection_with_burning_frequency_fever_a", "sym_burning_in_the_urethra_that_continues_after_urination_has_fi", "sym_common_mild_burning_during_urination_in_a_woman_without_feve", "sym_gonorrhea_acute_urethral_discharge_with_burning_on_urination"],
+  "urine burning": ["sym_acute_urinary_tract_infection_with_burning_frequency_fever_a", "sym_burning_in_the_urethra_that_continues_after_urination_has_fi", "sym_common_mild_burning_during_urination_in_a_woman_without_feve"],
+  "burning urine": ["sym_acute_urinary_tract_infection_with_burning_frequency_fever_a", "sym_burning_in_the_urethra_that_continues_after_urination_has_fi", "sym_common_mild_burning_during_urination_in_a_woman_without_feve"],
   "irritable": ["sym_headache_worse_4_8pm_irritable_and_angry_sour_belc", "sym_extremely_low_despondent_mood_that_alternates_with_irritable", "sym_aversion_to_consolation_becomes_worse_or_more_irritable_when"],
   "restless": ["sym_restless_sleep_grinding_teeth_talks_or_starts_duri", "sym_anxiety_with_restlessness_fear_of_death", "sym_restless_anxiety_must_get_up_and_walk_worse_after_", "sym_chill_predominant_chill_with_fever_restlessness_du"],
   "discharge": ["sym_chronic_catarrh_with_thin_yellow_or_greenish_disch", "sym_thin_watery_acrid_nasal_discharge_that_excoriates_", "sym_hot_burning_acrid_tears_that_scald_the_cheeks_blan"],
@@ -269,7 +271,7 @@ const QUICK_SYMPTOM_INDEX = {
   "appetite": ["sym_ravenous_increased_hunger", "sym_decreased_appetite_anorexia", "sym_capricious_appetite_changeable", "sym_must_eat_frequently_hunger_soon_after_eating_faint"],
   "indigestion": ["sym_ordinary_indigestion_with_fullness_and_discomfort_after_a_no", "sym_nervous_indigestion_dyspepsia_brought_on_or_markedly_worse_f"],
   "grief": ["sym_silent_grief_dwells_on_past_hurts_cannot_cry", "sym_recent_grief_with_alternating_laughing_weeping_pul", "sym_ailments_from_grief_sorrow_or_bereavement", "sym_ailments_from_prolonged_unresolved_grief_unable_to"],
-  "urine": ["sym_urine_smells_like_violets_burning_in_kidneys_and_u", "sym_urine_strong_smelling_ammonia_like_odor", "sym_urine_that_deposits_a_thick_brick_dust_red_sediment_on_stand"],
+  "urine": ["sym_acute_urinary_tract_infection_with_burning_frequency_fever_a", "sym_urine_smells_like_violets_burning_in_kidneys_and_u", "sym_urine_strong_smelling_ammonia_like_odor", "sym_urine_that_deposits_a_thick_brick_dust_red_sediment_on_stand"],
   "skin dry": ["sym_dryness_of_mouth_mucous_membranes_or_skin", "sym_skin_dry_rough_and_cracked_especially_in_cold_weat", "sym_dry_scaly_patches_of_skin_that_worsen_specifically_in_cold_w"]
 };
 
@@ -414,7 +416,16 @@ function wireSuggestionButtons(container) {
 function quickIndexGroupHTML(term, selectedIds) {
   const q = term.trim().toLowerCase();
   if (!q) return null;
-  const key = Object.keys(QUICK_SYMPTOM_INDEX).find(k => q === k || q.startsWith(k) || k.startsWith(q));
+  const qWords = q.split(/\s+/);
+  // A multi-word query must match a key EXACTLY — otherwise a two-word search like "urine
+  // burning" gets swallowed by the shorter single-word "urine" entry (since it technically
+  // starts with "urine"), hiding the more specific burning-urination group entirely. Prefix
+  // tolerance (for mid-typing, e.g. "feve" while typing "fever") only makes sense when both
+  // the query and the key are a single word.
+  const key = Object.keys(QUICK_SYMPTOM_INDEX).find(k => {
+    if (q === k) return true;
+    return qWords.length === 1 && k.split(/\s+/).length === 1 && (q.startsWith(k) || k.startsWith(q));
+  });
   if (!key) return null;
   const ids = QUICK_SYMPTOM_INDEX[key].filter(id => !selectedIds.has(id));
   if (!ids.length) return null;
