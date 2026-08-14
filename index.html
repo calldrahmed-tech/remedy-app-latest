@@ -24,20 +24,35 @@
 
   <div class="mode-switcher" role="tablist">
     <button class="mode-tab active" data-mode="protocol" role="tab" aria-selected="true">⚡ Expert Protocol</button>
+    <button class="mode-tab" data-mode="combo" role="tab" aria-selected="false">🧩 Combine Symptoms</button>
     <button class="mode-tab" data-mode="classical" role="tab" aria-selected="false">📚 Expert Repertory</button>
   </div>
 
-  <!-- PROTOCOL MODE input (default view) -->
+  <!-- PROTOCOL MODE input (default view) — named-condition shortcuts only, each with its own
+       ready-made protocol. No individual symptom picking here anymore (see Combine Symptoms). -->
   <div id="protocolModeInput" class="header-search">
-    <label class="symptom-label">Chief Symptoms <span class="symptom-sublabel">(mark importance with +)</span></label>
-    <p class="protocol-input-hint">Add multiple symptoms below (mark importance with +) for one combined best-fit remedy — or type a known condition name (e.g. "abscess") for its ready-made protocol.</p>
+    <label class="symptom-label">Named Condition</label>
+    <p class="protocol-input-hint">Type a known condition name (e.g. "abscess", "fever") for its ready-made protocol.</p>
     <div id="protocolChips" class="protocol-chips"></div>
-    <div id="protocolRelatedSuggestions" class="protocol-related-suggestions" style="display:none;"></div>
     <div class="protocol-search-row">
-      <input type="search" id="protocolTagSearch" name="chiefSymptomSearch" placeholder="Type a symptom… e.g. thirst, chilly, fever" autocomplete="off" data-lpignore="true" data-form-type="other">
+      <input type="search" id="protocolTagSearch" name="conditionSearch" placeholder="Type a condition… e.g. abscess, scarlet fever" autocomplete="off" data-lpignore="true" data-form-type="other">
     </div>
     <div id="protocolSuggestions" class="protocol-suggestions" style="display:none;"></div>
     <button id="getProtocolBtn" disabled>Get Expert Protocol</button>
+  </div>
+
+  <!-- COMBINE SYMPTOMS MODE input (hidden by default) — individual symptom chips only, scored
+       together into one combined best-fit remedy. No named-condition shortcuts here. -->
+  <div id="comboModeInput" class="header-search" style="display:none;">
+    <label class="symptom-label">Chief Symptoms <span class="symptom-sublabel">(mark importance with +)</span></label>
+    <p class="protocol-input-hint">Add multiple symptoms below (mark importance with +) for one combined best-fit remedy.</p>
+    <div id="comboChips" class="protocol-chips"></div>
+    <div id="comboRelatedSuggestions" class="protocol-related-suggestions" style="display:none;"></div>
+    <div class="protocol-search-row">
+      <input type="search" id="comboTagSearch" name="chiefSymptomSearch" placeholder="Type a symptom… e.g. thirst, chilly, fever" autocomplete="off" data-lpignore="true" data-form-type="other">
+    </div>
+    <div id="comboSuggestions" class="protocol-suggestions" style="display:none;"></div>
+    <button id="getComboBtn" disabled>Get Combined Remedy</button>
   </div>
 
   <!-- CLASSICAL MODE input (hidden by default) -->
@@ -132,7 +147,9 @@
     </div>
   </div>
 
-  <div id="protocolSamplesBar" class="samples-bar">
+  <div id="protocolSamplesBar" class="samples-bar" style="display:none;"></div>
+
+  <div id="comboSamplesBar" class="samples-bar" style="display:none;">
     <div class="lbl">Try a sample:</div>
     <button class="sample-chip" id="protocolSampleFever">Fever with chill (Ars-alb example)</button>
   </div>

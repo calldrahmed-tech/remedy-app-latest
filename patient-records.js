@@ -43,6 +43,7 @@
 
     const followUpLiveCard = document.getElementById("followUpLiveCard");
     const getProtocolBtn = document.getElementById("getProtocolBtn");
+    const getComboBtn = document.getElementById("getComboBtn");
     const resultBtn = document.getElementById("resultBtn");
 
     let myPatients = []; // cached after last fetch, filtered locally on search
@@ -89,14 +90,16 @@
     // both search buttons render synchronously, but this keeps it safe even
     // if that ever changes.
     if (getProtocolBtn) getProtocolBtn.addEventListener("click", () => setTimeout(checkLiveFollowUp, 150));
+    if (getComboBtn) getComboBtn.addEventListener("click", () => setTimeout(checkLiveFollowUp, 150));
     if (resultBtn) resultBtn.addEventListener("click", () => setTimeout(checkLiveFollowUp, 150));
 
     // Reads whichever mode is currently visible (Expert Protocol or Full
     // Repertory) to capture what the doctor was just looking at.
     function getCurrentCaseInfo() {
       const protocolVisible = getComputedStyle(document.getElementById("protocolModeInput")).display !== "none";
-      if (protocolVisible) {
-        const chipsText = (document.getElementById("protocolChips").innerText || "").trim();
+      const comboVisible = getComputedStyle(document.getElementById("comboModeInput")).display !== "none";
+      if (protocolVisible || comboVisible) {
+        const chipsText = (document.getElementById(protocolVisible ? "protocolChips" : "comboChips").innerText || "").trim();
         const topRemedyEl = document.querySelector("#protocolResults .rc-name");
         return {
           symptoms: chipsText,

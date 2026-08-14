@@ -20,23 +20,39 @@ const protocolChipsEl = pEl("protocolChips");
 const protocolSearchEl = pEl("protocolTagSearch");
 const protocolSuggestionsEl = pEl("protocolSuggestions");
 const getProtocolBtn = pEl("getProtocolBtn");
+const comboChipsEl = pEl("comboChips");
+const comboSearchEl = pEl("comboTagSearch");
+const comboSuggestionsEl = pEl("comboSuggestions");
+const getComboBtn = pEl("getComboBtn");
 const protocolResultsEl = pEl("protocolResults");
 const classicalResultsEl = pEl("results");
 
-/* ---------- mode switching ---------- */
+/* ---------- mode switching ----------
+   Three tabs, each doing exactly one thing: "protocol" picks a named-condition (gold)
+   shortcut only, "combo" picks individual symptom chips only, "classical" is free-text
+   case-taking. Named-condition picks and symptom picks used to share one search box and
+   one results view, which meant a doctor mixing a gold pick with a plain symptom got two
+   separate result cards with no way to tell in advance — this split makes that impossible:
+   each tab has its own chip list and search box, and switching tabs clears whichever of
+   selectedDiseaseShortcuts/selectedSymptoms belongs to the tab being left, so a stale pick
+   from one tab can never leak into the other tab's result. */
 function setMode(mode) {
-  const isProtocol = mode === "protocol";
   document.querySelectorAll(".mode-tab").forEach(btn => {
     const active = btn.dataset.mode === mode;
     btn.classList.toggle("active", active);
     btn.setAttribute("aria-selected", active ? "true" : "false");
   });
-  pEl("protocolModeInput").style.display = isProtocol ? "" : "none";
-  pEl("classicalModeInput").style.display = isProtocol ? "none" : "";
-  pEl("protocolSamplesBar").style.display = isProtocol ? "" : "none";
-  pEl("classicalSamplesBar").style.display = isProtocol ? "none" : "";
-  protocolResultsEl.style.display = isProtocol ? "" : "none";
-  classicalResultsEl.style.display = isProtocol ? "none" : "";
+  pEl("protocolModeInput").style.display = mode === "protocol" ? "" : "none";
+  pEl("comboModeInput").style.display = mode === "combo" ? "" : "none";
+  pEl("classicalModeInput").style.display = mode === "classical" ? "" : "none";
+  pEl("protocolSamplesBar").style.display = mode === "protocol" ? "" : "none";
+  pEl("comboSamplesBar").style.display = mode === "combo" ? "" : "none";
+  pEl("classicalSamplesBar").style.display = mode === "classical" ? "" : "none";
+  protocolResultsEl.style.display = (mode === "protocol" || mode === "combo") ? "" : "none";
+  classicalResultsEl.style.display = mode === "classical" ? "" : "none";
+
+  if (mode !== "protocol" && selectedDiseaseShortcuts.length) { selectedDiseaseShortcuts = []; renderDiseaseChips(); }
+  if (mode !== "combo" && selectedSymptoms.length) { selectedSymptoms = []; renderSymptomChips(); }
 }
 document.querySelectorAll(".mode-tab").forEach(btn => {
   btn.addEventListener("click", () => setMode(btn.dataset.mode));
@@ -66,9 +82,13 @@ document.addEventListener("smartRemedyDataReady", () => {
     TAG_SEARCH_TEXT[t.id] = (t.label + " " + t.rubric + " " + t.section + " " + triggerText).toLowerCase();
   });
   updateGetProtocolBtnState();
+  updateGetComboBtnState();
 });
 function updateGetProtocolBtnState() {
-  getProtocolBtn.disabled = !protocolDataReady || (selectedSymptoms.length === 0 && selectedDiseaseShortcuts.length === 0);
+  getProtocolBtn.disabled = !protocolDataReady || selectedDiseaseShortcuts.length === 0;
+}
+function updateGetComboBtnState() {
+  getComboBtn.disabled = !protocolDataReady || selectedSymptoms.length === 0;
 }
 
 /* ---------- related-symptom suggestions ----------
@@ -202,7 +222,7 @@ const RELATED_SYMPTOM_MAP = {
 };
 
 function renderRelatedSuggestions() {
-  const relatedTagsEl = pEl("protocolRelatedSuggestions");
+  const relatedTagsEl = pEl("comboRelatedSuggestions");
   const selectedIds = new Set(selectedSymptoms.map(s => s.tag.id));
   const relatedIds = [];
   selectedSymptoms.forEach(s => {
@@ -224,63 +244,65 @@ function renderRelatedSuggestions() {
 }
 
 /* ---------- tag search / chip management ---------- */
-function renderChips() {
-  const symptomChips = selectedSymptoms.map((sel, i) => `
+function renderSymptomChips() {
+  comboChipsEl.innerHTML = selectedSymptoms.map((sel, i) => `
     <span class="protocol-chip">
       <span class="chip-label">${esc(sel.tag.label)}</span>
       <button type="button" class="chip-intensity" data-idx="${i}" title="Tap to change importance">${esc(sel.intensity)}</button>
       <button type="button" class="chip-remove" data-idx="${i}" title="Remove">✕</button>
     </span>
   `).join("");
-  // Disease-shortcut chips look distinct (gold border, 🏷 icon, no intensity control — a
-  // named condition isn't "how strong," it's just selected or not) so a doctor can tell at a
-  // glance which chips are individual symptoms versus a direct jump to a curated condition.
-  const diseaseChips = selectedDiseaseShortcuts.map((d, i) => `
-    <span class="protocol-chip disease-shortcut-chip">
-      <span class="chip-label">🏷️ ${esc(d.label)}</span>
-      <button type="button" class="disease-chip-remove" data-idx="${i}" title="Remove">✕</button>
-    </span>
-  `).join("");
-  protocolChipsEl.innerHTML = diseaseChips + symptomChips;
-  protocolChipsEl.querySelectorAll(".chip-intensity").forEach(btn => {
+  comboChipsEl.querySelectorAll(".chip-intensity").forEach(btn => {
     btn.addEventListener("click", () => {
       const i = Number(btn.dataset.idx);
       const cur = INTENSITY_CYCLE.indexOf(selectedSymptoms[i].intensity);
       selectedSymptoms[i].intensity = INTENSITY_CYCLE[(cur + 1) % INTENSITY_CYCLE.length];
-      renderChips();
+      renderSymptomChips();
     });
   });
-  protocolChipsEl.querySelectorAll(".chip-remove").forEach(btn => {
+  comboChipsEl.querySelectorAll(".chip-remove").forEach(btn => {
     btn.addEventListener("click", () => {
       selectedSymptoms.splice(Number(btn.dataset.idx), 1);
-      renderChips();
-      updateGetProtocolBtnState();
-    });
-  });
-  protocolChipsEl.querySelectorAll(".disease-chip-remove").forEach(btn => {
-    btn.addEventListener("click", () => {
-      selectedDiseaseShortcuts.splice(Number(btn.dataset.idx), 1);
-      renderChips();
-      updateGetProtocolBtnState();
+      renderSymptomChips();
+      updateGetComboBtnState();
     });
   });
   renderRelatedSuggestions();
 }
 
+// Disease-shortcut chips look distinct (gold border, 🏷 icon, no intensity control — a named
+// condition isn't "how strong," it's just selected or not) and live in their own tab now, so
+// there's no individual-symptom chip they could ever be confused with.
+function renderDiseaseChips() {
+  protocolChipsEl.innerHTML = selectedDiseaseShortcuts.map((d, i) => `
+    <span class="protocol-chip disease-shortcut-chip">
+      <span class="chip-label">🏷️ ${esc(d.label)}</span>
+      <button type="button" class="disease-chip-remove" data-idx="${i}" title="Remove">✕</button>
+    </span>
+  `).join("");
+  protocolChipsEl.querySelectorAll(".disease-chip-remove").forEach(btn => {
+    btn.addEventListener("click", () => {
+      selectedDiseaseShortcuts.splice(Number(btn.dataset.idx), 1);
+      renderDiseaseChips();
+      updateGetProtocolBtnState();
+    });
+  });
+}
+
 function addSymptom(tag) {
   if (selectedSymptoms.some(s => s.tag.id === tag.id)) return;
   selectedSymptoms.push({ tag, intensity: "++" });
-  renderChips();
-  updateGetProtocolBtnState();
-  protocolSearchEl.value = "";
-  protocolSuggestionsEl.style.display = "none";
-  protocolSearchEl.focus();
+  renderSymptomChips();
+  updateGetComboBtnState();
+  comboSearchEl.value = "";
+  comboSuggestionsEl.style.display = "none";
+  comboSearchEl.focus();
 }
 
 function addDiseaseShortcut(tag) {
   if (selectedDiseaseShortcuts.some(d => d.id === tag.id)) return;
   selectedDiseaseShortcuts.push(tag);
-  renderChips();
+  renderDiseaseChips();
   updateGetProtocolBtnState();
   protocolSearchEl.value = "";
   protocolSuggestionsEl.style.display = "none";
@@ -310,26 +332,30 @@ function matchesForTerm(term, selectedIds, selectedDiseaseIds) {
     anyHits: allHits.length > 0 || diseaseHits.length > 0
   };
 }
-function suggestionButtonsHTML(diseaseMatches, matches) {
-  return diseaseMatches.map(d => `<button type="button" class="protocol-suggestion-item disease-suggestion-item" data-disease-id="${esc(d.id)}">🏷️ ${esc(d.label)} <span class="suggestion-tag-hint">curated protocol</span></button>`).join("") +
-    matches.map(t => `<button type="button" class="protocol-suggestion-item" data-id="${esc(t.id)}">${esc(t.label)}</button>`).join("");
+// wantDisease/wantSymptoms let each tab's search box show ONLY its own kind of chip —
+// the Expert Protocol (named-condition) box only ever offers diseaseMatches, the Combine
+// Symptoms box only ever offers matches. This is what makes a wrong tap structurally
+// impossible: neither box can ever put the other tab's kind of chip in front of a doctor.
+function suggestionButtonsHTML(diseaseMatches, matches, wantDisease, wantSymptoms) {
+  return (wantDisease ? diseaseMatches.map(d => `<button type="button" class="protocol-suggestion-item disease-suggestion-item" data-disease-id="${esc(d.id)}">🏷️ ${esc(d.label)} <span class="suggestion-tag-hint">curated protocol</span></button>`).join("") : "") +
+    (wantSymptoms ? matches.map(t => `<button type="button" class="protocol-suggestion-item" data-id="${esc(t.id)}">${esc(t.label)}</button>`).join("") : "");
 }
-function wireSuggestionButtons() {
-  protocolSuggestionsEl.querySelectorAll(".disease-suggestion-item").forEach(btn => {
+function wireSuggestionButtons(container) {
+  container.querySelectorAll(".disease-suggestion-item").forEach(btn => {
     btn.addEventListener("click", () => {
       const tag = DISEASE_SHORTCUT_TAGS.find(d => d.id === btn.dataset.diseaseId);
       if (tag) addDiseaseShortcut(tag);
     });
   });
-  protocolSuggestionsEl.querySelectorAll(".protocol-suggestion-item:not(.disease-suggestion-item)").forEach(btn => {
+  container.querySelectorAll(".protocol-suggestion-item:not(.disease-suggestion-item)").forEach(btn => {
     btn.addEventListener("click", () => {
       const tag = CHIEF_SYMPTOM_TAGS.find(t => t.id === btn.dataset.id);
       if (tag) addSymptom(tag);
     });
   });
 }
-function renderSuggestions(query) {
-  if (!protocolDataReady || !query.trim()) { protocolSuggestionsEl.style.display = "none"; return; }
+function renderSuggestionsInto(targetEl, query, wantDisease, wantSymptoms) {
+  if (!protocolDataReady || !query.trim()) { targetEl.style.display = "none"; return; }
   const selectedIds = new Set(selectedSymptoms.map(s => s.tag.id));
   const selectedDiseaseIds = new Set(selectedDiseaseShortcuts.map(d => d.id));
 
@@ -344,38 +370,43 @@ function renderSuggestions(query) {
     let html = "";
     terms.forEach(term => {
       const { matches, diseaseMatches, anyHits } = matchesForTerm(term, selectedIds, selectedDiseaseIds);
+      const shown = (wantDisease ? diseaseMatches.length : 0) + (wantSymptoms ? matches.length : 0);
       html += `<div class="protocol-suggestion-group-label">${esc(term)}</div>`;
-      if (!matches.length && !diseaseMatches.length) {
-        html += `<div class="protocol-suggestion-empty">${anyHits ? "Already added" : "No matching symptom — try a different word"}</div>`;
+      if (!shown) {
+        html += `<div class="protocol-suggestion-empty">${anyHits ? "Already added" : "No match — try a different word"}</div>`;
       } else {
-        html += suggestionButtonsHTML(diseaseMatches, matches);
+        html += suggestionButtonsHTML(diseaseMatches, matches, wantDisease, wantSymptoms);
       }
     });
-    protocolSuggestionsEl.innerHTML = html;
-    wireSuggestionButtons();
-    protocolSuggestionsEl.style.display = "block";
+    targetEl.innerHTML = html;
+    wireSuggestionButtons(targetEl);
+    targetEl.style.display = "block";
     return;
   }
 
   const { matches, diseaseMatches, anyHits } = matchesForTerm(query, selectedIds, selectedDiseaseIds);
-  if (!matches.length && !diseaseMatches.length) {
+  const shown = (wantDisease ? diseaseMatches.length : 0) + (wantSymptoms ? matches.length : 0);
+  if (!shown) {
     // Distinguish "you already added the only match" (not an error) from "this symptom
     // is not in the repertory yet" (a real coverage gap) — showing the same generic
     // message for both made an already-selected symptom look like a broken search.
-    const msg = anyHits ? "Already added" : "No matching symptom — try a different word";
-    protocolSuggestionsEl.innerHTML = `<div class="protocol-suggestion-empty">${msg}</div>`;
-    protocolSuggestionsEl.style.display = "block";
+    const msg = anyHits ? "Already added" : "No match — try a different word";
+    targetEl.innerHTML = `<div class="protocol-suggestion-empty">${msg}</div>`;
+    targetEl.style.display = "block";
     return;
   }
-  protocolSuggestionsEl.innerHTML = suggestionButtonsHTML(diseaseMatches, matches);
-  wireSuggestionButtons();
-  protocolSuggestionsEl.style.display = "block";
+  targetEl.innerHTML = suggestionButtonsHTML(diseaseMatches, matches, wantDisease, wantSymptoms);
+  wireSuggestionButtons(targetEl);
+  targetEl.style.display = "block";
 }
-protocolSearchEl.addEventListener("input", () => renderSuggestions(protocolSearchEl.value));
-protocolSearchEl.addEventListener("focus", () => renderSuggestions(protocolSearchEl.value));
+protocolSearchEl.addEventListener("input", () => renderSuggestionsInto(protocolSuggestionsEl, protocolSearchEl.value, true, false));
+protocolSearchEl.addEventListener("focus", () => renderSuggestionsInto(protocolSuggestionsEl, protocolSearchEl.value, true, false));
+comboSearchEl.addEventListener("input", () => renderSuggestionsInto(comboSuggestionsEl, comboSearchEl.value, false, true));
+comboSearchEl.addEventListener("focus", () => renderSuggestionsInto(comboSuggestionsEl, comboSearchEl.value, false, true));
 document.addEventListener("click", (e) => {
-  if (!e.target.closest(".protocol-search-row") && !e.target.closest("#protocolSuggestions")) {
+  if (!e.target.closest(".protocol-search-row") && !e.target.closest("#protocolSuggestions") && !e.target.closest("#comboSuggestions")) {
     protocolSuggestionsEl.style.display = "none";
+    comboSuggestionsEl.style.display = "none";
   }
 });
 
@@ -393,8 +424,8 @@ pEl("protocolSampleFever").addEventListener("click", () => {
       return tag ? { tag, intensity } : null;
     })
     .filter(Boolean);
-  renderChips();
-  updateGetProtocolBtnState();
+  renderSymptomChips();
+  updateGetComboBtnState();
   runProtocolSearch();
 });
 
@@ -708,3 +739,4 @@ window.getProtocolSymptomSnapshot = function () {
   }));
 };
 getProtocolBtn.addEventListener("click", runProtocolSearch);
+getComboBtn.addEventListener("click", runProtocolSearch);

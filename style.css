@@ -75,7 +75,7 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .chip-remove { background: rgba(255,255,255,0.2); color: #fff; border: none; border-radius: 50%; width: 20px; height: 20px; font-size: 0.68rem; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
 .chip-remove:hover { background: rgba(255,255,255,0.35); }
 .protocol-search-row { position: relative; }
-#protocolTagSearch { width: 100%; border: none; border-radius: 10px; padding: 13px 15px; font-size: 0.92rem; color: var(--ink); outline: none; font-family: inherit; background: #fff; }
+#protocolTagSearch, #comboTagSearch { width: 100%; border: none; border-radius: 10px; padding: 13px 15px; font-size: 0.92rem; color: var(--ink); outline: none; font-family: inherit; background: #fff; }
 .protocol-suggestions { background: #fff; border-radius: 10px; margin-top: 6px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.25); max-height: 260px; overflow-y: auto; }
 .protocol-suggestion-item { display: block; width: 100%; text-align: left; background: none; border: none; border-bottom: 1px solid var(--line); padding: 10px 14px; font-size: 0.82rem; color: var(--ink); font-family: inherit; cursor: pointer; }
 .protocol-suggestion-item:last-child { border-bottom: none; }
