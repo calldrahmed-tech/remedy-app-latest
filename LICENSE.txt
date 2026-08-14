@@ -1,0 +1,13 @@
+Copyright (c) 2026 Expertia. All rights reserved.
+
+This software and its content (including but not limited to source code,
+repertory data, remedy data, and clinical curation) are the proprietary
+property of Expertia.
+
+No part of this repository may be copied, modified, distributed, sold, or
+used to build a derivative product without prior written permission from
+the owner.
+
+Viewing this code (for example, through a public GitHub repository) does
+not grant any license or permission to use it. All rights not expressly
+granted are reserved.

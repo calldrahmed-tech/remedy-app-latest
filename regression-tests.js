@@ -1,5 +1,5 @@
 /* ============================================================
-   REGRESSION TEST SUITE — Smart Remedy AI matching engine
+   REGRESSION TEST SUITE — Expertia matching engine
    ============================================================
    NOT loaded by index.html and NOT part of the live app. This file exists
    purely so any future change to script.js/repertory.json/remedies.json can
