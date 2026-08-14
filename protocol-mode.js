@@ -221,6 +221,58 @@ const RELATED_SYMPTOM_MAP = {
   ]
 };
 
+// QUICK_SYMPTOM_INDEX — a small, hand-picked set of common plain-language chief complaints
+// mapped to the SPECIFIC chief-symptom tags that already cover them. This adds no new rubric
+// or remedy content — every id here already exists in CHIEF_SYMPTOM_TAGS and was already
+// reachable by typing the full sentence. It only changes how the FIRST screen of a common
+// search looks: a doctor typing one of these plain words sees one clean collapsed group
+// instead of every matching long sentence dumped at once, and opens it to see the specific
+// patterns underneath. Deliberately small and meant to grow the same incremental way
+// RELATED_SYMPTOM_MAP above has — each entry was checked by hand against its real candidate
+// matches (a raw keyword search pulls in false positives, e.g. "gas" also matching "gasping"
+// in an unrelated cough rubric, so terms without a clean set of matches were left out rather
+// than forced in).
+const QUICK_SYMPTOM_INDEX = {
+  "fever": ["sym_fever_general_unspecified", "sym_delirium_or_hallucinations_with_high_fever_dilated", "sym_extremely_chilly_cannot_bear_uncovering_oversensit", "sym_fever_recurring_at_the_same_time_daily_craves_cold", "sym_acute_gastroenteritis_fever_chills_vomiting_diarrh"],
+  "chilly": ["sym_extremely_chilly_cannot_bear_uncovering_oversensit", "sym_chilly_sluggish_fair_fat_flabby_constitution_crave", "sym_chilly_patient_generally_cold_wants_warmth", "sym_chilly_patient_very_sensitive_to_cold_better_wrapp", "sym_chilly_patient_who_nonetheless_craves_fresh_open_air"],
+  "cough": ["sym_dry_spasmodic_cough_worse_at_night", "sym_loose_rattling_cough_with_difficulty_expectorating", "sym_dry_cough_like_a_saw_through_wood_worse_cold_drink", "sym_coughing_fits_in_rapid_succession_hardly_time_to_b", "sym_presses_hands_against_chest_to_support_it_during_c"],
+  "headache": ["sym_headache_or_complaints_from_sun_exposure_or_heat_o", "sym_headache_worse_4_8pm_irritable_and_angry_sour_belc", "sym_headache_from_cold_draft_to_head_better_from_wrapp", "sym_headache_from_occiput_settling_over_the_left_eye_b", "sym_periodic_sick_headache_with_visual_disturbance_bef"],
+  "vomiting": ["sym_nausea_and_vomiting_with_clean_tongue", "sym_infant_vomits_curdled_milk_in_large_lumps_falls_in", "sym_motion_sickness_nausea_vomiting_from_travel_better", "sym_acute_gastroenteritis_fever_chills_vomiting_diarrh", "sym_vomiting_of_food_immediately_after_eating_or_drink"],
+  "nausea": ["sym_nausea_and_vomiting_with_clean_tongue", "sym_motion_sickness_nausea_vomiting_from_travel_better", "sym_aversion_to_food_nausea_at_sight_or_smell_of_food"],
+  "diarrhea": ["sym_diarrhea_or_trembling_weakness_from_anticipatory_a", "sym_acute_gastroenteritis_fever_chills_vomiting_diarrh", "sym_anticipatory_diarrhea_before_important_events_desp", "sym_sudden_forceful_diarrhea_immediately_after_eating_", "sym_diarrhea_that_drives_the_patient_out_of_bed_early_"],
+  "constipation": ["sym_constipation_general_unspecified", "sym_constipation_hard_dry_stool", "sym_constipation_ineffectual_urging", "sym_constipation_no_urge_inactive_rectum"],
+  "weakness": ["sym_heavy_muscular_weakness_like_lead_drooping_eyelids", "sym_extreme_exhaustion_sleepy_all_day_yet_cannot_sleep", "sym_leg_pain_weakness_dragging_sensation"],
+  "sleeplessness": ["sym_sleeplessness_from_an_overactive_mind_cannot_stop_", "sym_sleeplessness_from_a_mind_too_active_with_plans_and_ideas_at"],
+  "insomnia": ["sym_insomnia_from_worry_overwork_or_mental_strain", "sym_insomnia_specifically_the_first_night_in_an_unfamiliar_bed_o", "sym_insomnia_specifically_from_overexcitement_after_good_news_or"],
+  "anxiety": ["sym_anxiety_with_restlessness_fear_of_death", "sym_anticipatory_anxiety_before_an_event", "sym_profound_anxiety_before_events_requiring_coordinat", "sym_anxiety_about_health_with_palpitation_from_the_sli"],
+  "itching": ["sym_itching_worse_from_warmth_or_scratching", "sym_vesicular_itching_rash_from_plant_or_chemical_cont", "sym_cannot_bear_warmth_of_bed_throws_off_covers_itchin", "sym_hives_with_intolerable_itching_puffy_edematous_swe", "sym_sudden_hives_urticaria_burning_and_stinging_rather"],
+  "swelling": ["sym_hives_with_intolerable_itching_puffy_edematous_swe", "sym_stony_hard_glandular_swellings_no_suppuration_indu", "sym_chronic_glandular_swelling_hard_nodules_slow_to_su", "sym_swelling_of_glands_that_comes_on_rapidly_with_acute_inflamma", "sym_marked_swelling_of_the_whole_body_dropsy_with_intense_thirst"],
+  "bleeding": ["sym_bleeding_gums", "sym_bleeding_brought_on_by_overexertion_or_straining_b", "sym_tendency_to_hemorrhage_bleeding_that_is_dark_and_does_not_cl"],
+  "vertigo": ["sym_vertigo_worse_from_looking_up_better_from_pressure", "sym_vertigo_worse_from_closing_the_eyes_or_turning_in_", "sym_fear_of_downward_motion_vertigo_on_looking_down_or", "sym_nausea_or_vertigo_brought_on_by_loss_of_sleep_from_watching_"],
+  "dizziness": ["sym_vertigo_worse_from_looking_up_better_from_pressure", "sym_vertigo_worse_from_closing_the_eyes_or_turning_in_", "sym_fear_of_downward_motion_vertigo_on_looking_down_or"],
+  "sore throat": ["sym_sore_throat_markedly_worse_from_empty_swallowing_better_from", "sym_rapidly_spreading_membranous_sore_throat_with_marked_prostra", "sym_sore_throat_that_is_distinctly_worse_on_the_left_side_with_a", "sym_sore_throat_that_is_distinctly_worse_on_the_right_side_aggra", "sym_common_mild_sore_throat_from_a_cold_without_fever_resolves_i"],
+  "joint pain": ["sym_wandering_shifting_joint_pains_that_move_from_join", "sym_wandering_erratic_joint_pains_that_shift_location_every_few_", "sym_pain_in_the_great_toe_joint_worse_from_the_slightest_touch_o", "sym_cracking_of_the_joints_on_motion_audible_but_painless"],
+  "back pain": ["sym_common_muscular_back_pain_from_lifting_something_heavy_or_fr", "sym_low_back_pain_that_is_markedly_better_lying_on_something_har", "sym_back_pain_that_is_worse_on_first_rising_from_a_seated_positi", "sym_sudden_sharp_catching_pain_in_the_lower_back_that_takes_the_", "sym_back_pain_that_is_markedly_better_from_firm_pressure_or_lean"],
+  "palpitation": ["sym_anxiety_about_health_with_palpitation_from_the_sli", "sym_palpitations_that_come_on_suddenly_with_anxiety_heart_pounds", "sym_palpitations_that_are_worse_specifically_lying_on_the_left_s", "sym_palpitations_noticed_mainly_while_lying_down_at_night_calm_d"],
+  "thirst": ["sym_extreme_dryness_of_mucous_membranes_thirstless_con", "sym_thirstless_no_thirst_even_with_fever", "sym_extreme_thirst_large_quantities_at_a_time", "sym_thirst_for_small_sips_frequently", "sym_thirst_for_cold_water_drinks", "sym_thirst_for_warm_drinks"],
+  "sweating": ["sym_better_from_sweating_symptoms_return_as_soon_as_sweat_stops", "sym_one_sided_sweating_sweat_only_on_one_half_of_the_body", "sym_profuse_sweating_over_the_whole_body_except_the_head_which_r", "sym_offensive_excessive_sweating_of_the_feet_that_the_patient_is"],
+  "bloating": ["sym_abdominal_bloating_that_is_worse_in_the_evening_and_better_i", "sym_bloating_that_develops_immediately_after_eating_even_a_small", "sym_ordinary_gas_and_bloating_after_meals_common_and_recurring_n"],
+  "rash": ["sym_vesicular_itching_rash_from_plant_or_chemical_cont", "sym_ordinary_heat_rash_or_prickly_heat_in_hot_humid_weather_comm", "sym_chronic_itching_of_the_skin_worse_specifically_in_the_evenin"],
+  "boils": ["sym_boils_or_abscesses_acutely_very_sensitive_to_touch", "sym_chronic_recurrent_boils_or_skin_eruptions_craves_s", "sym_recurrent_boils_or_abscesses_near_a_gland_that_keep_coming_b", "sym_boils_or_abscesses_with_redness_swelling_throbbing_pain_and_", "sym_recurring_styes_boils_or_pimples_that_keep_appearing_in_diff", "sym_carbuncle_a_cluster_of_connected_boils_with_multiple_opening"],
+  "ear pain": ["sym_ear_pain_worse_swallowing_or_cold_drafts_weepy_and", "sym_sharp_stabbing_bursting_ear_pain_red_and_hot_worse", "sym_throat_pain_that_extends_to_the_ear_on_swallowing_one_sided"],
+  "toothache": ["sym_acute_toothache_with_throbbing_or_sharp_pain_worse_from_cold"],
+  "burning urination": ["sym_burning_in_the_urethra_that_continues_after_urination_has_fi", "sym_common_mild_burning_during_urination_in_a_woman_without_feve", "sym_gonorrhea_acute_urethral_discharge_with_burning_on_urination"],
+  "irritable": ["sym_headache_worse_4_8pm_irritable_and_angry_sour_belc", "sym_extremely_low_despondent_mood_that_alternates_with_irritable", "sym_aversion_to_consolation_becomes_worse_or_more_irritable_when"],
+  "restless": ["sym_restless_sleep_grinding_teeth_talks_or_starts_duri", "sym_anxiety_with_restlessness_fear_of_death", "sym_restless_anxiety_must_get_up_and_walk_worse_after_", "sym_chill_predominant_chill_with_fever_restlessness_du"],
+  "discharge": ["sym_chronic_catarrh_with_thin_yellow_or_greenish_disch", "sym_thin_watery_acrid_nasal_discharge_that_excoriates_", "sym_hot_burning_acrid_tears_that_scald_the_cheeks_blan"],
+  "weight loss": ["sym_rapid_weight_loss_despite_increased_appetite_heat_", "sym_emaciation_weight_loss_despite_good_appetite", "sym_sudden_and_unexplained_weight_loss_despite_no_change_in_appe"],
+  "appetite": ["sym_ravenous_increased_hunger", "sym_decreased_appetite_anorexia", "sym_capricious_appetite_changeable", "sym_must_eat_frequently_hunger_soon_after_eating_faint"],
+  "indigestion": ["sym_ordinary_indigestion_with_fullness_and_discomfort_after_a_no", "sym_nervous_indigestion_dyspepsia_brought_on_or_markedly_worse_f"],
+  "grief": ["sym_silent_grief_dwells_on_past_hurts_cannot_cry", "sym_recent_grief_with_alternating_laughing_weeping_pul", "sym_ailments_from_grief_sorrow_or_bereavement", "sym_ailments_from_prolonged_unresolved_grief_unable_to"],
+  "urine": ["sym_urine_smells_like_violets_burning_in_kidneys_and_u", "sym_urine_strong_smelling_ammonia_like_odor", "sym_urine_that_deposits_a_thick_brick_dust_red_sediment_on_stand"],
+  "skin dry": ["sym_dryness_of_mouth_mucous_membranes_or_skin", "sym_skin_dry_rough_and_cracked_especially_in_cold_weat", "sym_dry_scaly_patches_of_skin_that_worsen_specifically_in_cold_w"]
+};
+
 function renderRelatedSuggestions() {
   const relatedTagsEl = pEl("comboRelatedSuggestions");
   const selectedIds = new Set(selectedSymptoms.map(s => s.tag.id));
@@ -327,8 +379,8 @@ function matchesForTerm(term, selectedIds, selectedDiseaseIds) {
   // one-tap curated Abscess protocol, not to be buried under individual symptom rubrics.
   const diseaseHits = (DISEASE_SHORTCUT_TAGS || []).filter(d => qWords.every(w => d.searchText.includes(w)));
   return {
-    matches: allHits.filter(t => !selectedIds.has(t.id)).slice(0, 8),
-    diseaseMatches: diseaseHits.filter(d => !selectedDiseaseIds.has(d.id)).slice(0, 5),
+    matches: allHits.filter(t => !selectedIds.has(t.id)).slice(0, 50),
+    diseaseMatches: diseaseHits.filter(d => !selectedDiseaseIds.has(d.id)).slice(0, 15),
     anyHits: allHits.length > 0 || diseaseHits.length > 0
   };
 }
@@ -354,6 +406,25 @@ function wireSuggestionButtons(container) {
     });
   });
 }
+// A plain word/phrase that has a hand-curated QUICK_SYMPTOM_INDEX entry gets ONE collapsed
+// group instead of its full detailed match list — this is what actually makes the Combine
+// Symptoms box feel simple rather than like Expert Repertory: the first thing a doctor sees
+// for "fever" is one word, not five long sentences. Only used in the symptom (combo) box —
+// the named-condition box's disease list is already short and doesn't need this.
+function quickIndexGroupHTML(term, selectedIds) {
+  const q = term.trim().toLowerCase();
+  if (!q) return null;
+  const key = Object.keys(QUICK_SYMPTOM_INDEX).find(k => q === k || q.startsWith(k) || k.startsWith(q));
+  if (!key) return null;
+  const ids = QUICK_SYMPTOM_INDEX[key].filter(id => !selectedIds.has(id));
+  if (!ids.length) return null;
+  const tags = ids.map(id => CHIEF_SYMPTOM_TAGS.find(t => t.id === id)).filter(Boolean);
+  const label = key.charAt(0).toUpperCase() + key.slice(1);
+  return `<details class="quick-symptom-group">
+    <summary>${esc(label)}</summary>
+    ${tags.map(t => `<button type="button" class="protocol-suggestion-item" data-id="${esc(t.id)}">${esc(t.label)}</button>`).join("")}
+  </details>`;
+}
 function renderSuggestionsInto(targetEl, query, wantDisease, wantSymptoms) {
   if (!protocolDataReady || !query.trim()) { targetEl.style.display = "none"; return; }
   const selectedIds = new Set(selectedSymptoms.map(s => s.tag.id));
@@ -369,9 +440,11 @@ function renderSuggestionsInto(targetEl, query, wantDisease, wantSymptoms) {
   if (terms.length > 1) {
     let html = "";
     terms.forEach(term => {
+      const quick = wantSymptoms && !wantDisease ? quickIndexGroupHTML(term, selectedIds) : null;
+      html += `<div class="protocol-suggestion-group-label">${esc(term)}</div>`;
+      if (quick) { html += quick; return; }
       const { matches, diseaseMatches, anyHits } = matchesForTerm(term, selectedIds, selectedDiseaseIds);
       const shown = (wantDisease ? diseaseMatches.length : 0) + (wantSymptoms ? matches.length : 0);
-      html += `<div class="protocol-suggestion-group-label">${esc(term)}</div>`;
       if (!shown) {
         html += `<div class="protocol-suggestion-empty">${anyHits ? "Already added" : "No match — try a different word"}</div>`;
       } else {
@@ -379,6 +452,14 @@ function renderSuggestionsInto(targetEl, query, wantDisease, wantSymptoms) {
       }
     });
     targetEl.innerHTML = html;
+    wireSuggestionButtons(targetEl);
+    targetEl.style.display = "block";
+    return;
+  }
+
+  const quick = wantSymptoms && !wantDisease ? quickIndexGroupHTML(query, selectedIds) : null;
+  if (quick) {
+    targetEl.innerHTML = quick;
     wireSuggestionButtons(targetEl);
     targetEl.style.display = "block";
     return;

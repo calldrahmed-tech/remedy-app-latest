@@ -81,6 +81,12 @@ header.app-header { background: var(--navy); color: #fff; padding: 22px 22px 26p
 .protocol-suggestion-item:last-child { border-bottom: none; }
 .protocol-suggestion-item:hover { background: var(--paper); }
 .protocol-suggestion-empty { padding: 12px 14px; font-size: 0.8rem; color: var(--muted); }
+.quick-symptom-group summary { list-style: none; display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; font-size: 0.86rem; font-weight: 700; color: var(--ink); cursor: pointer; border-bottom: 1px solid var(--line); }
+.quick-symptom-group summary::-webkit-details-marker { display: none; }
+.quick-symptom-group summary::after { content: "+"; font-size: 1.1rem; color: var(--muted); }
+.quick-symptom-group[open] summary::after { content: "\2212"; }
+.quick-symptom-group[open] summary { background: var(--paper); }
+.quick-symptom-group .protocol-suggestion-item { padding-left: 24px; }
 .protocol-suggestion-group-label { padding: 8px 14px 4px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em; color: var(--muted); background: var(--paper); }
 .protocol-related-suggestions { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-bottom: 10px; }
 .related-suggestions-label { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-weight: 600; margin-right: 2px; }
