@@ -19,7 +19,7 @@
 // (gstatic.com, firebaseapp.com, cloudfunctions.net) and are never touched —
 // login/save-visit/AI-assist correctly still require a real connection.
 
-const CACHE_NAME = "expertia-cache-v1";
+const CACHE_NAME = "expertia-cache-v2";
 const NETWORK_TIMEOUT_MS = 4000; // a "weak" connection gets this long before
                                   // falling back to cache — long enough for a
                                   // slow response, short enough not to feel frozen
@@ -43,9 +43,9 @@ const PRECACHE_FILES = [
   "repertory.json",
   "remedies.json",
   "manifest.json",
-  "icons/icon-192.png",
-  "icons/icon-512.png",
-  "icons/apple-touch-icon.png"
+  "icon-192.png",
+  "icon-512.png",
+  "apple-touch-icon.png"
 ];
 
 self.addEventListener("install", (event) => {
