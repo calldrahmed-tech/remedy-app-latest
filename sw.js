@@ -41,7 +41,11 @@ const PRECACHE_FILES = [
   "browse-repertory.js",
   "repertorize.js",
   "repertory.json",
-  "remedies.json"
+  "remedies.json",
+  "manifest.json",
+  "icons/icon-192.png",
+  "icons/icon-512.png",
+  "icons/apple-touch-icon.png"
 ];
 
 self.addEventListener("install", (event) => {
