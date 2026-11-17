@@ -10,6 +10,25 @@
 // clicks the AI button themselves.
 
 (function () {
+  // Header "AI Case Analysis" button — visible on every tab. The AI works on free text,
+  // so this takes the doctor to the Expert Repertory tab's symptom box, asks them to
+  // log in if needed, and runs the analysis once a case is typed.
+  (function wireHeaderButton() {
+    function bind() {
+      const btn = document.getElementById("aiTopBtn");
+      if (!btn) return setTimeout(bind, 250);
+      btn.addEventListener("click", () => {
+        const tab = document.querySelector('.mode-tab[data-mode="classical"]');
+        if (tab) tab.click();
+        const input = document.getElementById("symptomInput");
+        if (input) { input.focus(); input.scrollIntoView({ behavior: "smooth", block: "center" }); }
+        if (window.__aiHeaderAction) { window.__aiHeaderAction(); return; }
+        const m = document.getElementById("statusMsg");
+        if (m) m.textContent = "AI is still loading — try again in a few seconds.";
+      });
+    }
+    bind();
+  })();
   // Confidence bands, applied to the same `main.percent` script.js already
   // computes and displays. Below 25% script.js refuses to show a remedy at
   // all (its own CONFIDENCE_FLOOR), so LOW here only ever fires in practice
@@ -60,6 +79,22 @@
       loggedIn = !!user;
       aiBtn.style.display = user ? "inline-block" : "none";
     });
+
+    window.__aiHeaderAction = () => {
+      if (!loggedIn) {
+        statusEl.textContent = "Please log in to use AI Case Analysis.";
+        statusEl.className = "ai-assist-status ai-assist-error";
+        const login = document.getElementById("loginTriggerBtn");
+        if (login) login.click();
+        return;
+      }
+      if (!inputEl.value.trim()) {
+        statusEl.textContent = "Type the case above, then tap 🧠 Analyse Case with AI.";
+        statusEl.className = "ai-assist-status";
+        return;
+      }
+      aiBtn.click();
+    };
 
     // ---------- Confidence nudge: runs on every "Get Remedy" click, doesn't
     // call the AI, just tells the doctor whether it's worth checking it. ----------

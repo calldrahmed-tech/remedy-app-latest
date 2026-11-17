@@ -477,3 +477,7 @@ footer.app-footer .f-item b { display: block; color: var(--navy); font-size: 0.7
   .header-row { justify-content: space-between; gap: 8px; padding: 0 4px; }
   .login-trigger-btn { position: static; flex-shrink: 0; white-space: nowrap; }
 }
+
+.rg-top-row { display: flex; gap: 8px; margin: 8px 16px 0; }
+.rg-top-row .rg-top-btn { width: auto; flex: 1; margin: 0; padding: 8px 6px; font-size: 0.8rem; line-height: 1.25; }
+.rg-top-row .rg-top-btn span { display: block; margin: 2px 0 0; }
