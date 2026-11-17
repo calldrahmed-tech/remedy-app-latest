@@ -1788,6 +1788,45 @@ window.recomputeWithExclusions = function() {
   runSearch(true);
 };
 
+
+/* GUIDED QUESTIONS — plain-language, tap-to-answer questions shown under the result. Each
+   answer appends a standard phrase the repertory already understands to the symptom box and
+   re-runs the search. A question is only shown when the typed text does not already mention
+   that topic, so a lay user is never asked what they have already said. */
+const GUIDED_QUESTIONS = [
+  { id: "thirst", q: "Thirst", seen: /thirst|drink/i, answers: [
+    ["Very thirsty", "very thirsty, drinks large quantities"], ["Not thirsty", "thirstless"] ] },
+  { id: "temp", q: "Hot or cold?", seen: /chill|cold|heat|hot|warm|cool|weather|draft|air/i, answers: [
+    ["Feels cold, worse from cold", "chilly, worse from cold"], ["Feels hot, worse from heat", "worse from heat, hot"] ] },
+  { id: "motion", q: "Movement", seen: /restless|motion|move|still|rest|lie|lying|walk/i, answers: [
+    ["Restless, cannot keep still", "restless, better from motion"], ["Wants to lie still, worse from moving", "worse from motion, better from rest"] ] },
+  { id: "mind", q: "Mood", seen: /irritab|anger|angry|alone|weep|cry|company|anxi|fear|afraid|sad|grief|mood/i, answers: [
+    ["Irritable, wants to be left alone", "irritable, wants to be left alone"],
+    ["Weepy, wants comfort or company", "weepy, better from consolation, wants company"],
+    ["Anxious or fearful", "anxious, fearful"] ] },
+  { id: "time", q: "Time of day", seen: /night|morning|afternoon|evening|midnight|noon|am\b|pm\b/i, answers: [
+    ["Worse at night", "worse at night"], ["Worse in the morning", "worse in the morning"], ["Worse in the evening", "worse in the evening"] ] }
+];
+function renderGuidedQuestions(text) {
+  const open = GUIDED_QUESTIONS.filter(g => !g.seen.test(text || "")).slice(0, 4);
+  if (!open.length) return "";
+  return `<div class="guided-card">
+    <div class="guided-title">❓ Help me narrow it down</div>
+    <div class="guided-sub">Tap what fits the patient. The result updates each time. Skip any you are not sure about.</div>
+    ${open.map(g => `<div class="guided-q"><div class="guided-q-label">${esc(g.q)}</div><div class="guided-answers">
+      ${g.answers.map(a => `<button type="button" class="guided-btn" data-phrase="${esc(a[1])}">${esc(a[0])}</button>`).join("")}
+    </div></div>`).join("")}
+  </div>`;
+}
+document.addEventListener("click", (e) => {
+  const b = e.target && e.target.closest ? e.target.closest(".guided-btn") : null;
+  if (!b) return;
+  const phrase = b.getAttribute("data-phrase");
+  if (!phrase || !inputEl) return;
+  inputEl.value = inputEl.value.trim().replace(/[.\s]+$/, "") + ". " + phrase + ".";
+  runSearch();
+});
+
 function runSearch(preserveExclusions) {
   const text = inputEl.value.trim();
   if (!DB) { resultsEl.innerHTML = `<div class="msg">Database still loading — try again in a moment.</div>`; return; }
@@ -1908,6 +1947,7 @@ function runSearch(preserveExclusions) {
     </div>`;
   }
   html += renderMissingKeynotes(main.remedy, text, "classical");
+  html += renderGuidedQuestions(text);
 
   // A curated Banerji-style dual-remedy combination card used to render here whenever
   // detectDiseaseProtocol() matched a named condition. That's now Expert Protocol mode's job

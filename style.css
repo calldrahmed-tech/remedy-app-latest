@@ -429,3 +429,12 @@ footer.app-footer .f-item b { display: block; color: var(--navy); font-size: 0.7
 .ai-confidence-low { background: #fdeceb; color: var(--red-2); border: 1px solid var(--red-1); }
 .ai-confidence-clickable { cursor: pointer; }
 .ai-confidence-clickable:hover { opacity: 0.85; }
+
+.guided-card { margin: 16px 20px; background: #f4faf6; border: 2px solid var(--green-2); border-radius: 12px; padding: 14px 18px; }
+.guided-title { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 1rem; color: var(--green-2); }
+.guided-sub { font-size: 0.82rem; color: var(--muted); margin: 4px 0 10px; }
+.guided-q { margin-bottom: 10px; }
+.guided-q-label { font-weight: 700; font-size: 0.85rem; margin-bottom: 5px; }
+.guided-answers { display: flex; flex-wrap: wrap; gap: 8px; }
+.guided-btn { background: #fff; border: 1.5px solid var(--green-2); color: var(--green-2); border-radius: 20px; padding: 8px 14px; font-size: 0.85rem; font-weight: 600; cursor: pointer; min-height: 40px; }
+.guided-btn:hover, .guided-btn:active { background: var(--green-2); color: #fff; }
