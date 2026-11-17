@@ -438,3 +438,12 @@ footer.app-footer .f-item b { display: block; color: var(--navy); font-size: 0.7
 .guided-answers { display: flex; flex-wrap: wrap; gap: 8px; }
 .guided-btn { background: #fff; border: 1.5px solid var(--green-2); color: var(--green-2); border-radius: 20px; padding: 8px 14px; font-size: 0.85rem; font-weight: 600; cursor: pointer; min-height: 40px; }
 .guided-btn:hover, .guided-btn:active { background: var(--green-2); color: #fff; }
+
+.rg-row { display: block; width: 100%; text-align: left; background: #fff; border: 1px solid #dfe7e1; border-radius: 10px; padding: 11px 14px; margin-bottom: 6px; font-size: 0.92rem; cursor: pointer; min-height: 44px; }
+.rg-row:hover { background: #f4faf6; }
+.rg-abbr { color: var(--muted); font-size: 0.78rem; font-weight: 500; }
+.rg-name { font-family: "Poppins", sans-serif; font-weight: 800; font-size: 1.25rem; }
+.rg-cat { color: var(--muted); font-size: 0.82rem; margin-bottom: 8px; }
+.rg-h { font-weight: 800; font-size: 0.85rem; color: var(--green-2); margin: 12px 0 4px; }
+.rg-ul { margin: 0; padding-left: 20px; font-size: 0.92rem; line-height: 1.5; }
+.rg-note { margin-top: 14px; font-size: 0.75rem; color: var(--muted); }
