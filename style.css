@@ -470,3 +470,6 @@ footer.app-footer .f-item b { display: block; color: var(--navy); font-size: 0.7
 .pv-pick { background: #fff; border: 1.5px solid var(--green-2); color: var(--green-2); border-radius: 20px; padding: 8px 14px; margin-right: 6px; font-weight: 700; cursor: pointer; min-height: 40px; }
 .pv-pick.on { background: var(--green-2); color: #fff; }
 .pv-print-btn { margin-top: 8px; background: #fff; border: 1.5px solid var(--green-2); color: var(--green-2); border-radius: 8px; padding: 7px 12px; font-weight: 700; font-size: 0.8rem; cursor: pointer; }
+
+.rg-top-btn { display: block; width: calc(100% - 32px); margin: 8px 16px 0; background: rgba(255,255,255,0.14); border: 1.5px solid rgba(255,255,255,0.55); color: #fff; border-radius: 10px; padding: 10px 12px; font-family: inherit; font-size: 0.88rem; font-weight: 800; cursor: pointer; min-height: 44px; }
+.rg-top-btn span { font-weight: 500; font-size: 0.74rem; opacity: 0.85; margin-left: 6px; }

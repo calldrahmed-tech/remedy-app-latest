@@ -87,14 +87,15 @@
       $("rgListPane").style.display = "none"; $("rgDetailPane").style.display = "none"; $("rgComparePane").style.display = "";
       compareFrom = null;
     }
-    $("remedyGuideBtn").addEventListener("click", async () => {
+    const openGuide = async () => {
       modal.style.display = "flex"; compareFrom = null; $("rgComparePane").style.display = "none";
       if (!remedies) {
         try { remedies = (await (await fetch("remedies.json")).json()).remedies || []; }
         catch (e) { $("rgList").innerHTML = `<div class="msg">Could not load remedies. Check your connection.</div>`; return; }
       }
       $("rgDetailPane").style.display = "none"; $("rgListPane").style.display = ""; renderList($("rgSearch").value);
-    });
+    };
+    ["remedyGuideBtn", "remedyGuideTopBtn"].forEach(id => { const b = $(id); if (b) b.addEventListener("click", openGuide); });
     $("rgClose").addEventListener("click", () => { modal.style.display = "none"; });
     modal.addEventListener("click", (e) => { if (e.target === modal) modal.style.display = "none"; });
     $("rgSearch").addEventListener("input", (e) => renderList(e.target.value));
