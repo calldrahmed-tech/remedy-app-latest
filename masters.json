@@ -1,13 +1,22 @@
 {
-  "note": "Add new entries to the end of 'entries'. 'source' is optional; leave it empty until the book/page is found.",
+  "note": "Add new entries to the end of 'entries'. 'source' is optional. Entries with \"draft\": true are NOT shown in the app. To publish a draft: fill in the remedy, potency and source, then delete the line \"draft\": true.",
   "entries": [
     {
       "condition": "Croup",
       "master": "Boenninghausen",
       "remedies": [
-        { "name": "Aconite", "potency": "200" },
-        { "name": "Hepar sulph", "potency": "200" },
-        { "name": "Spongia", "potency": "200" }
+        {
+          "name": "Aconite",
+          "potency": "200"
+        },
+        {
+          "name": "Hepar sulph",
+          "potency": "200"
+        },
+        {
+          "name": "Spongia",
+          "potency": "200"
+        }
       ],
       "source": ""
     },
@@ -15,8 +24,14 @@
       "condition": "High fevers",
       "master": "Murphy",
       "remedies": [
-        { "name": "Baptisia", "potency": "30" },
-        { "name": "Pyrogenium", "potency": "30" }
+        {
+          "name": "Baptisia",
+          "potency": "30"
+        },
+        {
+          "name": "Pyrogenium",
+          "potency": "30"
+        }
       ],
       "source": ""
     },
@@ -24,9 +39,96 @@
       "condition": "Fever",
       "master": "Burnett",
       "remedies": [
-        { "name": "Pyrogenium", "potency": "6" }
+        {
+          "name": "Pyrogenium",
+          "potency": "6"
+        }
       ],
       "source": ""
+    },
+    {
+      "condition": "Fever",
+      "master": "Kent",
+      "remedies": [
+        {
+          "name": "REMEDY NAME",
+          "potency": "POTENCY"
+        }
+      ],
+      "source": "",
+      "draft": true
+    },
+    {
+      "condition": "Tonsils",
+      "master": "Burnett",
+      "remedies": [
+        {
+          "name": "REMEDY NAME",
+          "potency": "POTENCY"
+        }
+      ],
+      "source": "",
+      "draft": true
+    },
+    {
+      "condition": "Tonsils",
+      "master": "Allen",
+      "remedies": [
+        {
+          "name": "REMEDY NAME",
+          "potency": "POTENCY"
+        }
+      ],
+      "source": "",
+      "draft": true
+    },
+    {
+      "condition": "Constipation",
+      "master": "Nash",
+      "remedies": [
+        {
+          "name": "REMEDY NAME",
+          "potency": "POTENCY"
+        }
+      ],
+      "source": "",
+      "draft": true
+    },
+    {
+      "condition": "Constipation",
+      "master": "Kent",
+      "remedies": [
+        {
+          "name": "REMEDY NAME",
+          "potency": "POTENCY"
+        }
+      ],
+      "source": "",
+      "draft": true
+    },
+    {
+      "condition": "Hair fall",
+      "master": "Boenninghausen",
+      "remedies": [
+        {
+          "name": "REMEDY NAME",
+          "potency": "POTENCY"
+        }
+      ],
+      "source": "",
+      "draft": true
+    },
+    {
+      "condition": "Hair fall",
+      "master": "Allen",
+      "remedies": [
+        {
+          "name": "REMEDY NAME",
+          "potency": "POTENCY"
+        }
+      ],
+      "source": "",
+      "draft": true
     }
   ]
 }

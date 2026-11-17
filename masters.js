@@ -8,7 +8,7 @@
 
   async function load() {
     if (entries) return;
-    try { entries = (await (await fetch("masters.json")).json()).entries || []; }
+    try { entries = ((await (await fetch("masters.json")).json()).entries || []).filter(e => !e.draft); // drafts stay hidden until "draft" is removed }
     catch (e) { entries = null; $("mastersList").innerHTML = `<div class="msg">Could not load. Check your connection.</div>`; }
   }
   function render() {
