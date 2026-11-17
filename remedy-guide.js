@@ -19,6 +19,10 @@
       else if (/^better\b/i.test(t)) better.push(t.replace(/^better\s*/i, ""));
       else key.push(t);
     });
+    if (r.modalities) { // curated classical modalities replace the thin keynote-derived lists
+      if (r.modalities.worse && r.modalities.worse.length) worse.splice(0, worse.length, ...r.modalities.worse);
+      if (r.modalities.better && r.modalities.better.length) better.splice(0, better.length, ...r.modalities.better);
+    }
     return big ? { key: key.slice(0, 6), worse: worse.slice(0, 6), better: better.slice(0, 6) } : { key: key.slice(0, 6), worse: worse.slice(0, 5), better: better.slice(0, 5) };
   }
 

@@ -295,7 +295,21 @@
         "chronic": "-"
       },
       "maxScore": 23.5,
-      "clinicalPearl": "Aconite is the remedy for sudden, violent onset following exposure to cold dry wind or a fright, with intense anxiety, restlessness, and fear of death — the patient may even predict the exact time of death. There is great thirst, a dry, hot skin, and marked fear and panic disproportionate to the physical findings. It acts best very early in an acute illness."
+      "clinicalPearl": "Aconite is the remedy for sudden, violent onset following exposure to cold dry wind or a fright, with intense anxiety, restlessness, and fear of death — the patient may even predict the exact time of death. There is great thirst, a dry, hot skin, and marked fear and panic disproportionate to the physical findings. It acts best very early in an acute illness.",
+      "modalities": {
+        "worse": [
+          "cold dry wind",
+          "fright",
+          "night, midnight",
+          "warm room",
+          "lying on affected side"
+        ],
+        "better": [
+          "open air",
+          "rest",
+          "sweating"
+        ]
+      }
     },
     {
       "id": "bell",
@@ -425,7 +439,20 @@
       },
       "maxScore": 41.7,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)",
-      "clinicalPearl": "Belladonna is the classic remedy for sudden, violent onset with intense heat, throbbing pain, and a flushed, hot face with dilated pupils. The whole body may feel like a furnace while the extremities stay cool. Symptoms characteristically worsen from jarring, noise, light, and touch, and the patient may be delirious or drowsy with a bounding pulse during high fever."
+      "clinicalPearl": "Belladonna is the classic remedy for sudden, violent onset with intense heat, throbbing pain, and a flushed, hot face with dilated pupils. The whole body may feel like a furnace while the extremities stay cool. Symptoms characteristically worsen from jarring, noise, light, and touch, and the patient may be delirious or drowsy with a bounding pulse during high fever.",
+      "modalities": {
+        "worse": [
+          "touch, jarring, light, noise",
+          "afternoon, 3 pm",
+          "draught on head",
+          "lying down"
+        ],
+        "better": [
+          "semi-erect position",
+          "warm covering",
+          "rest in bed"
+        ]
+      }
     },
     {
       "id": "bry",
@@ -564,7 +591,22 @@
       },
       "maxScore": 40.6,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)",
-      "clinicalPearl": "Bryonia is indicated when the smallest motion aggravates every complaint, forcing the patient to lie perfectly still. There is marked thirst for large quantities of cold water at long intervals, a dry mouth, and irritability when disturbed. Stools are large, hard, and dry as if burnt. Stitching pains, worse from any movement and better from firm pressure, are characteristic."
+      "clinicalPearl": "Bryonia is indicated when the smallest motion aggravates every complaint, forcing the patient to lie perfectly still. There is marked thirst for large quantities of cold water at long intervals, a dry mouth, and irritability when disturbed. Stools are large, hard, and dry as if burnt. Stitching pains, worse from any movement and better from firm pressure, are characteristic.",
+      "modalities": {
+        "worse": [
+          "any motion",
+          "touch",
+          "warmth",
+          "morning",
+          "exertion"
+        ],
+        "better": [
+          "rest",
+          "firm pressure",
+          "lying on painful side",
+          "cold things"
+        ]
+      }
     },
     {
       "id": "rhus-t",
@@ -623,7 +665,22 @@
         "chronic": "200C occasional dose"
       },
       "maxScore": 15,
-      "clinicalPearl": "Rhus Tox fits restless individuals whose joint and muscle pains are worse on first movement but ease with continued motion, classically described as the 'rusty hinge' remedy. Symptoms worsen from cold, damp weather and during rest, and improve with warmth and stretching. There is an intensely itchy, vesicular skin eruption and great restlessness that drives constant change of position."
+      "clinicalPearl": "Rhus Tox fits restless individuals whose joint and muscle pains are worse on first movement but ease with continued motion, classically described as the 'rusty hinge' remedy. Symptoms worsen from cold, damp weather and during rest, and improve with warmth and stretching. There is an intensely itchy, vesicular skin eruption and great restlessness that drives constant change of position.",
+      "modalities": {
+        "worse": [
+          "first motion after rest",
+          "damp cold weather",
+          "night",
+          "before storm"
+        ],
+        "better": [
+          "continued motion",
+          "warmth",
+          "hot bath",
+          "rubbing",
+          "change of position"
+        ]
+      }
     },
     {
       "id": "nux-v",
@@ -790,7 +847,23 @@
       },
       "maxScore": 43,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)",
-      "clinicalPearl": "Nux Vomica fits irritable, driven, oversensitive individuals who overindulge in coffee, alcohol, spicy food, or a sedentary lifestyle. Constipation with frequent ineffectual urging and a sensation of incomplete evacuation is classic, along with chilliness and hypersensitivity to noise, light, and odors. Symptoms are typically worse in the morning and after eating, easing somewhat as the day progresses."
+      "clinicalPearl": "Nux Vomica fits irritable, driven, oversensitive individuals who overindulge in coffee, alcohol, spicy food, or a sedentary lifestyle. Constipation with frequent ineffectual urging and a sensation of incomplete evacuation is classic, along with chilliness and hypersensitivity to noise, light, and odors. Symptoms are typically worse in the morning and after eating, easing somewhat as the day progresses.",
+      "modalities": {
+        "worse": [
+          "morning",
+          "cold",
+          "noise, odours",
+          "spices, coffee, alcohol",
+          "mental effort"
+        ],
+        "better": [
+          "evening",
+          "warmth",
+          "rest",
+          "short sleep",
+          "damp wet weather"
+        ]
+      }
     },
     {
       "id": "ars-alb",
@@ -992,7 +1065,23 @@
       },
       "maxScore": 63.5,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)",
-      "clinicalPearl": "Arsenicum Album suits anxious, restless, and fastidious patients who are chilly yet thirst for small sips of water frequently. Great prostration out of proportion to the complaint is characteristic, along with marked fear of death, fear of being alone, and desire for company. Symptoms are typically worse after midnight, and burning pains are relieved by warmth despite the general chilliness."
+      "clinicalPearl": "Arsenicum Album suits anxious, restless, and fastidious patients who are chilly yet thirst for small sips of water frequently. Great prostration out of proportion to the complaint is characteristic, along with marked fear of death, fear of being alone, and desire for company. Symptoms are typically worse after midnight, and burning pains are relieved by warmth despite the general chilliness.",
+      "modalities": {
+        "worse": [
+          "midnight to 2 am",
+          "cold",
+          "cold drinks and food",
+          "wet weather",
+          "exertion"
+        ],
+        "better": [
+          "warmth",
+          "hot drinks",
+          "sitting up",
+          "head elevated",
+          "company"
+        ]
+      }
     },
     {
       "id": "puls",
@@ -1134,7 +1223,23 @@
       },
       "maxScore": 42.1,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)",
-      "clinicalPearl": "Pulsatilla suits mild, weepy, yielding patients who crave sympathy and company, with symptoms that are markedly changeable from hour to hour. There is characteristically no thirst despite a dry mouth, and a strong aversion to rich, fatty food which disagrees. Complaints are worse in a warm, stuffy room and better in open air, and menses tend to be late and scanty."
+      "clinicalPearl": "Pulsatilla suits mild, weepy, yielding patients who crave sympathy and company, with symptoms that are markedly changeable from hour to hour. There is characteristically no thirst despite a dry mouth, and a strong aversion to rich, fatty food which disagrees. Complaints are worse in a warm, stuffy room and better in open air, and menses tend to be late and scanty.",
+      "modalities": {
+        "worse": [
+          "heat",
+          "warm room",
+          "rich fatty food",
+          "evening",
+          "lying on left side"
+        ],
+        "better": [
+          "open air",
+          "cold applications",
+          "gentle motion",
+          "sympathy",
+          "cold drinks"
+        ]
+      }
     },
     {
       "id": "cham",
@@ -1193,7 +1298,21 @@
         "chronic": "-"
       },
       "maxScore": 16.5,
-      "clinicalPearl": "Chamomilla is the classic remedy for extreme irritability, especially in teething infants, where the child is inconsolable, wants to be carried constantly, and rejects what was just demanded. Pains feel unbearable and are described as unendurable for the degree of the complaint, and one cheek may be red and hot while the other is pale, particularly in fevers."
+      "clinicalPearl": "Chamomilla is the classic remedy for extreme irritability, especially in teething infants, where the child is inconsolable, wants to be carried constantly, and rejects what was just demanded. Pains feel unbearable and are described as unendurable for the degree of the complaint, and one cheek may be red and hot while the other is pale, particularly in fevers.",
+      "modalities": {
+        "worse": [
+          "anger",
+          "teething",
+          "night",
+          "heat",
+          "being looked at, touched"
+        ],
+        "better": [
+          "being carried",
+          "warm wet weather",
+          "fasting"
+        ]
+      }
     },
     {
       "id": "ign",
@@ -1268,7 +1387,22 @@
         "chronic": "1M under guidance"
       },
       "maxScore": 17.5,
-      "clinicalPearl": "Ignatia is the classic remedy for acute grief, especially from a broken relationship or bereavement, marked by paradoxical symptoms — sighing frequently, alternating laughter and tears, and a lump-in-the-throat sensation better from swallowing solid food. The patient often pulls away from being hugged despite deep emotional pain, and symptoms are notably contradictory and changeable."
+      "clinicalPearl": "Ignatia is the classic remedy for acute grief, especially from a broken relationship or bereavement, marked by paradoxical symptoms — sighing frequently, alternating laughter and tears, and a lump-in-the-throat sensation better from swallowing solid food. The patient often pulls away from being hugged despite deep emotional pain, and symptoms are notably contradictory and changeable.",
+      "modalities": {
+        "worse": [
+          "grief",
+          "consolation",
+          "tobacco smoke",
+          "coffee",
+          "touch"
+        ],
+        "better": [
+          "change of position",
+          "eating",
+          "deep breathing",
+          "pressure"
+        ]
+      }
     },
     {
       "id": "gels",
@@ -1334,7 +1468,22 @@
         "chronic": "200C occasional dose"
       },
       "maxScore": 18,
-      "clinicalPearl": "Gelsemium suits the anticipatory, dull, and drowsy patient overwhelmed by fear or nervous dread before an event such as an exam or public appearance, with trembling weakness, heavy drooping eyelids, and a feeling that the limbs are too heavy to move. Fevers come on with chills running up and down the spine, without thirst despite the fever."
+      "clinicalPearl": "Gelsemium suits the anticipatory, dull, and drowsy patient overwhelmed by fear or nervous dread before an event such as an exam or public appearance, with trembling weakness, heavy drooping eyelids, and a feeling that the limbs are too heavy to move. Fevers come on with chills running up and down the spine, without thirst despite the fever.",
+      "modalities": {
+        "worse": [
+          "damp weather",
+          "fright, bad news",
+          "anticipation",
+          "heat of sun",
+          "morning"
+        ],
+        "better": [
+          "profuse urination",
+          "open air",
+          "bending forward",
+          "stimulants"
+        ]
+      }
     },
     {
       "id": "eup-per",
@@ -1395,7 +1544,21 @@
         "acute": "200C every 3-4h during acute stage",
         "chronic": "-"
       },
-      "maxScore": 14
+      "maxScore": 14,
+      "modalities": {
+        "worse": [
+          "cold air",
+          "periodical",
+          "7 to 9 am",
+          "motion",
+          "lying on left side"
+        ],
+        "better": [
+          "sweating",
+          "lying on face",
+          "talking"
+        ]
+      }
     },
     {
       "id": "pyrog",
@@ -1653,7 +1816,22 @@
         "chronic": "200C to 1M, constitutional case needed"
       },
       "maxScore": 23.5,
-      "clinicalPearl": "Calcarea Carbonica suits the fair, fat, and flabby constitution — chilly, sluggish, and easily fatigued by exertion, with profuse sour-smelling sweat especially on the head during sleep. Cravings for eggs and indigestible things like chalk are characteristic, alongside slow development in children, anxiety about health, and a tendency to obesity with weak ankles."
+      "clinicalPearl": "Calcarea Carbonica suits the fair, fat, and flabby constitution — chilly, sluggish, and easily fatigued by exertion, with profuse sour-smelling sweat especially on the head during sleep. Cravings for eggs and indigestible things like chalk are characteristic, alongside slow development in children, anxiety about health, and a tendency to obesity with weak ankles.",
+      "modalities": {
+        "worse": [
+          "cold",
+          "damp",
+          "exertion",
+          "full moon",
+          "standing",
+          "milk"
+        ],
+        "better": [
+          "dry weather",
+          "lying on painful side",
+          "constipation relieved"
+        ]
+      }
     },
     {
       "id": "phos",
@@ -1790,7 +1968,22 @@
       },
       "maxScore": 42.4,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)",
-      "clinicalPearl": "Phosphorus fits tall, sensitive, sympathetic individuals who are highly impressionable, fear being alone in the dark or during thunderstorms, and crave cold drinks, ice cream, and salty or spicy food. Bleeding tends to be bright red and profuse. There is marked burning between the shoulder blades and a desire to be magnetized, rubbed, or comforted by others' presence."
+      "clinicalPearl": "Phosphorus fits tall, sensitive, sympathetic individuals who are highly impressionable, fear being alone in the dark or during thunderstorms, and crave cold drinks, ice cream, and salty or spicy food. Bleeding tends to be bright red and profuse. There is marked burning between the shoulder blades and a desire to be magnetized, rubbed, or comforted by others' presence.",
+      "modalities": {
+        "worse": [
+          "lying on left side",
+          "twilight",
+          "cold air",
+          "physical or mental exertion",
+          "thunderstorm"
+        ],
+        "better": [
+          "cold food and drinks",
+          "sleep",
+          "lying on right side",
+          "being rubbed"
+        ]
+      }
     },
     {
       "id": "sulph",
@@ -1971,7 +2164,21 @@
       },
       "maxScore": 54.5,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)",
-      "clinicalPearl": "Sulphur is the classic 'hot patient' who cannot bear heat, throws off the covers, and has burning sensations especially of the soles, palms, and top of the head. Skin complaints are itchy and worse from bathing and warmth of bed. The Sulphur constitution is often untidy, philosophical, and selfishly absorbed in their own theories, with a tendency toward redness of orifices and offensive discharges."
+      "clinicalPearl": "Sulphur is the classic 'hot patient' who cannot bear heat, throws off the covers, and has burning sensations especially of the soles, palms, and top of the head. Skin complaints are itchy and worse from bathing and warmth of bed. The Sulphur constitution is often untidy, philosophical, and selfishly absorbed in their own theories, with a tendency toward redness of orifices and offensive discharges.",
+      "modalities": {
+        "worse": [
+          "standing",
+          "heat of bed",
+          "washing",
+          "11 am",
+          "warmth"
+        ],
+        "better": [
+          "dry warm weather",
+          "lying on right side",
+          "open air"
+        ]
+      }
     },
     {
       "id": "sil",
@@ -2039,7 +2246,23 @@
         "chronic": "200C to 1M, constitutional case needed"
       },
       "maxScore": 15.5,
-      "clinicalPearl": "Silicea suits the timid, yielding but obstinate individual who is chilly, has offensive foot sweat, and suffers from slow-healing wounds or chronic suppuration that refuses to resolve. There is marked weakness of nails and hair, a sensitive scalp, and constipation where the stool recedes after partial expulsion. Silicea is classically used to promote expulsion of foreign matter or splinters."
+      "clinicalPearl": "Silicea suits the timid, yielding but obstinate individual who is chilly, has offensive foot sweat, and suffers from slow-healing wounds or chronic suppuration that refuses to resolve. There is marked weakness of nails and hair, a sensitive scalp, and constipation where the stool recedes after partial expulsion. Silicea is classically used to promote expulsion of foreign matter or splinters.",
+      "modalities": {
+        "worse": [
+          "cold",
+          "draught",
+          "uncovering",
+          "new moon",
+          "morning",
+          "lying on left side"
+        ],
+        "better": [
+          "warmth",
+          "wrapping up head",
+          "summer",
+          "wet weather"
+        ]
+      }
     },
     {
       "id": "nat-mur",
@@ -2106,7 +2329,23 @@
         "chronic": "200C to 1M, constitutional case needed"
       },
       "maxScore": 19,
-      "clinicalPearl": "Natrum Muriaticum suits reserved, dutiful individuals who bottle up grief and cannot bear consolation, weeping alone rather than in company. Classic features include a craving for salt, intense thirst, and headaches like hammers, often worse from sun exposure. Cold sores frequently appear around the lips, and emaciation especially of the neck occurs despite normal appetite."
+      "clinicalPearl": "Natrum Muriaticum suits reserved, dutiful individuals who bottle up grief and cannot bear consolation, weeping alone rather than in company. Classic features include a craving for salt, intense thirst, and headaches like hammers, often worse from sun exposure. Cold sores frequently appear around the lips, and emaciation especially of the neck occurs despite normal appetite.",
+      "modalities": {
+        "worse": [
+          "sun, heat",
+          "consolation",
+          "10-11 am",
+          "sea",
+          "mental exertion"
+        ],
+        "better": [
+          "open air",
+          "cold bathing",
+          "fasting",
+          "lying on right side",
+          "pressure"
+        ]
+      }
     },
     {
       "id": "lyc",
@@ -2228,7 +2467,24 @@
       },
       "maxScore": 33.2,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)",
-      "clinicalPearl": "Lycopodium suits intellectually capable but physically weak individuals, often with digestive complaints worse from 4 to 8 pm, bloating soon after eating small amounts, and loud flatulence. There is a characteristic lack of self-confidence masked by outward arrogance, right-sided complaints, and a craving for sweets that aggravate. One foot may be cold while the other is warm."
+      "clinicalPearl": "Lycopodium suits intellectually capable but physically weak individuals, often with digestive complaints worse from 4 to 8 pm, bloating soon after eating small amounts, and loud flatulence. There is a characteristic lack of self-confidence masked by outward arrogance, right-sided complaints, and a craving for sweets that aggravate. One foot may be cold while the other is warm.",
+      "modalities": {
+        "worse": [
+          "4 to 8 pm",
+          "right side",
+          "heat",
+          "tight clothing",
+          "cold food",
+          "hunger"
+        ],
+        "better": [
+          "warm food and drinks",
+          "motion",
+          "after midnight",
+          "uncovering",
+          "loose clothing"
+        ]
+      }
     },
     {
       "id": "sep",
@@ -2372,7 +2628,22 @@
       },
       "maxScore": 44.6,
       "sourceNote": "Enriched from Boericke Materia Medica (public domain)",
-      "clinicalPearl": "Sepia fits the exhausted, indifferent woman worn down by domestic or hormonal burdens, who feels dragged down and irritable, with a marked bearing-down sensation as if the pelvic organs would fall out. There is characteristic aversion to family members despite otherwise being dutiful, better from vigorous exercise, and a sallow complexion with a yellow saddle across the nose."
+      "clinicalPearl": "Sepia fits the exhausted, indifferent woman worn down by domestic or hormonal burdens, who feels dragged down and irritable, with a marked bearing-down sensation as if the pelvic organs would fall out. There is characteristic aversion to family members despite otherwise being dutiful, better from vigorous exercise, and a sallow complexion with a yellow saddle across the nose.",
+      "modalities": {
+        "worse": [
+          "cold air",
+          "forenoon and evening",
+          "before menses",
+          "after sleep",
+          "washing"
+        ],
+        "better": [
+          "vigorous exercise",
+          "warmth of bed",
+          "pressure",
+          "sleep"
+        ]
+      }
     },
     {
       "id": "kali-bi",
@@ -2430,7 +2701,21 @@
         "chronic": "200C occasional dose"
       },
       "maxScore": 13.5,
-      "clinicalPearl": "Kali Bichromicum is known for thick, stringy, ropy discharges — from the nose, throat, or stomach — that can be pulled into strands. Pains are characteristically small and well-defined, as if made with a pencil point, and migrate rapidly from joint to joint. Sinus and catarrhal complaints are worse in the morning and from cold, and the patient may name the exact spot affected."
+      "clinicalPearl": "Kali Bichromicum is known for thick, stringy, ropy discharges — from the nose, throat, or stomach — that can be pulled into strands. Pains are characteristically small and well-defined, as if made with a pencil point, and migrate rapidly from joint to joint. Sinus and catarrhal complaints are worse in the morning and from cold, and the patient may name the exact spot affected.",
+      "modalities": {
+        "worse": [
+          "cold",
+          "early morning 2-3 am",
+          "hot weather",
+          "beer",
+          "stooping"
+        ],
+        "better": [
+          "heat",
+          "motion",
+          "pressure"
+        ]
+      }
     },
     {
       "id": "hep",
@@ -2489,7 +2774,22 @@
         "chronic": "-"
       },
       "maxScore": 14,
-      "clinicalPearl": "Hepar Sulphuris fits the extremely chilly, oversensitive, and irritable patient whose complaints, especially suppurating processes like abscesses, are exquisitely painful to touch or the slightest draft. There is a characteristic splinter-like sensation in the throat, offensive discharges, and a tendency for every small wound to fester. Warmth generally relieves, while cold air aggravates severely."
+      "clinicalPearl": "Hepar Sulphuris fits the extremely chilly, oversensitive, and irritable patient whose complaints, especially suppurating processes like abscesses, are exquisitely painful to touch or the slightest draft. There is a characteristic splinter-like sensation in the throat, offensive discharges, and a tendency for every small wound to fester. Warmth generally relieves, while cold air aggravates severely.",
+      "modalities": {
+        "worse": [
+          "cold dry wind",
+          "draught",
+          "slightest touch",
+          "uncovering",
+          "night"
+        ],
+        "better": [
+          "warmth",
+          "wrapping up",
+          "damp weather",
+          "after eating"
+        ]
+      }
     },
     {
       "id": "merc-sol",
@@ -2548,7 +2848,20 @@
         "chronic": "200C occasional dose"
       },
       "maxScore": 13,
-      "clinicalPearl": "Mercurius Solubilis suits patients with profuse, offensive perspiration that brings no relief, excessive salivation with a foul metallic taste, and marked sensitivity to both heat and cold. Glands tend to swell and suppurate, and symptoms are characteristically worse at night. There is often a coated, flabby tongue showing tooth-marks, with an unstable, hurried, and distrustful mental state."
+      "clinicalPearl": "Mercurius Solubilis suits patients with profuse, offensive perspiration that brings no relief, excessive salivation with a foul metallic taste, and marked sensitivity to both heat and cold. Glands tend to swell and suppurate, and symptoms are characteristically worse at night. There is often a coated, flabby tongue showing tooth-marks, with an unstable, hurried, and distrustful mental state.",
+      "modalities": {
+        "worse": [
+          "night",
+          "damp cold",
+          "sweating",
+          "heat of bed",
+          "lying on right side"
+        ],
+        "better": [
+          "moderate temperature",
+          "rest"
+        ]
+      }
     },
     {
       "id": "apis",
@@ -2607,7 +2920,23 @@
         "chronic": "-"
       },
       "maxScore": 14,
-      "clinicalPearl": "Apis Mellifica suits sudden, puffy, rosy swellings with stinging, burning pains that are markedly better from cold applications and worse from heat and touch. There is characteristic absence of thirst despite the acute presentation, and complaints come on rapidly, resembling a bee sting in character. It is a key remedy for allergic swelling, hives, and edema of the face or throat."
+      "clinicalPearl": "Apis Mellifica suits sudden, puffy, rosy swellings with stinging, burning pains that are markedly better from cold applications and worse from heat and touch. There is characteristic absence of thirst despite the acute presentation, and complaints come on rapidly, resembling a bee sting in character. It is a key remedy for allergic swelling, hives, and edema of the face or throat.",
+      "modalities": {
+        "worse": [
+          "heat",
+          "closed warm room",
+          "touch",
+          "pressure",
+          "after sleep",
+          "afternoon"
+        ],
+        "better": [
+          "cold applications",
+          "open air",
+          "uncovering",
+          "cold bathing"
+        ]
+      }
     },
     {
       "id": "canth",
@@ -2666,7 +2995,21 @@
         "chronic": "-"
       },
       "maxScore": 15.5,
-      "clinicalPearl": "Cantharis is indicated for intense burning pains, especially of the urinary tract, with a constant urge to urinate though only a few scalding drops are passed. Burns and scalds, even before blisters form, respond well to it. The mental state can include extreme irritability or even violent rage, and raw, excoriating sensations are characteristic wherever they occur."
+      "clinicalPearl": "Cantharis is indicated for intense burning pains, especially of the urinary tract, with a constant urge to urinate though only a few scalding drops are passed. Burns and scalds, even before blisters form, respond well to it. The mental state can include extreme irritability or even violent rage, and raw, excoriating sensations are characteristic wherever they occur.",
+      "modalities": {
+        "worse": [
+          "urinating",
+          "drinking cold water",
+          "coffee",
+          "touch",
+          "bright objects"
+        ],
+        "better": [
+          "rubbing",
+          "warmth",
+          "rest"
+        ]
+      }
     },
     {
       "id": "dros",
@@ -2719,7 +3062,22 @@
         "chronic": "-"
       },
       "maxScore": 13,
-      "clinicalPearl": "Drosera is the classic remedy for violent, spasmodic, barking coughs that come in rapid paroxysms so severe the patient can barely catch a breath between fits, characteristically worse after midnight. There may be a sensation of a feather tickling the throat, and coughing may induce gagging or vomiting. It is especially suited to whooping cough and deep, hollow, croupy coughs."
+      "clinicalPearl": "Drosera is the classic remedy for violent, spasmodic, barking coughs that come in rapid paroxysms so severe the patient can barely catch a breath between fits, characteristically worse after midnight. There may be a sensation of a feather tickling the throat, and coughing may induce gagging or vomiting. It is especially suited to whooping cough and deep, hollow, croupy coughs.",
+      "modalities": {
+        "worse": [
+          "after midnight",
+          "warmth of bed",
+          "lying down",
+          "talking",
+          "laughing",
+          "singing"
+        ],
+        "better": [
+          "pressure",
+          "open air",
+          "rest"
+        ]
+      }
     },
     {
       "id": "spong",
@@ -2772,7 +3130,22 @@
         "chronic": "-"
       },
       "maxScore": 12,
-      "clinicalPearl": "Spongia suits a dry, barking, croupy cough resembling a saw being driven through wood, typically worse before midnight and from cold air or drinks, and better from warm food or drinks. There is often a sensation of a plug in the larynx, with anxiety and constriction on waking suddenly from sleep feeling unable to breathe, needing to sit up."
+      "clinicalPearl": "Spongia suits a dry, barking, croupy cough resembling a saw being driven through wood, typically worse before midnight and from cold air or drinks, and better from warm food or drinks. There is often a sensation of a plug in the larynx, with anxiety and constriction on waking suddenly from sleep feeling unable to breathe, needing to sit up.",
+      "modalities": {
+        "worse": [
+          "before midnight",
+          "wind",
+          "cold",
+          "lying with head low",
+          "talking",
+          "sleeping"
+        ],
+        "better": [
+          "eating or drinking something warm",
+          "descending",
+          "lying with head high"
+        ]
+      }
     },
     {
       "id": "ant-t",
@@ -2833,7 +3206,23 @@
         "chronic": "-"
       },
       "maxScore": 15,
-      "clinicalPearl": "Antimonium Tartaricum is the classic remedy for loud, rattling chest congestion in which mucus can be heard but is difficult to expectorate, especially in the very young, elderly, or debilitated. The patient is drowsy, weak, and wants to be left alone, with a pale, sunken face covered in cold sweat during severe episodes. Nausea and vomiting often accompany respiratory distress."
+      "clinicalPearl": "Antimonium Tartaricum is the classic remedy for loud, rattling chest congestion in which mucus can be heard but is difficult to expectorate, especially in the very young, elderly, or debilitated. The patient is drowsy, weak, and wants to be left alone, with a pale, sunken face covered in cold sweat during severe episodes. Nausea and vomiting often accompany respiratory distress.",
+      "modalities": {
+        "worse": [
+          "lying down",
+          "warmth",
+          "damp cold",
+          "evening",
+          "milk",
+          "anger"
+        ],
+        "better": [
+          "sitting erect",
+          "expectoration",
+          "eructations",
+          "cold open air"
+        ]
+      }
     },
     {
       "id": "podo",
@@ -2893,7 +3282,20 @@
         "acute": "30C every 2-3h",
         "chronic": "-"
       },
-      "maxScore": 14.5
+      "maxScore": 14.5,
+      "modalities": {
+        "worse": [
+          "early morning",
+          "hot weather",
+          "teething",
+          "after eating or drinking"
+        ],
+        "better": [
+          "lying on stomach",
+          "external warmth",
+          "rubbing"
+        ]
+      }
     },
     {
       "id": "verat",
@@ -2946,7 +3348,23 @@
         "chronic": "-"
       },
       "maxScore": 12,
-      "clinicalPearl": "Veratrum Album is indicated for collapse with profuse cold sweat, especially on the forehead, accompanied by severe vomiting and purging that leave the patient prostrate and craving cold water or ice, even though it may be vomited back up. Cramping in the calves is common, and the patient becomes icy cold with a weak, thready pulse."
+      "clinicalPearl": "Veratrum Album is indicated for collapse with profuse cold sweat, especially on the forehead, accompanied by severe vomiting and purging that leave the patient prostrate and craving cold water or ice, even though it may be vomited back up. Cramping in the calves is common, and the patient becomes icy cold with a weak, thready pulse.",
+      "modalities": {
+        "worse": [
+          "cold drinks",
+          "fright",
+          "exertion",
+          "night",
+          "wet cold weather",
+          "after fruit"
+        ],
+        "better": [
+          "warmth",
+          "lying down",
+          "hot drinks",
+          "walking about"
+        ]
+      }
     },
     {
       "id": "chin",
@@ -3013,7 +3431,23 @@
         "chronic": "200C occasional dose"
       },
       "maxScore": 16,
-      "clinicalPearl": "China Officinalis suits debility and exhaustion following significant loss of fluids — from hemorrhage, diarrhea, or prolonged nursing — with marked weakness, periodicity of complaints, and bloating that is worse after eating even small amounts. Symptoms often recur at the same hour each day, and there is a general intolerance to loss of any bodily fluid."
+      "clinicalPearl": "China Officinalis suits debility and exhaustion following significant loss of fluids — from hemorrhage, diarrhea, or prolonged nursing — with marked weakness, periodicity of complaints, and bloating that is worse after eating even small amounts. Symptoms often recur at the same hour each day, and there is a general intolerance to loss of any bodily fluid.",
+      "modalities": {
+        "worse": [
+          "slight touch",
+          "draught",
+          "loss of fluids",
+          "night",
+          "after eating",
+          "every other day"
+        ],
+        "better": [
+          "hard pressure",
+          "bending double",
+          "warmth",
+          "open air"
+        ]
+      }
     },
     {
       "id": "arn",
@@ -3066,7 +3500,20 @@
         "acute": "200C repeated after trauma, or 30C several times daily",
         "chronic": "-"
       },
-      "maxScore": 12
+      "maxScore": 12,
+      "modalities": {
+        "worse": [
+          "touch",
+          "motion",
+          "jar",
+          "damp cold",
+          "rest"
+        ],
+        "better": [
+          "lying with head low",
+          "lying down"
+        ]
+      }
     },
     {
       "id": "arg-n",
@@ -3180,7 +3627,21 @@
         "chronic": "200C occasional dose"
       },
       "maxScore": 11,
-      "clinicalPearl": "Staphysagria suits the sensitive individual who suppresses anger or indignation from insult, humiliation, or violation, later manifesting as physical complaints from that suppressed emotion. Styes, especially recurring on the same eyelid, and complaints following surgery are classically covered. There is characteristic sensitivity to any perceived slight, with an inward simmering resentment."
+      "clinicalPearl": "Staphysagria suits the sensitive individual who suppresses anger or indignation from insult, humiliation, or violation, later manifesting as physical complaints from that suppressed emotion. Styes, especially recurring on the same eyelid, and complaints following surgery are classically covered. There is characteristic sensitivity to any perceived slight, with an inward simmering resentment.",
+      "modalities": {
+        "worse": [
+          "anger and indignation",
+          "suppressed emotions",
+          "touch",
+          "tobacco",
+          "after sleep"
+        ],
+        "better": [
+          "warmth",
+          "rest",
+          "breakfast"
+        ]
+      }
     },
     {
       "id": "carb-v",
@@ -3241,7 +3702,23 @@
         "chronic": "200C occasional dose"
       },
       "maxScore": 16,
-      "clinicalPearl": "Carbo Vegetabilis is known as the 'corpse reviver,' indicated for states of collapse with cold, blue extremities yet a craving for air and to be fanned vigorously, even in cold weather. Bloating and flatulence after eating is marked, along with a sluggish circulation and burning sensations internally despite the outward coldness. It is a key remedy for post-illness exhaustion and collapse."
+      "clinicalPearl": "Carbo Vegetabilis is known as the 'corpse reviver,' indicated for states of collapse with cold, blue extremities yet a craving for air and to be fanned vigorously, even in cold weather. Bloating and flatulence after eating is marked, along with a sluggish circulation and burning sensations internally despite the outward coldness. It is a key remedy for post-illness exhaustion and collapse.",
+      "modalities": {
+        "worse": [
+          "warm damp weather",
+          "fatty food",
+          "evening",
+          "lying down",
+          "wine"
+        ],
+        "better": [
+          "fanning",
+          "open air",
+          "cold",
+          "belching",
+          "elevating limbs"
+        ]
+      }
     },
     {
       "id": "chel",
@@ -3355,7 +3832,22 @@
         "acute": "30C 3x daily",
         "chronic": "200C occasional dose"
       },
-      "maxScore": 14
+      "maxScore": 14,
+      "modalities": {
+        "worse": [
+          "damp weather",
+          "basement dwelling",
+          "lying on left side",
+          "early morning",
+          "music"
+        ],
+        "better": [
+          "dry weather",
+          "pressure",
+          "change of position",
+          "open air"
+        ]
+      }
     },
     {
       "id": "robinia",
@@ -3627,7 +4119,20 @@
         "chronic": "200C to 1M constitutional case needed"
       },
       "maxScore": 14.5,
-      "clinicalPearl": "Graphites suits the chilly, sluggish, often overweight individual with dry, rough, cracked skin — especially at the corners of the mouth, behind the ears, or in skin folds — and eruptions that ooze a sticky, honey-like discharge. Constipation with large, knotty stool coated in mucus is typical, along with indecisiveness and a tendency toward sadness."
+      "clinicalPearl": "Graphites suits the chilly, sluggish, often overweight individual with dry, rough, cracked skin — especially at the corners of the mouth, behind the ears, or in skin folds — and eruptions that ooze a sticky, honey-like discharge. Constipation with large, knotty stool coated in mucus is typical, along with indecisiveness and a tendency toward sadness.",
+      "modalities": {
+        "worse": [
+          "warmth",
+          "night",
+          "during and after menses",
+          "light"
+        ],
+        "better": [
+          "wrapping up",
+          "darkness",
+          "eating"
+        ]
+      }
     },
     {
       "id": "acet-ac",
@@ -4938,7 +5443,23 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 19.6
+      "maxScore": 19.6,
+      "modalities": {
+        "worse": [
+          "night",
+          "cold",
+          "mental exertion",
+          "sunset to sunrise",
+          "emotion",
+          "grief"
+        ],
+        "better": [
+          "open air",
+          "warmth",
+          "music",
+          "moderate exercise"
+        ]
+      }
     },
     {
       "id": "bapt",
@@ -6104,7 +6625,21 @@
         "chronic": "200C to 1M, constitutional case needed"
       },
       "maxScore": 21,
-      "clinicalPearl": "Causticum suits sympathetic, sensitive individuals who cannot bear to see others suffer, with paralytic weakness, hoarseness worse in the evening, and involuntary loss of urine on coughing, sneezing, or laughing. Complaints are typically worse from dry cold and better from damp weather, and there is a characteristic desire to right perceived injustices or wrongs done to others."
+      "clinicalPearl": "Causticum suits sympathetic, sensitive individuals who cannot bear to see others suffer, with paralytic weakness, hoarseness worse in the evening, and involuntary loss of urine on coughing, sneezing, or laughing. Complaints are typically worse from dry cold and better from damp weather, and there is a characteristic desire to right perceived injustices or wrongs done to others.",
+      "modalities": {
+        "worse": [
+          "clear fine weather",
+          "dry cold wind",
+          "evening",
+          "grief",
+          "motion of carriage"
+        ],
+        "better": [
+          "damp wet weather",
+          "warmth of bed",
+          "drinking cold water"
+        ]
+      }
     },
     {
       "id": "cic",
@@ -6213,7 +6748,21 @@
         "chronic": "200C to 1M, constitutional case needed"
       },
       "maxScore": 18,
-      "clinicalPearl": "Cina is a classic remedy for children with intestinal worms, marked by irritability, grinding of teeth during sleep, picking at the nose, and voracious hunger that returns soon after eating. The child is often cross and does not want to be touched or looked at, and there may be twitching or spasmodic movements alongside the digestive disturbance."
+      "clinicalPearl": "Cina is a classic remedy for children with intestinal worms, marked by irritability, grinding of teeth during sleep, picking at the nose, and voracious hunger that returns soon after eating. The child is often cross and does not want to be touched or looked at, and there may be twitching or spasmodic movements alongside the digestive disturbance.",
+      "modalities": {
+        "worse": [
+          "night",
+          "sun",
+          "worms",
+          "summer",
+          "touch"
+        ],
+        "better": [
+          "lying on abdomen",
+          "hard pressure",
+          "motion"
+        ]
+      }
     },
     {
       "id": "coca",
@@ -6576,7 +7125,22 @@
         "chronic": "200C to 1M, constitutional case needed"
       },
       "maxScore": 10.3,
-      "clinicalPearl": "Colocynthis is the classic antispasmodic for violent, cramping, colicky abdominal pain that forces the patient to bend double or press hard on the abdomen for relief. Pain is frequently triggered or aggravated by anger or indignation, and warmth and firm pressure both bring relief while the least food or drink can worsen the cramping."
+      "clinicalPearl": "Colocynthis is the classic antispasmodic for violent, cramping, colicky abdominal pain that forces the patient to bend double or press hard on the abdomen for relief. Pain is frequently triggered or aggravated by anger or indignation, and warmth and firm pressure both bring relief while the least food or drink can worsen the cramping.",
+      "modalities": {
+        "worse": [
+          "anger",
+          "indignation",
+          "night",
+          "eating"
+        ],
+        "better": [
+          "bending double",
+          "hard pressure",
+          "warmth",
+          "rest",
+          "coffee"
+        ]
+      }
     },
     {
       "id": "con",
@@ -6656,7 +7220,23 @@
         "chronic": "200C to 1M, constitutional case needed"
       },
       "maxScore": 18.400000000000002,
-      "clinicalPearl": "Conium Maculatum suits the indifferent, apathetic individual, often a widower or one grieving loss, with vertigo on turning the head or lying down, and progressive weakness that ascends the body. Glandular hardening, especially of the breast or testes, is characteristic, along with suppressed sexual desire and a tendency toward isolation and withdrawal."
+      "clinicalPearl": "Conium Maculatum suits the indifferent, apathetic individual, often a widower or one grieving loss, with vertigo on turning the head or lying down, and progressive weakness that ascends the body. Glandular hardening, especially of the breast or testes, is characteristic, along with suppressed sexual desire and a tendency toward isolation and withdrawal.",
+      "modalities": {
+        "worse": [
+          "lying down",
+          "turning in bed",
+          "cold",
+          "before and during menses",
+          "celibacy",
+          "alcohol"
+        ],
+        "better": [
+          "motion",
+          "letting limbs hang down",
+          "darkness",
+          "fasting"
+        ]
+      }
     },
     {
       "id": "croc",
@@ -7182,7 +7762,20 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 14.299999999999999
+      "maxScore": 14.299999999999999,
+      "modalities": {
+        "worse": [
+          "cold damp weather",
+          "change from hot to cold",
+          "night",
+          "sudden temperature change"
+        ],
+        "better": [
+          "warmth",
+          "dry weather",
+          "motion"
+        ]
+      }
     },
     {
       "id": "equis",
@@ -7286,7 +7879,22 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 14.4
+      "maxScore": 14.4,
+      "modalities": {
+        "worse": [
+          "light",
+          "warm room",
+          "wind",
+          "evening",
+          "indoors"
+        ],
+        "better": [
+          "dark",
+          "open air",
+          "winking",
+          "wiping eyes"
+        ]
+      }
     },
     {
       "id": "ferr",
@@ -7375,7 +7983,22 @@
         "chronic": "200C occasional dose if picture recurs"
       },
       "maxScore": 27,
-      "clinicalPearl": "Ferrum Phosphoricum suits the early, undifferentiated stage of inflammation or fever, before symptoms have localized clearly — a flushed face that alternates with pallor, moderate fever without marked chilliness, and a generally milder inflammatory picture than Aconite or Belladonna. It is also indicated in anemia with breathlessness on exertion and easy, frequent nosebleeds."
+      "clinicalPearl": "Ferrum Phosphoricum suits the early, undifferentiated stage of inflammation or fever, before symptoms have localized clearly — a flushed face that alternates with pallor, moderate fever without marked chilliness, and a generally milder inflammatory picture than Aconite or Belladonna. It is also indicated in anemia with breathlessness on exertion and easy, frequent nosebleeds.",
+      "modalities": {
+        "worse": [
+          "rest",
+          "night",
+          "midnight",
+          "after eating",
+          "cold"
+        ],
+        "better": [
+          "gentle walking",
+          "slow motion",
+          "lying down",
+          "pressure"
+        ]
+      }
     },
     {
       "id": "fl-ac",
@@ -7779,7 +8402,22 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 19.8
+      "maxScore": 19.8,
+      "modalities": {
+        "worse": [
+          "night",
+          "lying down",
+          "jealousy",
+          "after eating",
+          "cold",
+          "emotion"
+        ],
+        "better": [
+          "bending forward",
+          "motion",
+          "warmth"
+        ]
+      }
     },
     {
       "id": "hyper",
@@ -7957,7 +8595,21 @@
         "chronic": "200C to 1M, constitutional case needed"
       },
       "maxScore": 15.2,
-      "clinicalPearl": "Ipecacuanha is indicated for persistent nausea unrelieved by vomiting, with a clean, unchanged tongue despite the intensity of the gastric complaint. Bleeding, whether from the gut, lungs, or uterus, tends to be bright red and profuse, and coughing may be spasmodic enough to induce vomiting. It is especially useful in nausea, motion sickness, and hemorrhage accompanied by nausea."
+      "clinicalPearl": "Ipecacuanha is indicated for persistent nausea unrelieved by vomiting, with a clean, unchanged tongue despite the intensity of the gastric complaint. Bleeding, whether from the gut, lungs, or uterus, tends to be bright red and profuse, and coughing may be spasmodic enough to induce vomiting. It is especially useful in nausea, motion sickness, and hemorrhage accompanied by nausea.",
+      "modalities": {
+        "worse": [
+          "motion",
+          "warm room",
+          "periodical",
+          "stooping",
+          "veal"
+        ],
+        "better": [
+          "open air",
+          "rest",
+          "pressure"
+        ]
+      }
     },
     {
       "id": "kali-br",
@@ -8086,7 +8738,24 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 19
+      "maxScore": 19,
+      "modalities": {
+        "worse": [
+          "cold",
+          "2 to 4 am",
+          "lying on painful side",
+          "after coition",
+          "draughts",
+          "soup"
+        ],
+        "better": [
+          "warmth",
+          "open air",
+          "daytime",
+          "moving about",
+          "leaning forward"
+        ]
+      }
     },
     {
       "id": "kalm",
@@ -8293,7 +8962,23 @@
         "chronic": "200C to 1M, constitutional case needed"
       },
       "maxScore": 23,
-      "clinicalPearl": "Lachesis suits intense, talkative, and often jealous or suspicious individuals whose symptoms are characteristically worse after sleep and on the left side, or moving from left to right. There is marked intolerance of anything tight around the neck or waist, a purplish or mottled discoloration of affected parts, and a tendency toward loquacious, rapidly jumping conversation."
+      "clinicalPearl": "Lachesis suits intense, talkative, and often jealous or suspicious individuals whose symptoms are characteristically worse after sleep and on the left side, or moving from left to right. There is marked intolerance of anything tight around the neck or waist, a purplish or mottled discoloration of affected parts, and a tendency toward loquacious, rapidly jumping conversation.",
+      "modalities": {
+        "worse": [
+          "after sleep",
+          "left side",
+          "touch of clothing",
+          "heat",
+          "spring",
+          "alcohol"
+        ],
+        "better": [
+          "discharges",
+          "open air",
+          "cold drinks",
+          "pressure"
+        ]
+      }
     },
     {
       "id": "lac-c",
@@ -8778,7 +9463,22 @@
         "chronic": "200C to 1M, constitutional case needed"
       },
       "maxScore": 15.6,
-      "clinicalPearl": "Magnesia Phosphorica is the classic remedy for cramping, neuralgic pains of a shooting, spasmodic character that are markedly relieved by warmth, firm pressure, and bending double, and worsened by cold and touch. It suits colic, menstrual cramps, and neuralgic pain including toothache, acting almost like a biochemic counterpart to Colocynthis."
+      "clinicalPearl": "Magnesia Phosphorica is the classic remedy for cramping, neuralgic pains of a shooting, spasmodic character that are markedly relieved by warmth, firm pressure, and bending double, and worsened by cold and touch. It suits colic, menstrual cramps, and neuralgic pain including toothache, acting almost like a biochemic counterpart to Colocynthis.",
+      "modalities": {
+        "worse": [
+          "cold",
+          "touch",
+          "night",
+          "right side"
+        ],
+        "better": [
+          "heat",
+          "warmth",
+          "bending double",
+          "pressure",
+          "rubbing"
+        ]
+      }
     },
     {
       "id": "med",
@@ -9590,7 +10290,20 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 18.400000000000002
+      "maxScore": 18.400000000000002,
+      "modalities": {
+        "worse": [
+          "evening and night",
+          "cold climate",
+          "touch",
+          "mental exertion",
+          "mercury"
+        ],
+        "better": [
+          "warm weather",
+          "riding in a carriage"
+        ]
+      }
     },
     {
       "id": "nux-m",
@@ -9799,7 +10512,20 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 18.400000000000002
+      "maxScore": 18.400000000000002,
+      "modalities": {
+        "worse": [
+          "before and during thunderstorm",
+          "riding in carriages or ships",
+          "winter",
+          "cabbage"
+        ],
+        "better": [
+          "warm air",
+          "dry weather",
+          "lying with head high"
+        ]
+      }
     },
     {
       "id": "petros",
@@ -9887,7 +10613,21 @@
         "acute": "30C 2-3x daily during episode",
         "chronic": "200C occasional dose if picture recurs"
       },
-      "maxScore": 16.7
+      "maxScore": 16.7,
+      "modalities": {
+        "worse": [
+          "loss of fluids",
+          "mental strain",
+          "cold",
+          "grief",
+          "sexual excess"
+        ],
+        "better": [
+          "warmth",
+          "rest",
+          "keeping warm"
+        ]
+      }
     },
     {
       "id": "phys",
@@ -10796,7 +11536,24 @@
         "chronic": "200C to 1M, constitutional case needed"
       },
       "maxScore": 15.7,
-      "clinicalPearl": "Sanguinaria is a key remedy for right-sided complaints, especially headaches that follow the course of the sun — beginning in the morning, intensifying at noon, and subsiding by evening — better from firm pressure and sleep. Burning sensations of the palms and soles despite general chilliness, and complaints alternating between the head and other body parts, are characteristic."
+      "clinicalPearl": "Sanguinaria is a key remedy for right-sided complaints, especially headaches that follow the course of the sun — beginning in the morning, intensifying at noon, and subsiding by evening — better from firm pressure and sleep. Burning sensations of the palms and soles despite general chilliness, and complaints alternating between the head and other body parts, are characteristic.",
+      "modalities": {
+        "worse": [
+          "right side",
+          "sun",
+          "sweets",
+          "periodical",
+          "jar",
+          "smell of flowers"
+        ],
+        "better": [
+          "sleep",
+          "darkness",
+          "acids",
+          "belching",
+          "passing wind"
+        ]
+      }
     },
     {
       "id": "san",
@@ -11097,7 +11854,22 @@
         "chronic": "200C to 1M, constitutional case needed"
       },
       "maxScore": 16.4,
-      "clinicalPearl": "Spigelia is indicated for sharp, neuralgic pains, especially left-sided facial or eye pain, and palpitations that are visible and audible to the patient. Complaints characteristically worsen from touch, motion, and cold, and improve lying still on the right side. It is also a classic remedy for worm infestation in children accompanied by these neuralgic symptoms."
+      "clinicalPearl": "Spigelia is indicated for sharp, neuralgic pains, especially left-sided facial or eye pain, and palpitations that are visible and audible to the patient. Complaints characteristically worsen from touch, motion, and cold, and improve lying still on the right side. It is also a classic remedy for worm infestation in children accompanied by these neuralgic symptoms.",
+      "modalities": {
+        "worse": [
+          "motion",
+          "touch",
+          "noise",
+          "washing",
+          "cold wet weather",
+          "turning"
+        ],
+        "better": [
+          "lying on right side with head high",
+          "inhaling",
+          "summer"
+        ]
+      }
     },
     {
       "id": "stann",
@@ -11225,7 +11997,20 @@
         "acute": "30C for acute flare if applicable",
         "chronic": "200C to 1M, constitutional case needed"
       },
-      "maxScore": 19
+      "maxScore": 19,
+      "modalities": {
+        "worse": [
+          "darkness",
+          "being alone",
+          "looking at bright objects",
+          "swallowing"
+        ],
+        "better": [
+          "light",
+          "company",
+          "warmth"
+        ]
+      }
     },
     {
       "id": "sul-ac",
@@ -11734,7 +12519,22 @@
         "chronic": "200C to 1M, constitutional case needed"
       },
       "maxScore": 16.4,
-      "clinicalPearl": "Thuja is the classic remedy for warts, especially large, jagged ones that bleed easily, and for complaints following vaccination. There is a characteristic sensation as if the body were fragile, made of glass, or as if a foreign object were present internally. Sweat is often oily, and the patient may have a secretive, fixed-idea mental state."
+      "clinicalPearl": "Thuja is the classic remedy for warts, especially large, jagged ones that bleed easily, and for complaints following vaccination. There is a characteristic sensation as if the body were fragile, made of glass, or as if a foreign object were present internally. Sweat is often oily, and the patient may have a secretive, fixed-idea mental state.",
+      "modalities": {
+        "worse": [
+          "cold damp air",
+          "night",
+          "3 am and 3 pm",
+          "vaccination",
+          "fat food, onions, tea"
+        ],
+        "better": [
+          "warm dry air",
+          "motion",
+          "sweating",
+          "drawing up the limb"
+        ]
+      }
     },
     {
       "id": "trill",
