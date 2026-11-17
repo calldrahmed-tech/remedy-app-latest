@@ -1541,6 +1541,18 @@
         {
           "id": "sil",
           "grade": 3
+        },
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 2
         }
       ],
       "category": "Particulars",
@@ -1669,6 +1681,14 @@
         {
           "id": "spong",
           "grade": 3
+        },
+        {
+          "id": "hep",
+          "grade": 2
+        },
+        {
+          "id": "acon",
+          "grade": 1
         }
       ],
       "category": "Particulars",
@@ -1689,6 +1709,14 @@
         {
           "id": "spig",
           "grade": 3
+        },
+        {
+          "id": "sil",
+          "grade": 2
+        },
+        {
+          "id": "sang",
+          "grade": 2
         }
       ],
       "category": "Particulars",
@@ -1757,6 +1785,14 @@
         {
           "id": "aeth",
           "grade": 3
+        },
+        {
+          "id": "calc-c",
+          "grade": 2
+        },
+        {
+          "id": "ant-t",
+          "grade": 1
         }
       ],
       "category": "Particulars",
@@ -1896,6 +1932,10 @@
         {
           "id": "sars",
           "grade": 3
+        },
+        {
+          "id": "canth",
+          "grade": 2
         }
       ],
       "category": "Particulars",
@@ -1914,6 +1954,18 @@
         {
           "id": "dros",
           "grade": 3
+        },
+        {
+          "id": "cor-r",
+          "grade": 2
+        },
+        {
+          "id": "cupr",
+          "grade": 2
+        },
+        {
+          "id": "ip",
+          "grade": 1
         }
       ],
       "category": "Particulars",
@@ -1932,6 +1984,14 @@
         {
           "id": "iris",
           "grade": 3
+        },
+        {
+          "id": "lac-d",
+          "grade": 2
+        },
+        {
+          "id": "sang",
+          "grade": 2
         }
       ],
       "category": "Particulars",
@@ -1950,6 +2010,18 @@
         {
           "id": "spong",
           "grade": 3
+        },
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "samb",
+          "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 1
         }
       ],
       "category": "Particulars",
@@ -2026,6 +2098,18 @@
         {
           "id": "kali-sulph-rem",
           "grade": 3
+        },
+        {
+          "id": "puls",
+          "grade": 2
+        },
+        {
+          "id": "kali-bi",
+          "grade": 2
+        },
+        {
+          "id": "hydr",
+          "grade": 1
         }
       ],
       "category": "Particulars",
@@ -2044,6 +2128,18 @@
         {
           "id": "robinia",
           "grade": 3
+        },
+        {
+          "id": "rheum",
+          "grade": 2
+        },
+        {
+          "id": "mag-c",
+          "grade": 2
+        },
+        {
+          "id": "hep",
+          "grade": 2
         }
       ],
       "category": "Generals",
@@ -2134,6 +2230,22 @@
         {
           "id": "mill",
           "grade": 3
+        },
+        {
+          "id": "ip",
+          "grade": 2
+        },
+        {
+          "id": "ham",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "arn",
+          "grade": 1
         }
       ],
       "category": "Generals",
@@ -2152,6 +2264,10 @@
         {
           "id": "sang",
           "grade": 3
+        },
+        {
+          "id": "sulph",
+          "grade": 2
         }
       ],
       "category": "Particulars",
@@ -2260,6 +2376,22 @@
         {
           "id": "sabin",
           "grade": 3
+        },
+        {
+          "id": "ip",
+          "grade": 2
+        },
+        {
+          "id": "cham",
+          "grade": 2
+        },
+        {
+          "id": "sec",
+          "grade": 2
+        },
+        {
+          "id": "mill",
+          "grade": 1
         }
       ],
       "category": "Particulars",
@@ -2312,6 +2444,22 @@
         {
           "id": "melil",
           "grade": 3
+        },
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "glon",
+          "grade": 2
+        },
+        {
+          "id": "ferr",
+          "grade": 1
+        },
+        {
+          "id": "amyl-n",
+          "grade": 1
         }
       ],
       "category": "Particulars",
@@ -2416,6 +2564,22 @@
         {
           "id": "murx",
           "grade": 3
+        },
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "lil-tig",
+          "grade": 2
+        },
+        {
+          "id": "helon",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 1
         }
       ],
       "category": "Particulars",
@@ -2451,6 +2615,14 @@
         {
           "id": "trill",
           "grade": 3
+        },
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 1
         }
       ],
       "category": "Particulars",
@@ -2487,6 +2659,14 @@
         {
           "id": "phos",
           "grade": 3
+        },
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "eup-per",
+          "grade": 2
         }
       ],
       "category": "Particulars",
@@ -2524,6 +2704,18 @@
         {
           "id": "puls",
           "grade": 3
+        },
+        {
+          "id": "kali-bi",
+          "grade": 2
+        },
+        {
+          "id": "kali-sulph-rem",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
         }
       ],
       "category": "Particulars",
@@ -2568,6 +2760,18 @@
         {
           "id": "carb-v",
           "grade": 3
+        },
+        {
+          "id": "camph",
+          "grade": 2
+        },
+        {
+          "id": "verat",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 2
         }
       ],
       "category": "Particulars",
@@ -2820,6 +3024,14 @@
         {
           "id": "eup-per",
           "grade": 3
+        },
+        {
+          "id": "bry",
+          "grade": 2
+        },
+        {
+          "id": "arn",
+          "grade": 2
         }
       ],
       "category": "Generals",
@@ -2882,6 +3094,22 @@
         {
           "id": "alet",
           "grade": 3
+        },
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "helon",
+          "grade": 2
+        },
+        {
+          "id": "lil-tig",
+          "grade": 2
+        },
+        {
+          "id": "ferr",
+          "grade": 1
         }
       ],
       "category": "Particulars",
@@ -2906,6 +3134,14 @@
         {
           "id": "agar",
           "grade": 3
+        },
+        {
+          "id": "tarent",
+          "grade": 2
+        },
+        {
+          "id": "zinc",
+          "grade": 2
         }
       ],
       "category": "Particulars",
@@ -3028,6 +3264,14 @@
         {
           "id": "urt-u",
           "grade": 3
+        },
+        {
+          "id": "apis",
+          "grade": 2
+        },
+        {
+          "id": "rhus-t",
+          "grade": 1
         }
       ],
       "category": "Particulars",
@@ -3283,6 +3527,18 @@
         {
           "id": "cham",
           "grade": 2
+        },
+        {
+          "id": "podo",
+          "grade": 1
+        },
+        {
+          "id": "calc-p",
+          "grade": 1
+        },
+        {
+          "id": "merc-sol",
+          "grade": 1
         }
       ],
       "category": "Particulars",
@@ -7129,6 +7385,14 @@
         {
           "id": "benz-ac",
           "grade": 3
+        },
+        {
+          "id": "nit-ac",
+          "grade": 2
+        },
+        {
+          "id": "sep",
+          "grade": 2
         }
       ],
       "category": "Particulars",
@@ -7440,6 +7704,14 @@
         {
           "id": "lac-c",
           "grade": 3
+        },
+        {
+          "id": "lach",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 2
         }
       ],
       "category": "Generals",
@@ -7458,6 +7730,18 @@
         {
           "id": "lach",
           "grade": 3
+        },
+        {
+          "id": "sulph",
+          "grade": 2
+        },
+        {
+          "id": "op",
+          "grade": 2
+        },
+        {
+          "id": "lac-c",
+          "grade": 1
         }
       ],
       "category": "Generals",
@@ -7475,6 +7759,10 @@
         {
           "id": "kali-c",
           "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
         }
       ],
       "category": "Generals",
@@ -7492,6 +7780,18 @@
         {
           "id": "lyc",
           "grade": 2
+        },
+        {
+          "id": "hell",
+          "grade": 1
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
+        },
+        {
+          "id": "puls",
+          "grade": 1
         }
       ],
       "category": "Generals",
@@ -7618,6 +7918,14 @@
         {
           "id": "dros",
           "grade": 3
+        },
+        {
+          "id": "spong",
+          "grade": 2
+        },
+        {
+          "id": "cor-r",
+          "grade": 2
         }
       ],
       "category": "Particulars",
@@ -7636,6 +7944,14 @@
         {
           "id": "rumx",
           "grade": 3
+        },
+        {
+          "id": "phos",
+          "grade": 2
+        },
+        {
+          "id": "ign",
+          "grade": 1
         }
       ],
       "category": "Particulars",
@@ -7705,6 +8021,14 @@
         {
           "id": "spong",
           "grade": 3
+        },
+        {
+          "id": "acon",
+          "grade": 2
+        },
+        {
+          "id": "hep",
+          "grade": 2
         }
       ],
       "category": "Particulars",
@@ -9992,6 +10316,14 @@
         {
           "id": "bell",
           "grade": 3
+        },
+        {
+          "id": "gels",
+          "grade": 2
+        },
+        {
+          "id": "glon",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -11669,6 +12001,14 @@
         {
           "id": "gels",
           "grade": 2
+        },
+        {
+          "id": "ign",
+          "grade": 1
+        },
+        {
+          "id": "sang",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -12091,6 +12431,10 @@
         {
           "id": "kali-bi",
           "grade": 3
+        },
+        {
+          "id": "ign",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -15528,6 +15872,18 @@
         {
           "id": "acet-ac",
           "grade": 3
+        },
+        {
+          "id": "verat",
+          "grade": 2
+        },
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "chin",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -15544,6 +15900,14 @@
         {
           "id": "act-r",
           "grade": 3
+        },
+        {
+          "id": "caul",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -15576,6 +15940,14 @@
         {
           "id": "aesc",
           "grade": 3
+        },
+        {
+          "id": "nit-ac",
+          "grade": 2
+        },
+        {
+          "id": "kali-c",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -15592,6 +15964,18 @@
         {
           "id": "aesc",
           "grade": 2
+        },
+        {
+          "id": "aloe",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
+        },
+        {
+          "id": "collin",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -15652,6 +16036,14 @@
         {
           "id": "am-c",
           "grade": 2
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
+        },
+        {
+          "id": "carb-v",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -15668,6 +16060,14 @@
         {
           "id": "am-c",
           "grade": 2
+        },
+        {
+          "id": "bry",
+          "grade": 1
+        },
+        {
+          "id": "bov",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -15704,6 +16104,22 @@
         {
           "id": "amyl-n",
           "grade": 3
+        },
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "glon",
+          "grade": 2
+        },
+        {
+          "id": "sang",
+          "grade": 2
+        },
+        {
+          "id": "lach",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -15740,6 +16156,14 @@
         {
           "id": "apoc",
           "grade": 3
+        },
+        {
+          "id": "ars-alb",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -15792,6 +16216,18 @@
         {
           "id": "aster",
           "grade": 2
+        },
+        {
+          "id": "con",
+          "grade": 1
+        },
+        {
+          "id": "phyt",
+          "grade": 1
+        },
+        {
+          "id": "carb-an",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -15824,6 +16260,18 @@
         {
           "id": "berb",
           "grade": 2
+        },
+        {
+          "id": "lyc",
+          "grade": 1
+        },
+        {
+          "id": "sars",
+          "grade": 1
+        },
+        {
+          "id": "canth",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -15856,6 +16304,14 @@
         {
           "id": "bov",
           "grade": 2
+        },
+        {
+          "id": "am-c",
+          "grade": 1
+        },
+        {
+          "id": "lach",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -15872,6 +16328,14 @@
         {
           "id": "calad",
           "grade": 3
+        },
+        {
+          "id": "sep",
+          "grade": 2
+        },
+        {
+          "id": "graph",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -15888,6 +16352,10 @@
         {
           "id": "calen",
           "grade": 2
+        },
+        {
+          "id": "hyper",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -15904,6 +16372,18 @@
         {
           "id": "carb-an",
           "grade": 3
+        },
+        {
+          "id": "con",
+          "grade": 2
+        },
+        {
+          "id": "calc-f",
+          "grade": 2
+        },
+        {
+          "id": "phyt",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -15936,6 +16416,26 @@
         {
           "id": "collin",
           "grade": 3
+        },
+        {
+          "id": "aesc",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 2
+        },
+        {
+          "id": "sulph",
+          "grade": 2
+        },
+        {
+          "id": "aloe",
+          "grade": 2
+        },
+        {
+          "id": "sep",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -15952,6 +16452,14 @@
         {
           "id": "lob",
           "grade": 3
+        },
+        {
+          "id": "ip",
+          "grade": 2
+        },
+        {
+          "id": "tab",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -15968,6 +16476,18 @@
         {
           "id": "lob",
           "grade": 2
+        },
+        {
+          "id": "tab",
+          "grade": 1
+        },
+        {
+          "id": "sep",
+          "grade": 1
+        },
+        {
+          "id": "ip",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -16036,6 +16556,22 @@
         {
           "id": "merc-c",
           "grade": 3
+        },
+        {
+          "id": "merc-sol",
+          "grade": 2
+        },
+        {
+          "id": "aloe",
+          "grade": 2
+        },
+        {
+          "id": "canth",
+          "grade": 2
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -16052,6 +16588,14 @@
         {
           "id": "merc-cy",
           "grade": 3
+        },
+        {
+          "id": "diph",
+          "grade": 2
+        },
+        {
+          "id": "lac-c",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -16084,6 +16628,18 @@
         {
           "id": "merc-i-f",
           "grade": 3
+        },
+        {
+          "id": "lach",
+          "grade": 2
+        },
+        {
+          "id": "lac-c",
+          "grade": 2
+        },
+        {
+          "id": "sabad",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -16100,6 +16656,18 @@
         {
           "id": "merc-i-r",
           "grade": 3
+        },
+        {
+          "id": "lyc",
+          "grade": 2
+        },
+        {
+          "id": "bell",
+          "grade": 2
+        },
+        {
+          "id": "phyt",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -16132,6 +16700,14 @@
         {
           "id": "petros",
           "grade": 3
+        },
+        {
+          "id": "canth",
+          "grade": 2
+        },
+        {
+          "id": "thuj",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -16168,6 +16744,18 @@
         {
           "id": "ran-b",
           "grade": 2
+        },
+        {
+          "id": "rhus-t",
+          "grade": 1
+        },
+        {
+          "id": "mez",
+          "grade": 1
+        },
+        {
+          "id": "ars-alb",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -16184,6 +16772,14 @@
         {
           "id": "samb",
           "grade": 3
+        },
+        {
+          "id": "ip",
+          "grade": 2
+        },
+        {
+          "id": "ant-t",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -16200,6 +16796,10 @@
         {
           "id": "samb",
           "grade": 2
+        },
+        {
+          "id": "thuj",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -16268,6 +16868,18 @@
         {
           "id": "sul-ac",
           "grade": 2
+        },
+        {
+          "id": "crot-h",
+          "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        },
+        {
+          "id": "lach",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -16284,6 +16896,18 @@
         {
           "id": "symph",
           "grade": 3
+        },
+        {
+          "id": "ruta",
+          "grade": 2
+        },
+        {
+          "id": "calc-p",
+          "grade": 2
+        },
+        {
+          "id": "arn",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -16320,6 +16944,18 @@
         {
           "id": "thlaspi",
           "grade": 3
+        },
+        {
+          "id": "ham",
+          "grade": 2
+        },
+        {
+          "id": "trill",
+          "grade": 2
+        },
+        {
+          "id": "sec",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -16420,6 +17056,14 @@
         {
           "id": "cycl",
           "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
+        },
+        {
+          "id": "calc-c",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -16524,6 +17168,14 @@
         {
           "id": "syzygium",
           "grade": 3
+        },
+        {
+          "id": "ph-ac",
+          "grade": 2
+        },
+        {
+          "id": "phos",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -16540,6 +17192,14 @@
         {
           "id": "crataeg",
           "grade": 3
+        },
+        {
+          "id": "dig",
+          "grade": 2
+        },
+        {
+          "id": "cact",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -19412,6 +20072,14 @@
         {
           "id": "phos",
           "grade": 3
+        },
+        {
+          "id": "verat",
+          "grade": 2
+        },
+        {
+          "id": "eup-per",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -26748,6 +27416,14 @@
         {
           "id": "sep",
           "grade": 2
+        },
+        {
+          "id": "ip",
+          "grade": 1
+        },
+        {
+          "id": "staph",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -29359,6 +30035,14 @@
         {
           "id": "nux-v",
           "grade": 1
+        },
+        {
+          "id": "phos",
+          "grade": 1
+        },
+        {
+          "id": "sang",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -30852,6 +31536,14 @@
         {
           "id": "ign",
           "grade": 2
+        },
+        {
+          "id": "kali-bi",
+          "grade": 1
+        },
+        {
+          "id": "nux-v",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -30907,6 +31599,14 @@
       "remedies": [
         {
           "id": "sulph",
+          "grade": 1
+        },
+        {
+          "id": "arg-n",
+          "grade": 1
+        },
+        {
+          "id": "puls",
           "grade": 1
         }
       ],
@@ -31000,6 +31700,18 @@
         {
           "id": "rhus-t",
           "grade": 3
+        },
+        {
+          "id": "ruta",
+          "grade": 2
+        },
+        {
+          "id": "caust",
+          "grade": 2
+        },
+        {
+          "id": "puls",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -31075,6 +31787,14 @@
       "remedies": [
         {
           "id": "ant-t",
+          "grade": 1
+        },
+        {
+          "id": "ip",
+          "grade": 1
+        },
+        {
+          "id": "samb",
           "grade": 1
         }
       ],
@@ -34878,6 +35598,14 @@
         {
           "id": "ruta",
           "grade": 2
+        },
+        {
+          "id": "rhus-t",
+          "grade": 1
+        },
+        {
+          "id": "arn",
+          "grade": 1
         }
       ],
       "rubricType": "keynote"
@@ -35145,6 +35873,10 @@
         {
           "id": "sil",
           "grade": 3
+        },
+        {
+          "id": "hep",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
@@ -35256,6 +35988,18 @@
         {
           "id": "lach",
           "grade": 3
+        },
+        {
+          "id": "naja",
+          "grade": 2
+        },
+        {
+          "id": "crot-h",
+          "grade": 2
+        },
+        {
+          "id": "echi",
+          "grade": 2
         }
       ],
       "rubricType": "keynote"
