@@ -1,0 +1,37 @@
+// firestore.rules — TEMPLATE written from how the app uses Firestore.
+// I could not see your live rules or your Cloud Function, so compare this with
+// what is currently published in the Firebase console BEFORE deploying it.
+// Assumes the aiNormalize function writes to `usage` using the Admin SDK
+// (which bypasses these rules), so clients never need to write there.
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Profile document, created at sign-up. Owner only.
+    match /users/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create: if request.auth != null && request.auth.uid == uid
+                    && request.resource.data.keys().hasOnly(['name', 'email', 'createdAt']);
+      allow update, delete: if false;
+
+      // Patient records — private to the doctor who created them.
+      match /patients/{patientId} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+    }
+
+    // Monthly AI usage counter (doc id: <uid>_<yyyy-mm>).
+    // Readable by its owner so the app can show "X searches left";
+    // never writable from the browser, so the limit cannot be bypassed.
+    match /usage/{usageId} {
+      allow read: if request.auth != null && usageId.matches(request.auth.uid + '_.*');
+      allow write: if false;
+    }
+
+    // Everything else is closed.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
