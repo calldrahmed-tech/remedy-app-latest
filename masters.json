@@ -1,0 +1,32 @@
+{
+  "note": "Add new entries to the end of 'entries'. 'source' is optional; leave it empty until the book/page is found.",
+  "entries": [
+    {
+      "condition": "Croup",
+      "master": "Boenninghausen",
+      "remedies": [
+        { "name": "Aconite", "potency": "200" },
+        { "name": "Hepar sulph", "potency": "200" },
+        { "name": "Spongia", "potency": "200" }
+      ],
+      "source": ""
+    },
+    {
+      "condition": "High fevers",
+      "master": "Murphy",
+      "remedies": [
+        { "name": "Baptisia", "potency": "30" },
+        { "name": "Pyrogenium", "potency": "30" }
+      ],
+      "source": ""
+    },
+    {
+      "condition": "Fever",
+      "master": "Burnett",
+      "remedies": [
+        { "name": "Pyrogenium", "potency": "6" }
+      ],
+      "source": ""
+    }
+  ]
+}

@@ -481,3 +481,16 @@ footer.app-footer .f-item b { display: block; color: var(--navy); font-size: 0.7
 .rg-top-row { display: flex; gap: 8px; margin: 8px 16px 0; }
 .rg-top-row .rg-top-btn { width: auto; flex: 1; margin: 0; padding: 8px 6px; font-size: 0.8rem; line-height: 1.25; }
 .rg-top-row .rg-top-btn span { display: block; margin: 2px 0 0; }
+
+.masters-panel { max-width: 760px; margin: 14px auto; padding: 0 16px; }
+.masters-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+.masters-chip { background: #fff; border: 1.5px solid var(--green-2); color: var(--green-2); border-radius: 18px; padding: 7px 13px; font-size: 0.82rem; font-weight: 700; cursor: pointer; min-height: 38px; }
+.masters-chip.on { background: var(--green-2); color: #fff; }
+.masters-card { background: #fff; border: 1px solid #dfe7e1; border-radius: 12px; padding: 12px 14px; margin-bottom: 10px; }
+.masters-cond { font-family: "Poppins", sans-serif; font-weight: 800; font-size: 1.02rem; margin-bottom: 6px; }
+.masters-row { padding: 8px 0; border-top: 1px solid #eef1ee; }
+.masters-row:first-of-type { border-top: 0; }
+.masters-rx { font-weight: 700; font-size: 0.95rem; }
+.masters-by { color: var(--green-2); font-weight: 800; }
+.masters-note { font-size: 0.85rem; margin-top: 3px; }
+.masters-src { font-size: 0.74rem; color: var(--muted); margin-top: 3px; }

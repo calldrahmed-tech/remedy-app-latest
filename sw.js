@@ -19,7 +19,7 @@
 // (gstatic.com, firebaseapp.com, cloudfunctions.net) and are never touched —
 // login/save-visit/AI-assist correctly still require a real connection.
 
-const CACHE_NAME = "expertia-cache-v15";
+const CACHE_NAME = "expertia-cache-v16";
 const NETWORK_TIMEOUT_MS = 4000; // a "weak" connection gets this long before
                                   // falling back to cache — long enough for a
                                   // slow response, short enough not to feel frozen
@@ -40,6 +40,8 @@ const PRECACHE_FILES = [
   "patient-records.js",
   "browse-repertory.js",
   "remedy-guide.js",
+  "masters.js",
+  "masters.json",
   "repertorize.js",
   "repertory.json",
   "remedies.json",

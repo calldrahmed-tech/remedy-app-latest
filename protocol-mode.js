@@ -50,6 +50,7 @@ function setMode(mode) {
   pEl("classicalSamplesBar").style.display = mode === "classical" ? "" : "none";
   protocolResultsEl.style.display = (mode === "protocol" || mode === "combo") ? "" : "none";
   classicalResultsEl.style.display = mode === "classical" ? "" : "none";
+  const mp = document.getElementById("mastersPanel"); if (mp) mp.style.display = mode === "masters" ? "" : "none";
 
   if (mode !== "protocol" && selectedDiseaseShortcuts.length) { selectedDiseaseShortcuts = []; renderDiseaseChips(); }
   if (mode !== "combo" && selectedSymptoms.length) { selectedSymptoms = []; renderSymptomChips(); }

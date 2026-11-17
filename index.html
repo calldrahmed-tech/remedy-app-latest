@@ -30,6 +30,7 @@
     <button class="mode-tab active" data-mode="protocol" role="tab" aria-selected="true">⚡ Expert Protocol</button>
     <button class="mode-tab" data-mode="combo" role="tab" aria-selected="false">🧩 Combine Symptoms</button>
     <button class="mode-tab" data-mode="classical" role="tab" aria-selected="false">📚 Expert Repertory</button>
+    <button class="mode-tab" data-mode="masters" role="tab" aria-selected="false">👨‍⚕️ Masters' Advice</button>
   </div>
   <div class="rg-top-row">
     <button type="button" id="remedyGuideTopBtn" class="rg-top-btn">💊 Remedies A–Z <span>key points</span></button>
@@ -38,6 +39,12 @@
 
   <!-- PROTOCOL MODE input (default view) — named-condition shortcuts only, each with its own
        ready-made protocol. No individual symptom picking here anymore (see Combine Symptoms). -->
+  <div id="mastersPanel" class="masters-panel" style="display:none;">
+    <input type="search" id="mastersSearch" class="settings-input" placeholder="Search condition or remedy… e.g. croup, fever, Pyrogenium" autocomplete="off">
+    <div id="mastersChips" class="masters-chips"></div>
+    <div id="mastersList"></div>
+    <div class="caution">Advice recorded from classical homeopathic authors. Check each entry against the original book. The full case and the practitioner's judgement decide the remedy.</div>
+  </div>
   <div id="protocolModeInput" class="header-search">
     <label class="symptom-label">Named Condition</label>
     <p class="protocol-input-hint">Type a known condition name (e.g. "abscess", "fever") for its ready-made protocol.</p>
@@ -254,6 +261,7 @@
 <script src="patient-records.js"></script>
 <script src="browse-repertory.js"></script>
 <script src="remedy-guide.js"></script>
+<script src="masters.js"></script>
 <script src="repertorize.js"></script>
 <script>
   if ('serviceWorker' in navigator) {
