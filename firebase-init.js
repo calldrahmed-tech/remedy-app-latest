@@ -115,9 +115,36 @@ window.RemedyAuth = {
     const name = (patientData.name || "").trim();
     if (!name) throw new Error("Patient name is required.");
     const patientsRef = collection(db, "users", currentUser.uid, "patients");
+    // When the caller already knows exactly which record this is (e.g. "Quick update"
+    // inside an opened patient), skip name matching entirely.
+    if (patientData.id) {
+      await updateDoc(doc(db, "users", currentUser.uid, "patients", patientData.id), {
+        updatedAt: serverTimestamp(),
+        visits: arrayUnion(visitData)
+      });
+      return patientData.id;
+    }
     const existingSnap = await getDocs(query(patientsRef, where("nameLower", "==", name.toLowerCase())));
+    // Names alone are not unique (e.g. two different "Muhammad Ali" patients), so
+    // the contact number is used to tell same-name patients apart.
+    const digits = (s) => String(s || "").replace(/\D/g, "");
+    const newContact = digits(patientData.contact);
+    let existing = null;
     if (!existingSnap.empty) {
-      const existing = existingSnap.docs[0];
+      const sameName = existingSnap.docs;
+      if (newContact) {
+        // Match the record with the same number; otherwise adopt a same-name record
+        // that has no number saved yet; otherwise this is a different patient.
+        existing = sameName.find(d => digits(d.data().contact) === newContact)
+                || sameName.find(d => !digits(d.data().contact))
+                || null;
+      } else if (sameName.length === 1) {
+        existing = sameName[0];
+      } else {
+        throw new Error("More than one patient has this name — please enter the contact number to choose the right record.");
+      }
+    }
+    if (existing) {
       await updateDoc(existing.ref, {
         age: patientData.age || existing.data().age || "",
         contact: patientData.contact || existing.data().contact || "",
