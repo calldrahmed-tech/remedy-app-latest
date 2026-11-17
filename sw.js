@@ -19,7 +19,7 @@
 // (gstatic.com, firebaseapp.com, cloudfunctions.net) and are never touched —
 // login/save-visit/AI-assist correctly still require a real connection.
 
-const CACHE_NAME = "expertia-cache-v3";
+const CACHE_NAME = "expertia-cache-v4";
 const NETWORK_TIMEOUT_MS = 4000; // a "weak" connection gets this long before
                                   // falling back to cache — long enough for a
                                   // slow response, short enough not to feel frozen
@@ -43,6 +43,7 @@ const PRECACHE_FILES = [
   "repertory.json",
   "remedies.json",
   "manifest.json",
+  "privacy.html",
   "icon-192.png",
   "icon-header.png",
   "icon-512.png",
@@ -52,7 +53,11 @@ const PRECACHE_FILES = [
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(PRECACHE_FILES))
+      // Add files one by one so a single missing file can't make the whole
+      // install fail (cache.addAll is all-or-nothing).
+      .then((cache) => Promise.all(PRECACHE_FILES.map((f) =>
+        cache.add(f).catch((err) => console.warn("SW precache skipped", f, err))
+      )))
       .then(() => self.skipWaiting()) // activate the new SW immediately rather than
                                         // waiting for every open tab to close first —
                                         // this app's own files changing is exactly the
@@ -85,16 +90,21 @@ self.addEventListener("fetch", (event) => {
         // Network succeeded (within the timeout window) — this is the normal,
         // preferred path. Update the cache in the background so the fallback
         // stays reasonably fresh for next time, without slowing this response.
-        const copy = networkResponse.clone();
-        caches.open(CACHE_NAME).then((cache) => cache.put(req, copy));
+        // Only successful responses are cached, so a 404/500 can never replace
+        // a good cached copy.
+        if (networkResponse && networkResponse.ok) {
+          const copy = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(req, copy)).catch(() => {});
+        }
         return networkResponse;
       })
       .catch(() =>
         // Network failed or was too slow — fall back to whatever we have
-        // cached. If this file was never successfully cached either (e.g.
-        // the very first visit happened offline), this correctly falls
-        // through to the browser's normal offline error for that request.
-        caches.match(req)
+        // cached. If nothing is cached, return a real 503 response instead of
+        // undefined (which would throw inside respondWith).
+        caches.match(req).then((cached) =>
+          cached || new Response("Offline and not cached yet.", { status: 503, statusText: "Offline" })
+        )
       )
   );
 });

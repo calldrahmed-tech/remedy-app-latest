@@ -1976,7 +1976,8 @@ function runSearch(preserveExclusions) {
     </button>
     <div id="why-section" class="collapsible-content" style="display:none;">
       <ul class="alt-reasons">${symptomBullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>
-      <div class="support-line" style="margin-top:8px;">Match confidence: ${confidenceGaugeSVG(main.percent)} ${confidenceStarsHTML(main.percent)}</div>
+      <div class="support-line" style="margin-top:8px;">Repertory match strength: ${confidenceGaugeSVG(main.percent)} ${confidenceStarsHTML(main.percent)}</div>
+      <div class="support-line" style="margin-top:4px;font-size:0.78rem;opacity:0.75;">This shows how well the typed symptoms fit the remedy's rubrics — not clinical certainty. Always confirm against the full case.</div>
     </div>
   </div>`;
 

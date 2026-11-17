@@ -62,10 +62,33 @@
       }
     });
 
+    const digitsOnly = (s) => String(s || "").replace(/\D/g, "");
+
+    // Same-name patients are told apart by contact number. If several patients share
+    // the name and no number is typed, return null rather than guess the wrong one.
     function findPatientByName(name) {
       const term = (name || "").trim().toLowerCase();
       if (!term) return null;
-      return myPatients.find((p) => (p.name || "").trim().toLowerCase() === term) || null;
+      const sameName = myPatients.filter((p) => (p.name || "").trim().toLowerCase() === term);
+      if (!sameName.length) return null;
+      const typed = digitsOnly(patientContact.value);
+      if (typed) {
+        return sameName.find((p) => digitsOnly(p.contact) === typed)
+            || sameName.find((p) => !digitsOnly(p.contact))
+            || null;
+      }
+      return sameName.length === 1 ? sameName[0] : null;
+    }
+
+    // Remembers what the result on screen was computed from, so "Save Visit" never
+    // files an old remedy under symptoms the doctor has since changed.
+    let lastSearch = null; // { key, remedy }
+    function caseKey(info) {
+      return JSON.stringify([info.symptoms || "", info.tags || []]);
+    }
+    function rememberSearch() {
+      const info = getCurrentCaseInfo();
+      lastSearch = { key: caseKey(info), remedy: info.remedy || "" };
     }
 
     // Runs after a search, only when the doctor has typed the name of a
@@ -89,9 +112,10 @@
     // A short delay lets the actual result cards finish rendering first —
     // both search buttons render synchronously, but this keeps it safe even
     // if that ever changes.
-    if (getProtocolBtn) getProtocolBtn.addEventListener("click", () => setTimeout(checkLiveFollowUp, 150));
-    if (getComboBtn) getComboBtn.addEventListener("click", () => setTimeout(checkLiveFollowUp, 150));
-    if (resultBtn) resultBtn.addEventListener("click", () => setTimeout(checkLiveFollowUp, 150));
+    const afterSearch = () => setTimeout(() => { rememberSearch(); checkLiveFollowUp(); }, 150);
+    if (getProtocolBtn) getProtocolBtn.addEventListener("click", afterSearch);
+    if (getComboBtn) getComboBtn.addEventListener("click", afterSearch);
+    if (resultBtn) resultBtn.addEventListener("click", afterSearch);
 
     // Reads whichever mode is currently visible (Expert Protocol or Full
     // Repertory) to capture what the doctor was just looking at.
@@ -128,18 +152,27 @@
       patientSaveStatus.style.color = "";
       try {
         const caseInfo = getCurrentCaseInfo();
+        // Only keep the on-screen remedy if it was produced by the symptoms as they
+        // stand now; otherwise save the visit without a remedy and say so.
+        const remedyIsCurrent = !!lastSearch && lastSearch.key === caseKey(caseInfo);
+        const remedyToSave = remedyIsCurrent ? (lastSearch.remedy || "") : "";
         await window.RemedyAuth.savePatientVisit(
           { name, age: patientAge.value.trim(), contact: patientContact.value.trim() },
           {
             date: new Date().toISOString(),
             symptoms: caseInfo.symptoms || patientHistory.value.trim(),
             tags: caseInfo.tags || [],
-            remedy: caseInfo.remedy,
+            remedy: remedyToSave,
             potency: patientPotency.value.trim()
           }
         );
-        patientSaveStatus.textContent = "✔ Saved.";
-        patientSaveStatus.style.color = "#2c5c3a";
+        if (!remedyIsCurrent && caseInfo.remedy) {
+          patientSaveStatus.textContent = "✔ Saved without a remedy — symptoms changed since the last search. Search again, then save.";
+          patientSaveStatus.style.color = "#b26a00";
+        } else {
+          patientSaveStatus.textContent = "✔ Saved.";
+          patientSaveStatus.style.color = "#2c5c3a";
+        }
       } catch (err) {
         patientSaveStatus.textContent = err && err.message ? err.message : "Could not save — try again.";
         patientSaveStatus.style.color = "#c0392b";
@@ -248,7 +281,7 @@
             saveStatus.textContent = "Saving…";
             try {
               await window.RemedyAuth.savePatientVisit(
-                { name: p.name, age: p.age, contact: p.contact },
+                { id: p.id, name: p.name, age: p.age, contact: p.contact },
                 {
                   date: new Date().toISOString(),
                   symptoms: text.trim(),
