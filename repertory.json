@@ -35493,6 +35493,762 @@
         }
       ],
       "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Blood poisoning, septic states",
+      "triggers": [
+        "blood poisoning",
+        "septic condition",
+        "septicaemia"
+      ],
+      "remedies": [
+        {
+          "id": "echi",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Recurring boils and carbuncles with foul discharge",
+      "triggers": [
+        "recurring boils and carbuncles",
+        "boils and carbuncles with foul discharge"
+      ],
+      "remedies": [
+        {
+          "id": "echi",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Erysipelas and foul slow-healing ulcers",
+      "triggers": [
+        "erysipelas with foul discharge",
+        "foul slow healing ulcers"
+      ],
+      "remedies": [
+        {
+          "id": "echi",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Puerperal sepsis",
+      "triggers": [
+        "puerperal sepsis",
+        "puerperal fever with foul lochia"
+      ],
+      "remedies": [
+        {
+          "id": "echi",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Septic swelling after snake bite or insect sting",
+      "triggers": [
+        "septic swelling after a sting",
+        "infection after snake bite"
+      ],
+      "remedies": [
+        {
+          "id": "echi",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Whooping cough ending in vomiting of tough mucus",
+      "triggers": [
+        "cough ends with vomiting of tough mucus",
+        "whooping cough with vomiting of thick mucus"
+      ],
+      "remedies": [
+        {
+          "id": "coc-c",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Thick viscid mucus hard to bring up",
+      "triggers": [
+        "thick viscid mucus hard to bring up",
+        "tough ropy mucus hard to raise"
+      ],
+      "remedies": [
+        {
+          "id": "coc-c",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Crumb-like sensation behind the larynx with constant hawking",
+      "triggers": [
+        "feeling of a crumb behind the larynx",
+        "constant hawking with enlarged uvula"
+      ],
+      "remedies": [
+        {
+          "id": "coc-c",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Brick-red sediment in the urine",
+      "triggers": [
+        "brick red sediment in urine",
+        "brick dust sediment in urine"
+      ],
+      "remedies": [
+        {
+          "id": "coc-c",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Cough brought on by brushing the teeth",
+      "triggers": [
+        "cough from brushing the teeth",
+        "cough when brushing teeth"
+      ],
+      "remedies": [
+        {
+          "id": "coc-c",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Very rapid short barking cough, coughs following each other in quick succession",
+      "triggers": [
+        "rapid short barking cough",
+        "coughs follow each other so quickly breath is lost"
+      ],
+      "remedies": [
+        {
+          "id": "cor-r",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Whooping cough with purple face and exhaustion after the fit",
+      "triggers": [
+        "face turns purple during coughing fit",
+        "whooping cough with purple face and exhaustion"
+      ],
+      "remedies": [
+        {
+          "id": "cor-r",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Sensation of cold air passing through the nose and air passages",
+      "triggers": [
+        "feeling of cold air passing through the nose",
+        "sensation of cold air in the nostrils"
+      ],
+      "remedies": [
+        {
+          "id": "cor-r",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Blood expectorated during violent coughing fits",
+      "triggers": [
+        "blood coughed up during violent coughing fits",
+        "bloody expectoration with spasmodic cough"
+      ],
+      "remedies": [
+        {
+          "id": "cor-r",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Nose",
+      "category": "Particulars",
+      "rubric": "Profuse watery acrid nasal discharge with frontal sinus pain",
+      "triggers": [
+        "watery acrid nasal discharge with frontal sinus pain",
+        "acrid watery coryza with pain over the eyes"
+      ],
+      "remedies": [
+        {
+          "id": "kali-i",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Respiratory",
+      "category": "Particulars",
+      "rubric": "Greenish frothy soap-suds-like expectoration",
+      "triggers": [
+        "soap suds like expectoration",
+        "greenish frothy sputum"
+      ],
+      "remedies": [
+        {
+          "id": "kali-i",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Bone pains worse at night in a warm room, better in open air and by motion",
+      "triggers": [
+        "bone pains worse at night in a warm room",
+        "periosteal pains worse at night better open air"
+      ],
+      "remedies": [
+        {
+          "id": "kali-i",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Swelling of the eyelids with edema of the uvula",
+      "triggers": [
+        "swelling of the eyelids and uvula",
+        "edema of the eyelids and glottis"
+      ],
+      "remedies": [
+        {
+          "id": "kali-i",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Syphilitic nodes and ulcers with bone pains",
+      "triggers": [
+        "syphilitic nodes and ulcers",
+        "tertiary syphilis with bone pains"
+      ],
+      "remedies": [
+        {
+          "id": "kali-i",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Enlarged tonsils full of crypts",
+      "triggers": [
+        "enlarged tonsils full of crypts",
+        "tonsils with many small crypts"
+      ],
+      "remedies": [
+        {
+          "id": "calc-i",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Enlarged adenoids with frequent colds in flabby children",
+      "triggers": [
+        "adenoids with frequent colds in flabby child",
+        "enlarged adenoids with enlarged tonsils"
+      ],
+      "remedies": [
+        {
+          "id": "calc-i",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Glands",
+      "category": "Particulars",
+      "rubric": "Thyroid enlargement at puberty",
+      "triggers": [
+        "goitre at puberty",
+        "thyroid enlargement in young girls"
+      ],
+      "remedies": [
+        {
+          "id": "calc-i",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Headache when riding into a cold wind",
+      "triggers": [
+        "headache from riding into a cold wind",
+        "headache when riding in the wind"
+      ],
+      "remedies": [
+        {
+          "id": "calc-i",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Throat",
+      "category": "Particulars",
+      "rubric": "Rheumatic or gouty sore throat with acute tonsillitis",
+      "triggers": [
+        "rheumatic sore throat",
+        "gouty tonsillitis"
+      ],
+      "remedies": [
+        {
+          "id": "guaj",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Rheumatism with stiff contracted limbs and urge to stretch",
+      "triggers": [
+        "rheumatism with stiff contracted limbs",
+        "stiff contracted limbs with urge to stretch"
+      ],
+      "remedies": [
+        {
+          "id": "guaj",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Swollen tender joints in the arthritic constitution",
+      "triggers": [
+        "swollen tender joints in gouty patient",
+        "arthritic joints too tender to bear pressure"
+      ],
+      "remedies": [
+        {
+          "id": "guaj",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Back",
+      "category": "Particulars",
+      "rubric": "Stiff neck with aching nape and sore shoulders",
+      "triggers": [
+        "stiff neck with aching nape",
+        "rheumatic stiff neck and sore shoulders"
+      ],
+      "remedies": [
+        {
+          "id": "guaj",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Appetite",
+      "category": "Generals",
+      "rubric": "Desire for apples and fruit, aversion to milk",
+      "triggers": [
+        "craves apples",
+        "desire for apples and fruit"
+      ],
+      "remedies": [
+        {
+          "id": "guaj",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Profuse bright-red uterine bleeding that persists",
+      "triggers": [
+        "profuse bright red uterine bleeding",
+        "persistent bright red bleeding from the uterus"
+      ],
+      "remedies": [
+        {
+          "id": "erig",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Bleeding aggravated by the slightest movement or exertion",
+      "triggers": [
+        "bleeding worse from slightest movement",
+        "uterine bleeding on slight exertion"
+      ],
+      "remedies": [
+        {
+          "id": "erig",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Bloody lochia returning after slight movement",
+      "triggers": [
+        "lochia returns after slight movement",
+        "bloody lochia with every movement"
+      ],
+      "remedies": [
+        {
+          "id": "erig",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Urinary",
+      "category": "Particulars",
+      "rubric": "Burning urination with bladder irritation and dribbling",
+      "triggers": [
+        "burning urination with bladder irritation",
+        "burning urination with dribbling after"
+      ],
+      "remedies": [
+        {
+          "id": "erig",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Nosebleed or bleeding hemorrhoids replacing the menses",
+      "triggers": [
+        "nosebleed replacing menses",
+        "bleeding hemorrhoids in place of menses"
+      ],
+      "remedies": [
+        {
+          "id": "erig",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Pains recurring at the same hour every day",
+      "triggers": [
+        "pain returns at the same hour every day",
+        "periodic pains at exactly the same time daily"
+      ],
+      "remedies": [
+        {
+          "id": "cedr",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Head",
+      "category": "Particulars",
+      "rubric": "Periodic neuralgic headache across the temples and eyes",
+      "triggers": [
+        "periodic headache across the temples and eyes",
+        "malarial neuralgia of the head"
+      ],
+      "remedies": [
+        {
+          "id": "cedr",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Eye",
+      "category": "Particulars",
+      "rubric": "Pain around the eyeball radiating to the nose with scalding tears",
+      "triggers": [
+        "pain around the eyeball radiating to the nose",
+        "scalding tears with periodic eye pain"
+      ],
+      "remedies": [
+        {
+          "id": "cedr",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Face",
+      "category": "Particulars",
+      "rubric": "Right-sided facial neuralgia beginning in the morning",
+      "triggers": [
+        "right sided facial neuralgia from 9 am",
+        "facial neuralgia every morning at nine"
+      ],
+      "remedies": [
+        {
+          "id": "cedr",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Sudden pain in the thumb or big toe spreading upward",
+      "triggers": [
+        "sudden pain in the thumb spreading upward",
+        "sudden pain in the big toe spreading upward"
+      ],
+      "remedies": [
+        {
+          "id": "cedr",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Bruised soreness after surgery or injury to deep tissues",
+      "triggers": [
+        "soreness after surgery",
+        "soreness of deep tissues after operation",
+        "bruised soreness after abdominal surgery"
+      ],
+      "remedies": [
+        {
+          "id": "bell-p",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Female",
+      "category": "Particulars",
+      "rubric": "Sore bruised feeling of the uterus and pelvis in pregnancy",
+      "triggers": [
+        "soreness of the uterus in pregnancy",
+        "bruised pelvic soreness in pregnancy",
+        "cannot walk in pregnancy because of pelvic soreness"
+      ],
+      "remedies": [
+        {
+          "id": "bell-p",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Varicose veins with a bruised sore feeling",
+      "triggers": [
+        "varicose veins with bruised soreness",
+        "sore varicose veins in pregnancy"
+      ],
+      "remedies": [
+        {
+          "id": "bell-p",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Skin",
+      "category": "Particulars",
+      "rubric": "Boils breaking out all over the body",
+      "triggers": [
+        "boils all over the body",
+        "crops of boils over the body"
+      ],
+      "remedies": [
+        {
+          "id": "bell-p",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Extremities",
+      "category": "Particulars",
+      "rubric": "Muscular soreness and lameness as if sprained",
+      "triggers": [
+        "lameness and soreness as if sprained",
+        "muscles sore as if sprained after strain"
+      ],
+      "remedies": [
+        {
+          "id": "bell-p",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Gum abscess and exostosis of the jaw",
+      "triggers": [
+        "exostosis of the jaw",
+        "gum abscess with swelling of the jaw bone"
+      ],
+      "remedies": [
+        {
+          "id": "hecla",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Face",
+      "category": "Particulars",
+      "rubric": "Facial neuralgia from decayed or extracted teeth",
+      "triggers": [
+        "facial neuralgia after tooth extraction",
+        "neuralgia from decayed teeth"
+      ],
+      "remedies": [
+        {
+          "id": "hecla",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
+    },
+    {
+      "section": "Mouth",
+      "category": "Particulars",
+      "rubric": "Difficult teething with swelling of the jaw",
+      "triggers": [
+        "difficult teething with swelling of the jaw",
+        "teething with swollen jaw in child"
+      ],
+      "remedies": [
+        {
+          "id": "hecla",
+          "grade": 2
+        }
+      ],
+      "rubricType": "differential"
+    },
+    {
+      "section": "Generalities",
+      "category": "Generals",
+      "rubric": "Caries or necrosis of bone and bony growths",
+      "triggers": [
+        "caries of bone",
+        "necrosis of bone",
+        "bony growths on the jaw"
+      ],
+      "remedies": [
+        {
+          "id": "hecla",
+          "grade": 3
+        }
+      ],
+      "rubricType": "keynote"
     }
   ],
   "chiefSymptomTags": [
@@ -45479,6 +46235,288 @@
       "label": "Tetany, muscle cramping or spasm from an electrolyte…",
       "section": "Generalities",
       "rubric": "Tetany, muscle cramping or spasm from an electrolyte imbalance"
+    },
+    {
+      "id": "sym_blood_poisoning_septic_states",
+      "label": "Blood poisoning, septic states",
+      "section": "Generalities",
+      "rubric": "Blood poisoning, septic states"
+    },
+    {
+      "id": "sym_recurring_boils_and_carbuncles_with_foul_discharge",
+      "label": "Recurring boils and carbuncles with foul discharge",
+      "section": "Skin",
+      "rubric": "Recurring boils and carbuncles with foul discharge"
+    },
+    {
+      "id": "sym_erysipelas_and_foul_slow_healing_ulcers",
+      "label": "Erysipelas and foul slow-healing ulcers",
+      "section": "Skin",
+      "rubric": "Erysipelas and foul slow-healing ulcers"
+    },
+    {
+      "id": "sym_puerperal_sepsis",
+      "label": "Puerperal sepsis",
+      "section": "Female",
+      "rubric": "Puerperal sepsis"
+    },
+    {
+      "id": "sym_septic_swelling_after_snake_bite_or_insect_sting",
+      "label": "Septic swelling after snake bite or insect sting",
+      "section": "Generalities",
+      "rubric": "Septic swelling after snake bite or insect sting"
+    },
+    {
+      "id": "sym_whooping_cough_ending_in_vomiting_of_tough_mucus",
+      "label": "Whooping cough ending in vomiting of tough mucus",
+      "section": "Respiratory",
+      "rubric": "Whooping cough ending in vomiting of tough mucus"
+    },
+    {
+      "id": "sym_thick_viscid_mucus_hard_to_bring_up",
+      "label": "Thick viscid mucus hard to bring up",
+      "section": "Respiratory",
+      "rubric": "Thick viscid mucus hard to bring up"
+    },
+    {
+      "id": "sym_crumb_like_sensation_behind_the_larynx_with_constant_hawking",
+      "label": "Crumb-like sensation behind the larynx with constant hawking",
+      "section": "Throat",
+      "rubric": "Crumb-like sensation behind the larynx with constant hawking"
+    },
+    {
+      "id": "sym_brick_red_sediment_in_the_urine",
+      "label": "Brick-red sediment in the urine",
+      "section": "Urinary",
+      "rubric": "Brick-red sediment in the urine"
+    },
+    {
+      "id": "sym_cough_brought_on_by_brushing_the_teeth",
+      "label": "Cough brought on by brushing the teeth",
+      "section": "Respiratory",
+      "rubric": "Cough brought on by brushing the teeth"
+    },
+    {
+      "id": "sym_very_rapid_short_barking_cough_coughs_following_each_other_in_quick_succession",
+      "label": "Very rapid short barking cough, coughs following each other in quick succession",
+      "section": "Respiratory",
+      "rubric": "Very rapid short barking cough, coughs following each other in quick succession"
+    },
+    {
+      "id": "sym_whooping_cough_with_purple_face_and_exhaustion_after_the_fit",
+      "label": "Whooping cough with purple face and exhaustion after the fit",
+      "section": "Respiratory",
+      "rubric": "Whooping cough with purple face and exhaustion after the fit"
+    },
+    {
+      "id": "sym_sensation_of_cold_air_passing_through_the_nose_and_air_passages",
+      "label": "Sensation of cold air passing through the nose and air passages",
+      "section": "Nose",
+      "rubric": "Sensation of cold air passing through the nose and air passages"
+    },
+    {
+      "id": "sym_blood_expectorated_during_violent_coughing_fits",
+      "label": "Blood expectorated during violent coughing fits",
+      "section": "Respiratory",
+      "rubric": "Blood expectorated during violent coughing fits"
+    },
+    {
+      "id": "sym_profuse_watery_acrid_nasal_discharge_with_frontal_sinus_pain",
+      "label": "Profuse watery acrid nasal discharge with frontal sinus pain",
+      "section": "Nose",
+      "rubric": "Profuse watery acrid nasal discharge with frontal sinus pain"
+    },
+    {
+      "id": "sym_greenish_frothy_soap_suds_like_expectoration",
+      "label": "Greenish frothy soap-suds-like expectoration",
+      "section": "Respiratory",
+      "rubric": "Greenish frothy soap-suds-like expectoration"
+    },
+    {
+      "id": "sym_bone_pains_worse_at_night_in_a_warm_room_better_in_open_air_and_by_motion",
+      "label": "Bone pains worse at night in a warm room, better in open air and by motion",
+      "section": "Generalities",
+      "rubric": "Bone pains worse at night in a warm room, better in open air and by motion"
+    },
+    {
+      "id": "sym_swelling_of_the_eyelids_with_edema_of_the_uvula",
+      "label": "Swelling of the eyelids with edema of the uvula",
+      "section": "Eye",
+      "rubric": "Swelling of the eyelids with edema of the uvula"
+    },
+    {
+      "id": "sym_syphilitic_nodes_and_ulcers_with_bone_pains",
+      "label": "Syphilitic nodes and ulcers with bone pains",
+      "section": "Generalities",
+      "rubric": "Syphilitic nodes and ulcers with bone pains"
+    },
+    {
+      "id": "sym_enlarged_tonsils_full_of_crypts",
+      "label": "Enlarged tonsils full of crypts",
+      "section": "Throat",
+      "rubric": "Enlarged tonsils full of crypts"
+    },
+    {
+      "id": "sym_enlarged_adenoids_with_frequent_colds_in_flabby_children",
+      "label": "Enlarged adenoids with frequent colds in flabby children",
+      "section": "Glands",
+      "rubric": "Enlarged adenoids with frequent colds in flabby children"
+    },
+    {
+      "id": "sym_thyroid_enlargement_at_puberty",
+      "label": "Thyroid enlargement at puberty",
+      "section": "Glands",
+      "rubric": "Thyroid enlargement at puberty"
+    },
+    {
+      "id": "sym_headache_when_riding_into_a_cold_wind",
+      "label": "Headache when riding into a cold wind",
+      "section": "Head",
+      "rubric": "Headache when riding into a cold wind"
+    },
+    {
+      "id": "sym_rheumatic_or_gouty_sore_throat_with_acute_tonsillitis",
+      "label": "Rheumatic or gouty sore throat with acute tonsillitis",
+      "section": "Throat",
+      "rubric": "Rheumatic or gouty sore throat with acute tonsillitis"
+    },
+    {
+      "id": "sym_rheumatism_with_stiff_contracted_limbs_and_urge_to_stretch",
+      "label": "Rheumatism with stiff contracted limbs and urge to stretch",
+      "section": "Extremities",
+      "rubric": "Rheumatism with stiff contracted limbs and urge to stretch"
+    },
+    {
+      "id": "sym_swollen_tender_joints_in_the_arthritic_constitution",
+      "label": "Swollen tender joints in the arthritic constitution",
+      "section": "Extremities",
+      "rubric": "Swollen tender joints in the arthritic constitution"
+    },
+    {
+      "id": "sym_stiff_neck_with_aching_nape_and_sore_shoulders",
+      "label": "Stiff neck with aching nape and sore shoulders",
+      "section": "Back",
+      "rubric": "Stiff neck with aching nape and sore shoulders"
+    },
+    {
+      "id": "sym_desire_for_apples_and_fruit_aversion_to_milk",
+      "label": "Desire for apples and fruit, aversion to milk",
+      "section": "Appetite",
+      "rubric": "Desire for apples and fruit, aversion to milk"
+    },
+    {
+      "id": "sym_profuse_bright_red_uterine_bleeding_that_persists",
+      "label": "Profuse bright-red uterine bleeding that persists",
+      "section": "Female",
+      "rubric": "Profuse bright-red uterine bleeding that persists"
+    },
+    {
+      "id": "sym_bleeding_aggravated_by_the_slightest_movement_or_exertion",
+      "label": "Bleeding aggravated by the slightest movement or exertion",
+      "section": "Female",
+      "rubric": "Bleeding aggravated by the slightest movement or exertion"
+    },
+    {
+      "id": "sym_bloody_lochia_returning_after_slight_movement",
+      "label": "Bloody lochia returning after slight movement",
+      "section": "Female",
+      "rubric": "Bloody lochia returning after slight movement"
+    },
+    {
+      "id": "sym_burning_urination_with_bladder_irritation_and_dribbling",
+      "label": "Burning urination with bladder irritation and dribbling",
+      "section": "Urinary",
+      "rubric": "Burning urination with bladder irritation and dribbling"
+    },
+    {
+      "id": "sym_nosebleed_or_bleeding_hemorrhoids_replacing_the_menses",
+      "label": "Nosebleed or bleeding hemorrhoids replacing the menses",
+      "section": "Female",
+      "rubric": "Nosebleed or bleeding hemorrhoids replacing the menses"
+    },
+    {
+      "id": "sym_pains_recurring_at_the_same_hour_every_day",
+      "label": "Pains recurring at the same hour every day",
+      "section": "Generalities",
+      "rubric": "Pains recurring at the same hour every day"
+    },
+    {
+      "id": "sym_periodic_neuralgic_headache_across_the_temples_and_eyes",
+      "label": "Periodic neuralgic headache across the temples and eyes",
+      "section": "Head",
+      "rubric": "Periodic neuralgic headache across the temples and eyes"
+    },
+    {
+      "id": "sym_pain_around_the_eyeball_radiating_to_the_nose_with_scalding_tears",
+      "label": "Pain around the eyeball radiating to the nose with scalding tears",
+      "section": "Eye",
+      "rubric": "Pain around the eyeball radiating to the nose with scalding tears"
+    },
+    {
+      "id": "sym_right_sided_facial_neuralgia_beginning_in_the_morning",
+      "label": "Right-sided facial neuralgia beginning in the morning",
+      "section": "Face",
+      "rubric": "Right-sided facial neuralgia beginning in the morning"
+    },
+    {
+      "id": "sym_sudden_pain_in_the_thumb_or_big_toe_spreading_upward",
+      "label": "Sudden pain in the thumb or big toe spreading upward",
+      "section": "Extremities",
+      "rubric": "Sudden pain in the thumb or big toe spreading upward"
+    },
+    {
+      "id": "sym_bruised_soreness_after_surgery_or_injury_to_deep_tissues",
+      "label": "Bruised soreness after surgery or injury to deep tissues",
+      "section": "Generalities",
+      "rubric": "Bruised soreness after surgery or injury to deep tissues"
+    },
+    {
+      "id": "sym_sore_bruised_feeling_of_the_uterus_and_pelvis_in_pregnancy",
+      "label": "Sore bruised feeling of the uterus and pelvis in pregnancy",
+      "section": "Female",
+      "rubric": "Sore bruised feeling of the uterus and pelvis in pregnancy"
+    },
+    {
+      "id": "sym_varicose_veins_with_a_bruised_sore_feeling",
+      "label": "Varicose veins with a bruised sore feeling",
+      "section": "Extremities",
+      "rubric": "Varicose veins with a bruised sore feeling"
+    },
+    {
+      "id": "sym_boils_breaking_out_all_over_the_body",
+      "label": "Boils breaking out all over the body",
+      "section": "Skin",
+      "rubric": "Boils breaking out all over the body"
+    },
+    {
+      "id": "sym_muscular_soreness_and_lameness_as_if_sprained",
+      "label": "Muscular soreness and lameness as if sprained",
+      "section": "Extremities",
+      "rubric": "Muscular soreness and lameness as if sprained"
+    },
+    {
+      "id": "sym_gum_abscess_and_exostosis_of_the_jaw",
+      "label": "Gum abscess and exostosis of the jaw",
+      "section": "Mouth",
+      "rubric": "Gum abscess and exostosis of the jaw"
+    },
+    {
+      "id": "sym_facial_neuralgia_from_decayed_or_extracted_teeth",
+      "label": "Facial neuralgia from decayed or extracted teeth",
+      "section": "Face",
+      "rubric": "Facial neuralgia from decayed or extracted teeth"
+    },
+    {
+      "id": "sym_difficult_teething_with_swelling_of_the_jaw",
+      "label": "Difficult teething with swelling of the jaw",
+      "section": "Mouth",
+      "rubric": "Difficult teething with swelling of the jaw"
+    },
+    {
+      "id": "sym_caries_or_necrosis_of_bone_and_bony_growths",
+      "label": "Caries or necrosis of bone and bony growths",
+      "section": "Generalities",
+      "rubric": "Caries or necrosis of bone and bony growths"
     }
   ]
 }

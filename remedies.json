@@ -13047,6 +13047,748 @@
         "chronic": "-"
       },
       "maxScore": 9
+    },
+    {
+      "id": "echi",
+      "name": "Echinacea",
+      "abbr": "Echi",
+      "category": "acute",
+      "system": [
+        "blood",
+        "immune",
+        "skin"
+      ],
+      "keynotes": [
+        {
+          "t": "blood poisoning and septic conditions in general",
+          "w": 2
+        },
+        {
+          "t": "acute auto-infection with pus formation",
+          "w": 2
+        },
+        {
+          "t": "erysipelas and foul slow-healing ulcers",
+          "w": 2
+        },
+        {
+          "t": "tendency to gangrene in acute disorders",
+          "w": 2
+        },
+        {
+          "t": "puerperal sepsis with suppressed discharges",
+          "w": 1.5
+        },
+        {
+          "t": "snake bites and insect stings",
+          "w": 1.5
+        },
+        {
+          "t": "tired aching limbs with general lassitude",
+          "w": 1.5
+        },
+        {
+          "t": "recurring boils carbuncles and pustules",
+          "w": 1
+        },
+        {
+          "t": "foul discharges with emaciation and debility",
+          "w": 1
+        },
+        {
+          "t": "chilliness with nausea and cold flashes down back",
+          "w": 1
+        },
+        {
+          "t": "better lying down (nausea)",
+          "w": 1
+        }
+      ],
+      "diseaseTags": [
+        "septicaemia",
+        "puerperal septicaemia",
+        "erysipelas",
+        "meningitis",
+        "appendicitis",
+        "snake bite"
+      ],
+      "potency": {
+        "acute": "30C 2-3x daily during episode",
+        "chronic": "200C occasional dose if picture recurs"
+      },
+      "maxScore": 16.5,
+      "sourceNote": "Keynotes summarised from Boericke's Materia Medica (1927, public domain); added Nov 2026, awaiting full clinical review. Potency follows the app's standard for this category."
+    },
+    {
+      "id": "coc-c",
+      "name": "Coccus Cacti",
+      "abbr": "Coc-c",
+      "category": "acute",
+      "system": [
+        "respiratory",
+        "ent",
+        "urinary"
+      ],
+      "keynotes": [
+        {
+          "t": "whooping cough attacks end with vomiting of tough mucus",
+          "w": 2
+        },
+        {
+          "t": "thick viscid mucus hard to bring up",
+          "w": 2
+        },
+        {
+          "t": "foreign-body sensation between lid and eyeball",
+          "w": 2
+        },
+        {
+          "t": "crumb-like sensation behind larynx must swallow often",
+          "w": 2
+        },
+        {
+          "t": "constant hawking from enlarged uvula",
+          "w": 1.5
+        },
+        {
+          "t": "brick-red urinary sediment with calculi or blood",
+          "w": 1.5
+        },
+        {
+          "t": "black thick menses with dark clots",
+          "w": 1.5
+        },
+        {
+          "t": "early profuse menses with painful urination",
+          "w": 1
+        },
+        {
+          "t": "headache worse lying on back better head raised",
+          "w": 1
+        },
+        {
+          "t": "suboccipital soreness worse after sleep",
+          "w": 1
+        },
+        {
+          "t": "worse left side, after sleep, touch, pressure of clothing, brushing teeth, slightest exertion, on waking (cough)",
+          "w": 1
+        },
+        {
+          "t": "better walking, head held high",
+          "w": 1
+        }
+      ],
+      "diseaseTags": [
+        "whooping cough",
+        "spasmodic cough",
+        "chronic bronchitis",
+        "urinary calculi"
+      ],
+      "potency": {
+        "acute": "30C 2-3x daily during episode",
+        "chronic": "200C occasional dose if picture recurs"
+      },
+      "maxScore": 17.5,
+      "sourceNote": "Keynotes summarised from Boericke's Materia Medica (1927, public domain); added Nov 2026, awaiting full clinical review. Potency follows the app's standard for this category."
+    },
+    {
+      "id": "cor-r",
+      "name": "Corallium Rubrum",
+      "abbr": "Cor-r",
+      "category": "chronic",
+      "system": [
+        "respiratory",
+        "ent"
+      ],
+      "keynotes": [
+        {
+          "t": "very rapid short barking cough that runs together",
+          "w": 2
+        },
+        {
+          "t": "spasmodic whooping-type cough with suffocation and exhaustion",
+          "w": 2
+        },
+        {
+          "t": "face turns purple during violent coughing",
+          "w": 2
+        },
+        {
+          "t": "blood expectorated during severe coughing",
+          "w": 2
+        },
+        {
+          "t": "profuse mucus dripping down back of throat",
+          "w": 1.5
+        },
+        {
+          "t": "post-nasal catarrh with feeling of cold air in passages",
+          "w": 1.5
+        },
+        {
+          "t": "ulcerated nostrils dry coryza and nosebleeds",
+          "w": 1.5
+        },
+        {
+          "t": "sensation of cold air streaming through skull and airways",
+          "w": 1
+        },
+        {
+          "t": "too cold when uncovered too hot when covered",
+          "w": 1
+        },
+        {
+          "t": "coral to copper-colored skin spots",
+          "w": 1
+        },
+        {
+          "t": "worse open air, change from warm to cold room, stooping, breathing cold air through nose, being uncovered",
+          "w": 1
+        },
+        {
+          "t": "better artificial heat",
+          "w": 1
+        }
+      ],
+      "diseaseTags": [
+        "whooping cough",
+        "spasmodic cough",
+        "post-nasal catarrh",
+        "coryza",
+        "epistaxis"
+      ],
+      "potency": {
+        "acute": "30C for acute flare if applicable",
+        "chronic": "200C to 1M, constitutional case needed"
+      },
+      "maxScore": 17.5,
+      "sourceNote": "Keynotes summarised from Boericke's Materia Medica (1927, public domain); added Nov 2026, awaiting full clinical review. Potency follows the app's standard for this category."
+    },
+    {
+      "id": "kali-i",
+      "name": "Kali Iodatum",
+      "abbr": "Kali-i",
+      "category": "chronic",
+      "system": [
+        "ent",
+        "respiratory",
+        "glands"
+      ],
+      "keynotes": [
+        {
+          "t": "profuse watery acrid nasal discharge with frontal sinus pain",
+          "w": 2
+        },
+        {
+          "t": "syphilitic complaints in every stage including nodes and ulcers",
+          "w": 2
+        },
+        {
+          "t": "glandular swellings enlarged and hardened",
+          "w": 2
+        },
+        {
+          "t": "severe bone pain with thickened tender shin periosteum",
+          "w": 2
+        },
+        {
+          "t": "rheumatism in neck back and heels worse cold and wet",
+          "w": 1.5
+        },
+        {
+          "t": "purpura and bleeding tendency",
+          "w": 1.5
+        },
+        {
+          "t": "sciatica worse lying on the affected side at night",
+          "w": 1.5
+        },
+        {
+          "t": "greenish soap-suds-like expectoration with raw larynx",
+          "w": 1
+        },
+        {
+          "t": "fungoid infections such as thrush and ringworm",
+          "w": 1
+        },
+        {
+          "t": "tendency to edematous swelling of eyelids mouth and uvula",
+          "w": 1
+        },
+        {
+          "t": "head pain through the sides over the eyes and nose root",
+          "w": 1
+        },
+        {
+          "t": "worse warm clothing, warm room, night, damp weather",
+          "w": 1
+        },
+        {
+          "t": "better motion, open air",
+          "w": 1
+        }
+      ],
+      "diseaseTags": [
+        "ozaena",
+        "sciatica",
+        "syphilis",
+        "pneumonia",
+        "rheumatism"
+      ],
+      "potency": {
+        "acute": "30C for acute flare if applicable",
+        "chronic": "200C to 1M, constitutional case needed"
+      },
+      "maxScore": 18.5,
+      "sourceNote": "Keynotes summarised from Boericke's Materia Medica (1927, public domain); added Nov 2026, awaiting full clinical review. Potency follows the app's standard for this category."
+    },
+    {
+      "id": "calc-i",
+      "name": "Calcarea Iodata",
+      "abbr": "Calc-i",
+      "category": "chronic",
+      "system": [
+        "glands",
+        "ent",
+        "respiratory"
+      ],
+      "keynotes": [
+        {
+          "t": "scrofulous swelling of glands and tonsils",
+          "w": 2
+        },
+        {
+          "t": "enlarged tonsils full of small crypts",
+          "w": 2
+        },
+        {
+          "t": "thyroid enlargement around puberty",
+          "w": 2
+        },
+        {
+          "t": "flabby children prone to frequent colds",
+          "w": 2
+        },
+        {
+          "t": "profuse yellowish secretions",
+          "w": 1.5
+        },
+        {
+          "t": "adenoids with enlarged tonsils",
+          "w": 1.5
+        },
+        {
+          "t": "chronic cough with chest pain",
+          "w": 1.5
+        },
+        {
+          "t": "green purulent expectoration with hectic fever",
+          "w": 1
+        },
+        {
+          "t": "headache when riding into cold wind",
+          "w": 1
+        },
+        {
+          "t": "catarrh worse at root of nose with sneezing",
+          "w": 1
+        },
+        {
+          "t": "indolent ulcers with varicose veins",
+          "w": 1
+        },
+        {
+          "t": "copper-colored papular eruptions",
+          "w": 1
+        },
+        {
+          "t": "worse cold wind while riding (headache)",
+          "w": 1
+        }
+      ],
+      "diseaseTags": [
+        "scrofulous affections",
+        "enlarged tonsils",
+        "adenoids",
+        "croup",
+        "pneumonia",
+        "uterine fibroids"
+      ],
+      "potency": {
+        "acute": "30C for acute flare if applicable",
+        "chronic": "200C to 1M, constitutional case needed"
+      },
+      "maxScore": 18.5,
+      "sourceNote": "Keynotes summarised from Boericke's Materia Medica (1927, public domain); added Nov 2026, awaiting full clinical review. Potency follows the app's standard for this category."
+    },
+    {
+      "id": "guaj",
+      "name": "Guaiacum",
+      "abbr": "Guaj",
+      "category": "chronic",
+      "system": [
+        "joints",
+        "muscles",
+        "ent"
+      ],
+      "keynotes": [
+        {
+          "t": "strong action on fibrous tissue in arthritic or rheumatic constitutions",
+          "w": 2
+        },
+        {
+          "t": "valuable in acute rheumatism",
+          "w": 2
+        },
+        {
+          "t": "gouty head pain spreading to the neck",
+          "w": 2
+        },
+        {
+          "t": "free foul discharges and unclean body odor",
+          "w": 2
+        },
+        {
+          "t": "sensitive to local heat and worse from it",
+          "w": 1.5
+        },
+        {
+          "t": "stiff contracted limbs with urge to stretch",
+          "w": 1.5
+        },
+        {
+          "t": "acute tonsillitis or rheumatic sore throat",
+          "w": 1.5
+        },
+        {
+          "t": "feels suffocated with pleuritic stitches",
+          "w": 1
+        },
+        {
+          "t": "pains finish in sharp stitches especially in the head",
+          "w": 1
+        },
+        {
+          "t": "craves apples and fruit averse to milk",
+          "w": 1
+        },
+        {
+          "t": "aching nape stiff neck sore shoulders",
+          "w": 1
+        },
+        {
+          "t": "swollen tender joints that cannot tolerate pressure",
+          "w": 1
+        },
+        {
+          "t": "worse motion, heat, cold wet weather, pressure or touch, 6 pm to 4 am",
+          "w": 1
+        },
+        {
+          "t": "better external pressure",
+          "w": 1
+        }
+      ],
+      "diseaseTags": [
+        "acute rheumatism",
+        "acute tonsillitis",
+        "sciatica",
+        "lumbago",
+        "ovaritis"
+      ],
+      "potency": {
+        "acute": "30C for acute flare if applicable",
+        "chronic": "200C to 1M, constitutional case needed"
+      },
+      "maxScore": 19.5,
+      "sourceNote": "Keynotes summarised from Boericke's Materia Medica (1927, public domain); added Nov 2026, awaiting full clinical review. Potency follows the app's standard for this category."
+    },
+    {
+      "id": "erig",
+      "name": "Erigeron",
+      "abbr": "Erig",
+      "category": "acute",
+      "system": [
+        "reproductive",
+        "urinary",
+        "blood"
+      ],
+      "keynotes": [
+        {
+          "t": "profuse bright-red bleeding that can be persistent",
+          "w": 2
+        },
+        {
+          "t": "bloody lochia returns after the slightest movement",
+          "w": 2
+        },
+        {
+          "t": "metrorrhagia with rectal and bladder irritation",
+          "w": 2
+        },
+        {
+          "t": "chronic gonorrhea with burning urination and dribbling",
+          "w": 2
+        },
+        {
+          "t": "dysentery with burning soreness in the bladder",
+          "w": 1.5
+        },
+        {
+          "t": "leucorrhea with urinary irritation between periods",
+          "w": 1.5
+        },
+        {
+          "t": "marked abdominal bloating from gas",
+          "w": 1.5
+        },
+        {
+          "t": "bleeding hemorrhoids and nosebleed replacing menses",
+          "w": 1
+        },
+        {
+          "t": "pain in left ovary and hip",
+          "w": 1
+        },
+        {
+          "t": "weak uterus in pregnancy with bloody discharge on exertion",
+          "w": 1
+        },
+        {
+          "t": "worse left side, slight exertion, any movement",
+          "w": 1
+        }
+      ],
+      "diseaseTags": [
+        "uterine hemorrhage",
+        "menorrhagia",
+        "chronic gonorrhea",
+        "dysentery",
+        "tympanites",
+        "bleeding hemorrhoids"
+      ],
+      "potency": {
+        "acute": "30C 2-3x daily during episode",
+        "chronic": "200C occasional dose if picture recurs"
+      },
+      "maxScore": 16.5,
+      "sourceNote": "Keynotes summarised from Boericke's Materia Medica (1927, public domain); added Nov 2026, awaiting full clinical review. Potency follows the app's standard for this category."
+    },
+    {
+      "id": "cedr",
+      "name": "Cedron",
+      "abbr": "Cedr",
+      "category": "acute",
+      "system": [
+        "nerves",
+        "ent"
+      ],
+      "keynotes": [
+        {
+          "t": "periodic recurring pains are the most marked feature",
+          "w": 2
+        },
+        {
+          "t": "neuralgia from malaria in warm damp regions",
+          "w": 2
+        },
+        {
+          "t": "headache across temples and eyes",
+          "w": 2
+        },
+        {
+          "t": "right-sided facial pain beginning around 9 am",
+          "w": 2
+        },
+        {
+          "t": "eye pain radiating around the eyeball into the nose",
+          "w": 1.5
+        },
+        {
+          "t": "scalding tears with red itchy eyes",
+          "w": 1.5
+        },
+        {
+          "t": "headache worse from close work on dark material",
+          "w": 1.5
+        },
+        {
+          "t": "sudden pain in thumb or big toe spreading upward",
+          "w": 1
+        },
+        {
+          "t": "chilliness toward evening then frontal headache",
+          "w": 1
+        },
+        {
+          "t": "numbness of limbs with tearing sensations",
+          "w": 1
+        },
+        {
+          "t": "worse close work on dark material, evening",
+          "w": 1
+        }
+      ],
+      "diseaseTags": [
+        "malarial neuralgia",
+        "supra-orbital neuralgia",
+        "iritis",
+        "choroiditis",
+        "shingles"
+      ],
+      "potency": {
+        "acute": "30C 2-3x daily during episode",
+        "chronic": "200C occasional dose if picture recurs"
+      },
+      "maxScore": 16.5,
+      "sourceNote": "Keynotes summarised from Boericke's Materia Medica (1927, public domain); added Nov 2026, awaiting full clinical review. Potency follows the app's standard for this category."
+    },
+    {
+      "id": "bell-p",
+      "name": "Bellis Perennis",
+      "abbr": "Bell-p",
+      "category": "acute",
+      "system": [
+        "muscles",
+        "circulation",
+        "skin"
+      ],
+      "keynotes": [
+        {
+          "t": "sore bruised feeling in the pelvic region",
+          "w": 2
+        },
+        {
+          "t": "muscular soreness and lameness as if sprained",
+          "w": 2
+        },
+        {
+          "t": "boils breaking out all over the body",
+          "w": 2
+        },
+        {
+          "t": "uterus feels sore as if squeezed",
+          "w": 2
+        },
+        {
+          "t": "soreness of abdominal walls and uterus",
+          "w": 1.5
+        },
+        {
+          "t": "venous congestion from mechanical causes",
+          "w": 1.5
+        },
+        {
+          "t": "inability to walk during pregnancy",
+          "w": 1.5
+        },
+        {
+          "t": "injuries to deeper tissues after major surgery",
+          "w": 1
+        },
+        {
+          "t": "varicose veins with bruised sore feeling",
+          "w": 1
+        },
+        {
+          "t": "railway spine with intense soreness",
+          "w": 1
+        },
+        {
+          "t": "worse left side, hot baths and warmth of bed, before storms, cold bathing, cold wind, cold drink when body is heated",
+          "w": 1
+        }
+      ],
+      "diseaseTags": [
+        "sprains",
+        "bruises",
+        "varicose veins",
+        "boils",
+        "acne",
+        "rheumatic complaints"
+      ],
+      "potency": {
+        "acute": "30C 2-3x daily during episode",
+        "chronic": "200C occasional dose if picture recurs"
+      },
+      "maxScore": 16.5,
+      "sourceNote": "Keynotes summarised from Boericke's Materia Medica (1927, public domain); added Nov 2026, awaiting full clinical review. Potency follows the app's standard for this category."
+    },
+    {
+      "id": "hecla",
+      "name": "Hekla Lava",
+      "abbr": "Hecla",
+      "category": "chronic",
+      "system": [
+        "bones",
+        "glands",
+        "ent"
+      ],
+      "keynotes": [
+        {
+          "t": "strong affinity for the jaw bones",
+          "w": 2
+        },
+        {
+          "t": "exostosis and gum abscess",
+          "w": 2
+        },
+        {
+          "t": "difficult teething especially in children",
+          "w": 2
+        },
+        {
+          "t": "toothache with swelling around the jaws",
+          "w": 2
+        },
+        {
+          "t": "facial neuralgia from decayed or extracted teeth",
+          "w": 1.5
+        },
+        {
+          "t": "enlarged maxillary bone",
+          "w": 1.5
+        },
+        {
+          "t": "enlarged hardened cervical glands",
+          "w": 1.5
+        },
+        {
+          "t": "bone caries and bone necrosis",
+          "w": 1
+        },
+        {
+          "t": "ulceration of the nasal bones",
+          "w": 1
+        },
+        {
+          "t": "bone tumors and growths",
+          "w": 1
+        },
+        {
+          "t": "necrosis and sinus after mastoid surgery",
+          "w": 1
+        },
+        {
+          "t": "worse damp air, air exposure",
+          "w": 1
+        }
+      ],
+      "diseaseTags": [
+        "exostosis",
+        "gum abscess",
+        "difficult teething",
+        "bone caries",
+        "osteitis",
+        "facial neuralgia"
+      ],
+      "potency": {
+        "acute": "30C for acute flare if applicable",
+        "chronic": "200C to 1M, constitutional case needed"
+      },
+      "maxScore": 17.5,
+      "sourceNote": "Keynotes summarised from Boericke's Materia Medica (1927, public domain); added Nov 2026, awaiting full clinical review. Potency follows the app's standard for this category."
     }
   ],
   "biochemics": [
