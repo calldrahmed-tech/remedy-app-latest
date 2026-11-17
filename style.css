@@ -494,3 +494,5 @@ footer.app-footer .f-item b { display: block; color: var(--navy); font-size: 0.7
 .masters-by { color: var(--green-2); font-weight: 800; }
 .masters-note { font-size: 0.85rem; margin-top: 3px; }
 .masters-src { font-size: 0.74rem; color: var(--muted); margin-top: 3px; }
+.masters-card, .masters-cond, .masters-rx, .masters-note { color: var(--ink, #1a2a1f); }
+.masters-src { color: #5b6b60; }
