@@ -125,11 +125,9 @@
         } else if (code === "functions/unauthenticated") {
           statusEl.textContent = "Please log in first to use AI-assisted analysis.";
         } else {
-          // The backend's error message is shown directly (it's written for a
-          // doctor/developer reading it, e.g. "DEBUG: ..." during the current
-          // rollout) rather than hidden behind a generic message.
-          statusEl.textContent = "AI assist unavailable right now — try the search as-is." +
-            (err && err.message ? " (" + err.message + ")" : "");
+          // Raw backend messages stay in the console only — they can contain
+          // internal details and are not meant for end users.
+          statusEl.textContent = "AI assist unavailable right now — the search below still works normally.";
         }
         statusEl.className = "ai-assist-status ai-assist-error";
       } finally {
