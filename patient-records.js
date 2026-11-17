@@ -215,6 +215,50 @@
       });
     }
 
+    // ---- Follow-up progress (Better / Same / Worse) + printable prescription ----
+    const PROGRESS = {
+      better: { icon: "😊", label: "Better", color: "#2c5c3a" },
+      same:   { icon: "😐", label: "Same",   color: "#8a6d00" },
+      worse:  { icon: "😟", label: "Worse",  color: "#c0392b" }
+    };
+    function progressBadge(v) {
+      const g = PROGRESS[v && v.progress];
+      return g ? `<span class="pv-badge" style="background:${g.color}">${g.icon} ${g.label}</span>` : "";
+    }
+    // Oldest -> newest strip so the doctor sees the whole course at a glance.
+    function progressTimeline(visits) {
+      const ordered = visits.slice().sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+      if (ordered.length < 2) return "";
+      return `<div class="pv-timeline"><div class="pv-timeline-title">Progress over time</div><div class="pv-timeline-row">${
+        ordered.map((v, i) => {
+          const g = PROGRESS[v.progress];
+          return `<div class="pv-dot-wrap"><div class="pv-dot" style="background:${g ? g.color : "#b8c2bb"}" title="${esc(g ? g.label : (i === 0 ? "First visit" : "No rating"))}">${g ? g.icon : (i === 0 ? "▶" : "·")}</div><div class="pv-dot-date">${esc(formatDate(v.date).split(",")[0])}</div></div>`;
+        }).join('<div class="pv-line"></div>')
+      }</div></div>`;
+    }
+    function printPrescription(p, v) {
+      const doctor = (window.RemedyAuth && window.RemedyAuth.getCurrentUser() && window.RemedyAuth.getCurrentUser().displayName) || "";
+      const w = window.open("", "_blank");
+      if (!w) { alert("Please allow pop-ups for this site to print."); return; }
+      const row = (k, val) => val ? `<tr><td class="k">${esc(k)}</td><td>${esc(val)}</td></tr>` : "";
+      w.document.write(`<!DOCTYPE html><html><head><meta charset="utf-8"><title>Prescription - ${esc(p.name)}</title>
+        <style>body{font-family:Arial,sans-serif;max-width:640px;margin:30px auto;padding:0 20px;color:#111}
+        h1{font-size:22px;margin:0 0 2px}.sub{color:#555;font-size:13px;margin-bottom:18px;border-bottom:2px solid #2c5c3a;padding-bottom:10px}
+        table{width:100%;border-collapse:collapse;font-size:15px}td{padding:8px 4px;border-bottom:1px solid #ddd;vertical-align:top}.k{width:140px;color:#555;font-weight:bold}
+        .rx{font-size:28px;font-weight:bold;margin:22px 0 4px}.blank{margin-top:26px;border-bottom:1px solid #999;height:26px}.lbl{font-size:12px;color:#555;margin-top:18px}
+        .sig{margin-top:60px;text-align:right;font-size:13px;color:#333}.note{margin-top:30px;font-size:11px;color:#777}@media print{button{display:none}}</style></head><body>
+        <h1>Prescription</h1><div class="sub">${doctor ? "Dr. " + esc(doctor) + " · " : ""}Date: ${esc(formatDate(v.date))}</div>
+        <table>${row("Patient", p.name)}${row("Age", p.age)}${row("Contact", p.contact)}</table>
+        <div class="rx">℞ ${esc(v.remedy || "—")}${v.potency ? " " + esc(v.potency) : ""}</div>
+        <div class="lbl">Dose / directions</div><div class="blank"></div><div class="blank"></div>
+        ${v.symptoms ? `<div class="lbl">Case notes</div><div style="font-size:14px">${esc(v.symptoms)}</div>` : ""}
+        <div class="sig">Signature: ____________________</div>
+        <div class="note">Homeopathic remedies support, but do not replace, medical care. Seek urgent medical help for serious or worsening symptoms.</div>
+        <button onclick="window.print()" style="margin-top:20px;padding:10px 18px;font-size:15px">🖨 Print / Save as PDF</button>
+        <script>setTimeout(function(){window.print()},400)<\/script></body></html>`);
+      w.document.close();
+    }
+
     function openPatientDetail(patientId) {
       const p = myPatients.find(x => x.id === patientId);
       if (!p) return;
@@ -251,14 +295,20 @@
           <div class="patient-quick-update-result"></div>
         </div>` : ""}
         ${window.HeringAnalysis ? window.HeringAnalysis.renderFollowUpActionCard(followUpAction) : ""}
-        ${visits.map(v => `
+        ${progressTimeline(visits)}
+        ${visits.map((v, vi) => `
           <div class="patient-visit-card">
-            <div class="patient-visit-date">${esc(formatDate(v.date))}</div>
+            <div class="patient-visit-date">${esc(formatDate(v.date))} ${progressBadge(v)}</div>
             ${v.remedy ? `<div class="patient-visit-remedy">${esc(v.remedy)}${v.potency ? " " + esc(v.potency) : ""}</div>` : ""}
             ${v.symptoms ? `<div class="patient-visit-symptoms">${esc(v.symptoms)}</div>` : ""}
+            ${v.remedy ? `<button type="button" class="pv-print-btn" data-vi="${vi}">🖨 Print prescription</button>` : ""}
           </div>
         `).join("") || `<div class="patient-list-empty">No visit details.</div>`}
       `;
+
+      patientDetailContent.querySelectorAll(".pv-print-btn").forEach(btn => {
+        btn.addEventListener("click", () => printPrescription(p, visits[Number(btn.getAttribute("data-vi"))]));
+      });
 
       const quickInput = patientDetailContent.querySelector(".patient-quick-update-input");
       const quickBtn = patientDetailContent.querySelector(".patient-quick-update-btn");
@@ -269,11 +319,19 @@
           const text = quickInput.value;
           const result = window.HeringAnalysis.analyzeQuickFollowUp(text);
           quickResult.innerHTML = window.HeringAnalysis.renderFollowUpActionCard(result) + `
+            <div class="pv-picker"><span class="pv-picker-lbl">How is the patient now?</span>
+              ${Object.keys(PROGRESS).map(k => `<button type="button" class="pv-pick" data-p="${k}">${PROGRESS[k].icon} ${PROGRESS[k].label}</button>`).join("")}
+            </div>
             <div>
               <button type="button" class="patient-quick-save-btn">💾 Save this as a new visit</button>
               <span class="patient-quick-save-status"></span>
             </div>
           `;
+          let chosenProgress = "";
+          quickResult.querySelectorAll(".pv-pick").forEach(b => b.addEventListener("click", () => {
+            chosenProgress = b.getAttribute("data-p");
+            quickResult.querySelectorAll(".pv-pick").forEach(x => x.classList.toggle("on", x === b));
+          }));
           const saveBtn = quickResult.querySelector(".patient-quick-save-btn");
           const saveStatus = quickResult.querySelector(".patient-quick-save-status");
           saveBtn.addEventListener("click", async () => {
@@ -287,11 +345,12 @@
                   symptoms: text.trim(),
                   tags: [],
                   remedy: lastVisit ? (lastVisit.remedy || "") : "",
-                  potency: lastVisit ? (lastVisit.potency || "") : ""
+                  potency: lastVisit ? (lastVisit.potency || "") : "",
+                  ...(chosenProgress ? { progress: chosenProgress } : {})
                 }
               );
               p.visits = p.visits || [];
-              p.visits.push({ date: new Date().toISOString(), symptoms: text.trim(), tags: [], remedy: lastVisit ? lastVisit.remedy : "", potency: lastVisit ? lastVisit.potency : "" });
+              p.visits.push({ date: new Date().toISOString(), symptoms: text.trim(), tags: [], remedy: lastVisit ? lastVisit.remedy : "", potency: lastVisit ? lastVisit.potency : "", ...(chosenProgress ? { progress: chosenProgress } : {}) });
               openPatientDetail(patientId); // re-render with the new visit in history
             } catch (err) {
               saveStatus.textContent = err && err.message ? err.message : "Could not save — try again.";

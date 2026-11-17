@@ -456,3 +456,17 @@ footer.app-footer .f-item b { display: block; color: var(--navy); font-size: 0.7
 .rg-both { background: #eef1ee; border-radius: 8px; padding: 6px 10px; font-size: 0.82rem; margin-bottom: 6px; }
 .rg-both-lbl { font-weight: 800; color: var(--muted); }
 .rg-none, .rg-small { color: var(--muted); font-size: 0.82rem; }
+
+.pv-badge { display: inline-block; color: #fff; border-radius: 12px; padding: 2px 9px; font-size: 0.72rem; font-weight: 700; margin-left: 6px; }
+.pv-timeline { margin: 12px 0; background: #f4faf6; border-radius: 10px; padding: 10px 12px; }
+.pv-timeline-title { font-weight: 800; font-size: 0.82rem; color: var(--green-2); margin-bottom: 8px; }
+.pv-timeline-row { display: flex; align-items: center; overflow-x: auto; }
+.pv-dot-wrap { text-align: center; min-width: 52px; }
+.pv-dot { width: 34px; height: 34px; border-radius: 50%; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 1.05rem; }
+.pv-dot-date { font-size: 0.65rem; color: var(--muted); margin-top: 3px; }
+.pv-line { flex: 1; min-width: 14px; height: 2px; background: #c9d3cc; margin-bottom: 16px; }
+.pv-picker { margin: 10px 0 6px; }
+.pv-picker-lbl { display: block; font-size: 0.82rem; font-weight: 700; margin-bottom: 6px; }
+.pv-pick { background: #fff; border: 1.5px solid var(--green-2); color: var(--green-2); border-radius: 20px; padding: 8px 14px; margin-right: 6px; font-weight: 700; cursor: pointer; min-height: 40px; }
+.pv-pick.on { background: var(--green-2); color: #fff; }
+.pv-print-btn { margin-top: 8px; background: #fff; border: 1.5px solid var(--green-2); color: var(--green-2); border-radius: 8px; padding: 7px 12px; font-weight: 700; font-size: 0.8rem; cursor: pointer; }
