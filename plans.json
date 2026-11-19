@@ -1,0 +1,10 @@
+{
+  "paymentsOpen": false,
+  "note": "DISPLAY ONLY. The real prices live on the server (functions-payments/core.js). Change both together. Set paymentsOpen to true only after the payment system is tested and live.",
+  "free": { "title": "Free", "aiLimit": 20, "points": ["Repertory search, Remedies A–Z, comparison, Masters' Advice", "Patient records and printable prescriptions", "20 AI Case Analyses each month"] },
+  "paid": [
+    { "id": "pro_monthly", "title": "Pro — 1 month",   "aiLimit": 300, "prices": { "PKR": "Rs 1,500",  "USD": "$5"  } },
+    { "id": "pro_yearly",  "title": "Pro — 12 months", "aiLimit": 300, "prices": { "PKR": "Rs 15,000", "USD": "$50" } }
+  ],
+  "proPoints": ["Everything in Free", "300 AI Case Analyses each month"]
+}

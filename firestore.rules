@@ -29,6 +29,19 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // Paid-plan record (doc id = the doctor's uid). The doctor can READ it so the app can show
+    // "Pro until ..."; only the payment server (Admin SDK) can write it, so nobody can upgrade
+    // themselves.
+    match /subscriptions/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if false;
+    }
+
+    // Payment orders are private to the server.
+    match /orders/{orderId} {
+      allow read, write: if false;
+    }
+
     // Everything else is closed.
     match /{document=**} {
       allow read, write: if false;

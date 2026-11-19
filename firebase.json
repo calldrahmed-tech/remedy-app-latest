@@ -1,9 +1,10 @@
 {
+  "functions": [{ "source": "functions-payments", "codebase": "payments", "ignore": ["node_modules", ".git", "test.js"] }],
   "hosting": {
     "public": ".",
     "ignore": [
       "firebase.json", "**/.*", "**/node_modules/**",
-      "*.py", "*.md", "LICENSE.txt", "firestore.rules",
+      "*.py", "*.md", "LICENSE.txt", "firestore.rules", "functions-payments/**",
       "regression-tests.js", "test.html", "repertory_fixed.json"
     ],
     "cleanUrls": false,

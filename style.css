@@ -496,3 +496,23 @@ footer.app-footer .f-item b { display: block; color: var(--navy); font-size: 0.7
 .masters-src { font-size: 0.74rem; color: var(--muted); margin-top: 3px; }
 .masters-card, .masters-cond, .masters-rx, .masters-note { color: var(--ink, #1a2a1f); }
 .masters-src { color: #5b6b60; }
+
+.plans-cur { margin: 4px 0 12px; font-size: 0.85rem; font-weight: 700; }
+.plans-cur-btn { background: #fff; border: 1.5px solid var(--green-2); color: var(--green-2); border-radius: 16px; padding: 6px 12px; font-weight: 700; font-size: 0.8rem; cursor: pointer; margin-left: 4px; min-height: 36px; }
+.plans-cur-btn.on { background: var(--green-2); color: #fff; }
+.plans-card { background: #fff; color: var(--ink, #14161f); border: 1px solid #dfe7e1; border-radius: 12px; padding: 12px 14px; margin-bottom: 10px; }
+.plans-card.pro { border: 2px solid var(--green-2); }
+.plans-title { font-family: "Poppins", sans-serif; font-weight: 800; font-size: 1rem; }
+.plans-card ul { margin: 6px 0; padding-left: 18px; font-size: 0.88rem; line-height: 1.5; }
+.plans-price { font-weight: 800; font-size: 1.15rem; color: var(--green-2); margin: 4px 0; }
+.plans-buy { width: 100%; background: var(--green-2); color: #fff; border: 0; border-radius: 10px; padding: 11px; font-weight: 800; font-size: 0.92rem; cursor: pointer; min-height: 44px; }
+.plans-buy:disabled { background: #b8c2bb; cursor: not-allowed; }
+.plans-msg { font-size: 0.85rem; min-height: 1.2em; margin: 6px 0; color: #c0392b; }
+.plans-status.ok { background: #e7f5ec; color: #1c5a31; border-radius: 10px; padding: 9px 12px; margin-bottom: 10px; font-size: 0.88rem; }
+.plans-links { font-size: 0.78rem; text-align: center; margin-top: 8px; } .plans-links a { color: var(--green-2); }
+.plans-banner { position: sticky; top: 0; z-index: 9999; background: #1c5a31; color: #fff; text-align: center; padding: 10px 14px; font-size: 0.88rem; font-weight: 700; }
+.rg-top-row .rg-top-btn { font-size: 0.74rem; padding: 8px 4px; }
+@media (max-width: 400px) {
+  .mode-switcher { gap: 3px; padding: 3px; }
+  .mode-tab { padding: 8px 2px; font-size: 0.7rem; min-width: 0; line-height: 1.2; }
+}

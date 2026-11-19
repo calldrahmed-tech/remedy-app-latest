@@ -31,6 +31,8 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const functions = getFunctions(app);
 const aiNormalizeCallable = httpsCallable(functions, "aiNormalize");
+const createCheckoutCallable = httpsCallable(functions, "createCheckout");
+const confirmCheckoutCallable = httpsCallable(functions, "confirmCheckout");
 const googleProvider = new GoogleAuthProvider();
 
 let currentUser = null;
@@ -80,13 +82,38 @@ window.RemedyAuth = {
     return cred.user;
   },
 
-  // Returns { used, limit, remaining } for the CURRENT calendar month.
+  // The doctor's paid-plan record, or null. Written only by the payment server.
+  async getSubscription() {
+    if (!currentUser) return null;
+    try {
+      const snap = await getDoc(doc(db, "subscriptions", currentUser.uid));
+      if (!snap.exists()) return null;
+      const s = snap.data();
+      const active = s.status === "active" && Number(s.expiresAtMs) > Date.now();
+      return { active, planId: s.planId || "", aiLimit: s.aiLimit || 0, expiresAtMs: s.expiresAtMs || 0 };
+    } catch (e) { return null; }
+  },
+
+  // Returns { used, limit, remaining } for the CURRENT calendar month. A doctor with an
+  // active paid plan gets that plan's limit (the AI function applies the same rule).
   async getUsage() {
     if (!currentUser) return null;
     const usageRef = doc(db, "usage", currentUser.uid + "_" + currentMonthKey());
     const snap = await getDoc(usageRef);
     const used = snap.exists() ? (snap.data().count || 0) : 0;
-    return { used, limit: MONTHLY_AI_LIMIT, remaining: Math.max(0, MONTHLY_AI_LIMIT - used) };
+    const sub = await this.getSubscription();
+    const limit = sub && sub.active && sub.aiLimit ? sub.aiLimit : MONTHLY_AI_LIMIT;
+    return { used, limit, remaining: Math.max(0, limit - used) };
+  },
+
+  // Payments (Safepay). The server decides prices; the browser only names a plan.
+  async startCheckout(planId, currency) {
+    const result = await createCheckoutCallable({ planId, currency });
+    return result.data; // { url, orderId }
+  },
+  async confirmCheckout(orderId) {
+    const result = await confirmCheckoutCallable({ orderId });
+    return result.data; // { status: "paid" | "pending" }
   },
 
   // Calls the secure backend function, which verifies login, enforces the monthly
