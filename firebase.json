@@ -1,10 +1,13 @@
 {
-  "functions": [{ "source": "functions-payments", "codebase": "payments", "ignore": ["node_modules", ".git", "test.js"] }],
+  "functions": [
+    { "source": "functions-ai", "codebase": "ai", "ignore": ["node_modules", ".git", "test.js"] },
+    { "source": "functions-payments", "codebase": "payments", "ignore": ["node_modules", ".git", "test.js"] }
+  ],
   "hosting": {
     "public": ".",
     "ignore": [
       "firebase.json", "**/.*", "**/node_modules/**",
-      "*.py", "*.md", "LICENSE.txt", "firestore.rules", "functions-payments/**",
+      "*.py", "*.md", "LICENSE.txt", "firestore.rules", "functions-payments/**", "functions-ai/**",
       "regression-tests.js", "test.html", "repertory_fixed.json"
     ],
     "cleanUrls": false,

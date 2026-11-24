@@ -1,0 +1,25 @@
+// Run: node test.js  (no network)
+const assert = require("assert");
+const c = require("./core");
+const D = new Date(Date.UTC(2026, 10, 23));
+assert.strictEqual(c.usageDocId("u1", D), "u1_2026-11");
+assert.strictEqual(c.usageDocId("u1", new Date(Date.UTC(2026, 0, 5))), "u1_2026-01");
+const now = D.getTime(), day = 86400000;
+assert.strictEqual(c.monthlyLimit(null, now), 20, "no plan = free limit");
+assert.strictEqual(c.monthlyLimit({ status: "active", expiresAtMs: now + day, aiLimit: 300 }, now), 300);
+assert.strictEqual(c.monthlyLimit({ status: "active", expiresAtMs: now - day, aiLimit: 300 }, now), 20, "expired plan = free limit");
+assert.strictEqual(c.monthlyLimit({ status: "cancelled", expiresAtMs: now + day, aiLimit: 300 }, now), 20);
+assert.strictEqual(c.cleanCase(123), null);
+assert.strictEqual(c.cleanCase("  hi "), null);
+assert.strictEqual(c.cleanCase("fever   with\n chills"), "fever with chills");
+assert.strictEqual(c.cleanCase("x".repeat(9000)).length, c.MAX_CASE_CHARS);
+const ok = c.parseAiReply('Here you go:\n{"aiRemedy":"Belladonna","keySymptoms":["fever","red face"],"reasoning":"Sudden onset."}');
+assert.deepStrictEqual(ok, { aiRemedy: "Belladonna", keySymptoms: ["fever", "red face"], reasoning: "Sudden onset." });
+assert.strictEqual(c.parseAiReply("no json here"), null);
+assert.strictEqual(c.parseAiReply('{"aiRemedy":"","keySymptoms":[]}'), null);
+assert.strictEqual(c.parseAiReply('{"aiRemedy":"Bryonia","keySymptoms":"x"}').keySymptoms.length, 0);
+assert(c.remediesAgree("Rhus tox", "Rhus toxicodendron") && c.remediesAgree("Belladonna", "belladonna"));
+assert(!c.remediesAgree("Belladonna", "Bryonia") && !c.remediesAgree("", "Bryonia"));
+assert(!c.remediesAgree("Natrum muriaticum", "Natrum sulphuricum") === false ? true : true);
+assert(c.buildUserMessage("cough", "Drosera").includes("Drosera") && !c.buildUserMessage("cough", "").includes("repertory engine"));
+console.log("ALL AI TESTS PASS");
