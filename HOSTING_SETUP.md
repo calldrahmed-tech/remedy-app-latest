@@ -1,6 +1,6 @@
 # Move Expertia to Firebase Hosting
 
-Your new address will be: https://expertia-d35e0.web.app
+Your new address will be: https://expertia-app.web.app
 
 ## One-time steps (on your Windows PC)
 1. Install Node.js (LTS) from nodejs.org.
@@ -9,11 +9,11 @@ Your new address will be: https://expertia-d35e0.web.app
 4. Download this repo folder (GitHub > Code > Download ZIP) and unzip it.
 5. In Command Prompt, go into that folder:  cd path\to\remedy-app-latest
 6. Run:  firebase deploy --only hosting
-7. Open https://expertia-d35e0.web.app and check that it loads.
+7. Open https://expertia-app.web.app and check that it loads.
 
 ## IMPORTANT — do this BEFORE you test login
 Firebase Console > Authentication > Settings > Authorized domains > Add domain:
-  expertia-d35e0.web.app
+  expertia-app.web.app
 (The "web.app" and "firebaseapp.com" domains are usually already there — if so, nothing to add.)
 
 ## After a code change

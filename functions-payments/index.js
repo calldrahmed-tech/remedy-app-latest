@@ -14,7 +14,7 @@ const SAFEPAY_SECRET_KEY = defineSecret("SAFEPAY_SECRET_KEY");       // secret A
 const SAFEPAY_WEBHOOK_SECRET = defineSecret("SAFEPAY_WEBHOOK_SECRET"); // shared secret of the webhook endpoint
 const SAFEPAY_API_KEY = defineString("SAFEPAY_API_KEY");              // public API key (not secret)
 const SAFEPAY_ENV = defineString("SAFEPAY_ENV", { default: "sandbox" }); // "sandbox" or "production"
-const SITE_URL = defineString("SITE_URL", { default: "https://expertia-d35e0.web.app" });
+const SITE_URL = defineString("SITE_URL", { default: "https://expertia-app.web.app" });
 
 const BASES = { sandbox: "https://sandbox.api.getsafepay.com", production: "https://api.getsafepay.com" };
 const baseUrl = () => BASES[SAFEPAY_ENV.value()] || BASES.sandbox;
