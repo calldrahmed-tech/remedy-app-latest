@@ -1,26 +1,33 @@
-# New Firebase project — simple steps (Ahmed)
+# Expertia — go live on the FREE Firebase plan (Spark)
 
-## Part A — you do (browser, hatim… or any Google account you own)
-1. Go to console.firebase.google.com → **Add project** → name: `expertia-app`.
-2. Project home → **</> Web** icon → app name `Expertia` → Register. **Copy the `firebaseConfig` box and send it to Claude.**
-3. **Build → Authentication → Get started** → turn ON **Email/Password** and **Google**.
-4. **Build → Firestore Database → Create database** → production mode → region: pick one near you (e.g. `europe-west1` or `asia-south1`).
-5. **Upgrade to Blaze** (needed for AI function). Then Billing → **Budget alert** → set e.g. $10.
-6. Get an **Anthropic API key** at console.anthropic.com (this pays for AI searches). Keep it secret.
+AI Case Analysis shows "coming soon" for now. Everything else works:
+login (Email + Google), patient records, remedies, repertory, masters, hosting.
 
-## Part B — commands (run once, on a computer with Node installed)
+## Do once (on a computer with Node.js installed)
 ```
 npm install -g firebase-tools
 firebase login
-firebase use --add            # choose the new project
-firebase functions:secrets:set ANTHROPIC_API_KEY
+cd remedy-app-latest          (the folder of this app)
+firebase use expertia-app
 firebase deploy --only firestore:rules
-firebase deploy --only functions:ai
 firebase deploy --only hosting
 ```
-(Payments later: `firebase deploy --only functions:payments` — see PAYMENTS_SETUP.md.)
+IMPORTANT: always write `--only ...`. Never run plain `firebase deploy` on the free plan
+(it would try to deploy the AI/payment functions and fail).
 
-## Part C — after deploy
-- Authentication → Settings → **Authorized domains**: add your site domain (`<project>.web.app` is added automatically).
-- Test: sign up, run one AI Case Analysis.
-- Old accounts and patient records from the old project do not exist here. Everyone signs up again.
+Your app will be at:  https://expertia-app.web.app
+
+## After deploy
+1. Firebase → Authentication → Settings → **Authorized domains**: check `expertia-app.web.app` is listed.
+2. Open the app, sign up, add a test patient, log out, log in again. Check it works.
+3. Firestore → Rules tab: should show the new rules.
+
+## Turn AI on later (needs Blaze plan, $30 prepayment in Pakistan)
+1. Upgrade to Blaze, set a budget alert.
+2. Anthropic API key from console.anthropic.com.
+3. `firebase functions:secrets:set ANTHROPIC_API_KEY`
+4. `firebase deploy --only functions:ai`
+5. Ask Claude to set `AI_ENABLED = true` in firebase-init.js, then `firebase deploy --only hosting`.
+
+## Payments later
+See PAYMENTS_SETUP.md (also needs Blaze).

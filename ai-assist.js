@@ -155,7 +155,11 @@
       } catch (err) {
         console.error("AI assist error:", err);
         const code = err && err.code;
-        if (code === "functions/resource-exhausted") {
+        if (code === "app/ai-coming-soon") {
+          statusEl.textContent = "🚀 AI Case Analysis is coming soon. The classical repertory result below is ready to use.";
+          statusEl.className = "ai-assist-status";
+          return;
+        } else if (code === "functions/resource-exhausted") {
           statusEl.textContent = "You've used all your AI searches this month — the search below still works normally.";
         } else if (code === "functions/unauthenticated") {
           statusEl.textContent = "Please log in first to use AI-assisted analysis.";

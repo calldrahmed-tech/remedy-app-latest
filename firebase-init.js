@@ -26,6 +26,8 @@ const firebaseConfig = {
 };
 
 const MONTHLY_AI_LIMIT = 20;
+// Set to true ONLY after functions:ai is deployed (needs the Firebase Blaze plan).
+const AI_ENABLED = false;
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -123,6 +125,7 @@ window.RemedyAuth = {
   // classicalRemedy is passed along so the backend can tell us whether the AI's
   // independent read of the case agrees with the rubric engine's pick.
   async requestAiAnalysis(caseText, classicalRemedy) {
+    if (!AI_ENABLED) { const e = new Error("AI coming soon"); e.code = "app/ai-coming-soon"; throw e; }
     const result = await aiNormalizeCallable({ caseText, classicalRemedy });
     return result.data; // { aiRemedy, keySymptoms, reasoning, classicalRemedy, agreement, remaining }
   },
