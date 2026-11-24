@@ -25,7 +25,7 @@ In Command Prompt, inside the app folder:
     firebase functions:secrets:set SAFEPAY_WEBHOOK_SECRET
 (paste each value when asked; the webhook secret appears after Step 5)
 When you deploy, Firebase will ask for SAFEPAY_API_KEY, SAFEPAY_ENV (sandbox) and SITE_URL.
-SITE_URL = the address where the app lives, for example https://expertia-d35e0.web.app
+SITE_URL = the address where the app lives, for example https://expertia-app.web.app
 
 ## Step 4 — Deploy the server code (ONLY this codebase)
     cd functions-payments

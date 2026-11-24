@@ -16,12 +16,13 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-functions.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA7nmJYyfognAAZS2j67GMgyB48ier4vaE",
-  authDomain: "expertia-d35e0.firebaseapp.com",
-  projectId: "expertia-d35e0",
-  storageBucket: "expertia-d35e0.firebasestorage.app",
-  messagingSenderId: "821351840734",
-  appId: "1:821351840734:web:d9479a0cda7973879c3b4f"
+  apiKey: "AIzaSyDmZx-20Fz50qF6vVOnaPePBkQ8XNeteWs",
+  authDomain: "expertia-app.firebaseapp.com",
+  projectId: "expertia-app",
+  storageBucket: "expertia-app.firebasestorage.app",
+  messagingSenderId: "1064428795210",
+  appId: "1:1064428795210:web:f7fb0e27758f301d8cfdb3",
+  measurementId: "G-LRJ53WH8SN"
 };
 
 const MONTHLY_AI_LIMIT = 20;
